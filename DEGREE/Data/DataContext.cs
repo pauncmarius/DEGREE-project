@@ -12,10 +12,10 @@ namespace DEGREE.Data
     {
         protected override void OnConfiguring(DbContextOptionsBuilder options)
         {
-            string connectionString = @"Servers=.\SQLEXPRESS;Database=FCUnirea;Trusted_Connection=True;";
+            string connectionString = @"Server=.\SQLEXPRESS;Database=FCUnirea;Trusted_Connection=True;";
             options.UseSqlServer(connectionString);
         }
 
-        public DbSet<Users> Users;
+        public DbSet<Users> Users { get; set; }
     }
 }
