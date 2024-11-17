@@ -3,16 +3,12 @@
   "WorkspaceRootPath": "C:\\Users\\paunm\\Documents\\github\\degree\\DEGREE-project\\DEGREE\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{D77C69A2-091E-4C86-87A9-F711B23B1E8C}|FCUnirea.csproj|c:\\users\\paunm\\documents\\github\\degree\\degree-project\\degree\\entities\\news.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{D77C69A2-091E-4C86-87A9-F711B23B1E8C}|FCUnirea.csproj|solutionrelative:entities\\news.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{D77C69A2-091E-4C86-87A9-F711B23B1E8C}|FCUnirea.csproj|c:\\users\\paunm\\documents\\github\\degree\\degree-project\\degree\\data\\migrations\\20241117104422_addusers.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D77C69A2-091E-4C86-87A9-F711B23B1E8C}|FCUnirea.csproj|solutionrelative:data\\migrations\\20241117104422_addusers.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{D77C69A2-091E-4C86-87A9-F711B23B1E8C}|FCUnirea.csproj|c:\\users\\paunm\\documents\\github\\degree\\degree-project\\degree\\data\\datacontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{D77C69A2-091E-4C86-87A9-F711B23B1E8C}|FCUnirea.csproj|solutionrelative:data\\datacontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{D77C69A2-091E-4C86-87A9-F711B23B1E8C}|FCUnirea.csproj|c:\\users\\paunm\\documents\\github\\degree\\degree-project\\degree\\entities\\users.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{D77C69A2-091E-4C86-87A9-F711B23B1E8C}|FCUnirea.csproj|solutionrelative:entities\\users.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{D77C69A2-091E-4C86-87A9-F711B23B1E8C}|FCUnirea.csproj|c:\\users\\paunm\\documents\\github\\degree\\degree-project\\degree\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -31,14 +27,14 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "News.cs",
-              "DocumentMoniker": "C:\\Users\\paunm\\Documents\\github\\degree\\DEGREE-project\\DEGREE\\Entities\\News.cs",
-              "RelativeDocumentMoniker": "Entities\\News.cs",
-              "ToolTip": "C:\\Users\\paunm\\Documents\\github\\degree\\DEGREE-project\\DEGREE\\Entities\\News.cs",
-              "RelativeToolTip": "Entities\\News.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAwAAAANAAAA",
+              "Title": "20241117104422_AddUsers.cs",
+              "DocumentMoniker": "C:\\Users\\paunm\\Documents\\github\\degree\\DEGREE-project\\DEGREE\\Data\\Migrations\\20241117104422_AddUsers.cs",
+              "RelativeDocumentMoniker": "Data\\Migrations\\20241117104422_AddUsers.cs",
+              "ToolTip": "C:\\Users\\paunm\\Documents\\github\\degree\\DEGREE-project\\DEGREE\\Data\\Migrations\\20241117104422_AddUsers.cs",
+              "RelativeToolTip": "Data\\Migrations\\20241117104422_AddUsers.cs",
+              "ViewState": "AQIAAAEAAAAAAAAAAAAAAAMAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-17T12:12:37.061Z",
+              "WhenOpened": "2024-11-17T19:28:16.142Z",
               "EditorCaption": ""
             },
             {
@@ -49,27 +45,14 @@
               "RelativeDocumentMoniker": "Data\\DataContext.cs",
               "ToolTip": "C:\\Users\\paunm\\Documents\\github\\degree\\DEGREE-project\\DEGREE\\Data\\DataContext.cs",
               "RelativeToolTip": "Data\\DataContext.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABIAAAAvAAAA",
+              "ViewState": "AQIAAAcAAAAAAAAAAAAiwCAAAAA9AAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-17T00:03:23.644Z",
+              "WhenOpened": "2024-11-17T17:38:23.522Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 2,
-              "Title": "Users.cs",
-              "DocumentMoniker": "C:\\Users\\paunm\\Documents\\github\\degree\\DEGREE-project\\DEGREE\\Entities\\Users.cs",
-              "RelativeDocumentMoniker": "Entities\\Users.cs",
-              "ToolTip": "C:\\Users\\paunm\\Documents\\github\\degree\\DEGREE-project\\DEGREE\\Entities\\Users.cs",
-              "RelativeToolTip": "Entities\\Users.cs",
-              "ViewState": "AQIAAAYAAAAAAAAAAAAAAB0AAAAwAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-16T23:56:24.621Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
               "Title": "Program.cs",
               "DocumentMoniker": "C:\\Users\\paunm\\Documents\\github\\degree\\DEGREE-project\\DEGREE\\Program.cs",
               "RelativeDocumentMoniker": "Program.cs",
