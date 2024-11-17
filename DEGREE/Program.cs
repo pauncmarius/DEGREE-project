@@ -1,6 +1,7 @@
 ﻿using System;
 
-namespace DEGREE
+namespace FCUnirea
+
 {
     internal class Program
     {
