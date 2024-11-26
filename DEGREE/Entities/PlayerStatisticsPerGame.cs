@@ -9,25 +9,20 @@ namespace FCUnirea.Entities
 {
     public class PlayerStatisticsPerGame
     {
-        [Key]
-        public int statistic_id { get; set; }
+        public int Id { get; set; }
 
-        public int player_id { get; set; }
+        public int Goals { get; set; }
 
-        public int game_id { get; set; }
+        public int Assists { get; set; }
 
-        public int goals { get; set; }
+        public int PassesCompleted { get; set; }
 
-        public int assists { get; set; }
+        public int Saves { get; set; }
 
-        public int passes_completed { get; set; }
+        public int RedCards { get; set; }
 
-        public int saves { get; set; }
+        public int YellowCards { get; set; }
 
-        public int red_cards { get; set; }
-
-        public int yellow_cards { get; set; }
-
-        public int minutes_played { get; set; }
+        public int MinutesPlayed { get; set; }
     }
 }

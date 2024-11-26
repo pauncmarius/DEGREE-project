@@ -10,16 +10,11 @@ namespace FCUnirea.Entities
 {
     public class Feedback
     {
-        [Key]
-        public int feedback_id { get; set; }
-
-        public int player_id { get; set; }
-
-        public int staff_id { get; set; }
+        public int Id { get; set; }
 
         [Column(TypeName = "TEXT")]
-        public string review { get; set; }
+        public string Review { get; set; }
 
-        public DateTime created_at { get; set; }
+        public DateTime CreatedAt { get; set; }
     }
 }

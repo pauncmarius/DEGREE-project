@@ -9,15 +9,17 @@ namespace FCUnirea.Entities
 {
     public class Stadiums
     {
-        [Key]
-        public int stadium_id { get; set; }
+        public int Id { get; set; }
 
-        public string stadium_name { get; set; }
+        public string StadiumName { get; set; }
 
-        public string stadium_location { get; set; }
+        public string StadiumLocation { get; set; }
 
-        public int seat_id { get; set; }
+        public int Capacity { get; set; }
 
-        public int capacity { get; set; }
+        //--------------Relations--------------------//
+
+        public ICollection<Seats> Seats { get; set; }
+        public ICollection<Games> Games { get; set; }
     }
 }

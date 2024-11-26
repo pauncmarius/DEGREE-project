@@ -10,16 +10,18 @@ namespace FCUnirea.Entities
 {
     public class Seats
     {
-        [Key]
-        public int seat_id { get; set; }
+        public int Id { get; set; }
 
-        public SeatType seat_type { get; set; }
+        public SeatType SeatType { get; set; }
 
-        public string seat_name { get; set; }
+        public string SeatName { get; set; }
 
-        public int seat_price { get; set; }
+        public int SeatPrice { get; set; }
 
-        public bool reserved { get; set; }    
+        public bool Reserved { get; set; }
+
+        //--------------Relations--------------------//
+        public Games Games { get; set; }
     }
 
     public enum SeatType

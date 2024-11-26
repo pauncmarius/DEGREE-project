@@ -9,25 +9,20 @@ namespace FCUnirea.Entities
 {
     public class TeamStatistics
     {
-        [Key]
-        public int statistic_id { get; set; }
+        public int Id { get; set; }
 
-        public int competition_id { get; set; }
+        public int GamesPlayed { get; set; }
 
-        public int team_id { get; set; }
+        public int TotalWins { get; set; }
 
-        public int games_played { get; set; }
+        public int TotalLosses { get; set; }
 
-        public int total_wins { get; set; }
+        public int TotalDraws { get; set; }
 
-        public int total_losses { get; set; }
+        public int GoalsScored { get; set; }
 
-        public int total_draws { get; set; }
+        public int GoalsConceded { get; set; }
 
-        public int goals_scored { get; set; }
-
-        public int goals_conceded { get; set; }
-
-        public int total_points { get; set; }
+        public int TotalPoints { get; set; }
     }
 }

@@ -9,12 +9,17 @@ namespace FCUnirea.Entities
 {
     public class Competitions
     {
-        [Key]
-        public int competition_id { get; set; }
+        public int Id { get; set; }
 
-        public string competition_name { get; set; }
+        public string CompetitionName { get; set; }
 
-        public CompetitionType competition_type { get; set; }
+        public CompetitionType CompetitionType { get; set; }
+
+        //--------------Relations--------------------//
+
+        public ICollection<TeamStatistics> TeamStatistics { get; set; }
+        public ICollection<Games> Games { get; set; }
+        public ICollection<PlayerStatisticsPerCompetiton> PlayerStatisticsPerCompetiton { get; set; }
     }
 
     public enum CompetitionType

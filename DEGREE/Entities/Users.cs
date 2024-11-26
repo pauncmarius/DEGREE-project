@@ -10,25 +10,32 @@ namespace FCUnirea.Entities
 
     public class Users
     {
-        [Key]
-        public int id_user { get; set; }
+        public int Id { get; set; }
 
-        public string username { get; set; }
+        public string Username { get; set; }
 
-        public string email { get; set; }
+        public string Email { get; set; }
 
-        public string first_name { get; set; }
+        public string FirstName { get; set; }
 
-        public string last_name { get; set; }
+        public string LastName { get; set; }
 
-        public string hashed_password { get; set; }
+        public string HashedPassword { get; set; }
 
-        public int phone_number { get; set; }
+        public int PhoneNumber { get; set; }
 
-        public UserRole role { get; set; }
+        public UserRole Role { get; set; }
 
-        public DateTime created_at { get; set; }
+        public DateTime CreatedAt { get; set; }
 
+        //--------------Relations--------------------//
+
+        public ICollection<News> News { get; set; }
+        public ICollection<Comments> Comments { get; set; }
+        public ICollection<Feedback> FeedbackFromStaff { get; set; }
+        public ICollection<Feedback> FeedbackToPlayers { get; set; }
+        public ICollection<Tickets> Tickets { get; set; }
+        public Players Players { get; set; }
     }
 
     // Enum definition for roles

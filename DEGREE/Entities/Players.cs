@@ -10,18 +10,19 @@ namespace FCUnirea.Entities
 {
     public class Players
     {
-        [Key]
-        public int player_id { get; set; }
+        public int Id { get; set; }
 
-        public string player_name { get; set; }
+        public string PlayerName { get; set; }
 
-        public int team_id { get; set; }
+        public Position Position { get; set; }
 
-        public int user_id { get; set; }    
+        public DateTime BirthDate { get; set; }
 
-        public Position position { get; set; }
+        //--------------Relations--------------------//
 
-        public DateTime birth_date { get; set; }
+        public ICollection<PlayerStatisticsPerCompetiton> PlayerStatisticsPerCompetitons { get; set; }
+        public ICollection<PlayerStatisticsPerGame> PlayerStatisticsPerGame { get; set; }
+        public Users Users { get; set; }
     }
 
     public enum Position

@@ -10,16 +10,11 @@ namespace FCUnirea.Entities
 {
     public class Comments
     {
-        [Key]
-        public int comment_id { get; set; }
-
-        public int news_id { get; set; }
-
-        public int user_id { get; set; }
+        public int Id { get; set; }
 
         [Column(TypeName = "TEXT")]
-        public string text { get; set; }
+        public string Text { get; set; }
 
-        public DateTime created_at { get; set; }
+        public DateTime CreatedAt { get; set; }
     }
 }

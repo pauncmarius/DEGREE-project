@@ -10,17 +10,23 @@ namespace FCUnirea.Entities
 {
     public class Teams
     {
-        [Key]
-        public int team_id { get; set; }
+        public int Id { get; set; }
 
-        public string team_name { get; set; }
+        public string TeamName { get; set; }
 
-        public TeamType team_type { get; set; }
+        public TeamType TeamType { get; set; }
 
-        public bool is_internal { get; set; }
+        public bool IsInternal { get; set; }
 
         [Column(TypeName = "TEXT")]
-        public string record { get; set; }
+        public string Record { get; set; }
+
+        //--------------Relations--------------------//
+
+        public ICollection<TeamStatistics> TeamStatistics { get; set; }
+        public ICollection<Players> Players { get; set; }
+        public Games GamesHomeTeam { get; set; }
+        public Games GamesAwayTeam { get; set; }
     }
 
     public enum TeamType
