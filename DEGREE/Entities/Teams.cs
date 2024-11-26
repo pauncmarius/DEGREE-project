@@ -25,8 +25,6 @@ namespace FCUnirea.Entities
 
         public ICollection<TeamStatistics> TeamStatistics { get; set; }
         public ICollection<Players> Players { get; set; }
-        public Games GamesHomeTeam { get; set; }
-        public Games GamesAwayTeam { get; set; }
     }
 
     public enum TeamType

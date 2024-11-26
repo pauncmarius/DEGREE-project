@@ -35,7 +35,6 @@ namespace FCUnirea.Entities
         public ICollection<Feedback> FeedbackFromStaff { get; set; }
         public ICollection<Feedback> FeedbackToPlayers { get; set; }
         public ICollection<Tickets> Tickets { get; set; }
-        public Players Players { get; set; }
     }
 
     // Enum definition for roles

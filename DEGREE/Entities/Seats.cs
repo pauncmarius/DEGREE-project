@@ -21,7 +21,6 @@ namespace FCUnirea.Entities
         public bool Reserved { get; set; }
 
         //--------------Relations--------------------//
-        public Games Games { get; set; }
     }
 
     public enum SeatType
