@@ -13,9 +13,9 @@ namespace FCUnirea.Entities
         [Key]
         public int comment_id { get; set; }
 
-        public int user_id { get; set; }
-
         public int news_id { get; set; }
+
+        public int user_id { get; set; }
 
         [Column(TypeName = "TEXT")]
         public string text { get; set; }

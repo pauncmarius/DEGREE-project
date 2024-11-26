@@ -7,14 +7,14 @@ using System.Threading.Tasks;
 
 namespace FCUnirea.Entities
 {
-    public class PlayerStatisticsPerMatch
+    public class PlayerStatisticsPerGame
     {
         [Key]
         public int statistic_id { get; set; }
 
         public int player_id { get; set; }
 
-        public int match_id { get; set; }
+        public int game_id { get; set; }
 
         public int goals { get; set; }
 

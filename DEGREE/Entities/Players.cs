@@ -17,6 +17,8 @@ namespace FCUnirea.Entities
 
         public int team_id { get; set; }
 
+        public int user_id { get; set; }    
+
         public Position position { get; set; }
 
         public DateTime birth_date { get; set; }

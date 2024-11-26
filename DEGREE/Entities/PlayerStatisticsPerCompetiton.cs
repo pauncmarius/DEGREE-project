@@ -22,9 +22,9 @@ namespace FCUnirea.Entities
 
         public int saves { get; set; }
 
-        public int red_cards { get; set; }
-
         public int yellow_cards { get; set; }
+
+        public int red_cards { get; set; }
 
         public int minutes_played { get; set; }
     }

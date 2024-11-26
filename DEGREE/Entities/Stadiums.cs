@@ -16,19 +16,8 @@ namespace FCUnirea.Entities
 
         public string stadium_location { get; set; }
 
-        public SeatType seat_type { get; set; }
-
-        public int seat_price { get; set; }
+        public int seat_id { get; set; }
 
         public int capacity { get; set; }
-
-    }
-
-    public enum SeatType
-    {
-        Standard,
-        Lawn,
-        Stands,
-        Vip
     }
 }

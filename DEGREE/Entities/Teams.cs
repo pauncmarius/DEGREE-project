@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -17,6 +18,9 @@ namespace FCUnirea.Entities
         public TeamType team_type { get; set; }
 
         public bool is_internal { get; set; }
+
+        [Column(TypeName = "TEXT")]
+        public string record { get; set; }
     }
 
     public enum TeamType

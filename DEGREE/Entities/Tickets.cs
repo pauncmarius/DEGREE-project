@@ -14,11 +14,9 @@ namespace FCUnirea.Entities
 
         public int user_id { get; set; }
 
-        public int match_id { get; set; }
+        public int game_id { get; set; }
 
-        public int seat_number { get; set; }
-
-        public int stadium_id { get; set; }
+        public int seat_id { get; set; }
 
         public DateTime date_reservation { get; set; }
     }

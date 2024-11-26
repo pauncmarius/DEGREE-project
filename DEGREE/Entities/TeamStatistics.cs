@@ -16,7 +16,7 @@ namespace FCUnirea.Entities
 
         public int team_id { get; set; }
 
-        public int matches_played { get; set; }
+        public int games_played { get; set; }
 
         public int total_wins { get; set; }
 

@@ -16,20 +16,19 @@ namespace DEGREE.Data
             options.UseSqlServer(connectionString);
         }
 
-        public DbSet<Users> Users { get; set; }
-        public DbSet<News> News { get; set; }
         public DbSet<Comments> Comments { get; set; }
-        public DbSet<MatchTeamRelations> MatchTeamRelations { get; set; }
-        public DbSet<TeamRecords> TeamRecords { get; set; }
-        public DbSet<Stadiums> Stadiums { get; set; }
-        public DbSet<Feedback> Feedback { get; set; }
-        public DbSet<Tickets> Tickets { get; set; }
-        public DbSet<PlayerStatisticsPerMatch> PlayerStatisticsPerMatch { get; set; }
-        public DbSet<Matches> Matches { get; set; }
-        public DbSet<PlayerStatisticsPerCompetiton> PlayerStatisticsPerCompetiton { get; set; }
-        public DbSet<Players> Players { get; set; }
-        public DbSet<TeamStatistics> TeamStatistics { get; set; }
-        public DbSet<Teams> Teams { get; set; }
         public DbSet<Competitions> Competitions { get; set; }
+        public DbSet<Feedback> Feedback { get; set; }
+        public DbSet<Games> Games { get; set; }
+        public DbSet<News> News { get; set; }
+        public DbSet<Players> Players { get; set; }
+        public DbSet<PlayerStatisticsPerGame> PlayerStatisticsPerGame { get; set; }
+        public DbSet<PlayerStatisticsPerCompetiton> PlayerStatisticsPerCompetiton { get; set; }
+        public DbSet<Seats> Seats { get; set; }
+        public DbSet<Stadiums> Stadiums { get; set; }
+        public DbSet<Teams> Teams { get; set; }
+        public DbSet<TeamStatistics> TeamStatistics { get; set; }
+        public DbSet<Tickets> Tickets { get; set; }
+        public DbSet<Users> Users { get; set; }
     }
 }
