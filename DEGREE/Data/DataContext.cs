@@ -1,4 +1,5 @@
-﻿using FCUnirea.Entities;
+﻿using FCUnirea.Data.Mappings;
+using FCUnirea.Entities;
 using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
@@ -14,6 +15,11 @@ namespace DEGREE.Data
         {
             string connectionString = @"Server=.\SQLEXPRESS;Database=FCUnirea;Trusted_Connection=True;";
             options.UseSqlServer(connectionString);
+        }
+
+        protected override void OnModelCreating(ModelBuilder modelBuilder)
+        {
+            UsersMapping.Map(modelBuilder);
         }
 
         public DbSet<Comments> Comments { get; set; }
