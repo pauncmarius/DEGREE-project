@@ -5,6 +5,10 @@ VisualStudioVersion = 17.9.34723.18
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FCUnirea", "FCUnirea.csproj", "{D77C69A2-091E-4C86-87A9-F711B23B1E8C}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "04.Domain", "04.Domain", "{3D75E327-586D-436C-9374-268A5C273F71}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FCUnirea.Domain", "..\FCUnirea.Domain\FCUnirea.Domain.csproj", "{6BDD83E6-3CF0-472F-A000-15CB4EB199A0}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,9 +19,16 @@ Global
 		{D77C69A2-091E-4C86-87A9-F711B23B1E8C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D77C69A2-091E-4C86-87A9-F711B23B1E8C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D77C69A2-091E-4C86-87A9-F711B23B1E8C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6BDD83E6-3CF0-472F-A000-15CB4EB199A0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6BDD83E6-3CF0-472F-A000-15CB4EB199A0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6BDD83E6-3CF0-472F-A000-15CB4EB199A0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6BDD83E6-3CF0-472F-A000-15CB4EB199A0}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{6BDD83E6-3CF0-472F-A000-15CB4EB199A0} = {3D75E327-586D-436C-9374-268A5C273F71}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {C6FB7FD0-6CB0-4503-A631-96F9AEA251E9}
