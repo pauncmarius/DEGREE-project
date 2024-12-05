@@ -1,4 +1,5 @@
-﻿using System;
+﻿using FCUnirea.Domain.Entities;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -6,10 +7,7 @@ using System.Threading.Tasks;
 
 namespace FCUnirea.Domain.IRepositories
 {
-    public interface IBaseRepository<T> where T : class
+    public interface ITeamsRepository : IBaseRepository<Teams>
     {
-        T GetById(int id);
-
-
     }
 }
