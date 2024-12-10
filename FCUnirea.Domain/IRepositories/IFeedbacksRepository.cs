@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace FCUnirea.Domain.IRepositories
 {
-    public interface IFeedbackRepository : IBaseRepository<Feedback>
+    public interface IFeedbacksRepository : IBaseRepository<Feedbacks>
     {
     }
 }

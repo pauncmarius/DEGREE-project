@@ -5,10 +5,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace FCUnirea.Domain.Entities
+namespace FCUnirea.Business.Models
 {
 
-    public class Users : BaseEntity
+    public class UsersModel
     {
         public string Username { get; set; }
 
@@ -28,11 +28,11 @@ namespace FCUnirea.Domain.Entities
 
         //--------------Relations--------------------//
 
-        public ICollection<News> News { get; set; }
-        public ICollection<Comments> Comments { get; set; }
-        public ICollection<Feedbacks> FeedbackFromStaff { get; set; }
-        public ICollection<Feedbacks> FeedbackToPlayers { get; set; }
-        public ICollection<Tickets> Tickets { get; set; }
+        public ICollection<NewsModel> News { get; set; }
+        public ICollection<CommentsModel> Comments { get; set; }
+        public ICollection<FeedbacksModel> FeedbackFromStaff { get; set; }
+        public ICollection<FeedbacksModel> FeedbackToPlayers { get; set; }
+        public ICollection<TicketsModel> Tickets { get; set; }
     }
 
     // Enum definition for roles

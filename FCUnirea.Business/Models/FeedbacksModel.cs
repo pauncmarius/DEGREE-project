@@ -6,9 +6,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace FCUnirea.Domain.Entities
+namespace FCUnirea.Business.Models
 {
-    public class Feedback : BaseEntity
+    public class FeedbacksModel
     {
         [Column(TypeName = "TEXT")]
         public string Review { get; set; }

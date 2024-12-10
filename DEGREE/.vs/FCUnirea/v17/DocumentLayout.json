@@ -3,49 +3,10 @@
   "WorkspaceRootPath": "C:\\Users\\paunm\\Documents\\github\\degree\\DEGREE-project\\DEGREE\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{6BDD83E6-3CF0-472F-A000-15CB4EB199A0}|..\\FCUnirea.Domain\\FCUnirea.Domain.csproj|c:\\users\\paunm\\documents\\github\\degree\\degree-project\\fcunirea.domain\\irepositories\\iusersrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{2EC0D174-BC3A-42CC-A679-0AFD9DB6C0FF}|..\\FCUnirea.Business\\FCUnirea.Business.csproj|c:\\users\\paunm\\documents\\github\\degree\\degree-project\\fcunirea.business\\exceptions\\notavailableexception.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{6BDD83E6-3CF0-472F-A000-15CB4EB199A0}|..\\FCUnirea.Domain\\FCUnirea.Domain.csproj|c:\\users\\paunm\\documents\\github\\degree\\degree-project\\fcunirea.domain\\irepositories\\iticketsrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{6BDD83E6-3CF0-472F-A000-15CB4EB199A0}|..\\FCUnirea.Domain\\FCUnirea.Domain.csproj|c:\\users\\paunm\\documents\\github\\degree\\degree-project\\fcunirea.domain\\irepositories\\iteamstatisticsrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{6BDD83E6-3CF0-472F-A000-15CB4EB199A0}|..\\FCUnirea.Domain\\FCUnirea.Domain.csproj|c:\\users\\paunm\\documents\\github\\degree\\degree-project\\fcunirea.domain\\irepositories\\iteamsrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{6BDD83E6-3CF0-472F-A000-15CB4EB199A0}|..\\FCUnirea.Domain\\FCUnirea.Domain.csproj|c:\\users\\paunm\\documents\\github\\degree\\degree-project\\fcunirea.domain\\irepositories\\istadiumsrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{6BDD83E6-3CF0-472F-A000-15CB4EB199A0}|..\\FCUnirea.Domain\\FCUnirea.Domain.csproj|c:\\users\\paunm\\documents\\github\\degree\\degree-project\\fcunirea.domain\\irepositories\\iseatsrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{6BDD83E6-3CF0-472F-A000-15CB4EB199A0}|..\\FCUnirea.Domain\\FCUnirea.Domain.csproj|c:\\users\\paunm\\documents\\github\\degree\\degree-project\\fcunirea.domain\\irepositories\\iplayerstatisticspergamerepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{6BDD83E6-3CF0-472F-A000-15CB4EB199A0}|..\\FCUnirea.Domain\\FCUnirea.Domain.csproj|c:\\users\\paunm\\documents\\github\\degree\\degree-project\\fcunirea.domain\\irepositories\\iplayerstatisticspercompetitionrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{6BDD83E6-3CF0-472F-A000-15CB4EB199A0}|..\\FCUnirea.Domain\\FCUnirea.Domain.csproj|c:\\users\\paunm\\documents\\github\\degree\\degree-project\\fcunirea.domain\\irepositories\\iplayersrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{6BDD83E6-3CF0-472F-A000-15CB4EB199A0}|..\\FCUnirea.Domain\\FCUnirea.Domain.csproj|c:\\users\\paunm\\documents\\github\\degree\\degree-project\\fcunirea.domain\\irepositories\\inewsrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{6BDD83E6-3CF0-472F-A000-15CB4EB199A0}|..\\FCUnirea.Domain\\FCUnirea.Domain.csproj|c:\\users\\paunm\\documents\\github\\degree\\degree-project\\fcunirea.domain\\irepositories\\igamesrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{6BDD83E6-3CF0-472F-A000-15CB4EB199A0}|..\\FCUnirea.Domain\\FCUnirea.Domain.csproj|c:\\users\\paunm\\documents\\github\\degree\\degree-project\\fcunirea.domain\\irepositories\\ifeedbackrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{6BDD83E6-3CF0-472F-A000-15CB4EB199A0}|..\\FCUnirea.Domain\\FCUnirea.Domain.csproj|c:\\users\\paunm\\documents\\github\\degree\\degree-project\\fcunirea.domain\\irepositories\\icompetitionsrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{6BDD83E6-3CF0-472F-A000-15CB4EB199A0}|..\\FCUnirea.Domain\\FCUnirea.Domain.csproj|c:\\users\\paunm\\documents\\github\\degree\\degree-project\\fcunirea.domain\\irepositories\\icommentsrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{6BDD83E6-3CF0-472F-A000-15CB4EB199A0}|..\\FCUnirea.Domain\\FCUnirea.Domain.csproj|c:\\users\\paunm\\documents\\github\\degree\\degree-project\\fcunirea.domain\\irepositories\\ibaserepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{2EC0D174-BC3A-42CC-A679-0AFD9DB6C0FF}|..\\FCUnirea.Business\\FCUnirea.Business.csproj|c:\\users\\paunm\\documents\\github\\degree\\degree-project\\fcunirea.business\\profiles\\mappingprofile.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -60,196 +21,27 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "IUsersRepository.cs",
-              "DocumentMoniker": "C:\\Users\\paunm\\Documents\\github\\degree\\DEGREE-project\\FCUnirea.Domain\\IRepositories\\IUsersRepository.cs",
-              "RelativeDocumentMoniker": "..\\FCUnirea.Domain\\IRepositories\\IUsersRepository.cs",
-              "ToolTip": "C:\\Users\\paunm\\Documents\\github\\degree\\DEGREE-project\\FCUnirea.Domain\\IRepositories\\IUsersRepository.cs",
-              "RelativeToolTip": "..\\FCUnirea.Domain\\IRepositories\\IUsersRepository.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Title": "NotAvailableException.cs",
+              "DocumentMoniker": "C:\\Users\\paunm\\Documents\\github\\degree\\DEGREE-project\\FCUnirea.Business\\Exceptions\\NotAvailableException.cs",
+              "RelativeDocumentMoniker": "..\\FCUnirea.Business\\Exceptions\\NotAvailableException.cs",
+              "ToolTip": "C:\\Users\\paunm\\Documents\\github\\degree\\DEGREE-project\\FCUnirea.Business\\Exceptions\\NotAvailableException.cs",
+              "RelativeToolTip": "..\\FCUnirea.Business\\Exceptions\\NotAvailableException.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAwAAAAIAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-05T18:10:57.497Z",
+              "WhenOpened": "2024-12-10T19:02:28.086Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "ITicketsRepository.cs",
-              "DocumentMoniker": "C:\\Users\\paunm\\Documents\\github\\degree\\DEGREE-project\\FCUnirea.Domain\\IRepositories\\ITicketsRepository.cs",
-              "RelativeDocumentMoniker": "..\\FCUnirea.Domain\\IRepositories\\ITicketsRepository.cs",
-              "ToolTip": "C:\\Users\\paunm\\Documents\\github\\degree\\DEGREE-project\\FCUnirea.Domain\\IRepositories\\ITicketsRepository.cs",
-              "RelativeToolTip": "..\\FCUnirea.Domain\\IRepositories\\ITicketsRepository.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Title": "MappingProfile.cs",
+              "DocumentMoniker": "C:\\Users\\paunm\\Documents\\github\\degree\\DEGREE-project\\FCUnirea.Business\\Profiles\\MappingProfile.cs",
+              "RelativeDocumentMoniker": "..\\FCUnirea.Business\\Profiles\\MappingProfile.cs",
+              "ToolTip": "C:\\Users\\paunm\\Documents\\github\\degree\\DEGREE-project\\FCUnirea.Business\\Profiles\\MappingProfile.cs",
+              "RelativeToolTip": "..\\FCUnirea.Business\\Profiles\\MappingProfile.cs",
+              "ViewState": "AQIAAAMAAAAAAAAAAAAAABwAAAAnAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-05T18:10:55.681Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "ITeamStatisticsRepository.cs",
-              "DocumentMoniker": "C:\\Users\\paunm\\Documents\\github\\degree\\DEGREE-project\\FCUnirea.Domain\\IRepositories\\ITeamStatisticsRepository.cs",
-              "RelativeDocumentMoniker": "..\\FCUnirea.Domain\\IRepositories\\ITeamStatisticsRepository.cs",
-              "ToolTip": "C:\\Users\\paunm\\Documents\\github\\degree\\DEGREE-project\\FCUnirea.Domain\\IRepositories\\ITeamStatisticsRepository.cs",
-              "RelativeToolTip": "..\\FCUnirea.Domain\\IRepositories\\ITeamStatisticsRepository.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-05T18:10:54.226Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "ITeamsRepository.cs",
-              "DocumentMoniker": "C:\\Users\\paunm\\Documents\\github\\degree\\DEGREE-project\\FCUnirea.Domain\\IRepositories\\ITeamsRepository.cs",
-              "RelativeDocumentMoniker": "..\\FCUnirea.Domain\\IRepositories\\ITeamsRepository.cs",
-              "ToolTip": "C:\\Users\\paunm\\Documents\\github\\degree\\DEGREE-project\\FCUnirea.Domain\\IRepositories\\ITeamsRepository.cs",
-              "RelativeToolTip": "..\\FCUnirea.Domain\\IRepositories\\ITeamsRepository.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-05T18:10:52.821Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "IStadiumsRepository.cs",
-              "DocumentMoniker": "C:\\Users\\paunm\\Documents\\github\\degree\\DEGREE-project\\FCUnirea.Domain\\IRepositories\\IStadiumsRepository.cs",
-              "RelativeDocumentMoniker": "..\\FCUnirea.Domain\\IRepositories\\IStadiumsRepository.cs",
-              "ToolTip": "C:\\Users\\paunm\\Documents\\github\\degree\\DEGREE-project\\FCUnirea.Domain\\IRepositories\\IStadiumsRepository.cs",
-              "RelativeToolTip": "..\\FCUnirea.Domain\\IRepositories\\IStadiumsRepository.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-05T18:10:51.671Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "ISeatsRepository.cs",
-              "DocumentMoniker": "C:\\Users\\paunm\\Documents\\github\\degree\\DEGREE-project\\FCUnirea.Domain\\IRepositories\\ISeatsRepository.cs",
-              "RelativeDocumentMoniker": "..\\FCUnirea.Domain\\IRepositories\\ISeatsRepository.cs",
-              "ToolTip": "C:\\Users\\paunm\\Documents\\github\\degree\\DEGREE-project\\FCUnirea.Domain\\IRepositories\\ISeatsRepository.cs",
-              "RelativeToolTip": "..\\FCUnirea.Domain\\IRepositories\\ISeatsRepository.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-05T18:10:50.062Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "IPlayerStatisticsPerGameRepository.cs",
-              "DocumentMoniker": "C:\\Users\\paunm\\Documents\\github\\degree\\DEGREE-project\\FCUnirea.Domain\\IRepositories\\IPlayerStatisticsPerGameRepository.cs",
-              "RelativeDocumentMoniker": "..\\FCUnirea.Domain\\IRepositories\\IPlayerStatisticsPerGameRepository.cs",
-              "ToolTip": "C:\\Users\\paunm\\Documents\\github\\degree\\DEGREE-project\\FCUnirea.Domain\\IRepositories\\IPlayerStatisticsPerGameRepository.cs",
-              "RelativeToolTip": "..\\FCUnirea.Domain\\IRepositories\\IPlayerStatisticsPerGameRepository.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-05T18:10:48.83Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "IPlayerStatisticsPerCompetitionRepository.cs",
-              "DocumentMoniker": "C:\\Users\\paunm\\Documents\\github\\degree\\DEGREE-project\\FCUnirea.Domain\\IRepositories\\IPlayerStatisticsPerCompetitionRepository.cs",
-              "RelativeDocumentMoniker": "..\\FCUnirea.Domain\\IRepositories\\IPlayerStatisticsPerCompetitionRepository.cs",
-              "ToolTip": "C:\\Users\\paunm\\Documents\\github\\degree\\DEGREE-project\\FCUnirea.Domain\\IRepositories\\IPlayerStatisticsPerCompetitionRepository.cs",
-              "RelativeToolTip": "..\\FCUnirea.Domain\\IRepositories\\IPlayerStatisticsPerCompetitionRepository.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-05T18:10:47.068Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "IPlayersRepository.cs",
-              "DocumentMoniker": "C:\\Users\\paunm\\Documents\\github\\degree\\DEGREE-project\\FCUnirea.Domain\\IRepositories\\IPlayersRepository.cs",
-              "RelativeDocumentMoniker": "..\\FCUnirea.Domain\\IRepositories\\IPlayersRepository.cs",
-              "ToolTip": "C:\\Users\\paunm\\Documents\\github\\degree\\DEGREE-project\\FCUnirea.Domain\\IRepositories\\IPlayersRepository.cs",
-              "RelativeToolTip": "..\\FCUnirea.Domain\\IRepositories\\IPlayersRepository.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-05T18:10:46.115Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 9,
-              "Title": "INewsRepository.cs",
-              "DocumentMoniker": "C:\\Users\\paunm\\Documents\\github\\degree\\DEGREE-project\\FCUnirea.Domain\\IRepositories\\INewsRepository.cs",
-              "RelativeDocumentMoniker": "..\\FCUnirea.Domain\\IRepositories\\INewsRepository.cs",
-              "ToolTip": "C:\\Users\\paunm\\Documents\\github\\degree\\DEGREE-project\\FCUnirea.Domain\\IRepositories\\INewsRepository.cs",
-              "RelativeToolTip": "..\\FCUnirea.Domain\\IRepositories\\INewsRepository.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-05T18:10:45.043Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 10,
-              "Title": "IGamesRepository.cs",
-              "DocumentMoniker": "C:\\Users\\paunm\\Documents\\github\\degree\\DEGREE-project\\FCUnirea.Domain\\IRepositories\\IGamesRepository.cs",
-              "RelativeDocumentMoniker": "..\\FCUnirea.Domain\\IRepositories\\IGamesRepository.cs",
-              "ToolTip": "C:\\Users\\paunm\\Documents\\github\\degree\\DEGREE-project\\FCUnirea.Domain\\IRepositories\\IGamesRepository.cs",
-              "RelativeToolTip": "..\\FCUnirea.Domain\\IRepositories\\IGamesRepository.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-05T18:10:43.884Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 11,
-              "Title": "IFeedbackRepository.cs",
-              "DocumentMoniker": "C:\\Users\\paunm\\Documents\\github\\degree\\DEGREE-project\\FCUnirea.Domain\\IRepositories\\IFeedbackRepository.cs",
-              "RelativeDocumentMoniker": "..\\FCUnirea.Domain\\IRepositories\\IFeedbackRepository.cs",
-              "ToolTip": "C:\\Users\\paunm\\Documents\\github\\degree\\DEGREE-project\\FCUnirea.Domain\\IRepositories\\IFeedbackRepository.cs",
-              "RelativeToolTip": "..\\FCUnirea.Domain\\IRepositories\\IFeedbackRepository.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-05T18:10:42.584Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 14,
-              "Title": "IBaseRepository.cs",
-              "DocumentMoniker": "C:\\Users\\paunm\\Documents\\github\\degree\\DEGREE-project\\FCUnirea.Domain\\IRepositories\\IBaseRepository.cs",
-              "RelativeDocumentMoniker": "..\\FCUnirea.Domain\\IRepositories\\IBaseRepository.cs",
-              "ToolTip": "C:\\Users\\paunm\\Documents\\github\\degree\\DEGREE-project\\FCUnirea.Domain\\IRepositories\\IBaseRepository.cs",
-              "RelativeToolTip": "..\\FCUnirea.Domain\\IRepositories\\IBaseRepository.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-05T18:10:27.953Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 12,
-              "Title": "ICompetitionsRepository.cs",
-              "DocumentMoniker": "C:\\Users\\paunm\\Documents\\github\\degree\\DEGREE-project\\FCUnirea.Domain\\IRepositories\\ICompetitionsRepository.cs",
-              "RelativeDocumentMoniker": "..\\FCUnirea.Domain\\IRepositories\\ICompetitionsRepository.cs",
-              "ToolTip": "C:\\Users\\paunm\\Documents\\github\\degree\\DEGREE-project\\FCUnirea.Domain\\IRepositories\\ICompetitionsRepository.cs",
-              "RelativeToolTip": "..\\FCUnirea.Domain\\IRepositories\\ICompetitionsRepository.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAkAAABLAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-05T18:04:49.513Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 13,
-              "Title": "ICommentsRepository.cs",
-              "DocumentMoniker": "C:\\Users\\paunm\\Documents\\github\\degree\\DEGREE-project\\FCUnirea.Domain\\IRepositories\\ICommentsRepository.cs",
-              "RelativeDocumentMoniker": "..\\FCUnirea.Domain\\IRepositories\\ICommentsRepository.cs",
-              "ToolTip": "C:\\Users\\paunm\\Documents\\github\\degree\\DEGREE-project\\FCUnirea.Domain\\IRepositories\\ICommentsRepository.cs",
-              "RelativeToolTip": "..\\FCUnirea.Domain\\IRepositories\\ICommentsRepository.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAkAAABDAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-05T18:04:48.815Z",
+              "WhenOpened": "2024-12-10T18:59:30.441Z",
               "EditorCaption": ""
             }
           ]
