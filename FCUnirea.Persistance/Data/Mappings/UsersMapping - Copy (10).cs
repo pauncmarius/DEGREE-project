@@ -1,12 +1,7 @@
-﻿using FCUnirea.Entities;
+﻿using FCUnirea.Domain.Entities;
 using Microsoft.EntityFrameworkCore;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
-namespace FCUnirea.Data.Mappings
+namespace FCUnirea.Persistance.Data.Mappings
 {
     internal abstract class UsersMapping
     {

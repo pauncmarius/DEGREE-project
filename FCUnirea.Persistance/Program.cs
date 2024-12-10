@@ -1,5 +1,5 @@
 ﻿using DEGREE.Data;
-using FCUnirea.Entities;
+using FCUnirea.Domain.Entities;
 using System;
 
 namespace FCUnirea
