@@ -1,4 +1,6 @@
 ﻿using FCUnirea.Domain.Entities;
+using FCUnirea.Domain.IRepositories;
+using FCUnirea.Persistance.Data;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -7,7 +9,11 @@ using System.Threading.Tasks;
 
 namespace FCUnirea.Persistance.Repositories
 {
-    public interface TeamsRepository : BaseRepository<Teams>
+    public class TeamsRepository : BaseRepository<Teams>, ITeamsRepository
     {
+        public TeamsRepository(FCUnireaDbContext fcUnireaDbContext) : base(fcUnireaDbContext)
+        {
+
+        }
     }
 }

@@ -5,7 +5,7 @@ using System.Collections.Generic;
 
 namespace FCUnirea.Persistance.Data
 {
-    public class FCUnireaDbContext: DbContext
+    public class FCUnireaDbContext : DbContext
     {
         public DbSet<Comments> Comments { get; set; }
         public DbSet<Competitions> Competitions { get; set; }
@@ -49,6 +49,22 @@ namespace FCUnirea.Persistance.Data
             TicketsMapping.Map(modelBuilder);
             UsersMapping.Map(modelBuilder);
             SeedDatabase(modelBuilder);
+        }
+
+        private static void SeedDatabase(ModelBuilder modelBuilder)
+        {
+            modelBuilder.Entity<Users>().HasData(new List<Users>()
+            {
+                new Users()
+                {
+                    Id = 1
+                },
+                new Users()
+                {
+                    Id = 2
+                }
+            });
+
         }
     }
 }

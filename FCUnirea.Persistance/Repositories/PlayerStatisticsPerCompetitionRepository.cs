@@ -1,4 +1,6 @@
 ﻿using FCUnirea.Domain.Entities;
+using FCUnirea.Domain.IRepositories;
+using FCUnirea.Persistance.Data;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -7,7 +9,11 @@ using System.Threading.Tasks;
 
 namespace FCUnirea.Persistance.Repositories
 {
-    public interface PlayerStatisticsPerCompetitionRepository : BaseRepository<PlayerStatisticsPerCompetiton>
+    public class PlayerStatisticsPerCompetitonRepository : BaseRepository<PlayerStatisticsPerCompetiton>, IPlayerStatisticsPerCompetitionRepository
     {
+        public PlayerStatisticsPerCompetitonRepository(FCUnireaDbContext fcUnireaDbContext) : base(fcUnireaDbContext)
+        {
+
+        }
     }
 }

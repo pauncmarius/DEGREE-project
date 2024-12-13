@@ -1,10 +1,16 @@
 ﻿using FCUnirea.Domain.Entities;
+using FCUnirea.Domain.IRepositories;
 using FCUnirea.Persistance;
+using FCUnirea.Persistance.Data;
 
 
 namespace FCUnirea.Persistance.Repositories
 {
-    public interface CommentsRepository : BaseRepository<Comments>
+    public class CommentsRepository : BaseRepository<Comments>, ICommentsRepository
     {
+        public CommentsRepository(FCUnireaDbContext fcUnireaDbContext): base(fcUnireaDbContext)
+        {
+
+        }
     }
 }
