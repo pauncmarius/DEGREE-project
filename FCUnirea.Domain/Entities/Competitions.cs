@@ -17,7 +17,7 @@ namespace FCUnirea.Domain.Entities
 
         public ICollection<TeamStatistics> TeamStatistics { get; set; }
         public ICollection<Games> Games { get; set; }
-        public ICollection<PlayerStatisticsPerCompetiton> PlayerStatisticsPerCompetiton { get; set; }
+        public ICollection<PlayerStatisticsPerCompetition> PlayerStatisticsPerCompetiton { get; set; }
     }
 
     public enum CompetitionType

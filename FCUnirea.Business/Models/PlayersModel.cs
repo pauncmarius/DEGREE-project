@@ -18,7 +18,7 @@ namespace FCUnirea.Business.Models
 
         //--------------Relations--------------------//
 
-        public ICollection<PlayerStatisticsPerCompetitonModel> PlayerStatisticsPerCompetitons { get; set; }
+        public ICollection<PlayerStatisticsPerCompetitionModel> PlayerStatisticsPerCompetitons { get; set; }
         public ICollection<PlayerStatisticsPerGameModel> PlayerStatisticsPerGame { get; set; }
         public UsersModel Users { get; set; }
     }

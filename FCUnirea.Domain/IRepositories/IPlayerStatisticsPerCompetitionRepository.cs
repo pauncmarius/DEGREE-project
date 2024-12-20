@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace FCUnirea.Domain.IRepositories
 {
-    public interface IPlayerStatisticsPerCompetitionRepository : IBaseRepository<PlayerStatisticsPerCompetiton>
+    public interface IPlayerStatisticsPerCompetitionRepository : IBaseRepository<PlayerStatisticsPerCompetition>
     {
     }
 }

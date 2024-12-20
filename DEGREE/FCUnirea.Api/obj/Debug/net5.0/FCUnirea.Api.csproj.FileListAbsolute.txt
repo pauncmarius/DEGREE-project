@@ -1,0 +1,7 @@
+C:\Users\paunm\Documents\github\degree\DEGREE-project\DEGREE\FCUnirea.Api\obj\Debug\net5.0\FCUnirea.Api.csproj.AssemblyReference.cache
+C:\Users\paunm\Documents\github\degree\DEGREE-project\DEGREE\FCUnirea.Api\obj\Debug\net5.0\FCUnirea.Api.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\paunm\Documents\github\degree\DEGREE-project\DEGREE\FCUnirea.Api\obj\Debug\net5.0\FCUnirea.Api.AssemblyInfoInputs.cache
+C:\Users\paunm\Documents\github\degree\DEGREE-project\DEGREE\FCUnirea.Api\obj\Debug\net5.0\FCUnirea.Api.AssemblyInfo.cs
+C:\Users\paunm\Documents\github\degree\DEGREE-project\DEGREE\FCUnirea.Api\obj\Debug\net5.0\FCUnirea.Api.csproj.CoreCompileInputs.cache
+C:\Users\paunm\Documents\github\degree\DEGREE-project\DEGREE\FCUnirea.Api\obj\Debug\net5.0\FCUnirea.Api.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\paunm\Documents\github\degree\DEGREE-project\DEGREE\FCUnirea.Api\obj\Debug\net5.0\FCUnirea.Api.sourcelink.json

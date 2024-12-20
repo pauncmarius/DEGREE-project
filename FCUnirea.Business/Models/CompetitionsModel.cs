@@ -17,7 +17,7 @@ namespace FCUnirea.Business.Models
 
         public ICollection<TeamStatisticsModel> TeamStatistics { get; set; }
         public ICollection<GamesModel> Games { get; set; }
-        public ICollection<PlayerStatisticsPerCompetitonModel> PlayerStatisticsPerCompetiton { get; set; }
+        public ICollection<PlayerStatisticsPerCompetitionModel> PlayerStatisticsPerCompetiton { get; set; }
     }
 
     public enum CompetitionType

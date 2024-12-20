@@ -14,7 +14,7 @@ namespace FCUnirea.Persistance.Data
         public DbSet<News> News { get; set; }
         public DbSet<Players> Players { get; set; }
         public DbSet<PlayerStatisticsPerGame> PlayerStatisticsPerGame { get; set; }
-        public DbSet<PlayerStatisticsPerCompetiton> PlayerStatisticsPerCompetiton { get; set; }
+        public DbSet<PlayerStatisticsPerCompetition> PlayerStatisticsPerCompetiton { get; set; }
         public DbSet<Seats> Seats { get; set; }
         public DbSet<Stadiums> Stadiums { get; set; }
         public DbSet<Teams> Teams { get; set; }
@@ -40,7 +40,7 @@ namespace FCUnirea.Persistance.Data
             GamesMapping.Map(modelBuilder);
             NewsMapping.Map(modelBuilder);
             PlayersMapping.Map(modelBuilder);
-            PlayerStatisticsPerCompetitonMapping.Map(modelBuilder);
+            PlayerStatisticsPerCompetitionMapping.Map(modelBuilder);
             PlayerStatisticsPerGameMapping.Map(modelBuilder);
             SeatsMapping.Map(modelBuilder);
             StadiumsMapping.Map(modelBuilder);

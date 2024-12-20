@@ -19,7 +19,7 @@ namespace FCUnirea.Business.Profiles
             CreateMap<Games, GamesModel>().ReverseMap();
             CreateMap<News, NewsModel>().ReverseMap();
             CreateMap<Players, PlayersModel>().ReverseMap();
-            CreateMap<PlayerStatisticsPerCompetiton, PlayerStatisticsPerCompetitonModel>().ReverseMap();
+            CreateMap<PlayerStatisticsPerCompetition, PlayerStatisticsPerCompetitionModel>().ReverseMap();
             CreateMap<PlayerStatisticsPerGame, PlayerStatisticsPerGameModel>().ReverseMap();
             CreateMap<Seats, SeatsModel>().ReverseMap();
             CreateMap<Stadiums, StadiumsModel>().ReverseMap();
