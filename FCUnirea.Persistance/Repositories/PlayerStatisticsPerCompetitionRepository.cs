@@ -9,9 +9,9 @@ using System.Threading.Tasks;
 
 namespace FCUnirea.Persistance.Repositories
 {
-    public class PlayerStatisticsPerCompetitonRepository : BaseRepository<PlayerStatisticsPerCompetition>, IPlayerStatisticsPerCompetitionRepository
+    public class PlayerStatisticsPerCompetitionRepository : BaseRepository<PlayerStatisticsPerCompetition>, IPlayerStatisticsPerCompetitionRepository
     {
-        public PlayerStatisticsPerCompetitonRepository(FCUnireaDbContext fcUnireaDbContext) : base(fcUnireaDbContext)
+        public PlayerStatisticsPerCompetitionRepository(FCUnireaDbContext fcUnireaDbContext) : base(fcUnireaDbContext)
         {
 
         }

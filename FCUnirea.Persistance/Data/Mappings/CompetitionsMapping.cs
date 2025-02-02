@@ -11,6 +11,17 @@ namespace FCUnirea.Persistance.Data.Mappings
                 .Property(s => s.Id)
                 .HasColumnName("Id")
                 .IsRequired();
+
+            modelBuilder.Entity<Competitions>()
+                .Property(s => s.CompetitionName)
+                .HasColumnName("CompetitionName")
+                .HasMaxLength(100)
+                .IsRequired();
+
+            modelBuilder.Entity<Competitions>()
+                .Property(s => s.CompetitionType)
+                .HasColumnName("CompetitionType")
+                .IsRequired();
         }
     }
 }

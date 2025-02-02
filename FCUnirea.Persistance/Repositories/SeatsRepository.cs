@@ -15,10 +15,5 @@ namespace FCUnirea.Persistance.Repositories
         {
 
         }
-
-        IEnumerable<Seats> ISeatsRepository.GetAvailableSeats(int gameId)
-        {
-            throw new NotImplementedException();
-        }
     }
 }

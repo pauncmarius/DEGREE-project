@@ -11,6 +11,27 @@ namespace FCUnirea.Persistance.Data.Mappings
                 .Property(s => s.Id)
                 .HasColumnName("Id")
                 .IsRequired();
+
+            modelBuilder.Entity<Teams>()
+                .Property(s => s.TeamName)
+                .HasColumnName("TeamName")
+                .HasMaxLength(100)
+                .IsRequired();
+
+            modelBuilder.Entity<Teams>()
+                .Property(s => s.TeamType)
+                .HasColumnName("TeamType")
+                .IsRequired();
+
+            modelBuilder.Entity<Teams>()
+                .Property(s => s.IsInternal)
+                .HasColumnName("IsInternal")
+                .IsRequired();
+
+            modelBuilder.Entity<Teams>()
+                .Property(s => s.Record)
+                .HasColumnName("Record")
+                .IsRequired();
         }
     }
 }

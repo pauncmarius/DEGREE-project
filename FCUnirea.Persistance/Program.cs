@@ -1,9 +1,4 @@
-﻿using FCUnirea.Persistance.Data;
-using FCUnirea.Domain.Entities;
-using System;
-
-namespace FCUnirea
-
+﻿namespace FCUnirea
 {
     internal class Program
     {

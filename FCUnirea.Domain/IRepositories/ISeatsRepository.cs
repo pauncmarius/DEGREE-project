@@ -9,6 +9,5 @@ namespace FCUnirea.Domain.IRepositories
 {
     public interface ISeatsRepository : IBaseRepository<Seats>
     {
-        IEnumerable<Seats> GetAvailableSeats(int gameId);
     }
 }

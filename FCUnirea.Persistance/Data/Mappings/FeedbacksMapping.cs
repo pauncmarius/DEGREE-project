@@ -11,6 +11,17 @@ namespace FCUnirea.Persistance.Data.Mappings
                 .Property(s => s.Id)
                 .HasColumnName("Id")
                 .IsRequired();
+
+            modelBuilder.Entity<Feedbacks>()
+                .Property(s => s.Review)
+                .HasColumnName("Review")
+                .HasMaxLength(500)
+                .IsRequired();
+
+            modelBuilder.Entity<Feedbacks>()
+                .Property(s => s.CreatedAt)
+                .HasColumnName("CreatedAt")
+                .IsRequired();
         }
     }
 }

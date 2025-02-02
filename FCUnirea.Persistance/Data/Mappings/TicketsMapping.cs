@@ -11,6 +11,11 @@ namespace FCUnirea.Persistance.Data.Mappings
                 .Property(s => s.Id)
                 .HasColumnName("Id")
                 .IsRequired();
+
+            modelBuilder.Entity<Tickets>()
+                .Property(s => s.DateReservation)
+                .HasColumnName("DateReservation")
+                .IsRequired();
         }
     }
 }

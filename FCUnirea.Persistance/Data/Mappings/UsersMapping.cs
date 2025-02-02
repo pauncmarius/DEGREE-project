@@ -13,9 +13,48 @@ namespace FCUnirea.Persistance.Data.Mappings
                 .IsRequired();
 
             modelBuilder.Entity<Users>()
+                .Property(s => s.Username)
+                .HasColumnName("Username")
+                .HasMaxLength(100)
+                .IsRequired();
+
+            modelBuilder.Entity<Users>()
                 .Property(s => s.Email)
                 .HasColumnName("Email")
                 .HasMaxLength(100)
+                .IsRequired();
+
+            modelBuilder.Entity<Users>()
+                .Property(s => s.FirstName)
+                .HasColumnName("FirstName")
+                .HasMaxLength(100)
+                .IsRequired();
+
+            modelBuilder.Entity<Users>()
+                .Property(s => s.LastName)
+                .HasColumnName("LastName")
+                .HasMaxLength(100)
+                .IsRequired();
+
+            modelBuilder.Entity<Users>()
+                .Property(s => s.HashedPassword)
+                .HasColumnName("HashedPassword")
+                .IsRequired();
+
+            modelBuilder.Entity<Users>()
+                .Property(s => s.PhoneNumber)
+                .HasColumnName("PhoneNumber")
+                .HasMaxLength(10)
+                .IsRequired();
+
+            modelBuilder.Entity<Users>()
+                .Property(s => s.Role)
+                .HasColumnName("Role")
+                .IsRequired();
+
+            modelBuilder.Entity<Users>()
+                .Property(s => s.CreatedAt)
+                .HasColumnName("CreatedAt")
                 .IsRequired();
         }
     }
