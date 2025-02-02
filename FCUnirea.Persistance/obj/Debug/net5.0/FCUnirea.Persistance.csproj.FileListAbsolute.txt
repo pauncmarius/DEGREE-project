@@ -1,6 +1,0 @@
-C:\Users\paunm\Documents\github\degree\DEGREE-project\FCUnirea.Persistance\obj\Debug\net5.0\FCUnirea.Persistance.csproj.AssemblyReference.cache
-C:\Users\paunm\Documents\github\degree\DEGREE-project\FCUnirea.Persistance\obj\Debug\net5.0\FCUnirea.Persistance.GeneratedMSBuildEditorConfig.editorconfig
-C:\Users\paunm\Documents\github\degree\DEGREE-project\FCUnirea.Persistance\obj\Debug\net5.0\FCUnirea.Persistance.AssemblyInfoInputs.cache
-C:\Users\paunm\Documents\github\degree\DEGREE-project\FCUnirea.Persistance\obj\Debug\net5.0\FCUnirea.Persistance.AssemblyInfo.cs
-C:\Users\paunm\Documents\github\degree\DEGREE-project\FCUnirea.Persistance\obj\Debug\net5.0\FCUnirea.Persistance.csproj.CoreCompileInputs.cache
-C:\Users\paunm\Documents\github\degree\DEGREE-project\FCUnirea.Persistance\obj\Debug\net5.0\FCUnirea.Persistance.sourcelink.json

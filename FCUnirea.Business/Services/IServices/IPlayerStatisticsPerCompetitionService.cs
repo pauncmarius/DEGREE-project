@@ -1,4 +1,5 @@
-﻿using System;
+﻿using FCUnirea.Domain.Entities;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -8,5 +9,10 @@ namespace FCUnirea.Business.Services.IServices
 {
     public interface IPlayerStatisticsPerCompetitionService
     {
+        IEnumerable<PlayerStatisticsPerCompetition> GetPlayerStatisticsPerCompetitions();
+        PlayerStatisticsPerCompetition GetPlayerStatisticPerCompetition(int id);
+        int AddPlayerStatisticPerCompetition(PlayerStatisticsPerCompetition statistic);
+        void UpdatePlayerStatisticPerCompetition(PlayerStatisticsPerCompetition statistic);
+        void DeletePlayerStatisticPerCompetition(int id);
     }
 }

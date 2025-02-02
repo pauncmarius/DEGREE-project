@@ -1,6 +1,0 @@
-C:\Users\paunm\Documents\github\degree\DEGREE-project\FCUnirea.Business\obj\Debug\net5.0\FCUnirea.Business.csproj.AssemblyReference.cache
-C:\Users\paunm\Documents\github\degree\DEGREE-project\FCUnirea.Business\obj\Debug\net5.0\FCUnirea.Business.GeneratedMSBuildEditorConfig.editorconfig
-C:\Users\paunm\Documents\github\degree\DEGREE-project\FCUnirea.Business\obj\Debug\net5.0\FCUnirea.Business.AssemblyInfoInputs.cache
-C:\Users\paunm\Documents\github\degree\DEGREE-project\FCUnirea.Business\obj\Debug\net5.0\FCUnirea.Business.AssemblyInfo.cs
-C:\Users\paunm\Documents\github\degree\DEGREE-project\FCUnirea.Business\obj\Debug\net5.0\FCUnirea.Business.csproj.CoreCompileInputs.cache
-C:\Users\paunm\Documents\github\degree\DEGREE-project\FCUnirea.Business\obj\Debug\net5.0\FCUnirea.Business.sourcelink.json

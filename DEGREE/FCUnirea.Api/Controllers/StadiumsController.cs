@@ -1,4 +1,6 @@
-﻿using FCUnirea.Business.Services.IServices;
+﻿using FCUnirea.Business.Services;
+using FCUnirea.Business.Services.IServices;
+using FCUnirea.Domain.Entities;
 using Microsoft.AspNetCore.Mvc;
 
 namespace FCUnirea.Api.Controllers
@@ -7,11 +9,49 @@ namespace FCUnirea.Api.Controllers
     [ApiController]
     public class StadiumsController : Controller
     {
-        private readonly IStadiumsService _stadiumsService;
+        private readonly IStadiumsService _stadiumService;
 
-        public StadiumsController(IStadiumsService stadiumsService)
+        public StadiumsController(IStadiumsService stadiumService)
         {
-            _stadiumsService = stadiumsService;
+            _stadiumService = stadiumService;
+        }
+
+        [HttpGet]
+        public IActionResult GetAll()
+        {
+            return Ok(_stadiumService.GetStadiums());
+        }
+
+        [HttpGet("{id}")]
+        public IActionResult GetById(int id)
+        {
+            var stadium = _stadiumService.GetStadium(id);
+            if (stadium != null)
+            {
+                return Ok(stadium);
+            }
+
+            return NotFound();
+        }
+
+        [HttpPost]
+        public IActionResult Add([FromBody] AddStadiumModel model)
+        {
+            return CreatedAtAction(null, _stadiumService.AddStadium(model));
+        }
+
+        [HttpPut]
+        public IActionResult Update([FromBody] Stadiums stadium)
+        {
+            _stadiumService.UpdateStadium(stadium);
+            return NoContent();
+        }
+
+        [HttpDelete("{id}")]
+        public IActionResult Delete(int id)
+        {
+            _stadiumService.DeleteStadium(id);
+            return NoContent();
         }
     }
 }

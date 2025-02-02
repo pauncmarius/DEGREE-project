@@ -1,4 +1,5 @@
-﻿using System;
+﻿using FCUnirea.Domain.Entities;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -8,5 +9,10 @@ namespace FCUnirea.Business.Services.IServices
 {
     public interface IGamesService
     {
+        IEnumerable<Games> GetGames();
+        Games GetGame(int id);
+        int AddGame(Games game);
+        void UpdateGame(Games game);
+        void DeleteGame(int id);
     }
 }

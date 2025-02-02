@@ -1,4 +1,6 @@
-﻿using FCUnirea.Business.Services.IServices;
+﻿using FCUnirea.Business.Services;
+using FCUnirea.Business.Services.IServices;
+using FCUnirea.Domain.Entities;
 using Microsoft.AspNetCore.Mvc;
 
 namespace FCUnirea.Api.Controllers
@@ -7,11 +9,49 @@ namespace FCUnirea.Api.Controllers
     [ApiController]
     public class SeatsController : Controller
     {
-        private readonly ISeatsService _seatsService;
+        private readonly ISeatsService _seatService;
 
-        public SeatsController(ISeatsService seatsService)
+        public SeatsController(ISeatsService seatService)
         {
-            _seatsService = seatsService;
+            _seatService = seatService;
+        }
+
+        [HttpGet]
+        public IActionResult GetAll()
+        {
+            return Ok(_seatService.GetSeats());
+        }
+
+        [HttpGet("{id}")]
+        public IActionResult GetById(int id)
+        {
+            var seat = _seatService.GetSeat(id);
+            if (seat != null)
+            {
+                return Ok(seat);
+            }
+
+            return NotFound();
+        }
+
+        [HttpPost]
+        public IActionResult Add([FromBody] AddSeatModel model)
+        {
+            return CreatedAtAction(null, _seatService.AddSeat(model));
+        }
+
+        [HttpPut]
+        public IActionResult Update([FromBody] Seats seat)
+        {
+            _seatService.UpdateSeat(seat);
+            return NoContent();
+        }
+
+        [HttpDelete("{id}")]
+        public IActionResult Delete(int id)
+        {
+            _seatService.DeleteSeat(id);
+            return NoContent();
         }
     }
 }
