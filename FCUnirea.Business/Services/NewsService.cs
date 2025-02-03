@@ -1,4 +1,5 @@
 ﻿using AutoMapper;
+using FCUnirea.Business.Models;
 using FCUnirea.Business.Services.IServices;
 using FCUnirea.Domain.Entities;
 using FCUnirea.Domain.IRepositories;
@@ -23,7 +24,7 @@ namespace FCUnirea.Business.Services
 
         public IEnumerable<News> GetNews() => _newsRepository.ListAll();
         public News GetNewsItem(int id) => _newsRepository.GetById(id);
-        public int AddNews(News news) => _newsRepository.Add(news).Id;
+        public int AddNews(NewsModel news) => _newsRepository.Add(_mapper.Map<News>(news)).Id;
         public void UpdateNews(News news) => _newsRepository.Update(news);
         public void DeleteNews(int id)
         {

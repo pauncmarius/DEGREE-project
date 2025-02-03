@@ -1,4 +1,5 @@
-﻿using FCUnirea.Business.Services;
+﻿using FCUnirea.Business.Models;
+using FCUnirea.Business.Services;
 using FCUnirea.Business.Services.IServices;
 using FCUnirea.Domain.Entities;
 using Microsoft.AspNetCore.Mvc;
@@ -35,7 +36,7 @@ namespace FCUnirea.Api.Controllers
         }
 
         [HttpPost]
-        public IActionResult Add([FromBody] AddCommentModel model)
+        public IActionResult Add([FromBody] CommentsModel model)
         {
             return CreatedAtAction(null, _commentService.AddComment(model));
         }

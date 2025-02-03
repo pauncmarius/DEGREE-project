@@ -1,4 +1,5 @@
 ﻿using AutoMapper;
+using FCUnirea.Business.Models;
 using FCUnirea.Business.Services.IServices;
 using FCUnirea.Domain.Entities;
 using FCUnirea.Domain.IRepositories;
@@ -23,7 +24,7 @@ namespace FCUnirea.Business.Services
 
         public IEnumerable<Seats> GetSeats() => _repository.ListAll();
         public Seats GetSeat(int id) => _repository.GetById(id);
-        public int AddSeat(Seats seat) => _repository.Add(seat).Id;
+        public int AddSeat(SeatsModel seat) => _repository.Add(_mapper.Map<Seats>(seat)).Id;
         public void UpdateSeat(Seats seat) => _repository.Update(seat);
         public void DeleteSeat(int id)
         {

@@ -1,4 +1,5 @@
-﻿using FCUnirea.Domain.Entities;
+﻿using FCUnirea.Business.Models;
+using FCUnirea.Domain.Entities;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -11,7 +12,7 @@ namespace FCUnirea.Business.Services.IServices
     {
         IEnumerable<Games> GetGames();
         Games GetGame(int id);
-        int AddGame(Games game);
+        int AddGame(GamesModel game);
         void UpdateGame(Games game);
         void DeleteGame(int id);
     }

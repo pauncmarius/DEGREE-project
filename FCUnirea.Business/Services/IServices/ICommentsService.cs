@@ -1,4 +1,5 @@
-﻿using FCUnirea.Domain.Entities;
+﻿using FCUnirea.Business.Models;
+using FCUnirea.Domain.Entities;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -11,7 +12,7 @@ namespace FCUnirea.Business.Services.IServices
     {
         IEnumerable<Comments> GetComments();
         Comments GetComment(int id);
-        int AddComment(Comments comment);
+        int AddComment(CommentsModel comment);
         void UpdateComment(Comments comment);
         void DeleteComment(int id);
     }

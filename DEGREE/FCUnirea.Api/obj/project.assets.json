@@ -1965,16 +1965,27 @@
       "FCUnirea.Domain/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v5.0",
-        "dependencies": {
-          "AutoMapper": "12.0.1",
-          "Microsoft.EntityFrameworkCore": "5.0.17",
-          "Microsoft.EntityFrameworkCore.SqlServer": "5.0.17"
-        },
         "compile": {
           "bin/placeholder/FCUnirea.Domain.dll": {}
         },
         "runtime": {
           "bin/placeholder/FCUnirea.Domain.dll": {}
+        }
+      },
+      "FCUnirea.Persistance/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v5.0",
+        "dependencies": {
+          "AutoMapper": "12.0.1",
+          "FCUnirea.Domain": "1.0.0",
+          "Microsoft.EntityFrameworkCore": "5.0.17",
+          "Microsoft.EntityFrameworkCore.SqlServer": "5.0.17"
+        },
+        "compile": {
+          "bin/placeholder/FCUnirea.Persistance.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/FCUnirea.Persistance.dll": {}
         }
       }
     }
@@ -6455,11 +6466,18 @@
       "type": "project",
       "path": "../../FCUnirea.Domain/FCUnirea.Domain.csproj",
       "msbuildProject": "../../FCUnirea.Domain/FCUnirea.Domain.csproj"
+    },
+    "FCUnirea.Persistance/1.0.0": {
+      "type": "project",
+      "path": "../../FCUnirea.Persistance/FCUnirea.Persistance.csproj",
+      "msbuildProject": "../../FCUnirea.Persistance/FCUnirea.Persistance.csproj"
     }
   },
   "projectFileDependencyGroups": {
     "net5.0": [
       "FCUnirea.Business >= 1.0.0",
+      "FCUnirea.Domain >= 1.0.0",
+      "FCUnirea.Persistance >= 1.0.0",
       "FluentValidation >= 11.1.0",
       "FluentValidation.AspNetCore >= 11.1.2",
       "Microsoft.EntityFrameworkCore.Design >= 5.0.17",
@@ -6501,6 +6519,12 @@
           "projectReferences": {
             "C:\\Users\\paunm\\Documents\\github\\degree\\DEGREE-project\\FCUnirea.Business\\FCUnirea.Business.csproj": {
               "projectPath": "C:\\Users\\paunm\\Documents\\github\\degree\\DEGREE-project\\FCUnirea.Business\\FCUnirea.Business.csproj"
+            },
+            "C:\\Users\\paunm\\Documents\\github\\degree\\DEGREE-project\\FCUnirea.Domain\\FCUnirea.Domain.csproj": {
+              "projectPath": "C:\\Users\\paunm\\Documents\\github\\degree\\DEGREE-project\\FCUnirea.Domain\\FCUnirea.Domain.csproj"
+            },
+            "C:\\Users\\paunm\\Documents\\github\\degree\\DEGREE-project\\FCUnirea.Persistance\\FCUnirea.Persistance.csproj": {
+              "projectPath": "C:\\Users\\paunm\\Documents\\github\\degree\\DEGREE-project\\FCUnirea.Persistance\\FCUnirea.Persistance.csproj"
             }
           }
         }

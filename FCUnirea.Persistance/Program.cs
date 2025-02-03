@@ -1,4 +1,4 @@
-﻿namespace FCUnirea
+﻿namespace FCUnirea.Persistance
 {
     internal class Program
     {

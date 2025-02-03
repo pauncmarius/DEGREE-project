@@ -1,4 +1,5 @@
-﻿using FCUnirea.Business.Services.IServices;
+﻿using FCUnirea.Business.Models;
+using FCUnirea.Business.Services.IServices;
 using FCUnirea.Domain.Entities;
 using Microsoft.AspNetCore.Mvc;
 
@@ -34,7 +35,7 @@ namespace FCUnirea.Api.Controllers
         }
 
         [HttpPost]
-        public IActionResult Add([FromBody] AddPlayerStatisticsModel model)
+        public IActionResult Add([FromBody] PlayerStatisticsPerGameModel model)
         {
             return CreatedAtAction(null, _statisticsService.AddPlayerStatisticPerGame(model));
         }

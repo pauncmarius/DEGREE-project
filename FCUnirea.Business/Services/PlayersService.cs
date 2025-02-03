@@ -1,4 +1,5 @@
 ﻿using AutoMapper;
+using FCUnirea.Business.Models;
 using FCUnirea.Business.Services.IServices;
 using FCUnirea.Domain.Entities;
 using FCUnirea.Domain.IRepositories;
@@ -23,7 +24,7 @@ namespace FCUnirea.Business.Services
 
         public IEnumerable<Players> GetPlayers() => _playerRepository.ListAll();
         public Players GetPlayer(int id) => _playerRepository.GetById(id);
-        public int AddPlayer(Players player) => _playerRepository.Add(player).Id;
+        public int AddPlayer(PlayersModel player) => _playerRepository.Add(_mapper.Map<Players>(player)).Id;
         public void UpdatePlayer(Players player) => _playerRepository.Update(player);
         public void DeletePlayer(int id)
         {

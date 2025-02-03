@@ -1,4 +1,5 @@
-﻿using FCUnirea.Domain.Entities;
+﻿using FCUnirea.Business.Models;
+using FCUnirea.Domain.Entities;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -11,7 +12,7 @@ namespace FCUnirea.Business.Services.IServices
     {
         IEnumerable<Competitions> GetCompetitions();
         Competitions GetCompetition(int id);
-        int AddCompetition(Competitions competition);
+        int AddCompetition(CompetitionsModel competition);
         void UpdateCompetition(Competitions competition);
         void DeleteCompetition(int id);
     }

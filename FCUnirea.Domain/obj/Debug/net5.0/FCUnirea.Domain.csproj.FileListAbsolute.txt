@@ -1,0 +1,12 @@
+C:\Users\paunm\Documents\github\degree\DEGREE-project\FCUnirea.Domain\bin\Debug\net5.0\FCUnirea.Domain.deps.json
+C:\Users\paunm\Documents\github\degree\DEGREE-project\FCUnirea.Domain\bin\Debug\net5.0\FCUnirea.Domain.dll
+C:\Users\paunm\Documents\github\degree\DEGREE-project\FCUnirea.Domain\bin\Debug\net5.0\FCUnirea.Domain.pdb
+C:\Users\paunm\Documents\github\degree\DEGREE-project\FCUnirea.Domain\obj\Debug\net5.0\FCUnirea.Domain.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\paunm\Documents\github\degree\DEGREE-project\FCUnirea.Domain\obj\Debug\net5.0\FCUnirea.Domain.AssemblyInfoInputs.cache
+C:\Users\paunm\Documents\github\degree\DEGREE-project\FCUnirea.Domain\obj\Debug\net5.0\FCUnirea.Domain.AssemblyInfo.cs
+C:\Users\paunm\Documents\github\degree\DEGREE-project\FCUnirea.Domain\obj\Debug\net5.0\FCUnirea.Domain.csproj.CoreCompileInputs.cache
+C:\Users\paunm\Documents\github\degree\DEGREE-project\FCUnirea.Domain\obj\Debug\net5.0\FCUnirea.Domain.sourcelink.json
+C:\Users\paunm\Documents\github\degree\DEGREE-project\FCUnirea.Domain\obj\Debug\net5.0\FCUnirea.Domain.dll
+C:\Users\paunm\Documents\github\degree\DEGREE-project\FCUnirea.Domain\obj\Debug\net5.0\refint\FCUnirea.Domain.dll
+C:\Users\paunm\Documents\github\degree\DEGREE-project\FCUnirea.Domain\obj\Debug\net5.0\FCUnirea.Domain.pdb
+C:\Users\paunm\Documents\github\degree\DEGREE-project\FCUnirea.Domain\obj\Debug\net5.0\ref\FCUnirea.Domain.dll

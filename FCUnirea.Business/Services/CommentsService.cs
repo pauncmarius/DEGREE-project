@@ -1,4 +1,5 @@
 ﻿using AutoMapper;
+using FCUnirea.Business.Models;
 using FCUnirea.Business.Services.IServices;
 using FCUnirea.Domain.Entities;
 using FCUnirea.Domain.IRepositories;
@@ -23,7 +24,7 @@ namespace FCUnirea.Business.Services
 
         public IEnumerable<Comments> GetComments() => _commentsRepository.ListAll();
         public Comments GetComment(int id) => _commentsRepository.GetById(id);
-        public int AddComment(Comments comment) => _commentsRepository.Add(comment).Id;
+        public int AddComment(CommentsModel comment) => _commentsRepository.Add(_mapper.Map<Comments>(comment)).Id;
         public void UpdateComment(Comments comment) => _commentsRepository.Update(comment);
         public void DeleteComment(int id)
         {

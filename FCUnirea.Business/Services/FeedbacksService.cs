@@ -1,4 +1,5 @@
 ﻿using AutoMapper;
+using FCUnirea.Business.Models;
 using FCUnirea.Business.Services.IServices;
 using FCUnirea.Domain.Entities;
 using FCUnirea.Domain.IRepositories;
@@ -23,7 +24,7 @@ namespace FCUnirea.Business.Services
 
         public IEnumerable<Feedbacks> GetFeedbacks() => _feedbacksRepository.ListAll();
         public Feedbacks GetFeedback(int id) => _feedbacksRepository.GetById(id);
-        public int AddFeedback(Feedbacks feedback) => _feedbacksRepository.Add(feedback).Id;
+        public int AddFeedback(FeedbacksModel feedback) => _feedbacksRepository.Add(_mapper.Map<Feedbacks>(feedback)).Id;
         public void UpdateFeedback(Feedbacks feedback) => _feedbacksRepository.Update(feedback);
         public void DeleteFeedback(int id)
         {

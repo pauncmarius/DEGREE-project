@@ -1,4 +1,5 @@
 ﻿using AutoMapper;
+using FCUnirea.Business.Models;
 using FCUnirea.Business.Services.IServices;
 using FCUnirea.Domain.Entities;
 using FCUnirea.Domain.IRepositories;
@@ -23,7 +24,7 @@ namespace FCUnirea.Business.Services
 
         public IEnumerable<Stadiums> GetStadiums() => _stadiumRepository.ListAll();
         public Stadiums GetStadium(int id) => _stadiumRepository.GetById(id);
-        public int AddStadium(Stadiums stadium) => _stadiumRepository.Add(stadium).Id;
+        public int AddStadium(StadiumsModel stadium) => _stadiumRepository.Add(_mapper.Map<Stadiums>(stadium)).Id;
         public void UpdateStadium(Stadiums stadium) => _stadiumRepository.Update(stadium);
         public void DeleteStadium(int id)
         {

@@ -5,7 +5,7 @@ using System;
 using System.Net;
 using System.Threading.Tasks;
 
-namespace MyHotel.Api.Middleware
+namespace FCUnirea.Api.Middleware
 {
     public class ExceptionHandlerMiddleware
     {

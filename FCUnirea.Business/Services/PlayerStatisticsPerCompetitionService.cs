@@ -1,12 +1,10 @@
 ﻿using AutoMapper;
+using FCUnirea.Business.Models;
 using FCUnirea.Business.Services.IServices;
 using FCUnirea.Domain.Entities;
 using FCUnirea.Domain.IRepositories;
-using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+
 
 namespace FCUnirea.Business.Services
 {
@@ -23,7 +21,7 @@ namespace FCUnirea.Business.Services
 
         public IEnumerable<PlayerStatisticsPerCompetition> GetPlayerStatisticsPerCompetitions() => _repository.ListAll();
         public PlayerStatisticsPerCompetition GetPlayerStatisticPerCompetition(int id) => _repository.GetById(id);
-        public int AddPlayerStatisticPerCompetition(PlayerStatisticsPerCompetition statistic) => _repository.Add(statistic).Id;
+        public int AddPlayerStatisticPerCompetition(PlayerStatisticsPerCompetitionModel statistic) => _repository.Add(_mapper.Map<PlayerStatisticsPerCompetition>(statistic)).Id;
         public void UpdatePlayerStatisticPerCompetition(PlayerStatisticsPerCompetition statistic) => _repository.Update(statistic);
         public void DeletePlayerStatisticPerCompetition(int id)
         {

@@ -1,4 +1,5 @@
-﻿using FCUnirea.Domain.Entities;
+﻿using FCUnirea.Business.Models;
+using FCUnirea.Domain.Entities;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -11,7 +12,7 @@ namespace FCUnirea.Business.Services.IServices
     {
         IEnumerable<Teams> GetTeams();
         Teams GetTeam(int id);
-        int AddTeam(Teams team);
+        int AddTeam(TeamsModel team);
         void UpdateTeam(Teams team);
         void DeleteTeam(int id);
     }

@@ -1,4 +1,5 @@
 ﻿using AutoMapper;
+using FCUnirea.Business.Models;
 using FCUnirea.Business.Services.IServices;
 using FCUnirea.Domain.Entities;
 using FCUnirea.Domain.IRepositories;
@@ -23,7 +24,7 @@ namespace FCUnirea.Business.Services
 
         public IEnumerable<Competitions> GetCompetitions() => _competitionRepository.ListAll();
         public Competitions GetCompetition(int id) => _competitionRepository.GetById(id);
-        public int AddCompetition(Competitions competition) => _competitionRepository.Add(competition).Id;
+        public int AddCompetition(CompetitionsModel competition) => _competitionRepository.Add(_mapper.Map<Competitions>(competition)).Id;
         public void UpdateCompetition(Competitions competition) => _competitionRepository.Update(competition);
         public void DeleteCompetition(int id)
         {

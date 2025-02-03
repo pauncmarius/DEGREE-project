@@ -1,4 +1,5 @@
 ﻿using AutoMapper;
+using FCUnirea.Business.Models;
 using FCUnirea.Business.Services.IServices;
 using FCUnirea.Domain.Entities;
 using FCUnirea.Domain.IRepositories;
@@ -23,7 +24,7 @@ namespace FCUnirea.Business.Services
 
         public IEnumerable<Users> GetUsers() => _userRepository.ListAll();
         public Users GetUser(int id) => _userRepository.GetById(id);
-        public int AddUser(Users user) => _userRepository.Add(user).Id;
+        public int AddUser(UsersModel user) => _userRepository.Add(_mapper.Map<Users>(user)).Id;
         public void UpdateUser(Users user) => _userRepository.Update(user);
         public void DeleteUser(int id)
         {

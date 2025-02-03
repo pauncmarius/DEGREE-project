@@ -16,6 +16,8 @@
 
   <ItemGroup>
     <ProjectReference Include="..\..\FCUnirea.Business\FCUnirea.Business.csproj" />
+    <ProjectReference Include="..\..\FCUnirea.Domain\FCUnirea.Domain.csproj" />
+    <ProjectReference Include="..\..\FCUnirea.Persistance\FCUnirea.Persistance.csproj" />
   </ItemGroup>
 
 </Project>
