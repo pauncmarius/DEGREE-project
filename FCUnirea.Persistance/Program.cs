@@ -9,7 +9,7 @@
             //{
             //    FirstName = "Georgiana",
             //    LastName = "Botez",
-            //    Email = "georgiana.botez@centric.eu"
+            //    Email = "georgiana.botez@gg.eu"
             //};
 
             //context.Guests.Add(guest);
