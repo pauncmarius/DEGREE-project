@@ -8,9 +8,9 @@ namespace FCUnirea.Persistance.Data.Mappings
         internal static void Map(ModelBuilder modelBuilder)
         {
             modelBuilder.Entity<PlayerStatisticsPerCompetition>()
-                            .Property(s => s.Id)
-                            .HasColumnName("Id")
-                            .IsRequired();
+                .Property(s => s.Id)
+                .HasColumnName("Id")
+                .IsRequired();
 
             modelBuilder.Entity<PlayerStatisticsPerCompetition>()
                 .Property(s => s.Goals)

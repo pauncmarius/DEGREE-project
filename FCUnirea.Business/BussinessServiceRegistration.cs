@@ -3,7 +3,6 @@ using FCUnirea.Business.Services;
 using Microsoft.Extensions.DependencyInjection;
 using System.Reflection;
 
-
 namespace FCUnirea.Business
 {
     public static class BussinessServiceRegistration

@@ -1,19 +1,15 @@
 ﻿using FCUnirea.Business.Models;
 using FCUnirea.Domain.Entities;
-using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace FCUnirea.Business.Services.IServices
 {
     public interface ITeamStatisticsService
     {
-        IEnumerable<TeamStatistics> GetTeamStatistics();
-        TeamStatistics GetTeamStatistic(int id);
-        int AddTeamStatistic(TeamStatisticsModel teamStatistic);
-        void UpdateTeamStatistic(TeamStatistics teamStatistic);
-        void DeleteTeamStatistic(int id);
+        public IEnumerable<TeamStatistics> GetTeamStatistics();
+        public TeamStatistics GetTeamStatistic(int id);
+        public int AddTeamStatistic(TeamStatisticsModel teamStatistic);
+        public void UpdateTeamStatistic(TeamStatistics teamStatistic);
+        public void DeleteTeamStatistic(int id);
     }
 }

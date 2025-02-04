@@ -1,19 +1,15 @@
 ﻿using FCUnirea.Business.Models;
 using FCUnirea.Domain.Entities;
-using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace FCUnirea.Business.Services.IServices
 {
     public interface IFeedbacksService
     {
-        IEnumerable<Feedbacks> GetFeedbacks();
-        Feedbacks GetFeedback(int id);
-        int AddFeedback(FeedbacksModel feedback);
-        void UpdateFeedback(Feedbacks feedback);
-        void DeleteFeedback(int id);
+        public IEnumerable<Feedbacks> GetFeedbacks();
+        public Feedbacks GetFeedback(int id);
+        public int AddFeedback(FeedbacksModel feedback);
+        public void UpdateFeedback(Feedbacks feedback);
+        public void DeleteFeedback(int id);
     }
 }

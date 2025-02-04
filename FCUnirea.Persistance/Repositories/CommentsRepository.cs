@@ -1,8 +1,6 @@
 ﻿using FCUnirea.Domain.Entities;
 using FCUnirea.Domain.IRepositories;
-using FCUnirea.Persistance;
 using FCUnirea.Persistance.Data;
-
 
 namespace FCUnirea.Persistance.Repositories
 {

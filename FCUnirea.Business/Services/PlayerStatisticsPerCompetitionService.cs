@@ -5,7 +5,6 @@ using FCUnirea.Domain.Entities;
 using FCUnirea.Domain.IRepositories;
 using System.Collections.Generic;
 
-
 namespace FCUnirea.Business.Services
 {
     public class PlayerStatisticsPerCompetitionService : IPlayerStatisticsPerCompetitionService

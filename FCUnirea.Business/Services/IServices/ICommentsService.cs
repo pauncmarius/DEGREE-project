@@ -1,19 +1,15 @@
 ﻿using FCUnirea.Business.Models;
 using FCUnirea.Domain.Entities;
-using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace FCUnirea.Business.Services.IServices
 {
     public interface ICommentsService
     {
-        IEnumerable<Comments> GetComments();
-        Comments GetComment(int id);
-        int AddComment(CommentsModel comment);
-        void UpdateComment(Comments comment);
-        void DeleteComment(int id);
+        public IEnumerable<Comments> GetComments();
+        public Comments GetComment(int id);
+        public int AddComment(CommentsModel comment);
+        public void UpdateComment(Comments comment);
+        public void DeleteComment(int id);
     }
 }

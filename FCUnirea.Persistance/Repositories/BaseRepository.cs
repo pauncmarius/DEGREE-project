@@ -4,7 +4,6 @@ using Microsoft.EntityFrameworkCore;
 using System.Collections.Generic;
 using System.Linq;
 
-
 namespace FCUnirea.Persistance.Repositories
 {
     public class BaseRepository<T> : IBaseRepository<T> where T : class
