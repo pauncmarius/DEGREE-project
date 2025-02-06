@@ -9,5 +9,16 @@ namespace FCUnirea.Domain.Entities
         public string Review { get; set; }
 
         public DateTime CreatedAt { get; set; }
+
+        // Foreign Keys
+        public int? FromStaffId { get; set; }
+        public int? ToPlayerId { get; set; }
+
+        // Navigation Properties
+        [ForeignKey("FromStaffId")]
+        public Users FromStaff { get; set; }
+
+        [ForeignKey("ToPlayerId")]
+        public Users ToPlayer { get; set; }
     }
 }

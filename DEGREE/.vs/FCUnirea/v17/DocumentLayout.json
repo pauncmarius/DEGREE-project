@@ -3,85 +3,77 @@
   "WorkspaceRootPath": "C:\\Users\\paunm\\Documents\\github\\degree\\DEGREE-project\\DEGREE\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{C18B2AB4-851B-483E-AD4F-F9731E290FF6}|..\\FCUnirea.Persistance\\FCUnirea.Persistance.csproj|c:\\users\\paunm\\documents\\github\\degree\\degree-project\\fcunirea.persistance\\persistanceserviceregistration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{C18B2AB4-851B-483E-AD4F-F9731E290FF6}|..\\FCUnirea.Persistance\\FCUnirea.Persistance.csproj|c:\\users\\paunm\\documents\\github\\degree\\degree-project\\fcunirea.persistance\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{82C8B43D-3018-4C8C-A463-4A51192D4191}|FCUnirea.Api\\FCUnirea.Api.csproj|c:\\users\\paunm\\documents\\github\\degree\\degree-project\\degree\\fcunirea.api\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{82C8B43D-3018-4C8C-A463-4A51192D4191}|FCUnirea.Api\\FCUnirea.Api.csproj|solutionrelative:fcunirea.api\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{82C8B43D-3018-4C8C-A463-4A51192D4191}|FCUnirea.Api\\FCUnirea.Api.csproj|c:\\users\\paunm\\documents\\github\\degree\\degree-project\\degree\\fcunirea.api\\startup.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{82C8B43D-3018-4C8C-A463-4A51192D4191}|FCUnirea.Api\\FCUnirea.Api.csproj|solutionrelative:fcunirea.api\\startup.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{82C8B43D-3018-4C8C-A463-4A51192D4191}|FCUnirea.Api\\FCUnirea.Api.csproj|c:\\users\\paunm\\documents\\github\\degree\\degree-project\\degree\\fcunirea.api\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
-      "RelativeMoniker": "D:0:0:{82C8B43D-3018-4C8C-A463-4A51192D4191}|FCUnirea.Api\\FCUnirea.Api.csproj|solutionrelative:fcunirea.api\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{82C8B43D-3018-4C8C-A463-4A51192D4191}|FCUnirea.Api\\FCUnirea.Api.csproj|c:\\users\\paunm\\documents\\github\\degree\\degree-project\\degree\\fcunirea.api\\filters\\validationfilter.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{82C8B43D-3018-4C8C-A463-4A51192D4191}|FCUnirea.Api\\FCUnirea.Api.csproj|solutionrelative:fcunirea.api\\filters\\validationfilter.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{82C8B43D-3018-4C8C-A463-4A51192D4191}|FCUnirea.Api\\FCUnirea.Api.csproj|c:\\users\\paunm\\documents\\github\\degree\\degree-project\\degree\\fcunirea.api\\controllers\\commentscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{82C8B43D-3018-4C8C-A463-4A51192D4191}|FCUnirea.Api\\FCUnirea.Api.csproj|solutionrelative:fcunirea.api\\controllers\\commentscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{C18B2AB4-851B-483E-AD4F-F9731E290FF6}|..\\FCUnirea.Persistance\\FCUnirea.Persistance.csproj|c:\\users\\paunm\\documents\\github\\degree\\degree-project\\fcunirea.persistance\\repositories\\commentsrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{C18B2AB4-851B-483E-AD4F-F9731E290FF6}|..\\FCUnirea.Persistance\\FCUnirea.Persistance.csproj|c:\\users\\paunm\\documents\\github\\degree\\degree-project\\fcunirea.persistance\\repositories\\baserepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{C18B2AB4-851B-483E-AD4F-F9731E290FF6}|..\\FCUnirea.Persistance\\FCUnirea.Persistance.csproj|c:\\users\\paunm\\documents\\github\\degree\\degree-project\\fcunirea.persistance\\data\\fcunireadbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{2EC0D174-BC3A-42CC-A679-0AFD9DB6C0FF}|..\\FCUnirea.Business\\FCUnirea.Business.csproj|c:\\users\\paunm\\documents\\github\\degree\\degree-project\\fcunirea.business\\bussinessserviceregistration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{2EC0D174-BC3A-42CC-A679-0AFD9DB6C0FF}|..\\FCUnirea.Business\\FCUnirea.Business.csproj|c:\\users\\paunm\\documents\\github\\degree\\degree-project\\fcunirea.business\\fcunirea.business.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{2EC0D174-BC3A-42CC-A679-0AFD9DB6C0FF}|..\\FCUnirea.Business\\FCUnirea.Business.csproj|c:\\users\\paunm\\documents\\github\\degree\\degree-project\\fcunirea.business\\profiles\\mappingprofile.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{2EC0D174-BC3A-42CC-A679-0AFD9DB6C0FF}|..\\FCUnirea.Business\\FCUnirea.Business.csproj|c:\\users\\paunm\\documents\\github\\degree\\degree-project\\fcunirea.business\\models\\playerstatisticspercompetitionmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{2EC0D174-BC3A-42CC-A679-0AFD9DB6C0FF}|..\\FCUnirea.Business\\FCUnirea.Business.csproj|c:\\users\\paunm\\documents\\github\\degree\\degree-project\\fcunirea.business\\models\\newsmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{2EC0D174-BC3A-42CC-A679-0AFD9DB6C0FF}|..\\FCUnirea.Business\\FCUnirea.Business.csproj|c:\\users\\paunm\\documents\\github\\degree\\degree-project\\fcunirea.business\\models\\feedbacksmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{2EC0D174-BC3A-42CC-A679-0AFD9DB6C0FF}|..\\FCUnirea.Business\\FCUnirea.Business.csproj|c:\\users\\paunm\\documents\\github\\degree\\degree-project\\fcunirea.business\\models\\gamesmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{C18B2AB4-851B-483E-AD4F-F9731E290FF6}|..\\FCUnirea.Persistance\\FCUnirea.Persistance.csproj|c:\\users\\paunm\\documents\\github\\degree\\degree-project\\fcunirea.persistance\\data\\fcunireadbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{2EC0D174-BC3A-42CC-A679-0AFD9DB6C0FF}|..\\FCUnirea.Business\\FCUnirea.Business.csproj|c:\\users\\paunm\\documents\\github\\degree\\degree-project\\fcunirea.business\\exceptions\\notavailableexception.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{6BDD83E6-3CF0-472F-A000-15CB4EB199A0}|..\\FCUnirea.Domain\\FCUnirea.Domain.csproj|c:\\users\\paunm\\documents\\github\\degree\\degree-project\\fcunirea.domain\\entities\\stadiums.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{6BDD83E6-3CF0-472F-A000-15CB4EB199A0}|..\\FCUnirea.Domain\\FCUnirea.Domain.csproj|c:\\users\\paunm\\documents\\github\\degree\\degree-project\\fcunirea.domain\\irepositories\\icommentsrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{6BDD83E6-3CF0-472F-A000-15CB4EB199A0}|..\\FCUnirea.Domain\\FCUnirea.Domain.csproj|c:\\users\\paunm\\documents\\github\\degree\\degree-project\\fcunirea.domain\\entities\\feedbacks.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{6BDD83E6-3CF0-472F-A000-15CB4EB199A0}|..\\FCUnirea.Domain\\FCUnirea.Domain.csproj|c:\\users\\paunm\\documents\\github\\degree\\degree-project\\fcunirea.domain\\irepositories\\ibaserepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{82C8B43D-3018-4C8C-A463-4A51192D4191}|FCUnirea.Api\\FCUnirea.Api.csproj|c:\\users\\paunm\\documents\\github\\degree\\degree-project\\degree\\fcunirea.api\\controllers\\feedbackscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{82C8B43D-3018-4C8C-A463-4A51192D4191}|FCUnirea.Api\\FCUnirea.Api.csproj|solutionrelative:fcunirea.api\\controllers\\feedbackscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{6BDD83E6-3CF0-472F-A000-15CB4EB199A0}|..\\FCUnirea.Domain\\FCUnirea.Domain.csproj|c:\\users\\paunm\\documents\\github\\degree\\degree-project\\fcunirea.domain\\entities\\teams.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{82C8B43D-3018-4C8C-A463-4A51192D4191}|FCUnirea.Api\\FCUnirea.Api.csproj|c:\\users\\paunm\\documents\\github\\degree\\degree-project\\degree\\fcunirea.api\\validators\\gamesmodelvalidator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{82C8B43D-3018-4C8C-A463-4A51192D4191}|FCUnirea.Api\\FCUnirea.Api.csproj|solutionrelative:fcunirea.api\\validators\\gamesmodelvalidator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{6BDD83E6-3CF0-472F-A000-15CB4EB199A0}|..\\FCUnirea.Domain\\FCUnirea.Domain.csproj|c:\\users\\paunm\\documents\\github\\degree\\degree-project\\fcunirea.domain\\entities\\comments.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{82C8B43D-3018-4C8C-A463-4A51192D4191}|FCUnirea.Api\\FCUnirea.Api.csproj|c:\\users\\paunm\\documents\\github\\degree\\degree-project\\degree\\fcunirea.api\\controllers\\competitionscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{82C8B43D-3018-4C8C-A463-4A51192D4191}|FCUnirea.Api\\FCUnirea.Api.csproj|solutionrelative:fcunirea.api\\controllers\\competitionscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{6BDD83E6-3CF0-472F-A000-15CB4EB199A0}|..\\FCUnirea.Domain\\FCUnirea.Domain.csproj|c:\\users\\paunm\\documents\\github\\degree\\degree-project\\fcunirea.domain\\entities\\baseentity.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{C18B2AB4-851B-483E-AD4F-F9731E290FF6}|..\\FCUnirea.Persistance\\FCUnirea.Persistance.csproj|c:\\users\\paunm\\documents\\github\\degree\\degree-project\\fcunirea.persistance\\data\\mappings\\feedbacksmapping.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{6BDD83E6-3CF0-472F-A000-15CB4EB199A0}|..\\FCUnirea.Domain\\FCUnirea.Domain.csproj|c:\\users\\paunm\\documents\\github\\degree\\degree-project\\fcunirea.domain\\fcunirea.domain.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+      "AbsoluteMoniker": "D:0:0:{C18B2AB4-851B-483E-AD4F-F9731E290FF6}|..\\FCUnirea.Persistance\\FCUnirea.Persistance.csproj|c:\\users\\paunm\\documents\\github\\degree\\degree-project\\fcunirea.persistance\\repositories\\commentsrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{82C8B43D-3018-4C8C-A463-4A51192D4191}|FCUnirea.Api\\FCUnirea.Api.csproj|c:\\users\\paunm\\documents\\github\\degree\\degree-project\\degree\\fcunirea.api\\middleware\\exceptionhandlermiddleware.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{82C8B43D-3018-4C8C-A463-4A51192D4191}|FCUnirea.Api\\FCUnirea.Api.csproj|solutionrelative:fcunirea.api\\middleware\\exceptionhandlermiddleware.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{2EC0D174-BC3A-42CC-A679-0AFD9DB6C0FF}|..\\FCUnirea.Business\\FCUnirea.Business.csproj|c:\\users\\paunm\\documents\\github\\degree\\degree-project\\fcunirea.business\\services\\commentsservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2EC0D174-BC3A-42CC-A679-0AFD9DB6C0FF}|..\\FCUnirea.Business\\FCUnirea.Business.csproj|c:\\users\\paunm\\documents\\github\\degree\\degree-project\\fcunirea.business\\models\\seatsmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2EC0D174-BC3A-42CC-A679-0AFD9DB6C0FF}|..\\FCUnirea.Business\\FCUnirea.Business.csproj|c:\\users\\paunm\\documents\\github\\degree\\degree-project\\fcunirea.business\\models\\playersmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2EC0D174-BC3A-42CC-A679-0AFD9DB6C0FF}|..\\FCUnirea.Business\\FCUnirea.Business.csproj|c:\\users\\paunm\\documents\\github\\degree\\degree-project\\fcunirea.business\\models\\stadiumsmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2EC0D174-BC3A-42CC-A679-0AFD9DB6C0FF}|..\\FCUnirea.Business\\FCUnirea.Business.csproj|c:\\users\\paunm\\documents\\github\\degree\\degree-project\\fcunirea.business\\models\\competitionsmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2EC0D174-BC3A-42CC-A679-0AFD9DB6C0FF}|..\\FCUnirea.Business\\FCUnirea.Business.csproj|c:\\users\\paunm\\documents\\github\\degree\\degree-project\\fcunirea.business\\models\\commentsmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6BDD83E6-3CF0-472F-A000-15CB4EB199A0}|..\\FCUnirea.Domain\\FCUnirea.Domain.csproj|c:\\users\\paunm\\documents\\github\\degree\\degree-project\\fcunirea.domain\\irepositories\\icompetitionsrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2EC0D174-BC3A-42CC-A679-0AFD9DB6C0FF}|..\\FCUnirea.Business\\FCUnirea.Business.csproj|c:\\users\\paunm\\documents\\github\\degree\\degree-project\\fcunirea.business\\profiles\\mappingprofile.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2EC0D174-BC3A-42CC-A679-0AFD9DB6C0FF}|..\\FCUnirea.Business\\FCUnirea.Business.csproj|c:\\users\\paunm\\documents\\github\\degree\\degree-project\\fcunirea.business\\services\\iservices\\ifeedbacksservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2EC0D174-BC3A-42CC-A679-0AFD9DB6C0FF}|..\\FCUnirea.Business\\FCUnirea.Business.csproj|c:\\users\\paunm\\documents\\github\\degree\\degree-project\\fcunirea.business\\services\\feedbacksservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2EC0D174-BC3A-42CC-A679-0AFD9DB6C0FF}|..\\FCUnirea.Business\\FCUnirea.Business.csproj|c:\\users\\paunm\\documents\\github\\degree\\degree-project\\fcunirea.business\\services\\competitionsservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6BDD83E6-3CF0-472F-A000-15CB4EB199A0}|..\\FCUnirea.Domain\\FCUnirea.Domain.csproj|c:\\users\\paunm\\documents\\github\\degree\\degree-project\\fcunirea.domain\\irepositories\\ifeedbacksrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6BDD83E6-3CF0-472F-A000-15CB4EB199A0}|..\\FCUnirea.Domain\\FCUnirea.Domain.csproj|c:\\users\\paunm\\documents\\github\\degree\\degree-project\\fcunirea.domain\\entities\\users.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -91,102 +83,102 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 6,
+          "SelectedChildIndex": 0,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 0,
               "Title": "Startup.cs",
               "DocumentMoniker": "C:\\Users\\paunm\\Documents\\github\\degree\\DEGREE-project\\DEGREE\\FCUnirea.Api\\Startup.cs",
               "RelativeDocumentMoniker": "FCUnirea.Api\\Startup.cs",
               "ToolTip": "C:\\Users\\paunm\\Documents\\github\\degree\\DEGREE-project\\DEGREE\\FCUnirea.Api\\Startup.cs",
               "RelativeToolTip": "FCUnirea.Api\\Startup.cs",
-              "ViewState": "AQIAABgAAAAAAAAAAAAAADUAAAAAAAAA",
+              "ViewState": "AQIAABoAAAAAAAAAAAAAADAAAACfAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-04T21:36:35.137Z",
+              "WhenOpened": "2025-02-06T11:52:02.065Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "Program.cs",
-              "DocumentMoniker": "C:\\Users\\paunm\\Documents\\github\\degree\\DEGREE-project\\DEGREE\\FCUnirea.Api\\Program.cs",
-              "RelativeDocumentMoniker": "FCUnirea.Api\\Program.cs",
-              "ToolTip": "C:\\Users\\paunm\\Documents\\github\\degree\\DEGREE-project\\DEGREE\\FCUnirea.Api\\Program.cs",
-              "RelativeToolTip": "FCUnirea.Api\\Program.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "DocumentIndex": 3,
+              "Title": "Stadiums.cs",
+              "DocumentMoniker": "C:\\Users\\paunm\\Documents\\github\\degree\\DEGREE-project\\FCUnirea.Domain\\Entities\\Stadiums.cs",
+              "RelativeDocumentMoniker": "..\\FCUnirea.Domain\\Entities\\Stadiums.cs",
+              "ToolTip": "C:\\Users\\paunm\\Documents\\github\\degree\\DEGREE-project\\FCUnirea.Domain\\Entities\\Stadiums.cs",
+              "RelativeToolTip": "..\\FCUnirea.Domain\\Entities\\Stadiums.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABIAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-04T21:34:06.647Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "appsettings.json",
-              "DocumentMoniker": "C:\\Users\\paunm\\Documents\\github\\degree\\DEGREE-project\\DEGREE\\FCUnirea.Api\\appsettings.json",
-              "RelativeDocumentMoniker": "FCUnirea.Api\\appsettings.json",
-              "ToolTip": "C:\\Users\\paunm\\Documents\\github\\degree\\DEGREE-project\\DEGREE\\FCUnirea.Api\\appsettings.json",
-              "RelativeToolTip": "FCUnirea.Api\\appsettings.json",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAIAAAAdAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2025-02-04T21:33:58.731Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "ValidationFilter.cs",
-              "DocumentMoniker": "C:\\Users\\paunm\\Documents\\github\\degree\\DEGREE-project\\DEGREE\\FCUnirea.Api\\Filters\\ValidationFilter.cs",
-              "RelativeDocumentMoniker": "FCUnirea.Api\\Filters\\ValidationFilter.cs",
-              "ToolTip": "C:\\Users\\paunm\\Documents\\github\\degree\\DEGREE-project\\DEGREE\\FCUnirea.Api\\Filters\\ValidationFilter.cs",
-              "RelativeToolTip": "FCUnirea.Api\\Filters\\ValidationFilter.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-04T21:33:41.735Z",
+              "WhenOpened": "2025-02-06T11:23:36.393Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 6,
-              "Title": "CommentsController.cs",
-              "DocumentMoniker": "C:\\Users\\paunm\\Documents\\github\\degree\\DEGREE-project\\DEGREE\\FCUnirea.Api\\Controllers\\CommentsController.cs",
-              "RelativeDocumentMoniker": "FCUnirea.Api\\Controllers\\CommentsController.cs",
-              "ToolTip": "C:\\Users\\paunm\\Documents\\github\\degree\\DEGREE-project\\DEGREE\\FCUnirea.Api\\Controllers\\CommentsController.cs",
-              "RelativeToolTip": "FCUnirea.Api\\Controllers\\CommentsController.cs",
-              "ViewState": "AQIAAAkAAAAAAAAAAAAAACAAAAAAAAAA",
+              "Title": "GamesModelValidator.cs",
+              "DocumentMoniker": "C:\\Users\\paunm\\Documents\\github\\degree\\DEGREE-project\\DEGREE\\FCUnirea.Api\\Validators\\GamesModelValidator.cs",
+              "RelativeDocumentMoniker": "FCUnirea.Api\\Validators\\GamesModelValidator.cs",
+              "ToolTip": "C:\\Users\\paunm\\Documents\\github\\degree\\DEGREE-project\\DEGREE\\FCUnirea.Api\\Validators\\GamesModelValidator.cs",
+              "RelativeToolTip": "FCUnirea.Api\\Validators\\GamesModelValidator.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-04T21:32:35.101Z",
+              "WhenOpened": "2025-02-06T11:20:39.171Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "Program.cs",
-              "DocumentMoniker": "C:\\Users\\paunm\\Documents\\github\\degree\\DEGREE-project\\FCUnirea.Persistance\\Program.cs",
-              "RelativeDocumentMoniker": "..\\FCUnirea.Persistance\\Program.cs",
-              "ToolTip": "C:\\Users\\paunm\\Documents\\github\\degree\\DEGREE-project\\FCUnirea.Persistance\\Program.cs",
-              "RelativeToolTip": "..\\FCUnirea.Persistance\\Program.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA8AAAAkAAAA",
+              "DocumentIndex": 5,
+              "Title": "FeedbacksController.cs",
+              "DocumentMoniker": "C:\\Users\\paunm\\Documents\\github\\degree\\DEGREE-project\\DEGREE\\FCUnirea.Api\\Controllers\\FeedbacksController.cs",
+              "RelativeDocumentMoniker": "FCUnirea.Api\\Controllers\\FeedbacksController.cs",
+              "ToolTip": "C:\\Users\\paunm\\Documents\\github\\degree\\DEGREE-project\\DEGREE\\FCUnirea.Api\\Controllers\\FeedbacksController.cs",
+              "RelativeToolTip": "FCUnirea.Api\\Controllers\\FeedbacksController.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-04T21:29:21.263Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "PersistanceServiceRegistration.cs",
-              "DocumentMoniker": "C:\\Users\\paunm\\Documents\\github\\degree\\DEGREE-project\\FCUnirea.Persistance\\PersistanceServiceRegistration.cs",
-              "RelativeDocumentMoniker": "..\\FCUnirea.Persistance\\PersistanceServiceRegistration.cs",
-              "ToolTip": "C:\\Users\\paunm\\Documents\\github\\degree\\DEGREE-project\\FCUnirea.Persistance\\PersistanceServiceRegistration.cs",
-              "RelativeToolTip": "..\\FCUnirea.Persistance\\PersistanceServiceRegistration.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA4AAABgAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-04T21:29:13.622Z",
+              "WhenOpened": "2025-02-06T11:20:33.149Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 7,
+              "Title": "CompetitionsController.cs",
+              "DocumentMoniker": "C:\\Users\\paunm\\Documents\\github\\degree\\DEGREE-project\\DEGREE\\FCUnirea.Api\\Controllers\\CompetitionsController.cs",
+              "RelativeDocumentMoniker": "FCUnirea.Api\\Controllers\\CompetitionsController.cs",
+              "ToolTip": "C:\\Users\\paunm\\Documents\\github\\degree\\DEGREE-project\\DEGREE\\FCUnirea.Api\\Controllers\\CompetitionsController.cs",
+              "RelativeToolTip": "FCUnirea.Api\\Controllers\\CompetitionsController.cs",
+              "ViewState": "AQIAACQAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-06T11:20:29.373Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Feedbacks.cs",
+              "DocumentMoniker": "C:\\Users\\paunm\\Documents\\github\\degree\\DEGREE-project\\FCUnirea.Domain\\Entities\\Feedbacks.cs",
+              "RelativeDocumentMoniker": "..\\FCUnirea.Domain\\Entities\\Feedbacks.cs",
+              "ToolTip": "C:\\Users\\paunm\\Documents\\github\\degree\\DEGREE-project\\FCUnirea.Domain\\Entities\\Feedbacks.cs",
+              "RelativeToolTip": "..\\FCUnirea.Domain\\Entities\\Feedbacks.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABgAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-06T10:46:43.72Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "FeedbacksModel.cs",
+              "DocumentMoniker": "C:\\Users\\paunm\\Documents\\github\\degree\\DEGREE-project\\FCUnirea.Business\\Models\\FeedbacksModel.cs",
+              "RelativeDocumentMoniker": "..\\FCUnirea.Business\\Models\\FeedbacksModel.cs",
+              "ToolTip": "C:\\Users\\paunm\\Documents\\github\\degree\\DEGREE-project\\FCUnirea.Business\\Models\\FeedbacksModel.cs",
+              "RelativeToolTip": "..\\FCUnirea.Business\\Models\\FeedbacksModel.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA4AAAAsAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-06T11:12:24.369Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
               "Title": "CommentsRepository.cs",
               "DocumentMoniker": "C:\\Users\\paunm\\Documents\\github\\degree\\DEGREE-project\\FCUnirea.Persistance\\Repositories\\CommentsRepository.cs",
               "RelativeDocumentMoniker": "..\\FCUnirea.Persistance\\Repositories\\CommentsRepository.cs",
@@ -194,51 +186,116 @@
               "RelativeToolTip": "..\\FCUnirea.Persistance\\Repositories\\CommentsRepository.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-04T21:29:01.39Z",
+              "WhenOpened": "2025-02-06T11:20:10.477Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "BaseRepository.cs",
-              "DocumentMoniker": "C:\\Users\\paunm\\Documents\\github\\degree\\DEGREE-project\\FCUnirea.Persistance\\Repositories\\BaseRepository.cs",
-              "RelativeDocumentMoniker": "..\\FCUnirea.Persistance\\Repositories\\BaseRepository.cs",
-              "ToolTip": "C:\\Users\\paunm\\Documents\\github\\degree\\DEGREE-project\\FCUnirea.Persistance\\Repositories\\BaseRepository.cs",
-              "RelativeToolTip": "..\\FCUnirea.Persistance\\Repositories\\BaseRepository.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-04T21:28:45.279Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 2,
               "Title": "FCUnireaDbContext.cs",
               "DocumentMoniker": "C:\\Users\\paunm\\Documents\\github\\degree\\DEGREE-project\\FCUnirea.Persistance\\Data\\FCUnireaDbContext.cs",
               "RelativeDocumentMoniker": "..\\FCUnirea.Persistance\\Data\\FCUnireaDbContext.cs",
               "ToolTip": "C:\\Users\\paunm\\Documents\\github\\degree\\DEGREE-project\\FCUnirea.Persistance\\Data\\FCUnireaDbContext.cs",
               "RelativeToolTip": "..\\FCUnirea.Persistance\\Data\\FCUnireaDbContext.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "ViewState": "AQIAADAAAAAAAAAAAAAAADAAAAA0AAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-04T21:28:30.51Z",
+              "WhenOpened": "2025-02-06T10:47:39.887Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 10,
-              "Title": "BussinessServiceRegistration.cs",
-              "DocumentMoniker": "C:\\Users\\paunm\\Documents\\github\\degree\\DEGREE-project\\FCUnirea.Business\\BussinessServiceRegistration.cs",
-              "RelativeDocumentMoniker": "..\\FCUnirea.Business\\BussinessServiceRegistration.cs",
-              "ToolTip": "C:\\Users\\paunm\\Documents\\github\\degree\\DEGREE-project\\FCUnirea.Business\\BussinessServiceRegistration.cs",
-              "RelativeToolTip": "..\\FCUnirea.Business\\BussinessServiceRegistration.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABoAAAAcAAAA",
+              "Title": "CommentsService.cs",
+              "DocumentMoniker": "C:\\Users\\paunm\\Documents\\github\\degree\\DEGREE-project\\FCUnirea.Business\\Services\\CommentsService.cs",
+              "RelativeDocumentMoniker": "..\\FCUnirea.Business\\Services\\CommentsService.cs",
+              "ToolTip": "C:\\Users\\paunm\\Documents\\github\\degree\\DEGREE-project\\FCUnirea.Business\\Services\\CommentsService.cs",
+              "RelativeToolTip": "..\\FCUnirea.Business\\Services\\CommentsService.cs",
+              "ViewState": "AQIAAAYAAAAAAAAAAAAAAAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-04T21:23:34.538Z",
+              "WhenOpened": "2025-02-06T11:11:36.637Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "SeatsModel.cs",
+              "DocumentMoniker": "C:\\Users\\paunm\\Documents\\github\\degree\\DEGREE-project\\FCUnirea.Business\\Models\\SeatsModel.cs",
+              "RelativeDocumentMoniker": "..\\FCUnirea.Business\\Models\\SeatsModel.cs",
+              "ToolTip": "C:\\Users\\paunm\\Documents\\github\\degree\\DEGREE-project\\FCUnirea.Business\\Models\\SeatsModel.cs",
+              "RelativeToolTip": "..\\FCUnirea.Business\\Models\\SeatsModel.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-06T11:16:18.678Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 12,
+              "Title": "PlayersModel.cs",
+              "DocumentMoniker": "C:\\Users\\paunm\\Documents\\github\\degree\\DEGREE-project\\FCUnirea.Business\\Models\\PlayersModel.cs",
+              "RelativeDocumentMoniker": "..\\FCUnirea.Business\\Models\\PlayersModel.cs",
+              "ToolTip": "C:\\Users\\paunm\\Documents\\github\\degree\\DEGREE-project\\FCUnirea.Business\\Models\\PlayersModel.cs",
+              "RelativeToolTip": "..\\FCUnirea.Business\\Models\\PlayersModel.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-06T11:16:21.452Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "FeedbacksMapping.cs",
+              "DocumentMoniker": "C:\\Users\\paunm\\Documents\\github\\degree\\DEGREE-project\\FCUnirea.Persistance\\Data\\Mappings\\FeedbacksMapping.cs",
+              "RelativeDocumentMoniker": "..\\FCUnirea.Persistance\\Data\\Mappings\\FeedbacksMapping.cs",
+              "ToolTip": "C:\\Users\\paunm\\Documents\\github\\degree\\DEGREE-project\\FCUnirea.Persistance\\Data\\Mappings\\FeedbacksMapping.cs",
+              "RelativeToolTip": "..\\FCUnirea.Persistance\\Data\\Mappings\\FeedbacksMapping.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABQAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-06T11:02:19.952Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "StadiumsModel.cs",
+              "DocumentMoniker": "C:\\Users\\paunm\\Documents\\github\\degree\\DEGREE-project\\FCUnirea.Business\\Models\\StadiumsModel.cs",
+              "RelativeDocumentMoniker": "..\\FCUnirea.Business\\Models\\StadiumsModel.cs",
+              "ToolTip": "C:\\Users\\paunm\\Documents\\github\\degree\\DEGREE-project\\FCUnirea.Business\\Models\\StadiumsModel.cs",
+              "RelativeToolTip": "..\\FCUnirea.Business\\Models\\StadiumsModel.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-06T11:16:22.864Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "CommentsModel.cs",
+              "DocumentMoniker": "C:\\Users\\paunm\\Documents\\github\\degree\\DEGREE-project\\FCUnirea.Business\\Models\\CommentsModel.cs",
+              "RelativeDocumentMoniker": "..\\FCUnirea.Business\\Models\\CommentsModel.cs",
+              "ToolTip": "C:\\Users\\paunm\\Documents\\github\\degree\\DEGREE-project\\FCUnirea.Business\\Models\\CommentsModel.cs",
+              "RelativeToolTip": "..\\FCUnirea.Business\\Models\\CommentsModel.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-06T11:12:23.409Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "CompetitionsModel.cs",
+              "DocumentMoniker": "C:\\Users\\paunm\\Documents\\github\\degree\\DEGREE-project\\FCUnirea.Business\\Models\\CompetitionsModel.cs",
+              "RelativeDocumentMoniker": "..\\FCUnirea.Business\\Models\\CompetitionsModel.cs",
+              "ToolTip": "C:\\Users\\paunm\\Documents\\github\\degree\\DEGREE-project\\FCUnirea.Business\\Models\\CompetitionsModel.cs",
+              "RelativeToolTip": "..\\FCUnirea.Business\\Models\\CompetitionsModel.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-06T11:12:20.588Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
               "Title": "MappingProfile.cs",
               "DocumentMoniker": "C:\\Users\\paunm\\Documents\\github\\degree\\DEGREE-project\\FCUnirea.Business\\Profiles\\MappingProfile.cs",
               "RelativeDocumentMoniker": "..\\FCUnirea.Business\\Profiles\\MappingProfile.cs",
@@ -246,176 +303,85 @@
               "RelativeToolTip": "..\\FCUnirea.Business\\Profiles\\MappingProfile.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-04T21:23:07.171Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 13,
-              "Title": "PlayerStatisticsPerCompetitionModel.cs",
-              "DocumentMoniker": "C:\\Users\\paunm\\Documents\\github\\degree\\DEGREE-project\\FCUnirea.Business\\Models\\PlayerStatisticsPerCompetitionModel.cs",
-              "RelativeDocumentMoniker": "..\\FCUnirea.Business\\Models\\PlayerStatisticsPerCompetitionModel.cs",
-              "ToolTip": "C:\\Users\\paunm\\Documents\\github\\degree\\DEGREE-project\\FCUnirea.Business\\Models\\PlayerStatisticsPerCompetitionModel.cs",
-              "RelativeToolTip": "..\\FCUnirea.Business\\Models\\PlayerStatisticsPerCompetitionModel.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-04T21:22:56.375Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 15,
-              "Title": "FeedbacksModel.cs",
-              "DocumentMoniker": "C:\\Users\\paunm\\Documents\\github\\degree\\DEGREE-project\\FCUnirea.Business\\Models\\FeedbacksModel.cs",
-              "RelativeDocumentMoniker": "..\\FCUnirea.Business\\Models\\FeedbacksModel.cs",
-              "ToolTip": "C:\\Users\\paunm\\Documents\\github\\degree\\DEGREE-project\\FCUnirea.Business\\Models\\FeedbacksModel.cs",
-              "RelativeToolTip": "..\\FCUnirea.Business\\Models\\FeedbacksModel.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-04T21:22:39.218Z",
+              "WhenOpened": "2025-02-06T11:12:17.784Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 16,
-              "Title": "GamesModel.cs",
-              "DocumentMoniker": "C:\\Users\\paunm\\Documents\\github\\degree\\DEGREE-project\\FCUnirea.Business\\Models\\GamesModel.cs",
-              "RelativeDocumentMoniker": "..\\FCUnirea.Business\\Models\\GamesModel.cs",
-              "ToolTip": "C:\\Users\\paunm\\Documents\\github\\degree\\DEGREE-project\\FCUnirea.Business\\Models\\GamesModel.cs",
-              "RelativeToolTip": "..\\FCUnirea.Business\\Models\\GamesModel.cs",
+              "Title": "ICompetitionsRepository.cs",
+              "DocumentMoniker": "C:\\Users\\paunm\\Documents\\github\\degree\\DEGREE-project\\FCUnirea.Domain\\IRepositories\\ICompetitionsRepository.cs",
+              "RelativeDocumentMoniker": "..\\FCUnirea.Domain\\IRepositories\\ICompetitionsRepository.cs",
+              "ToolTip": "C:\\Users\\paunm\\Documents\\github\\degree\\DEGREE-project\\FCUnirea.Domain\\IRepositories\\ICompetitionsRepository.cs",
+              "RelativeToolTip": "..\\FCUnirea.Domain\\IRepositories\\ICompetitionsRepository.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-04T21:22:38.321Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 14,
-              "Title": "NewsModel.cs",
-              "DocumentMoniker": "C:\\Users\\paunm\\Documents\\github\\degree\\DEGREE-project\\FCUnirea.Business\\Models\\NewsModel.cs",
-              "RelativeDocumentMoniker": "..\\FCUnirea.Business\\Models\\NewsModel.cs",
-              "ToolTip": "C:\\Users\\paunm\\Documents\\github\\degree\\DEGREE-project\\FCUnirea.Business\\Models\\NewsModel.cs",
-              "RelativeToolTip": "..\\FCUnirea.Business\\Models\\NewsModel.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-04T21:22:37.545Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 11,
-              "Title": "FCUnirea.Business",
-              "DocumentMoniker": "C:\\Users\\paunm\\Documents\\github\\degree\\DEGREE-project\\FCUnirea.Business\\FCUnirea.Business.csproj",
-              "RelativeDocumentMoniker": "..\\FCUnirea.Business\\FCUnirea.Business.csproj",
-              "ToolTip": "C:\\Users\\paunm\\Documents\\github\\degree\\DEGREE-project\\FCUnirea.Business\\FCUnirea.Business.csproj",
-              "RelativeToolTip": "..\\FCUnirea.Business\\FCUnirea.Business.csproj",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAcAAAA2AAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
-              "WhenOpened": "2025-02-04T21:22:10.392Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 17,
-              "Title": "NotAvailableException.cs",
-              "DocumentMoniker": "C:\\Users\\paunm\\Documents\\github\\degree\\DEGREE-project\\FCUnirea.Business\\Exceptions\\NotAvailableException.cs",
-              "RelativeDocumentMoniker": "..\\FCUnirea.Business\\Exceptions\\NotAvailableException.cs",
-              "ToolTip": "C:\\Users\\paunm\\Documents\\github\\degree\\DEGREE-project\\FCUnirea.Business\\Exceptions\\NotAvailableException.cs",
-              "RelativeToolTip": "..\\FCUnirea.Business\\Exceptions\\NotAvailableException.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-04T21:22:24.917Z",
+              "WhenOpened": "2025-02-06T11:11:26.661Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 18,
-              "Title": "ICommentsRepository.cs",
-              "DocumentMoniker": "C:\\Users\\paunm\\Documents\\github\\degree\\DEGREE-project\\FCUnirea.Domain\\IRepositories\\ICommentsRepository.cs",
-              "RelativeDocumentMoniker": "..\\FCUnirea.Domain\\IRepositories\\ICommentsRepository.cs",
-              "ToolTip": "C:\\Users\\paunm\\Documents\\github\\degree\\DEGREE-project\\FCUnirea.Domain\\IRepositories\\ICommentsRepository.cs",
-              "RelativeToolTip": "..\\FCUnirea.Domain\\IRepositories\\ICommentsRepository.cs",
+              "Title": "IFeedbacksService.cs",
+              "DocumentMoniker": "C:\\Users\\paunm\\Documents\\github\\degree\\DEGREE-project\\FCUnirea.Business\\Services\\IServices\\IFeedbacksService.cs",
+              "RelativeDocumentMoniker": "..\\FCUnirea.Business\\Services\\IServices\\IFeedbacksService.cs",
+              "ToolTip": "C:\\Users\\paunm\\Documents\\github\\degree\\DEGREE-project\\FCUnirea.Business\\Services\\IServices\\IFeedbacksService.cs",
+              "RelativeToolTip": "..\\FCUnirea.Business\\Services\\IServices\\IFeedbacksService.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-04T21:21:52.76Z",
+              "WhenOpened": "2025-02-06T11:12:07.349Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 19,
-              "Title": "IBaseRepository.cs",
-              "DocumentMoniker": "C:\\Users\\paunm\\Documents\\github\\degree\\DEGREE-project\\FCUnirea.Domain\\IRepositories\\IBaseRepository.cs",
-              "RelativeDocumentMoniker": "..\\FCUnirea.Domain\\IRepositories\\IBaseRepository.cs",
-              "ToolTip": "C:\\Users\\paunm\\Documents\\github\\degree\\DEGREE-project\\FCUnirea.Domain\\IRepositories\\IBaseRepository.cs",
-              "RelativeToolTip": "..\\FCUnirea.Domain\\IRepositories\\IBaseRepository.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAkAAAAeAAAA",
+              "Title": "FeedbacksService.cs",
+              "DocumentMoniker": "C:\\Users\\paunm\\Documents\\github\\degree\\DEGREE-project\\FCUnirea.Business\\Services\\FeedbacksService.cs",
+              "RelativeDocumentMoniker": "..\\FCUnirea.Business\\Services\\FeedbacksService.cs",
+              "ToolTip": "C:\\Users\\paunm\\Documents\\github\\degree\\DEGREE-project\\FCUnirea.Business\\Services\\FeedbacksService.cs",
+              "RelativeToolTip": "..\\FCUnirea.Business\\Services\\FeedbacksService.cs",
+              "ViewState": "AQIAAAwAAAAAAAAAAAAAAAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-04T21:21:32.687Z",
+              "WhenOpened": "2025-02-06T11:12:03.573Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 20,
-              "Title": "Teams.cs",
-              "DocumentMoniker": "C:\\Users\\paunm\\Documents\\github\\degree\\DEGREE-project\\FCUnirea.Domain\\Entities\\Teams.cs",
-              "RelativeDocumentMoniker": "..\\FCUnirea.Domain\\Entities\\Teams.cs",
-              "ToolTip": "C:\\Users\\paunm\\Documents\\github\\degree\\DEGREE-project\\FCUnirea.Domain\\Entities\\Teams.cs",
-              "RelativeToolTip": "..\\FCUnirea.Domain\\Entities\\Teams.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABIAAAAAAAAA",
+              "Title": "CompetitionsService.cs",
+              "DocumentMoniker": "C:\\Users\\paunm\\Documents\\github\\degree\\DEGREE-project\\FCUnirea.Business\\Services\\CompetitionsService.cs",
+              "RelativeDocumentMoniker": "..\\FCUnirea.Business\\Services\\CompetitionsService.cs",
+              "ToolTip": "C:\\Users\\paunm\\Documents\\github\\degree\\DEGREE-project\\FCUnirea.Business\\Services\\CompetitionsService.cs",
+              "RelativeToolTip": "..\\FCUnirea.Business\\Services\\CompetitionsService.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-04T21:16:26.287Z",
+              "WhenOpened": "2025-02-06T11:11:38.047Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 21,
-              "Title": "Comments.cs",
-              "DocumentMoniker": "C:\\Users\\paunm\\Documents\\github\\degree\\DEGREE-project\\FCUnirea.Domain\\Entities\\Comments.cs",
-              "RelativeDocumentMoniker": "..\\FCUnirea.Domain\\Entities\\Comments.cs",
-              "ToolTip": "C:\\Users\\paunm\\Documents\\github\\degree\\DEGREE-project\\FCUnirea.Domain\\Entities\\Comments.cs",
-              "RelativeToolTip": "..\\FCUnirea.Domain\\Entities\\Comments.cs",
+              "Title": "IFeedbacksRepository.cs",
+              "DocumentMoniker": "C:\\Users\\paunm\\Documents\\github\\degree\\DEGREE-project\\FCUnirea.Domain\\IRepositories\\IFeedbacksRepository.cs",
+              "RelativeDocumentMoniker": "..\\FCUnirea.Domain\\IRepositories\\IFeedbacksRepository.cs",
+              "ToolTip": "C:\\Users\\paunm\\Documents\\github\\degree\\DEGREE-project\\FCUnirea.Domain\\IRepositories\\IFeedbacksRepository.cs",
+              "RelativeToolTip": "..\\FCUnirea.Domain\\IRepositories\\IFeedbacksRepository.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-04T21:15:54.99Z",
+              "WhenOpened": "2025-02-06T11:11:27.434Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 22,
-              "Title": "BaseEntity.cs",
-              "DocumentMoniker": "C:\\Users\\paunm\\Documents\\github\\degree\\DEGREE-project\\FCUnirea.Domain\\Entities\\BaseEntity.cs",
-              "RelativeDocumentMoniker": "..\\FCUnirea.Domain\\Entities\\BaseEntity.cs",
-              "ToolTip": "C:\\Users\\paunm\\Documents\\github\\degree\\DEGREE-project\\FCUnirea.Domain\\Entities\\BaseEntity.cs",
-              "RelativeToolTip": "..\\FCUnirea.Domain\\Entities\\BaseEntity.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Title": "Users.cs",
+              "DocumentMoniker": "C:\\Users\\paunm\\Documents\\github\\degree\\DEGREE-project\\FCUnirea.Domain\\Entities\\Users.cs",
+              "RelativeDocumentMoniker": "..\\FCUnirea.Domain\\Entities\\Users.cs",
+              "ToolTip": "C:\\Users\\paunm\\Documents\\github\\degree\\DEGREE-project\\FCUnirea.Domain\\Entities\\Users.cs",
+              "RelativeToolTip": "..\\FCUnirea.Domain\\Entities\\Users.cs",
+              "ViewState": "AQIAAAMAAAAAAAAAAAAAAA4AAAAqAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-04T21:15:47.772Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 23,
-              "Title": "FCUnirea.Domain",
-              "DocumentMoniker": "C:\\Users\\paunm\\Documents\\github\\degree\\DEGREE-project\\FCUnirea.Domain\\FCUnirea.Domain.csproj",
-              "RelativeDocumentMoniker": "..\\FCUnirea.Domain\\FCUnirea.Domain.csproj",
-              "ToolTip": "C:\\Users\\paunm\\Documents\\github\\degree\\DEGREE-project\\FCUnirea.Domain\\FCUnirea.Domain.csproj",
-              "RelativeToolTip": "..\\FCUnirea.Domain\\FCUnirea.Domain.csproj",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
-              "WhenOpened": "2025-02-04T21:10:37.9Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 24,
-              "Title": "ExceptionHandlerMiddleware.cs",
-              "DocumentMoniker": "C:\\Users\\paunm\\Documents\\github\\degree\\DEGREE-project\\DEGREE\\FCUnirea.Api\\Middleware\\ExceptionHandlerMiddleware.cs",
-              "RelativeDocumentMoniker": "FCUnirea.Api\\Middleware\\ExceptionHandlerMiddleware.cs",
-              "ToolTip": "C:\\Users\\paunm\\Documents\\github\\degree\\DEGREE-project\\DEGREE\\FCUnirea.Api\\Middleware\\ExceptionHandlerMiddleware.cs",
-              "RelativeToolTip": "FCUnirea.Api\\Middleware\\ExceptionHandlerMiddleware.cs",
-              "ViewState": "AQIAAAMAAAAAAAAAAAAAADEAAAAxAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-04T21:04:51.215Z",
+              "WhenOpened": "2025-02-06T10:46:47.058Z",
               "EditorCaption": ""
             }
           ]

@@ -3,7 +3,7 @@ using FCUnirea.Persistance.Data.Mappings;
 using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
-
+//add-migration CreateDatabase -o Data/Migrations
 namespace FCUnirea.Persistance.Data
 {
     public class FCUnireaDbContext : DbContext
@@ -89,8 +89,8 @@ namespace FCUnirea.Persistance.Data
             modelBuilder.Entity<Stadiums>().HasData(new List<Stadiums>()
             {
                 new Stadiums() { Id = 1, StadiumName = "Unirea Stadium", StadiumLocation = "Odobesti", Capacity = 20000 },
-                new Stadiums() { Id = 1, StadiumName = "Unirea U21 Stadium", StadiumLocation = "Odobesti", Capacity = 2000 },
-                new Stadiums() { Id = 1, StadiumName = "Unirea Youth Stadium", StadiumLocation = "Odobesti", Capacity = 200 }
+                new Stadiums() { Id = 2, StadiumName = "Unirea U21 Stadium", StadiumLocation = "Odobesti", Capacity = 2000 },
+                new Stadiums() { Id = 3, StadiumName = "Unirea Youth Stadium", StadiumLocation = "Odobesti", Capacity = 200 }
             });
 
             modelBuilder.Entity<Seats>().HasData(new List<Seats>()
