@@ -16,8 +16,10 @@ namespace FCUnirea.Domain.Entities
 
         //--------------Relations--------------------//
 
-        public ICollection<TeamStatistics> TeamStatistics { get; set; }
-        public ICollection<Players> Players { get; set; }
+        public ICollection<TeamStatistics> Teams_TeamStatistics { get; set; }
+        public ICollection<Players> Teams_Players { get; set; }
+        public Games Team_AwayTeam { get; set; }
+        public Games Team_HomeTeam { get; set; }
     }
 
     public enum TeamType

@@ -32,6 +32,18 @@ namespace FCUnirea.Persistance.Data.Mappings
                 .Property(s => s.Reserved)
                 .HasColumnName("Reserved")
                 .IsRequired();
+
+            modelBuilder.Entity<Seats>()
+                .Property(c => c.Seat_StadiumsId)
+                .HasColumnName("StadiumId")
+                .IsRequired();
+
+            // Definirea relațiilor cu alte tabele
+            modelBuilder.Entity<Seats>()
+                .HasOne(n => n.Seat_Tickets)
+                .WithOne(c => c.Ticket_Seats)
+                .HasForeignKey<Tickets>(c => c.Ticket_SeatsId)
+                .OnDelete(DeleteBehavior.Cascade);
         }
     }
 }

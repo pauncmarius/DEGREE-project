@@ -9,7 +9,6 @@ namespace FCUnirea.Business.Profiles
         public MappingProfile() { 
             CreateMap<Comments, CommentsModel>().ReverseMap();
             CreateMap<Competitions, CompetitionsModel>().ReverseMap();
-            CreateMap<Feedbacks, FeedbacksModel>().ReverseMap();
             CreateMap<Games, GamesModel>().ReverseMap();
             CreateMap<News, NewsModel>().ReverseMap();
             CreateMap<Players, PlayersModel>().ReverseMap();

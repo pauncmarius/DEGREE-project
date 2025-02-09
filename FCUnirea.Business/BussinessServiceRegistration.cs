@@ -11,7 +11,6 @@ namespace FCUnirea.Business
         {
             services.AddScoped<ICommentsService, CommentsService>();
             services.AddScoped<ICompetitionsService, CompetitionsService>();
-            services.AddScoped<IFeedbacksService, FeedbacksService>();
             services.AddScoped<IGamesService, GamesService>();
             services.AddScoped<INewsService, NewsService>();
             services.AddScoped<IPlayersService, PlayersService>();

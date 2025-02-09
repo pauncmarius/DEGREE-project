@@ -46,6 +46,16 @@ namespace FCUnirea.Persistance.Data.Mappings
                 .Property(s => s.MinutesPlayed)
                 .HasColumnName("MinutesPlayed")
                 .IsRequired();
+
+            modelBuilder.Entity<PlayerStatisticsPerGame>()
+                .Property(c => c.PlayerStatisticsPerGame_PlayersId)
+                .HasColumnName("PlayerId")
+                .IsRequired();
+
+            modelBuilder.Entity<PlayerStatisticsPerGame>()
+                .Property(c => c.PlayerStatisticsPerGame_GamesId)
+                .HasColumnName("GameId")
+                .IsRequired();
         }
     }
 }

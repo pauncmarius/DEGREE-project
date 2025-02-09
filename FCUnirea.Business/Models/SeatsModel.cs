@@ -1,4 +1,6 @@
-﻿namespace FCUnirea.Business.Models
+﻿using FCUnirea.Domain.Entities;
+
+namespace FCUnirea.Business.Models
 {
     public class SeatsModel
     {
@@ -11,13 +13,7 @@
         public bool Reserved { get; set; }
 
         //--------------Relations--------------------//
-    }
-
-    public enum SeatType
-    {
-        Standard,
-        Lawn,
-        Stands,
-        Vip
+        // Foreign Key
+        public int? Seat_StadiumsId { get; set; }
     }
 }

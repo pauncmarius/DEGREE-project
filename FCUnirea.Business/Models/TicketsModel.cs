@@ -8,7 +8,10 @@ namespace FCUnirea.Business.Models
 
         //--------------Relations--------------------//
 
-        public SeatsModel Seats { get; set; }
+        // Foreign Key
+        public int? Ticket_UsersId { get; set; }
+        public int? Ticket_GamesId { get; set; }
+        public int? Ticket_SeatsId { get; set; }
 
     }
 }

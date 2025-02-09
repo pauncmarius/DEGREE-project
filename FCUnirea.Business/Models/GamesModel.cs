@@ -14,9 +14,10 @@ namespace FCUnirea.Business.Models
         public int TicketsSold { get; set; }
 
         //--------------Relations--------------------//
-        public ICollection<TicketsModel> Tickets { get; set; }
-        public ICollection<PlayerStatisticsPerGameModel> PlayerStatisticsPerGame { get; set; }
-        public TeamsModel HomeTeam { get; set; }
-        public TeamsModel AwayTeam { get; set; }
+        // Foreign Key
+        public int? Game_CompetitionsId { get; set; }
+        public int? Game_StadiumsId { get; set; }
+        public int? Game_AwayTeamId { get; set; }
+        public int? Game_HomeTeamId { get; set; }
     }
 }

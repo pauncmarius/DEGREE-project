@@ -13,9 +13,13 @@ namespace FCUnirea.Domain.Entities
 
         //--------------Relations--------------------//
 
-        public ICollection<PlayerStatisticsPerCompetition> PlayerStatisticsPerCompetitons { get; set; }
-        public ICollection<PlayerStatisticsPerGame> PlayerStatisticsPerGame { get; set; }
-        public Users Users { get; set; }
+        public ICollection<PlayerStatisticsPerCompetition> Players_PlayerStatisticsPerCompetitons { get; set; }
+        public ICollection<PlayerStatisticsPerGame> Players_PlayerStatisticsPerGame { get; set; }
+
+        // Foreign Key
+        public int? Player_TeamsId { get; set; }
+
+        public Teams Player_Teams { get; set; }
     }
 
     public enum Position

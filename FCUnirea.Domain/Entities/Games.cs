@@ -14,9 +14,18 @@ namespace FCUnirea.Domain.Entities
         public int TicketsSold { get; set; }
 
         //--------------Relations--------------------//
-        public ICollection<Tickets> Tickets { get; set; }
-        public ICollection<PlayerStatisticsPerGame> PlayerStatisticsPerGame { get; set; }
-        public Teams HomeTeam { get; set; }
-        public Teams AwayTeam { get; set; }
+        public ICollection<Tickets> Games_Tickets { get; set; }
+        public ICollection<PlayerStatisticsPerGame> Games_PlayerStatisticsPerGame { get; set; }
+
+        // Foreign Key
+        public int? Game_CompetitionsId { get; set; }
+        public int? Game_StadiumsId { get; set; }
+        public int? Game_AwayTeamId { get; set; }
+        public int? Game_HomeTeamId { get; set; }
+
+        public Competitions Game_Competitions { get; set; }
+        public Stadiums Game_Stadiums { get; set; }
+        public Teams Game_AwayTeam { get; set; }
+        public Teams Game_HomeTeam { get; set; }
     }
 }

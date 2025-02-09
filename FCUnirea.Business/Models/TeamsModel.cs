@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using FCUnirea.Domain.Entities;
+using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations.Schema;
 
 namespace FCUnirea.Business.Models
@@ -13,17 +14,5 @@ namespace FCUnirea.Business.Models
 
         [Column(TypeName = "TEXT")]
         public string Record { get; set; }
-
-        //--------------Relations--------------------//
-
-        public ICollection<TeamStatisticsModel> TeamStatistics { get; set; }
-        public ICollection<PlayersModel> Players { get; set; }
-    }
-
-    public enum TeamType
-    {
-        Adult,
-        U21,
-        Kids
     }
 }

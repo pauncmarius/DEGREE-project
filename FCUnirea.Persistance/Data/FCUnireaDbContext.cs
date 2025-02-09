@@ -10,7 +10,6 @@ namespace FCUnirea.Persistance.Data
     {
         public DbSet<Comments> Comments { get; set; }
         public DbSet<Competitions> Competitions { get; set; }
-        public DbSet<Feedbacks> Feedback { get; set; }
         public DbSet<Games> Games { get; set; }
         public DbSet<News> News { get; set; }
         public DbSet<Players> Players { get; set; }
@@ -37,7 +36,6 @@ namespace FCUnirea.Persistance.Data
         {
             CommentsMapping.Map(modelBuilder);
             CompetitionsMapping.Map(modelBuilder);
-            FeedbacksMapping.Map(modelBuilder);
             GamesMapping.Map(modelBuilder);
             NewsMapping.Map(modelBuilder);
             PlayersMapping.Map(modelBuilder);
@@ -133,12 +131,6 @@ namespace FCUnirea.Persistance.Data
             {
                 new Comments() { Id = 1, Text = "Felicitări echipei!", CreatedAt = DateTime.UtcNow }
             });
-
-            modelBuilder.Entity<Feedbacks>().HasData(new List<Feedbacks>()
-            {
-                new Feedbacks() { Id = 1, Review = "Un meci foarte bun!", CreatedAt = DateTime.UtcNow }
-            });
-
-        }
+       }
     }
 }

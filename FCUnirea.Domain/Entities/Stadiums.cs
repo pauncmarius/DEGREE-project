@@ -12,7 +12,7 @@ namespace FCUnirea.Domain.Entities
 
         //--------------Relations--------------------//
 
-        public ICollection<Seats> Seats { get; set; }
-        public ICollection<Games> Games { get; set; }
+        public ICollection<Seats> Stadiums_Seats { get; set; }
+        public ICollection<Games> Stadiums_Games { get; set; }
     }
 }

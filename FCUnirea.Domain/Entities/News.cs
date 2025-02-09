@@ -15,7 +15,12 @@ namespace FCUnirea.Domain.Entities
 
         //--------------Relations--------------------//
 
-        public ICollection<Comments> Comments { get; set; }
+        public ICollection<Comments> News_Comments { get; set; }
+
+        // Foreign Key
+        public int? News_UsersId { get; set; }
+
+        public Users News_Users { get; set; }
 
     }
 }

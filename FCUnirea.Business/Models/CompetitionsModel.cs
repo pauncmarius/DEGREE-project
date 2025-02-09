@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using FCUnirea.Domain.Entities;
+using System.Collections.Generic;
 
 
 namespace FCUnirea.Business.Models
@@ -9,17 +10,5 @@ namespace FCUnirea.Business.Models
 
         public CompetitionType CompetitionType { get; set; }
 
-        //--------------Relations--------------------//
-
-        public ICollection<TeamStatisticsModel> TeamStatistics { get; set; }
-        public ICollection<GamesModel> Games { get; set; }
-        public ICollection<PlayerStatisticsPerCompetitionModel> PlayerStatisticsPerCompetiton { get; set; }
-    }
-
-    public enum CompetitionType
-    {
-        NationalLeague,
-        NationalCup,
-        ChampionsLeague
     }
 }

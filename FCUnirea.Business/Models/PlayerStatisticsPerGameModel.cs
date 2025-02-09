@@ -15,5 +15,10 @@
         public int YellowCards { get; set; }
 
         public int MinutesPlayed { get; set; }
+
+        // Foreign Key
+        public int? PlayerStatisticsPerGame_PlayersId { get; set; }
+        public int? PlayerStatisticsPerGame_GamesId { get; set; }
+
     }
 }

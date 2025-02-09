@@ -9,5 +9,12 @@ namespace FCUnirea.Domain.Entities
         public string Text { get; set; }
 
         public DateTime CreatedAt { get; set; }
+
+        // Foreign Key
+        public int? Comment_NewsId { get; set; }
+        public int? Comment_UsersId { get; set; }
+
+        public News Comment_News { get; set; }
+        public Users Comment_User { get; set; }
     }
 }

@@ -59,7 +59,7 @@ namespace FCUnirea.Persistance.Data.Migrations
                         new
                         {
                             Id = 1,
-                            CreatedAt = new DateTime(2025, 2, 6, 11, 29, 16, 866, DateTimeKind.Utc).AddTicks(8538),
+                            CreatedAt = new DateTime(2025, 2, 9, 19, 35, 1, 61, DateTimeKind.Utc).AddTicks(6509),
                             Text = "Felicitări echipei!"
                         });
                 });
@@ -144,48 +144,6 @@ namespace FCUnirea.Persistance.Data.Migrations
                         });
                 });
 
-            modelBuilder.Entity("FCUnirea.Domain.Entities.Feedbacks", b =>
-                {
-                    b.Property<int>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int")
-                        .HasColumnName("Id");
-
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"), 1L, 1);
-
-                    b.Property<DateTime>("CreatedAt")
-                        .HasColumnType("datetime2")
-                        .HasColumnName("CreatedAt");
-
-                    b.Property<int?>("FromStaffId")
-                        .HasColumnType("int");
-
-                    b.Property<string>("Review")
-                        .IsRequired()
-                        .HasMaxLength(500)
-                        .HasColumnType("TEXT")
-                        .HasColumnName("Review");
-
-                    b.Property<int?>("ToPlayerId")
-                        .HasColumnType("int");
-
-                    b.HasKey("Id");
-
-                    b.HasIndex("FromStaffId");
-
-                    b.HasIndex("ToPlayerId");
-
-                    b.ToTable("Feedback");
-
-                    b.HasData(
-                        new
-                        {
-                            Id = 1,
-                            CreatedAt = new DateTime(2025, 2, 6, 11, 29, 16, 866, DateTimeKind.Utc).AddTicks(8557),
-                            Review = "Un meci foarte bun!"
-                        });
-                });
-
             modelBuilder.Entity("FCUnirea.Domain.Entities.Games", b =>
                 {
                     b.Property<int>("Id")
@@ -239,7 +197,7 @@ namespace FCUnirea.Persistance.Data.Migrations
                         {
                             Id = 1,
                             AwayTeamScore = 1,
-                            GameDate = new DateTime(2025, 2, 6, 11, 29, 16, 866, DateTimeKind.Utc).AddTicks(8420),
+                            GameDate = new DateTime(2025, 2, 9, 19, 35, 1, 61, DateTimeKind.Utc).AddTicks(6419),
                             HomeTeamScore = 2,
                             TicketsSold = 5000
                         });
@@ -282,7 +240,7 @@ namespace FCUnirea.Persistance.Data.Migrations
                         new
                         {
                             Id = 1,
-                            CreatedAt = new DateTime(2025, 2, 6, 11, 29, 16, 866, DateTimeKind.Utc).AddTicks(8516),
+                            CreatedAt = new DateTime(2025, 2, 9, 19, 35, 1, 61, DateTimeKind.Utc).AddTicks(6491),
                             Text = "FC Unirea a câștigat cu 2-1!",
                             Title = "Victorie mare pentru FC Unirea!"
                         });
@@ -735,7 +693,7 @@ namespace FCUnirea.Persistance.Data.Migrations
                         new
                         {
                             Id = 1,
-                            DateReservation = new DateTime(2025, 2, 6, 11, 29, 16, 866, DateTimeKind.Utc).AddTicks(8441)
+                            DateReservation = new DateTime(2025, 2, 9, 19, 35, 1, 61, DateTimeKind.Utc).AddTicks(6434)
                         });
                 });
 
@@ -799,7 +757,7 @@ namespace FCUnirea.Persistance.Data.Migrations
                         new
                         {
                             Id = 1,
-                            CreatedAt = new DateTime(2025, 2, 6, 11, 29, 16, 866, DateTimeKind.Utc).AddTicks(8315),
+                            CreatedAt = new DateTime(2025, 2, 9, 19, 35, 1, 61, DateTimeKind.Utc).AddTicks(6313),
                             Email = "admin@fcunirea.com",
                             FirstName = "Admin",
                             HashedPassword = "hashedpassword",
@@ -811,7 +769,7 @@ namespace FCUnirea.Persistance.Data.Migrations
                         new
                         {
                             Id = 2,
-                            CreatedAt = new DateTime(2025, 2, 6, 11, 29, 16, 866, DateTimeKind.Utc).AddTicks(8322),
+                            CreatedAt = new DateTime(2025, 2, 9, 19, 35, 1, 61, DateTimeKind.Utc).AddTicks(6316),
                             Email = "mariuspaun@example.com",
                             FirstName = "Marius",
                             HashedPassword = "hashedpassword",
@@ -831,23 +789,6 @@ namespace FCUnirea.Persistance.Data.Migrations
                     b.HasOne("FCUnirea.Domain.Entities.Users", null)
                         .WithMany("Comments")
                         .HasForeignKey("UsersId");
-                });
-
-            modelBuilder.Entity("FCUnirea.Domain.Entities.Feedbacks", b =>
-                {
-                    b.HasOne("FCUnirea.Domain.Entities.Users", "FromStaff")
-                        .WithMany("FeedbackFromStaff")
-                        .HasForeignKey("FromStaffId")
-                        .OnDelete(DeleteBehavior.Restrict);
-
-                    b.HasOne("FCUnirea.Domain.Entities.Users", "ToPlayer")
-                        .WithMany("FeedbackToPlayers")
-                        .HasForeignKey("ToPlayerId")
-                        .OnDelete(DeleteBehavior.Restrict);
-
-                    b.Navigation("FromStaff");
-
-                    b.Navigation("ToPlayer");
                 });
 
             modelBuilder.Entity("FCUnirea.Domain.Entities.Games", b =>
@@ -995,10 +936,6 @@ namespace FCUnirea.Persistance.Data.Migrations
             modelBuilder.Entity("FCUnirea.Domain.Entities.Users", b =>
                 {
                     b.Navigation("Comments");
-
-                    b.Navigation("FeedbackFromStaff");
-
-                    b.Navigation("FeedbackToPlayers");
 
                     b.Navigation("News");
 

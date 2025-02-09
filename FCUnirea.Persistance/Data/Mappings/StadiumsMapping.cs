@@ -29,6 +29,19 @@ namespace FCUnirea.Persistance.Data.Mappings
                     .Property(s => s.Capacity)
                     .HasColumnName("Capacity")
                     .IsRequired();
-    }
+
+            // Definirea relațiilor cu alte tabele
+            modelBuilder.Entity<Stadiums>()
+                .HasMany(n => n.Stadiums_Seats)
+                .WithOne(c => c.Seat_Stadiums)
+                .HasForeignKey(c => c.Seat_StadiumsId)
+                .OnDelete(DeleteBehavior.Cascade);
+
+            modelBuilder.Entity<Stadiums>()
+                .HasMany(n => n.Stadiums_Games)
+                .WithOne(c => c.Game_Stadiums)
+                .HasForeignKey(c => c.Game_StadiumsId)
+                .OnDelete(DeleteBehavior.Cascade);
+        }
     }
 }

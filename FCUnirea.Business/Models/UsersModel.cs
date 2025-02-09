@@ -1,4 +1,5 @@
-﻿using System;
+﻿using FCUnirea.Domain.Entities;
+using System;
 using System.Collections.Generic;
 
 namespace FCUnirea.Business.Models
@@ -22,21 +23,5 @@ namespace FCUnirea.Business.Models
 
         public DateTime CreatedAt { get; set; }
 
-        //--------------Relations--------------------//
-
-        public ICollection<NewsModel> News { get; set; }
-        public ICollection<CommentsModel> Comments { get; set; }
-        public ICollection<FeedbacksModel> FeedbackFromStaff { get; set; }
-        public ICollection<FeedbacksModel> FeedbackToPlayers { get; set; }
-        public ICollection<TicketsModel> Tickets { get; set; }
-    }
-
-    // Enum definition for roles
-    public enum UserRole
-    {
-        Admin,
-        Customer,
-        Player,
-        Staff
     }
 }

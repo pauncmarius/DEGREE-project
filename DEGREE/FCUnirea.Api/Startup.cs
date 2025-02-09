@@ -32,21 +32,6 @@ namespace FCUnirea.Api
             {
                 c.SwaggerDoc("v1", new OpenApiInfo { Title = "FCUnirea.Api", Version = "v1" });
 
-                // Custom Schema Id Generator for different classes
-                c.MapType<FCUnirea.Domain.Entities.CompetitionType>(() => new OpenApiSchema { Type = "string", Description = "Custom Description for Domain CompetitionType" });
-                c.MapType<FCUnirea.Business.Models.CompetitionType>(() => new OpenApiSchema { Type = "string", Description = "Custom Description for Business CompetitionType" });
-                
-                c.MapType<FCUnirea.Domain.Entities.TeamType>(() => new OpenApiSchema { Type = "string", Description = "Custom Description for Domain TeamType" });
-                c.MapType<FCUnirea.Business.Models.TeamType>(() => new OpenApiSchema { Type = "string", Description = "Custom Description for Business TeamType" });
-                
-                c.MapType<FCUnirea.Domain.Entities.SeatType>(() => new OpenApiSchema { Type = "string", Description = "Custom Description for Domain SeatType" });
-                c.MapType<FCUnirea.Business.Models.SeatType>(() => new OpenApiSchema { Type = "string", Description = "Custom Description for Business SeatType" });
-
-                c.MapType<FCUnirea.Domain.Entities.Position>(() => new OpenApiSchema { Type = "string", Description = "Custom Description for Domain Position" });
-                c.MapType<FCUnirea.Business.Models.Position>(() => new OpenApiSchema { Type = "string", Description = "Custom Description for Business Position" });
-
-                c.MapType<FCUnirea.Domain.Entities.UserRole>(() => new OpenApiSchema { Type = "string", Description = "Custom Description for Domain UserRole" });
-                c.MapType<FCUnirea.Business.Models.UserRole>(() => new OpenApiSchema { Type = "string", Description = "Custom Description for Business UserRole" });
             });
             services.AddPersistanceServices(Configuration);
             services.AddBusinessServices();

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using FCUnirea.Domain.Entities;
+using System;
 using System.Collections.Generic;
 
 namespace FCUnirea.Business.Models
@@ -12,17 +13,7 @@ namespace FCUnirea.Business.Models
         public DateTime BirthDate { get; set; }
 
         //--------------Relations--------------------//
-
-        public ICollection<PlayerStatisticsPerCompetitionModel> PlayerStatisticsPerCompetitons { get; set; }
-        public ICollection<PlayerStatisticsPerGameModel> PlayerStatisticsPerGame { get; set; }
-        public UsersModel Users { get; set; }
-    }
-
-    public enum Position
-    {
-        Atacker,
-        Midfielder,
-        Defender,
-        Goalkeeper
+        // Foreign Key
+        public int? Player_TeamsId { get; set; }
     }
 }

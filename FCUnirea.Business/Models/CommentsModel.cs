@@ -9,5 +9,9 @@ namespace FCUnirea.Business.Models
         public string Text { get; set; }
 
         public DateTime CreatedAt { get; set; }
+
+        // Foreign Key
+        public int? Comment_NewsId { get; set; }
+        public int? Comment_UsersId { get; set; }
     }
 }

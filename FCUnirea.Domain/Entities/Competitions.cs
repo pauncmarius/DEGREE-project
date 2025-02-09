@@ -10,9 +10,9 @@ namespace FCUnirea.Domain.Entities
 
         //--------------Relations--------------------//
 
-        public ICollection<TeamStatistics> TeamStatistics { get; set; }
-        public ICollection<Games> Games { get; set; }
-        public ICollection<PlayerStatisticsPerCompetition> PlayerStatisticsPerCompetiton { get; set; }
+        public ICollection<TeamStatistics> Competitions_TeamStatistics { get; set; }
+        public ICollection<Games> Competitions_Games { get; set; }
+        public ICollection<PlayerStatisticsPerCompetition> Competitions_PlayerStatisticsPerCompetiton { get; set; }
     }
 
     public enum CompetitionType

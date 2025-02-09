@@ -27,8 +27,6 @@ namespace FCUnirea.Persistance
             services.AddScoped<IPlayerStatisticsPerGameRepository, PlayerStatisticsPerGameRepository>();
             services.AddScoped<INewsRepository, NewsRepository>();
             services.AddScoped<ICommentsRepository, CommentsRepository>();
-            services.AddScoped<IFeedbacksRepository, FeedbacksRepository>();
-
 
             return services;
         }

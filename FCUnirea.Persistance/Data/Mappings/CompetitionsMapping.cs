@@ -22,6 +22,25 @@ namespace FCUnirea.Persistance.Data.Mappings
                 .Property(s => s.CompetitionType)
                 .HasColumnName("CompetitionType")
                 .IsRequired();
+
+            // Definirea relațiilor cu alte tabele
+            modelBuilder.Entity<Competitions>()
+                .HasMany(n => n.Competitions_Games)
+                .WithOne(c => c.Game_Competitions)
+                .HasForeignKey(c => c.Game_CompetitionsId)
+                .OnDelete(DeleteBehavior.Cascade);
+
+            modelBuilder.Entity<Competitions>()
+                .HasMany(n => n.Competitions_PlayerStatisticsPerCompetiton)
+                .WithOne(c => c.PlayerStatisticsPerCompetition_Competitions)
+                .HasForeignKey(c => c.PlayerStatisticsPerCompetition_CompetitionsId)
+                .OnDelete(DeleteBehavior.Cascade);
+
+            modelBuilder.Entity<Competitions>()
+                .HasMany(n => n.Competitions_TeamStatistics)
+                .WithOne(c => c.TeamStatistics_Competitions)
+                .HasForeignKey(c => c.TeamStatistics_CompetitionsId)
+                .OnDelete(DeleteBehavior.Cascade);
         }
     }
 }

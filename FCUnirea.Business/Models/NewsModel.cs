@@ -15,7 +15,7 @@ namespace FCUnirea.Business.Models
 
         //--------------Relations--------------------//
 
-        public ICollection<CommentsModel> Comments { get; set; }
-
+        // Foreign Key
+        public int? News_UsersId { get; set; }
     }
 }

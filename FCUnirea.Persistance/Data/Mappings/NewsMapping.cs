@@ -27,6 +27,20 @@ namespace FCUnirea.Persistance.Data.Mappings
                 .Property(s => s.CreatedAt)
                 .HasColumnName("CreatedAt")
                 .IsRequired();
+
+            modelBuilder.Entity<News>()
+                .Property(c => c.News_UsersId)
+                .HasColumnName("UsersId")
+                .IsRequired();
+
+            // Definirea relației cu Comments
+            modelBuilder.Entity<News>()
+                .HasMany(n => n.News_Comments)
+                .WithOne(c => c.Comment_News)
+                .HasForeignKey(c => c.Comment_NewsId)
+                .OnDelete(DeleteBehavior.Cascade);
+
+
         }
     }
 }

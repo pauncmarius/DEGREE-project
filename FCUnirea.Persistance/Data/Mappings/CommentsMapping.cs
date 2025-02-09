@@ -23,6 +23,16 @@ namespace FCUnirea.Persistance.Data.Mappings
                 .HasColumnName("CreatedAt")
                 .IsRequired();
 
+            modelBuilder.Entity<Comments>()
+                .Property(c => c.Comment_NewsId)
+                .HasColumnName("NewsId")
+                .IsRequired();
+
+            modelBuilder.Entity<Comments>()
+                .Property(c => c.Comment_UsersId)
+                .HasColumnName("UserId")
+                .IsRequired();
+
         }
     }
 }

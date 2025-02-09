@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace FCUnirea.Domain.Entities
 {
@@ -17,11 +18,9 @@ namespace FCUnirea.Domain.Entities
 
         //--------------Relations--------------------//
 
-        public ICollection<News> News { get; set; }
-        public ICollection<Comments> Comments { get; set; }
-        public ICollection<Feedbacks> FeedbackFromStaff { get; set; }
-        public ICollection<Feedbacks> FeedbackToPlayers { get; set; }
-        public ICollection<Tickets> Tickets { get; set; }
+        public ICollection<News> Users_News { get; set; }
+        public ICollection<Comments> Users_Comments { get; set; }
+        public ICollection<Tickets> Users_Tickets { get; set; }
     }
 
     // Enum definition for roles
