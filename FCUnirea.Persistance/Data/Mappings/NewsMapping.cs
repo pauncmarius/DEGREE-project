@@ -38,8 +38,7 @@ namespace FCUnirea.Persistance.Data.Mappings
                 .HasMany(n => n.News_Comments)
                 .WithOne(c => c.Comment_News)
                 .HasForeignKey(c => c.Comment_NewsId)
-                .OnDelete(DeleteBehavior.Cascade);
-
+                .OnDelete(DeleteBehavior.Restrict);
 
         }
     }

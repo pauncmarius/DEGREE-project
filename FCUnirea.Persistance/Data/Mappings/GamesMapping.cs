@@ -57,13 +57,12 @@ namespace FCUnirea.Persistance.Data.Mappings
                 .HasMany(n => n.Games_Tickets)
                 .WithOne(c => c.Ticket_Games)
                 .HasForeignKey(c => c.Ticket_GamesId)
-                .OnDelete(DeleteBehavior.Cascade);
-
+                .OnDelete(DeleteBehavior.Restrict);
             modelBuilder.Entity<Games>()
                 .HasMany(n => n.Games_PlayerStatisticsPerGame)
                 .WithOne(c => c.PlayerStatisticsPerGame_Games)
                 .HasForeignKey(c => c.PlayerStatisticsPerGame_GamesId)
-                .OnDelete(DeleteBehavior.Cascade);
+                .OnDelete(DeleteBehavior.Restrict);
         }
     }
 }

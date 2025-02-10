@@ -43,7 +43,7 @@ namespace FCUnirea.Persistance.Data.Mappings
                 .HasOne(n => n.Seat_Tickets)
                 .WithOne(c => c.Ticket_Seats)
                 .HasForeignKey<Tickets>(c => c.Ticket_SeatsId)
-                .OnDelete(DeleteBehavior.Cascade);
+                .OnDelete(DeleteBehavior.Restrict);
         }
     }
 }

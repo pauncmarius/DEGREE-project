@@ -28,19 +28,17 @@ namespace FCUnirea.Persistance.Data.Mappings
                 .HasMany(n => n.Competitions_Games)
                 .WithOne(c => c.Game_Competitions)
                 .HasForeignKey(c => c.Game_CompetitionsId)
-                .OnDelete(DeleteBehavior.Cascade);
-
+                .OnDelete(DeleteBehavior.Restrict);
             modelBuilder.Entity<Competitions>()
                 .HasMany(n => n.Competitions_PlayerStatisticsPerCompetiton)
                 .WithOne(c => c.PlayerStatisticsPerCompetition_Competitions)
                 .HasForeignKey(c => c.PlayerStatisticsPerCompetition_CompetitionsId)
-                .OnDelete(DeleteBehavior.Cascade);
-
+                .OnDelete(DeleteBehavior.Restrict);
             modelBuilder.Entity<Competitions>()
                 .HasMany(n => n.Competitions_TeamStatistics)
                 .WithOne(c => c.TeamStatistics_Competitions)
                 .HasForeignKey(c => c.TeamStatistics_CompetitionsId)
-                .OnDelete(DeleteBehavior.Cascade);
+                .OnDelete(DeleteBehavior.Restrict);
         }
     }
 }

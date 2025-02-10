@@ -31,12 +31,19 @@ namespace FCUnirea.Persistance.Data.Migrations
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"), 1L, 1);
 
+                    b.Property<int?>("Comment_NewsId")
+                        .IsRequired()
+                        .HasColumnType("int")
+                        .HasColumnName("NewsId");
+
+                    b.Property<int?>("Comment_UsersId")
+                        .IsRequired()
+                        .HasColumnType("int")
+                        .HasColumnName("UserId");
+
                     b.Property<DateTime>("CreatedAt")
                         .HasColumnType("datetime2")
                         .HasColumnName("CreatedAt");
-
-                    b.Property<int?>("NewsId")
-                        .HasColumnType("int");
 
                     b.Property<string>("Text")
                         .IsRequired()
@@ -44,14 +51,11 @@ namespace FCUnirea.Persistance.Data.Migrations
                         .HasColumnType("TEXT")
                         .HasColumnName("Text");
 
-                    b.Property<int?>("UsersId")
-                        .HasColumnType("int");
-
                     b.HasKey("Id");
 
-                    b.HasIndex("NewsId");
+                    b.HasIndex("Comment_NewsId");
 
-                    b.HasIndex("UsersId");
+                    b.HasIndex("Comment_UsersId");
 
                     b.ToTable("Comments");
 
@@ -59,7 +63,9 @@ namespace FCUnirea.Persistance.Data.Migrations
                         new
                         {
                             Id = 1,
-                            CreatedAt = new DateTime(2025, 2, 9, 19, 35, 1, 61, DateTimeKind.Utc).AddTicks(6509),
+                            Comment_NewsId = 1,
+                            Comment_UsersId = 1,
+                            CreatedAt = new DateTime(2025, 2, 10, 15, 40, 12, 540, DateTimeKind.Utc).AddTicks(8250),
                             Text = "Felicitări echipei!"
                         });
                 });
@@ -152,29 +158,37 @@ namespace FCUnirea.Persistance.Data.Migrations
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"), 1L, 1);
 
-                    b.Property<int?>("AwayTeamId")
-                        .HasColumnType("int");
-
                     b.Property<int>("AwayTeamScore")
                         .HasColumnType("int")
                         .HasColumnName("AwayTeamScore");
-
-                    b.Property<int?>("CompetitionsId")
-                        .HasColumnType("int");
 
                     b.Property<DateTime>("GameDate")
                         .HasColumnType("datetime2")
                         .HasColumnName("GameDate");
 
-                    b.Property<int?>("HomeTeamId")
-                        .HasColumnType("int");
+                    b.Property<int?>("Game_AwayTeamId")
+                        .IsRequired()
+                        .HasColumnType("int")
+                        .HasColumnName("AwayTeamId");
+
+                    b.Property<int?>("Game_CompetitionsId")
+                        .IsRequired()
+                        .HasColumnType("int")
+                        .HasColumnName("CompetitionId");
+
+                    b.Property<int?>("Game_HomeTeamId")
+                        .IsRequired()
+                        .HasColumnType("int")
+                        .HasColumnName("HomeTeamId");
+
+                    b.Property<int?>("Game_StadiumsId")
+                        .IsRequired()
+                        .HasColumnType("int")
+                        .HasColumnName("StadiumId");
 
                     b.Property<int>("HomeTeamScore")
                         .HasColumnType("int")
                         .HasColumnName("HomeTeamScore");
-
-                    b.Property<int?>("StadiumsId")
-                        .HasColumnType("int");
 
                     b.Property<int>("TicketsSold")
                         .HasColumnType("int")
@@ -182,13 +196,15 @@ namespace FCUnirea.Persistance.Data.Migrations
 
                     b.HasKey("Id");
 
-                    b.HasIndex("AwayTeamId");
+                    b.HasIndex("Game_AwayTeamId")
+                        .IsUnique();
 
-                    b.HasIndex("CompetitionsId");
+                    b.HasIndex("Game_CompetitionsId");
 
-                    b.HasIndex("HomeTeamId");
+                    b.HasIndex("Game_HomeTeamId")
+                        .IsUnique();
 
-                    b.HasIndex("StadiumsId");
+                    b.HasIndex("Game_StadiumsId");
 
                     b.ToTable("Games");
 
@@ -197,7 +213,11 @@ namespace FCUnirea.Persistance.Data.Migrations
                         {
                             Id = 1,
                             AwayTeamScore = 1,
-                            GameDate = new DateTime(2025, 2, 9, 19, 35, 1, 61, DateTimeKind.Utc).AddTicks(6419),
+                            GameDate = new DateTime(2025, 2, 10, 15, 40, 12, 540, DateTimeKind.Utc).AddTicks(8148),
+                            Game_AwayTeamId = 2,
+                            Game_CompetitionsId = 1,
+                            Game_HomeTeamId = 1,
+                            Game_StadiumsId = 1,
                             HomeTeamScore = 2,
                             TicketsSold = 5000
                         });
@@ -216,6 +236,11 @@ namespace FCUnirea.Persistance.Data.Migrations
                         .HasColumnType("datetime2")
                         .HasColumnName("CreatedAt");
 
+                    b.Property<int?>("News_UsersId")
+                        .IsRequired()
+                        .HasColumnType("int")
+                        .HasColumnName("UsersId");
+
                     b.Property<string>("Text")
                         .IsRequired()
                         .HasColumnType("TEXT")
@@ -227,12 +252,9 @@ namespace FCUnirea.Persistance.Data.Migrations
                         .HasColumnType("nvarchar(200)")
                         .HasColumnName("Title");
 
-                    b.Property<int?>("UsersId")
-                        .HasColumnType("int");
-
                     b.HasKey("Id");
 
-                    b.HasIndex("UsersId");
+                    b.HasIndex("News_UsersId");
 
                     b.ToTable("News");
 
@@ -240,7 +262,8 @@ namespace FCUnirea.Persistance.Data.Migrations
                         new
                         {
                             Id = 1,
-                            CreatedAt = new DateTime(2025, 2, 9, 19, 35, 1, 61, DateTimeKind.Utc).AddTicks(6491),
+                            CreatedAt = new DateTime(2025, 2, 10, 15, 40, 12, 540, DateTimeKind.Utc).AddTicks(8231),
+                            News_UsersId = 1,
                             Text = "FC Unirea a câștigat cu 2-1!",
                             Title = "Victorie mare pentru FC Unirea!"
                         });
@@ -265,21 +288,18 @@ namespace FCUnirea.Persistance.Data.Migrations
                         .HasColumnType("nvarchar(100)")
                         .HasColumnName("PlayerName");
 
+                    b.Property<int?>("Player_TeamsId")
+                        .IsRequired()
+                        .HasColumnType("int")
+                        .HasColumnName("TeamsId");
+
                     b.Property<int>("Position")
                         .HasColumnType("int")
                         .HasColumnName("Position");
 
-                    b.Property<int?>("TeamsId")
-                        .HasColumnType("int");
-
-                    b.Property<int?>("UsersId")
-                        .HasColumnType("int");
-
                     b.HasKey("Id");
 
-                    b.HasIndex("TeamsId");
-
-                    b.HasIndex("UsersId");
+                    b.HasIndex("Player_TeamsId");
 
                     b.ToTable("Players");
 
@@ -289,6 +309,7 @@ namespace FCUnirea.Persistance.Data.Migrations
                             Id = 1,
                             BirthDate = new DateTime(1998, 5, 20, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             PlayerName = "Alex Popescu",
+                            Player_TeamsId = 1,
                             Position = 0
                         },
                         new
@@ -296,6 +317,7 @@ namespace FCUnirea.Persistance.Data.Migrations
                             Id = 2,
                             BirthDate = new DateTime(2000, 8, 10, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             PlayerName = "Mihai Ionescu",
+                            Player_TeamsId = 2,
                             Position = 1
                         });
                 });
@@ -313,9 +335,6 @@ namespace FCUnirea.Persistance.Data.Migrations
                         .HasColumnType("int")
                         .HasColumnName("Assists");
 
-                    b.Property<int?>("CompetitionsId")
-                        .HasColumnType("int");
-
                     b.Property<int>("Goals")
                         .HasColumnType("int")
                         .HasColumnName("Goals");
@@ -324,8 +343,15 @@ namespace FCUnirea.Persistance.Data.Migrations
                         .HasColumnType("int")
                         .HasColumnName("MinutesPlayed");
 
-                    b.Property<int?>("PlayersId")
-                        .HasColumnType("int");
+                    b.Property<int?>("PlayerStatisticsPerCompetition_CompetitionsId")
+                        .IsRequired()
+                        .HasColumnType("int")
+                        .HasColumnName("CompetitionId");
+
+                    b.Property<int?>("PlayerStatisticsPerCompetition_PlayersId")
+                        .IsRequired()
+                        .HasColumnType("int")
+                        .HasColumnName("PlayerId");
 
                     b.Property<int>("RedCards")
                         .HasColumnType("int")
@@ -341,9 +367,9 @@ namespace FCUnirea.Persistance.Data.Migrations
 
                     b.HasKey("Id");
 
-                    b.HasIndex("CompetitionsId");
+                    b.HasIndex("PlayerStatisticsPerCompetition_CompetitionsId");
 
-                    b.HasIndex("PlayersId");
+                    b.HasIndex("PlayerStatisticsPerCompetition_PlayersId");
 
                     b.ToTable("PlayerStatisticsPerCompetiton");
 
@@ -354,6 +380,8 @@ namespace FCUnirea.Persistance.Data.Migrations
                             Assists = 5,
                             Goals = 10,
                             MinutesPlayed = 1200,
+                            PlayerStatisticsPerCompetition_CompetitionsId = 1,
+                            PlayerStatisticsPerCompetition_PlayersId = 1,
                             RedCards = 0,
                             Saves = 0,
                             YellowCards = 2
@@ -373,9 +401,6 @@ namespace FCUnirea.Persistance.Data.Migrations
                         .HasColumnType("int")
                         .HasColumnName("Assists");
 
-                    b.Property<int?>("GamesId")
-                        .HasColumnType("int");
-
                     b.Property<int>("Goals")
                         .HasColumnType("int")
                         .HasColumnName("Goals");
@@ -388,8 +413,15 @@ namespace FCUnirea.Persistance.Data.Migrations
                         .HasColumnType("int")
                         .HasColumnName("PassesCompleted");
 
-                    b.Property<int?>("PlayersId")
-                        .HasColumnType("int");
+                    b.Property<int?>("PlayerStatisticsPerGame_GamesId")
+                        .IsRequired()
+                        .HasColumnType("int")
+                        .HasColumnName("GameId");
+
+                    b.Property<int?>("PlayerStatisticsPerGame_PlayersId")
+                        .IsRequired()
+                        .HasColumnType("int")
+                        .HasColumnName("PlayerId");
 
                     b.Property<int>("RedCards")
                         .HasColumnType("int")
@@ -405,9 +437,9 @@ namespace FCUnirea.Persistance.Data.Migrations
 
                     b.HasKey("Id");
 
-                    b.HasIndex("GamesId");
+                    b.HasIndex("PlayerStatisticsPerGame_GamesId");
 
-                    b.HasIndex("PlayersId");
+                    b.HasIndex("PlayerStatisticsPerGame_PlayersId");
 
                     b.ToTable("PlayerStatisticsPerGame");
 
@@ -419,6 +451,8 @@ namespace FCUnirea.Persistance.Data.Migrations
                             Goals = 2,
                             MinutesPlayed = 90,
                             PassesCompleted = 30,
+                            PlayerStatisticsPerGame_GamesId = 1,
+                            PlayerStatisticsPerGame_PlayersId = 1,
                             RedCards = 0,
                             Saves = 0,
                             YellowCards = 0
@@ -452,12 +486,14 @@ namespace FCUnirea.Persistance.Data.Migrations
                         .HasColumnType("int")
                         .HasColumnName("SeatType");
 
-                    b.Property<int?>("StadiumsId")
-                        .HasColumnType("int");
+                    b.Property<int?>("Seat_StadiumsId")
+                        .IsRequired()
+                        .HasColumnType("int")
+                        .HasColumnName("StadiumId");
 
                     b.HasKey("Id");
 
-                    b.HasIndex("StadiumsId");
+                    b.HasIndex("Seat_StadiumsId");
 
                     b.ToTable("Seats");
 
@@ -468,7 +504,8 @@ namespace FCUnirea.Persistance.Data.Migrations
                             Reserved = false,
                             SeatName = "A1",
                             SeatPrice = 150,
-                            SeatType = 3
+                            SeatType = 3,
+                            Seat_StadiumsId = 1
                         },
                         new
                         {
@@ -476,7 +513,8 @@ namespace FCUnirea.Persistance.Data.Migrations
                             Reserved = false,
                             SeatName = "B2",
                             SeatPrice = 50,
-                            SeatType = 0
+                            SeatType = 0,
+                            Seat_StadiumsId = 1
                         });
                 });
 
@@ -601,9 +639,6 @@ namespace FCUnirea.Persistance.Data.Migrations
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"), 1L, 1);
 
-                    b.Property<int?>("CompetitionsId")
-                        .HasColumnType("int");
-
                     b.Property<int>("GamesPlayed")
                         .HasColumnType("int")
                         .HasColumnName("GamesPlayed");
@@ -616,8 +651,15 @@ namespace FCUnirea.Persistance.Data.Migrations
                         .HasColumnType("int")
                         .HasColumnName("GoalsScored");
 
-                    b.Property<int?>("TeamsId")
-                        .HasColumnType("int");
+                    b.Property<int?>("TeamStatistics_CompetitionsId")
+                        .IsRequired()
+                        .HasColumnType("int")
+                        .HasColumnName("CompetitionId");
+
+                    b.Property<int?>("TeamsStatistics_TeamsId")
+                        .IsRequired()
+                        .HasColumnType("int")
+                        .HasColumnName("TeamId");
 
                     b.Property<int>("TotalDraws")
                         .HasColumnType("int")
@@ -637,9 +679,9 @@ namespace FCUnirea.Persistance.Data.Migrations
 
                     b.HasKey("Id");
 
-                    b.HasIndex("CompetitionsId");
+                    b.HasIndex("TeamStatistics_CompetitionsId");
 
-                    b.HasIndex("TeamsId");
+                    b.HasIndex("TeamsStatistics_TeamsId");
 
                     b.ToTable("TeamStatistics");
 
@@ -650,6 +692,8 @@ namespace FCUnirea.Persistance.Data.Migrations
                             GamesPlayed = 15,
                             GoalsConceded = 15,
                             GoalsScored = 30,
+                            TeamStatistics_CompetitionsId = 1,
+                            TeamsStatistics_TeamsId = 1,
                             TotalDraws = 3,
                             TotalLosses = 2,
                             TotalPoints = 33,
@@ -670,22 +714,29 @@ namespace FCUnirea.Persistance.Data.Migrations
                         .HasColumnType("datetime2")
                         .HasColumnName("DateReservation");
 
-                    b.Property<int?>("GamesId")
-                        .HasColumnType("int");
+                    b.Property<int?>("Ticket_GamesId")
+                        .IsRequired()
+                        .HasColumnType("int")
+                        .HasColumnName("GameId");
 
-                    b.Property<int?>("SeatsId")
-                        .HasColumnType("int");
+                    b.Property<int?>("Ticket_SeatsId")
+                        .IsRequired()
+                        .HasColumnType("int")
+                        .HasColumnName("SeatId");
 
-                    b.Property<int?>("UsersId")
-                        .HasColumnType("int");
+                    b.Property<int?>("Ticket_UsersId")
+                        .IsRequired()
+                        .HasColumnType("int")
+                        .HasColumnName("UserId");
 
                     b.HasKey("Id");
 
-                    b.HasIndex("GamesId");
+                    b.HasIndex("Ticket_GamesId");
 
-                    b.HasIndex("SeatsId");
+                    b.HasIndex("Ticket_SeatsId")
+                        .IsUnique();
 
-                    b.HasIndex("UsersId");
+                    b.HasIndex("Ticket_UsersId");
 
                     b.ToTable("Tickets");
 
@@ -693,7 +744,10 @@ namespace FCUnirea.Persistance.Data.Migrations
                         new
                         {
                             Id = 1,
-                            DateReservation = new DateTime(2025, 2, 9, 19, 35, 1, 61, DateTimeKind.Utc).AddTicks(6434)
+                            DateReservation = new DateTime(2025, 2, 10, 15, 40, 12, 540, DateTimeKind.Utc).AddTicks(8169),
+                            Ticket_GamesId = 1,
+                            Ticket_SeatsId = 1,
+                            Ticket_UsersId = 1
                         });
                 });
 
@@ -757,7 +811,7 @@ namespace FCUnirea.Persistance.Data.Migrations
                         new
                         {
                             Id = 1,
-                            CreatedAt = new DateTime(2025, 2, 9, 19, 35, 1, 61, DateTimeKind.Utc).AddTicks(6313),
+                            CreatedAt = new DateTime(2025, 2, 10, 15, 40, 12, 540, DateTimeKind.Utc).AddTicks(8040),
                             Email = "admin@fcunirea.com",
                             FirstName = "Admin",
                             HashedPassword = "hashedpassword",
@@ -769,7 +823,7 @@ namespace FCUnirea.Persistance.Data.Migrations
                         new
                         {
                             Id = 2,
-                            CreatedAt = new DateTime(2025, 2, 9, 19, 35, 1, 61, DateTimeKind.Utc).AddTicks(6316),
+                            CreatedAt = new DateTime(2025, 2, 10, 15, 40, 12, 540, DateTimeKind.Utc).AddTicks(8045),
                             Email = "mariuspaun@example.com",
                             FirstName = "Marius",
                             HashedPassword = "hashedpassword",
@@ -782,164 +836,233 @@ namespace FCUnirea.Persistance.Data.Migrations
 
             modelBuilder.Entity("FCUnirea.Domain.Entities.Comments", b =>
                 {
-                    b.HasOne("FCUnirea.Domain.Entities.News", null)
-                        .WithMany("Comments")
-                        .HasForeignKey("NewsId");
+                    b.HasOne("FCUnirea.Domain.Entities.News", "Comment_News")
+                        .WithMany("News_Comments")
+                        .HasForeignKey("Comment_NewsId")
+                        .OnDelete(DeleteBehavior.Restrict)
+                        .IsRequired();
 
-                    b.HasOne("FCUnirea.Domain.Entities.Users", null)
-                        .WithMany("Comments")
-                        .HasForeignKey("UsersId");
+                    b.HasOne("FCUnirea.Domain.Entities.Users", "Comment_User")
+                        .WithMany("Users_Comments")
+                        .HasForeignKey("Comment_UsersId")
+                        .OnDelete(DeleteBehavior.Restrict)
+                        .IsRequired();
+
+                    b.Navigation("Comment_News");
+
+                    b.Navigation("Comment_User");
                 });
 
             modelBuilder.Entity("FCUnirea.Domain.Entities.Games", b =>
                 {
-                    b.HasOne("FCUnirea.Domain.Entities.Teams", "AwayTeam")
-                        .WithMany()
-                        .HasForeignKey("AwayTeamId");
+                    b.HasOne("FCUnirea.Domain.Entities.Teams", "Game_AwayTeam")
+                        .WithOne("Team_AwayTeam")
+                        .HasForeignKey("FCUnirea.Domain.Entities.Games", "Game_AwayTeamId")
+                        .OnDelete(DeleteBehavior.Restrict)
+                        .IsRequired();
 
-                    b.HasOne("FCUnirea.Domain.Entities.Competitions", null)
-                        .WithMany("Games")
-                        .HasForeignKey("CompetitionsId");
+                    b.HasOne("FCUnirea.Domain.Entities.Competitions", "Game_Competitions")
+                        .WithMany("Competitions_Games")
+                        .HasForeignKey("Game_CompetitionsId")
+                        .OnDelete(DeleteBehavior.Restrict)
+                        .IsRequired();
 
-                    b.HasOne("FCUnirea.Domain.Entities.Teams", "HomeTeam")
-                        .WithMany()
-                        .HasForeignKey("HomeTeamId");
+                    b.HasOne("FCUnirea.Domain.Entities.Teams", "Game_HomeTeam")
+                        .WithOne("Team_HomeTeam")
+                        .HasForeignKey("FCUnirea.Domain.Entities.Games", "Game_HomeTeamId")
+                        .OnDelete(DeleteBehavior.Restrict)
+                        .IsRequired();
 
-                    b.HasOne("FCUnirea.Domain.Entities.Stadiums", null)
-                        .WithMany("Games")
-                        .HasForeignKey("StadiumsId");
+                    b.HasOne("FCUnirea.Domain.Entities.Stadiums", "Game_Stadiums")
+                        .WithMany("Stadiums_Games")
+                        .HasForeignKey("Game_StadiumsId")
+                        .OnDelete(DeleteBehavior.Restrict)
+                        .IsRequired();
 
-                    b.Navigation("AwayTeam");
+                    b.Navigation("Game_AwayTeam");
 
-                    b.Navigation("HomeTeam");
+                    b.Navigation("Game_Competitions");
+
+                    b.Navigation("Game_HomeTeam");
+
+                    b.Navigation("Game_Stadiums");
                 });
 
             modelBuilder.Entity("FCUnirea.Domain.Entities.News", b =>
                 {
-                    b.HasOne("FCUnirea.Domain.Entities.Users", null)
-                        .WithMany("News")
-                        .HasForeignKey("UsersId");
+                    b.HasOne("FCUnirea.Domain.Entities.Users", "News_Users")
+                        .WithMany("Users_News")
+                        .HasForeignKey("News_UsersId")
+                        .OnDelete(DeleteBehavior.Restrict)
+                        .IsRequired();
+
+                    b.Navigation("News_Users");
                 });
 
             modelBuilder.Entity("FCUnirea.Domain.Entities.Players", b =>
                 {
-                    b.HasOne("FCUnirea.Domain.Entities.Teams", null)
-                        .WithMany("Players")
-                        .HasForeignKey("TeamsId");
+                    b.HasOne("FCUnirea.Domain.Entities.Teams", "Player_Teams")
+                        .WithMany("Teams_Players")
+                        .HasForeignKey("Player_TeamsId")
+                        .OnDelete(DeleteBehavior.Restrict)
+                        .IsRequired();
 
-                    b.HasOne("FCUnirea.Domain.Entities.Users", "Users")
-                        .WithMany()
-                        .HasForeignKey("UsersId");
-
-                    b.Navigation("Users");
+                    b.Navigation("Player_Teams");
                 });
 
             modelBuilder.Entity("FCUnirea.Domain.Entities.PlayerStatisticsPerCompetition", b =>
                 {
-                    b.HasOne("FCUnirea.Domain.Entities.Competitions", null)
-                        .WithMany("PlayerStatisticsPerCompetiton")
-                        .HasForeignKey("CompetitionsId");
+                    b.HasOne("FCUnirea.Domain.Entities.Competitions", "PlayerStatisticsPerCompetition_Competitions")
+                        .WithMany("Competitions_PlayerStatisticsPerCompetiton")
+                        .HasForeignKey("PlayerStatisticsPerCompetition_CompetitionsId")
+                        .OnDelete(DeleteBehavior.Restrict)
+                        .IsRequired();
 
-                    b.HasOne("FCUnirea.Domain.Entities.Players", null)
-                        .WithMany("PlayerStatisticsPerCompetitons")
-                        .HasForeignKey("PlayersId");
+                    b.HasOne("FCUnirea.Domain.Entities.Players", "PlayerStatisticsPerCompetition_Players")
+                        .WithMany("Players_PlayerStatisticsPerCompetitons")
+                        .HasForeignKey("PlayerStatisticsPerCompetition_PlayersId")
+                        .OnDelete(DeleteBehavior.Restrict)
+                        .IsRequired();
+
+                    b.Navigation("PlayerStatisticsPerCompetition_Competitions");
+
+                    b.Navigation("PlayerStatisticsPerCompetition_Players");
                 });
 
             modelBuilder.Entity("FCUnirea.Domain.Entities.PlayerStatisticsPerGame", b =>
                 {
-                    b.HasOne("FCUnirea.Domain.Entities.Games", null)
-                        .WithMany("PlayerStatisticsPerGame")
-                        .HasForeignKey("GamesId");
+                    b.HasOne("FCUnirea.Domain.Entities.Games", "PlayerStatisticsPerGame_Games")
+                        .WithMany("Games_PlayerStatisticsPerGame")
+                        .HasForeignKey("PlayerStatisticsPerGame_GamesId")
+                        .OnDelete(DeleteBehavior.Restrict)
+                        .IsRequired();
 
-                    b.HasOne("FCUnirea.Domain.Entities.Players", null)
-                        .WithMany("PlayerStatisticsPerGame")
-                        .HasForeignKey("PlayersId");
+                    b.HasOne("FCUnirea.Domain.Entities.Players", "PlayerStatisticsPerGame_Players")
+                        .WithMany("Players_PlayerStatisticsPerGame")
+                        .HasForeignKey("PlayerStatisticsPerGame_PlayersId")
+                        .OnDelete(DeleteBehavior.Restrict)
+                        .IsRequired();
+
+                    b.Navigation("PlayerStatisticsPerGame_Games");
+
+                    b.Navigation("PlayerStatisticsPerGame_Players");
                 });
 
             modelBuilder.Entity("FCUnirea.Domain.Entities.Seats", b =>
                 {
-                    b.HasOne("FCUnirea.Domain.Entities.Stadiums", null)
-                        .WithMany("Seats")
-                        .HasForeignKey("StadiumsId");
+                    b.HasOne("FCUnirea.Domain.Entities.Stadiums", "Seat_Stadiums")
+                        .WithMany("Stadiums_Seats")
+                        .HasForeignKey("Seat_StadiumsId")
+                        .OnDelete(DeleteBehavior.Restrict)
+                        .IsRequired();
+
+                    b.Navigation("Seat_Stadiums");
                 });
 
             modelBuilder.Entity("FCUnirea.Domain.Entities.TeamStatistics", b =>
                 {
-                    b.HasOne("FCUnirea.Domain.Entities.Competitions", null)
-                        .WithMany("TeamStatistics")
-                        .HasForeignKey("CompetitionsId");
+                    b.HasOne("FCUnirea.Domain.Entities.Competitions", "TeamStatistics_Competitions")
+                        .WithMany("Competitions_TeamStatistics")
+                        .HasForeignKey("TeamStatistics_CompetitionsId")
+                        .OnDelete(DeleteBehavior.Restrict)
+                        .IsRequired();
 
-                    b.HasOne("FCUnirea.Domain.Entities.Teams", null)
-                        .WithMany("TeamStatistics")
-                        .HasForeignKey("TeamsId");
+                    b.HasOne("FCUnirea.Domain.Entities.Teams", "TeamsStatistics_Teams")
+                        .WithMany("Teams_TeamStatistics")
+                        .HasForeignKey("TeamsStatistics_TeamsId")
+                        .OnDelete(DeleteBehavior.Restrict)
+                        .IsRequired();
+
+                    b.Navigation("TeamStatistics_Competitions");
+
+                    b.Navigation("TeamsStatistics_Teams");
                 });
 
             modelBuilder.Entity("FCUnirea.Domain.Entities.Tickets", b =>
                 {
-                    b.HasOne("FCUnirea.Domain.Entities.Games", null)
-                        .WithMany("Tickets")
-                        .HasForeignKey("GamesId");
+                    b.HasOne("FCUnirea.Domain.Entities.Games", "Ticket_Games")
+                        .WithMany("Games_Tickets")
+                        .HasForeignKey("Ticket_GamesId")
+                        .OnDelete(DeleteBehavior.Restrict)
+                        .IsRequired();
 
-                    b.HasOne("FCUnirea.Domain.Entities.Seats", "Seats")
-                        .WithMany()
-                        .HasForeignKey("SeatsId");
+                    b.HasOne("FCUnirea.Domain.Entities.Seats", "Ticket_Seats")
+                        .WithOne("Seat_Tickets")
+                        .HasForeignKey("FCUnirea.Domain.Entities.Tickets", "Ticket_SeatsId")
+                        .OnDelete(DeleteBehavior.Restrict)
+                        .IsRequired();
 
-                    b.HasOne("FCUnirea.Domain.Entities.Users", null)
-                        .WithMany("Tickets")
-                        .HasForeignKey("UsersId");
+                    b.HasOne("FCUnirea.Domain.Entities.Users", "Ticket_Users")
+                        .WithMany("Users_Tickets")
+                        .HasForeignKey("Ticket_UsersId")
+                        .OnDelete(DeleteBehavior.Restrict)
+                        .IsRequired();
 
-                    b.Navigation("Seats");
+                    b.Navigation("Ticket_Games");
+
+                    b.Navigation("Ticket_Seats");
+
+                    b.Navigation("Ticket_Users");
                 });
 
             modelBuilder.Entity("FCUnirea.Domain.Entities.Competitions", b =>
                 {
-                    b.Navigation("Games");
+                    b.Navigation("Competitions_Games");
 
-                    b.Navigation("PlayerStatisticsPerCompetiton");
+                    b.Navigation("Competitions_PlayerStatisticsPerCompetiton");
 
-                    b.Navigation("TeamStatistics");
+                    b.Navigation("Competitions_TeamStatistics");
                 });
 
             modelBuilder.Entity("FCUnirea.Domain.Entities.Games", b =>
                 {
-                    b.Navigation("PlayerStatisticsPerGame");
+                    b.Navigation("Games_PlayerStatisticsPerGame");
 
-                    b.Navigation("Tickets");
+                    b.Navigation("Games_Tickets");
                 });
 
             modelBuilder.Entity("FCUnirea.Domain.Entities.News", b =>
                 {
-                    b.Navigation("Comments");
+                    b.Navigation("News_Comments");
                 });
 
             modelBuilder.Entity("FCUnirea.Domain.Entities.Players", b =>
                 {
-                    b.Navigation("PlayerStatisticsPerCompetitons");
+                    b.Navigation("Players_PlayerStatisticsPerCompetitons");
 
-                    b.Navigation("PlayerStatisticsPerGame");
+                    b.Navigation("Players_PlayerStatisticsPerGame");
+                });
+
+            modelBuilder.Entity("FCUnirea.Domain.Entities.Seats", b =>
+                {
+                    b.Navigation("Seat_Tickets");
                 });
 
             modelBuilder.Entity("FCUnirea.Domain.Entities.Stadiums", b =>
                 {
-                    b.Navigation("Games");
+                    b.Navigation("Stadiums_Games");
 
-                    b.Navigation("Seats");
+                    b.Navigation("Stadiums_Seats");
                 });
 
             modelBuilder.Entity("FCUnirea.Domain.Entities.Teams", b =>
                 {
-                    b.Navigation("Players");
+                    b.Navigation("Team_AwayTeam");
 
-                    b.Navigation("TeamStatistics");
+                    b.Navigation("Team_HomeTeam");
+
+                    b.Navigation("Teams_Players");
+
+                    b.Navigation("Teams_TeamStatistics");
                 });
 
             modelBuilder.Entity("FCUnirea.Domain.Entities.Users", b =>
                 {
-                    b.Navigation("Comments");
+                    b.Navigation("Users_Comments");
 
-                    b.Navigation("News");
+                    b.Navigation("Users_News");
 
-                    b.Navigation("Tickets");
+                    b.Navigation("Users_Tickets");
                 });
 #pragma warning restore 612, 618
         }
