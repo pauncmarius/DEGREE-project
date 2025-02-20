@@ -1,0 +1,14 @@
+<app-directional-button
+[index]="index"
+[IncrementBy]="-1"
+(changeIndex)="onChangeIndex($event)">
+</app-directional-button>
+
+<div class="image-container">
+  <img [src]="images[index]?.src?.original" alt=""/>
+</div>
+
+<app-directional-button [index]="index"
+[IncrementBy]="1"
+(changeIndex)="onChangeIndex($event)">
+</app-directional-button>

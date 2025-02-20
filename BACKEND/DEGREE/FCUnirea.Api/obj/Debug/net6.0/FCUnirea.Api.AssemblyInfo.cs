@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("FCUnirea.Api")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+46e17e759724ed6924eccbce4eb25486b0d22764")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+5155bb864e982df5ba235608e35d57d5095ca27e")]
 [assembly: System.Reflection.AssemblyProductAttribute("FCUnirea.Api")]
 [assembly: System.Reflection.AssemblyTitleAttribute("FCUnirea.Api")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

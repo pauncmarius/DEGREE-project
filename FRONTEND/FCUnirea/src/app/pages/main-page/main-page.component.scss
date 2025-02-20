@@ -1,0 +1,19 @@
+:host{
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  max-height: 70vh;
+  .image_container{
+    height: 100%;
+  }
+  img{
+    object-fit:contain;
+    max-height: 100%;
+  }
+  button{
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    font-size: 40px;
+  }
+}

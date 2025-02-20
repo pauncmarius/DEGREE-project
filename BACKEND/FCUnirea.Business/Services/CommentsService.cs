@@ -25,7 +25,8 @@ namespace FCUnirea.Business.Services
         public void DeleteComment(int id)
         {
             var comment = _commentsRepository.GetById(id);
-            if (comment != null) _commentsRepository.Delete(comment);
+            if (comment != null) 
+                _commentsRepository.Delete(comment);
         }
     }
 }
