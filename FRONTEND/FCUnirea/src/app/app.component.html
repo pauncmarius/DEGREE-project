@@ -1,5 +1,15 @@
 <header></header>
-<main>
-  <app-main-page></app-main-page>
-</main>
-<footer></footer>
+
+<app-main-page
+  [images]="images"
+  [totalImages]="totalImages"
+  [(imagesIndex)]="imagesIndex"
+>
+</app-main-page>
+
+<footer>
+  <app-image-slider
+    [images]="images"
+    [(currentIndex)]="imagesIndex"
+  ></app-image-slider>
+</footer>

@@ -7,12 +7,18 @@ import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
   templateUrl: './directional-button.component.html',
   styleUrl: './directional-button.component.scss'
 })
-export class DirectionalButtonComponent {
-  @Input() IncrementBy: number = 0;
-  @Input() index: number = 0;
-  @Output() changeIndex = new EventEmitter<number>();
 
-  Increment() {
-    this.changeIndex.emit(this.index + this.IncrementBy);
+export class DirectionalButtonComponent implements OnInit {
+  @Output() changeDirection = new EventEmitter<number>();
+  @Input() directionIncrese: number = 0;
+
+  direction: string = '';
+  constructor() {}
+  ngOnInit(): void {
+    this.direction = this.directionIncrese >= 0 ? '>' : '<';
+  }
+
+  onChangeDirection() {
+    this.changeDirection.emit(this.directionIncrese);
   }
 }

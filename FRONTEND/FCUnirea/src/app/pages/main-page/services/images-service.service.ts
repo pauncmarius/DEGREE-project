@@ -1,13 +1,12 @@
-import { Injectable } from '@angular/core';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
+import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
-import {SearchPhotosModel} from './models';
+import { SearchPhotosModel } from './models';
 
 @Injectable({
-  providedIn: 'root'
+  providedIn: 'root',
 })
-
-export class TestService {
+export class ImagesServiceService {
   private API_KEY = '563492ad6f917000010000015078eb39ced74eb4be75cbef5cad38ff';
 
   constructor(private httpClient: HttpClient) {}
@@ -22,4 +21,3 @@ export class TestService {
     return this.httpClient.get<SearchPhotosModel>(url, options);
   }
 }
-
