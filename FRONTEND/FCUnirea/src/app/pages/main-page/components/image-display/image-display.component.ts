@@ -1,5 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
-import { Photo } from '../../services/models';
+import { Photo } from '../../services/models/Photo';
 
 @Component({
   selector: 'app-image-display',

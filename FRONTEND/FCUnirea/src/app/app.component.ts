@@ -1,9 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 import { MainPageComponent } from "./pages/main-page/main-page.component";
-import { Photo, SearchPhotosModel } from './pages/main-page/services/models';
 import { ImagesServiceService } from './pages/main-page/services/images-service.service';
 import { ImageSliderComponent } from "./pages/main-page/components/image-slider/image-slider.component";
+import { Photo, SearchPhotosModel } from './pages/main-page/services/models/Photo';
 
 @Component({
   selector: 'app-root',

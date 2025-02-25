@@ -7,9 +7,9 @@ import {
   Output,
   SimpleChanges,
 } from '@angular/core';
-import { Photo } from '../../services/models';
 import { ImageComponent } from "../image/image.component";
 import { CommonModule } from '@angular/common';
+import { Photo } from '../../services/models/Photo';
 
 @Component({
   selector: 'app-image-slider',

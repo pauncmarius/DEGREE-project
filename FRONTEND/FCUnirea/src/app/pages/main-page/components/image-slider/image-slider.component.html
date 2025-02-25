@@ -1,6 +1,6 @@
 <ng-container *ngFor="let image of imagesToDisplay">
   <app-image
-    [src]="image.src.small"
+    [src]="image.url"
     [id]="image.id"
     (imageClick)="onImageClick($event)"
   ></app-image>

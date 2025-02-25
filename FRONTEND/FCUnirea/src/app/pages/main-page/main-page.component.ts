@@ -1,9 +1,8 @@
 import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { Photo } from './services/models/PhotoModel';
-import { SearchPhotosModel } from './services/models';
 import { DirectionalButtonComponent } from "./components/directional-button/directional-button.component";
 import { ImageDisplayComponent } from "./components/image-display/image-display.component";
+import { Photo } from './services/models/Photo';
 
 @Component({
   selector: 'app-main-page',
