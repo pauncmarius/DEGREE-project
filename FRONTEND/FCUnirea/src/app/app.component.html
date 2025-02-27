@@ -1,15 +1,6 @@
-<header></header>
-
-<app-main-page
-  [images]="images"
-  [totalImages]="totalImages"
-  [(imagesIndex)]="imagesIndex"
->
-</app-main-page>
-
-<footer>
-  <app-image-slider
-    [images]="images"
-    [(currentIndex)]="imagesIndex"
-  ></app-image-slider>
-</footer>
+<div class="app-content">
+  <app-menu></app-menu>
+  <div class="page-content">
+    <router-outlet></router-outlet>
+  </div>
+</div>

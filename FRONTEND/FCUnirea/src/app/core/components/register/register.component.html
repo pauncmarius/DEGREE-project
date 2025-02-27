@@ -1,0 +1,23 @@
+<br>
+<p>Input with ngModel</p>
+<input [(ngModel)]="myFirstNgModel"
+       (ngModelChange)="onModelChange($event)">
+
+<p>Valoare: {{ myFirstNgModel }}</p>
+<br>
+<p>Form with reactive forms</p>
+<br>
+<form #form="ngForm" [formGroup]="userFormGroup" (ngSubmit)="onSubmitForm(form)">
+  Name <input formControlName="name">
+  <br />
+  Username <input formControlName="username">
+  <br />
+  Password <input type="password" formControlName="password">
+  <br />
+  <div class="checkbox-container">
+      <input type="checkbox" formControlName="checkbox"> Remember me
+  </div>
+
+  <button class="submit-button" type="submit">Submit</button>
+</form>
+
