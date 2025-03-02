@@ -1,14 +1,18 @@
-<br>
-<p>Input with ngModel</p>
-<input [(ngModel)]="myFirstNgModel"
-       (ngModelChange)="onModelChange($event)">
+<br><p>Input with ngModel</p>
 
-<p>Valoare: {{ myFirstNgModel }}</p>
-<br>
+<input required #name="ngModel"
+      [(ngModel)]="myFirstNgModel"
+      (ngModelChange)="onModelChange($event)">
+
+<p class="error-message" *ngIf="name.errors && name.touched && name.dirty">This input is required!</p>
+
+<p>Valoare: {{ myFirstNgModel }}</p><br>
+
 <p>Form with reactive forms</p>
 <br>
 <form #form="ngForm" [formGroup]="userFormGroup" (ngSubmit)="onSubmitForm(form)">
   Name <input formControlName="name">
+  <p class="error-message" *ngIf="userFormGroup.controls['name'].errors && userFormGroup.controls['name'].touched && userFormGroup.controls['name'].dirty">This input is required!</p>
   <br />
   Username <input formControlName="username">
   <br />
@@ -20,4 +24,8 @@
 
   <button class="submit-button" type="submit">Submit</button>
 </form>
+
+<pre>
+  Form group values: {{userFormGroup.value | json}}
+</pre>
 

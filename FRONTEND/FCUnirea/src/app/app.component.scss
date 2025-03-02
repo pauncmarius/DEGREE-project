@@ -1,8 +1,13 @@
-:host {
-  header {
-    height: 15vh;
-  }
-  footer {
-    height: 15vh;
-  }
+.app-content {
+  display: flex;
+  flex-direction: row-reverse; /* Meniul va fi plasat în dreapta */
+  height: 100vh; /* Face ca întreaga pagină să ocupe 100% din înălțimea ferestrei */
+}
+
+.page-content {
+  flex-grow: 1;
+  padding: 20px;
+  overflow-y: auto;
+  margin-right: 15%; /* Asigură că meniul nu acoperă conținutul */
+
 }

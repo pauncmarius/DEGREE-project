@@ -1,6 +1,6 @@
 import { CommonModule } from '@angular/common';
 import { Component, OnInit } from '@angular/core';
-import { FormControl, FormGroup, FormGroupDirective, FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { FormControl, FormGroup, FormGroupDirective, FormsModule, ReactiveFormsModule, Validators } from '@angular/forms';
 import { ActivatedRoute, RouterModule } from '@angular/router';
 
 @Component({
@@ -20,7 +20,7 @@ export class RegisterComponent implements OnInit {
   ngOnInit(): void {
 
       this.userFormGroup = new FormGroup({
-        name: new FormControl('value default'),
+        name: new FormControl('value default', Validators.required),
         username: new FormControl(''),
         password: new FormControl(''),
         checkbox: new FormControl(false),

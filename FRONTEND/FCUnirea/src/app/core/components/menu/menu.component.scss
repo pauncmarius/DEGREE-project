@@ -1,10 +1,17 @@
 .menu-content {
+  width: 15%; /* Meniul ocupă 15% din lățimea totală */
+  min-width: 200px; /* Asigură că nu devine prea mic pe ecrane mici */
+  max-width: 300px; /* Poți ajusta în funcție de nevoie */
+  height: 100vh; /* Asigură că meniul se întinde pe toată înălțimea ferestrei */
   display: flex;
   flex-direction: column;
   padding-top: 20px;
-  height: 100%;
   box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.12),
               0px 2px 12px rgba(0, 17, 128, 0.12);
+  background-color: #fff;
+  position: fixed; /* Fixează meniul ca să nu se miște la scroll */
+  right: 0; /* Îl aliniază în partea dreaptă */
+  top: 0;
   a {
     cursor: pointer;
     text-decoration: none;
@@ -20,7 +27,7 @@
 
     &.active {
       background-color: rgba(31, 189, 136, 0.08);
-      font-weight: bold;
+      font-style: italic;
       color: #01140e;
     }
   }
@@ -37,15 +44,6 @@
 
     &:not(:last-child) {
         margin-bottom: 8px;
-    }
-  }
-
-  .children-content{
-    display: flex;
-    flex-direction: column;
-
-    .menu-item{
-      padding-left: 32px;
     }
   }
 }
