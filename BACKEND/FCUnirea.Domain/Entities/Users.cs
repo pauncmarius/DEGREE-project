@@ -27,8 +27,6 @@ namespace FCUnirea.Domain.Entities
     public enum UserRole
     {
         Admin,
-        Customer,
-        Player,
-        Staff
+        Customer
     }
 }

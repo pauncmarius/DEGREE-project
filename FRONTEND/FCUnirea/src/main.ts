@@ -5,6 +5,7 @@ import { RegisterComponent } from './app/core/components/register/register.compo
 import { PageNotFoundComponent } from './app/core/components/page-not-found/page-not-found.component';
 import { UserSettingsComponent } from './app/features/users/user-settings/user-settings.component';
 import { FirstGuard } from './app/shared/first.guard';
+import { provideHttpClient } from '@angular/common/http';
 
 const routes: Routes = [
   { path: '', redirectTo: 'register', pathMatch: 'full' },
@@ -18,5 +19,5 @@ const routes: Routes = [
 ];
 
 bootstrapApplication(AppComponent, {
-  providers: [provideRouter(routes)]
+  providers: [provideRouter(routes), provideHttpClient()]
 }).catch(err => console.error(err));

@@ -1,24 +1,24 @@
-<button (click)="addMockUser()">+ Add user +</button><br>
-<button (click)="removeMockUser()">- Remove user -</button>
-
-
 <table>
   <thead>
       <tr>
-          <th> id </th>
-          <th> name </th>
-          <th> role </th>
-          <th> avatar </th>
-          <th> age </th>
+        <th> ID </th>
+        <th> Username </th>
+        <th> Email </th>
+        <th> First Name </th>
+        <th> Last Name </th>
+        <th> Phone Number </th>
+        <th> Role </th>
       </tr>
   </thead>
   <tbody>
-    <tr *ngFor="let user of mockUsers">
+    <tr *ngFor="let user of users">
       <td>{{ user.id }}</td>
-      <td>{{ user.name }}</td>
+      <td>{{ user.username }}</td>
+      <td>{{ user.email }}</td>
+      <td>{{ user.firstName }}</td>
+      <td>{{ user.lastName }}</td>
+      <td>{{ user.phoneNumber }}</td>
       <td>{{ user.role }}</td>
-      <td><img src="{{user.avatar}}" ></td>
-      <td>{{ user.age }}</td>
     </tr>
   </tbody>
 </table>
