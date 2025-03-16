@@ -1,7 +1,8 @@
 import { CommonModule } from '@angular/common';
-import { Component, OnInit } from '@angular/core';
-import { FormControl, FormGroup, FormGroupDirective, FormsModule, ReactiveFormsModule, Validators } from '@angular/forms';
-import { ActivatedRoute, RouterModule } from '@angular/router';
+import { Component, inject, OnInit } from '@angular/core';
+import { FormBuilder, FormControl, FormGroup, FormGroupDirective, FormsModule, ReactiveFormsModule, Validators } from '@angular/forms';
+import { ActivatedRoute, Router, RouterModule } from '@angular/router';
+import { UserService } from '../../services/user-service.service';
 
 @Component({
   selector: 'app-register',
@@ -11,36 +12,36 @@ import { ActivatedRoute, RouterModule } from '@angular/router';
   styleUrl: './register.component.scss'
 })
 
-export class RegisterComponent implements OnInit {
-  myFirstNgModel: string | undefined;
-  userFormGroup!: FormGroup;
+export class RegisterComponent {
+  registerForm: FormGroup;
+  errorMessage: string = '';
 
-  constructor(private activeRoute: ActivatedRoute) {}
+  private fb = inject(FormBuilder);
+  private userService = inject(UserService);
+  private router = inject(Router);
 
-  ngOnInit(): void {
-
-      this.userFormGroup = new FormGroup({
-        name: new FormControl('value default', Validators.required),
-        username: new FormControl(''),
-        password: new FormControl(''),
-        checkbox: new FormControl(false),
-      });
-
-      this.userFormGroup.valueChanges.subscribe((data) => {
-        console.log('values', data);
-      });
-
-      this.userFormGroup.controls['name'].valueChanges.subscribe((data) => {
-        console.log('value', data);
-      })
+  constructor() {
+    this.registerForm = this.fb.group({
+      username: ['', Validators.required],
+      email: ['', [Validators.required, Validators.email]],
+      firstName: ['', Validators.required],
+      lastName: ['', Validators.required],
+      password: ['', Validators.required],
+      phoneNumber: ['', Validators.required]
+    });
   }
 
-  onModelChange(event: string): void {
-    console.log('valoare', event);
-  }
+  onSubmit(): void {
+    if (this.registerForm.invalid) return;
 
-  onSubmitForm(form: FormGroupDirective): void {
-    console.log('submit', form);
+    this.userService.register(this.registerForm.value).subscribe(
+      () => {
+        alert('Înregistrare reușită! Acum vă puteți autentifica.');
+        this.router.navigate(['/login']);
+      },
+      (error) => {
+        this.errorMessage = error.error.message || 'A apărut o eroare!';
+      }
+    );
   }
 }
-

@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\paunm\\Documents\\github\\degree\\DEGREE-project\\DEGREE\\FCUnirea.csproj": {}
+    "C:\\Users\\paunm\\Documents\\github\\degree\\DEGREE-project\\BACKEND\\DEGREE\\FCUnirea.csproj": {}
   },
   "projects": {
-    "C:\\Users\\paunm\\Documents\\github\\degree\\DEGREE-project\\DEGREE\\FCUnirea.csproj": {
+    "C:\\Users\\paunm\\Documents\\github\\degree\\DEGREE-project\\BACKEND\\DEGREE\\FCUnirea.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\paunm\\Documents\\github\\degree\\DEGREE-project\\DEGREE\\FCUnirea.csproj",
+        "projectUniqueName": "C:\\Users\\paunm\\Documents\\github\\degree\\DEGREE-project\\BACKEND\\DEGREE\\FCUnirea.csproj",
         "projectName": "FCUnirea",
-        "projectPath": "C:\\Users\\paunm\\Documents\\github\\degree\\DEGREE-project\\DEGREE\\FCUnirea.csproj",
+        "projectPath": "C:\\Users\\paunm\\Documents\\github\\degree\\DEGREE-project\\BACKEND\\DEGREE\\FCUnirea.csproj",
         "packagesPath": "C:\\Users\\paunm\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\paunm\\Documents\\github\\degree\\DEGREE-project\\DEGREE\\obj\\",
+        "outputPath": "C:\\Users\\paunm\\Documents\\github\\degree\\DEGREE-project\\BACKEND\\DEGREE\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -44,12 +44,17 @@
           "enableAudit": "true",
           "auditLevel": "low",
           "auditMode": "direct"
-        }
+        },
+        "SdkAnalysisLevel": "9.0.100"
       },
       "frameworks": {
         "net5.0": {
           "targetAlias": "net5.0",
           "dependencies": {
+            "BCrypt.Net-Next": {
+              "target": "Package",
+              "version": "[4.0.3, )"
+            },
             "Microsoft.EntityFrameworkCore.SqlServer": {
               "target": "Package",
               "version": "[5.0.17, )"
@@ -77,7 +82,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.202\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.103\\RuntimeIdentifierGraph.json"
         }
       }
     }

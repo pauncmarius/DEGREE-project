@@ -778,10 +778,10 @@ namespace FCUnirea.Persistance.Data.Migrations
                         .HasColumnType("nvarchar(100)")
                         .HasColumnName("FirstName");
 
-                    b.Property<string>("HashedPassword")
+                    b.Property<string>("Password")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)")
-                        .HasColumnName("HashedPassword");
+                        .HasColumnName("Password");
 
                     b.Property<string>("LastName")
                         .IsRequired()
@@ -816,7 +816,7 @@ namespace FCUnirea.Persistance.Data.Migrations
                             CreatedAt = new DateTime(2025, 2, 10, 15, 40, 12, 540, DateTimeKind.Utc).AddTicks(8040),
                             Email = "admin@fcunirea.com",
                             FirstName = "Admin",
-                            HashedPassword = "hashedpassword",
+                            Password = "hashedpassword",
                             LastName = "User",
                             PhoneNumber = "0734567890",
                             Role = 0,
@@ -828,7 +828,7 @@ namespace FCUnirea.Persistance.Data.Migrations
                             CreatedAt = new DateTime(2025, 2, 10, 15, 40, 12, 540, DateTimeKind.Utc).AddTicks(8045),
                             Email = "mariuspaun@example.com",
                             FirstName = "Marius",
-                            HashedPassword = "hashedpassword",
+                            Password = "hashedpassword",
                             LastName = "Paun",
                             PhoneNumber = "0787654321",
                             Role = 1,

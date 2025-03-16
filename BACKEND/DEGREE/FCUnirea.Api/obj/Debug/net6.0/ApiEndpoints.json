@@ -960,5 +960,37 @@
       }
     ],
     "ReturnTypes": []
+  },
+  {
+    "ContainingType": "FCUnirea.Api.Controllers.UsersController",
+    "Method": "Login",
+    "RelativePath": "api/Users/login",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "model",
+        "Type": "FCUnirea.Business.Models.UsersModel",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "FCUnirea.Api.Controllers.UsersController",
+    "Method": "Register",
+    "RelativePath": "api/Users/register",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "model",
+        "Type": "FCUnirea.Business.Models.UsersModel",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
   }
 ]

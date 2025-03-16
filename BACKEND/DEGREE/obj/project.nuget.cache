@@ -1,9 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "/jYINfbn1h8UCz4CkAfRhMHGdlAwBLsuYG/+zkTMaKNkTm4NYo2Jga8o3OdebAVOg6KfSjw4+ONm9snOdFRncQ==",
+  "dgSpecHash": "yqHkuLBj2h4=",
   "success": true,
-  "projectFilePath": "C:\\Users\\paunm\\Documents\\github\\degree\\DEGREE-project\\DEGREE\\FCUnirea.csproj",
+  "projectFilePath": "C:\\Users\\paunm\\Documents\\github\\degree\\DEGREE-project\\BACKEND\\DEGREE\\FCUnirea.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\paunm\\.nuget\\packages\\bcrypt.net-next\\4.0.3\\bcrypt.net-next.4.0.3.nupkg.sha512",
     "C:\\Users\\paunm\\.nuget\\packages\\humanizer.core\\2.8.26\\humanizer.core.2.8.26.nupkg.sha512",
     "C:\\Users\\paunm\\.nuget\\packages\\microsoft.csharp\\4.7.0\\microsoft.csharp.4.7.0.nupkg.sha512",
     "C:\\Users\\paunm\\.nuget\\packages\\microsoft.data.sqlclient\\2.0.1\\microsoft.data.sqlclient.2.0.1.nupkg.sha512",

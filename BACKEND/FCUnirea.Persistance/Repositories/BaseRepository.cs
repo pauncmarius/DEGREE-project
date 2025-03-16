@@ -1,4 +1,5 @@
-﻿using FCUnirea.Domain.IRepositories;
+﻿
+using FCUnirea.Domain.IRepositories;
 using FCUnirea.Persistance.Data;
 using Microsoft.EntityFrameworkCore;
 using System.Collections.Generic;

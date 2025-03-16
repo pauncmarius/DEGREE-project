@@ -1,31 +1,14 @@
-<br><p>Input with ngModel</p>
-
-<input required #name="ngModel"
-      [(ngModel)]="myFirstNgModel"
-      (ngModelChange)="onModelChange($event)">
-
-<p class="error-message" *ngIf="name.errors && name.touched && name.dirty">This input is required!</p>
-
-<p>Valoare: {{ myFirstNgModel }}</p><br>
-
-<p>Form with reactive forms</p>
-<br>
-<form #form="ngForm" [formGroup]="userFormGroup" (ngSubmit)="onSubmitForm(form)">
-  Name <input formControlName="name">
-  <p class="error-message" *ngIf="userFormGroup.controls['name'].errors && userFormGroup.controls['name'].touched && userFormGroup.controls['name'].dirty">This input is required!</p>
-  <br />
-  Username <input formControlName="username">
-  <br />
-  Password <input type="password" formControlName="password">
-  <br />
-  <div class="checkbox-container">
-      <input type="checkbox" formControlName="checkbox"> Remember me
-  </div>
-
-  <button class="submit-button" type="submit">Submit</button>
-</form>
-
-<pre>
-  Form group values: {{userFormGroup.value | json}}
-</pre>
-
+<div class="auth-container">
+  <h2>Înregistrare</h2>
+  <form [formGroup]="registerForm" (ngSubmit)="onSubmit()">
+    <input type="text" formControlName="username" placeholder="Username" required />
+    <input type="email" formControlName="email" placeholder="Email" required />
+    <input type="text" formControlName="firstName" placeholder="Prenume" required />
+    <input type="text" formControlName="lastName" placeholder="Nume" required />
+    <input type="password" formControlName="password" placeholder="Parolă" required />
+    <input type="text" formControlName="phoneNumber" placeholder="Telefon" required />
+    <button type="submit" [disabled]="registerForm.invalid">Înregistrare</button>
+    <p *ngIf="errorMessage" class="error">{{ errorMessage }}</p>
+  </form>
+  <p>Ai deja cont? <a routerLink="/login">Autentifică-te</a></p>
+</div>

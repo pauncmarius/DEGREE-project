@@ -1,4 +1,5 @@
-﻿using FCUnirea.Domain.Entities;
+﻿
+using FCUnirea.Domain.Entities;
 using Microsoft.EntityFrameworkCore;
 
 namespace FCUnirea.Persistance.Data.Mappings

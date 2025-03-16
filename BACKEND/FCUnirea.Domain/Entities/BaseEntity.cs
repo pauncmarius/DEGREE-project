@@ -1,4 +1,5 @@
-﻿namespace FCUnirea.Domain.Entities
+﻿
+namespace FCUnirea.Domain.Entities
 {
     public class BaseEntity
     {

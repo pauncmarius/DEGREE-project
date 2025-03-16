@@ -64,7 +64,7 @@ namespace FCUnirea.Persistance.Data.Migrations
                     Email = table.Column<string>(type: "nvarchar(100)", maxLength: 100, nullable: false),
                     FirstName = table.Column<string>(type: "nvarchar(100)", maxLength: 100, nullable: false),
                     LastName = table.Column<string>(type: "nvarchar(100)", maxLength: 100, nullable: false),
-                    HashedPassword = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    Password = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     PhoneNumber = table.Column<string>(type: "nvarchar(10)", maxLength: 10, nullable: false),
                     Role = table.Column<int>(type: "int", nullable: false),
                     CreatedAt = table.Column<DateTime>(type: "datetime2", nullable: false)
@@ -383,7 +383,7 @@ namespace FCUnirea.Persistance.Data.Migrations
 
             migrationBuilder.InsertData(
                 table: "Users",
-                columns: new[] { "Id", "CreatedAt", "Email", "FirstName", "HashedPassword", "LastName", "PhoneNumber", "Role", "Username" },
+                columns: new[] { "Id", "CreatedAt", "Email", "FirstName", "Password", "LastName", "PhoneNumber", "Role", "Username" },
                 values: new object[,]
                 {
                     { 1, new DateTime(2025, 2, 10, 15, 40, 12, 540, DateTimeKind.Utc).AddTicks(8040), "admin@fcunirea.com", "Admin", "hashedpassword", "User", "0734567890", 0, "admin" },

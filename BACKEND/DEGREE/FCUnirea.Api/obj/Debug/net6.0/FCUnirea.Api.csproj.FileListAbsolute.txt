@@ -184,3 +184,4 @@ C:\Users\paunm\Documents\github\degree\DEGREE-project\BACKEND\DEGREE\FCUnirea.Ap
 C:\Users\paunm\Documents\github\degree\DEGREE-project\BACKEND\DEGREE\FCUnirea.Api\obj\Debug\net6.0\FCUnirea.Api.pdb
 C:\Users\paunm\Documents\github\degree\DEGREE-project\BACKEND\DEGREE\FCUnirea.Api\obj\Debug\net6.0\FCUnirea.Api.genruntimeconfig.cache
 C:\Users\paunm\Documents\github\degree\DEGREE-project\BACKEND\DEGREE\FCUnirea.Api\obj\Debug\net6.0\ref\FCUnirea.Api.dll
+C:\Users\paunm\Documents\github\degree\DEGREE-project\BACKEND\DEGREE\FCUnirea.Api\bin\Debug\net6.0\BouncyCastle.Crypto.dll

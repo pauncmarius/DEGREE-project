@@ -1,4 +1,5 @@
-﻿namespace FCUnirea.Business.Models
+﻿
+namespace FCUnirea.Business.Models
 {
     public class TeamStatisticsModel
     {

@@ -1,7 +1,10 @@
-﻿using FCUnirea.Business.Models;
+﻿
+using FCUnirea.Business.Models;
+using FCUnirea.Business.Services;
 using FCUnirea.Business.Services.IServices;
 using FCUnirea.Domain.Entities;
 using Microsoft.AspNetCore.Mvc;
+using System;
 
 namespace FCUnirea.Api.Controllers
 {
@@ -53,5 +56,41 @@ namespace FCUnirea.Api.Controllers
             _userService.DeleteUser(id);
             return NoContent();
         }
+
+        [HttpPost("register")]
+        public IActionResult Register([FromBody] UsersModel model)
+        {
+            try
+            {
+                var userId = _userService.RegisterUser(model);
+                return Ok(new { message = "Utilizator înregistrat cu succes!", userId });
+            }
+            catch (Exception ex)
+            {
+                return BadRequest(new { message = ex.Message });
+            }
+        }
+
+        [HttpPost("login")]
+        public IActionResult Login([FromBody] UsersModel model)
+        {
+            if (string.IsNullOrEmpty(model.Username) && string.IsNullOrEmpty(model.Email))
+            {
+                return BadRequest(new { message = "Trebuie să furnizați un username sau un email." });
+            }
+
+            if (string.IsNullOrEmpty(model.Password))
+            {
+                return BadRequest(new { message = "Parola este obligatorie." });
+            }
+
+            var token = _userService.Authenticate(model);
+
+            if (string.IsNullOrEmpty(token))
+                return Unauthorized(new { message = "Credentialele sunt incorecte!" });
+
+            return Ok(new { token });
+        }
+
     }
 }

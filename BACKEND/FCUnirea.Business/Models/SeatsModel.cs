@@ -1,4 +1,5 @@
-﻿using FCUnirea.Domain.Entities;
+﻿
+using FCUnirea.Domain.Entities;
 
 namespace FCUnirea.Business.Models
 {

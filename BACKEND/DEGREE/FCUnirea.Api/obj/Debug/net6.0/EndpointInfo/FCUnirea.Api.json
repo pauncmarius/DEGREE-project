@@ -1486,6 +1486,68 @@
           }
         }
       }
+    },
+    "/api/Users/register": {
+      "post": {
+        "tags": [
+          "Users"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/UsersModel"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/UsersModel"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/UsersModel"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/Users/login": {
+      "post": {
+        "tags": [
+          "Users"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/UsersModel"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/UsersModel"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/UsersModel"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
     }
   },
   "components": {
@@ -2406,9 +2468,7 @@
       "UserRole": {
         "enum": [
           0,
-          1,
-          2,
-          3
+          1
         ],
         "type": "integer",
         "format": "int32"
@@ -2436,7 +2496,7 @@
             "type": "string",
             "nullable": true
           },
-          "hashedPassword": {
+          "password": {
             "type": "string",
             "nullable": true
           },
@@ -2494,7 +2554,7 @@
             "type": "string",
             "nullable": true
           },
-          "hashedPassword": {
+          "password": {
             "type": "string",
             "nullable": true
           },

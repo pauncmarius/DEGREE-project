@@ -1,0 +1,10 @@
+<div class="auth-container">
+  <h2>Autentificare</h2>
+  <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+    <input type="text" formControlName="username" placeholder="Username" required />
+    <input type="password" formControlName="password" placeholder="Parolă" required />
+    <button type="submit" [disabled]="loginForm.invalid">Conectare</button>
+    <p *ngIf="errorMessage" class="error">{{ errorMessage }}</p>
+  </form>
+  <p>Nu ai cont? <a routerLink="/register">Înregistrează-te</a></p>
+</div>

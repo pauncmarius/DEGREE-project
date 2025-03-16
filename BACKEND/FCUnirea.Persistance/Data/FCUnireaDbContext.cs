@@ -1,4 +1,5 @@
-﻿using FCUnirea.Domain.Entities;
+﻿
+using FCUnirea.Domain.Entities;
 using FCUnirea.Persistance.Data.Mappings;
 using Microsoft.EntityFrameworkCore;
 using System;
@@ -67,8 +68,8 @@ namespace FCUnirea.Persistance.Data
 
             modelBuilder.Entity<Users>().HasData(new List<Users>()
             {
-                new Users() { Id = 1, Username = "admin", Email = "admin@fcunirea.com", FirstName = "Admin", LastName = "User", HashedPassword = "hashedpassword", PhoneNumber = "0734567890", Role = UserRole.Admin, CreatedAt = DateTime.UtcNow},
-                new Users() { Id = 2, Username = "mariuspaun", Email = "mariuspaun@example.com", FirstName = "Marius", LastName = "Paun", HashedPassword = "hashedpassword", PhoneNumber = "0787654321", Role = UserRole.Customer, CreatedAt = DateTime.UtcNow }
+                new Users() { Id = 1, Username = "admin", Email = "admin@fcunirea.com", FirstName = "Admin", LastName = "User", Password = "hashedpassword", PhoneNumber = "0734567890", Role = UserRole.Admin, CreatedAt = DateTime.UtcNow},
+                new Users() { Id = 2, Username = "mariuspaun", Email = "mariuspaun@example.com", FirstName = "Marius", LastName = "Paun", Password = "hashedpassword", PhoneNumber = "0787654321", Role = UserRole.Customer, CreatedAt = DateTime.UtcNow }
             });
 
             modelBuilder.Entity<Teams>().HasData(new List<Teams>()

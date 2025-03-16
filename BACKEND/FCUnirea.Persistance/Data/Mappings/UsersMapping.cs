@@ -1,4 +1,5 @@
-﻿using FCUnirea.Domain.Entities;
+﻿
+using FCUnirea.Domain.Entities;
 using Microsoft.EntityFrameworkCore;
 
 namespace FCUnirea.Persistance.Data.Mappings
@@ -37,8 +38,8 @@ namespace FCUnirea.Persistance.Data.Mappings
                 .IsRequired();
 
             modelBuilder.Entity<Users>()
-                .Property(s => s.HashedPassword)
-                .HasColumnName("HashedPassword")
+                .Property(s => s.Password)
+                .HasColumnName("Password")
                 .IsRequired();
 
             modelBuilder.Entity<Users>()

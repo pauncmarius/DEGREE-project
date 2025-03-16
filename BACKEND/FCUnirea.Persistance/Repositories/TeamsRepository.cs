@@ -1,4 +1,5 @@
-﻿using FCUnirea.Domain.Entities;
+﻿
+using FCUnirea.Domain.Entities;
 using FCUnirea.Domain.IRepositories;
 using FCUnirea.Persistance.Data;
 

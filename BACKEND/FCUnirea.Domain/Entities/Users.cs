@@ -1,4 +1,5 @@
-﻿using System;
+﻿
+using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations.Schema;
 
@@ -11,7 +12,7 @@ namespace FCUnirea.Domain.Entities
         public string Email { get; set; }
         public string FirstName { get; set; }
         public string LastName { get; set; }
-        public string HashedPassword { get; set; }
+        public string Password { get; set; }
         public string PhoneNumber { get; set; }
         public UserRole Role { get; set; }
         public DateTime CreatedAt { get; set; }
