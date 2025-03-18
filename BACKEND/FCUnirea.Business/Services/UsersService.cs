@@ -38,11 +38,11 @@ namespace FCUnirea.Business.Services
         public int RegisterUser(UsersModel request)
         {
             var existingUser = _userRepository.ListAll()
-                .FirstOrDefault(u => u.Username == request.Username || u.Email == request.Email);
+                .FirstOrDefault(u => u.Username == request.Username || u.Email == request.Email || u.PhoneNumber == request.PhoneNumber);
 
             if (existingUser != null)
             {
-                throw new Exception("Un utilizator cu acest username sau email există deja!");
+                throw new Exception("Un utilizator cu acest username, numar telefon sau email există deja!");
             }
 
             var user = new Users
@@ -57,15 +57,13 @@ namespace FCUnirea.Business.Services
                 Password = HashPassword(request.Password) // Hash-uim parola cu BouncyCastle
             };
 
-            var createdUser = _userRepository.Add(user);
-            return createdUser.Id;
+            return _userRepository.RegisterUser(user).Id;
         }
 
 
         public string Authenticate(LoginModel request)
         {
-            var user = _userRepository.ListAll()
-                .FirstOrDefault(u => u.Username == request.Username);
+            var user = _userRepository.Authenticate(request.Username);
 
             if (user == null || !VerifyPassword(request.Password, user.Password))
             {
