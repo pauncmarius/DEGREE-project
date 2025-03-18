@@ -971,7 +971,7 @@
     "Parameters": [
       {
         "Name": "model",
-        "Type": "FCUnirea.Business.Models.UsersModel",
+        "Type": "FCUnirea.Business.Models.LoginModel",
         "IsRequired": true
       }
     ],

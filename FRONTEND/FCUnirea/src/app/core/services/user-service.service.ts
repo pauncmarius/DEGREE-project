@@ -11,10 +11,6 @@ export class UserService {
 
   private http = inject(HttpClient);
 
-  getUsers(): Observable<User[]> {
-    return this.http.get<User[]>(this.apiUrl);
-  }
-
   register(user: User): Observable<any> {
     return this.http.post(`${this.apiUrl}/register`, user);
   }

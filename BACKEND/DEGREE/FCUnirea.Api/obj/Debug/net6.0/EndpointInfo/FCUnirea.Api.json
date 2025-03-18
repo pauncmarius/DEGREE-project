@@ -2,6 +2,7 @@
   "openapi": "3.0.1",
   "info": {
     "title": "FCUnirea.Api",
+    "description": "API pentru gestionarea utilizatorilor și statisticilor echipei FC Unirea.",
     "version": "v1"
   },
   "paths": {
@@ -1527,17 +1528,17 @@
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/UsersModel"
+                "$ref": "#/components/schemas/LoginModel"
               }
             },
             "text/json": {
               "schema": {
-                "$ref": "#/components/schemas/UsersModel"
+                "$ref": "#/components/schemas/LoginModel"
               }
             },
             "application/*+json": {
               "schema": {
-                "$ref": "#/components/schemas/UsersModel"
+                "$ref": "#/components/schemas/LoginModel"
               }
             }
           }
@@ -1779,6 +1780,20 @@
           "game_HomeTeamId": {
             "type": "integer",
             "format": "int32",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "LoginModel": {
+        "type": "object",
+        "properties": {
+          "username": {
+            "type": "string",
+            "nullable": true
+          },
+          "password": {
+            "type": "string",
             "nullable": true
           }
         },

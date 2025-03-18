@@ -1,5 +1,4 @@
-﻿
-using FluentValidation.AspNetCore;
+﻿using FluentValidation.AspNetCore;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Mvc;
@@ -9,9 +8,8 @@ using Microsoft.Extensions.Hosting;
 using Microsoft.OpenApi.Models;
 using FCUnirea.Business;
 using FCUnirea.Api.Middleware;
-using FCUnirea.Api.Filters;
 using FCUnirea.Persistance;
-
+using FCUnirea.Api.Validators;
 
 namespace FCUnirea.Api
 {
@@ -24,18 +22,32 @@ namespace FCUnirea.Api
 
         public IConfiguration Configuration { get; }
 
-        // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
-            BuildMvc(services);
-            services.AddControllers();
+            // Înregistrăm controlerele și FluentValidation
+            services.AddControllers()
+                .AddFluentValidation(fv =>
+                {
+                    fv.RegisterValidatorsFromAssemblyContaining<UsersModelValidator>();
+                    fv.RegisterValidatorsFromAssemblyContaining<LoginModelValidator>();
+                });
+
+            // Înregistrăm Swagger pentru documentație API
             services.AddSwaggerGen(c =>
             {
-                c.SwaggerDoc("v1", new OpenApiInfo { Title = "FCUnirea.Api", Version = "v1" });
-
+                c.SwaggerDoc("v1", new OpenApiInfo
+                {
+                    Title = "FCUnirea.Api",
+                    Version = "v1",
+                    Description = "API pentru gestionarea utilizatorilor și statisticilor echipei FC Unirea."
+                });
             });
+
+            // Înregistrăm serviciile specifice ale aplicației
             services.AddPersistanceServices(Configuration);
             services.AddBusinessServices();
+
+            // Configurare CORS pentru a permite accesul din frontend Angular
             services.AddCors(options =>
             {
                 options.AddPolicy("AllowAll",
@@ -43,10 +55,8 @@ namespace FCUnirea.Api
                                       .AllowAnyMethod()
                                       .AllowAnyHeader());
             });
-
         }
 
-        // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
         {
             if (env.IsDevelopment())
@@ -57,26 +67,22 @@ namespace FCUnirea.Api
             }
 
             app.UseHttpsRedirection();
-
             app.UseRouting();
 
+            // Activăm politica CORS definită mai sus
             app.UseCors("AllowAll");
 
-            app.UseAuthorization();
-
+            // Gestionare excepții personalizată
             app.UseMiddleware<ExceptionHandlerMiddleware>();
+
+            app.UseAuthentication();
+
+            app.UseAuthorization();
 
             app.UseEndpoints(endpoints =>
             {
                 endpoints.MapControllers();
             });
-        }
-
-        private void BuildMvc(IServiceCollection services)
-        {
-            services.AddMvc(options => { options.Filters.Add(typeof(ValidationFilter)); })
-                .AddFluentValidation(c => { c.RegisterValidatorsFromAssemblyContaining<Startup>(); })
-                .SetCompatibilityVersion(CompatibilityVersion.Version_3_0);
         }
     }
 }

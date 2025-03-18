@@ -6,12 +6,9 @@ using FCUnirea.Business.Models;
 using FCUnirea.Business.Services.IServices;
 using FCUnirea.Domain.Entities;
 using FCUnirea.Domain.IRepositories;
-using Microsoft.IdentityModel.Tokens;
 using System;
 using System.Collections.Generic;
-using System.IdentityModel.Tokens.Jwt;
 using System.Linq;
-using System.Security.Claims;
 using System.Text;
 
 namespace FCUnirea.Business.Services
@@ -65,10 +62,10 @@ namespace FCUnirea.Business.Services
         }
 
 
-        public string Authenticate(UsersModel request)
+        public string Authenticate(LoginModel request)
         {
             var user = _userRepository.ListAll()
-                .FirstOrDefault(u => u.Username == request.Username || u.Email == request.Email);
+                .FirstOrDefault(u => u.Username == request.Username);
 
             if (user == null || !VerifyPassword(request.Password, user.Password))
             {

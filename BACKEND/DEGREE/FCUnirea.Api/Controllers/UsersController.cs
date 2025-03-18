@@ -72,11 +72,11 @@ namespace FCUnirea.Api.Controllers
         }
 
         [HttpPost("login")]
-        public IActionResult Login([FromBody] UsersModel model)
+        public IActionResult Login([FromBody] LoginModel model)
         {
-            if (string.IsNullOrEmpty(model.Username) && string.IsNullOrEmpty(model.Email))
+            if (string.IsNullOrEmpty(model.Username))
             {
-                return BadRequest(new { message = "Trebuie să furnizați un username sau un email." });
+                return BadRequest(new { message = "Trebuie să furnizați un username." });
             }
 
             if (string.IsNullOrEmpty(model.Password))

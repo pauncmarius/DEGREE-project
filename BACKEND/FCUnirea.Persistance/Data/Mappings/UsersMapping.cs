@@ -76,6 +76,21 @@ namespace FCUnirea.Persistance.Data.Mappings
                 .WithOne(c => c.Comment_User)
                 .HasForeignKey(c => c.Comment_UsersId)
                 .OnDelete(DeleteBehavior.Restrict);
+
+            //alte constrângeri
+            modelBuilder.Entity<Users>()
+                .HasIndex(u => u.Username)
+                .IsUnique();
+
+            modelBuilder.Entity<Users>()
+                .HasIndex(u => u.Email)
+                .IsUnique();
+
+            modelBuilder.Entity<Users>()
+                .HasIndex(u => u.PhoneNumber)
+                .IsUnique();
+
+
         }
     }
 }

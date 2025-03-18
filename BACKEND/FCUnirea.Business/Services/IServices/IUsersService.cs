@@ -13,7 +13,7 @@ namespace FCUnirea.Business.Services.IServices
         public void UpdateUser(Users user);
         public void DeleteUser(int id);
         public int RegisterUser(UsersModel request);
-        public string Authenticate(UsersModel request);
+        public string Authenticate(LoginModel request);
 
     }
 }

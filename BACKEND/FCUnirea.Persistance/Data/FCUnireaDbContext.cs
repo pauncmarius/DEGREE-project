@@ -66,12 +66,6 @@ namespace FCUnirea.Persistance.Data
                 new Competitions() { Id = 9, CompetitionName = "Champions League Tineret", CompetitionType = CompetitionType.ChampionsLeague }
             });
 
-            modelBuilder.Entity<Users>().HasData(new List<Users>()
-            {
-                new Users() { Id = 1, Username = "admin", Email = "admin@fcunirea.com", FirstName = "Admin", LastName = "User", Password = "hashedpassword", PhoneNumber = "0734567890", Role = UserRole.Admin, CreatedAt = DateTime.UtcNow},
-                new Users() { Id = 2, Username = "mariuspaun", Email = "mariuspaun@example.com", FirstName = "Marius", LastName = "Paun", Password = "hashedpassword", PhoneNumber = "0787654321", Role = UserRole.Customer, CreatedAt = DateTime.UtcNow }
-            });
-
             modelBuilder.Entity<Teams>().HasData(new List<Teams>()
             {
                 new Teams() { Id = 1, TeamName = "FC Unirea", TeamType = TeamType.Adult, IsInternal = true, Record = " " },
