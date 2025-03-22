@@ -53,6 +53,22 @@ namespace FCUnirea.Persistance.Data
 
         private static void SeedDatabase(ModelBuilder modelBuilder)
         {
+            modelBuilder.Entity<Users>().HasData(new List<Users>()
+{
+                new Users()
+                {
+                    Id = 1,
+                    Username = "admin",
+                    Email = "admin@fcunirea.ro",
+                    FirstName = "Admin",
+                    LastName = "Unirea",
+                    PhoneNumber = "0712345678",
+                    Password = "hashed_parola",
+                    Role = UserRole.Admin}
+            });
+
+
+
             modelBuilder.Entity<Competitions>().HasData(new List<Competitions>()
             {
                 new Competitions() { Id = 1, CompetitionName = "Liga 1", CompetitionType = CompetitionType.NationalLeague },

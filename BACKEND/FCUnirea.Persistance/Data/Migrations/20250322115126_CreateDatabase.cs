@@ -5,7 +5,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 
 namespace FCUnirea.Persistance.Data.Migrations
 {
-    public partial class CreateDatabase2 : Migration
+    public partial class CreateDatabase : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
@@ -383,22 +383,18 @@ namespace FCUnirea.Persistance.Data.Migrations
 
             migrationBuilder.InsertData(
                 table: "Users",
-                columns: new[] { "Id", "CreatedAt", "Email", "FirstName", "Password", "LastName", "PhoneNumber", "Role", "Username" },
-                values: new object[,]
-                {
-                    { 1, new DateTime(2025, 2, 10, 15, 40, 12, 540, DateTimeKind.Utc).AddTicks(8040), "admin@fcunirea.com", "Admin", "hashedpassword", "User", "0734567890", 0, "admin" },
-                    { 2, new DateTime(2025, 2, 10, 15, 40, 12, 540, DateTimeKind.Utc).AddTicks(8045), "mariuspaun@example.com", "Marius", "hashedpassword", "Paun", "0787654321", 1, "mariuspaun" }
-                });
+                columns: new[] { "Id", "CreatedAt", "Email", "FirstName", "LastName", "Password", "PhoneNumber", "Role", "Username" },
+                values: new object[] { 1, new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), "admin@fcunirea.ro", "Admin", "Unirea", "hashed_parola", "0712345678", 0, "admin" });
 
             migrationBuilder.InsertData(
                 table: "Games",
                 columns: new[] { "Id", "AwayTeamScore", "GameDate", "AwayTeamId", "CompetitionId", "HomeTeamId", "StadiumId", "HomeTeamScore", "TicketsSold" },
-                values: new object[] { 1, 1, new DateTime(2025, 2, 10, 15, 40, 12, 540, DateTimeKind.Utc).AddTicks(8148), 2, 1, 1, 1, 2, 5000 });
+                values: new object[] { 1, 1, new DateTime(2025, 3, 22, 11, 51, 25, 467, DateTimeKind.Utc).AddTicks(2330), 2, 1, 1, 1, 2, 5000 });
 
             migrationBuilder.InsertData(
                 table: "News",
                 columns: new[] { "Id", "CreatedAt", "UsersId", "Text", "Title" },
-                values: new object[] { 1, new DateTime(2025, 2, 10, 15, 40, 12, 540, DateTimeKind.Utc).AddTicks(8231), 1, "FC Unirea a câștigat cu 2-1!", "Victorie mare pentru FC Unirea!" });
+                values: new object[] { 1, new DateTime(2025, 3, 22, 11, 51, 25, 467, DateTimeKind.Utc).AddTicks(2423), 1, "FC Unirea a câștigat cu 2-1!", "Victorie mare pentru FC Unirea!" });
 
             migrationBuilder.InsertData(
                 table: "Players",
@@ -426,7 +422,7 @@ namespace FCUnirea.Persistance.Data.Migrations
             migrationBuilder.InsertData(
                 table: "Comments",
                 columns: new[] { "Id", "NewsId", "UserId", "CreatedAt", "Text" },
-                values: new object[] { 1, 1, 1, new DateTime(2025, 2, 10, 15, 40, 12, 540, DateTimeKind.Utc).AddTicks(8250), "Felicitări echipei!" });
+                values: new object[] { 1, 1, 1, new DateTime(2025, 3, 22, 11, 51, 25, 467, DateTimeKind.Utc).AddTicks(2446), "Felicitări echipei!" });
 
             migrationBuilder.InsertData(
                 table: "PlayerStatisticsPerCompetiton",
@@ -441,7 +437,7 @@ namespace FCUnirea.Persistance.Data.Migrations
             migrationBuilder.InsertData(
                 table: "Tickets",
                 columns: new[] { "Id", "DateReservation", "GameId", "SeatId", "UserId" },
-                values: new object[] { 1, new DateTime(2025, 2, 10, 15, 40, 12, 540, DateTimeKind.Utc).AddTicks(8169), 1, 1, 1 });
+                values: new object[] { 1, new DateTime(2025, 3, 22, 11, 51, 25, 467, DateTimeKind.Utc).AddTicks(2347), 1, 1, 1 });
 
             migrationBuilder.CreateIndex(
                 name: "IX_Comments_NewsId",
@@ -535,6 +531,24 @@ namespace FCUnirea.Persistance.Data.Migrations
                 name: "IX_Tickets_UserId",
                 table: "Tickets",
                 column: "UserId");
+
+            migrationBuilder.CreateIndex(
+                name: "IX_Users_Email",
+                table: "Users",
+                column: "Email",
+                unique: true);
+
+            migrationBuilder.CreateIndex(
+                name: "IX_Users_PhoneNumber",
+                table: "Users",
+                column: "PhoneNumber",
+                unique: true);
+
+            migrationBuilder.CreateIndex(
+                name: "IX_Users_Username",
+                table: "Users",
+                column: "Username",
+                unique: true);
         }
 
         protected override void Down(MigrationBuilder migrationBuilder)

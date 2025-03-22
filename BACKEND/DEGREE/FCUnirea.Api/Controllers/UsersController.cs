@@ -1,10 +1,11 @@
 ﻿
 using FCUnirea.Business.Models;
-using FCUnirea.Business.Services;
 using FCUnirea.Business.Services.IServices;
 using FCUnirea.Domain.Entities;
 using Microsoft.AspNetCore.Mvc;
 using System;
+using System.Collections.Generic;
+using System.Threading.Tasks;
 
 namespace FCUnirea.Api.Controllers
 {
@@ -58,8 +59,13 @@ namespace FCUnirea.Api.Controllers
         }
 
         [HttpPost("register")]
-        public IActionResult Register([FromBody] UsersModel model)
+        public async Task<IActionResult> Register([FromBody] UsersModel model)
         {
+            if (!ModelState.IsValid)
+            {
+                return BadRequest(ModelState);
+            }
+
             try
             {
                 var userId = _userService.RegisterUser(model);
@@ -67,8 +73,17 @@ namespace FCUnirea.Api.Controllers
             }
             catch (Exception ex)
             {
-                return BadRequest(new { message = ex.Message });
+                try
+                {
+                    var errorDict = Newtonsoft.Json.JsonConvert.DeserializeObject<Dictionary<string, string>>(ex.Message);
+                    return BadRequest(errorDict);
+                }
+                catch
+                {
+                    return BadRequest(new { message = ex.Message });
+                }
             }
+
         }
 
         [HttpPost("login")]

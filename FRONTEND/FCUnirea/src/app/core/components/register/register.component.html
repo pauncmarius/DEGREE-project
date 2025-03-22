@@ -1,14 +1,68 @@
 <div class="auth-container">
   <h2>Înregistrare</h2>
   <form [formGroup]="registerForm" (ngSubmit)="onSubmit()">
+
+    <!-- Username -->
     <input type="text" formControlName="username" placeholder="Username" required />
+    <p *ngIf="registerForm.get('username')?.hasError('required')" class="error">
+      Username este obligatoriu.
+    </p>
+    <p *ngIf="registerForm.get('username')?.hasError('minlength')" class="error">
+      Username trebuie să aibă cel puțin 3 caractere.
+    </p>
+    <p *ngIf="registerForm.get('username')?.hasError('usernameExists')" class="error">
+      Acest username este deja folosit.
+    </p>
+
+    <!-- Email -->
     <input type="email" formControlName="email" placeholder="Email" required />
-    <input type="text" formControlName="firstName" placeholder="Prenume" required />
-    <input type="text" formControlName="lastName" placeholder="Nume" required />
-    <input type="password" formControlName="password" placeholder="Parolă" required />
+    <p *ngIf="registerForm.get('email')?.hasError('required')" class="error">
+      Email este obligatoriu.
+    </p>
+    <p *ngIf="registerForm.get('email')?.hasError('email')" class="error">
+      Email invalid.
+    </p>
+    <p *ngIf="registerForm.get('email')?.hasError('emailExists')" class="error">
+      Acest email este deja folosit.
+    </p>
+
+    <!-- Phone Number -->
     <input type="text" formControlName="phoneNumber" placeholder="Telefon" required />
+    <p *ngIf="registerForm.get('phoneNumber')?.hasError('required')" class="error">
+      Numărul de telefon este obligatoriu.
+    </p>
+    <p *ngIf="registerForm.get('phoneNumber')?.hasError('pattern')" class="error">
+      Numărul de telefon trebuie să aibă exact 10 cifre.
+    </p>
+    <p *ngIf="registerForm.get('phoneNumber')?.hasError('phoneExists')" class="error">
+      Acest număr de telefon este deja folosit.
+    </p>
+
+
+    <!-- First Name -->
+    <input type="text" formControlName="firstName" placeholder="Prenume" required />
+    <p *ngIf="registerForm.get('firstName')?.hasError('required')" class="error">
+      Prenumele este obligatoriu.
+    </p>
+
+    <!-- Last Name -->
+    <input type="text" formControlName="lastName" placeholder="Nume" required />
+    <p *ngIf="registerForm.get('lastName')?.hasError('required')" class="error">
+      Numele este obligatoriu.
+    </p>
+
+    <!-- Password -->
+    <input type="password" formControlName="password" placeholder="Parolă" required />
+    <p *ngIf="registerForm.get('password')?.hasError('required')" class="error">
+      Parola este obligatorie.
+    </p>
+    <p *ngIf="registerForm.get('password')?.hasError('minlength')" class="error">
+      Parola trebuie să aibă cel puțin 6 caractere.
+    </p>
+
     <button type="submit" [disabled]="registerForm.invalid">Înregistrare</button>
     <p *ngIf="errorMessage" class="error">{{ errorMessage }}</p>
   </form>
+
   <p>Ai deja cont? <a routerLink="/login">Autentifică-te</a></p>
 </div>

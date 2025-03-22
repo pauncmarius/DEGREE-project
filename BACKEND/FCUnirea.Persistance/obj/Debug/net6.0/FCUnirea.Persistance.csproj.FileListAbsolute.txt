@@ -142,3 +142,4 @@ C:\Users\paunm\Documents\github\degree\DEGREE-project\BACKEND\FCUnirea.Persistan
 C:\Users\paunm\Documents\github\degree\DEGREE-project\BACKEND\FCUnirea.Persistance\obj\Debug\net6.0\FCUnirea.Persistance.pdb
 C:\Users\paunm\Documents\github\degree\DEGREE-project\BACKEND\FCUnirea.Persistance\obj\Debug\net6.0\FCUnirea.Persistance.genruntimeconfig.cache
 C:\Users\paunm\Documents\github\degree\DEGREE-project\BACKEND\FCUnirea.Persistance\obj\Debug\net6.0\ref\FCUnirea.Persistance.dll
+C:\Users\paunm\Documents\github\degree\DEGREE-project\BACKEND\FCUnirea.Persistance\bin\Debug\net6.0\Newtonsoft.Json.dll

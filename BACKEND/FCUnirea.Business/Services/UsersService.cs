@@ -37,13 +37,27 @@ namespace FCUnirea.Business.Services
 
         public int RegisterUser(UsersModel request)
         {
-            var existingUser = _userRepository.ListAll()
-                .FirstOrDefault(u => u.Username == request.Username || u.Email == request.Email || u.PhoneNumber == request.PhoneNumber);
+            var existingUsers = _userRepository.ListAll();
+            var errors = new Dictionary<string, string>();
 
-            if (existingUser != null)
+            if (existingUsers.Any(u => u.Username == request.Username))
             {
-                throw new Exception("Un utilizator cu acest username, numar telefon sau email există deja!");
+                errors["username"] = "Acest username este deja utilizat.";
             }
+            if (existingUsers.Any(u => u.Email == request.Email))
+            {
+                errors["email"] = "Acest email este deja utilizat.";
+            }
+            if (existingUsers.Any(u => u.PhoneNumber == request.PhoneNumber))
+            {
+                errors["phoneNumber"] = "Acest număr de telefon este deja utilizat.";
+            }
+
+            if (errors.Count > 0)
+            {
+                throw new Exception(Newtonsoft.Json.JsonConvert.SerializeObject(errors));
+            }
+
 
             var user = new Users
             {
@@ -54,7 +68,7 @@ namespace FCUnirea.Business.Services
                 PhoneNumber = request.PhoneNumber,
                 Role = request.Role,
                 CreatedAt = request.CreatedAt,
-                Password = HashPassword(request.Password) // Hash-uim parola cu BouncyCastle
+                Password = HashPassword(request.Password) // hash-uim parola cu BouncyCastle
             };
 
             return _userRepository.RegisterUser(user).Id;
@@ -73,17 +87,17 @@ namespace FCUnirea.Business.Services
             return GenerateJwtToken(user);
         }
 
-        // Funcție pentru hash-ul parolei folosind BouncyCastle
+        // funcție pentru hash-ul parolei folosind BouncyCastle
         private string HashPassword(string password)
         {
             var generator = new Pkcs5S2ParametersGenerator();
-            byte[] salt = new byte[16]; // Random salt
+            byte[] salt = new byte[16]; // salt random 
             new SecureRandom().NextBytes(salt);
 
             generator.Init(
                 Encoding.UTF8.GetBytes(password),
                 salt,
-                10000 // Numărul de iterații pentru hashing
+                10000 // nr de iterații pentru hashing
             );
 
             var key = (KeyParameter)generator.GenerateDerivedMacParameters(256);

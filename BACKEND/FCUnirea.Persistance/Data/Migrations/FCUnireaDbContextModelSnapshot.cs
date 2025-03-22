@@ -65,7 +65,7 @@ namespace FCUnirea.Persistance.Data.Migrations
                             Id = 1,
                             Comment_NewsId = 1,
                             Comment_UsersId = 1,
-                            CreatedAt = new DateTime(2025, 2, 10, 15, 40, 12, 540, DateTimeKind.Utc).AddTicks(8250),
+                            CreatedAt = new DateTime(2025, 3, 22, 11, 51, 25, 467, DateTimeKind.Utc).AddTicks(2446),
                             Text = "Felicitări echipei!"
                         });
                 });
@@ -213,7 +213,7 @@ namespace FCUnirea.Persistance.Data.Migrations
                         {
                             Id = 1,
                             AwayTeamScore = 1,
-                            GameDate = new DateTime(2025, 2, 10, 15, 40, 12, 540, DateTimeKind.Utc).AddTicks(8148),
+                            GameDate = new DateTime(2025, 3, 22, 11, 51, 25, 467, DateTimeKind.Utc).AddTicks(2330),
                             Game_AwayTeamId = 2,
                             Game_CompetitionsId = 1,
                             Game_HomeTeamId = 1,
@@ -262,7 +262,7 @@ namespace FCUnirea.Persistance.Data.Migrations
                         new
                         {
                             Id = 1,
-                            CreatedAt = new DateTime(2025, 2, 10, 15, 40, 12, 540, DateTimeKind.Utc).AddTicks(8231),
+                            CreatedAt = new DateTime(2025, 3, 22, 11, 51, 25, 467, DateTimeKind.Utc).AddTicks(2423),
                             News_UsersId = 1,
                             Text = "FC Unirea a câștigat cu 2-1!",
                             Title = "Victorie mare pentru FC Unirea!"
@@ -744,7 +744,7 @@ namespace FCUnirea.Persistance.Data.Migrations
                         new
                         {
                             Id = 1,
-                            DateReservation = new DateTime(2025, 2, 10, 15, 40, 12, 540, DateTimeKind.Utc).AddTicks(8169),
+                            DateReservation = new DateTime(2025, 3, 22, 11, 51, 25, 467, DateTimeKind.Utc).AddTicks(2347),
                             Ticket_GamesId = 1,
                             Ticket_SeatsId = 1,
                             Ticket_UsersId = 1
@@ -776,16 +776,16 @@ namespace FCUnirea.Persistance.Data.Migrations
                         .HasColumnType("nvarchar(100)")
                         .HasColumnName("FirstName");
 
-                    b.Property<string>("Password")
-                        .IsRequired()
-                        .HasColumnType("Password(max)")
-                        .HasColumnName("Password");
-
                     b.Property<string>("LastName")
                         .IsRequired()
                         .HasMaxLength(100)
                         .HasColumnType("nvarchar(100)")
                         .HasColumnName("LastName");
+
+                    b.Property<string>("Password")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)")
+                        .HasColumnName("Password");
 
                     b.Property<string>("PhoneNumber")
                         .IsRequired()
@@ -805,32 +805,29 @@ namespace FCUnirea.Persistance.Data.Migrations
 
                     b.HasKey("Id");
 
+                    b.HasIndex("Email")
+                        .IsUnique();
+
+                    b.HasIndex("PhoneNumber")
+                        .IsUnique();
+
+                    b.HasIndex("Username")
+                        .IsUnique();
+
                     b.ToTable("Users");
 
                     b.HasData(
                         new
                         {
                             Id = 1,
-                            CreatedAt = new DateTime(2025, 2, 10, 15, 40, 12, 540, DateTimeKind.Utc).AddTicks(8040),
-                            Email = "admin@fcunirea.com",
+                            CreatedAt = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            Email = "admin@fcunirea.ro",
                             FirstName = "Admin",
-                            Password = "hashedpassword",
-                            LastName = "User",
-                            PhoneNumber = "0734567890",
+                            LastName = "Unirea",
+                            Password = "hashed_parola",
+                            PhoneNumber = "0712345678",
                             Role = 0,
                             Username = "admin"
-                        },
-                        new
-                        {
-                            Id = 2,
-                            CreatedAt = new DateTime(2025, 2, 10, 15, 40, 12, 540, DateTimeKind.Utc).AddTicks(8045),
-                            Email = "mariuspaun@example.com",
-                            FirstName = "Marius",
-                            Password = "hashedpassword",
-                            LastName = "Paun",
-                            PhoneNumber = "0787654321",
-                            Role = 1,
-                            Username = "mariuspaun"
                         });
                 });
 
