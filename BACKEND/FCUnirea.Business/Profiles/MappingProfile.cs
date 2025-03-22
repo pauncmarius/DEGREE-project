@@ -21,6 +21,7 @@ namespace FCUnirea.Business.Profiles
             CreateMap<TeamStatistics, TeamStatisticsModel>().ReverseMap();
             CreateMap<Tickets, TicketsModel>().ReverseMap();
             CreateMap<Users, UsersModel>().ReverseMap();
-        }
+            //
+            CreateMap<LoginModel, Users>().ReverseMap();        }
     }
 }

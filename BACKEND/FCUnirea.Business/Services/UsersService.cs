@@ -6,10 +6,12 @@ using FCUnirea.Business.Models;
 using FCUnirea.Business.Services.IServices;
 using FCUnirea.Domain.Entities;
 using FCUnirea.Domain.IRepositories;
+using FCUnirea.Business.Exceptions;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using Newtonsoft.Json;
 
 namespace FCUnirea.Business.Services
 {
@@ -52,24 +54,16 @@ namespace FCUnirea.Business.Services
             {
                 errors["phoneNumber"] = "Acest număr de telefon este deja utilizat.";
             }
-
             if (errors.Count > 0)
             {
-                throw new Exception(Newtonsoft.Json.JsonConvert.SerializeObject(errors));
+                throw new ValidationException(JsonConvert.SerializeObject(errors));
             }
 
+            // Folosirea AutoMapper pentru mapare
+            var user = _mapper.Map<Users>(request);
 
-            var user = new Users
-            {
-                Username = request.Username,
-                Email = request.Email,
-                FirstName = request.FirstName,
-                LastName = request.LastName,
-                PhoneNumber = request.PhoneNumber,
-                Role = request.Role,
-                CreatedAt = request.CreatedAt,
-                Password = HashPassword(request.Password) // hash-uim parola cu BouncyCastle
-            };
+            // Hash-uirea parolei separat (nu prin AutoMapper)
+            user.Password = HashPassword(request.Password);
 
             return _userRepository.RegisterUser(user).Id;
         }

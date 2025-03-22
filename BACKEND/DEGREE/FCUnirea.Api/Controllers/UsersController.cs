@@ -1,4 +1,5 @@
 ﻿
+using FCUnirea.Business.Exceptions;
 using FCUnirea.Business.Models;
 using FCUnirea.Business.Services.IServices;
 using FCUnirea.Domain.Entities;
@@ -59,53 +60,32 @@ namespace FCUnirea.Api.Controllers
         }
 
         [HttpPost("register")]
-        public async Task<IActionResult> Register([FromBody] UsersModel model)
+        public IActionResult Register([FromBody] UsersModel model)
         {
             if (!ModelState.IsValid)
             {
                 return BadRequest(ModelState);
             }
 
-            try
-            {
-                var userId = _userService.RegisterUser(model);
-                return Ok(new { message = "Utilizator înregistrat cu succes!", userId });
-            }
-            catch (Exception ex)
-            {
-                try
-                {
-                    var errorDict = Newtonsoft.Json.JsonConvert.DeserializeObject<Dictionary<string, string>>(ex.Message);
-                    return BadRequest(errorDict);
-                }
-                catch
-                {
-                    return BadRequest(new { message = ex.Message });
-                }
-            }
-
+            var userId = _userService.RegisterUser(model);
+            return Ok(new { message = "Utilizator înregistrat cu succes!", userId });
         }
+
 
         [HttpPost("login")]
         public IActionResult Login([FromBody] LoginModel model)
         {
-            if (string.IsNullOrEmpty(model.Username))
-            {
-                return BadRequest(new { message = "Trebuie să furnizați un username." });
-            }
-
-            if (string.IsNullOrEmpty(model.Password))
-            {
-                return BadRequest(new { message = "Parola este obligatorie." });
-            }
+            if (!ModelState.IsValid)
+                return BadRequest(ModelState);
 
             var token = _userService.Authenticate(model);
 
             if (string.IsNullOrEmpty(token))
-                return Unauthorized(new { message = "Credentialele sunt incorecte!" });
+                throw new NotAvailableException("Credentialele sunt incorecte!");
 
             return Ok(new { token });
         }
+
 
     }
 }

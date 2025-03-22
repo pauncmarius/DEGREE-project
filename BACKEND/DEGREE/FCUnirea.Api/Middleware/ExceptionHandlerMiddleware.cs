@@ -30,30 +30,32 @@ namespace FCUnirea.Api.Middleware
 
         private Task HandleException(HttpContext context, Exception ex)
         {
-            HttpStatusCode httpStatusCode = HttpStatusCode.InternalServerError;
-
-            context.Response.ContentType = "application/json";
-            var result = string.Empty;
+            HttpStatusCode httpStatusCode;
+            string result;
 
             switch (ex)
             {
-                case NotAvailableException notFoundException:
-                    httpStatusCode = HttpStatusCode.OK;
-                    result = notFoundException.Message;
+                case NotAvailableException notAvailable:
+                    httpStatusCode = HttpStatusCode.Unauthorized; // 401
+                    result = JsonSerializer.Serialize(new { error = notAvailable.Message });
                     break;
+
+                case ValidationException validationException:
+                    httpStatusCode = HttpStatusCode.BadRequest; // 400
+                    result = validationException.Message; // deja e JSON serializat
+                    break;
+
                 default:
-                    httpStatusCode = HttpStatusCode.BadRequest;
-                    result = ex.Message;
+                    httpStatusCode = HttpStatusCode.InternalServerError; // 500
+                    result = JsonSerializer.Serialize(new { error = "A apărut o eroare internă." });
                     break;
             }
-            if (result != string.Empty)
-            {
-                result = JsonSerializer.Serialize(new { error = ex.Message });
-            }
 
+            context.Response.ContentType = "application/json";
             context.Response.StatusCode = (int)httpStatusCode;
-            return context.Response.WriteAsync(result);
 
+            return context.Response.WriteAsync(result);
         }
+
     }
 }
