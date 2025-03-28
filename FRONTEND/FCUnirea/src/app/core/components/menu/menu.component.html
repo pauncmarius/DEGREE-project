@@ -1,3 +1,9 @@
 <nav class="menu-content">
-  <a class="menu-item" routerLink="/register" routerLinkActive="active" > Login / Register</a>
+  <a *ngIf="!isLoggedIn()" class="menu-item" routerLink="/login" routerLinkActive="active">
+    Login
+  </a>
+
+  <a *ngIf="isLoggedIn()" class="menu-item" (click)="logout()" style="cursor:pointer;">
+    Logout
+  </a>
 </nav>

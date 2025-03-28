@@ -216,3 +216,4 @@ C:\Users\paunm\Documents\GITHUB\DEGREE-project\BACKEND\FCUnirea.Persistance\obj\
 C:\Users\paunm\Documents\GITHUB\DEGREE-project\BACKEND\FCUnirea.Persistance\obj\Debug\net6.0\FCUnirea.Persistance.pdb
 C:\Users\paunm\Documents\GITHUB\DEGREE-project\BACKEND\FCUnirea.Persistance\obj\Debug\net6.0\FCUnirea.Persistance.genruntimeconfig.cache
 C:\Users\paunm\Documents\GITHUB\DEGREE-project\BACKEND\FCUnirea.Persistance\obj\Debug\net6.0\ref\FCUnirea.Persistance.dll
+C:\Users\paunm\Documents\GITHUB\DEGREE-project\BACKEND\FCUnirea.Persistance\bin\Debug\net6.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll

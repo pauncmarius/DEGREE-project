@@ -283,3 +283,7 @@ C:\Users\paunm\Documents\GITHUB\DEGREE-project\BACKEND\DEGREE\FCUnirea.Api\obj\D
 C:\Users\paunm\Documents\GITHUB\DEGREE-project\BACKEND\DEGREE\FCUnirea.Api\obj\Debug\net6.0\FCUnirea.Api.pdb
 C:\Users\paunm\Documents\GITHUB\DEGREE-project\BACKEND\DEGREE\FCUnirea.Api\obj\Debug\net6.0\FCUnirea.Api.genruntimeconfig.cache
 C:\Users\paunm\Documents\GITHUB\DEGREE-project\BACKEND\DEGREE\FCUnirea.Api\obj\Debug\net6.0\ref\FCUnirea.Api.dll
+C:\Users\paunm\Documents\GITHUB\DEGREE-project\BACKEND\DEGREE\FCUnirea.Api\bin\Debug\net6.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
+C:\Users\paunm\Documents\GITHUB\DEGREE-project\BACKEND\DEGREE\FCUnirea.Api\bin\Debug\net6.0\Microsoft.Bcl.AsyncInterfaces.dll
+C:\Users\paunm\Documents\GITHUB\DEGREE-project\BACKEND\DEGREE\FCUnirea.Api\bin\Debug\net6.0\Microsoft.Bcl.Memory.dll
+C:\Users\paunm\Documents\GITHUB\DEGREE-project\BACKEND\DEGREE\FCUnirea.Api\bin\Debug\net6.0\Microsoft.Bcl.TimeProvider.dll

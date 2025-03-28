@@ -9,6 +9,10 @@ using System.Linq;
 using System.Text;
 using Newtonsoft.Json;
 using System.Security.Cryptography;
+using Microsoft.Extensions.Options;
+using Microsoft.IdentityModel.Tokens;
+using System.IdentityModel.Tokens.Jwt;
+using System.Security.Claims;
 
 
 namespace FCUnirea.Business.Services
@@ -17,11 +21,15 @@ namespace FCUnirea.Business.Services
     {
         private readonly IUsersRepository _userRepository;
         private readonly IMapper _mapper;
+        private readonly JwtSettings _jwtSettings;
 
-        public UsersService(IUsersRepository userRepository, IMapper mapper)
+
+        public UsersService(IUsersRepository userRepository, IMapper mapper, IOptions<JwtSettings> jwtSettings)
         {
             _userRepository = userRepository;
             _mapper = mapper;
+            _jwtSettings = jwtSettings.Value;
+
         }
 
         public IEnumerable<Users> GetUsers() => _userRepository.ListAll();
@@ -104,8 +112,25 @@ namespace FCUnirea.Business.Services
 
         private string GenerateJwtToken(Users user)
         {
-            // aici convertim username-ul intr-un string Base64 simplu
-            return Convert.ToBase64String(Encoding.UTF8.GetBytes(user.Username));
+            var key = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(_jwtSettings.SecretKey));
+            var credentials = new SigningCredentials(key, SecurityAlgorithms.HmacSha256);
+
+            var claims = new[]
+            {
+            new Claim(JwtRegisteredClaimNames.Sub, user.Username),
+            new Claim("userId", user.Id.ToString()),
+            new Claim(JwtRegisteredClaimNames.Jti, Guid.NewGuid().ToString())
+        };
+
+            var token = new JwtSecurityToken(
+                issuer: _jwtSettings.Issuer,
+                audience: _jwtSettings.Audience,
+                claims: claims,
+                expires: DateTime.UtcNow.AddMinutes(_jwtSettings.ExpirationMinutes),
+                signingCredentials: credentials
+            );
+
+            return new JwtSecurityTokenHandler().WriteToken(token);
         }
     }
 }
