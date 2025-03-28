@@ -8,10 +8,10 @@ namespace FCUnirea.Business
 {
     public static class BussinessServiceRegistration
     {
-        //configurează și înregistrează serviciile în containerul de Dependency Injection.
+        // configureaza si inregistreaza serviciile în containerul de Dependency Injection
         public static IServiceCollection AddBusinessServices(this IServiceCollection services)
         {
-            //inregistrează fiecare serviciu cu o durată scoped(o singură instanță per cerere HTTP).
+            // inregistreaza fiecare serviciu cu o durata scoped(o singura instanta per cerere HTTP).
             services.AddScoped<ICommentsService, CommentsService>();
             services.AddScoped<ICompetitionsService, CompetitionsService>();
             services.AddScoped<IGamesService, GamesService>();

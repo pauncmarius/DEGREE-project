@@ -2814,11 +2814,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\paunm\\Documents\\github\\degree\\DEGREE-project\\BACKEND\\DEGREE\\FCUnirea.Api\\FCUnirea.Api.csproj",
+      "projectUniqueName": "C:\\Users\\paunm\\Documents\\GITHUB\\DEGREE-project\\BACKEND\\DEGREE\\FCUnirea.Api\\FCUnirea.Api.csproj",
       "projectName": "FCUnirea.Api",
-      "projectPath": "C:\\Users\\paunm\\Documents\\github\\degree\\DEGREE-project\\BACKEND\\DEGREE\\FCUnirea.Api\\FCUnirea.Api.csproj",
+      "projectPath": "C:\\Users\\paunm\\Documents\\GITHUB\\DEGREE-project\\BACKEND\\DEGREE\\FCUnirea.Api\\FCUnirea.Api.csproj",
       "packagesPath": "C:\\Users\\paunm\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\paunm\\Documents\\github\\degree\\DEGREE-project\\BACKEND\\DEGREE\\FCUnirea.Api\\obj\\",
+      "outputPath": "C:\\Users\\paunm\\Documents\\GITHUB\\DEGREE-project\\BACKEND\\DEGREE\\FCUnirea.Api\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -2833,21 +2833,20 @@
       ],
       "sources": {
         "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-        "C:\\Program Files\\dotnet\\library-packs": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
         "net6.0": {
           "targetAlias": "net6.0",
           "projectReferences": {
-            "C:\\Users\\paunm\\Documents\\github\\degree\\DEGREE-project\\BACKEND\\FCUnirea.Business\\FCUnirea.Business.csproj": {
-              "projectPath": "C:\\Users\\paunm\\Documents\\github\\degree\\DEGREE-project\\BACKEND\\FCUnirea.Business\\FCUnirea.Business.csproj"
+            "C:\\Users\\paunm\\Documents\\GITHUB\\DEGREE-project\\BACKEND\\FCUnirea.Business\\FCUnirea.Business.csproj": {
+              "projectPath": "C:\\Users\\paunm\\Documents\\GITHUB\\DEGREE-project\\BACKEND\\FCUnirea.Business\\FCUnirea.Business.csproj"
             },
-            "C:\\Users\\paunm\\Documents\\github\\degree\\DEGREE-project\\BACKEND\\FCUnirea.Domain\\FCUnirea.Domain.csproj": {
-              "projectPath": "C:\\Users\\paunm\\Documents\\github\\degree\\DEGREE-project\\BACKEND\\FCUnirea.Domain\\FCUnirea.Domain.csproj"
+            "C:\\Users\\paunm\\Documents\\GITHUB\\DEGREE-project\\BACKEND\\FCUnirea.Domain\\FCUnirea.Domain.csproj": {
+              "projectPath": "C:\\Users\\paunm\\Documents\\GITHUB\\DEGREE-project\\BACKEND\\FCUnirea.Domain\\FCUnirea.Domain.csproj"
             },
-            "C:\\Users\\paunm\\Documents\\github\\degree\\DEGREE-project\\BACKEND\\FCUnirea.Persistance\\FCUnirea.Persistance.csproj": {
-              "projectPath": "C:\\Users\\paunm\\Documents\\github\\degree\\DEGREE-project\\BACKEND\\FCUnirea.Persistance\\FCUnirea.Persistance.csproj"
+            "C:\\Users\\paunm\\Documents\\GITHUB\\DEGREE-project\\BACKEND\\FCUnirea.Persistance\\FCUnirea.Persistance.csproj": {
+              "projectPath": "C:\\Users\\paunm\\Documents\\GITHUB\\DEGREE-project\\BACKEND\\FCUnirea.Persistance\\FCUnirea.Persistance.csproj"
             }
           }
         }
@@ -2862,7 +2861,7 @@
         "auditLevel": "low",
         "auditMode": "direct"
       },
-      "SdkAnalysisLevel": "9.0.100"
+      "SdkAnalysisLevel": "9.0.200"
     },
     "frameworks": {
       "net6.0": {
@@ -2932,7 +2931,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.103\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.201\\RuntimeIdentifierGraph.json"
       }
     }
   }

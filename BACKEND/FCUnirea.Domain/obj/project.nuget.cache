@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "N63lnx6VTjs=",
+  "dgSpecHash": "iXCEkVhfDac=",
   "success": true,
-  "projectFilePath": "C:\\Users\\paunm\\Documents\\github\\degree\\DEGREE-project\\BACKEND\\FCUnirea.Domain\\FCUnirea.Domain.csproj",
+  "projectFilePath": "C:\\Users\\paunm\\Documents\\GITHUB\\DEGREE-project\\BACKEND\\FCUnirea.Domain\\FCUnirea.Domain.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\paunm\\.nuget\\packages\\automapper\\12.0.1\\automapper.12.0.1.nupkg.sha512",
     "C:\\Users\\paunm\\.nuget\\packages\\automapper.extensions.microsoft.dependencyinjection\\12.0.0\\automapper.extensions.microsoft.dependencyinjection.12.0.0.nupkg.sha512",

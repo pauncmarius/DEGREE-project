@@ -16,13 +16,6 @@ namespace FCUnirea.Persistance.Repositories
             _context = context;
         }
 
-        public Users RegisterUser(Users user)
-        {
-            _context.Users.Add(user);
-            _context.SaveChanges();
-            return user;
-        }
-
         public Users Authenticate(string username)
         {
             return _context.Users

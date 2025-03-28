@@ -59,13 +59,11 @@ namespace FCUnirea.Business.Services
                 throw new ValidationException(JsonConvert.SerializeObject(errors));
             }
 
-            // Folosirea AutoMapper pentru mapare
+            // folosirea AutoMapper pentru mapare
             var user = _mapper.Map<Users>(request);
-
-            // Hash-uirea parolei separat (nu prin AutoMapper)
             user.Password = HashPassword(request.Password);
 
-            return _userRepository.RegisterUser(user).Id;
+            return _userRepository.Add(user).Id;
         }
 
 
@@ -75,27 +73,33 @@ namespace FCUnirea.Business.Services
 
             if (user == null || !VerifyPassword(request.Password, user.Password))
             {
-                return null; // Credentialele sunt incorecte
+                return null; // credentialele sunt incorecte
             }
 
             return GenerateJwtToken(user);
         }
 
-        // funcție pentru hash-ul parolei folosind BouncyCastle
+        // functie pentru hash-ul parolei folosind BouncyCastle
         private string HashPassword(string password)
         {
+            // creem un generator pentru hash-uri folosind algoritmul PBKDF2
             var generator = new Pkcs5S2ParametersGenerator();
-            byte[] salt = new byte[16]; // salt random 
-            new SecureRandom().NextBytes(salt);
+            // creem un array de 16 bytes pentru criptare
+            byte[] guard = new byte[16];
+            // umplem array-ul „guard” cu valori complet aleatoare
+            new SecureRandom().NextBytes(guard);
 
+            // initializam generatorul cu parola, guardul si nr de iteratii
             generator.Init(
                 Encoding.UTF8.GetBytes(password),
-                salt,
+                guard,
                 10000 // nr de iterații pentru hashing
             );
 
+            // generam hash-ul propriu-zis, lung de 256 bits
             var key = (KeyParameter)generator.GenerateDerivedMacParameters(256);
-            return Convert.ToBase64String(salt) + ":" + Convert.ToBase64String(key.GetKey());
+            // returnam guardul si hash-ul sub forma unui singur string, separat prin doua puncte ":"
+            return Convert.ToBase64String(guard) + ":" + Convert.ToBase64String(key.GetKey());
         }
 
 
@@ -104,13 +108,13 @@ namespace FCUnirea.Business.Services
             string[] parts = hashedPassword.Split(':');
             if (parts.Length != 2) return false;
 
-            byte[] salt = Convert.FromBase64String(parts[0]);
+            byte[] guard = Convert.FromBase64String(parts[0]);
             byte[] storedHash = Convert.FromBase64String(parts[1]);
 
             var generator = new Pkcs5S2ParametersGenerator();
             generator.Init(
                 Encoding.UTF8.GetBytes(password),
-                salt,
+                guard,
                 10000
             );
 
@@ -122,6 +126,7 @@ namespace FCUnirea.Business.Services
 
         private string GenerateJwtToken(Users user)
         {
+            // aici convertim username-ul intr-un string Base64 simplu
             return Convert.ToBase64String(Encoding.UTF8.GetBytes(user.Username));
         }
     }
