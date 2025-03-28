@@ -1,17 +1,15 @@
-﻿using Org.BouncyCastle.Crypto.Generators;
-using Org.BouncyCastle.Crypto.Parameters;
-using Org.BouncyCastle.Security;
-using AutoMapper;
+﻿using AutoMapper;
 using FCUnirea.Business.Models;
 using FCUnirea.Business.Services.IServices;
 using FCUnirea.Domain.Entities;
 using FCUnirea.Domain.IRepositories;
-using FCUnirea.Business.Exceptions;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using Newtonsoft.Json;
+using System.Security.Cryptography;
+
 
 namespace FCUnirea.Business.Services
 {
@@ -79,50 +77,30 @@ namespace FCUnirea.Business.Services
             return GenerateJwtToken(user);
         }
 
-        // functie pentru hash-ul parolei folosind BouncyCastle
+        // hash parola
         private string HashPassword(string password)
         {
-            // creem un generator pentru hash-uri folosind algoritmul PBKDF2
-            var generator = new Pkcs5S2ParametersGenerator();
-            // creem un array de 16 bytes pentru criptare
-            byte[] guard = new byte[16];
-            // umplem array-ul „guard” cu valori complet aleatoare
-            new SecureRandom().NextBytes(guard);
-
-            // initializam generatorul cu parola, guardul si nr de iteratii
-            generator.Init(
-                Encoding.UTF8.GetBytes(password),
-                guard,
-                10000 // nr de iterații pentru hashing
-            );
-
-            // generam hash-ul propriu-zis, lung de 256 bits
-            var key = (KeyParameter)generator.GenerateDerivedMacParameters(256);
-            // returnam guardul si hash-ul sub forma unui singur string, separat prin doua puncte ":"
-            return Convert.ToBase64String(guard) + ":" + Convert.ToBase64String(key.GetKey());
+            byte[] salt = RandomNumberGenerator.GetBytes(16);
+            var pbkdf2 = new Rfc2898DeriveBytes(password, salt, 10000, HashAlgorithmName.SHA256);
+            byte[] hash = pbkdf2.GetBytes(32);
+            return Convert.ToBase64String(salt) + ":" + Convert.ToBase64String(hash);
         }
 
-
-        private bool VerifyPassword(string password, string hashedPassword)
+        // verifica parola
+        private bool VerifyPassword(string password, string storedPassword)
         {
-            string[] parts = hashedPassword.Split(':');
+            string[] parts = storedPassword.Split(':');
             if (parts.Length != 2) return false;
 
-            byte[] guard = Convert.FromBase64String(parts[0]);
+            byte[] salt = Convert.FromBase64String(parts[0]);
             byte[] storedHash = Convert.FromBase64String(parts[1]);
 
-            var generator = new Pkcs5S2ParametersGenerator();
-            generator.Init(
-                Encoding.UTF8.GetBytes(password),
-                guard,
-                10000
-            );
+            var pbkdf2 = new Rfc2898DeriveBytes(password, salt, 10000, HashAlgorithmName.SHA256);
+            byte[] computedHash = pbkdf2.GetBytes(32);
 
-            var key = (KeyParameter)generator.GenerateDerivedMacParameters(256);
-            byte[] computedHash = key.GetKey();
-
-            return storedHash.SequenceEqual(computedHash);
+            return computedHash.SequenceEqual(storedHash);
         }
+
 
         private string GenerateJwtToken(Users user)
         {
