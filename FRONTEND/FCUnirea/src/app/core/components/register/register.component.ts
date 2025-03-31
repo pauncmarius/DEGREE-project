@@ -40,14 +40,14 @@ export class RegisterComponent {
       },
       (error) => {
         if (error.status === 400 && error.error) {
-          const errors = error.error; // Obiectul JSON cu erori individuale
+          const errors = error.error; // obiectul JSON cu erori individuale
 
-          // Resetăm erorile anterioare
+          // resetam erorile anterioare
           this.registerForm.get('username')?.setErrors(null);
           this.registerForm.get('email')?.setErrors(null);
           this.registerForm.get('phoneNumber')?.setErrors(null);
 
-          // Setăm erorile individuale doar pentru câmpurile afectate
+          // setam erorile individuale doar pentru campurile afectate
           if (errors.username) {
             this.registerForm.get('username')?.setErrors({ usernameExists: true });
           }

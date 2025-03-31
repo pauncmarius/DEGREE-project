@@ -19,6 +19,7 @@ namespace FCUnirea.Api
 {
     public class Startup
     {
+        // injecteaza configurarile aplicatiei, din appsettings.json
         public Startup(IConfiguration configuration)
         {
             Configuration = configuration;
@@ -28,7 +29,7 @@ namespace FCUnirea.Api
 
         public void ConfigureServices(IServiceCollection services)
         {
-            // Înregistrăm controlerele și FluentValidation
+            // inregistram controlerele si FV
             services.AddControllers()
                 .AddFluentValidation(fv =>
                 {
@@ -36,7 +37,7 @@ namespace FCUnirea.Api
                     fv.RegisterValidatorsFromAssemblyContaining<LoginModelValidator>();
                 });
 
-            // Înregistrăm Swagger pentru documentație API
+            // inregistram Swagger API
             services.AddSwaggerGen(c =>
             {
                 c.SwaggerDoc("v1", new OpenApiInfo
@@ -47,11 +48,11 @@ namespace FCUnirea.Api
                 });
             });
 
-            // Înregistrăm serviciile specifice ale aplicației
+            //  inregistram serviciile personalizate (Dependency Injection)
             services.AddPersistanceServices(Configuration);
             services.AddBusinessServices();
 
-            // Configurare CORS pentru a permite accesul din frontend Angular
+            // configuraram CORS pentru a permite accesul din frontend Angular
             services.AddCors(options =>
             {
                 options.AddPolicy("AllowAll",
@@ -60,6 +61,8 @@ namespace FCUnirea.Api
                                       .AllowAnyHeader());
             });
 
+
+            // configuram JWT
             services.Configure<JwtSettings>(Configuration.GetSection("JwtSettings"));
 
             var jwtSettings = Configuration.GetSection("JwtSettings").Get<JwtSettings>();
@@ -99,10 +102,8 @@ namespace FCUnirea.Api
             app.UseHttpsRedirection();
             app.UseRouting();
 
-            // Activăm politica CORS definită mai sus
             app.UseCors("AllowAll");
 
-            // Gestionare excepții personalizată
             app.UseMiddleware<ExceptionHandlerMiddleware>();
 
             app.UseAuthentication();

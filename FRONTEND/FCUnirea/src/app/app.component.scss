@@ -1,13 +1,13 @@
 .app-content {
   display: flex;
-  flex-direction: row-reverse; /* Meniul va fi plasat în dreapta */
-  height: 100vh; /* Face ca întreaga pagină să ocupe 100% din înălțimea ferestrei */
+  flex-direction: row-reverse; /* meniul va fi plasat în dreapta */
+  height: 100vh; /* face ca intreaga pagina sa ocupe 100% din inaltimea ferestrei */
 }
 
 .page-content {
   flex-grow: 1;
   padding: 20px;
   overflow-y: auto;
-  margin-right: 15%; /* Asigură că meniul nu acoperă conținutul */
+  margin-right: 15%; /* asigura ca meniul nu acopera continutul */
 
 }

@@ -14,7 +14,6 @@ using Microsoft.IdentityModel.Tokens;
 using System.IdentityModel.Tokens.Jwt;
 using System.Security.Claims;
 
-
 namespace FCUnirea.Business.Services
 {
     public class UsersService : IUsersService
@@ -23,13 +22,11 @@ namespace FCUnirea.Business.Services
         private readonly IMapper _mapper;
         private readonly JwtSettings _jwtSettings;
 
-
         public UsersService(IUsersRepository userRepository, IMapper mapper, IOptions<JwtSettings> jwtSettings)
         {
             _userRepository = userRepository;
             _mapper = mapper;
             _jwtSettings = jwtSettings.Value;
-
         }
 
         public IEnumerable<Users> GetUsers() => _userRepository.ListAll();
@@ -85,7 +82,7 @@ namespace FCUnirea.Business.Services
             return GenerateJwtToken(user);
         }
 
-        // hash parola
+        // hashing the pass
         private string HashPassword(string password)
         {
             byte[] salt = RandomNumberGenerator.GetBytes(16);
@@ -112,16 +109,18 @@ namespace FCUnirea.Business.Services
 
         private string GenerateJwtToken(Users user)
         {
+            // creem o cheie de securitate folosind cheia secreta
             var key = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(_jwtSettings.SecretKey));
+            // semnatura tokenului
             var credentials = new SigningCredentials(key, SecurityAlgorithms.HmacSha256);
-
+            // stabilim datele din token
             var claims = new[]
             {
             new Claim(JwtRegisteredClaimNames.Sub, user.Username),
             new Claim("userId", user.Id.ToString()),
             new Claim(JwtRegisteredClaimNames.Jti, Guid.NewGuid().ToString())
         };
-
+            // creem tokenul
             var token = new JwtSecurityToken(
                 issuer: _jwtSettings.Issuer,
                 audience: _jwtSettings.Audience,
