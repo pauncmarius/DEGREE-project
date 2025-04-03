@@ -1,9 +1,19 @@
 <nav class="menu-content">
+  <!-- Arată secțiunea „User” doar dacă e logat -->
+  <div *ngIf="isLoggedIn()" class="menu-section">
+    <div class="menu-title clickable" (click)="toggleUserMenu()">
+      User
+      <span class="arrow" [class.open]="userMenuOpen">▾</span>
+    </div>
+
+    <div *ngIf="userMenuOpen" class="menu-subitems">
+      <a class="menu-subitem" routerLink="/profile" routerLinkActive="active">My Profile</a>
+      <a class="menu-subitem" (click)="logout()">Logout</a>
+    </div>
+  </div>
+
+  <!-- Login apare doar dacă nu e logat -->
   <a *ngIf="!isLoggedIn()" class="menu-item" routerLink="/login" routerLinkActive="active">
     Login
-  </a>
-
-  <a *ngIf="isLoggedIn()" class="menu-item" (click)="logout()" style="cursor:pointer;">
-    Logout
   </a>
 </nav>

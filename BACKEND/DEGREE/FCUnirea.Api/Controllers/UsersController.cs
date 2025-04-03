@@ -1,8 +1,10 @@
 ﻿
+using AutoMapper;
 using FCUnirea.Business.Exceptions;
 using FCUnirea.Business.Models;
 using FCUnirea.Business.Services.IServices;
 using FCUnirea.Domain.Entities;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
 namespace FCUnirea.Api.Controllers
@@ -12,10 +14,13 @@ namespace FCUnirea.Api.Controllers
     public class UsersController : Controller
     {
         private readonly IUsersService _userService;
+        private readonly IMapper _mapper;
 
-        public UsersController(IUsersService userService)
+
+        public UsersController(IUsersService userService, IMapper mapper)
         {
             _userService = userService;
+            _mapper = mapper;
         }
 
         [HttpGet]
@@ -83,6 +88,32 @@ namespace FCUnirea.Api.Controllers
             return Ok(new { token });
         }
 
+        [Authorize]
+        [HttpGet("my-profile")]
+        public IActionResult GetCurrentUser()
+        {
+            var username = User.Identity?.Name;
 
+            if (string.IsNullOrEmpty(username))
+                return Unauthorized();
+
+            var user = _userService.GetByUsername(username);
+            if (user == null) return NotFound();
+
+            var profile = _mapper.Map<UserProfileModel>(user);
+            return Ok(profile);
+        }
+
+        [Authorize]
+        [HttpPost("change-password")]
+        public IActionResult ChangePassword([FromBody] ChangePasswordModel model)
+        {
+            var username = User.Identity?.Name;
+
+            if (!_userService.ChangePassword(username, model.CurrentPassword, model.NewPassword))
+                return BadRequest(new { message = "Parola curentă este greșită." });
+
+            return Ok(new { message = "Parola a fost schimbată cu succes." });
+        }
     }
 }

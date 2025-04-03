@@ -1,0 +1,32 @@
+.access-denied-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 100px;
+  }
+  
+  .access-denied-img {
+    width: 250px;
+    margin-bottom: 20px;
+  }
+  
+  h2 {
+    color: #d9534f;
+    margin-bottom: 10px;
+  }
+  
+  button {
+    margin-top: 15px;
+    padding: 10px 20px;
+    background-color: #004085;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    border-radius: 4px;
+  
+    &:hover {
+      background-color: #002752;
+    }
+  }
+  

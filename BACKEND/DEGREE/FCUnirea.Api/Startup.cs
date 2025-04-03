@@ -88,6 +88,7 @@ namespace FCUnirea.Api
                 };
             });
 
+
         }
 
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)

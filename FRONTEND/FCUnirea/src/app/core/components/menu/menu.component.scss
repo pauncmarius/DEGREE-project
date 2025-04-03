@@ -1,49 +1,102 @@
 .menu-content {
-  width: 15%; /* Meniul ocupă 15% din lățimea totală */
-  min-width: 200px; /* Asigură că nu devine prea mic pe ecrane mici */
-  max-width: 300px; /* Poți ajusta în funcție de nevoie */
-  height: 100vh; /* Asigură că meniul se întinde pe toată înălțimea ferestrei */
+  width: 15%;
+  min-width: 200px;
+  max-width: 300px;
+  height: 100vh;
   display: flex;
   flex-direction: column;
   padding-top: 20px;
-  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.12),
-              0px 2px 12px rgba(0, 17, 128, 0.12);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
   background-color: #fff;
-  position: fixed; /* Fixează meniul ca să nu se miște la scroll */
-  right: 0; /* Îl aliniază în partea dreaptă */
+  position: fixed;
+  right: 0;
   top: 0;
-  a {
+
+  .menu-section {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .menu-title {
+    font-weight: bold;
+    font-size: 15px;
+    margin: 8px 16px;
+    color: #343a40;
     cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-bottom: 4px;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+
+    .arrow {
+      transition: transform 0.3s ease;
+      font-size: 12px;
+      margin-left: 6px;
+
+      &.open {
+        transform: rotate(180deg);
+      }
+    }
+  }
+
+  .menu-subitems {
+    display: flex;
+    flex-direction: column;
+    padding-left: 16px;
+    animation: fadeIn 0.3s ease;
+  }
+
+  .menu-subitem {
+    display: block;
+    width: 100%;
+    padding: 8px 16px;
+    font-size: 14px;
+    color: #495057;
     text-decoration: none;
+    transition: background-color 0.2s;
 
     &:hover {
-      background-color: rgba(50, 148, 115, 0.08);
-    }
-
-    &:active,
-    &:visited {
-      color: #01140e;
+      background-color: rgba(0, 128, 128, 0.05);
     }
 
     &.active {
-      background-color: rgba(31, 189, 136, 0.08);
-      font-style: italic;
-      color: #01140e;
+      color: #006d77;
+    }
+  }
+
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(-5px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
     }
   }
 
   .menu-item {
-    display: flex;
-    align-items: center;
-    height: 40px;
-    padding-left: 16px;
-
-    &.parent {
-        font-weight: bold;
+    display: block;
+    width: 100%;
+    padding: 10px 16px;
+    font-size: 15px;
+    color: #212529;
+    text-decoration: none;
+    transition: background-color 0.2s ease, color 0.2s ease;
+  
+    &:hover {
+      background-color: rgba(50, 148, 115, 0.08);
+      color: #007bff;
     }
-
-    &:not(:last-child) {
-        margin-bottom: 8px;
+  
+    &.active {
+      background-color: rgba(31, 189, 136, 0.08);
+      font-weight: bold;
+      font-style: italic;
+      color: #01140e;
     }
   }
+  
 }

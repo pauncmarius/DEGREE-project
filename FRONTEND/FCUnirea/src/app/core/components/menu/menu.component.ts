@@ -10,6 +10,7 @@ import { RouterModule, Router } from '@angular/router';
   styleUrl: './menu.component.scss'
 })
 export class MenuComponent {
+  userMenuOpen = false;
 
   constructor(private router: Router) { }
 
@@ -19,6 +20,10 @@ export class MenuComponent {
 
   logout(): void {
     localStorage.removeItem('token');
-    this.router.navigate(['/login']);
+    this.router.navigate(['/']);
+  }
+
+  toggleUserMenu(): void {
+    this.userMenuOpen = !this.userMenuOpen;
   }
 }

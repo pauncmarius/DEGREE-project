@@ -31,6 +31,7 @@ namespace FCUnirea.Business.Services
 
         public IEnumerable<Users> GetUsers() => _userRepository.ListAll();
         public Users GetUser(int id) => _userRepository.GetById(id);
+        public Users GetByUsername(string username) => _userRepository.GetByUsername(username);
         public int AddUser(UsersModel user) => _userRepository.Add(_mapper.Map<Users>(user)).Id;
         public void UpdateUser(Users user) => _userRepository.Update(user);
 
@@ -116,7 +117,7 @@ namespace FCUnirea.Business.Services
             // stabilim datele din token
             var claims = new[]
             {
-            new Claim(JwtRegisteredClaimNames.Sub, user.Username),
+            new Claim(ClaimTypes.Name, user.Username),
             new Claim("userId", user.Id.ToString()),
             new Claim(JwtRegisteredClaimNames.Jti, Guid.NewGuid().ToString())
         };
@@ -131,5 +132,16 @@ namespace FCUnirea.Business.Services
 
             return new JwtSecurityTokenHandler().WriteToken(token);
         }
+        public bool ChangePassword(string username, string currentPassword, string newPassword)
+        {
+            var user = _userRepository.GetByUsername(username);
+            if (user == null || !VerifyPassword(currentPassword, user.Password))
+                return false;
+
+            var newHashedPassword = HashPassword(newPassword);
+            _userRepository.UpdatePassword(user.Id, newHashedPassword);
+            return true;
+        }
+
     }
 }

@@ -5,12 +5,21 @@ import { RegisterComponent } from './app/core/components/register/register.compo
 import { PageNotFoundComponent } from './app/core/components/page-not-found/page-not-found.component';
 import { provideHttpClient } from '@angular/common/http';
 import { LoginComponent } from './app/core/components/login/login.component';
+import { LandingComponent } from './app/core/components/landing/landing.component';
+import { HomeComponent } from './app/core/components/home/home.component';
+import { authGuard } from './app/core/guards/auth.guard';
+import { AccessDeniedComponent } from './app/core/components/access-denied/access-denied.component';
+import { ProfileComponent } from './app/core/components/profile/profile.component';
 
 const routes: Routes = [
-  { path: '', redirectTo: 'login', pathMatch: 'full'},
+  { path: '', component: LandingComponent },
   { path: 'register', component: RegisterComponent },
   { path: 'login', component: LoginComponent },
-  { path: '**', component: PageNotFoundComponent}
+  { path: 'home', component: HomeComponent, canActivate: [authGuard]},
+  { path: 'access-denied', component: AccessDeniedComponent },
+  { path: 'profile', component: ProfileComponent, canActivate: [authGuard]},
+  { path: '**', component: PageNotFoundComponent},
+
 ];
 
 bootstrapApplication(AppComponent, {
