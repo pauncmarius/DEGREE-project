@@ -18,25 +18,10 @@ export class UserService {
   }
 
   getProfile(): Observable<any> {
-    const token = localStorage.getItem('token');
-    const headers = new HttpHeaders({
-      Authorization: `Bearer ${token}`
-    });
-
-    return this.http.get(`${this.apiUrl}/my-profile`, { headers });
+    return this.http.get(`${this.apiUrl}/my-profile`);
   }
 
   changePassword(data: { currentPassword: string; newPassword: string }): Observable<any> {
-    const token = localStorage.getItem('token');
-    const headers = new HttpHeaders({
-      Authorization: `Bearer ${token}`
-    });
-
-    return this.http.post(`${this.apiUrl}/change-password`, data, { headers });
+    return this.http.post(`${this.apiUrl}/change-password`, data);
   }
-
-  updateProfile(data: any): Observable<any> {
-    return this.http.put(`${this.apiUrl}`, data);
-  }
-  
 }
