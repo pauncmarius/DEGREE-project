@@ -1018,5 +1018,69 @@
       }
     ],
     "ReturnTypes": []
+  },
+  {
+    "ContainingType": "FCUnirea.Api.Controllers.UsersController",
+    "Method": "UpdateEmail",
+    "RelativePath": "api/Users/update-email",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "model",
+        "Type": "FCUnirea.Business.Models.EmailUpdateModel",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "FCUnirea.Api.Controllers.UsersController",
+    "Method": "UpdateName",
+    "RelativePath": "api/Users/update-name",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "model",
+        "Type": "FCUnirea.Business.Models.NameUpdateModel",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "FCUnirea.Api.Controllers.UsersController",
+    "Method": "UpdatePhone",
+    "RelativePath": "api/Users/update-phone",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "model",
+        "Type": "FCUnirea.Business.Models.PhoneUpdateModel",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "FCUnirea.Api.Controllers.UsersController",
+    "Method": "UpdateUsername",
+    "RelativePath": "api/Users/update-username",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "model",
+        "Type": "FCUnirea.Business.Models.UsernameUpdateModel",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
   }
 ]

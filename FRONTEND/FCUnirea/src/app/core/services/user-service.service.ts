@@ -24,4 +24,21 @@ export class UserService {
   changePassword(data: { currentPassword: string; newPassword: string }): Observable<any> {
     return this.http.post(`${this.apiUrl}/change-password`, data);
   }
+
+  updateName(data: { firstName: string; lastName: string }) {
+    return this.http.post(`${this.apiUrl}/update-name`, data);
+  }
+  
+  updateUsername(username: string) {
+    return this.http.post(`${this.apiUrl}/update-username`, { username });
+  }
+  
+  updateEmail(email: string) {
+    return this.http.post(`${this.apiUrl}/update-email`, { email });
+  }
+  
+  updatePhone(phoneNumber: string) {
+    return this.http.post(`${this.apiUrl}/update-phone`, { phoneNumber });
+  }
+  
 }

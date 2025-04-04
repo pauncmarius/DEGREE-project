@@ -21,7 +21,6 @@ export class AuthInterceptor implements HttpInterceptor {
     return next.handle(req).pipe(
       catchError(err => {
         if (err.status === 401) {
-          console.log('401 interceptat! Sterg tokenul și redirecționez...');
           localStorage.removeItem('token');
           setTimeout(() => {
             this.router.navigate(['/']);

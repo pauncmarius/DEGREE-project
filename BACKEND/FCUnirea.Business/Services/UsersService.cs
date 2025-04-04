@@ -137,5 +137,66 @@ namespace FCUnirea.Business.Services
             return true;
         }
 
+        public void UpdateName(string username, string firstName, string lastName)
+        {
+            var user = _userRepository.GetByUsername(username);
+            if (user == null) return;
+
+            user.FirstName = firstName;
+            user.LastName = lastName;
+            _userRepository.Update(user);
+        }
+
+        public bool UpdateUsername(string currentUsername, string newUsername, out string error)
+        {
+            error = "";
+            if (_userRepository.ListAll().Any(u => u.Username == newUsername))
+            {
+                error = "Username deja folosit.";
+                return false;
+            }
+
+            var user = _userRepository.GetByUsername(currentUsername);
+            if (user == null) return false;
+
+            user.Username = newUsername;
+            _userRepository.Update(user);
+            return true;
+        }
+
+        public bool UpdateEmail(string currentUsername, string newEmail, out string error)
+        {
+            error = "";
+            if (_userRepository.ListAll().Any(u => u.Email == newEmail))
+            {
+                error = "Email deja folosit.";
+                return false;
+            }
+
+            var user = _userRepository.GetByUsername(currentUsername);
+            if (user == null) return false;
+
+            user.Email = newEmail;
+            _userRepository.Update(user);
+            return true;
+        }
+
+        public bool UpdatePhone(string currentUsername, string newPhone, out string error)
+        {
+            error = "";
+            if (_userRepository.ListAll().Any(u => u.PhoneNumber == newPhone))
+            {
+                error = "Telefon deja folosit.";
+                return false;
+            }
+
+            var user = _userRepository.GetByUsername(currentUsername);
+            if (user == null) return false;
+
+            user.PhoneNumber = newPhone;
+            _userRepository.Update(user);
+            return true;
+        }
+
     }
 }

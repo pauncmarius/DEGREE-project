@@ -28,15 +28,15 @@ export class LoginComponent {
 
   onSubmit(): void {
     if (this.loginForm.invalid) return;
-
-    this.userService.login(this.loginForm.value).subscribe(
-      (response) => {
+  
+    this.userService.login(this.loginForm.value).subscribe({
+      next: (response) => {
         localStorage.setItem('token', response.token);
         this.router.navigate(['/home']);
       },
-      (error) => {
+      error: (error) => {
         this.errorMessage = 'Credentialele sunt incorecte!';
       }
-    );
+    });
   }
 }

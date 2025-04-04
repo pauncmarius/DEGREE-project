@@ -2,7 +2,6 @@ import { Component, inject } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { UserService } from '../../services/user-service.service';
 import { FormBuilder, ReactiveFormsModule, FormGroup, Validators } from '@angular/forms';
-import { HttpClient, HttpHeaders } from '@angular/common/http';
 
 @Component({
   selector: 'app-profile',
@@ -15,10 +14,28 @@ export class ProfileComponent {
   private userService = inject(UserService);
   private fb = inject(FormBuilder);
 
-  profile: any;
+  profile: any = {};
   passwordForm: FormGroup;
   successMessage = '';
   errorMessage = '';
+
+  nameForm = this.fb.group({
+    firstName: [''],
+    lastName: ['']
+  });
+  
+  usernameControl = this.fb.control('', [Validators.required, Validators.minLength(4)]);
+  emailControl = this.fb.control('', [Validators.required, Validators.email]);
+  phoneControl = this.fb.control('', [Validators.required, Validators.pattern(/^\d{10}$/)]);
+  
+  editUsername = false;
+  editEmail = false;
+  editPhone = false;
+  
+  usernameError = '';
+  emailError = '';
+  phoneError = '';
+
 
   constructor() {
     this.passwordForm = this.fb.group({
@@ -26,15 +43,18 @@ export class ProfileComponent {
       newPassword: ['', [Validators.required, Validators.minLength(6)]]
     });
 
-    this.userService.getProfile().subscribe(
-      (data) => {
-        this.profile = data;
-        console.log('Profil:', data);
-      },
-      (error) => {
-        console.error('Eroare profil:', error);
-      }
-    );
+    this.userService.getProfile().subscribe((data) => {
+      this.profile = data;
+  
+      this.nameForm.patchValue({
+        firstName: data.firstName,
+        lastName: data.lastName
+      });
+  
+      this.usernameControl.setValue(data.username);
+      this.emailControl.setValue(data.email);
+      this.phoneControl.setValue(data.phoneNumber);
+    });
   }
 
   onChangePassword(): void {
@@ -51,5 +71,70 @@ export class ProfileComponent {
         this.errorMessage = 'Parola curentă este greșită.';
       }
     );
+  }
+
+  onSaveName() {
+    if (this.nameForm.valid) {
+      this.userService.updateName({
+        firstName: this.nameForm.value.firstName || '',
+        lastName: this.nameForm.value.lastName || ''
+      }).subscribe(() => {
+        this.profile.firstName = this.nameForm.value.firstName;
+        this.profile.lastName = this.nameForm.value.lastName;
+      });
+    }
+  }
+  
+  toggleEdit(field: string) {
+    const value = {
+      username: this.usernameControl.value,
+      email: this.emailControl.value,
+      phoneNumber: this.phoneControl.value
+    };
+  
+    if (field === 'username') {
+      if (this.editUsername && this.usernameControl.valid) {
+        this.userService.updateUsername(value.username || '').subscribe({
+          next: () => {
+            this.profile.username = value.username;
+            this.usernameError = '';
+          },
+          error: (err) => {
+            this.usernameError = err.error.message || 'Eroare necunoscută';
+          }
+        });
+      }
+      this.editUsername = !this.editUsername;
+    }
+  
+    if (field === 'email') {
+      if (this.editEmail && this.emailControl.valid) {
+        this.userService.updateEmail(value.email || '').subscribe({
+          next: () => {
+            this.profile.email = value.email;
+            this.emailError = '';
+          },
+          error: (err) => {
+            this.emailError = err.error.message || 'Eroare necunoscută';
+          }
+        });
+      }
+      this.editEmail = !this.editEmail;
+    }
+  
+    if (field === 'phone') {
+      if (this.editPhone && this.phoneControl.valid) {
+        this.userService.updatePhone(value.phoneNumber || '').subscribe({
+          next: () => {
+            this.profile.phoneNumber = value.phoneNumber;
+            this.phoneError = '';
+          },
+          error: (err) => {
+            this.phoneError = err.error.message || 'Eroare necunoscută';
+          }
+        });
+      }
+      this.editPhone = !this.editPhone;
+    }
   }
 }

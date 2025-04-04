@@ -85,8 +85,6 @@ namespace FCUnirea.Api.Controllers
             });
         }
 
-
-
         [HttpPost("login")]
         public IActionResult Login([FromBody] LoginModel model)
         {
@@ -96,7 +94,7 @@ namespace FCUnirea.Api.Controllers
             var token = _userService.Authenticate(model);
 
             if (string.IsNullOrEmpty(token))
-                return Unauthorized(new { error = "Credentialele sunt incorecte!" });
+                return BadRequest(new { error = "Credentialele sunt incorecte!" });
 
             return Ok(new { token });
         }
@@ -113,7 +111,7 @@ namespace FCUnirea.Api.Controllers
             var user = _userService.GetByUsername(username);
             if (user == null) return NotFound();
 
-            var profile = _mapper.Map<UserProfileModel>(user);
+            var profile = _mapper.Map<UsersModel>(user);
             return Ok(profile);
         }
 
@@ -128,5 +126,48 @@ namespace FCUnirea.Api.Controllers
 
             return Ok(new { message = "Parola a fost schimbată cu succes." });
         }
+
+        [Authorize]
+        [HttpPost("update-name")]
+        public IActionResult UpdateName([FromBody] NameUpdateModel model)
+        {
+            var username = User.Identity?.Name;
+            _userService.UpdateName(username, model.FirstName, model.LastName);
+            return Ok();
+        }
+
+        [Authorize]
+        [HttpPost("update-username")]
+        public IActionResult UpdateUsername([FromBody] UsernameUpdateModel model)
+        {
+            var username = User.Identity?.Name;
+            if (!_userService.UpdateUsername(username, model.Username, out string error))
+                return BadRequest(new { message = error });
+
+            return Ok();
+        }
+
+        [Authorize]
+        [HttpPost("update-email")]
+        public IActionResult UpdateEmail([FromBody] EmailUpdateModel model)
+        {
+            var username = User.Identity?.Name;
+            if (!_userService.UpdateEmail(username, model.Email, out string error))
+                return BadRequest(new { message = error });
+
+            return Ok();
+        }
+
+        [Authorize]
+        [HttpPost("update-phone")]
+        public IActionResult UpdatePhone([FromBody] PhoneUpdateModel model)
+        {
+            var username = User.Identity?.Name;
+            if (!_userService.UpdatePhone(username, model.PhoneNumber, out string error))
+                return BadRequest(new { message = error });
+
+            return Ok();
+        }
+
     }
 }

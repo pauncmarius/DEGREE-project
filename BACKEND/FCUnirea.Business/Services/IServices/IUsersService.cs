@@ -17,6 +17,9 @@ namespace FCUnirea.Business.Services.IServices
         public string Authenticate(LoginModel request);
         bool ChangePassword(string username, string currentPassword, string newPassword);
         Users GetByUsername(string username);
-
+        void UpdateName(string username, string firstName, string lastName);
+        bool UpdateUsername(string username1, string username2, out string error);
+        bool UpdateEmail(string username, string email, out string error);
+        bool UpdatePhone(string username, string phoneNumber, out string error);
     }
 }

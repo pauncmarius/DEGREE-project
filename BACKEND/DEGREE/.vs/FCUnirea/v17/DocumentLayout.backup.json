@@ -3,29 +3,37 @@
   "WorkspaceRootPath": "C:\\Users\\paunm\\Documents\\GITHUB\\DEGREE-project\\BACKEND\\DEGREE\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{2EC0D174-BC3A-42CC-A679-0AFD9DB6C0FF}|..\\FCUnirea.Business\\FCUnirea.Business.csproj|c:\\users\\paunm\\documents\\github\\degree-project\\backend\\fcunirea.business\\services\\usersservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{2EC0D174-BC3A-42CC-A679-0AFD9DB6C0FF}|..\\FCUnirea.Business\\FCUnirea.Business.csproj|c:\\users\\paunm\\documents\\github\\degree-project\\backend\\fcunirea.business\\services\\iservices\\iusersservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{82C8B43D-3018-4C8C-A463-4A51192D4191}|FCUnirea.Api\\FCUnirea.Api.csproj|c:\\users\\paunm\\documents\\github\\degree-project\\backend\\degree\\fcunirea.api\\controllers\\userscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{82C8B43D-3018-4C8C-A463-4A51192D4191}|FCUnirea.Api\\FCUnirea.Api.csproj|solutionrelative:fcunirea.api\\controllers\\userscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{82C8B43D-3018-4C8C-A463-4A51192D4191}|FCUnirea.Api\\FCUnirea.Api.csproj|c:\\users\\paunm\\documents\\github\\degree-project\\backend\\degree\\fcunirea.api\\fcunirea.api.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
-      "RelativeMoniker": "D:0:0:{82C8B43D-3018-4C8C-A463-4A51192D4191}|FCUnirea.Api\\FCUnirea.Api.csproj|solutionrelative:fcunirea.api\\fcunirea.api.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+      "AbsoluteMoniker": "D:0:0:{2EC0D174-BC3A-42CC-A679-0AFD9DB6C0FF}|..\\FCUnirea.Business\\FCUnirea.Business.csproj|c:\\users\\paunm\\documents\\github\\degree-project\\backend\\fcunirea.business\\profiles\\mappingprofile.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{82C8B43D-3018-4C8C-A463-4A51192D4191}|FCUnirea.Api\\FCUnirea.Api.csproj|c:\\users\\paunm\\documents\\github\\degree-project\\backend\\degree\\fcunirea.api\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
-      "RelativeMoniker": "D:0:0:{82C8B43D-3018-4C8C-A463-4A51192D4191}|FCUnirea.Api\\FCUnirea.Api.csproj|solutionrelative:fcunirea.api\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+      "AbsoluteMoniker": "D:0:0:{2EC0D174-BC3A-42CC-A679-0AFD9DB6C0FF}|..\\FCUnirea.Business\\FCUnirea.Business.csproj|c:\\users\\paunm\\documents\\github\\degree-project\\backend\\fcunirea.business\\models\\userprofileupdate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{82C8B43D-3018-4C8C-A463-4A51192D4191}|FCUnirea.Api\\FCUnirea.Api.csproj|c:\\users\\paunm\\documents\\github\\degree-project\\backend\\degree\\fcunirea.api\\startup.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{82C8B43D-3018-4C8C-A463-4A51192D4191}|FCUnirea.Api\\FCUnirea.Api.csproj|solutionrelative:fcunirea.api\\startup.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{2EC0D174-BC3A-42CC-A679-0AFD9DB6C0FF}|..\\FCUnirea.Business\\FCUnirea.Business.csproj|c:\\users\\paunm\\documents\\github\\degree-project\\backend\\fcunirea.business\\services\\usersservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{C18B2AB4-851B-483E-AD4F-F9731E290FF6}|..\\FCUnirea.Persistance\\FCUnirea.Persistance.csproj|c:\\users\\paunm\\documents\\github\\degree-project\\backend\\fcunirea.persistance\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{C18B2AB4-851B-483E-AD4F-F9731E290FF6}|..\\FCUnirea.Persistance\\FCUnirea.Persistance.csproj|c:\\users\\paunm\\documents\\github\\degree-project\\backend\\fcunirea.persistance\\repositories\\usersrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2EC0D174-BC3A-42CC-A679-0AFD9DB6C0FF}|..\\FCUnirea.Business\\FCUnirea.Business.csproj|c:\\users\\paunm\\documents\\github\\degree-project\\backend\\fcunirea.business\\models\\changepasswordmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{82C8B43D-3018-4C8C-A463-4A51192D4191}|FCUnirea.Api\\FCUnirea.Api.csproj|c:\\users\\paunm\\documents\\github\\degree-project\\backend\\degree\\fcunirea.api\\validators\\loginmodelvalidator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{82C8B43D-3018-4C8C-A463-4A51192D4191}|FCUnirea.Api\\FCUnirea.Api.csproj|solutionrelative:fcunirea.api\\validators\\loginmodelvalidator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2EC0D174-BC3A-42CC-A679-0AFD9DB6C0FF}|..\\FCUnirea.Business\\FCUnirea.Business.csproj|c:\\users\\paunm\\documents\\github\\degree-project\\backend\\fcunirea.business\\models\\usersmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{82C8B43D-3018-4C8C-A463-4A51192D4191}|FCUnirea.Api\\FCUnirea.Api.csproj|c:\\users\\paunm\\documents\\github\\degree-project\\backend\\degree\\fcunirea.api\\validators\\usersmodelvalidator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{82C8B43D-3018-4C8C-A463-4A51192D4191}|FCUnirea.Api\\FCUnirea.Api.csproj|solutionrelative:fcunirea.api\\validators\\usersmodelvalidator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2EC0D174-BC3A-42CC-A679-0AFD9DB6C0FF}|..\\FCUnirea.Business\\FCUnirea.Business.csproj|c:\\users\\paunm\\documents\\github\\degree-project\\backend\\fcunirea.business\\models\\loginmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -35,7 +43,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 509,
-          "SelectedChildIndex": 6,
+          "SelectedChildIndex": 4,
           "Children": [
             {
               "$type": "Bookmark",
@@ -43,88 +51,133 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "FCUnirea.Api.csproj",
-              "DocumentMoniker": "C:\\Users\\paunm\\Documents\\GITHUB\\DEGREE-project\\BACKEND\\DEGREE\\FCUnirea.Api\\FCUnirea.Api.csproj",
-              "RelativeDocumentMoniker": "FCUnirea.Api\\FCUnirea.Api.csproj",
-              "ToolTip": "C:\\Users\\paunm\\Documents\\GITHUB\\DEGREE-project\\BACKEND\\DEGREE\\FCUnirea.Api\\FCUnirea.Api.csproj",
-              "RelativeToolTip": "FCUnirea.Api\\FCUnirea.Api.csproj",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
-              "WhenOpened": "2025-04-04T10:34:05.906Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "Program.cs",
-              "DocumentMoniker": "C:\\Users\\paunm\\Documents\\GITHUB\\DEGREE-project\\BACKEND\\FCUnirea.Persistance\\Program.cs",
-              "RelativeDocumentMoniker": "..\\FCUnirea.Persistance\\Program.cs",
-              "ToolTip": "C:\\Users\\paunm\\Documents\\GITHUB\\DEGREE-project\\BACKEND\\FCUnirea.Persistance\\Program.cs",
-              "RelativeToolTip": "..\\FCUnirea.Persistance\\Program.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "DocumentIndex": 2,
+              "Title": "UserProfileUpdate.cs",
+              "DocumentMoniker": "C:\\Users\\paunm\\Documents\\GITHUB\\DEGREE-project\\BACKEND\\FCUnirea.Business\\Models\\UserProfileUpdate.cs",
+              "RelativeDocumentMoniker": "..\\FCUnirea.Business\\Models\\UserProfileUpdate.cs",
+              "ToolTip": "C:\\Users\\paunm\\Documents\\GITHUB\\DEGREE-project\\BACKEND\\FCUnirea.Business\\Models\\UserProfileUpdate.cs",
+              "RelativeToolTip": "..\\FCUnirea.Business\\Models\\UserProfileUpdate.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABwAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-04T10:28:38.204Z"
+              "WhenOpened": "2025-04-04T19:48:11.304Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 4,
-              "Title": "appsettings.json",
-              "DocumentMoniker": "C:\\Users\\paunm\\Documents\\GITHUB\\DEGREE-project\\BACKEND\\DEGREE\\FCUnirea.Api\\appsettings.json",
-              "RelativeDocumentMoniker": "FCUnirea.Api\\appsettings.json",
-              "ToolTip": "C:\\Users\\paunm\\Documents\\GITHUB\\DEGREE-project\\BACKEND\\DEGREE\\FCUnirea.Api\\appsettings.json",
-              "RelativeToolTip": "FCUnirea.Api\\appsettings.json",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAeAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2025-04-04T10:25:15.743Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "IUsersService.cs",
-              "DocumentMoniker": "C:\\Users\\paunm\\Documents\\GITHUB\\DEGREE-project\\BACKEND\\FCUnirea.Business\\Services\\IServices\\IUsersService.cs",
-              "RelativeDocumentMoniker": "..\\FCUnirea.Business\\Services\\IServices\\IUsersService.cs",
-              "ToolTip": "C:\\Users\\paunm\\Documents\\GITHUB\\DEGREE-project\\BACKEND\\FCUnirea.Business\\Services\\IServices\\IUsersService.cs",
-              "RelativeToolTip": "..\\FCUnirea.Business\\Services\\IServices\\IUsersService.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAA3AAAAAAAAAA==",
+              "Title": "UsersRepository.cs",
+              "DocumentMoniker": "C:\\Users\\paunm\\Documents\\GITHUB\\DEGREE-project\\BACKEND\\FCUnirea.Persistance\\Repositories\\UsersRepository.cs",
+              "RelativeDocumentMoniker": "..\\FCUnirea.Persistance\\Repositories\\UsersRepository.cs",
+              "ToolTip": "C:\\Users\\paunm\\Documents\\GITHUB\\DEGREE-project\\BACKEND\\FCUnirea.Persistance\\Repositories\\UsersRepository.cs",
+              "RelativeToolTip": "..\\FCUnirea.Persistance\\Repositories\\UsersRepository.cs",
+              "ViewState": "AgIAAA0AAAAAAAAAAAAzwCQAAAAoAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-04T09:00:37.851Z"
+              "WhenOpened": "2025-04-04T19:35:34.15Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "Startup.cs",
-              "DocumentMoniker": "C:\\Users\\paunm\\Documents\\GITHUB\\DEGREE-project\\BACKEND\\DEGREE\\FCUnirea.Api\\Startup.cs",
-              "RelativeDocumentMoniker": "FCUnirea.Api\\Startup.cs",
-              "ToolTip": "C:\\Users\\paunm\\Documents\\GITHUB\\DEGREE-project\\BACKEND\\DEGREE\\FCUnirea.Api\\Startup.cs",
-              "RelativeToolTip": "FCUnirea.Api\\Startup.cs",
-              "ViewState": "AgIAADUAAAAAAAAAAAAswE4AAAAqAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-04T08:55:59.773Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 3,
               "Title": "UsersService.cs",
               "DocumentMoniker": "C:\\Users\\paunm\\Documents\\GITHUB\\DEGREE-project\\BACKEND\\FCUnirea.Business\\Services\\UsersService.cs",
               "RelativeDocumentMoniker": "..\\FCUnirea.Business\\Services\\UsersService.cs",
               "ToolTip": "C:\\Users\\paunm\\Documents\\GITHUB\\DEGREE-project\\BACKEND\\FCUnirea.Business\\Services\\UsersService.cs",
               "RelativeToolTip": "..\\FCUnirea.Business\\Services\\UsersService.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAHYAAAAtAAAAAAAAAA==",
+              "ViewState": "AgIAAK8AAAAAAAAAAAAgwMcAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-04T08:54:07.489Z",
+              "WhenOpened": "2025-04-04T19:34:44.078Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 0,
               "Title": "UsersController.cs",
               "DocumentMoniker": "C:\\Users\\paunm\\Documents\\GITHUB\\DEGREE-project\\BACKEND\\DEGREE\\FCUnirea.Api\\Controllers\\UsersController.cs",
               "RelativeDocumentMoniker": "FCUnirea.Api\\Controllers\\UsersController.cs",
               "ToolTip": "C:\\Users\\paunm\\Documents\\GITHUB\\DEGREE-project\\BACKEND\\DEGREE\\FCUnirea.Api\\Controllers\\UsersController.cs",
               "RelativeToolTip": "FCUnirea.Api\\Controllers\\UsersController.cs",
-              "ViewState": "AgIAAFIAAAAAAAAAAAAwwFcAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAHkAAAAAAAAAAADwv4sAAAAlAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-04T08:38:37.192Z"
+              "WhenOpened": "2025-04-04T19:09:57.695Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "ChangePasswordModel.cs",
+              "DocumentMoniker": "C:\\Users\\paunm\\Documents\\GITHUB\\DEGREE-project\\BACKEND\\FCUnirea.Business\\Models\\ChangePasswordModel.cs",
+              "RelativeDocumentMoniker": "..\\FCUnirea.Business\\Models\\ChangePasswordModel.cs",
+              "ToolTip": "C:\\Users\\paunm\\Documents\\GITHUB\\DEGREE-project\\BACKEND\\FCUnirea.Business\\Models\\ChangePasswordModel.cs",
+              "RelativeToolTip": "..\\FCUnirea.Business\\Models\\ChangePasswordModel.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-04T19:08:41.555Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "LoginModelValidator.cs",
+              "DocumentMoniker": "C:\\Users\\paunm\\Documents\\GITHUB\\DEGREE-project\\BACKEND\\DEGREE\\FCUnirea.Api\\Validators\\LoginModelValidator.cs",
+              "RelativeDocumentMoniker": "FCUnirea.Api\\Validators\\LoginModelValidator.cs",
+              "ToolTip": "C:\\Users\\paunm\\Documents\\GITHUB\\DEGREE-project\\BACKEND\\DEGREE\\FCUnirea.Api\\Validators\\LoginModelValidator.cs",
+              "RelativeToolTip": "FCUnirea.Api\\Validators\\LoginModelValidator.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-04T19:07:15.238Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "UsersModel.cs",
+              "DocumentMoniker": "C:\\Users\\paunm\\Documents\\GITHUB\\DEGREE-project\\BACKEND\\FCUnirea.Business\\Models\\UsersModel.cs",
+              "RelativeDocumentMoniker": "..\\FCUnirea.Business\\Models\\UsersModel.cs",
+              "ToolTip": "C:\\Users\\paunm\\Documents\\GITHUB\\DEGREE-project\\BACKEND\\FCUnirea.Business\\Models\\UsersModel.cs",
+              "RelativeToolTip": "..\\FCUnirea.Business\\Models\\UsersModel.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-04T19:07:00.341Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "MappingProfile.cs",
+              "DocumentMoniker": "C:\\Users\\paunm\\Documents\\GITHUB\\DEGREE-project\\BACKEND\\FCUnirea.Business\\Profiles\\MappingProfile.cs",
+              "RelativeDocumentMoniker": "..\\FCUnirea.Business\\Profiles\\MappingProfile.cs",
+              "ToolTip": "C:\\Users\\paunm\\Documents\\GITHUB\\DEGREE-project\\BACKEND\\FCUnirea.Business\\Profiles\\MappingProfile.cs",
+              "RelativeToolTip": "..\\FCUnirea.Business\\Profiles\\MappingProfile.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAB0AAAAtAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-04T18:47:06.849Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "UsersModelValidator.cs",
+              "DocumentMoniker": "C:\\Users\\paunm\\Documents\\GITHUB\\DEGREE-project\\BACKEND\\DEGREE\\FCUnirea.Api\\Validators\\UsersModelValidator.cs",
+              "RelativeDocumentMoniker": "FCUnirea.Api\\Validators\\UsersModelValidator.cs",
+              "ToolTip": "C:\\Users\\paunm\\Documents\\GITHUB\\DEGREE-project\\BACKEND\\DEGREE\\FCUnirea.Api\\Validators\\UsersModelValidator.cs",
+              "RelativeToolTip": "FCUnirea.Api\\Validators\\UsersModelValidator.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-04T19:06:14.875Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "LoginModel.cs",
+              "DocumentMoniker": "C:\\Users\\paunm\\Documents\\GITHUB\\DEGREE-project\\BACKEND\\FCUnirea.Business\\Models\\LoginModel.cs",
+              "RelativeDocumentMoniker": "..\\FCUnirea.Business\\Models\\LoginModel.cs",
+              "ToolTip": "C:\\Users\\paunm\\Documents\\GITHUB\\DEGREE-project\\BACKEND\\FCUnirea.Business\\Models\\LoginModel.cs",
+              "RelativeToolTip": "..\\FCUnirea.Business\\Models\\LoginModel.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-04T19:05:56.054Z",
+              "EditorCaption": ""
             }
           ]
         }
