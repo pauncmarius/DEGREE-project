@@ -15,6 +15,9 @@ export class ProfileComponent {
   private userService = inject(UserService);
   private fb = inject(FormBuilder);
 
+  profileForm: FormGroup;
+  isEditing = false;
+
   profile: any;
   passwordForm: FormGroup;
   successMessage = '';
@@ -35,6 +38,14 @@ export class ProfileComponent {
         console.error('Eroare profil:', error);
       }
     );
+
+    this.profileForm = this.fb.group({
+      username: [{ value: '', disabled: true }, [Validators.required, Validators.minLength(3)]],
+      email: [{ value: '', disabled: true }, [Validators.required, Validators.email]],
+      firstName: [{ value: '', disabled: true }, Validators.required],
+      lastName: [{ value: '', disabled: true }, Validators.required],
+      phoneNumber: [{ value: '', disabled: true }, [Validators.required, Validators.pattern(/^\d{10}$/)]],
+    });
   }
 
   onChangePassword(): void {
@@ -49,6 +60,31 @@ export class ProfileComponent {
       () => {
         this.successMessage = '';
         this.errorMessage = 'Parola curentă este greșită.';
+      }
+    );
+  }
+
+  toggleEdit() {
+    this.isEditing = !this.isEditing;
+    if (this.isEditing) {
+      this.profileForm.enable();
+    } else {
+      this.profileForm.disable();
+    }
+  }
+  
+  onSaveProfile(): void {
+    if (this.profileForm.invalid) return;
+  
+    this.userService.updateProfile(this.profileForm.value).subscribe(
+      () => {
+        this.successMessage = 'Profil actualizat cu succes!';
+        this.errorMessage = '';
+        this.toggleEdit();
+      },
+      (error) => {
+        this.successMessage = '';
+        this.errorMessage = 'A apărut o eroare la actualizare.';
       }
     );
   }

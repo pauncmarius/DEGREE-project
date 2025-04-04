@@ -6,7 +6,6 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.OpenApi.Models;
 using FCUnirea.Business;
-using FCUnirea.Api.Middleware;
 using FCUnirea.Persistance;
 using FCUnirea.Api.Validators;
 using FCUnirea.Business.Models;
@@ -104,8 +103,6 @@ namespace FCUnirea.Api
             app.UseRouting();
 
             app.UseCors("AllowAll");
-
-            app.UseMiddleware<ExceptionHandlerMiddleware>();
 
             app.UseAuthentication();
 

@@ -1,6 +1,6 @@
 ﻿
+using System.Collections.Generic;
 using AutoMapper;
-using FCUnirea.Business.Exceptions;
 using FCUnirea.Business.Models;
 using FCUnirea.Business.Services.IServices;
 using FCUnirea.Domain.Entities;
@@ -64,14 +64,27 @@ namespace FCUnirea.Api.Controllers
         [HttpPost("register")]
         public IActionResult Register([FromBody] UsersModel model)
         {
-            if (!ModelState.IsValid)
+            Dictionary<string, string> errors;
+            var userId = _userService.RegisterUser(model, out errors);
+
+            if (userId == null)
             {
-                return BadRequest(ModelState);
+                return BadRequest(new
+                {
+                    success = false,
+                    message = "Datele introduse nu sunt valide.",
+                    errors // aici e Dictionary-ul complet
+                });
             }
 
-            var userId = _userService.RegisterUser(model);
-            return Ok(new { message = "Utilizator înregistrat cu succes!", userId });
+            return Ok(new
+            {
+                success = true,
+                message = "Utilizator înregistrat cu succes!",
+                userId
+            });
         }
+
 
 
         [HttpPost("login")]
@@ -83,7 +96,7 @@ namespace FCUnirea.Api.Controllers
             var token = _userService.Authenticate(model);
 
             if (string.IsNullOrEmpty(token))
-                throw new NotAvailableException("Credentialele sunt incorecte!");
+                return Unauthorized(new { error = "Credentialele sunt incorecte!" });
 
             return Ok(new { token });
         }

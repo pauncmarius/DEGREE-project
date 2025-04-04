@@ -41,34 +41,28 @@ namespace FCUnirea.Business.Services
             if (user != null) _userRepository.Delete(user);
         }
 
-        public int RegisterUser(UsersModel request)
+        public int? RegisterUser(UsersModel request, out Dictionary<string, string> errors)
         {
+            errors = new Dictionary<string, string>();
             var existingUsers = _userRepository.ListAll();
-            var errors = new Dictionary<string, string>();
 
             if (existingUsers.Any(u => u.Username == request.Username))
-            {
                 errors["username"] = "Acest username este deja utilizat.";
-            }
-            if (existingUsers.Any(u => u.Email == request.Email))
-            {
-                errors["email"] = "Acest email este deja utilizat.";
-            }
-            if (existingUsers.Any(u => u.PhoneNumber == request.PhoneNumber))
-            {
-                errors["phoneNumber"] = "Acest număr de telefon este deja utilizat.";
-            }
-            if (errors.Count > 0)
-            {
-                throw new ValidationException(JsonConvert.SerializeObject(errors));
-            }
 
-            // folosirea AutoMapper pentru mapare
+            if (existingUsers.Any(u => u.Email == request.Email))
+                errors["email"] = "Acest email este deja utilizat.";
+
+            if (existingUsers.Any(u => u.PhoneNumber == request.PhoneNumber))
+                errors["phoneNumber"] = "Acest număr de telefon este deja utilizat.";
+
+            if (errors.Count > 0)
+                return null; // semnalăm că nu s-a făcut înregistrarea
+
             var user = _mapper.Map<Users>(request);
             user.Password = HashPassword(request.Password);
-
             return _userRepository.Add(user).Id;
         }
+
 
 
         public string Authenticate(LoginModel request)

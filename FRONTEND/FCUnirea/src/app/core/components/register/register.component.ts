@@ -39,26 +39,29 @@ export class RegisterComponent {
         this.router.navigate(['/login']);
       },
       (error) => {
-        if (error.status === 400 && error.error) {
-          const errors = error.error; // obiectul JSON cu erori individuale
-
-          // resetam erorile anterioare
-          this.registerForm.get('username')?.setErrors(null);
-          this.registerForm.get('email')?.setErrors(null);
-          this.registerForm.get('phoneNumber')?.setErrors(null);
-
-          // setam erorile individuale doar pentru campurile afectate
+        console.log('Server error:', error); // 👈 păstrează pentru debugging
+    
+        if (error.status === 400 && error.error && error.error.errors) {
+          const errors = error.error.errors;
+    
+          // Resetăm erorile existente
+          Object.keys(this.registerForm.controls).forEach(field => {
+            this.registerForm.get(field)?.setErrors(null);
+          });
+    
+          // Setăm erorile specifice venite de la backend
           if (errors.username) {
-            this.registerForm.get('username')?.setErrors({ usernameExists: true });
+            this.registerForm.get('username')?.setErrors({ server: errors.username });
           }
           if (errors.email) {
-            this.registerForm.get('email')?.setErrors({ emailExists: true });
+            this.registerForm.get('email')?.setErrors({ server: errors.email });
           }
           if (errors.phoneNumber) {
-            this.registerForm.get('phoneNumber')?.setErrors({ phoneExists: true });
+            this.registerForm.get('phoneNumber')?.setErrors({ server: errors.phoneNumber });
           }
+    
         } else {
-          this.errorMessage = 'A apărut o eroare!';
+          this.errorMessage = 'A apărut o eroare de server.';
         }
       }
     );

@@ -10,9 +10,10 @@
     <p *ngIf="registerForm.get('username')?.hasError('minlength')" class="error">
       Username trebuie să aibă cel puțin 3 caractere.
     </p>
-    <p *ngIf="registerForm.get('username')?.hasError('usernameExists')" class="error">
-      Acest username este deja folosit.
+    <p *ngIf="registerForm.get('username')?.hasError('server')" class="error">
+      {{ registerForm.get('username')?.getError('server') }}
     </p>
+    
 
     <!-- Email -->
     <input type="email" formControlName="email" placeholder="Email" required />
@@ -22,9 +23,10 @@
     <p *ngIf="registerForm.get('email')?.hasError('email')" class="error">
       Email invalid.
     </p>
-    <p *ngIf="registerForm.get('email')?.hasError('emailExists')" class="error">
-      Acest email este deja folosit.
+    <p *ngIf="registerForm.get('email')?.hasError('server')" class="error">
+      {{ registerForm.get('email')?.getError('server') }}
     </p>
+    
 
     <!-- Phone Number -->
     <input type="text" formControlName="phoneNumber" placeholder="Telefon" required />
@@ -34,9 +36,10 @@
     <p *ngIf="registerForm.get('phoneNumber')?.hasError('pattern')" class="error">
       Numărul de telefon trebuie să aibă exact 10 cifre.
     </p>
-    <p *ngIf="registerForm.get('phoneNumber')?.hasError('phoneExists')" class="error">
-      Acest număr de telefon este deja folosit.
+    <p *ngIf="registerForm.get('phoneNumber')?.hasError('server')" class="error">
+      {{ registerForm.get('phoneNumber')?.getError('server') }}
     </p>
+    
 
 
     <!-- First Name -->

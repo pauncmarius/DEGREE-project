@@ -34,4 +34,9 @@ export class UserService {
 
     return this.http.post(`${this.apiUrl}/change-password`, data, { headers });
   }
+
+  updateProfile(data: any): Observable<any> {
+    return this.http.put(`${this.apiUrl}`, data);
+  }
+  
 }
