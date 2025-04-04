@@ -41,4 +41,8 @@ export class UserService {
     return this.http.post(`${this.apiUrl}/update-phone`, { phoneNumber });
   }
   
+  deleteAccount(): Observable<any> {
+    return this.http.delete(`${this.apiUrl}/delete-account`);
+  }
+  
 }

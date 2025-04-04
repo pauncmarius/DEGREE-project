@@ -1716,6 +1716,18 @@
           }
         }
       }
+    },
+    "/api/Users/delete-account": {
+      "delete": {
+        "tags": [
+          "Users"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
     }
   },
   "components": {

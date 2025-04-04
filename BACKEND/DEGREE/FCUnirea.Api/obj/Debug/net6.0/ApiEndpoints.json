@@ -979,6 +979,16 @@
   },
   {
     "ContainingType": "FCUnirea.Api.Controllers.UsersController",
+    "Method": "DeleteAccount",
+    "RelativePath": "api/Users/delete-account",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "FCUnirea.Api.Controllers.UsersController",
     "Method": "Login",
     "RelativePath": "api/Users/login",
     "HttpMethod": "POST",

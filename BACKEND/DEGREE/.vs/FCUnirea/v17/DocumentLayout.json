@@ -59,8 +59,7 @@
               "RelativeToolTip": "..\\FCUnirea.Business\\Models\\UserProfileUpdate.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABwAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-04T19:48:11.304Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-04-04T19:48:11.304Z"
             },
             {
               "$type": "Document",
@@ -72,8 +71,7 @@
               "RelativeToolTip": "..\\FCUnirea.Persistance\\Repositories\\UsersRepository.cs",
               "ViewState": "AgIAAA0AAAAAAAAAAAAzwCQAAAAoAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-04T19:35:34.15Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-04-04T19:35:34.15Z"
             },
             {
               "$type": "Document",
@@ -85,8 +83,7 @@
               "RelativeToolTip": "..\\FCUnirea.Business\\Services\\UsersService.cs",
               "ViewState": "AgIAAK8AAAAAAAAAAAAgwMcAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-04T19:34:44.078Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-04-04T19:34:44.078Z"
             },
             {
               "$type": "Document",
@@ -96,7 +93,7 @@
               "RelativeDocumentMoniker": "FCUnirea.Api\\Controllers\\UsersController.cs",
               "ToolTip": "C:\\Users\\paunm\\Documents\\GITHUB\\DEGREE-project\\BACKEND\\DEGREE\\FCUnirea.Api\\Controllers\\UsersController.cs",
               "RelativeToolTip": "FCUnirea.Api\\Controllers\\UsersController.cs",
-              "ViewState": "AgIAAHkAAAAAAAAAAADwv4sAAAAlAAAAAAAAAA==",
+              "ViewState": "AgIAAJoAAAAAAAAAAAAcwLgAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-04-04T19:09:57.695Z",
               "EditorCaption": ""
@@ -111,8 +108,7 @@
               "RelativeToolTip": "..\\FCUnirea.Business\\Models\\ChangePasswordModel.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-04T19:08:41.555Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-04-04T19:08:41.555Z"
             },
             {
               "$type": "Document",
@@ -124,8 +120,7 @@
               "RelativeToolTip": "FCUnirea.Api\\Validators\\LoginModelValidator.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-04T19:07:15.238Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-04-04T19:07:15.238Z"
             },
             {
               "$type": "Document",
@@ -137,8 +132,7 @@
               "RelativeToolTip": "..\\FCUnirea.Business\\Models\\UsersModel.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-04T19:07:00.341Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-04-04T19:07:00.341Z"
             },
             {
               "$type": "Document",
@@ -150,8 +144,7 @@
               "RelativeToolTip": "..\\FCUnirea.Business\\Profiles\\MappingProfile.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAB0AAAAtAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-04T18:47:06.849Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-04-04T18:47:06.849Z"
             },
             {
               "$type": "Document",
@@ -163,8 +156,7 @@
               "RelativeToolTip": "FCUnirea.Api\\Validators\\UsersModelValidator.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-04T19:06:14.875Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-04-04T19:06:14.875Z"
             },
             {
               "$type": "Document",
@@ -176,8 +168,7 @@
               "RelativeToolTip": "..\\FCUnirea.Business\\Models\\LoginModel.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-04T19:05:56.054Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-04-04T19:05:56.054Z"
             }
           ]
         }

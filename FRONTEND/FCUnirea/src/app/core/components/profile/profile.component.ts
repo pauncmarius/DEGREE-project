@@ -2,6 +2,7 @@ import { Component, inject } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { UserService } from '../../services/user-service.service';
 import { FormBuilder, ReactiveFormsModule, FormGroup, Validators } from '@angular/forms';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-profile',
@@ -13,6 +14,7 @@ import { FormBuilder, ReactiveFormsModule, FormGroup, Validators } from '@angula
 export class ProfileComponent {
   private userService = inject(UserService);
   private fb = inject(FormBuilder);
+  private router = inject(Router);
 
   profile: any = {};
   passwordForm: FormGroup;
@@ -137,4 +139,19 @@ export class ProfileComponent {
       this.editPhone = !this.editPhone;
     }
   }
+
+  onDeleteAccount(): void {
+    if (confirm('Ești sigur că vrei să-ți ștergi contul?')) {
+      this.userService.deleteAccount().subscribe({
+        next: () => {
+          localStorage.removeItem('token');
+          this.router.navigate(['/']); 
+        },
+        error: () => {
+          alert('A apărut o eroare la ștergerea contului.');
+        }
+      });
+    }
+  }
+  
 }

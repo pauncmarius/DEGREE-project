@@ -169,5 +169,19 @@ namespace FCUnirea.Api.Controllers
             return Ok();
         }
 
+        [Authorize]
+        [HttpDelete("delete-account")]
+        public IActionResult DeleteAccount()
+        {
+            var username = User.Identity?.Name;
+            var user = _userService.GetByUsername(username);
+
+            if (user == null)
+                return NotFound();
+
+            _userService.DeleteUser(user.Id);
+            return Ok(new { message = "Contul a fost șters." });
+        }
+
     }
 }
