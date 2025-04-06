@@ -1,4 +1,4 @@
-<h3>Editează nume și prenume</h3>
+<h3>Informatii cont</h3>
 <form [formGroup]="nameForm" (ngSubmit)="onSaveName()">
   <label>Nume:</label>
   <input type="text" formControlName="firstName" />
@@ -7,15 +7,13 @@
   <input type="text" formControlName="lastName" />
   <br />
   <button type="submit" [disabled]="nameForm.invalid">Salvează</button>
-</form>
-
-<h3>Date de contact</h3>
+</form><br>
 
 <!-- USERNAME -->
 <p>
   <strong>Username:</strong>
   <span *ngIf="!editUsername">{{ profile.username }}</span>
-  <input *ngIf="editUsername" [formControl]="usernameControl" />
+  <input *ngIf="editUsername" [formControl]="usernameControl" /><br>
   <button (click)="toggleEdit('username')">
     {{ editUsername ? 'Salvează' : 'Edit' }}
   </button>
@@ -26,7 +24,7 @@
 <p>
   <strong>Email:</strong>
   <span *ngIf="!editEmail">{{ profile.email }}</span>
-  <input *ngIf="editEmail" [formControl]="emailControl" />
+  <input *ngIf="editEmail" [formControl]="emailControl" /><br>
   <button (click)="toggleEdit('email')">
     {{ editEmail ? 'Salvează' : 'Edit' }}
   </button>
@@ -37,15 +35,12 @@
 <p>
   <strong>Telefon:</strong>
   <span *ngIf="!editPhone">{{ profile.phoneNumber }}</span>
-  <input *ngIf="editPhone" [formControl]="phoneControl" />
+  <input *ngIf="editPhone" [formControl]="phoneControl" /><br>
   <button (click)="toggleEdit('phone')">
     {{ editPhone ? 'Salvează' : 'Edit' }}
   </button>
 </p>
 <div *ngIf="phoneError" class="error">{{ phoneError }}</div>
-
-
-
 <hr /><br>
 
 <h3>Schimbă parola</h3>
