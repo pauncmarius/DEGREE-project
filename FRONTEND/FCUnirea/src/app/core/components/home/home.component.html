@@ -1,1 +1,38 @@
-<p>home works!</p>
+<h1>📰 Știri recente</h1><br>
+
+<!-- Lista de titluri -->
+<div *ngFor="let news of newsList" class="news-title-wrapper">
+  <div (click)="selectNews(news)" class="news-title">
+    <h4>{{ news.title }}</h4>
+  </div>
+
+  <!-- Detalii știre evidențiată -->
+  <div *ngIf="selectedNews?.id === news.id" class="news-details">
+    <p>{{ selectedNews?.text }}</p><br>
+    <p><strong>Data publicării:</strong> {{ selectedNews?.createdAt | date: 'short' }}</p>
+    <p><strong>Autor:</strong> {{ selectedNews?.username }}</p>
+
+    <div class="comments"><br>
+      <h4>💬 Comentarii</h4>
+
+      <div *ngIf="selectedNews?.comments?.length ?? 0 > 0; else noComments">
+        <div *ngFor="let c of selectedNews?.comments" class="comment">
+          <strong>{{ c.username }}:</strong>
+          <p>{{ c.text }}</p>
+          <small>{{ c.createdAt | date: 'short' }}</small>
+        </div>
+      </div>
+      <ng-template #noComments>
+        <p>Nu există comentarii încă.</p>
+      </ng-template>
+    </div>
+
+    <div *ngIf="isLoggedIn" class="comment-form">
+      <textarea class="comment-textarea" [(ngModel)]="newCommentText" rows="3" placeholder="Adaugă un comentariu..."></textarea>
+      <button class="submit-comment" (click)="addComment()">Trimite comentariu</button>
+
+      <div *ngIf="successMessage" class="success">{{ successMessage }}</div>
+      <div *ngIf="errorMessage" class="error">{{ errorMessage }}</div>
+    </div>
+  </div>
+</div>

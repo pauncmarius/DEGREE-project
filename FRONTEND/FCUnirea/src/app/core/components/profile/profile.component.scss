@@ -79,4 +79,21 @@
     border: 1px solid #f5c6cb;
     border-radius: 6px;
   }
+
+  .delete-account {
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: #dc3545;
+    color: white;
+    font-weight: bold;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+  
+    &:hover {
+      background-color: #c82333;
+    }
+  }
+  
   

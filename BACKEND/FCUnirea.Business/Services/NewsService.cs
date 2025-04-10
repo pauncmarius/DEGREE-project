@@ -20,7 +20,10 @@ namespace FCUnirea.Business.Services
         }
 
         public IEnumerable<News> GetNews() => _newsRepository.ListAll();
-        public News GetNewsItem(int id) => _newsRepository.GetById(id);
+        public News GetNewsItem(int id)
+        {
+            return _newsRepository.GetByIdWithAuthor(id);
+        }
         public int AddNews(NewsModel news) => _newsRepository.Add(_mapper.Map<News>(news)).Id;
         public void UpdateNews(News news) => _newsRepository.Update(news);
         public void DeleteNews(int id)

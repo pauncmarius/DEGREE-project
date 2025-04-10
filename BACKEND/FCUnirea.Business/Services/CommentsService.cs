@@ -4,7 +4,9 @@ using FCUnirea.Business.Models;
 using FCUnirea.Business.Services.IServices;
 using FCUnirea.Domain.Entities;
 using FCUnirea.Domain.IRepositories;
+using System;
 using System.Collections.Generic;
+using System.Linq;
 
 namespace FCUnirea.Business.Services
 {
@@ -12,11 +14,14 @@ namespace FCUnirea.Business.Services
     {
         private readonly ICommentsRepository _commentsRepository;
         private readonly IMapper _mapper;
+        private readonly IUsersRepository _usersRepository;
 
-        public CommentsService(ICommentsRepository commentsRepository, IMapper mapper)
+
+        public CommentsService(ICommentsRepository commentsRepository, IMapper mapper, IUsersRepository usersRepository)
         {
             _commentsRepository = commentsRepository;
             _mapper = mapper;
+            _usersRepository = usersRepository;
         }
 
         public IEnumerable<Comments> GetComments() => _commentsRepository.ListAll();
@@ -29,5 +34,24 @@ namespace FCUnirea.Business.Services
             if (comment != null) 
                 _commentsRepository.Delete(comment);
         }
+
+        public IEnumerable<Comments> GetByNewsId(int newsId)
+        {
+            return _commentsRepository.GetByNewsIdWithUser(newsId);
+
+        }
+
+        public int? AddCommentWithUser(CommentsModel model, string username)
+        {
+            var user = _usersRepository.GetByUsername(username);
+            if (user == null) return null;
+
+            var comment = _mapper.Map<Comments>(model);
+            comment.CreatedAt = DateTime.UtcNow;
+            comment.Comment_UsersId = user.Id;
+
+            return _commentsRepository.Add(comment).Id;
+        }
+
     }
 }

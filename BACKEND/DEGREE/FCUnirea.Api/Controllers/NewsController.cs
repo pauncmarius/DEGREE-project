@@ -1,4 +1,5 @@
 ﻿
+using System.Linq;
 using FCUnirea.Business.Models;
 using FCUnirea.Business.Services.IServices;
 using FCUnirea.Domain.Entities;
@@ -11,10 +12,13 @@ namespace FCUnirea.Api.Controllers
     public class NewsController : Controller
     {
         private readonly INewsService _newsService;
+        private readonly ICommentsService _commentsService;
 
-        public NewsController(INewsService newsService)
+
+        public NewsController(INewsService newsService, ICommentsService commentsService)
         {
             _newsService = newsService;
+            _commentsService = commentsService;
         }
 
         [HttpGet]
@@ -27,13 +31,25 @@ namespace FCUnirea.Api.Controllers
         public IActionResult GetById(int id)
         {
             var news = _newsService.GetNewsItem(id);
-            if (news != null)
-            {
-                return Ok(news);
-            }
+            if (news == null) return NotFound();
 
-            return NotFound();
+            var comments = _commentsService.GetByNewsId(id);
+
+            return Ok(new
+            {
+                news.Id,
+                news.Title,
+                news.Text,
+                news.CreatedAt,
+                news.News_Users?.Username,
+                Comments = comments.Select(c => new {
+                    c.Text,
+                    c.CreatedAt,
+                    Username = c.Comment_User?.Username
+                })
+            });
         }
+
 
         [HttpPost]
         public IActionResult Add([FromBody] NewsModel model)
