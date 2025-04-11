@@ -31,6 +31,10 @@ namespace FCUnirea.Persistance.Data.Mappings
                     .HasColumnName("Capacity")
                     .IsRequired();
 
+            modelBuilder.Entity<Stadiums>()
+                    .Property(s => s.IsInternal)
+                    .HasColumnName("IsInternal")
+                    .IsRequired();
             // Definirea relațiilor cu alte tabele
             modelBuilder.Entity<Stadiums>()
                 .HasMany(n => n.Stadiums_Seats)

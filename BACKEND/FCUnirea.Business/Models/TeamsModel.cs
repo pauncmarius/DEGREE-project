@@ -14,6 +14,9 @@ namespace FCUnirea.Business.Models
         public bool IsInternal { get; set; }
 
         [Column(TypeName = "TEXT")]
-        public string Record { get; set; }
+        public string Description { get; set; }
+
+        public string CoachName { get; set; }
+
     }
 }

@@ -14,6 +14,9 @@ namespace FCUnirea.Business.Models
 
         public int TicketsSold { get; set; }
 
+        public string RefereeName { get; set; }
+
+
         //--------------Relations--------------------//
         // Foreign Key
         public int? Game_CompetitionsId { get; set; }

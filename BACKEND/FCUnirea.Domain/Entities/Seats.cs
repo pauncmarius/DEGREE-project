@@ -9,8 +9,6 @@ namespace FCUnirea.Domain.Entities
 
         public int SeatPrice { get; set; }
 
-        public bool Reserved { get; set; }
-
         //--------------Relations--------------------//
 
         public Tickets Seat_Tickets { get; set; }

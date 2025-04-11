@@ -30,8 +30,13 @@ namespace FCUnirea.Persistance.Data.Mappings
                 .IsRequired();
 
             modelBuilder.Entity<Teams>()
-                .Property(s => s.Record)
-                .HasColumnName("Record")
+                .Property(s => s.Description)
+                .HasColumnName("Description")
+                .IsRequired();
+
+            modelBuilder.Entity<Teams>()
+                .Property(s => s.CoachName)
+                .HasColumnName("CoachName")
                 .IsRequired();
 
             // Definirea relațiilor cu alte tabele

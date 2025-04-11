@@ -53,6 +53,11 @@ namespace FCUnirea.Persistance.Data.Mappings
                 .HasColumnName("StadiumId")
                 .IsRequired();
 
+            modelBuilder.Entity<Games>()
+                .Property(c => c.RefereeName)
+                .HasColumnName("RefereeName")
+                .IsRequired();
+
             // Definirea relațiilor cu alte tabele
             modelBuilder.Entity<Games>()
                 .HasMany(n => n.Games_Tickets)

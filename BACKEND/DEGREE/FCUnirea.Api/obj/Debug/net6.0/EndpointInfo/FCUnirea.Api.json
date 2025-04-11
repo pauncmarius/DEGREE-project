@@ -1897,6 +1897,10 @@
             "type": "integer",
             "format": "int32"
           },
+          "refereeName": {
+            "type": "string",
+            "nullable": true
+          },
           "games_Tickets": {
             "type": "array",
             "items": {
@@ -1964,6 +1968,10 @@
           "ticketsSold": {
             "type": "integer",
             "format": "int32"
+          },
+          "refereeName": {
+            "type": "string",
+            "nullable": true
           },
           "game_CompetitionsId": {
             "type": "integer",
@@ -2097,26 +2105,6 @@
             "type": "integer",
             "format": "int32"
           },
-          "assists": {
-            "type": "integer",
-            "format": "int32"
-          },
-          "saves": {
-            "type": "integer",
-            "format": "int32"
-          },
-          "yellowCards": {
-            "type": "integer",
-            "format": "int32"
-          },
-          "redCards": {
-            "type": "integer",
-            "format": "int32"
-          },
-          "minutesPlayed": {
-            "type": "integer",
-            "format": "int32"
-          },
           "playerStatisticsPerCompetition_PlayersId": {
             "type": "integer",
             "format": "int32",
@@ -2140,26 +2128,6 @@
         "type": "object",
         "properties": {
           "goals": {
-            "type": "integer",
-            "format": "int32"
-          },
-          "assists": {
-            "type": "integer",
-            "format": "int32"
-          },
-          "saves": {
-            "type": "integer",
-            "format": "int32"
-          },
-          "yellowCards": {
-            "type": "integer",
-            "format": "int32"
-          },
-          "redCards": {
-            "type": "integer",
-            "format": "int32"
-          },
-          "minutesPlayed": {
             "type": "integer",
             "format": "int32"
           },
@@ -2187,30 +2155,6 @@
             "type": "integer",
             "format": "int32"
           },
-          "assists": {
-            "type": "integer",
-            "format": "int32"
-          },
-          "passesCompleted": {
-            "type": "integer",
-            "format": "int32"
-          },
-          "saves": {
-            "type": "integer",
-            "format": "int32"
-          },
-          "redCards": {
-            "type": "integer",
-            "format": "int32"
-          },
-          "yellowCards": {
-            "type": "integer",
-            "format": "int32"
-          },
-          "minutesPlayed": {
-            "type": "integer",
-            "format": "int32"
-          },
           "playerStatisticsPerGame_PlayersId": {
             "type": "integer",
             "format": "int32",
@@ -2234,30 +2178,6 @@
         "type": "object",
         "properties": {
           "goals": {
-            "type": "integer",
-            "format": "int32"
-          },
-          "assists": {
-            "type": "integer",
-            "format": "int32"
-          },
-          "passesCompleted": {
-            "type": "integer",
-            "format": "int32"
-          },
-          "saves": {
-            "type": "integer",
-            "format": "int32"
-          },
-          "redCards": {
-            "type": "integer",
-            "format": "int32"
-          },
-          "yellowCards": {
-            "type": "integer",
-            "format": "int32"
-          },
-          "minutesPlayed": {
             "type": "integer",
             "format": "int32"
           },
@@ -2377,9 +2297,6 @@
             "type": "integer",
             "format": "int32"
           },
-          "reserved": {
-            "type": "boolean"
-          },
           "seat_Tickets": {
             "$ref": "#/components/schemas/Tickets"
           },
@@ -2408,9 +2325,6 @@
             "type": "integer",
             "format": "int32"
           },
-          "reserved": {
-            "type": "boolean"
-          },
           "seat_StadiumsId": {
             "type": "integer",
             "format": "int32",
@@ -2437,6 +2351,9 @@
           "capacity": {
             "type": "integer",
             "format": "int32"
+          },
+          "isInternal": {
+            "type": "boolean"
           },
           "stadiums_Seats": {
             "type": "array",
@@ -2469,6 +2386,9 @@
           "capacity": {
             "type": "integer",
             "format": "int32"
+          },
+          "isInternal": {
+            "type": "boolean"
           }
         },
         "additionalProperties": false
@@ -2597,7 +2517,11 @@
           "isInternal": {
             "type": "boolean"
           },
-          "record": {
+          "description": {
+            "type": "string",
+            "nullable": true
+          },
+          "coachName": {
             "type": "string",
             "nullable": true
           },
@@ -2637,7 +2561,11 @@
           "isInternal": {
             "type": "boolean"
           },
-          "record": {
+          "description": {
+            "type": "string",
+            "nullable": true
+          },
+          "coachName": {
             "type": "string",
             "nullable": true
           }

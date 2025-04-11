@@ -33,12 +33,17 @@ export class HomeComponent {
   }
 
   selectNews(news: any): void {
-    this.newsService.getNewsById(news.id).subscribe((data) => {
-      this.selectedNews = data;
-      this.successMessage = '';
-      this.errorMessage = '';
-    });
+    if (this.selectedNews?.id === news.id) {
+      this.selectedNews = null; // dacă e deja selectată, o închidem
+    } else {
+      this.newsService.getNewsById(news.id).subscribe((data) => {
+        this.selectedNews = data;
+        this.successMessage = '';
+        this.errorMessage = '';
+      });
+    }
   }
+  
 
   addComment(): void {
     if (!this.newCommentText.trim()) return;
@@ -51,7 +56,13 @@ export class HomeComponent {
         this.successMessage = 'Comentariu adăugat cu succes!';
         this.errorMessage = '';
         this.newCommentText = '';
-        this.selectNews(this.selectedNews); // reîncarcă știrea cu comentarii
+  
+        // reîncarcă datele fără a trece prin toggle
+        if (this.selectedNews?.id) {
+          this.newsService.getNewsById(this.selectedNews.id).subscribe((data) => {
+            this.selectedNews = data;
+          });
+        }
       },
       error: () => {
         this.errorMessage = 'A apărut o eroare la postarea comentariului.';
@@ -59,5 +70,6 @@ export class HomeComponent {
       }
     });
   }
+  
   
 }

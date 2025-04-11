@@ -11,8 +11,6 @@ namespace FCUnirea.Business.Models
 
         public int SeatPrice { get; set; }
 
-        public bool Reserved { get; set; }
-
         //--------------Relations--------------------//
         // Foreign Key
         public int? Seat_StadiumsId { get; set; }

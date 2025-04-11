@@ -14,6 +14,9 @@ namespace FCUnirea.Domain.Entities
 
         public int TicketsSold { get; set; }
 
+        public string RefereeName { get; set; }
+
+
         //--------------Relations--------------------//
         public ICollection<Tickets> Games_Tickets { get; set; }
         public ICollection<PlayerStatisticsPerGame> Games_PlayerStatisticsPerGame { get; set; }

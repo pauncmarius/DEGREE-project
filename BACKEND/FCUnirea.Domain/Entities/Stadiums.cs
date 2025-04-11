@@ -11,6 +11,9 @@ namespace FCUnirea.Domain.Entities
 
         public int Capacity { get; set; }
 
+        public bool IsInternal { get; set; }
+
+
         //--------------Relations--------------------//
 
         public ICollection<Seats> Stadiums_Seats { get; set; }

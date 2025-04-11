@@ -30,11 +30,6 @@ namespace FCUnirea.Persistance.Data.Mappings
                 .IsRequired();
 
             modelBuilder.Entity<Seats>()
-                .Property(s => s.Reserved)
-                .HasColumnName("Reserved")
-                .IsRequired();
-
-            modelBuilder.Entity<Seats>()
                 .Property(c => c.Seat_StadiumsId)
                 .HasColumnName("StadiumId")
                 .IsRequired();

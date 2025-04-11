@@ -19,31 +19,6 @@ namespace FCUnirea.Persistance.Data.Mappings
                 .IsRequired();
 
             modelBuilder.Entity<PlayerStatisticsPerCompetition>()
-                .Property(s => s.Assists)
-                .HasColumnName("Assists")
-                .IsRequired();
-
-            modelBuilder.Entity<PlayerStatisticsPerCompetition>()
-                .Property(s => s.Saves)
-                .HasColumnName("Saves")
-                .IsRequired();
-
-            modelBuilder.Entity<PlayerStatisticsPerCompetition>()
-                .Property(s => s.YellowCards)
-                .HasColumnName("YellowCards")
-                .IsRequired();
-
-            modelBuilder.Entity<PlayerStatisticsPerCompetition>()
-                .Property(s => s.RedCards)
-                .HasColumnName("RedCards")
-                .IsRequired();
-
-            modelBuilder.Entity<PlayerStatisticsPerCompetition>()
-                .Property(s => s.MinutesPlayed)
-                .HasColumnName("MinutesPlayed")
-                .IsRequired();
-
-            modelBuilder.Entity<PlayerStatisticsPerCompetition>()
                 .Property(c => c.PlayerStatisticsPerCompetition_PlayersId)
                 .HasColumnName("PlayerId")
                 .IsRequired();
