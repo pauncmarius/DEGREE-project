@@ -16,6 +16,9 @@ namespace FCUnirea.Domain.Entities
 
         public string RefereeName { get; set; }
 
+        public bool IsPlayed { get; set; }
+
+
 
         //--------------Relations--------------------//
         public ICollection<Tickets> Games_Tickets { get; set; }

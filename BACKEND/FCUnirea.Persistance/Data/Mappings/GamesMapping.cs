@@ -58,6 +58,11 @@ namespace FCUnirea.Persistance.Data.Mappings
                 .HasColumnName("RefereeName")
                 .IsRequired();
 
+            modelBuilder.Entity<Games>()
+                .Property(c => c.IsPlayed)
+                .HasColumnName("IsPlayed")
+                .IsRequired();
+
             // Definirea relațiilor cu alte tabele
             modelBuilder.Entity<Games>()
                 .HasMany(n => n.Games_Tickets)

@@ -16,6 +16,9 @@ namespace FCUnirea.Business.Models
 
         public string RefereeName { get; set; }
 
+        public bool IsPlayed { get; set; }
+
+
 
         //--------------Relations--------------------//
         // Foreign Key
