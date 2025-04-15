@@ -1901,6 +1901,9 @@
             "type": "string",
             "nullable": true
           },
+          "isPlayed": {
+            "type": "boolean"
+          },
           "games_Tickets": {
             "type": "array",
             "items": {
@@ -1972,6 +1975,9 @@
           "refereeName": {
             "type": "string",
             "nullable": true
+          },
+          "isPlayed": {
+            "type": "boolean"
           },
           "game_CompetitionsId": {
             "type": "integer",
@@ -2540,10 +2546,18 @@
             "nullable": true
           },
           "team_AwayTeam": {
-            "$ref": "#/components/schemas/Games"
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/Games"
+            },
+            "nullable": true
           },
           "team_HomeTeam": {
-            "$ref": "#/components/schemas/Games"
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/Games"
+            },
+            "nullable": true
           }
         },
         "additionalProperties": false
