@@ -1,8 +1,8 @@
-﻿
-using FCUnirea.Business.Models;
+﻿using FCUnirea.Business.Models;
 using FCUnirea.Business.Services.IServices;
 using FCUnirea.Domain.Entities;
 using Microsoft.AspNetCore.Mvc;
+using System.Threading.Tasks;
 
 namespace FCUnirea.Api.Controllers
 {
@@ -18,40 +18,40 @@ namespace FCUnirea.Api.Controllers
         }
 
         [HttpGet]
-        public IActionResult GetAll()
+        public async Task<IActionResult> GetAll()
         {
-            return Ok(_teamStatisticsService.GetTeamStatistics());
+            var result = await _teamStatisticsService.GetTeamStatisticsAsync();
+            return Ok(result);
         }
 
         [HttpGet("{id}")]
-        public IActionResult GetById(int id)
+        public async Task<IActionResult> GetById(int id)
         {
-            var teamStats = _teamStatisticsService.GetTeamStatistic(id);
+            var teamStats = await _teamStatisticsService.GetTeamStatisticAsync(id);
             if (teamStats != null)
-            {
                 return Ok(teamStats);
-            }
 
             return NotFound();
         }
 
         [HttpPost]
-        public IActionResult Add([FromBody] TeamStatisticsModel model)
+        public async Task<IActionResult> Add([FromBody] TeamStatisticsModel model)
         {
-            return CreatedAtAction(null, _teamStatisticsService.AddTeamStatistic(model));
+            var newId = await _teamStatisticsService.AddTeamStatisticAsync(model);
+            return CreatedAtAction(nameof(GetById), new { id = newId }, model);
         }
 
         [HttpPut]
-        public IActionResult Update([FromBody] TeamStatistics teamStats)
+        public async Task<IActionResult> Update([FromBody] TeamStatistics teamStats)
         {
-            _teamStatisticsService.UpdateTeamStatistic(teamStats);
+            await _teamStatisticsService.UpdateTeamStatisticAsync(teamStats);
             return NoContent();
         }
 
         [HttpDelete("{id}")]
-        public IActionResult Delete(int id)
+        public async Task<IActionResult> Delete(int id)
         {
-            _teamStatisticsService.DeleteTeamStatistic(id);
+            await _teamStatisticsService.DeleteTeamStatisticAsync(id);
             return NoContent();
         }
     }

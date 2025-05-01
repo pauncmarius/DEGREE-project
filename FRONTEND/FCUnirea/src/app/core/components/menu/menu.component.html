@@ -16,6 +16,10 @@
     </div>
   </div>
 
+  <a *ngIf="isLoggedIn()" class="menu-item" routerLink="/teams" routerLinkActive="active">
+    Teams
+  </a>
+
   <!-- Login apare doar dacă nu e logat -->
   <a *ngIf="!isLoggedIn()" class="menu-item" routerLink="/login" routerLinkActive="active">
     Login

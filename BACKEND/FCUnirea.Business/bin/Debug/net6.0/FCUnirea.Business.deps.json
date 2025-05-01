@@ -11,6 +11,7 @@
           "AutoMapper": "12.0.1",
           "AutoMapper.Extensions.Microsoft.DependencyInjection": "12.0.0",
           "FCUnirea.Domain": "1.0.0",
+          "FCUnirea.Persistance": "1.0.0",
           "FluentValidation.AspNetCore": "11.3.0",
           "Microsoft.AspNetCore.Authentication.JwtBearer": "6.0.36",
           "Microsoft.EntityFrameworkCore": "6.0.36",
@@ -647,6 +648,25 @@
             "fileVersion": "1.0.0.0"
           }
         }
+      },
+      "FCUnirea.Persistance/1.0.0": {
+        "dependencies": {
+          "AutoMapper": "12.0.1",
+          "AutoMapper.Extensions.Microsoft.DependencyInjection": "12.0.0",
+          "FCUnirea.Domain": "1.0.0",
+          "FluentValidation.AspNetCore": "11.3.0",
+          "Microsoft.AspNetCore.Authentication.JwtBearer": "6.0.36",
+          "Microsoft.EntityFrameworkCore": "6.0.36",
+          "Microsoft.EntityFrameworkCore.SqlServer": "6.0.36",
+          "Newtonsoft.Json": "13.0.3",
+          "Swashbuckle.AspNetCore": "6.9.0"
+        },
+        "runtime": {
+          "FCUnirea.Persistance.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "1.0.0.0"
+          }
+        }
       }
     }
   },
@@ -1056,6 +1076,11 @@
       "hashPath": "system.windows.extensions.4.7.0.nupkg.sha512"
     },
     "FCUnirea.Domain/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "FCUnirea.Persistance/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

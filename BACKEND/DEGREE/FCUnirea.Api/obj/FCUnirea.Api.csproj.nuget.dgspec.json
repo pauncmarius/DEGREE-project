@@ -166,6 +166,9 @@
             "projectReferences": {
               "C:\\Users\\paunm\\Documents\\GITHUB\\DEGREE-project\\BACKEND\\FCUnirea.Domain\\FCUnirea.Domain.csproj": {
                 "projectPath": "C:\\Users\\paunm\\Documents\\GITHUB\\DEGREE-project\\BACKEND\\FCUnirea.Domain\\FCUnirea.Domain.csproj"
+              },
+              "C:\\Users\\paunm\\Documents\\GITHUB\\DEGREE-project\\BACKEND\\FCUnirea.Persistance\\FCUnirea.Persistance.csproj": {
+                "projectPath": "C:\\Users\\paunm\\Documents\\GITHUB\\DEGREE-project\\BACKEND\\FCUnirea.Persistance\\FCUnirea.Persistance.csproj"
               }
             }
           }

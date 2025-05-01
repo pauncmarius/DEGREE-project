@@ -1,4 +1,6 @@
 ﻿
+using System.Collections.Generic;
+using System.Linq;
 using FCUnirea.Domain.Entities;
 using FCUnirea.Domain.IRepositories;
 using FCUnirea.Persistance.Data;
@@ -9,7 +11,6 @@ namespace FCUnirea.Persistance.Repositories
     {
         public TeamStatisticsRepository(FCUnireaDbContext fcUnireaDbContext) : base(fcUnireaDbContext)
         {
-
         }
     }
 }

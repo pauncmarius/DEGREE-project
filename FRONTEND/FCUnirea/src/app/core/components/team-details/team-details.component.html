@@ -1,0 +1,6 @@
+<div class="team-details-container" *ngIf="team">
+    <h2>{{ team.teamName }}</h2>
+    <p><strong>Antrenor:</strong> {{ team.coachName }}</p>
+    <p><strong>Descriere:</strong> {{ team.description || 'Fără descriere.' }}</p>
+  </div>
+  

@@ -12,17 +12,35 @@ namespace FCUnirea.Business.Services
     {
         private readonly IGamesRepository _gamesRepository;
         private readonly IMapper _mapper;
+        private readonly ITeamStatisticsService _teamStatisticsService;
 
-        public GamesService(IGamesRepository gamesRepository, IMapper mapper)
+
+        public GamesService(IGamesRepository gamesRepository, IMapper mapper, ITeamStatisticsService teamStatisticsService)
         {
             _gamesRepository = gamesRepository;
             _mapper = mapper;
+            _teamStatisticsService = teamStatisticsService;
         }
 
         public IEnumerable<Games> GetGames() => _gamesRepository.ListAll();
         public Games GetGame(int id) => _gamesRepository.GetById(id);
         public int AddGame(GamesModel game) => _gamesRepository.Add(_mapper.Map<Games>(game)).Id;
-        public void UpdateGame(Games game) => _gamesRepository.Update(game);
+        public void UpdateGame(Games game)
+        {
+            var existing = _gamesRepository.GetById(game.Id);
+
+            bool wasNotPlayed = existing != null && existing.IsPlayed == false;
+            bool nowPlayed = game.IsPlayed == true;
+
+            _gamesRepository.Update(game);
+
+            // dacă acum devine jucat și nu era înainte
+            if (wasNotPlayed && nowPlayed)
+            {
+                _teamStatisticsService.UpdateAllTeamStatisticsFromGamesAsync();
+            }
+        }
+
         public void DeleteGame(int id)
         {
             var game = _gamesRepository.GetById(id);

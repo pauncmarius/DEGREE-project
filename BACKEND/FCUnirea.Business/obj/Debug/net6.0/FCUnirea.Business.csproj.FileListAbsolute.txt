@@ -34,12 +34,17 @@ C:\Users\paunm\Documents\github\degree\DEGREE-project\BACKEND\FCUnirea.Business\
 C:\Users\paunm\Documents\github\degree\DEGREE-project\BACKEND\FCUnirea.Business\obj\Debug\net6.0\FCUnirea.Business.pdb
 C:\Users\paunm\Documents\github\degree\DEGREE-project\BACKEND\FCUnirea.Business\obj\Debug\net6.0\FCUnirea.Business.genruntimeconfig.cache
 C:\Users\paunm\Documents\github\degree\DEGREE-project\BACKEND\FCUnirea.Business\obj\Debug\net6.0\ref\FCUnirea.Business.dll
+C:\Users\paunm\Documents\GITHUB\DEGREE-project\BACKEND\FCUnirea.Business\bin\Debug\net6.0\FCUnirea.Persistance.deps.json
+C:\Users\paunm\Documents\GITHUB\DEGREE-project\BACKEND\FCUnirea.Business\bin\Debug\net6.0\FCUnirea.Persistance.runtimeconfig.json
+C:\Users\paunm\Documents\GITHUB\DEGREE-project\BACKEND\FCUnirea.Business\bin\Debug\net6.0\FCUnirea.Persistance.exe
 C:\Users\paunm\Documents\GITHUB\DEGREE-project\BACKEND\FCUnirea.Business\bin\Debug\net6.0\FCUnirea.Business.deps.json
 C:\Users\paunm\Documents\GITHUB\DEGREE-project\BACKEND\FCUnirea.Business\bin\Debug\net6.0\FCUnirea.Business.runtimeconfig.json
 C:\Users\paunm\Documents\GITHUB\DEGREE-project\BACKEND\FCUnirea.Business\bin\Debug\net6.0\FCUnirea.Business.dll
 C:\Users\paunm\Documents\GITHUB\DEGREE-project\BACKEND\FCUnirea.Business\bin\Debug\net6.0\FCUnirea.Business.pdb
 C:\Users\paunm\Documents\GITHUB\DEGREE-project\BACKEND\FCUnirea.Business\bin\Debug\net6.0\FCUnirea.Domain.dll
+C:\Users\paunm\Documents\GITHUB\DEGREE-project\BACKEND\FCUnirea.Business\bin\Debug\net6.0\FCUnirea.Persistance.dll
 C:\Users\paunm\Documents\GITHUB\DEGREE-project\BACKEND\FCUnirea.Business\bin\Debug\net6.0\FCUnirea.Domain.pdb
+C:\Users\paunm\Documents\GITHUB\DEGREE-project\BACKEND\FCUnirea.Business\bin\Debug\net6.0\FCUnirea.Persistance.pdb
 C:\Users\paunm\Documents\GITHUB\DEGREE-project\BACKEND\FCUnirea.Business\obj\Debug\net6.0\FCUnirea.Business.csproj.AssemblyReference.cache
 C:\Users\paunm\Documents\GITHUB\DEGREE-project\BACKEND\FCUnirea.Business\obj\Debug\net6.0\FCUnirea.Business.GeneratedMSBuildEditorConfig.editorconfig
 C:\Users\paunm\Documents\GITHUB\DEGREE-project\BACKEND\FCUnirea.Business\obj\Debug\net6.0\FCUnirea.Business.AssemblyInfoInputs.cache

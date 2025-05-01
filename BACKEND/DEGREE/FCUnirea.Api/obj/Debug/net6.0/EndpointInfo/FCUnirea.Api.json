@@ -1146,6 +1146,18 @@
         }
       }
     },
+    "/api/Teams/internal": {
+      "get": {
+        "tags": [
+          "Teams"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
     "/api/TeamStatistics": {
       "get": {
         "tags": [
@@ -2565,15 +2577,13 @@
       "TeamsModel": {
         "type": "object",
         "properties": {
+          "id": {
+            "type": "integer",
+            "format": "int32"
+          },
           "teamName": {
             "type": "string",
             "nullable": true
-          },
-          "teamType": {
-            "$ref": "#/components/schemas/TeamType"
-          },
-          "isInternal": {
-            "type": "boolean"
           },
           "description": {
             "type": "string",

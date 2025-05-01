@@ -1,8 +1,8 @@
-﻿
-using FCUnirea.Business.Models;
+﻿using FCUnirea.Business.Models;
 using FCUnirea.Business.Services.IServices;
 using FCUnirea.Domain.Entities;
 using Microsoft.AspNetCore.Mvc;
+using System.Threading.Tasks;
 
 namespace FCUnirea.Api.Controllers
 {
@@ -18,40 +18,36 @@ namespace FCUnirea.Api.Controllers
         }
 
         [HttpGet]
-        public IActionResult GetAll()
+        public async Task<IActionResult> GetAll()
         {
-            return Ok(_statisticsService.GetPlayerStatisticsPerCompetitions());
+            return Ok(await _statisticsService.GetPlayerStatisticsPerCompetitionsAsync());
         }
 
         [HttpGet("{id}")]
-        public IActionResult GetById(int id)
+        public async Task<IActionResult> GetById(int id)
         {
-            var statistics = _statisticsService.GetPlayerStatisticPerCompetition(id);
-            if (statistics != null)
-            {
-                return Ok(statistics);
-            }
-
-            return NotFound();
+            var statistics = await _statisticsService.GetPlayerStatisticPerCompetitionAsync(id);
+            return statistics != null ? Ok(statistics) : NotFound();
         }
 
         [HttpPost]
-        public IActionResult Add([FromBody] PlayerStatisticsPerCompetitionModel model)
+        public async Task<IActionResult> Add([FromBody] PlayerStatisticsPerCompetitionModel model)
         {
-            return CreatedAtAction(null, _statisticsService.AddPlayerStatisticPerCompetition(model));
+            var newId = await _statisticsService.AddPlayerStatisticPerCompetitionAsync(model);
+            return CreatedAtAction(nameof(GetById), new { id = newId }, model);
         }
 
         [HttpPut]
-        public IActionResult Update([FromBody] PlayerStatisticsPerCompetition statistics)
+        public async Task<IActionResult> Update([FromBody] PlayerStatisticsPerCompetition statistics)
         {
-            _statisticsService.UpdatePlayerStatisticPerCompetition(statistics);
+            await _statisticsService.UpdatePlayerStatisticPerCompetitionAsync(statistics);
             return NoContent();
         }
 
         [HttpDelete("{id}")]
-        public IActionResult Delete(int id)
+        public async Task<IActionResult> Delete(int id)
         {
-            _statisticsService.DeletePlayerStatisticPerCompetition(id);
+            await _statisticsService.DeletePlayerStatisticPerCompetitionAsync(id);
             return NoContent();
         }
     }

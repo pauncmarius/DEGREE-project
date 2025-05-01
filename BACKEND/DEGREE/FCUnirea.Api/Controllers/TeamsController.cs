@@ -1,8 +1,10 @@
 ﻿
+using System.Threading.Tasks;
 using FCUnirea.Business.Models;
 using FCUnirea.Business.Services.IServices;
 using FCUnirea.Domain.Entities;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 
 namespace FCUnirea.Api.Controllers
 {
@@ -53,6 +55,13 @@ namespace FCUnirea.Api.Controllers
         {
             _teamService.DeleteTeam(id);
             return NoContent();
+        }
+
+        [HttpGet("internal")]
+        public async Task<IActionResult> GetInternalTeams()
+        {
+            var teams = await _teamService.GetInternalTeamsAsync();
+            return Ok(teams);
         }
     }
 }

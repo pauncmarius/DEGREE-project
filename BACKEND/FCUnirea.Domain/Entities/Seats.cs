@@ -22,8 +22,6 @@ namespace FCUnirea.Domain.Entities
     public enum SeatType
     {
         Standard,
-        Lawn,
-        Stands,
         Vip
     }
 }

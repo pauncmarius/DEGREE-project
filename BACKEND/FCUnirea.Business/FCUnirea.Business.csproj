@@ -27,6 +27,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\FCUnirea.Domain\FCUnirea.Domain.csproj" />
+    <ProjectReference Include="..\FCUnirea.Persistance\FCUnirea.Persistance.csproj" />
   </ItemGroup>
 
 </Project>

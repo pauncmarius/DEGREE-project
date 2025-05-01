@@ -1,16 +1,17 @@
-﻿
-using FCUnirea.Business.Models;
+﻿using FCUnirea.Business.Models;
 using FCUnirea.Domain.Entities;
 using System.Collections.Generic;
+using System.Threading.Tasks;
 
 namespace FCUnirea.Business.Services.IServices
 {
     public interface IPlayerStatisticsPerCompetitionService
     {
-        public IEnumerable<PlayerStatisticsPerCompetition> GetPlayerStatisticsPerCompetitions();
-        public PlayerStatisticsPerCompetition GetPlayerStatisticPerCompetition(int id);
-        public int AddPlayerStatisticPerCompetition(PlayerStatisticsPerCompetitionModel statistic);
-        public void UpdatePlayerStatisticPerCompetition(PlayerStatisticsPerCompetition statistic);
-        public void DeletePlayerStatisticPerCompetition(int id);
+        Task<IEnumerable<PlayerStatisticsPerCompetition>> GetPlayerStatisticsPerCompetitionsAsync();
+        Task<PlayerStatisticsPerCompetition> GetPlayerStatisticPerCompetitionAsync(int id);
+        Task<int> AddPlayerStatisticPerCompetitionAsync(PlayerStatisticsPerCompetitionModel statistic);
+        Task UpdatePlayerStatisticPerCompetitionAsync(PlayerStatisticsPerCompetition statistic);
+        Task DeletePlayerStatisticPerCompetitionAsync(int id);
+        Task UpdateStatisticsFromGamesAsync();
     }
 }

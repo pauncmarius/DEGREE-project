@@ -1009,6 +1009,27 @@
         "runtime": {
           "bin/placeholder/FCUnirea.Domain.dll": {}
         }
+      },
+      "FCUnirea.Persistance/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v6.0",
+        "dependencies": {
+          "AutoMapper": "12.0.1",
+          "AutoMapper.Extensions.Microsoft.DependencyInjection": "12.0.0",
+          "FCUnirea.Domain": "1.0.0",
+          "FluentValidation.AspNetCore": "11.3.0",
+          "Microsoft.AspNetCore.Authentication.JwtBearer": "6.0.36",
+          "Microsoft.EntityFrameworkCore": "6.0.36",
+          "Microsoft.EntityFrameworkCore.SqlServer": "6.0.36",
+          "Newtonsoft.Json": "13.0.3",
+          "Swashbuckle.AspNetCore": "6.9.0"
+        },
+        "compile": {
+          "bin/placeholder/FCUnirea.Persistance.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/FCUnirea.Persistance.dll": {}
+        }
       }
     }
   },
@@ -2769,6 +2790,11 @@
       "type": "project",
       "path": "../FCUnirea.Domain/FCUnirea.Domain.csproj",
       "msbuildProject": "../FCUnirea.Domain/FCUnirea.Domain.csproj"
+    },
+    "FCUnirea.Persistance/1.0.0": {
+      "type": "project",
+      "path": "../FCUnirea.Persistance/FCUnirea.Persistance.csproj",
+      "msbuildProject": "../FCUnirea.Persistance/FCUnirea.Persistance.csproj"
     }
   },
   "projectFileDependencyGroups": {
@@ -2776,6 +2802,7 @@
       "AutoMapper >= 12.0.1",
       "AutoMapper.Extensions.Microsoft.DependencyInjection >= 12.0.0",
       "FCUnirea.Domain >= 1.0.0",
+      "FCUnirea.Persistance >= 1.0.0",
       "FluentValidation.AspNetCore >= 11.3.0",
       "Microsoft.AspNetCore.Authentication.JwtBearer >= 6.0.36",
       "Microsoft.EntityFrameworkCore >= 6.0.36",
@@ -2822,6 +2849,9 @@
           "projectReferences": {
             "C:\\Users\\paunm\\Documents\\GITHUB\\DEGREE-project\\BACKEND\\FCUnirea.Domain\\FCUnirea.Domain.csproj": {
               "projectPath": "C:\\Users\\paunm\\Documents\\GITHUB\\DEGREE-project\\BACKEND\\FCUnirea.Domain\\FCUnirea.Domain.csproj"
+            },
+            "C:\\Users\\paunm\\Documents\\GITHUB\\DEGREE-project\\BACKEND\\FCUnirea.Persistance\\FCUnirea.Persistance.csproj": {
+              "projectPath": "C:\\Users\\paunm\\Documents\\GITHUB\\DEGREE-project\\BACKEND\\FCUnirea.Persistance\\FCUnirea.Persistance.csproj"
             }
           }
         }

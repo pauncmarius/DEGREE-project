@@ -740,6 +740,16 @@
     "ReturnTypes": []
   },
   {
+    "ContainingType": "FCUnirea.Api.Controllers.TeamsController",
+    "Method": "GetInternalTeams",
+    "RelativePath": "api/Teams/internal",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
     "ContainingType": "FCUnirea.Api.Controllers.TeamStatisticsController",
     "Method": "GetAll",
     "RelativePath": "api/TeamStatistics",

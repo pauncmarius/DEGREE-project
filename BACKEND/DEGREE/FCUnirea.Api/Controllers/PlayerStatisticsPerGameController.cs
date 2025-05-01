@@ -1,4 +1,4 @@
-﻿
+﻿using System.Threading.Tasks;
 using FCUnirea.Business.Models;
 using FCUnirea.Business.Services.IServices;
 using FCUnirea.Domain.Entities;
@@ -11,47 +11,53 @@ namespace FCUnirea.Api.Controllers
     public class PlayerStatisticsPerGameController : Controller
     {
         private readonly IPlayerStatisticsPerGameService _statisticsService;
+        private readonly ITeamStatisticsService _teamStatisticsService;
 
-        public PlayerStatisticsPerGameController(IPlayerStatisticsPerGameService statisticsService)
+        public PlayerStatisticsPerGameController(
+            IPlayerStatisticsPerGameService statisticsService,
+            ITeamStatisticsService teamStatisticsService)
         {
             _statisticsService = statisticsService;
+            _teamStatisticsService = teamStatisticsService;
         }
 
         [HttpGet]
-        public IActionResult GetAll()
+        public async Task<IActionResult> GetAll()
         {
-            return Ok(_statisticsService.GetPlayerStatisticsPerGames());
+            var stats = await _statisticsService.GetPlayerStatisticsPerGamesAsync();
+            return Ok(stats);
         }
 
         [HttpGet("{id}")]
-        public IActionResult GetById(int id)
+        public async Task<IActionResult> GetById(int id)
         {
-            var statistics = _statisticsService.GetPlayerStatisticPerGame(id);
-            if (statistics != null)
-            {
-                return Ok(statistics);
-            }
-
-            return NotFound();
+            var statistics = await _statisticsService.GetPlayerStatisticPerGameAsync(id);
+            return statistics != null ? Ok(statistics) : NotFound();
         }
 
         [HttpPost]
-        public IActionResult Add([FromBody] PlayerStatisticsPerGameModel model)
+        public async Task<IActionResult> Add([FromBody] PlayerStatisticsPerGameModel model)
         {
-            return CreatedAtAction(null, _statisticsService.AddPlayerStatisticPerGame(model));
+            var newId = await _statisticsService.AddAndUpdateGameScoreAsync(model);
+            return CreatedAtAction(nameof(GetById), new { id = newId }, model);
         }
 
+
         [HttpPut]
-        public IActionResult Update([FromBody] PlayerStatisticsPerGame statistics)
+        public async Task<IActionResult> Update([FromBody] PlayerStatisticsPerGame statistics)
         {
-            _statisticsService.UpdatePlayerStatisticPerGame(statistics);
+            await _statisticsService.UpdatePlayerStatisticPerGameAsync(statistics);
             return NoContent();
         }
 
         [HttpDelete("{id}")]
-        public IActionResult Delete(int id)
+        public async Task<IActionResult> Delete(int id)
         {
-            _statisticsService.DeletePlayerStatisticPerGame(id);
+            bool wasGameAffected = await _statisticsService.DeletePlayerStatisticPerGameAsync(id);
+            if (wasGameAffected)
+            {
+                await _teamStatisticsService.UpdateAllTeamStatisticsFromGamesAsync();
+            }
             return NoContent();
         }
     }

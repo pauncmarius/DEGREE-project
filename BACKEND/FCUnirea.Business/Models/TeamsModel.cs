@@ -7,11 +7,9 @@ namespace FCUnirea.Business.Models
 { 
     public class TeamsModel
     {
+        public int Id { get; set; }
+
         public string TeamName { get; set; }
-
-        public TeamType TeamType { get; set; }
-
-        public bool IsInternal { get; set; }
 
         [Column(TypeName = "TEXT")]
         public string Description { get; set; }

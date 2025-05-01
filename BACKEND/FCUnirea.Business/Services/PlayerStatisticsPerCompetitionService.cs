@@ -1,10 +1,10 @@
-﻿
-using AutoMapper;
+﻿using AutoMapper;
 using FCUnirea.Business.Models;
 using FCUnirea.Business.Services.IServices;
 using FCUnirea.Domain.Entities;
 using FCUnirea.Domain.IRepositories;
 using System.Collections.Generic;
+using System.Threading.Tasks;
 
 namespace FCUnirea.Business.Services
 {
@@ -19,14 +19,63 @@ namespace FCUnirea.Business.Services
             _mapper = mapper;
         }
 
-        public IEnumerable<PlayerStatisticsPerCompetition> GetPlayerStatisticsPerCompetitions() => _repository.ListAll();
-        public PlayerStatisticsPerCompetition GetPlayerStatisticPerCompetition(int id) => _repository.GetById(id);
-        public int AddPlayerStatisticPerCompetition(PlayerStatisticsPerCompetitionModel statistic) => _repository.Add(_mapper.Map<PlayerStatisticsPerCompetition>(statistic)).Id;
-        public void UpdatePlayerStatisticPerCompetition(PlayerStatisticsPerCompetition statistic) => _repository.Update(statistic);
-        public void DeletePlayerStatisticPerCompetition(int id)
+        public async Task<IEnumerable<PlayerStatisticsPerCompetition>> GetPlayerStatisticsPerCompetitionsAsync() => await _repository.ListAllAsync();
+
+        public async Task<PlayerStatisticsPerCompetition> GetPlayerStatisticPerCompetitionAsync(int id) => await _repository.GetByIdAsync(id);
+
+        public async Task<int> AddPlayerStatisticPerCompetitionAsync(PlayerStatisticsPerCompetitionModel statistic)
         {
-            var statistic = _repository.GetById(id);
-            if (statistic != null) _repository.Delete(statistic);
+            var entity = _mapper.Map<PlayerStatisticsPerCompetition>(statistic);
+            await _repository.AddAsync(entity);
+            await _repository.SaveChangesAsync();
+            return entity.Id;
         }
+
+        public async Task UpdatePlayerStatisticPerCompetitionAsync(PlayerStatisticsPerCompetition statistic)
+        {
+            _repository.Update(statistic);
+            await _repository.SaveChangesAsync();
+        }
+
+        public async Task DeletePlayerStatisticPerCompetitionAsync(int id)
+        {
+            var statistic = await _repository.GetByIdAsync(id);
+            if (statistic != null)
+            {
+                _repository.Delete(statistic);
+                await _repository.SaveChangesAsync();
+            }
+        }
+
+        public async Task UpdateStatisticsFromGamesAsync()
+        {
+            // 🧹 Ștergi complet toate statisticile din competiții
+            var all = await _repository.ListAllAsync();
+            foreach (var entry in all)
+            {
+                _repository.Delete(entry);
+            }
+            await _repository.SaveChangesAsync();
+
+            // ♻️ Recalculezi tot din nou, curat
+            var groupedGoals = await _repository.GetGoalsGroupedByPlayerAndCompetitionAsync();
+
+            foreach (var entry in groupedGoals)
+            {
+                var (playerId, competitionId) = entry.Key;
+                var totalGoals = entry.Value;
+
+                await _repository.AddAsync(new PlayerStatisticsPerCompetition
+                {
+                    PlayerStatisticsPerCompetition_PlayersId = playerId,
+                    PlayerStatisticsPerCompetition_CompetitionsId = competitionId,
+                    Goals = totalGoals
+                });
+            }
+
+            await _repository.SaveChangesAsync();
+        }
+
+
     }
 }

@@ -5,6 +5,7 @@ using FCUnirea.Business.Services.IServices;
 using FCUnirea.Domain.Entities;
 using FCUnirea.Domain.IRepositories;
 using System.Collections.Generic;
+using System.Threading.Tasks;
 
 namespace FCUnirea.Business.Services
 {
@@ -27,6 +28,11 @@ namespace FCUnirea.Business.Services
         {
             var team = _teamRepository.GetById(id);
             if (team != null) _teamRepository.Delete(team);
+        }
+        public async Task<IEnumerable<TeamsModel>> GetInternalTeamsAsync()
+        {
+            var teams = await _teamRepository.GetInternalTeamsAsync();
+            return _mapper.Map<IEnumerable<TeamsModel>>(teams);
         }
     }
 }
