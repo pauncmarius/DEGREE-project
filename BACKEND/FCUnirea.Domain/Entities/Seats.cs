@@ -1,4 +1,6 @@
 ﻿
+using System.Collections.Generic;
+
 namespace FCUnirea.Domain.Entities
 {
     public class Seats : BaseEntity
@@ -11,7 +13,7 @@ namespace FCUnirea.Domain.Entities
 
         //--------------Relations--------------------//
 
-        public Tickets Seat_Tickets { get; set; }
+        public ICollection<Tickets> Seat_Tickets { get; set; }
 
         // Foreign Key
         public int? Seat_StadiumsId { get; set; }

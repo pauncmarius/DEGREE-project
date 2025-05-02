@@ -36,10 +36,11 @@ namespace FCUnirea.Persistance.Data.Mappings
 
             // Definirea relațiilor cu alte tabele
             modelBuilder.Entity<Seats>()
-                .HasOne(n => n.Seat_Tickets)
-                .WithOne(c => c.Ticket_Seats)
-                .HasForeignKey<Tickets>(c => c.Ticket_SeatsId)
+                .HasMany<Tickets>(s => s.Seat_Tickets)
+                .WithOne(t => t.Ticket_Seats)
+                .HasForeignKey(t => t.Ticket_SeatsId)
                 .OnDelete(DeleteBehavior.Restrict);
+
         }
     }
 }

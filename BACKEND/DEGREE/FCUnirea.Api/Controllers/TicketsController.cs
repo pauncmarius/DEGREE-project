@@ -1,5 +1,8 @@
 ﻿
+using System.Threading.Tasks;
+using System;
 using FCUnirea.Business.Models;
+using FCUnirea.Business.Services;
 using FCUnirea.Business.Services.IServices;
 using FCUnirea.Domain.Entities;
 using Microsoft.AspNetCore.Mvc;
@@ -35,12 +38,6 @@ namespace FCUnirea.Api.Controllers
             return NotFound();
         }
 
-        [HttpPost]
-        public IActionResult Add([FromBody] TicketsModel model)
-        {
-            return CreatedAtAction(null, _ticketService.AddTicket(model));
-        }
-
         [HttpPut]
         public IActionResult Update([FromBody] Tickets ticket)
         {
@@ -54,5 +51,21 @@ namespace FCUnirea.Api.Controllers
             _ticketService.DeleteTicket(id);
             return NoContent();
         }
+
+        [HttpPost]
+        public async Task<IActionResult> Add([FromBody] TicketsModel model)
+        {
+            try
+            {
+                var id = await _ticketService.AddTicketAsync(model);
+                return CreatedAtAction(nameof(GetById), new { id }, model);
+            }
+            catch (InvalidOperationException ex)
+            {
+                return Conflict(new { message = ex.Message });
+            }
+        }
+
+
     }
 }

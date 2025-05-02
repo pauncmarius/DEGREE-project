@@ -1283,35 +1283,6 @@
           }
         }
       },
-      "post": {
-        "tags": [
-          "Tickets"
-        ],
-        "requestBody": {
-          "content": {
-            "application/json": {
-              "schema": {
-                "$ref": "#/components/schemas/TicketsModel"
-              }
-            },
-            "text/json": {
-              "schema": {
-                "$ref": "#/components/schemas/TicketsModel"
-              }
-            },
-            "application/*+json": {
-              "schema": {
-                "$ref": "#/components/schemas/TicketsModel"
-              }
-            }
-          }
-        },
-        "responses": {
-          "200": {
-            "description": "OK"
-          }
-        }
-      },
       "put": {
         "tags": [
           "Tickets"
@@ -1331,6 +1302,35 @@
             "application/*+json": {
               "schema": {
                 "$ref": "#/components/schemas/Tickets"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      },
+      "post": {
+        "tags": [
+          "Tickets"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/TicketsModel"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/TicketsModel"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/TicketsModel"
               }
             }
           }
@@ -2290,9 +2290,7 @@
       "SeatType": {
         "enum": [
           0,
-          1,
-          2,
-          3
+          1
         ],
         "type": "integer",
         "format": "int32"
@@ -2316,7 +2314,11 @@
             "format": "int32"
           },
           "seat_Tickets": {
-            "$ref": "#/components/schemas/Tickets"
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/Tickets"
+            },
+            "nullable": true
           },
           "seat_StadiumsId": {
             "type": "integer",

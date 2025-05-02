@@ -2,6 +2,7 @@
 using FCUnirea.Business.Models;
 using FCUnirea.Domain.Entities;
 using System.Collections.Generic;
+using System.Threading.Tasks;
 
 namespace FCUnirea.Business.Services.IServices
 {
@@ -12,5 +13,8 @@ namespace FCUnirea.Business.Services.IServices
         public int AddTicket(TicketsModel ticket);
         public void UpdateTicket(Tickets ticket);
         public void DeleteTicket(int id);
+
+        Task<int> AddTicketAsync(TicketsModel ticket);
+
     }
 }

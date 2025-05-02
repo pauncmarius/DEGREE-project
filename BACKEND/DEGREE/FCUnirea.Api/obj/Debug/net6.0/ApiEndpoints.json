@@ -835,22 +835,6 @@
   },
   {
     "ContainingType": "FCUnirea.Api.Controllers.TicketsController",
-    "Method": "Add",
-    "RelativePath": "api/Tickets",
-    "HttpMethod": "POST",
-    "IsController": true,
-    "Order": 0,
-    "Parameters": [
-      {
-        "Name": "model",
-        "Type": "FCUnirea.Business.Models.TicketsModel",
-        "IsRequired": true
-      }
-    ],
-    "ReturnTypes": []
-  },
-  {
-    "ContainingType": "FCUnirea.Api.Controllers.TicketsController",
     "Method": "Update",
     "RelativePath": "api/Tickets",
     "HttpMethod": "PUT",
@@ -860,6 +844,22 @@
       {
         "Name": "ticket",
         "Type": "FCUnirea.Domain.Entities.Tickets",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "FCUnirea.Api.Controllers.TicketsController",
+    "Method": "Add",
+    "RelativePath": "api/Tickets",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "model",
+        "Type": "FCUnirea.Business.Models.TicketsModel",
         "IsRequired": true
       }
     ],
