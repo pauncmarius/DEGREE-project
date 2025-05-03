@@ -54,5 +54,13 @@ namespace FCUnirea.Api.Controllers
             _playerService.DeletePlayer(id);
             return NoContent();
         }
+
+        [HttpGet("byTeam/{teamId}")]
+        public IActionResult GetByTeam(int teamId)
+        {
+            var players = _playerService.GetPlayersByTeam(teamId);
+            return Ok(players);
+        }
+
     }
 }

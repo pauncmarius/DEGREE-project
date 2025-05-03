@@ -222,6 +222,22 @@
     "ReturnTypes": []
   },
   {
+    "ContainingType": "FCUnirea.Api.Controllers.GamesController",
+    "Method": "GetGamesByTeam",
+    "RelativePath": "api/Games/byTeam/{teamId}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "teamId",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
     "ContainingType": "FCUnirea.Api.Controllers.NewsController",
     "Method": "GetAll",
     "RelativePath": "api/News",
@@ -370,6 +386,22 @@
     "ReturnTypes": []
   },
   {
+    "ContainingType": "FCUnirea.Api.Controllers.PlayersController",
+    "Method": "GetByTeam",
+    "RelativePath": "api/Players/byTeam/{teamId}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "teamId",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
     "ContainingType": "FCUnirea.Api.Controllers.PlayerStatisticsPerCompetitionController",
     "Method": "GetAll",
     "RelativePath": "api/PlayerStatisticsPerCompetition",
@@ -437,6 +469,22 @@
     "Parameters": [
       {
         "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "FCUnirea.Api.Controllers.PlayerStatisticsPerCompetitionController",
+    "Method": "GetByPlayer",
+    "RelativePath": "api/PlayerStatisticsPerCompetition/byPlayer/{playerId}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "playerId",
         "Type": "System.Int32",
         "IsRequired": true
       }
@@ -817,6 +865,22 @@
     "Parameters": [
       {
         "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "FCUnirea.Api.Controllers.TeamStatisticsController",
+    "Method": "GetByCompetition",
+    "RelativePath": "api/TeamStatistics/byCompetition/{competitionId}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "competitionId",
         "Type": "System.Int32",
         "IsRequired": true
       }

@@ -45,5 +45,13 @@ namespace FCUnirea.Persistance.Repositories
                     p.PlayerStatisticsPerCompetition_PlayersId == playerId &&
                     p.PlayerStatisticsPerCompetition_CompetitionsId == competitionId);
         }
+
+        public async Task<IEnumerable<PlayerStatisticsPerCompetition>> GetByPlayerIdAsync(int playerId)
+        {
+            return await _dbContext.PlayerStatisticsPerCompetiton
+                .Where(p => p.PlayerStatisticsPerCompetition_PlayersId == playerId)
+                .ToListAsync();
+        }
     }
 }
+

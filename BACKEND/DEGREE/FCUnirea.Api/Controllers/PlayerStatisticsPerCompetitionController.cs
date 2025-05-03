@@ -50,5 +50,13 @@ namespace FCUnirea.Api.Controllers
             await _statisticsService.DeletePlayerStatisticPerCompetitionAsync(id);
             return NoContent();
         }
+
+        [HttpGet("byPlayer/{playerId}")]
+        public async Task<IActionResult> GetByPlayer(int playerId)
+        {
+            var stats = await _statisticsService.GetByPlayerIdAsync(playerId);
+            return Ok(stats);
+        }
+
     }
 }

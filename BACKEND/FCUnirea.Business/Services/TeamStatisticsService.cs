@@ -137,5 +137,10 @@ namespace FCUnirea.Business.Services
             return "DRAW";
         }
 
+        public async Task<IEnumerable<TeamStatistics>> GetByCompetitionAsync(int competitionId)
+        {
+            return await _repository.GetByCompetitionAsync(competitionId); // 👈 nou
+        }
+
     }
 }

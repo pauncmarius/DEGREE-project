@@ -2,5 +2,37 @@
     <h2>{{ team.teamName }}</h2>
     <p><strong>Antrenor:</strong> {{ team.coachName }}</p>
     <p><strong>Descriere:</strong> {{ team.description || 'Fără descriere.' }}</p>
-  </div>
+</div><br>
+
+<div *ngIf="players.length > 0" class="players-section">
+  <h3>Lotul echipei</h3>
+  <ul>
+    <li *ngFor="let player of players">
+      <strong>{{ player.playerName }}</strong> -
+      {{ player.position }}, {{ calculateAge(player.birthDate) }} ani
+    </li>
+  </ul>
+</div><br>
+
+<div *ngIf="players.length === 0">
+  <p>Nu există jucători înregistrați pentru această echipă.</p>
+</div>
+
+
+<div class="games-list" *ngIf="games.length > 0">
+  <h3>Meciuri disputate / programate</h3>
+  <ul>
+    <li *ngFor="let game of games">
+      {{ game.gameDate | date:'shortDate' }} -
+      {{ game.homeTeamName }} |{{ game.homeTeamScore }} vs {{ game.awayTeamScore }}| {{ game.awayTeamName }}
+      <span *ngIf="game.isPlayed">✅</span>
+      <span *ngIf="!game.isPlayed">🕒</span> -
+      <em>{{ game.competitionName }}</em>
+    </li>
+    
+  </ul>
   
+</div>
+<div class="no-games" *ngIf="games.length === 0">
+  <p>Nu sunt meciuri disponibile pentru această echipă.</p>  
+</div>

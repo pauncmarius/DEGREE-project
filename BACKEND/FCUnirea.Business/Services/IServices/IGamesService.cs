@@ -12,5 +12,12 @@ namespace FCUnirea.Business.Services.IServices
         public int AddGame(GamesModel game);
         public void UpdateGame(Games game);
         public void DeleteGame(int id);
+
+        IEnumerable<Games> GetGamesByTeam(int teamId);
+
+        public IEnumerable<GameWithTeamNamesModel> GetGamesWithTeamNamesByTeam(int teamId);
+
+
+
     }
 }

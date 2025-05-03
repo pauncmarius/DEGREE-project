@@ -348,6 +348,29 @@
         }
       }
     },
+    "/api/Games/byTeam/{teamId}": {
+      "get": {
+        "tags": [
+          "Games"
+        ],
+        "parameters": [
+          {
+            "name": "teamId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
     "/api/News": {
       "get": {
         "tags": [
@@ -576,6 +599,29 @@
         }
       }
     },
+    "/api/Players/byTeam/{teamId}": {
+      "get": {
+        "tags": [
+          "Players"
+        ],
+        "parameters": [
+          {
+            "name": "teamId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
     "/api/PlayerStatisticsPerCompetition": {
       "get": {
         "tags": [
@@ -675,6 +721,29 @@
         "parameters": [
           {
             "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/PlayerStatisticsPerCompetition/byPlayer/{playerId}": {
+      "get": {
+        "tags": [
+          "PlayerStatisticsPerCompetition"
+        ],
+        "parameters": [
+          {
+            "name": "playerId",
             "in": "path",
             "required": true,
             "schema": {
@@ -1272,6 +1341,29 @@
         }
       }
     },
+    "/api/TeamStatistics/byCompetition/{competitionId}": {
+      "get": {
+        "tags": [
+          "TeamStatistics"
+        ],
+        "parameters": [
+          {
+            "name": "competitionId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
     "/api/Tickets": {
       "get": {
         "tags": [
@@ -1818,12 +1910,11 @@
       },
       "CompetitionType": {
         "enum": [
-          0,
-          1,
-          2
+          "NationalLeague",
+          "NationalCup",
+          "ChampionsLeague"
         ],
-        "type": "integer",
-        "format": "int32"
+        "type": "string"
       },
       "Competitions": {
         "type": "object",
@@ -2279,21 +2370,19 @@
       },
       "Position": {
         "enum": [
-          0,
-          1,
-          2,
-          3
+          "Atacker",
+          "Midfielder",
+          "Defender",
+          "Goalkeeper"
         ],
-        "type": "integer",
-        "format": "int32"
+        "type": "string"
       },
       "SeatType": {
         "enum": [
-          0,
-          1
+          "Standard",
+          "Vip"
         ],
-        "type": "integer",
-        "format": "int32"
+        "type": "string"
       },
       "Seats": {
         "type": "object",
@@ -2513,12 +2602,11 @@
       },
       "TeamType": {
         "enum": [
-          0,
-          1,
-          2
+          "Adult",
+          "U21",
+          "Kids"
         ],
-        "type": "integer",
-        "format": "int32"
+        "type": "string"
       },
       "Teams": {
         "type": "object",
@@ -2663,11 +2751,10 @@
       },
       "UserRole": {
         "enum": [
-          0,
-          1
+          "Admin",
+          "Customer"
         ],
-        "type": "integer",
-        "format": "int32"
+        "type": "string"
       },
       "UsernameUpdateModel": {
         "type": "object",

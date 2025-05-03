@@ -5,6 +5,7 @@ using FCUnirea.Business.Services.IServices;
 using FCUnirea.Domain.Entities;
 using FCUnirea.Domain.IRepositories;
 using System.Collections.Generic;
+using System.Linq;
 
 namespace FCUnirea.Business.Services
 {
@@ -46,5 +47,26 @@ namespace FCUnirea.Business.Services
             var game = _gamesRepository.GetById(id);
             if (game != null) _gamesRepository.Delete(game);
         }
+
+        public IEnumerable<Games> GetGamesByTeam(int teamId) => _gamesRepository.GetGamesByTeam(teamId); // 👈 nou
+
+        public IEnumerable<GameWithTeamNamesModel> GetGamesWithTeamNamesByTeam(int teamId)
+        {
+            var games = _gamesRepository.GetGamesByTeam(teamId);
+
+            return games.Select(g => new GameWithTeamNamesModel
+            {
+                Id = g.Id,
+                GameDate = g.GameDate,
+                HomeTeamScore = g.HomeTeamScore,
+                AwayTeamScore = g.AwayTeamScore,
+                IsPlayed = g.IsPlayed,
+                HomeTeamName = g.Game_HomeTeam?.TeamName ?? "N/A",
+                AwayTeamName = g.Game_AwayTeam?.TeamName ?? "N/A",
+                CompetitionName = g.Game_Competitions?.CompetitionName ?? "Necunoscut"
+
+            });
+        }
+
     }
 }

@@ -76,6 +76,11 @@ namespace FCUnirea.Business.Services
             await _repository.SaveChangesAsync();
         }
 
+        public async Task<IEnumerable<PlayerStatisticsPerCompetition>> GetByPlayerIdAsync(int playerId)
+        {
+            return await _repository.GetByPlayerIdAsync(playerId);
+        }
+
 
     }
 }

@@ -28,5 +28,7 @@ namespace FCUnirea.Business.Services
             var player = _playerRepository.GetById(id);
             if (player != null) _playerRepository.Delete(player);
         }
+        public IEnumerable<Players> GetPlayersByTeam(int teamId) => _playerRepository.GetPlayersByTeam(teamId); // 👈 nou
+
     }
 }
