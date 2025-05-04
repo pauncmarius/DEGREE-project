@@ -48,7 +48,7 @@ namespace FCUnirea.Business.Services
             if (game != null) _gamesRepository.Delete(game);
         }
 
-        public IEnumerable<Games> GetGamesByTeam(int teamId) => _gamesRepository.GetGamesByTeam(teamId); // 👈 nou
+        public IEnumerable<Games> GetGamesByTeam(int teamId) => _gamesRepository.GetGamesByTeam(teamId); 
 
         public IEnumerable<GameWithTeamNamesModel> GetGamesWithTeamNamesByTeam(int teamId)
         {
@@ -63,7 +63,9 @@ namespace FCUnirea.Business.Services
                 IsPlayed = g.IsPlayed,
                 HomeTeamName = g.Game_HomeTeam?.TeamName ?? "N/A",
                 AwayTeamName = g.Game_AwayTeam?.TeamName ?? "N/A",
-                CompetitionName = g.Game_Competitions?.CompetitionName ?? "Necunoscut"
+                CompetitionName = g.Game_Competitions?.CompetitionName ?? "Necunoscut",
+                Game_CompetitionsId = g.Game_CompetitionsId ?? 0
+
 
             });
         }

@@ -1364,6 +1364,29 @@
         }
       }
     },
+    "/api/TeamStatistics/standings/{competitionId}": {
+      "get": {
+        "tags": [
+          "TeamStatistics"
+        ],
+        "parameters": [
+          {
+            "name": "competitionId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
     "/api/Tickets": {
       "get": {
         "tags": [
@@ -2586,6 +2609,10 @@
           "totalPoints": {
             "type": "integer",
             "format": "int32"
+          },
+          "teamName": {
+            "type": "string",
+            "nullable": true
           },
           "teamStatistics_CompetitionsId": {
             "type": "integer",

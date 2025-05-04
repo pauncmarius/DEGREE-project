@@ -1,0 +1,29 @@
+.standings {
+  margin-top: 20px;
+  border: 2px solid #ddd;
+  border-radius: 8px;
+  padding: 16px;
+  background-color: #f9f9f9;
+
+  table {
+    width: 100%;
+    border-collapse: collapse;
+
+    th, td {
+      padding: 8px 12px;
+      text-align: center;
+      border-bottom: 1px solid #ccc;
+    }
+
+    th {
+      background-color: #ececec;
+    }
+  }
+}
+
+/* 🔥 Mutat aici, ca să fie aplicat corect de Angular */
+.highlight {
+  background-color: #e0f7fa; // albastru deschis
+  font-weight: bold;
+  border-left: 4px solid #00796b;
+}

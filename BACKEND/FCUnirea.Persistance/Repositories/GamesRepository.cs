@@ -1,6 +1,7 @@
 ﻿
 using System.Collections.Generic;
 using System.Linq;
+using System.Threading.Tasks;
 using FCUnirea.Domain.Entities;
 using FCUnirea.Domain.IRepositories;
 using FCUnirea.Persistance.Data;
@@ -25,5 +26,12 @@ namespace FCUnirea.Persistance.Repositories
                 .OrderBy(g => g.GameDate)
                 .ToList();
         }
+
+        public async Task<IEnumerable<Teams>> GetTeamsAsync()
+        {
+            return await _dbContext.Teams.ToListAsync();
+        }
+
+
     }
 }

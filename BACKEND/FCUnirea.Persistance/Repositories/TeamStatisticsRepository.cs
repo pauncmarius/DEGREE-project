@@ -23,5 +23,16 @@ namespace FCUnirea.Persistance.Repositories
                 .ThenByDescending(t => t.GoalsScored - t.GoalsConceded)
                 .ToListAsync();
         }
+
+        public async Task<IEnumerable<TeamStatistics>> GetStandingsByCompetitionAsync(int competitionId)
+        {
+            return await _dbContext.TeamStatistics
+                .Where(ts => ts.TeamStatistics_CompetitionsId == competitionId)
+                .OrderByDescending(ts => ts.TotalPoints)
+                .ThenByDescending(ts => ts.GoalsScored - ts.GoalsConceded)
+                .ThenByDescending(ts => ts.GoalsScored)
+                .ToListAsync();
+        }
+
     }
 }

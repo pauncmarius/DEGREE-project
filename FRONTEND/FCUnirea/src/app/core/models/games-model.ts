@@ -10,7 +10,7 @@ export interface Game {
 
     homeTeamName: string;
     awayTeamName: string;
-    competitionName: string; // 👈 Nou
+    competitionName: string;
 
   }
   

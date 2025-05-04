@@ -3,6 +3,7 @@ using FCUnirea.Business.Models;
 using FCUnirea.Business.Services.IServices;
 using FCUnirea.Domain.Entities;
 using FCUnirea.Domain.IRepositories;
+using FCUnirea.Persistance.Repositories;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
@@ -141,6 +142,23 @@ namespace FCUnirea.Business.Services
         {
             return await _repository.GetByCompetitionAsync(competitionId); // 👈 nou
         }
+
+        public async Task<IEnumerable<TeamStatisticsModel>> GetStandingsByCompetitionAsync(int competitionId)
+        {
+            var standings = await _repository.GetStandingsByCompetitionAsync(competitionId);
+            var allTeams = await _gamesRepository.GetTeamsAsync(); // ai nevoie de această metodă
+
+            var result = standings.Select(s =>
+            {
+                var model = _mapper.Map<TeamStatisticsModel>(s);
+                var team = allTeams.FirstOrDefault(t => t.Id == s.TeamsStatistics_TeamsId);
+                model.TeamName = team?.TeamName ?? "Necunoscut";
+                return model;
+            });
+
+            return result;
+        }
+
 
     }
 }

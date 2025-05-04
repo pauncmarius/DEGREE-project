@@ -888,6 +888,22 @@
     "ReturnTypes": []
   },
   {
+    "ContainingType": "FCUnirea.Api.Controllers.TeamStatisticsController",
+    "Method": "GetStandingsByCompetition",
+    "RelativePath": "api/TeamStatistics/standings/{competitionId}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "competitionId",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
     "ContainingType": "FCUnirea.Api.Controllers.TicketsController",
     "Method": "GetAll",
     "RelativePath": "api/Tickets",

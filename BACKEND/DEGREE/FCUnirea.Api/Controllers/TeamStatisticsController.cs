@@ -62,5 +62,12 @@ namespace FCUnirea.Api.Controllers
             return Ok(stats);
         }
 
+        [HttpGet("standings/{competitionId}")]
+        public async Task<IActionResult> GetStandingsByCompetition(int competitionId)
+        {
+            var standings = await _teamStatisticsService.GetStandingsByCompetitionAsync(competitionId);
+            return Ok(standings);
+        }
+
     }
 }

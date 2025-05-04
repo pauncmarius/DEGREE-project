@@ -17,6 +17,9 @@ namespace FCUnirea.Business.Models
 
         public int TotalPoints { get; set; }
 
+        public string TeamName { get; set; } 
+
+
         // Foreign Key
         public int? TeamStatistics_CompetitionsId { get; set; }
         public int? TeamsStatistics_TeamsId { get; set; }

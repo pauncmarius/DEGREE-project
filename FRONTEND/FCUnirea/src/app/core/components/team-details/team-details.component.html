@@ -1,11 +1,11 @@
 <div class="team-details-container" *ngIf="team">
-    <h2>{{ team.teamName }}</h2>
+    <h1>{{ team.teamName }}</h1>
     <p><strong>Antrenor:</strong> {{ team.coachName }}</p>
     <p><strong>Descriere:</strong> {{ team.description || 'Fără descriere.' }}</p>
 </div><br>
 
 <div *ngIf="players.length > 0" class="players-section">
-  <h3>Lotul echipei</h3>
+  <h2>Lotul echipei</h2>
   <ul>
     <li *ngFor="let player of players">
       <strong>{{ player.playerName }}</strong> -
@@ -16,11 +16,11 @@
 
 <div *ngIf="players.length === 0">
   <p>Nu există jucători înregistrați pentru această echipă.</p>
-</div>
+</div><br>
 
 
 <div class="games-list" *ngIf="games.length > 0">
-  <h3>Meciuri disputate / programate</h3>
+  <h2>Meciuri disputate / programate</h2>
   <ul>
     <li *ngFor="let game of games">
       {{ game.gameDate | date:'shortDate' }} -
@@ -35,4 +35,49 @@
 </div>
 <div class="no-games" *ngIf="games.length === 0">
   <p>Nu sunt meciuri disponibile pentru această echipă.</p>  
+</div><br>
+
+<div *ngFor="let compId of standingsCompetitionIds">
+  <div class="standings">
+    <h3>Clasament competiție: {{ competitionNames[compId] || 'Fără nume' }}</h3>
+
+    <table>
+      <thead>
+        <tr>
+          <th>#</th>
+          <th>Echipă</th>
+          <th>M</th>
+          <th>V</th>
+          <th>E</th>
+          <th>Î</th>
+          <th>GM</th>
+          <th>GP</th>
+          <th>DG</th>
+          <th>Pts</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let stat of standingsMap[compId]; let i = index"
+        [ngClass]="{ 'highlight': stat.id === teamId }">
+    
+    
+
+          <td>{{ i + 1 }}</td>
+          <td>{{ stat.teamName }}</td>
+          <td>{{ stat.gamesPlayed }}</td>
+          <td>{{ stat.totalWins }}</td>
+          <td>{{ stat.totalDraws }}</td>
+          <td>{{ stat.totalLosses }}</td>
+          <td>{{ stat.goalsScored }}</td>
+          <td>{{ stat.goalsConceded }}</td>
+          <td>{{ stat.goalsScored - stat.goalsConceded }}</td>
+          <td>{{ stat.totalPoints }}</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div><br>
+
+<div *ngIf="standingsCompetitionIds.length === 0" class="no-standings">
+  <p>Nu există clasamente disponibile pentru această echipă.</p>
 </div>

@@ -7,7 +7,8 @@ import { GamesService } from '../../services/games.service';
 import { Game } from '../../models/games-model';
 import { Player } from '../../models/players-model';
 import { PlayersService } from '../../services/players.service';
-
+import { TeamStatistic } from '../../models/team-stats-model';
+import { TeamStatisticsService } from '../../services/team-statistics.service';
 
 @Component({
   selector: 'app-team-details',
@@ -22,20 +23,43 @@ export class TeamDetailsComponent implements OnInit {
   games: Game[] = [];
   players: Player[] = [];
 
+  standingsMap: { [competitionId: number]: TeamStatistic[] } = {};
+  competitionNames: { [competitionId: number]: string } = {};
 
-
-  constructor(private route: ActivatedRoute, private teamService: TeamService, private gamesService: GamesService, private playersService: PlayersService
+  constructor(
+    private route: ActivatedRoute,
+    private teamService: TeamService,
+    private gamesService: GamesService,
+    private playersService: PlayersService,
+    private statsService: TeamStatisticsService
   ) {}
 
   ngOnInit(): void {
     this.teamId = Number(this.route.snapshot.paramMap.get('id'));
-    this.teamService.getTeamById(this.teamId).subscribe((team) => {
+
+    this.teamService.getTeamById(this.teamId).subscribe(team => {
       this.team = team;
     });
-    this.gamesService.getGamesByTeam(this.teamId).subscribe((games) => {
+
+    this.gamesService.getGamesByTeam(this.teamId).subscribe(games => {
       this.games = games;
+
+      // extrage toate competițiile distincte
+      const uniqueCompetitions = [...new Set(games.map(g => g.game_CompetitionsId))];
+
+      for (const competitionId of uniqueCompetitions) {
+        const compGames = games.find(g => g.game_CompetitionsId === competitionId);
+        if (compGames) {
+          this.competitionNames[competitionId] = compGames.competitionName;
+        }
+
+        this.statsService.getStandingsByCompetition(competitionId).subscribe(standings => {
+          this.standingsMap[competitionId] = standings;
+        });
+      }
     });
-    this.playersService.getPlayersByTeam(this.teamId).subscribe((players) => {
+
+    this.playersService.getPlayersByTeam(this.teamId).subscribe(players => {
       this.players = players;
     });
   }
@@ -44,14 +68,14 @@ export class TeamDetailsComponent implements OnInit {
     const birthDate = new Date(birthDateStr);
     const today = new Date();
     let age = today.getFullYear() - birthDate.getFullYear();
-    const hasBirthdayPassedThisYear =
+    const hasBirthdayPassed =
       today.getMonth() > birthDate.getMonth() ||
       (today.getMonth() === birthDate.getMonth() && today.getDate() >= birthDate.getDate());
-  
-    if (!hasBirthdayPassedThisYear) {
-      age--;
-    }
-  
-    return age;
+    return hasBirthdayPassed ? age : age - 1;
   }
+
+  get standingsCompetitionIds(): number[] {
+    return Object.keys(this.standingsMap).map(Number);
+  }
+  
 }

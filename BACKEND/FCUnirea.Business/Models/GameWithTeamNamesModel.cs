@@ -16,7 +16,9 @@ namespace FCUnirea.Business.Models
 
         public string HomeTeamName { get; set; }
         public string AwayTeamName { get; set; }
-        public string CompetitionName { get; set; } // 👈 Nou
+        public string CompetitionName { get; set; }
+        public int Game_CompetitionsId { get; set; }
+
 
     }
 }
