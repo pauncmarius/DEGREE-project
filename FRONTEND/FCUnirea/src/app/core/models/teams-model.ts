@@ -1,7 +1,7 @@
 export interface Team {
     id: number;
     teamName: string;
-    description: string;
+    description?: string;
     coachName: string;
     isInternal: boolean;
   }

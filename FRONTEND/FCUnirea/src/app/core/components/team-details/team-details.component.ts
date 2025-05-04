@@ -10,6 +10,8 @@ import { PlayersService } from '../../services/players.service';
 import { TeamStatistic } from '../../models/team-stats-model';
 import { TeamStatisticsService } from '../../services/team-statistics.service';
 
+import { Scorer } from '../../models/scorers-model';
+import { PlayerStatsService } from '../../services/player-statistics-per-competition.service';
 @Component({
   selector: 'app-team-details',
   standalone: true,
@@ -26,12 +28,18 @@ export class TeamDetailsComponent implements OnInit {
   standingsMap: { [competitionId: number]: TeamStatistic[] } = {};
   competitionNames: { [competitionId: number]: string } = {};
 
+  scorersMap: { [competitionId: number]: Scorer[] } = {};
+  activeTabMap: { [competitionId: number]: 'standings' | 'scorers' } = {};
+
+
   constructor(
     private route: ActivatedRoute,
     private teamService: TeamService,
     private gamesService: GamesService,
     private playersService: PlayersService,
-    private statsService: TeamStatisticsService
+    private statsService: TeamStatisticsService,
+    private scorersService: PlayerStatsService
+
   ) {}
 
   ngOnInit(): void {
@@ -52,9 +60,15 @@ export class TeamDetailsComponent implements OnInit {
         if (compGames) {
           this.competitionNames[competitionId] = compGames.competitionName;
         }
-
+      
         this.statsService.getStandingsByCompetition(competitionId).subscribe(standings => {
           this.standingsMap[competitionId] = standings;
+          this.activeTabMap[competitionId] = 'standings';
+      
+          // doar aici putem accesa competitionId în context
+          this.scorersService.getTopScorersByCompetition(competitionId).subscribe(scorers => {
+            this.scorersMap[competitionId] = scorers;
+          });
         });
       }
     });
@@ -62,6 +76,8 @@ export class TeamDetailsComponent implements OnInit {
     this.playersService.getPlayersByTeam(this.teamId).subscribe(players => {
       this.players = players;
     });
+
+    
   }
 
   calculateAge(birthDateStr: string): number {

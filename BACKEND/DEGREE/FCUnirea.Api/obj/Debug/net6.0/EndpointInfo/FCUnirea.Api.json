@@ -759,6 +759,29 @@
         }
       }
     },
+    "/api/PlayerStatisticsPerCompetition/scorers/{competitionId}": {
+      "get": {
+        "tags": [
+          "PlayerStatisticsPerCompetition"
+        ],
+        "parameters": [
+          {
+            "name": "competitionId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
     "/api/PlayerStatisticsPerGame": {
       "get": {
         "tags": [

@@ -8,8 +8,8 @@ namespace FCUnirea.Domain.IRepositories
     {
         Task<Dictionary<(int PlayerId, int CompetitionId), int>> GetGoalsGroupedByPlayerAndCompetitionAsync();
         Task<PlayerStatisticsPerCompetition> GetByPlayerAndCompetitionAsync(int playerId, int competitionId);
-
-        Task<IEnumerable<PlayerStatisticsPerCompetition>> GetByPlayerIdAsync(int playerId); // 👈 nou
+        Task<IEnumerable<PlayerStatisticsPerCompetition>> GetByPlayerIdAsync(int playerId);
+        Task<IEnumerable<PlayerStatisticsPerCompetition>> GetTopScorersByCompetitionAsync(int competitionId);
 
     }
 }

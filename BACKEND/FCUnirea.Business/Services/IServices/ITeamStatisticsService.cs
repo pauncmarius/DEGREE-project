@@ -16,7 +16,5 @@ namespace FCUnirea.Business.Services.IServices
 
         Task<IEnumerable<TeamStatistics>> GetByCompetitionAsync(int competitionId);
         Task<IEnumerable<TeamStatisticsModel>> GetStandingsByCompetitionAsync(int competitionId);
-
-
     }
 }

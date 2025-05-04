@@ -492,6 +492,22 @@
     "ReturnTypes": []
   },
   {
+    "ContainingType": "FCUnirea.Api.Controllers.PlayerStatisticsPerCompetitionController",
+    "Method": "GetTopScorers",
+    "RelativePath": "api/PlayerStatisticsPerCompetition/scorers/{competitionId}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "competitionId",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
     "ContainingType": "FCUnirea.Api.Controllers.PlayerStatisticsPerGameController",
     "Method": "GetAll",
     "RelativePath": "api/PlayerStatisticsPerGame",

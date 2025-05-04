@@ -58,5 +58,12 @@ namespace FCUnirea.Api.Controllers
             return Ok(stats);
         }
 
+        [HttpGet("scorers/{competitionId}")]
+        public async Task<IActionResult> GetTopScorers(int competitionId)
+        {
+            var scorers = await _statisticsService.GetTopScorersByCompetitionAsync(competitionId);
+            return Ok(scorers);
+        }
+
     }
 }

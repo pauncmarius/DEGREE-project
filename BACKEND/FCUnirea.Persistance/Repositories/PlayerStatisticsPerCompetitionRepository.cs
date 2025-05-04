@@ -52,6 +52,18 @@ namespace FCUnirea.Persistance.Repositories
                 .Where(p => p.PlayerStatisticsPerCompetition_PlayersId == playerId)
                 .ToListAsync();
         }
+
+        public async Task<IEnumerable<PlayerStatisticsPerCompetition>> GetTopScorersByCompetitionAsync(int competitionId)
+        {
+            return await _dbContext.PlayerStatisticsPerCompetiton
+                .Include(p => p.PlayerStatisticsPerCompetition_Players)
+                    .ThenInclude(p => p.Player_Teams) // dacă ai relație de tip Player → Team
+                .Where(p => p.PlayerStatisticsPerCompetition_CompetitionsId == competitionId && p.Goals > 0)
+                .OrderByDescending(p => p.Goals)
+                .Take(10)
+                .ToListAsync();
+        }
+
     }
 }
 

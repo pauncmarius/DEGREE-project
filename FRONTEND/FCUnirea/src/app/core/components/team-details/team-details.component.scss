@@ -27,3 +27,22 @@
   font-weight: bold;
   border-left: 4px solid #00796b;
 }
+
+.tabs {
+  margin-bottom: 10px;
+
+  button {
+    margin-right: 8px;
+    padding: 6px 14px;
+    border: none;
+    cursor: pointer;
+    background-color: #eee;
+    border-radius: 5px;
+
+    &.active {
+      background-color: #00796b;
+      color: white;
+      font-weight: bold;
+    }
+  }
+}

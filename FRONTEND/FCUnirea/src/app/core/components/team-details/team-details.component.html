@@ -37,46 +37,77 @@
   <p>Nu sunt meciuri disponibile pentru această echipă.</p>  
 </div><br>
 
+
 <div *ngFor="let compId of standingsCompetitionIds">
   <div class="standings">
-    <h3>Clasament competiție: {{ competitionNames[compId] || 'Fără nume' }}</h3>
+    <h3>Competiție: {{ competitionNames[compId] || 'Fără nume' }}</h3>
 
-    <table>
-      <thead>
-        <tr>
-          <th>#</th>
-          <th>Echipă</th>
-          <th>M</th>
-          <th>V</th>
-          <th>E</th>
-          <th>Î</th>
-          <th>GM</th>
-          <th>GP</th>
-          <th>DG</th>
-          <th>Pts</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr *ngFor="let stat of standingsMap[compId]; let i = index"
-        [ngClass]="{ 'highlight': stat.id === teamId }">
-    
-    
+    <div class="tabs">
+      <button (click)="activeTabMap[compId] = 'standings'"
+              [class.active]="activeTabMap[compId] === 'standings'">Per total</button>
+      <button (click)="activeTabMap[compId] = 'scorers'"
+              [class.active]="activeTabMap[compId] === 'scorers'">Marcatori</button>
+    </div>
 
-          <td>{{ i + 1 }}</td>
-          <td>{{ stat.teamName }}</td>
-          <td>{{ stat.gamesPlayed }}</td>
-          <td>{{ stat.totalWins }}</td>
-          <td>{{ stat.totalDraws }}</td>
-          <td>{{ stat.totalLosses }}</td>
-          <td>{{ stat.goalsScored }}</td>
-          <td>{{ stat.goalsConceded }}</td>
-          <td>{{ stat.goalsScored - stat.goalsConceded }}</td>
-          <td>{{ stat.totalPoints }}</td>
-        </tr>
-      </tbody>
-    </table>
+    <div *ngIf="activeTabMap[compId] === 'standings'">
+      <table>
+        <thead>
+          <tr>
+            <th>Loc</th>
+            <th>Echipă</th>
+            <th>M</th>
+            <th>V</th>
+            <th>E</th>
+            <th>Î</th>
+            <th>GM</th>
+            <th>GP</th>
+            <th>DG</th>
+            <th>Pts</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let stat of standingsMap[compId]; let i = index"
+              [ngClass]="{ 'highlight': stat.id === teamId }">
+            <td>{{ i + 1 }}</td>
+            <td>{{ stat.teamName }}</td>
+            <td>{{ stat.gamesPlayed }}</td>
+            <td>{{ stat.totalWins }}</td>
+            <td>{{ stat.totalDraws }}</td>
+            <td>{{ stat.totalLosses }}</td>
+            <td>{{ stat.goalsScored }}</td>
+            <td>{{ stat.goalsConceded }}</td>
+            <td>{{ stat.goalsScored - stat.goalsConceded }}</td>
+            <td>{{ stat.totalPoints }}</td>
+          </tr>
+        </tbody>
+      </table>
+      
+    </div>
+
+    <div *ngIf="activeTabMap[compId] === 'scorers'">
+      <table>
+        <thead>
+          <tr>
+            <th>Loc</th>
+            <th>Jucător</th>
+            <th>Echipă</th>
+            <th>Goluri</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let scorer of scorersMap[compId]; let i = index">
+            <td>{{ i + 1 }}</td>
+            <td>{{ scorer.playerName }}</td>
+            <td>{{ scorer.teamName }}</td>
+            <td>{{ scorer.goals }}</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
   </div>
-</div><br>
+</div>
+
+
 
 <div *ngIf="standingsCompetitionIds.length === 0" class="no-standings">
   <p>Nu există clasamente disponibile pentru această echipă.</p>
