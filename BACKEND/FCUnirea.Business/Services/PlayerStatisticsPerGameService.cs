@@ -5,6 +5,7 @@ using FCUnirea.Domain.Entities;
 using FCUnirea.Domain.IRepositories;
 using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Threading.Tasks;
 
 namespace FCUnirea.Business.Services
@@ -133,6 +134,18 @@ namespace FCUnirea.Business.Services
                 await _repository.RollbackTransactionAsync();
                 throw;
             }
+        }
+
+        public async Task<IEnumerable<GameScorerModel>> GetScorersForGameAsync(int gameId)
+        {
+            var scorers = await _repository.GetScorersByGameAsync(gameId);
+            return scorers.Select(p => new GameScorerModel
+            {
+                PlayerName = p.PlayerStatisticsPerGame_Players.PlayerName,
+                TeamName = p.PlayerStatisticsPerGame_Players.Player_Teams?.TeamName ?? "Necunoscut",
+                TeamName = p.PlayerStatisticsPerGame_Players.Player_Teams?.TeamName ?? "Necunoscut",
+                Goals = p.Goals
+            });
         }
 
 

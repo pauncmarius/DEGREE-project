@@ -4,7 +4,7 @@ import { Scorer } from "../models/scorers-model";
 import { Observable } from "rxjs";
 
 @Injectable({ providedIn: 'root' })
-export class PlayerStatsService {
+export class PlayerStatisticsPerCompetitionService {
   private apiUrl = 'https://localhost:5000/api/PlayerStatisticsPerCompetition';
 
   constructor(private http: HttpClient) {}

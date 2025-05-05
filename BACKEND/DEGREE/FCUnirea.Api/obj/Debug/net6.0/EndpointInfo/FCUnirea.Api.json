@@ -896,6 +896,29 @@
         }
       }
     },
+    "/api/PlayerStatisticsPerGame/scorersByGame/{gameId}": {
+      "get": {
+        "tags": [
+          "PlayerStatisticsPerGame"
+        ],
+        "parameters": [
+          {
+            "name": "gameId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
     "/api/Seats": {
       "get": {
         "tags": [

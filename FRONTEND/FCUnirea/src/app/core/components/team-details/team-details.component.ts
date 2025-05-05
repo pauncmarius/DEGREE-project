@@ -11,7 +11,9 @@ import { TeamStatistic } from '../../models/team-stats-model';
 import { TeamStatisticsService } from '../../services/team-statistics.service';
 
 import { Scorer } from '../../models/scorers-model';
-import { PlayerStatsService } from '../../services/player-statistics-per-competition.service';
+import { GameScorer } from '../../models/game-scorer-model';
+import { PlayerStatisticsPerGameService } from '../../services/player-statistics-per-game.service';
+import { PlayerStatisticsPerCompetitionService } from '../../services/player-statistics-per-competition.service';
 @Component({
   selector: 'app-team-details',
   standalone: true,
@@ -24,6 +26,8 @@ export class TeamDetailsComponent implements OnInit {
   teamId!: number;
   games: Game[] = [];
   players: Player[] = [];
+  goalScorersMap: { [gameId: number]: Scorer[] } = {};
+  visibleScorers: { [gameId: number]: boolean } = {};
 
   standingsMap: { [competitionId: number]: TeamStatistic[] } = {};
   competitionNames: { [competitionId: number]: string } = {};
@@ -31,6 +35,8 @@ export class TeamDetailsComponent implements OnInit {
   scorersMap: { [competitionId: number]: Scorer[] } = {};
   activeTabMap: { [competitionId: number]: 'standings' | 'scorers' } = {};
 
+  selectedGameId: number | null = null;
+  scorersPerGame: { [gameId: number]: GameScorer[] } = {};
 
   constructor(
     private route: ActivatedRoute,
@@ -38,7 +44,8 @@ export class TeamDetailsComponent implements OnInit {
     private gamesService: GamesService,
     private playersService: PlayersService,
     private statsService: TeamStatisticsService,
-    private scorersService: PlayerStatsService
+    private scorersService: PlayerStatisticsPerCompetitionService,
+    private playerStatsService: PlayerStatisticsPerGameService
 
   ) {}
 
@@ -92,6 +99,16 @@ export class TeamDetailsComponent implements OnInit {
 
   get standingsCompetitionIds(): number[] {
     return Object.keys(this.standingsMap).map(Number);
+  }
+  
+  toggleScorers(gameId: number): void {
+    this.selectedGameId = this.selectedGameId === gameId ? null : gameId;
+  
+    if (!this.scorersPerGame[gameId]) {
+      this.playerStatsService.getScorersByGame(gameId).subscribe((data) => {
+        this.scorersPerGame[gameId] = data;
+      });
+    }
   }
   
 }

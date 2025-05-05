@@ -60,5 +60,14 @@ namespace FCUnirea.Api.Controllers
             }
             return NoContent();
         }
+
+        [HttpGet("scorersByGame/{gameId}")]
+        public async Task<IActionResult> GetScorersByGame(int gameId)
+        {
+            var result = await _statisticsService.GetScorersForGameAsync(gameId);
+            return Ok(result);
+        }
+
+
     }
 }

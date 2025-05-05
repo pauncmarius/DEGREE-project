@@ -582,6 +582,22 @@
     "ReturnTypes": []
   },
   {
+    "ContainingType": "FCUnirea.Api.Controllers.PlayerStatisticsPerGameController",
+    "Method": "GetScorersByGame",
+    "RelativePath": "api/PlayerStatisticsPerGame/scorersByGame/{gameId}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "gameId",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
     "ContainingType": "FCUnirea.Api.Controllers.SeatsController",
     "Method": "GetAll",
     "RelativePath": "api/Seats",

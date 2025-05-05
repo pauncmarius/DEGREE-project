@@ -1,7 +1,7 @@
 <div class="team-details-container" *ngIf="team">
-    <h1>{{ team.teamName }}</h1>
-    <p><strong>Antrenor:</strong> {{ team.coachName }}</p>
-    <p><strong>Descriere:</strong> {{ team.description || 'Fără descriere.' }}</p>
+  <h1>{{ team.teamName }}</h1>
+  <p><strong>Antrenor:</strong> {{ team.coachName }}</p>
+  <p><strong>Descriere:</strong> {{ team.description || 'Fără descriere.' }}</p>
 </div><br>
 
 <div *ngIf="players.length > 0" class="players-section">
@@ -18,26 +18,42 @@
   <p>Nu există jucători înregistrați pentru această echipă.</p>
 </div><br>
 
-
-<div class="games-list" *ngIf="games.length > 0">
-  <h2>Meciuri disputate / programate</h2>
-  <ul>
-    <li *ngFor="let game of games">
-      {{ game.gameDate | date:'shortDate' }} -
-      {{ game.homeTeamName }} |{{ game.homeTeamScore }} vs {{ game.awayTeamScore }}| {{ game.awayTeamName }}
-      <span *ngIf="game.isPlayed">✅</span>
-      <span *ngIf="!game.isPlayed">🕒</span> -
+<h2> Program</h2>
+<!-- Meciuri + Marcatori -->
+<div class="game-cards">
+  <div
+    class="game-card"
+    *ngFor="let game of games"
+    [ngClass]="{ 'played': game.isPlayed }"
+    (click)="toggleScorers(game.id)"
+  >
+    <div class="game-header">
+      <span>{{ game.gameDate | date: 'shortDate' }}</span>
+      <strong>{{ game.homeTeamName }} {{ game.homeTeamScore }} - {{ game.awayTeamScore }} {{ game.awayTeamName }}</strong>
       <em>{{ game.competitionName }}</em>
-    </li>
-    
-  </ul>
-  
+    </div>
+
+    <div class="scorers" *ngIf="selectedGameId === game.id">
+      <h4>Marcatori</h4>
+      <ul *ngIf="(scorersPerGame?.[game.id] ?? []).length > 0; else noGoals">
+        <li *ngFor="let scorer of scorersPerGame[game.id]">
+          ⚽ {{ scorer.playerName }} ({{ scorer.teamName }}) - {{ scorer.goals }} goluri
+        </li>
+      </ul>
+      <ng-template #noGoals>
+        <p>Nu există marcatori înregistrați pentru acest meci.</p>
+      </ng-template>
+    </div>
+  </div>
 </div>
+
+
+
 <div class="no-games" *ngIf="games.length === 0">
-  <p>Nu sunt meciuri disponibile pentru această echipă.</p>  
+  <p>Nu sunt meciuri disponibile pentru această echipă.</p>
 </div><br>
 
-
+<!-- Clasamente + Marcatori competiție -->
 <div *ngFor="let compId of standingsCompetitionIds">
   <div class="standings">
     <h3>Competiție: {{ competitionNames[compId] || 'Fără nume' }}</h3>
@@ -49,6 +65,7 @@
               [class.active]="activeTabMap[compId] === 'scorers'">Marcatori</button>
     </div>
 
+    <!-- Clasament -->
     <div *ngIf="activeTabMap[compId] === 'standings'">
       <table>
         <thead>
@@ -81,9 +98,9 @@
           </tr>
         </tbody>
       </table>
-      
     </div>
 
+    <!-- Marcatori competiție -->
     <div *ngIf="activeTabMap[compId] === 'scorers'">
       <table>
         <thead>
@@ -106,8 +123,6 @@
     </div>
   </div>
 </div>
-
-
 
 <div *ngIf="standingsCompetitionIds.length === 0" class="no-standings">
   <p>Nu există clasamente disponibile pentru această echipă.</p>

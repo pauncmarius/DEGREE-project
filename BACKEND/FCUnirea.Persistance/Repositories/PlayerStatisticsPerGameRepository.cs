@@ -1,8 +1,11 @@
 ﻿
+using System.Collections.Generic;
+using System.Linq;
 using System.Threading.Tasks;
 using FCUnirea.Domain.Entities;
 using FCUnirea.Domain.IRepositories;
 using FCUnirea.Persistance.Data;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Storage;
 
 namespace FCUnirea.Persistance.Repositories
@@ -43,6 +46,15 @@ namespace FCUnirea.Persistance.Repositories
         public async Task SaveChangesAsync()
         {
             await _context.SaveChangesAsync();
+        }
+
+        public async Task<IEnumerable<PlayerStatisticsPerGame>> GetScorersByGameAsync(int gameId)
+        {
+            return await _dbContext.PlayerStatisticsPerGame
+                .Include(p => p.PlayerStatisticsPerGame_Players)
+                .ThenInclude(p => p.Player_Teams)
+                .Where(p => p.PlayerStatisticsPerGame_GamesId == gameId && p.Goals > 0)
+                .ToListAsync();
         }
     }
 

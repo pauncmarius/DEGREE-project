@@ -1,5 +1,7 @@
 ﻿using FCUnirea.Domain.Entities;
+using System.Collections.Generic;
 using System.Threading.Tasks;
+
 
 namespace FCUnirea.Domain.IRepositories
 {
@@ -8,5 +10,7 @@ namespace FCUnirea.Domain.IRepositories
         Task BeginTransactionAsync();
         Task CommitTransactionAsync();
         Task RollbackTransactionAsync();
+
+        Task<IEnumerable<PlayerStatisticsPerGame>> GetScorersByGameAsync(int gameId);
     }
 }
