@@ -238,6 +238,16 @@
     "ReturnTypes": []
   },
   {
+    "ContainingType": "FCUnirea.Api.Controllers.GamesController",
+    "Method": "GetHomeUpcomingGames",
+    "RelativePath": "api/Games/home-upcoming",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
     "ContainingType": "FCUnirea.Api.Controllers.NewsController",
     "Method": "GetAll",
     "RelativePath": "api/News",
@@ -1003,6 +1013,22 @@
     "Parameters": [
       {
         "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "FCUnirea.Api.Controllers.TicketsController",
+    "Method": "GetTicketsByUser",
+    "RelativePath": "api/Tickets/byUser/{userId}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "userId",
         "Type": "System.Int32",
         "IsRequired": true
       }

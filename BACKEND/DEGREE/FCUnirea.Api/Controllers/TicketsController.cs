@@ -66,6 +66,13 @@ namespace FCUnirea.Api.Controllers
             }
         }
 
+        [HttpGet("byUser/{userId}")]
+        public async Task<IActionResult> GetTicketsByUser(int userId)
+        {
+            var tickets = await _ticketService.GetTicketsByUserIdAsync(userId);
+            return Ok(tickets);
+        }
+
 
     }
 }

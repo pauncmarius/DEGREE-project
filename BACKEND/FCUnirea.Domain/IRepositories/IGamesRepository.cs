@@ -10,6 +10,8 @@ namespace FCUnirea.Domain.IRepositories
         IEnumerable<Games> GetGamesByTeam(int teamId);
         Task<IEnumerable<Teams>> GetTeamsAsync();
 
+        IEnumerable<Games> GetAvailableHomeGames();
+
 
     }
 }

@@ -1,0 +1,25 @@
+<h2>Rezervările mele</h2>
+<div class="ticket-list" *ngIf="tickets.length > 0; else noTickets">
+  <div
+    *ngFor="let ticket of tickets"
+    class="ticket-card"
+    [ngClass]="{ 'played': ticket.isPlayed, 'upcoming': !ticket.isPlayed }"
+  >
+    <h4>{{ ticket.homeTeamName }} vs {{ ticket.awayTeamName }}</h4>
+    <p><strong>Data:</strong> {{ ticket.gameDate | date: 'short' }}</p>
+    <p><strong>Loc:</strong> {{ ticket.seatName }} ({{ ticket.seatType }})</p>
+    <p><strong>Preț:</strong> {{ ticket.seatPrice }} RON</p>
+    <p><strong>Stadion:</strong> {{ ticket.stadiumName }}</p>
+    <p><strong>Competiție:</strong> {{ ticket.competitionName }}</p>
+    <p>
+      <strong>Status:</strong>
+      <span [style.color]="ticket.isPlayed ? 'red' : 'green'">
+        {{ ticket.isPlayed ? 'Meci jucat' : 'Urmează să se joace' }}
+      </span>
+    </p>
+  </div>
+</div>
+
+<ng-template #noTickets>
+  <p>Nu ai nicio rezervare momentan.</p>
+</ng-template>

@@ -62,6 +62,12 @@ namespace FCUnirea.Api.Controllers
             return Ok(games);
         }
 
+        [HttpGet("home-upcoming")]
+        public IActionResult GetHomeUpcomingGames()
+        {
+            var games = _gameService.GetHomeUpcomingGames();
+            return Ok(games);
+        }
 
     }
 }

@@ -16,5 +16,7 @@ namespace FCUnirea.Business.Services.IServices
 
         Task<int> AddTicketAsync(TicketsModel ticket);
 
+        Task<IEnumerable<TicketWithDetailsModel>> GetTicketsByUserIdAsync(int userId);
+
     }
 }

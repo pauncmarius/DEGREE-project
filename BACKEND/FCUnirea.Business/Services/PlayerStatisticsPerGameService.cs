@@ -143,7 +143,6 @@ namespace FCUnirea.Business.Services
             {
                 PlayerName = p.PlayerStatisticsPerGame_Players.PlayerName,
                 TeamName = p.PlayerStatisticsPerGame_Players.Player_Teams?.TeamName ?? "Necunoscut",
-                TeamName = p.PlayerStatisticsPerGame_Players.Player_Teams?.TeamName ?? "Necunoscut",
                 Goals = p.Goals
             });
         }

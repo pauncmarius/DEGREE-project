@@ -70,5 +70,20 @@ namespace FCUnirea.Business.Services
             });
         }
 
+        public IEnumerable<GameWithStadiumModel> GetHomeUpcomingGames()
+        {
+            var games = _gamesRepository.GetAvailableHomeGames();
+
+            return games.Select(g => new GameWithStadiumModel
+            {
+                Id = g.Id,
+                GameDate = g.GameDate,
+                HomeTeamName = g.Game_HomeTeam?.TeamName ?? "",
+                AwayTeamName = g.Game_AwayTeam?.TeamName ?? "",
+                CompetitionName = g.Game_Competitions?.CompetitionName ?? "",
+                StadiumName = g.Game_Stadiums?.StadiumName ?? "",
+                StadiumLocation = g.Game_Stadiums?.StadiumLocation ?? ""
+            });
+        }
     }
 }

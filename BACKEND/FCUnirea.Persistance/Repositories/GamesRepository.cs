@@ -32,6 +32,20 @@ namespace FCUnirea.Persistance.Repositories
             return await _dbContext.Teams.ToListAsync();
         }
 
+        public IEnumerable<Games> GetAvailableHomeGames()
+        {
+            var internalStadiumIds = new[] { 1, 11, 21 };
+
+            return _dbContext.Games
+                .Include(g => g.Game_HomeTeam)
+                .Include(g => g.Game_AwayTeam)
+                .Include(g => g.Game_Competitions)
+                .Include(g => g.Game_Stadiums)
+                .Where(g => !g.IsPlayed && internalStadiumIds.Contains(g.Game_StadiumsId ?? -1))
+                .OrderBy(g => g.GameDate)
+                .ToList();
+        }
+
 
     }
 }

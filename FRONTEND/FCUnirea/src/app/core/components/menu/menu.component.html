@@ -20,6 +20,10 @@
     Teams
   </a>
 
+  <a *ngIf="isLoggedIn()" class="menu-item" routerLink="/my-tickets" routerLinkActive="active">
+    My Tickets
+  </a>
+
   <!-- Login apare doar dacă nu e logat -->
   <a *ngIf="!isLoggedIn()" class="menu-item" routerLink="/login" routerLinkActive="active">
     Login

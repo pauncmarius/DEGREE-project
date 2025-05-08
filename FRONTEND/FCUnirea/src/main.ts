@@ -14,6 +14,7 @@ import { AppComponent } from './app/app.component';
 import { AuthInterceptor } from './app/core/interceptors/auth.interceptor';
 import { TeamsComponent } from './app/core/components/teams/teams.component';
 import { TeamDetailsComponent } from './app/core/components/team-details/team-details.component';
+import { MyTicketsComponent } from './app/core/components/my-tickets/my-tickets.component';
 
 
 const routes: Routes = [
@@ -24,6 +25,7 @@ const routes: Routes = [
   { path: 'access-denied', component: AccessDeniedComponent },
   { path: 'profile', component: ProfileComponent, canActivate: [authGuard]},
   { path: 'teams', component: TeamsComponent , canActivate: [authGuard]},
+  { path: 'my-tickets', component: MyTicketsComponent , canActivate: [authGuard]},
   { path: 'teams/:id', component: TeamDetailsComponent, canActivate: [authGuard] },
   { path: '**', component: PageNotFoundComponent},
 
