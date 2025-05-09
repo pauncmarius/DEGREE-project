@@ -12,6 +12,7 @@ namespace FCUnirea.Domain.IRepositories
 
         IEnumerable<Games> GetAvailableHomeGames();
 
+        Task<Games?> GetGameWithDetailsAsync(int id);
 
     }
 }

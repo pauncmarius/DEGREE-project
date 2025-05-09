@@ -19,11 +19,25 @@ namespace FCUnirea.Business.Services
 
         private readonly IMapper _mapper;
 
-        public TicketsService(ITicketsRepository repository, IMapper mapper, IGamesRepository gamesRepository)
+        //
+        private readonly IEmailService _emailService;
+        private readonly IUsersRepository _usersRepository;
+        private readonly ISeatsRepository _seatsRepository;
+
+        public TicketsService(
+            ITicketsRepository repository,
+            IMapper mapper,
+            IGamesRepository gamesRepository,
+            IEmailService emailService,
+            IUsersRepository usersRepository,
+            ISeatsRepository seatsRepository)
         {
             _repository = repository;
             _mapper = mapper;
             _gamesRepository = gamesRepository;
+            _emailService = emailService;
+            _usersRepository = usersRepository;
+            _seatsRepository = seatsRepository;
         }
 
         public IEnumerable<Tickets> GetTickets() => _repository.ListAll();
@@ -35,12 +49,10 @@ namespace FCUnirea.Business.Services
             var ticket = _repository.GetById(id);
             if (ticket != null) _repository.Delete(ticket);
         }
-
         public async Task<int> AddTicketAsync(TicketsModel model)
         {
             var ticket = _mapper.Map<Tickets>(model);
 
-            // 1. Verifică dacă locul este deja rezervat pentru acel meci
             var existingTickets = await _repository.ListAllAsync();
             bool isTaken = existingTickets.Any(t =>
                 t.Ticket_GamesId == ticket.Ticket_GamesId &&
@@ -49,24 +61,49 @@ namespace FCUnirea.Business.Services
             if (isTaken)
                 throw new InvalidOperationException("Locul este deja rezervat pentru acest meci.");
 
-            // 2. Verifică dacă stadionul este intern (ID 1, 11 sau 21)
-            var game = await _gamesRepository.GetByIdAsync(ticket.Ticket_GamesId.Value);
+            var game = await _gamesRepository.GetGameWithDetailsAsync(ticket.Ticket_GamesId!.Value);
             if (game == null || !(new[] { 1, 11, 21 }.Contains(game.Game_StadiumsId ?? -1)))
-            {
                 throw new InvalidOperationException("Rezervările sunt permise doar pentru stadioanele interne.");
-            }
 
-            // 3. Salvează biletul
             await _repository.AddAsync(ticket);
-
-            // 4. Incrementează TicketsSold
             game.TicketsSold++;
             await _gamesRepository.UpdateAsync(game);
-
-            // 5. Salvează tot
             await _repository.SaveChangesAsync();
+
+            // 🔔 Trimite email de confirmare
+            var user = await _usersRepository.GetByIdAsync(ticket.Ticket_UsersId!.Value);
+            var seat = await _seatsRepository.GetByIdAsync(ticket.Ticket_SeatsId!.Value);
+
+            if (user != null && seat != null)
+            {
+                var home = game.Game_HomeTeam?.TeamName ?? "Echipă gazdă";
+                var away = game.Game_AwayTeam?.TeamName ?? "Echipă oaspete";
+                var matchDate = game.GameDate.ToString("dd MMM yyyy, HH:mm");
+                var stadium = game.Game_Stadiums?.StadiumName ?? "Stadion necunoscut";
+                var seatName = seat.SeatName;
+                var seatType = seat.SeatType.ToString();
+                var seatPrice = seat.SeatPrice;
+
+                var emailBody = $@"
+                    <h2>Rezervare confirmată</h2>
+                    <p>Salut {user.FirstName} {user.LastName},</p>
+                    <p>
+                      Biletul tău pentru meciul <strong>{home}</strong> vs <strong>{away}</strong>
+                      din <strong>{game.GameDate:dd MMM yyyy, HH:mm}</strong> a fost rezervat cu succes.
+                    </p>
+                    <p>
+                      <strong>Stadion:</strong> {stadium}<br/>
+                      <strong>Loc:</strong> {seatName} - {seatType} ({seatPrice} RON)
+                    </p>
+                    <p>Îți mulțumim că ne susții!</p>
+                ";
+
+                await _emailService.SendEmailAsync(user.Email, "Confirmare bilet FC Unirea", emailBody);
+            }
+
             return ticket.Id;
         }
+
 
         public async Task<IEnumerable<TicketWithDetailsModel>> GetTicketsByUserIdAsync(int userId)
         {

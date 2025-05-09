@@ -46,6 +46,14 @@ namespace FCUnirea.Persistance.Repositories
                 .ToList();
         }
 
+        public async Task<Games?> GetGameWithDetailsAsync(int id)
+        {
+            return await _dbContext.Games
+                .Include(g => g.Game_HomeTeam)
+                .Include(g => g.Game_AwayTeam)
+                .Include(g => g.Game_Stadiums)
+                .FirstOrDefaultAsync(g => g.Id == id);
+        }
 
     }
 }

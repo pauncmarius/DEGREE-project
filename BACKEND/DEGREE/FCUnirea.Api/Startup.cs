@@ -13,6 +13,8 @@ using System.Text;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.IdentityModel.Tokens;
 using System;
+using FCUnirea.Domain.Email;
+using FCUnirea.Business.Services.IServices;
 
 namespace FCUnirea.Api
 {
@@ -57,6 +59,10 @@ namespace FCUnirea.Api
             //  inregistram serviciile personalizate (Dependency Injection)
             services.AddPersistanceServices(Configuration);
             services.AddBusinessServices();
+
+            services.Configure<EmailSettings>(Configuration.GetSection("EmailSettings"));
+            services.AddTransient<IEmailService, EmailService>();
+
 
             // configuraram CORS pentru a permite accesul din frontend Angular
             services.AddCors(options =>
