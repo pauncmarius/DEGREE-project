@@ -64,17 +64,19 @@ namespace FCUnirea.Business.Services
                 HomeTeamName = g.Game_HomeTeam?.TeamName ?? "N/A",
                 AwayTeamName = g.Game_AwayTeam?.TeamName ?? "N/A",
                 CompetitionName = g.Game_Competitions?.CompetitionName ?? "Necunoscut",
-                Game_CompetitionsId = g.Game_CompetitionsId ?? 0
+                Game_CompetitionsId = g.Game_CompetitionsId ?? 0,
 
+                Game_HomeTeamId = g.Game_HomeTeamId ?? 0,
+                Game_AwayTeamId = g.Game_AwayTeamId ?? 0
 
             });
         }
 
-        public IEnumerable<GameWithStadiumModel> GetHomeUpcomingGames()
+        public IEnumerable<GameForTicketModel> GetHomeUpcomingGames()
         {
             var games = _gamesRepository.GetAvailableHomeGames();
 
-            return games.Select(g => new GameWithStadiumModel
+            return games.Select(g => new GameForTicketModel
             {
                 Id = g.Id,
                 GameDate = g.GameDate,

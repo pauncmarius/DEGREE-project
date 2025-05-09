@@ -110,5 +110,26 @@ export class TeamDetailsComponent implements OnInit {
       });
     }
   }
+
+  getMatchResultClass(game: Game): string {
+    console.log({
+      teamId: this.teamId,
+      homeTeamId: game.game_HomeTeamId,
+      awayTeamId: game.game_AwayTeamId,
+      homeScore: game.homeTeamScore,
+      awayScore: game.awayTeamScore
+    });
+    
+    if (!game.isPlayed) return 'not-played';
+  
+    const isHomeTeam = game.game_HomeTeamId === this.teamId;
+    const teamScore = isHomeTeam ? game.homeTeamScore : game.awayTeamScore;
+    const opponentScore = isHomeTeam ? game.awayTeamScore : game.homeTeamScore;
+  
+    if (teamScore > opponentScore) return 'win';
+    if (teamScore < opponentScore) return 'loss';
+    return 'draw';
+  }
+  
   
 }

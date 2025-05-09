@@ -1,4 +1,6 @@
 ﻿
+using System.Linq;
+using System.Threading.Tasks;
 using FCUnirea.Business.Models;
 using FCUnirea.Business.Services.IServices;
 using FCUnirea.Domain.Entities;
@@ -54,5 +56,14 @@ namespace FCUnirea.Api.Controllers
             _seatService.DeleteSeat(id);
             return NoContent();
         }
+
+        [HttpGet("forGame/{gameId}")]
+        public async Task<IActionResult> GetSeatsForGame(int gameId)
+        {
+            var result = await _seatService.GetSeatStatusForGameAsync(gameId);
+            return Ok(result);
+        }
+
+
     }
 }

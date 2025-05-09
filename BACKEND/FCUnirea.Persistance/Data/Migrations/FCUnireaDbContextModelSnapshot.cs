@@ -65,7 +65,7 @@ namespace FCUnirea.Persistance.Data.Migrations
                             Id = 1,
                             Comment_NewsId = 1,
                             Comment_UsersId = 9,
-                            CreatedAt = new DateTime(2025, 5, 2, 10, 5, 55, 174, DateTimeKind.Utc).AddTicks(2007),
+                            CreatedAt = new DateTime(2025, 5, 9, 9, 54, 42, 601, DateTimeKind.Utc).AddTicks(1181),
                             Text = "Comentariu de la user 9 pentru știrea 1."
                         },
                         new
@@ -73,7 +73,7 @@ namespace FCUnirea.Persistance.Data.Migrations
                             Id = 2,
                             Comment_NewsId = 1,
                             Comment_UsersId = 1,
-                            CreatedAt = new DateTime(2025, 5, 2, 10, 5, 55, 174, DateTimeKind.Utc).AddTicks(2010),
+                            CreatedAt = new DateTime(2025, 5, 9, 9, 54, 42, 601, DateTimeKind.Utc).AddTicks(1183),
                             Text = "Comentariu de la user 1 pentru știrea 1."
                         },
                         new
@@ -81,7 +81,7 @@ namespace FCUnirea.Persistance.Data.Migrations
                             Id = 3,
                             Comment_NewsId = 1,
                             Comment_UsersId = 4,
-                            CreatedAt = new DateTime(2025, 5, 2, 10, 5, 55, 174, DateTimeKind.Utc).AddTicks(2011),
+                            CreatedAt = new DateTime(2025, 5, 9, 9, 54, 42, 601, DateTimeKind.Utc).AddTicks(1184),
                             Text = "Comentariu de la user 4 pentru știrea 1."
                         },
                         new
@@ -89,7 +89,7 @@ namespace FCUnirea.Persistance.Data.Migrations
                             Id = 4,
                             Comment_NewsId = 1,
                             Comment_UsersId = 8,
-                            CreatedAt = new DateTime(2025, 5, 2, 10, 5, 55, 174, DateTimeKind.Utc).AddTicks(2011),
+                            CreatedAt = new DateTime(2025, 5, 9, 9, 54, 42, 601, DateTimeKind.Utc).AddTicks(1185),
                             Text = "Comentariu de la user 8 pentru știrea 1."
                         },
                         new
@@ -97,7 +97,7 @@ namespace FCUnirea.Persistance.Data.Migrations
                             Id = 5,
                             Comment_NewsId = 1,
                             Comment_UsersId = 2,
-                            CreatedAt = new DateTime(2025, 5, 2, 10, 5, 55, 174, DateTimeKind.Utc).AddTicks(2012),
+                            CreatedAt = new DateTime(2025, 5, 9, 9, 54, 42, 601, DateTimeKind.Utc).AddTicks(1185),
                             Text = "Comentariu de la user 2 pentru știrea 1."
                         },
                         new
@@ -105,7 +105,7 @@ namespace FCUnirea.Persistance.Data.Migrations
                             Id = 6,
                             Comment_NewsId = 2,
                             Comment_UsersId = 6,
-                            CreatedAt = new DateTime(2025, 5, 2, 10, 5, 55, 174, DateTimeKind.Utc).AddTicks(2013),
+                            CreatedAt = new DateTime(2025, 5, 9, 9, 54, 42, 601, DateTimeKind.Utc).AddTicks(1186),
                             Text = "Comentariu de la user 6 pentru știrea 2."
                         },
                         new
@@ -113,7 +113,7 @@ namespace FCUnirea.Persistance.Data.Migrations
                             Id = 7,
                             Comment_NewsId = 2,
                             Comment_UsersId = 7,
-                            CreatedAt = new DateTime(2025, 5, 2, 10, 5, 55, 174, DateTimeKind.Utc).AddTicks(2014),
+                            CreatedAt = new DateTime(2025, 5, 9, 9, 54, 42, 601, DateTimeKind.Utc).AddTicks(1187),
                             Text = "Comentariu de la user 7 pentru știrea 2."
                         },
                         new
@@ -121,7 +121,7 @@ namespace FCUnirea.Persistance.Data.Migrations
                             Id = 8,
                             Comment_NewsId = 2,
                             Comment_UsersId = 10,
-                            CreatedAt = new DateTime(2025, 5, 2, 10, 5, 55, 174, DateTimeKind.Utc).AddTicks(2051),
+                            CreatedAt = new DateTime(2025, 5, 9, 9, 54, 42, 601, DateTimeKind.Utc).AddTicks(1188),
                             Text = "Comentariu de la user 10 pentru știrea 2."
                         },
                         new
@@ -129,7 +129,7 @@ namespace FCUnirea.Persistance.Data.Migrations
                             Id = 9,
                             Comment_NewsId = 2,
                             Comment_UsersId = 4,
-                            CreatedAt = new DateTime(2025, 5, 2, 10, 5, 55, 174, DateTimeKind.Utc).AddTicks(2053),
+                            CreatedAt = new DateTime(2025, 5, 9, 9, 54, 42, 601, DateTimeKind.Utc).AddTicks(1188),
                             Text = "Comentariu de la user 4 pentru știrea 2."
                         },
                         new
@@ -137,7 +137,7 @@ namespace FCUnirea.Persistance.Data.Migrations
                             Id = 10,
                             Comment_NewsId = 2,
                             Comment_UsersId = 5,
-                            CreatedAt = new DateTime(2025, 5, 2, 10, 5, 55, 174, DateTimeKind.Utc).AddTicks(2054),
+                            CreatedAt = new DateTime(2025, 5, 9, 9, 54, 42, 601, DateTimeKind.Utc).AddTicks(1189),
                             Text = "Comentariu de la user 5 pentru știrea 2."
                         },
                         new
@@ -145,7 +145,7 @@ namespace FCUnirea.Persistance.Data.Migrations
                             Id = 11,
                             Comment_NewsId = 3,
                             Comment_UsersId = 6,
-                            CreatedAt = new DateTime(2025, 5, 2, 10, 5, 55, 174, DateTimeKind.Utc).AddTicks(2055),
+                            CreatedAt = new DateTime(2025, 5, 9, 9, 54, 42, 601, DateTimeKind.Utc).AddTicks(1190),
                             Text = "Comentariu de la user 6 pentru știrea 3."
                         },
                         new
@@ -153,7 +153,7 @@ namespace FCUnirea.Persistance.Data.Migrations
                             Id = 12,
                             Comment_NewsId = 3,
                             Comment_UsersId = 2,
-                            CreatedAt = new DateTime(2025, 5, 2, 10, 5, 55, 174, DateTimeKind.Utc).AddTicks(2056),
+                            CreatedAt = new DateTime(2025, 5, 9, 9, 54, 42, 601, DateTimeKind.Utc).AddTicks(1191),
                             Text = "Comentariu de la user 2 pentru știrea 3."
                         },
                         new
@@ -161,7 +161,7 @@ namespace FCUnirea.Persistance.Data.Migrations
                             Id = 13,
                             Comment_NewsId = 3,
                             Comment_UsersId = 11,
-                            CreatedAt = new DateTime(2025, 5, 2, 10, 5, 55, 174, DateTimeKind.Utc).AddTicks(2057),
+                            CreatedAt = new DateTime(2025, 5, 9, 9, 54, 42, 601, DateTimeKind.Utc).AddTicks(1191),
                             Text = "Comentariu de la user 11 pentru știrea 3."
                         },
                         new
@@ -169,7 +169,7 @@ namespace FCUnirea.Persistance.Data.Migrations
                             Id = 14,
                             Comment_NewsId = 3,
                             Comment_UsersId = 8,
-                            CreatedAt = new DateTime(2025, 5, 2, 10, 5, 55, 174, DateTimeKind.Utc).AddTicks(2057),
+                            CreatedAt = new DateTime(2025, 5, 9, 9, 54, 42, 601, DateTimeKind.Utc).AddTicks(1192),
                             Text = "Comentariu de la user 8 pentru știrea 3."
                         },
                         new
@@ -177,7 +177,7 @@ namespace FCUnirea.Persistance.Data.Migrations
                             Id = 15,
                             Comment_NewsId = 3,
                             Comment_UsersId = 9,
-                            CreatedAt = new DateTime(2025, 5, 2, 10, 5, 55, 174, DateTimeKind.Utc).AddTicks(2058),
+                            CreatedAt = new DateTime(2025, 5, 9, 9, 54, 42, 601, DateTimeKind.Utc).AddTicks(1193),
                             Text = "Comentariu de la user 9 pentru știrea 3."
                         },
                         new
@@ -185,7 +185,7 @@ namespace FCUnirea.Persistance.Data.Migrations
                             Id = 16,
                             Comment_NewsId = 4,
                             Comment_UsersId = 2,
-                            CreatedAt = new DateTime(2025, 5, 2, 10, 5, 55, 174, DateTimeKind.Utc).AddTicks(2059),
+                            CreatedAt = new DateTime(2025, 5, 9, 9, 54, 42, 601, DateTimeKind.Utc).AddTicks(1193),
                             Text = "Comentariu de la user 2 pentru știrea 4."
                         },
                         new
@@ -193,7 +193,7 @@ namespace FCUnirea.Persistance.Data.Migrations
                             Id = 17,
                             Comment_NewsId = 4,
                             Comment_UsersId = 10,
-                            CreatedAt = new DateTime(2025, 5, 2, 10, 5, 55, 174, DateTimeKind.Utc).AddTicks(2060),
+                            CreatedAt = new DateTime(2025, 5, 9, 9, 54, 42, 601, DateTimeKind.Utc).AddTicks(1194),
                             Text = "Comentariu de la user 10 pentru știrea 4."
                         },
                         new
@@ -201,7 +201,7 @@ namespace FCUnirea.Persistance.Data.Migrations
                             Id = 18,
                             Comment_NewsId = 4,
                             Comment_UsersId = 1,
-                            CreatedAt = new DateTime(2025, 5, 2, 10, 5, 55, 174, DateTimeKind.Utc).AddTicks(2061),
+                            CreatedAt = new DateTime(2025, 5, 9, 9, 54, 42, 601, DateTimeKind.Utc).AddTicks(1195),
                             Text = "Comentariu de la user 1 pentru știrea 4."
                         },
                         new
@@ -209,7 +209,7 @@ namespace FCUnirea.Persistance.Data.Migrations
                             Id = 19,
                             Comment_NewsId = 4,
                             Comment_UsersId = 7,
-                            CreatedAt = new DateTime(2025, 5, 2, 10, 5, 55, 174, DateTimeKind.Utc).AddTicks(2061),
+                            CreatedAt = new DateTime(2025, 5, 9, 9, 54, 42, 601, DateTimeKind.Utc).AddTicks(1195),
                             Text = "Comentariu de la user 7 pentru știrea 4."
                         },
                         new
@@ -217,7 +217,7 @@ namespace FCUnirea.Persistance.Data.Migrations
                             Id = 20,
                             Comment_NewsId = 4,
                             Comment_UsersId = 8,
-                            CreatedAt = new DateTime(2025, 5, 2, 10, 5, 55, 174, DateTimeKind.Utc).AddTicks(2064),
+                            CreatedAt = new DateTime(2025, 5, 9, 9, 54, 42, 601, DateTimeKind.Utc).AddTicks(1196),
                             Text = "Comentariu de la user 8 pentru știrea 4."
                         },
                         new
@@ -225,7 +225,7 @@ namespace FCUnirea.Persistance.Data.Migrations
                             Id = 21,
                             Comment_NewsId = 5,
                             Comment_UsersId = 4,
-                            CreatedAt = new DateTime(2025, 5, 2, 10, 5, 55, 174, DateTimeKind.Utc).AddTicks(2065),
+                            CreatedAt = new DateTime(2025, 5, 9, 9, 54, 42, 601, DateTimeKind.Utc).AddTicks(1197),
                             Text = "Comentariu de la user 4 pentru știrea 5."
                         },
                         new
@@ -233,7 +233,7 @@ namespace FCUnirea.Persistance.Data.Migrations
                             Id = 22,
                             Comment_NewsId = 5,
                             Comment_UsersId = 9,
-                            CreatedAt = new DateTime(2025, 5, 2, 10, 5, 55, 174, DateTimeKind.Utc).AddTicks(2066),
+                            CreatedAt = new DateTime(2025, 5, 9, 9, 54, 42, 601, DateTimeKind.Utc).AddTicks(1197),
                             Text = "Comentariu de la user 9 pentru știrea 5."
                         },
                         new
@@ -241,7 +241,7 @@ namespace FCUnirea.Persistance.Data.Migrations
                             Id = 23,
                             Comment_NewsId = 5,
                             Comment_UsersId = 8,
-                            CreatedAt = new DateTime(2025, 5, 2, 10, 5, 55, 174, DateTimeKind.Utc).AddTicks(2066),
+                            CreatedAt = new DateTime(2025, 5, 9, 9, 54, 42, 601, DateTimeKind.Utc).AddTicks(1198),
                             Text = "Comentariu de la user 8 pentru știrea 5."
                         },
                         new
@@ -249,7 +249,7 @@ namespace FCUnirea.Persistance.Data.Migrations
                             Id = 24,
                             Comment_NewsId = 5,
                             Comment_UsersId = 11,
-                            CreatedAt = new DateTime(2025, 5, 2, 10, 5, 55, 174, DateTimeKind.Utc).AddTicks(2067),
+                            CreatedAt = new DateTime(2025, 5, 9, 9, 54, 42, 601, DateTimeKind.Utc).AddTicks(1199),
                             Text = "Comentariu de la user 11 pentru știrea 5."
                         },
                         new
@@ -257,7 +257,7 @@ namespace FCUnirea.Persistance.Data.Migrations
                             Id = 25,
                             Comment_NewsId = 5,
                             Comment_UsersId = 10,
-                            CreatedAt = new DateTime(2025, 5, 2, 10, 5, 55, 174, DateTimeKind.Utc).AddTicks(2068),
+                            CreatedAt = new DateTime(2025, 5, 9, 9, 54, 42, 601, DateTimeKind.Utc).AddTicks(1199),
                             Text = "Comentariu de la user 10 pentru știrea 5."
                         },
                         new
@@ -265,7 +265,7 @@ namespace FCUnirea.Persistance.Data.Migrations
                             Id = 26,
                             Comment_NewsId = 6,
                             Comment_UsersId = 2,
-                            CreatedAt = new DateTime(2025, 5, 2, 10, 5, 55, 174, DateTimeKind.Utc).AddTicks(2068),
+                            CreatedAt = new DateTime(2025, 5, 9, 9, 54, 42, 601, DateTimeKind.Utc).AddTicks(1200),
                             Text = "Comentariu de la user 2 pentru știrea 6."
                         },
                         new
@@ -273,7 +273,7 @@ namespace FCUnirea.Persistance.Data.Migrations
                             Id = 27,
                             Comment_NewsId = 6,
                             Comment_UsersId = 7,
-                            CreatedAt = new DateTime(2025, 5, 2, 10, 5, 55, 174, DateTimeKind.Utc).AddTicks(2069),
+                            CreatedAt = new DateTime(2025, 5, 9, 9, 54, 42, 601, DateTimeKind.Utc).AddTicks(1200),
                             Text = "Comentariu de la user 7 pentru știrea 6."
                         },
                         new
@@ -281,7 +281,7 @@ namespace FCUnirea.Persistance.Data.Migrations
                             Id = 28,
                             Comment_NewsId = 6,
                             Comment_UsersId = 8,
-                            CreatedAt = new DateTime(2025, 5, 2, 10, 5, 55, 174, DateTimeKind.Utc).AddTicks(2070),
+                            CreatedAt = new DateTime(2025, 5, 9, 9, 54, 42, 601, DateTimeKind.Utc).AddTicks(1201),
                             Text = "Comentariu de la user 8 pentru știrea 6."
                         },
                         new
@@ -289,7 +289,7 @@ namespace FCUnirea.Persistance.Data.Migrations
                             Id = 29,
                             Comment_NewsId = 6,
                             Comment_UsersId = 5,
-                            CreatedAt = new DateTime(2025, 5, 2, 10, 5, 55, 174, DateTimeKind.Utc).AddTicks(2071),
+                            CreatedAt = new DateTime(2025, 5, 9, 9, 54, 42, 601, DateTimeKind.Utc).AddTicks(1202),
                             Text = "Comentariu de la user 5 pentru știrea 6."
                         },
                         new
@@ -297,7 +297,7 @@ namespace FCUnirea.Persistance.Data.Migrations
                             Id = 30,
                             Comment_NewsId = 6,
                             Comment_UsersId = 11,
-                            CreatedAt = new DateTime(2025, 5, 2, 10, 5, 55, 174, DateTimeKind.Utc).AddTicks(2071),
+                            CreatedAt = new DateTime(2025, 5, 9, 9, 54, 42, 601, DateTimeKind.Utc).AddTicks(1202),
                             Text = "Comentariu de la user 11 pentru știrea 6."
                         },
                         new
@@ -305,7 +305,7 @@ namespace FCUnirea.Persistance.Data.Migrations
                             Id = 31,
                             Comment_NewsId = 7,
                             Comment_UsersId = 4,
-                            CreatedAt = new DateTime(2025, 5, 2, 10, 5, 55, 174, DateTimeKind.Utc).AddTicks(2072),
+                            CreatedAt = new DateTime(2025, 5, 9, 9, 54, 42, 601, DateTimeKind.Utc).AddTicks(1203),
                             Text = "Comentariu de la user 4 pentru știrea 7."
                         },
                         new
@@ -313,7 +313,7 @@ namespace FCUnirea.Persistance.Data.Migrations
                             Id = 32,
                             Comment_NewsId = 7,
                             Comment_UsersId = 8,
-                            CreatedAt = new DateTime(2025, 5, 2, 10, 5, 55, 174, DateTimeKind.Utc).AddTicks(2073),
+                            CreatedAt = new DateTime(2025, 5, 9, 9, 54, 42, 601, DateTimeKind.Utc).AddTicks(1203),
                             Text = "Comentariu de la user 8 pentru știrea 7."
                         },
                         new
@@ -321,7 +321,7 @@ namespace FCUnirea.Persistance.Data.Migrations
                             Id = 33,
                             Comment_NewsId = 7,
                             Comment_UsersId = 3,
-                            CreatedAt = new DateTime(2025, 5, 2, 10, 5, 55, 174, DateTimeKind.Utc).AddTicks(2074),
+                            CreatedAt = new DateTime(2025, 5, 9, 9, 54, 42, 601, DateTimeKind.Utc).AddTicks(1204),
                             Text = "Comentariu de la user 3 pentru știrea 7."
                         },
                         new
@@ -329,7 +329,7 @@ namespace FCUnirea.Persistance.Data.Migrations
                             Id = 34,
                             Comment_NewsId = 7,
                             Comment_UsersId = 6,
-                            CreatedAt = new DateTime(2025, 5, 2, 10, 5, 55, 174, DateTimeKind.Utc).AddTicks(2075),
+                            CreatedAt = new DateTime(2025, 5, 9, 9, 54, 42, 601, DateTimeKind.Utc).AddTicks(1205),
                             Text = "Comentariu de la user 6 pentru știrea 7."
                         },
                         new
@@ -337,7 +337,7 @@ namespace FCUnirea.Persistance.Data.Migrations
                             Id = 35,
                             Comment_NewsId = 7,
                             Comment_UsersId = 11,
-                            CreatedAt = new DateTime(2025, 5, 2, 10, 5, 55, 174, DateTimeKind.Utc).AddTicks(2076),
+                            CreatedAt = new DateTime(2025, 5, 9, 9, 54, 42, 601, DateTimeKind.Utc).AddTicks(1206),
                             Text = "Comentariu de la user 11 pentru știrea 7."
                         },
                         new
@@ -345,7 +345,7 @@ namespace FCUnirea.Persistance.Data.Migrations
                             Id = 36,
                             Comment_NewsId = 8,
                             Comment_UsersId = 4,
-                            CreatedAt = new DateTime(2025, 5, 2, 10, 5, 55, 174, DateTimeKind.Utc).AddTicks(2076),
+                            CreatedAt = new DateTime(2025, 5, 9, 9, 54, 42, 601, DateTimeKind.Utc).AddTicks(1206),
                             Text = "Comentariu de la user 4 pentru știrea 8."
                         },
                         new
@@ -353,7 +353,7 @@ namespace FCUnirea.Persistance.Data.Migrations
                             Id = 37,
                             Comment_NewsId = 8,
                             Comment_UsersId = 2,
-                            CreatedAt = new DateTime(2025, 5, 2, 10, 5, 55, 174, DateTimeKind.Utc).AddTicks(2077),
+                            CreatedAt = new DateTime(2025, 5, 9, 9, 54, 42, 601, DateTimeKind.Utc).AddTicks(1207),
                             Text = "Comentariu de la user 2 pentru știrea 8."
                         },
                         new
@@ -361,7 +361,7 @@ namespace FCUnirea.Persistance.Data.Migrations
                             Id = 38,
                             Comment_NewsId = 8,
                             Comment_UsersId = 9,
-                            CreatedAt = new DateTime(2025, 5, 2, 10, 5, 55, 174, DateTimeKind.Utc).AddTicks(2078),
+                            CreatedAt = new DateTime(2025, 5, 9, 9, 54, 42, 601, DateTimeKind.Utc).AddTicks(1208),
                             Text = "Comentariu de la user 9 pentru știrea 8."
                         },
                         new
@@ -369,7 +369,7 @@ namespace FCUnirea.Persistance.Data.Migrations
                             Id = 39,
                             Comment_NewsId = 8,
                             Comment_UsersId = 11,
-                            CreatedAt = new DateTime(2025, 5, 2, 10, 5, 55, 174, DateTimeKind.Utc).AddTicks(2078),
+                            CreatedAt = new DateTime(2025, 5, 9, 9, 54, 42, 601, DateTimeKind.Utc).AddTicks(1208),
                             Text = "Comentariu de la user 11 pentru știrea 8."
                         },
                         new
@@ -377,7 +377,7 @@ namespace FCUnirea.Persistance.Data.Migrations
                             Id = 40,
                             Comment_NewsId = 8,
                             Comment_UsersId = 7,
-                            CreatedAt = new DateTime(2025, 5, 2, 10, 5, 55, 174, DateTimeKind.Utc).AddTicks(2079),
+                            CreatedAt = new DateTime(2025, 5, 9, 9, 54, 42, 601, DateTimeKind.Utc).AddTicks(1209),
                             Text = "Comentariu de la user 7 pentru știrea 8."
                         },
                         new
@@ -385,7 +385,7 @@ namespace FCUnirea.Persistance.Data.Migrations
                             Id = 41,
                             Comment_NewsId = 9,
                             Comment_UsersId = 1,
-                            CreatedAt = new DateTime(2025, 5, 2, 10, 5, 55, 174, DateTimeKind.Utc).AddTicks(2080),
+                            CreatedAt = new DateTime(2025, 5, 9, 9, 54, 42, 601, DateTimeKind.Utc).AddTicks(1209),
                             Text = "Comentariu de la user 1 pentru știrea 9."
                         },
                         new
@@ -393,7 +393,7 @@ namespace FCUnirea.Persistance.Data.Migrations
                             Id = 42,
                             Comment_NewsId = 9,
                             Comment_UsersId = 2,
-                            CreatedAt = new DateTime(2025, 5, 2, 10, 5, 55, 174, DateTimeKind.Utc).AddTicks(2081),
+                            CreatedAt = new DateTime(2025, 5, 9, 9, 54, 42, 601, DateTimeKind.Utc).AddTicks(1210),
                             Text = "Comentariu de la user 2 pentru știrea 9."
                         },
                         new
@@ -401,7 +401,7 @@ namespace FCUnirea.Persistance.Data.Migrations
                             Id = 43,
                             Comment_NewsId = 9,
                             Comment_UsersId = 7,
-                            CreatedAt = new DateTime(2025, 5, 2, 10, 5, 55, 174, DateTimeKind.Utc).AddTicks(2081),
+                            CreatedAt = new DateTime(2025, 5, 9, 9, 54, 42, 601, DateTimeKind.Utc).AddTicks(1211),
                             Text = "Comentariu de la user 7 pentru știrea 9."
                         },
                         new
@@ -409,7 +409,7 @@ namespace FCUnirea.Persistance.Data.Migrations
                             Id = 44,
                             Comment_NewsId = 9,
                             Comment_UsersId = 5,
-                            CreatedAt = new DateTime(2025, 5, 2, 10, 5, 55, 174, DateTimeKind.Utc).AddTicks(2082),
+                            CreatedAt = new DateTime(2025, 5, 9, 9, 54, 42, 601, DateTimeKind.Utc).AddTicks(1211),
                             Text = "Comentariu de la user 5 pentru știrea 9."
                         },
                         new
@@ -417,7 +417,7 @@ namespace FCUnirea.Persistance.Data.Migrations
                             Id = 45,
                             Comment_NewsId = 9,
                             Comment_UsersId = 6,
-                            CreatedAt = new DateTime(2025, 5, 2, 10, 5, 55, 174, DateTimeKind.Utc).AddTicks(2083),
+                            CreatedAt = new DateTime(2025, 5, 9, 9, 54, 42, 601, DateTimeKind.Utc).AddTicks(1235),
                             Text = "Comentariu de la user 6 pentru știrea 9."
                         },
                         new
@@ -425,7 +425,7 @@ namespace FCUnirea.Persistance.Data.Migrations
                             Id = 46,
                             Comment_NewsId = 10,
                             Comment_UsersId = 2,
-                            CreatedAt = new DateTime(2025, 5, 2, 10, 5, 55, 174, DateTimeKind.Utc).AddTicks(2084),
+                            CreatedAt = new DateTime(2025, 5, 9, 9, 54, 42, 601, DateTimeKind.Utc).AddTicks(1236),
                             Text = "Comentariu de la user 2 pentru știrea 10."
                         },
                         new
@@ -433,7 +433,7 @@ namespace FCUnirea.Persistance.Data.Migrations
                             Id = 47,
                             Comment_NewsId = 10,
                             Comment_UsersId = 1,
-                            CreatedAt = new DateTime(2025, 5, 2, 10, 5, 55, 174, DateTimeKind.Utc).AddTicks(2084),
+                            CreatedAt = new DateTime(2025, 5, 9, 9, 54, 42, 601, DateTimeKind.Utc).AddTicks(1236),
                             Text = "Comentariu de la user 1 pentru știrea 10."
                         },
                         new
@@ -441,7 +441,7 @@ namespace FCUnirea.Persistance.Data.Migrations
                             Id = 48,
                             Comment_NewsId = 10,
                             Comment_UsersId = 11,
-                            CreatedAt = new DateTime(2025, 5, 2, 10, 5, 55, 174, DateTimeKind.Utc).AddTicks(2085),
+                            CreatedAt = new DateTime(2025, 5, 9, 9, 54, 42, 601, DateTimeKind.Utc).AddTicks(1237),
                             Text = "Comentariu de la user 11 pentru știrea 10."
                         },
                         new
@@ -449,7 +449,7 @@ namespace FCUnirea.Persistance.Data.Migrations
                             Id = 49,
                             Comment_NewsId = 10,
                             Comment_UsersId = 7,
-                            CreatedAt = new DateTime(2025, 5, 2, 10, 5, 55, 174, DateTimeKind.Utc).AddTicks(2086),
+                            CreatedAt = new DateTime(2025, 5, 9, 9, 54, 42, 601, DateTimeKind.Utc).AddTicks(1237),
                             Text = "Comentariu de la user 7 pentru știrea 10."
                         },
                         new
@@ -457,7 +457,7 @@ namespace FCUnirea.Persistance.Data.Migrations
                             Id = 50,
                             Comment_NewsId = 10,
                             Comment_UsersId = 3,
-                            CreatedAt = new DateTime(2025, 5, 2, 10, 5, 55, 174, DateTimeKind.Utc).AddTicks(2087),
+                            CreatedAt = new DateTime(2025, 5, 9, 9, 54, 42, 601, DateTimeKind.Utc).AddTicks(1238),
                             Text = "Comentariu de la user 3 pentru știrea 10."
                         },
                         new
@@ -465,7 +465,7 @@ namespace FCUnirea.Persistance.Data.Migrations
                             Id = 51,
                             Comment_NewsId = 11,
                             Comment_UsersId = 2,
-                            CreatedAt = new DateTime(2025, 5, 2, 10, 5, 55, 174, DateTimeKind.Utc).AddTicks(2087),
+                            CreatedAt = new DateTime(2025, 5, 9, 9, 54, 42, 601, DateTimeKind.Utc).AddTicks(1239),
                             Text = "Comentariu de la user 2 pentru știrea 11."
                         },
                         new
@@ -473,7 +473,7 @@ namespace FCUnirea.Persistance.Data.Migrations
                             Id = 52,
                             Comment_NewsId = 11,
                             Comment_UsersId = 1,
-                            CreatedAt = new DateTime(2025, 5, 2, 10, 5, 55, 174, DateTimeKind.Utc).AddTicks(2088),
+                            CreatedAt = new DateTime(2025, 5, 9, 9, 54, 42, 601, DateTimeKind.Utc).AddTicks(1239),
                             Text = "Comentariu de la user 1 pentru știrea 11."
                         },
                         new
@@ -481,7 +481,7 @@ namespace FCUnirea.Persistance.Data.Migrations
                             Id = 53,
                             Comment_NewsId = 11,
                             Comment_UsersId = 7,
-                            CreatedAt = new DateTime(2025, 5, 2, 10, 5, 55, 174, DateTimeKind.Utc).AddTicks(2089),
+                            CreatedAt = new DateTime(2025, 5, 9, 9, 54, 42, 601, DateTimeKind.Utc).AddTicks(1240),
                             Text = "Comentariu de la user 7 pentru știrea 11."
                         },
                         new
@@ -489,7 +489,7 @@ namespace FCUnirea.Persistance.Data.Migrations
                             Id = 54,
                             Comment_NewsId = 11,
                             Comment_UsersId = 11,
-                            CreatedAt = new DateTime(2025, 5, 2, 10, 5, 55, 174, DateTimeKind.Utc).AddTicks(2090),
+                            CreatedAt = new DateTime(2025, 5, 9, 9, 54, 42, 601, DateTimeKind.Utc).AddTicks(1240),
                             Text = "Comentariu de la user 11 pentru știrea 11."
                         },
                         new
@@ -497,7 +497,7 @@ namespace FCUnirea.Persistance.Data.Migrations
                             Id = 55,
                             Comment_NewsId = 11,
                             Comment_UsersId = 5,
-                            CreatedAt = new DateTime(2025, 5, 2, 10, 5, 55, 174, DateTimeKind.Utc).AddTicks(2090),
+                            CreatedAt = new DateTime(2025, 5, 9, 9, 54, 42, 601, DateTimeKind.Utc).AddTicks(1241),
                             Text = "Comentariu de la user 5 pentru știrea 11."
                         },
                         new
@@ -505,7 +505,7 @@ namespace FCUnirea.Persistance.Data.Migrations
                             Id = 56,
                             Comment_NewsId = 12,
                             Comment_UsersId = 9,
-                            CreatedAt = new DateTime(2025, 5, 2, 10, 5, 55, 174, DateTimeKind.Utc).AddTicks(2091),
+                            CreatedAt = new DateTime(2025, 5, 9, 9, 54, 42, 601, DateTimeKind.Utc).AddTicks(1242),
                             Text = "Comentariu de la user 9 pentru știrea 12."
                         },
                         new
@@ -513,7 +513,7 @@ namespace FCUnirea.Persistance.Data.Migrations
                             Id = 57,
                             Comment_NewsId = 12,
                             Comment_UsersId = 3,
-                            CreatedAt = new DateTime(2025, 5, 2, 10, 5, 55, 174, DateTimeKind.Utc).AddTicks(2092),
+                            CreatedAt = new DateTime(2025, 5, 9, 9, 54, 42, 601, DateTimeKind.Utc).AddTicks(1242),
                             Text = "Comentariu de la user 3 pentru știrea 12."
                         },
                         new
@@ -521,7 +521,7 @@ namespace FCUnirea.Persistance.Data.Migrations
                             Id = 58,
                             Comment_NewsId = 12,
                             Comment_UsersId = 11,
-                            CreatedAt = new DateTime(2025, 5, 2, 10, 5, 55, 174, DateTimeKind.Utc).AddTicks(2092),
+                            CreatedAt = new DateTime(2025, 5, 9, 9, 54, 42, 601, DateTimeKind.Utc).AddTicks(1243),
                             Text = "Comentariu de la user 11 pentru știrea 12."
                         },
                         new
@@ -529,7 +529,7 @@ namespace FCUnirea.Persistance.Data.Migrations
                             Id = 59,
                             Comment_NewsId = 12,
                             Comment_UsersId = 2,
-                            CreatedAt = new DateTime(2025, 5, 2, 10, 5, 55, 174, DateTimeKind.Utc).AddTicks(2093),
+                            CreatedAt = new DateTime(2025, 5, 9, 9, 54, 42, 601, DateTimeKind.Utc).AddTicks(1243),
                             Text = "Comentariu de la user 2 pentru știrea 12."
                         },
                         new
@@ -537,7 +537,7 @@ namespace FCUnirea.Persistance.Data.Migrations
                             Id = 60,
                             Comment_NewsId = 12,
                             Comment_UsersId = 7,
-                            CreatedAt = new DateTime(2025, 5, 2, 10, 5, 55, 174, DateTimeKind.Utc).AddTicks(2094),
+                            CreatedAt = new DateTime(2025, 5, 9, 9, 54, 42, 601, DateTimeKind.Utc).AddTicks(1244),
                             Text = "Comentariu de la user 7 pentru știrea 12."
                         },
                         new
@@ -545,7 +545,7 @@ namespace FCUnirea.Persistance.Data.Migrations
                             Id = 61,
                             Comment_NewsId = 13,
                             Comment_UsersId = 1,
-                            CreatedAt = new DateTime(2025, 5, 2, 10, 5, 55, 174, DateTimeKind.Utc).AddTicks(2095),
+                            CreatedAt = new DateTime(2025, 5, 9, 9, 54, 42, 601, DateTimeKind.Utc).AddTicks(1245),
                             Text = "Comentariu de la user 1 pentru știrea 13."
                         },
                         new
@@ -553,7 +553,7 @@ namespace FCUnirea.Persistance.Data.Migrations
                             Id = 62,
                             Comment_NewsId = 13,
                             Comment_UsersId = 10,
-                            CreatedAt = new DateTime(2025, 5, 2, 10, 5, 55, 174, DateTimeKind.Utc).AddTicks(2095),
+                            CreatedAt = new DateTime(2025, 5, 9, 9, 54, 42, 601, DateTimeKind.Utc).AddTicks(1245),
                             Text = "Comentariu de la user 10 pentru știrea 13."
                         },
                         new
@@ -561,7 +561,7 @@ namespace FCUnirea.Persistance.Data.Migrations
                             Id = 63,
                             Comment_NewsId = 13,
                             Comment_UsersId = 9,
-                            CreatedAt = new DateTime(2025, 5, 2, 10, 5, 55, 174, DateTimeKind.Utc).AddTicks(2097),
+                            CreatedAt = new DateTime(2025, 5, 9, 9, 54, 42, 601, DateTimeKind.Utc).AddTicks(1246),
                             Text = "Comentariu de la user 9 pentru știrea 13."
                         },
                         new
@@ -569,7 +569,7 @@ namespace FCUnirea.Persistance.Data.Migrations
                             Id = 64,
                             Comment_NewsId = 13,
                             Comment_UsersId = 3,
-                            CreatedAt = new DateTime(2025, 5, 2, 10, 5, 55, 174, DateTimeKind.Utc).AddTicks(2100),
+                            CreatedAt = new DateTime(2025, 5, 9, 9, 54, 42, 601, DateTimeKind.Utc).AddTicks(1246),
                             Text = "Comentariu de la user 3 pentru știrea 13."
                         },
                         new
@@ -577,7 +577,7 @@ namespace FCUnirea.Persistance.Data.Migrations
                             Id = 65,
                             Comment_NewsId = 13,
                             Comment_UsersId = 11,
-                            CreatedAt = new DateTime(2025, 5, 2, 10, 5, 55, 174, DateTimeKind.Utc).AddTicks(2101),
+                            CreatedAt = new DateTime(2025, 5, 9, 9, 54, 42, 601, DateTimeKind.Utc).AddTicks(1247),
                             Text = "Comentariu de la user 11 pentru știrea 13."
                         },
                         new
@@ -585,7 +585,7 @@ namespace FCUnirea.Persistance.Data.Migrations
                             Id = 66,
                             Comment_NewsId = 14,
                             Comment_UsersId = 3,
-                            CreatedAt = new DateTime(2025, 5, 2, 10, 5, 55, 174, DateTimeKind.Utc).AddTicks(2103),
+                            CreatedAt = new DateTime(2025, 5, 9, 9, 54, 42, 601, DateTimeKind.Utc).AddTicks(1248),
                             Text = "Comentariu de la user 3 pentru știrea 14."
                         },
                         new
@@ -593,7 +593,7 @@ namespace FCUnirea.Persistance.Data.Migrations
                             Id = 67,
                             Comment_NewsId = 14,
                             Comment_UsersId = 10,
-                            CreatedAt = new DateTime(2025, 5, 2, 10, 5, 55, 174, DateTimeKind.Utc).AddTicks(2104),
+                            CreatedAt = new DateTime(2025, 5, 9, 9, 54, 42, 601, DateTimeKind.Utc).AddTicks(1249),
                             Text = "Comentariu de la user 10 pentru știrea 14."
                         },
                         new
@@ -601,7 +601,7 @@ namespace FCUnirea.Persistance.Data.Migrations
                             Id = 68,
                             Comment_NewsId = 14,
                             Comment_UsersId = 1,
-                            CreatedAt = new DateTime(2025, 5, 2, 10, 5, 55, 174, DateTimeKind.Utc).AddTicks(2105),
+                            CreatedAt = new DateTime(2025, 5, 9, 9, 54, 42, 601, DateTimeKind.Utc).AddTicks(1249),
                             Text = "Comentariu de la user 1 pentru știrea 14."
                         },
                         new
@@ -609,7 +609,7 @@ namespace FCUnirea.Persistance.Data.Migrations
                             Id = 69,
                             Comment_NewsId = 14,
                             Comment_UsersId = 11,
-                            CreatedAt = new DateTime(2025, 5, 2, 10, 5, 55, 174, DateTimeKind.Utc).AddTicks(2105),
+                            CreatedAt = new DateTime(2025, 5, 9, 9, 54, 42, 601, DateTimeKind.Utc).AddTicks(1250),
                             Text = "Comentariu de la user 11 pentru știrea 14."
                         },
                         new
@@ -617,7 +617,7 @@ namespace FCUnirea.Persistance.Data.Migrations
                             Id = 70,
                             Comment_NewsId = 14,
                             Comment_UsersId = 2,
-                            CreatedAt = new DateTime(2025, 5, 2, 10, 5, 55, 174, DateTimeKind.Utc).AddTicks(2106),
+                            CreatedAt = new DateTime(2025, 5, 9, 9, 54, 42, 601, DateTimeKind.Utc).AddTicks(1251),
                             Text = "Comentariu de la user 2 pentru știrea 14."
                         },
                         new
@@ -625,7 +625,7 @@ namespace FCUnirea.Persistance.Data.Migrations
                             Id = 71,
                             Comment_NewsId = 15,
                             Comment_UsersId = 10,
-                            CreatedAt = new DateTime(2025, 5, 2, 10, 5, 55, 174, DateTimeKind.Utc).AddTicks(2107),
+                            CreatedAt = new DateTime(2025, 5, 9, 9, 54, 42, 601, DateTimeKind.Utc).AddTicks(1251),
                             Text = "Comentariu de la user 10 pentru știrea 15."
                         },
                         new
@@ -633,7 +633,7 @@ namespace FCUnirea.Persistance.Data.Migrations
                             Id = 72,
                             Comment_NewsId = 15,
                             Comment_UsersId = 3,
-                            CreatedAt = new DateTime(2025, 5, 2, 10, 5, 55, 174, DateTimeKind.Utc).AddTicks(2108),
+                            CreatedAt = new DateTime(2025, 5, 9, 9, 54, 42, 601, DateTimeKind.Utc).AddTicks(1252),
                             Text = "Comentariu de la user 3 pentru știrea 15."
                         },
                         new
@@ -641,7 +641,7 @@ namespace FCUnirea.Persistance.Data.Migrations
                             Id = 73,
                             Comment_NewsId = 15,
                             Comment_UsersId = 4,
-                            CreatedAt = new DateTime(2025, 5, 2, 10, 5, 55, 174, DateTimeKind.Utc).AddTicks(2108),
+                            CreatedAt = new DateTime(2025, 5, 9, 9, 54, 42, 601, DateTimeKind.Utc).AddTicks(1252),
                             Text = "Comentariu de la user 4 pentru știrea 15."
                         },
                         new
@@ -649,7 +649,7 @@ namespace FCUnirea.Persistance.Data.Migrations
                             Id = 74,
                             Comment_NewsId = 15,
                             Comment_UsersId = 9,
-                            CreatedAt = new DateTime(2025, 5, 2, 10, 5, 55, 174, DateTimeKind.Utc).AddTicks(2109),
+                            CreatedAt = new DateTime(2025, 5, 9, 9, 54, 42, 601, DateTimeKind.Utc).AddTicks(1253),
                             Text = "Comentariu de la user 9 pentru știrea 15."
                         },
                         new
@@ -657,7 +657,7 @@ namespace FCUnirea.Persistance.Data.Migrations
                             Id = 75,
                             Comment_NewsId = 15,
                             Comment_UsersId = 2,
-                            CreatedAt = new DateTime(2025, 5, 2, 10, 5, 55, 174, DateTimeKind.Utc).AddTicks(2110),
+                            CreatedAt = new DateTime(2025, 5, 9, 9, 54, 42, 601, DateTimeKind.Utc).AddTicks(1254),
                             Text = "Comentariu de la user 2 pentru știrea 15."
                         });
                 });
@@ -3967,7 +3967,7 @@ namespace FCUnirea.Persistance.Data.Migrations
                             Game_AwayTeamId = 4,
                             Game_CompetitionsId = 1,
                             Game_HomeTeamId = 10,
-                            Game_StadiumsId = 3,
+                            Game_StadiumsId = 10,
                             HomeTeamScore = 0,
                             IsPlayed = false,
                             RefereeName = "Arbitru 1",
@@ -3981,7 +3981,7 @@ namespace FCUnirea.Persistance.Data.Migrations
                             Game_AwayTeamId = 5,
                             Game_CompetitionsId = 1,
                             Game_HomeTeamId = 3,
-                            Game_StadiumsId = 4,
+                            Game_StadiumsId = 3,
                             HomeTeamScore = 0,
                             IsPlayed = false,
                             RefereeName = "Arbitru 2",
@@ -3995,7 +3995,7 @@ namespace FCUnirea.Persistance.Data.Migrations
                             Game_AwayTeamId = 6,
                             Game_CompetitionsId = 1,
                             Game_HomeTeamId = 2,
-                            Game_StadiumsId = 5,
+                            Game_StadiumsId = 2,
                             HomeTeamScore = 0,
                             IsPlayed = false,
                             RefereeName = "Arbitru 3",
@@ -4009,7 +4009,7 @@ namespace FCUnirea.Persistance.Data.Migrations
                             Game_AwayTeamId = 7,
                             Game_CompetitionsId = 1,
                             Game_HomeTeamId = 1,
-                            Game_StadiumsId = 6,
+                            Game_StadiumsId = 1,
                             HomeTeamScore = 0,
                             IsPlayed = false,
                             RefereeName = "Arbitru 4",
@@ -4023,7 +4023,7 @@ namespace FCUnirea.Persistance.Data.Migrations
                             Game_AwayTeamId = 8,
                             Game_CompetitionsId = 1,
                             Game_HomeTeamId = 9,
-                            Game_StadiumsId = 7,
+                            Game_StadiumsId = 9,
                             HomeTeamScore = 0,
                             IsPlayed = false,
                             RefereeName = "Arbitru 5",
@@ -4037,7 +4037,7 @@ namespace FCUnirea.Persistance.Data.Migrations
                             Game_AwayTeamId = 14,
                             Game_CompetitionsId = 4,
                             Game_HomeTeamId = 20,
-                            Game_StadiumsId = 13,
+                            Game_StadiumsId = 20,
                             HomeTeamScore = 0,
                             IsPlayed = false,
                             RefereeName = "Arbitru 6",
@@ -4051,7 +4051,7 @@ namespace FCUnirea.Persistance.Data.Migrations
                             Game_AwayTeamId = 15,
                             Game_CompetitionsId = 4,
                             Game_HomeTeamId = 13,
-                            Game_StadiumsId = 14,
+                            Game_StadiumsId = 13,
                             HomeTeamScore = 0,
                             IsPlayed = false,
                             RefereeName = "Arbitru 7",
@@ -4065,7 +4065,7 @@ namespace FCUnirea.Persistance.Data.Migrations
                             Game_AwayTeamId = 16,
                             Game_CompetitionsId = 4,
                             Game_HomeTeamId = 12,
-                            Game_StadiumsId = 15,
+                            Game_StadiumsId = 12,
                             HomeTeamScore = 0,
                             IsPlayed = false,
                             RefereeName = "Arbitru 8",
@@ -4079,7 +4079,7 @@ namespace FCUnirea.Persistance.Data.Migrations
                             Game_AwayTeamId = 17,
                             Game_CompetitionsId = 4,
                             Game_HomeTeamId = 11,
-                            Game_StadiumsId = 16,
+                            Game_StadiumsId = 11,
                             HomeTeamScore = 0,
                             IsPlayed = false,
                             RefereeName = "Arbitru 9",
@@ -4093,7 +4093,7 @@ namespace FCUnirea.Persistance.Data.Migrations
                             Game_AwayTeamId = 18,
                             Game_CompetitionsId = 4,
                             Game_HomeTeamId = 19,
-                            Game_StadiumsId = 17,
+                            Game_StadiumsId = 19,
                             HomeTeamScore = 0,
                             IsPlayed = false,
                             RefereeName = "Arbitru 10",
@@ -4107,7 +4107,7 @@ namespace FCUnirea.Persistance.Data.Migrations
                             Game_AwayTeamId = 24,
                             Game_CompetitionsId = 7,
                             Game_HomeTeamId = 30,
-                            Game_StadiumsId = 23,
+                            Game_StadiumsId = 30,
                             HomeTeamScore = 0,
                             IsPlayed = false,
                             RefereeName = "Arbitru 11",
@@ -4121,7 +4121,7 @@ namespace FCUnirea.Persistance.Data.Migrations
                             Game_AwayTeamId = 25,
                             Game_CompetitionsId = 7,
                             Game_HomeTeamId = 23,
-                            Game_StadiumsId = 24,
+                            Game_StadiumsId = 23,
                             HomeTeamScore = 0,
                             IsPlayed = false,
                             RefereeName = "Arbitru 12",
@@ -4135,7 +4135,7 @@ namespace FCUnirea.Persistance.Data.Migrations
                             Game_AwayTeamId = 26,
                             Game_CompetitionsId = 7,
                             Game_HomeTeamId = 22,
-                            Game_StadiumsId = 25,
+                            Game_StadiumsId = 22,
                             HomeTeamScore = 0,
                             IsPlayed = false,
                             RefereeName = "Arbitru 13",
@@ -4149,7 +4149,7 @@ namespace FCUnirea.Persistance.Data.Migrations
                             Game_AwayTeamId = 27,
                             Game_CompetitionsId = 7,
                             Game_HomeTeamId = 21,
-                            Game_StadiumsId = 26,
+                            Game_StadiumsId = 21,
                             HomeTeamScore = 0,
                             IsPlayed = false,
                             RefereeName = "Arbitru 14",
@@ -4163,7 +4163,7 @@ namespace FCUnirea.Persistance.Data.Migrations
                             Game_AwayTeamId = 28,
                             Game_CompetitionsId = 7,
                             Game_HomeTeamId = 29,
-                            Game_StadiumsId = 27,
+                            Game_StadiumsId = 29,
                             HomeTeamScore = 0,
                             IsPlayed = false,
                             RefereeName = "Arbitru 15",
@@ -4630,7 +4630,7 @@ namespace FCUnirea.Persistance.Data.Migrations
                         new
                         {
                             Id = 1,
-                            CreatedAt = new DateTime(2025, 5, 2, 10, 5, 55, 174, DateTimeKind.Utc).AddTicks(1983),
+                            CreatedAt = new DateTime(2025, 5, 9, 9, 54, 42, 601, DateTimeKind.Utc).AddTicks(1161),
                             News_UsersId = 1,
                             Text = "Vezi cum a decurs meciul cu ID 1.",
                             Title = "Rezultatul meciului #1"
@@ -4638,7 +4638,7 @@ namespace FCUnirea.Persistance.Data.Migrations
                         new
                         {
                             Id = 2,
-                            CreatedAt = new DateTime(2025, 5, 2, 10, 5, 55, 174, DateTimeKind.Utc).AddTicks(1985),
+                            CreatedAt = new DateTime(2025, 5, 9, 9, 54, 42, 601, DateTimeKind.Utc).AddTicks(1163),
                             News_UsersId = 1,
                             Text = "Vezi cum a decurs meciul cu ID 2.",
                             Title = "Rezultatul meciului #2"
@@ -4646,7 +4646,7 @@ namespace FCUnirea.Persistance.Data.Migrations
                         new
                         {
                             Id = 3,
-                            CreatedAt = new DateTime(2025, 5, 2, 10, 5, 55, 174, DateTimeKind.Utc).AddTicks(1986),
+                            CreatedAt = new DateTime(2025, 5, 9, 9, 54, 42, 601, DateTimeKind.Utc).AddTicks(1164),
                             News_UsersId = 1,
                             Text = "Vezi cum a decurs meciul cu ID 3.",
                             Title = "Rezultatul meciului #3"
@@ -4654,7 +4654,7 @@ namespace FCUnirea.Persistance.Data.Migrations
                         new
                         {
                             Id = 4,
-                            CreatedAt = new DateTime(2025, 5, 2, 10, 5, 55, 174, DateTimeKind.Utc).AddTicks(1987),
+                            CreatedAt = new DateTime(2025, 5, 9, 9, 54, 42, 601, DateTimeKind.Utc).AddTicks(1164),
                             News_UsersId = 1,
                             Text = "Vezi cum a decurs meciul cu ID 4.",
                             Title = "Rezultatul meciului #4"
@@ -4662,7 +4662,7 @@ namespace FCUnirea.Persistance.Data.Migrations
                         new
                         {
                             Id = 5,
-                            CreatedAt = new DateTime(2025, 5, 2, 10, 5, 55, 174, DateTimeKind.Utc).AddTicks(1987),
+                            CreatedAt = new DateTime(2025, 5, 9, 9, 54, 42, 601, DateTimeKind.Utc).AddTicks(1165),
                             News_UsersId = 1,
                             Text = "Vezi cum a decurs meciul cu ID 5.",
                             Title = "Rezultatul meciului #5"
@@ -4670,7 +4670,7 @@ namespace FCUnirea.Persistance.Data.Migrations
                         new
                         {
                             Id = 6,
-                            CreatedAt = new DateTime(2025, 5, 2, 10, 5, 55, 174, DateTimeKind.Utc).AddTicks(1989),
+                            CreatedAt = new DateTime(2025, 5, 9, 9, 54, 42, 601, DateTimeKind.Utc).AddTicks(1166),
                             News_UsersId = 1,
                             Text = "Vezi cum a decurs meciul cu ID 6.",
                             Title = "Rezultatul meciului #6"
@@ -4678,7 +4678,7 @@ namespace FCUnirea.Persistance.Data.Migrations
                         new
                         {
                             Id = 7,
-                            CreatedAt = new DateTime(2025, 5, 2, 10, 5, 55, 174, DateTimeKind.Utc).AddTicks(1990),
+                            CreatedAt = new DateTime(2025, 5, 9, 9, 54, 42, 601, DateTimeKind.Utc).AddTicks(1166),
                             News_UsersId = 1,
                             Text = "Vezi cum a decurs meciul cu ID 7.",
                             Title = "Rezultatul meciului #7"
@@ -4686,7 +4686,7 @@ namespace FCUnirea.Persistance.Data.Migrations
                         new
                         {
                             Id = 8,
-                            CreatedAt = new DateTime(2025, 5, 2, 10, 5, 55, 174, DateTimeKind.Utc).AddTicks(1990),
+                            CreatedAt = new DateTime(2025, 5, 9, 9, 54, 42, 601, DateTimeKind.Utc).AddTicks(1167),
                             News_UsersId = 1,
                             Text = "Vezi cum a decurs meciul cu ID 8.",
                             Title = "Rezultatul meciului #8"
@@ -4694,7 +4694,7 @@ namespace FCUnirea.Persistance.Data.Migrations
                         new
                         {
                             Id = 9,
-                            CreatedAt = new DateTime(2025, 5, 2, 10, 5, 55, 174, DateTimeKind.Utc).AddTicks(1991),
+                            CreatedAt = new DateTime(2025, 5, 9, 9, 54, 42, 601, DateTimeKind.Utc).AddTicks(1168),
                             News_UsersId = 1,
                             Text = "Vezi cum a decurs meciul cu ID 9.",
                             Title = "Rezultatul meciului #9"
@@ -4702,7 +4702,7 @@ namespace FCUnirea.Persistance.Data.Migrations
                         new
                         {
                             Id = 10,
-                            CreatedAt = new DateTime(2025, 5, 2, 10, 5, 55, 174, DateTimeKind.Utc).AddTicks(1992),
+                            CreatedAt = new DateTime(2025, 5, 9, 9, 54, 42, 601, DateTimeKind.Utc).AddTicks(1169),
                             News_UsersId = 1,
                             Text = "Vezi cum a decurs meciul cu ID 10.",
                             Title = "Rezultatul meciului #10"
@@ -4710,7 +4710,7 @@ namespace FCUnirea.Persistance.Data.Migrations
                         new
                         {
                             Id = 11,
-                            CreatedAt = new DateTime(2025, 5, 2, 10, 5, 55, 174, DateTimeKind.Utc).AddTicks(1993),
+                            CreatedAt = new DateTime(2025, 5, 9, 9, 54, 42, 601, DateTimeKind.Utc).AddTicks(1169),
                             News_UsersId = 1,
                             Text = "Vezi cum a decurs meciul cu ID 11.",
                             Title = "Rezultatul meciului #11"
@@ -4718,7 +4718,7 @@ namespace FCUnirea.Persistance.Data.Migrations
                         new
                         {
                             Id = 12,
-                            CreatedAt = new DateTime(2025, 5, 2, 10, 5, 55, 174, DateTimeKind.Utc).AddTicks(1994),
+                            CreatedAt = new DateTime(2025, 5, 9, 9, 54, 42, 601, DateTimeKind.Utc).AddTicks(1170),
                             News_UsersId = 1,
                             Text = "Vezi cum a decurs meciul cu ID 12.",
                             Title = "Rezultatul meciului #12"
@@ -4726,7 +4726,7 @@ namespace FCUnirea.Persistance.Data.Migrations
                         new
                         {
                             Id = 13,
-                            CreatedAt = new DateTime(2025, 5, 2, 10, 5, 55, 174, DateTimeKind.Utc).AddTicks(1994),
+                            CreatedAt = new DateTime(2025, 5, 9, 9, 54, 42, 601, DateTimeKind.Utc).AddTicks(1170),
                             News_UsersId = 1,
                             Text = "Vezi cum a decurs meciul cu ID 13.",
                             Title = "Rezultatul meciului #13"
@@ -4734,7 +4734,7 @@ namespace FCUnirea.Persistance.Data.Migrations
                         new
                         {
                             Id = 14,
-                            CreatedAt = new DateTime(2025, 5, 2, 10, 5, 55, 174, DateTimeKind.Utc).AddTicks(1995),
+                            CreatedAt = new DateTime(2025, 5, 9, 9, 54, 42, 601, DateTimeKind.Utc).AddTicks(1171),
                             News_UsersId = 1,
                             Text = "Vezi cum a decurs meciul cu ID 14.",
                             Title = "Rezultatul meciului #14"
@@ -4742,7 +4742,7 @@ namespace FCUnirea.Persistance.Data.Migrations
                         new
                         {
                             Id = 15,
-                            CreatedAt = new DateTime(2025, 5, 2, 10, 5, 55, 174, DateTimeKind.Utc).AddTicks(1996),
+                            CreatedAt = new DateTime(2025, 5, 9, 9, 54, 42, 601, DateTimeKind.Utc).AddTicks(1171),
                             News_UsersId = 1,
                             Text = "Vezi cum a decurs meciul cu ID 15.",
                             Title = "Rezultatul meciului #15"
@@ -11306,7 +11306,7 @@ namespace FCUnirea.Persistance.Data.Migrations
                         new
                         {
                             Id = 1,
-                            DateReservation = new DateTime(2025, 5, 2, 10, 5, 55, 174, DateTimeKind.Utc).AddTicks(1831),
+                            DateReservation = new DateTime(2025, 5, 9, 9, 54, 42, 601, DateTimeKind.Utc).AddTicks(1025),
                             Ticket_GamesId = 1,
                             Ticket_SeatsId = 1,
                             Ticket_UsersId = 1
@@ -11314,7 +11314,7 @@ namespace FCUnirea.Persistance.Data.Migrations
                         new
                         {
                             Id = 2,
-                            DateReservation = new DateTime(2025, 5, 2, 10, 5, 55, 174, DateTimeKind.Utc).AddTicks(1834),
+                            DateReservation = new DateTime(2025, 5, 9, 9, 54, 42, 601, DateTimeKind.Utc).AddTicks(1028),
                             Ticket_GamesId = 1,
                             Ticket_SeatsId = 2,
                             Ticket_UsersId = 2
@@ -11322,7 +11322,7 @@ namespace FCUnirea.Persistance.Data.Migrations
                         new
                         {
                             Id = 3,
-                            DateReservation = new DateTime(2025, 5, 2, 10, 5, 55, 174, DateTimeKind.Utc).AddTicks(1835),
+                            DateReservation = new DateTime(2025, 5, 9, 9, 54, 42, 601, DateTimeKind.Utc).AddTicks(1029),
                             Ticket_GamesId = 1,
                             Ticket_SeatsId = 3,
                             Ticket_UsersId = 3
@@ -11330,7 +11330,7 @@ namespace FCUnirea.Persistance.Data.Migrations
                         new
                         {
                             Id = 4,
-                            DateReservation = new DateTime(2025, 5, 2, 10, 5, 55, 174, DateTimeKind.Utc).AddTicks(1836),
+                            DateReservation = new DateTime(2025, 5, 9, 9, 54, 42, 601, DateTimeKind.Utc).AddTicks(1029),
                             Ticket_GamesId = 1,
                             Ticket_SeatsId = 4,
                             Ticket_UsersId = 4
@@ -11338,7 +11338,7 @@ namespace FCUnirea.Persistance.Data.Migrations
                         new
                         {
                             Id = 5,
-                            DateReservation = new DateTime(2025, 5, 2, 10, 5, 55, 174, DateTimeKind.Utc).AddTicks(1837),
+                            DateReservation = new DateTime(2025, 5, 9, 9, 54, 42, 601, DateTimeKind.Utc).AddTicks(1030),
                             Ticket_GamesId = 1,
                             Ticket_SeatsId = 5,
                             Ticket_UsersId = 5
@@ -11346,7 +11346,7 @@ namespace FCUnirea.Persistance.Data.Migrations
                         new
                         {
                             Id = 6,
-                            DateReservation = new DateTime(2025, 5, 2, 10, 5, 55, 174, DateTimeKind.Utc).AddTicks(1838),
+                            DateReservation = new DateTime(2025, 5, 9, 9, 54, 42, 601, DateTimeKind.Utc).AddTicks(1049),
                             Ticket_GamesId = 6,
                             Ticket_SeatsId = 11,
                             Ticket_UsersId = 6
@@ -11354,7 +11354,7 @@ namespace FCUnirea.Persistance.Data.Migrations
                         new
                         {
                             Id = 7,
-                            DateReservation = new DateTime(2025, 5, 2, 10, 5, 55, 174, DateTimeKind.Utc).AddTicks(1839),
+                            DateReservation = new DateTime(2025, 5, 9, 9, 54, 42, 601, DateTimeKind.Utc).AddTicks(1052),
                             Ticket_GamesId = 6,
                             Ticket_SeatsId = 12,
                             Ticket_UsersId = 7
@@ -11362,7 +11362,7 @@ namespace FCUnirea.Persistance.Data.Migrations
                         new
                         {
                             Id = 8,
-                            DateReservation = new DateTime(2025, 5, 2, 10, 5, 55, 174, DateTimeKind.Utc).AddTicks(1839),
+                            DateReservation = new DateTime(2025, 5, 9, 9, 54, 42, 601, DateTimeKind.Utc).AddTicks(1053),
                             Ticket_GamesId = 6,
                             Ticket_SeatsId = 13,
                             Ticket_UsersId = 8
@@ -11370,7 +11370,7 @@ namespace FCUnirea.Persistance.Data.Migrations
                         new
                         {
                             Id = 9,
-                            DateReservation = new DateTime(2025, 5, 2, 10, 5, 55, 174, DateTimeKind.Utc).AddTicks(1840),
+                            DateReservation = new DateTime(2025, 5, 9, 9, 54, 42, 601, DateTimeKind.Utc).AddTicks(1054),
                             Ticket_GamesId = 6,
                             Ticket_SeatsId = 14,
                             Ticket_UsersId = 9
@@ -11378,7 +11378,7 @@ namespace FCUnirea.Persistance.Data.Migrations
                         new
                         {
                             Id = 10,
-                            DateReservation = new DateTime(2025, 5, 2, 10, 5, 55, 174, DateTimeKind.Utc).AddTicks(1842),
+                            DateReservation = new DateTime(2025, 5, 9, 9, 54, 42, 601, DateTimeKind.Utc).AddTicks(1055),
                             Ticket_GamesId = 6,
                             Ticket_SeatsId = 15,
                             Ticket_UsersId = 10
@@ -11386,7 +11386,7 @@ namespace FCUnirea.Persistance.Data.Migrations
                         new
                         {
                             Id = 11,
-                            DateReservation = new DateTime(2025, 5, 2, 10, 5, 55, 174, DateTimeKind.Utc).AddTicks(1842),
+                            DateReservation = new DateTime(2025, 5, 9, 9, 54, 42, 601, DateTimeKind.Utc).AddTicks(1055),
                             Ticket_GamesId = 11,
                             Ticket_SeatsId = 21,
                             Ticket_UsersId = 1
@@ -11394,7 +11394,7 @@ namespace FCUnirea.Persistance.Data.Migrations
                         new
                         {
                             Id = 12,
-                            DateReservation = new DateTime(2025, 5, 2, 10, 5, 55, 174, DateTimeKind.Utc).AddTicks(1843),
+                            DateReservation = new DateTime(2025, 5, 9, 9, 54, 42, 601, DateTimeKind.Utc).AddTicks(1056),
                             Ticket_GamesId = 11,
                             Ticket_SeatsId = 22,
                             Ticket_UsersId = 2
@@ -11402,7 +11402,7 @@ namespace FCUnirea.Persistance.Data.Migrations
                         new
                         {
                             Id = 13,
-                            DateReservation = new DateTime(2025, 5, 2, 10, 5, 55, 174, DateTimeKind.Utc).AddTicks(1844),
+                            DateReservation = new DateTime(2025, 5, 9, 9, 54, 42, 601, DateTimeKind.Utc).AddTicks(1057),
                             Ticket_GamesId = 11,
                             Ticket_SeatsId = 23,
                             Ticket_UsersId = 3
@@ -11410,7 +11410,7 @@ namespace FCUnirea.Persistance.Data.Migrations
                         new
                         {
                             Id = 14,
-                            DateReservation = new DateTime(2025, 5, 2, 10, 5, 55, 174, DateTimeKind.Utc).AddTicks(1845),
+                            DateReservation = new DateTime(2025, 5, 9, 9, 54, 42, 601, DateTimeKind.Utc).AddTicks(1057),
                             Ticket_GamesId = 11,
                             Ticket_SeatsId = 24,
                             Ticket_UsersId = 4
@@ -11418,7 +11418,7 @@ namespace FCUnirea.Persistance.Data.Migrations
                         new
                         {
                             Id = 15,
-                            DateReservation = new DateTime(2025, 5, 2, 10, 5, 55, 174, DateTimeKind.Utc).AddTicks(1845),
+                            DateReservation = new DateTime(2025, 5, 9, 9, 54, 42, 601, DateTimeKind.Utc).AddTicks(1058),
                             Ticket_GamesId = 11,
                             Ticket_SeatsId = 25,
                             Ticket_UsersId = 5

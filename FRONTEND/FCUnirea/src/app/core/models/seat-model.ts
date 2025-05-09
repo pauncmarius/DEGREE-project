@@ -1,0 +1,8 @@
+export interface Seat {
+  id: number;
+  seatName: string;
+  seatPrice: number;
+  seatType: string;
+  seat_StadiumsId: number;
+  isTaken?: boolean;
+}

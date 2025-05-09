@@ -682,6 +682,22 @@
     "ReturnTypes": []
   },
   {
+    "ContainingType": "FCUnirea.Api.Controllers.SeatsController",
+    "Method": "GetSeatsForGame",
+    "RelativePath": "api/Seats/forGame/{gameId}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "gameId",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
     "ContainingType": "FCUnirea.Api.Controllers.StadiumsController",
     "Method": "GetAll",
     "RelativePath": "api/Stadiums",

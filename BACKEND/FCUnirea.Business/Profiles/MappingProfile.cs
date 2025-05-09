@@ -30,7 +30,6 @@ namespace FCUnirea.Business.Profiles
             CreateMap<Users, PhoneUpdateModel>().ReverseMap();
             CreateMap<Games, GameWithTeamNamesModel>().ReverseMap();
             CreateMap<PlayerStatisticsPerCompetition, GameScorerModel>().ReverseMap();
-            CreateMap<Games, GameWithStadiumModel>().ReverseMap();
             CreateMap<Tickets, TicketWithDetailsModel>().ReverseMap();
 
 

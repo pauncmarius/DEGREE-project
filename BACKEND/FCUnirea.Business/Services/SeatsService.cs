@@ -35,17 +35,34 @@ namespace FCUnirea.Business.Services
             var seat = _repository.GetById(id);
             if (seat != null) _repository.Delete(seat);
         }
-
-        public async Task<IEnumerable<Seats>> GetOccupiedSeatsForGameAsync(int gameId)
+        public async Task<IEnumerable<SeatStatusModel>> GetSeatStatusForGameAsync(int gameId)
         {
+            var game = await _gamesRepository.GetByIdAsync(gameId);
+            if (game == null || !game.Game_StadiumsId.HasValue)
+                return Enumerable.Empty<SeatStatusModel>();
+
+            var stadiumId = game.Game_StadiumsId.Value;
+
+            // 1. Ia TOATE locurile din acel stadion
+            var seats = await _repository.ListAsync(s => s.Seat_StadiumsId == stadiumId);
+
+            // 2. Ia toate biletele pentru acel meci
             var tickets = await _ticketsRepository.ListAllAsync();
-            var seatIds = tickets
+            var takenSeatIds = tickets
                 .Where(t => t.Ticket_GamesId == gameId && t.Ticket_SeatsId.HasValue)
-            .Select(t => t.Ticket_SeatsId.Value)
+                .Select(t => t.Ticket_SeatsId!.Value)
                 .ToHashSet();
 
-            var allSeats = await _repository.ListAllAsync();
-            return allSeats.Where(s => seatIds.Contains(s.Id));
+            // 3. Generează statusul locurilor
+            return seats.Select(s => new SeatStatusModel
+            {
+                Id = s.Id,
+                SeatName = s.SeatName,
+                SeatType = s.SeatType.ToString(),
+                SeatPrice = s.SeatPrice,
+                IsTaken = takenSeatIds.Contains(s.Id)
+            }).ToList();
         }
+
     }
 }

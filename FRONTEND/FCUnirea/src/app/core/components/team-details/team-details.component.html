@@ -21,12 +21,11 @@
 <h2> Program</h2>
 <!-- Meciuri + Marcatori -->
 <div class="game-cards">
-  <div
-    class="game-card"
-    *ngFor="let game of games"
-    [ngClass]="{ 'played': game.isPlayed }"
-    (click)="toggleScorers(game.id)"
-  >
+  <div class="game-card"
+  *ngFor="let game of games"
+  [ngClass]="getMatchResultClass(game)"
+  (click)="toggleScorers(game.id)">
+
     <div class="game-header">
       <span>{{ game.gameDate | date: 'shortDate' }}</span>
       <strong>{{ game.homeTeamName }} {{ game.homeTeamScore }} - {{ game.awayTeamScore }} {{ game.awayTeamName }}</strong>

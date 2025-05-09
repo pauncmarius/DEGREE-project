@@ -14,7 +14,7 @@ namespace FCUnirea.Business.Services.IServices
         public void UpdateSeat(Seats seat);
         public void DeleteSeat(int id);
 
-        Task<IEnumerable<Seats>> GetOccupiedSeatsForGameAsync(int gameId);
+        Task<IEnumerable<SeatStatusModel>> GetSeatStatusForGameAsync(int gameId);
 
     }
 }
