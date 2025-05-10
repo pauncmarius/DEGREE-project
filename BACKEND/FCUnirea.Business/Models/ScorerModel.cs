@@ -1,4 +1,4 @@
-﻿
+﻿//ScorerModel
 namespace FCUnirea.Business.Models
 {
     public class ScorerModel

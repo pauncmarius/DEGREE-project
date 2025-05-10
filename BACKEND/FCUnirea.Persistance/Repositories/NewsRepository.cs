@@ -1,4 +1,4 @@
-﻿
+﻿//NewsRepository
 using System.Linq;
 using FCUnirea.Domain.Entities;
 using FCUnirea.Domain.IRepositories;
@@ -17,7 +17,7 @@ namespace FCUnirea.Persistance.Repositories
         public News GetByIdWithAuthor(int id)
         {
             return _dbContext.News
-                .Include(n => n.News_Users) // 🔥 Asta aduce autorul
+                .Include(n => n.News_Users)
                 .FirstOrDefault(n => n.Id == id);
         }
 

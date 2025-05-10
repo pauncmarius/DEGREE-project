@@ -1,4 +1,4 @@
-﻿
+﻿//StadiumsMapping
 using FCUnirea.Domain.Entities;
 using Microsoft.EntityFrameworkCore;
 
@@ -35,7 +35,7 @@ namespace FCUnirea.Persistance.Data.Mappings
                     .Property(s => s.IsInternal)
                     .HasColumnName("IsInternal")
                     .IsRequired();
-            // Definirea relațiilor cu alte tabele
+
             modelBuilder.Entity<Stadiums>()
                 .HasMany(n => n.Stadiums_Seats)
                 .WithOne(c => c.Seat_Stadiums)

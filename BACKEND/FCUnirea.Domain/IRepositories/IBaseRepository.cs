@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿//IBaseRepository
+using System.Collections.Generic;
 using System.Threading.Tasks;
 
 namespace FCUnirea.Domain.IRepositories

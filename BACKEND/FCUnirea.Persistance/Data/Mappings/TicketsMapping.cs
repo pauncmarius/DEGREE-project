@@ -1,4 +1,4 @@
-﻿
+﻿//TicketsMapping
 using FCUnirea.Domain.Entities;
 using Microsoft.EntityFrameworkCore;
 

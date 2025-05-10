@@ -1,7 +1,5 @@
-﻿
+﻿//CompetitionsModel
 using FCUnirea.Domain.Entities;
-using System.Collections.Generic;
-
 
 namespace FCUnirea.Business.Models
 {

@@ -1,4 +1,4 @@
-﻿
+﻿//UsersMapping
 using FCUnirea.Domain.Entities;
 using Microsoft.EntityFrameworkCore;
 
@@ -58,7 +58,6 @@ namespace FCUnirea.Persistance.Data.Mappings
                 .HasColumnName("CreatedAt")
                 .IsRequired();
 
-            // Definirea relației cu Comments
             modelBuilder.Entity<Users>()
                 .HasMany(n => n.Users_News)
                 .WithOne(c => c.News_Users)
@@ -77,7 +76,7 @@ namespace FCUnirea.Persistance.Data.Mappings
                 .HasForeignKey(c => c.Comment_UsersId)
                 .OnDelete(DeleteBehavior.Restrict);
 
-            //alte constrângeri
+            //alte constrangeri
             modelBuilder.Entity<Users>()
                 .HasIndex(u => u.Username)
                 .IsUnique();

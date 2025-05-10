@@ -1,4 +1,4 @@
-﻿
+﻿//Comments
 using System;
 using System.ComponentModel.DataAnnotations.Schema;
 

@@ -1,4 +1,4 @@
-﻿
+﻿//PlayerStatisticsPerGameMapping.cs
 using FCUnirea.Domain.Entities;
 using Microsoft.EntityFrameworkCore;
 

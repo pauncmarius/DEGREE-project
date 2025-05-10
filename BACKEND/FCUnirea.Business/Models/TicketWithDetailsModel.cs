@@ -1,8 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿//TicketWithDetailsModel
+
+using System;
 
 namespace FCUnirea.Business.Models
 {

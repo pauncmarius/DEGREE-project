@@ -1,4 +1,4 @@
-﻿
+﻿//TeamStatistics
 namespace FCUnirea.Domain.Entities
 {
     public class TeamStatistics : BaseEntity

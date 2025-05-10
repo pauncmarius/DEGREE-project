@@ -1,4 +1,4 @@
-﻿
+﻿//CommentsMapping.cs
 using FCUnirea.Domain.Entities;
 using Microsoft.EntityFrameworkCore;
 
@@ -24,7 +24,6 @@ namespace FCUnirea.Persistance.Data.Mappings
                 .HasColumnName("CompetitionType")
                 .IsRequired();
 
-            // Definirea relațiilor cu alte tabele
             modelBuilder.Entity<Competitions>()
                 .HasMany(n => n.Competitions_Games)
                 .WithOne(c => c.Game_Competitions)

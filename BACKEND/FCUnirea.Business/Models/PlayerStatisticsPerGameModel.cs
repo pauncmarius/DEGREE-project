@@ -1,4 +1,4 @@
-﻿
+﻿//PlayerStatisticsPerGameModel
 namespace FCUnirea.Business.Models
 {
     public class PlayerStatisticsPerGameModel

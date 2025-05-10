@@ -1,4 +1,4 @@
-﻿
+﻿//PlayersMapping.cs
 using FCUnirea.Domain.Entities;
 using Microsoft.EntityFrameworkCore;
 
@@ -34,7 +34,6 @@ namespace FCUnirea.Persistance.Data.Mappings
                 .HasColumnName("TeamsId")
                 .IsRequired();
 
-            // Definirea relațiilor cu alte tabele
             modelBuilder.Entity<Players>()
                 .HasMany(n => n.Players_PlayerStatisticsPerCompetitons)
                 .WithOne(c => c.PlayerStatisticsPerCompetition_Players)

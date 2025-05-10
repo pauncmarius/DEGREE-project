@@ -1,4 +1,4 @@
-﻿
+﻿//SeatsMapping
 using FCUnirea.Domain.Entities;
 using Microsoft.EntityFrameworkCore;
 
@@ -34,7 +34,6 @@ namespace FCUnirea.Persistance.Data.Mappings
                 .HasColumnName("StadiumId")
                 .IsRequired();
 
-            // Definirea relațiilor cu alte tabele
             modelBuilder.Entity<Seats>()
                 .HasMany<Tickets>(s => s.Seat_Tickets)
                 .WithOne(t => t.Ticket_Seats)

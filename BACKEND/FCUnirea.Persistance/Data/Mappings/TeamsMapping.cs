@@ -1,4 +1,4 @@
-﻿
+﻿//TeamsMapping
 using FCUnirea.Domain.Entities;
 using Microsoft.EntityFrameworkCore;
 
@@ -39,7 +39,6 @@ namespace FCUnirea.Persistance.Data.Mappings
                 .HasColumnName("CoachName")
                 .IsRequired();
 
-            // Definirea relațiilor cu alte tabele
             modelBuilder.Entity<Teams>()
                 .HasMany(n => n.Teams_TeamStatistics)
                 .WithOne(c => c.TeamsStatistics_Teams)

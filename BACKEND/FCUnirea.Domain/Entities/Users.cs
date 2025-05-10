@@ -1,7 +1,6 @@
-﻿
+﻿//Users
 using System;
 using System.Collections.Generic;
-using System.ComponentModel.DataAnnotations.Schema;
 
 namespace FCUnirea.Domain.Entities
 {
@@ -23,8 +22,6 @@ namespace FCUnirea.Domain.Entities
         public ICollection<Comments> Users_Comments { get; set; }
         public ICollection<Tickets> Users_Tickets { get; set; }
     }
-
-    // Enum definition for roles
     public enum UserRole
     {
         Admin,

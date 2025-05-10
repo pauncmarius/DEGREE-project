@@ -1,4 +1,4 @@
-﻿
+﻿//PlayerStatisticsPerGame
 namespace FCUnirea.Domain.Entities
 {
     public class PlayerStatisticsPerGame : BaseEntity

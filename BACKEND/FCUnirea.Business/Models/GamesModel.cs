@@ -1,6 +1,5 @@
-﻿
+﻿//GamesModel
 using System;
-using System.Collections.Generic;
 
 namespace FCUnirea.Business.Models
 {

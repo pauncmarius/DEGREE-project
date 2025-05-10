@@ -1,4 +1,4 @@
-﻿
+﻿//CompetitionsController.cs
 using FCUnirea.Business.Models;
 using FCUnirea.Business.Services.IServices;
 using FCUnirea.Domain.Entities;

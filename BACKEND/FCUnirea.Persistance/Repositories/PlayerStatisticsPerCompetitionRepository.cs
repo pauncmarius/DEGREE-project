@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿//PlayerStatisticsPerCompetitionRepository
+using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using FCUnirea.Domain.Entities;
@@ -57,7 +58,7 @@ namespace FCUnirea.Persistance.Repositories
         {
             return await _dbContext.PlayerStatisticsPerCompetiton
                 .Include(p => p.PlayerStatisticsPerCompetition_Players)
-                    .ThenInclude(p => p.Player_Teams) // dacă ai relație de tip Player → Team
+                    .ThenInclude(p => p.Player_Teams) //relatie de tip Player o Team
                 .Where(p => p.PlayerStatisticsPerCompetition_CompetitionsId == competitionId && p.Goals > 0)
                 .OrderByDescending(p => p.Goals)
                 .Take(10)

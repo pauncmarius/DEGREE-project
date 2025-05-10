@@ -12,5 +12,7 @@ namespace FCUnirea.Business.Services.IServices
         public int AddNews(NewsModel news);
         public void UpdateNews(News news);
         public void DeleteNews(int id);
+
+        public NewsWithCommentsModel GetNewsWithComments(int id);
     }
 }

@@ -1,4 +1,4 @@
-﻿
+﻿//NewsMapping.cs
 using FCUnirea.Domain.Entities;
 using Microsoft.EntityFrameworkCore;
 
@@ -34,7 +34,6 @@ namespace FCUnirea.Persistance.Data.Mappings
                 .HasColumnName("UsersId")
                 .IsRequired();
 
-            // Definirea relației cu Comments
             modelBuilder.Entity<News>()
                 .HasMany(n => n.News_Comments)
                 .WithOne(c => c.Comment_News)

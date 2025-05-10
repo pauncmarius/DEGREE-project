@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿//IPlayerStatisticsPerCompetitionRepository
+using System.Collections.Generic;
 using System.Threading.Tasks;
 using FCUnirea.Domain.Entities;
 

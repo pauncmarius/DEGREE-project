@@ -1,4 +1,4 @@
-﻿
+﻿//FCUnireaDbContext
 using FCUnirea.Domain.Entities;
 using FCUnirea.Persistance.Data.Mappings;
 using Microsoft.EntityFrameworkCore;
@@ -1768,7 +1768,7 @@ namespace FCUnirea.Persistance.Data
                     TeamsStatistics_TeamsId = 30,
                     TeamStatistics_CompetitionsId = 7
                 }
-                });//trebuie automatizat
+                });
 
 
             modelBuilder.Entity<PlayerStatisticsPerGame>().HasData(new List<PlayerStatisticsPerGame>()

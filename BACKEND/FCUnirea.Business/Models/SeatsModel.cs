@@ -1,4 +1,4 @@
-﻿
+﻿//SeatsModel
 using FCUnirea.Domain.Entities;
 
 namespace FCUnirea.Business.Models

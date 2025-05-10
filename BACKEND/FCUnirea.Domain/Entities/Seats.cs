@@ -1,4 +1,4 @@
-﻿
+﻿//Seats
 using System.Collections.Generic;
 
 namespace FCUnirea.Domain.Entities

@@ -1,7 +1,6 @@
-﻿
+﻿//PlayersModel
 using FCUnirea.Domain.Entities;
 using System;
-using System.Collections.Generic;
 
 namespace FCUnirea.Business.Models
 {

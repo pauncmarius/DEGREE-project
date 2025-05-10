@@ -1,5 +1,4 @@
-﻿
-using System.Collections.Generic;
+﻿//StadiumsModel
 
 namespace FCUnirea.Business.Models
 {

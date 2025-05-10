@@ -1,4 +1,4 @@
-﻿
+﻿//NewsController.cs
 using System.Linq;
 using FCUnirea.Business.Models;
 using FCUnirea.Business.Services.IServices;
@@ -30,25 +30,10 @@ namespace FCUnirea.Api.Controllers
         [HttpGet("{id}")]
         public IActionResult GetById(int id)
         {
-            var news = _newsService.GetNewsItem(id);
-            if (news == null) return NotFound();
-
-            var comments = _commentsService.GetByNewsId(id);
-
-            return Ok(new
-            {
-                news.Id,
-                news.Title,
-                news.Text,
-                news.CreatedAt,
-                news.News_Users?.Username,
-                Comments = comments.Select(c => new {
-                    c.Text,
-                    c.CreatedAt,
-                    Username = c.Comment_User?.Username
-                })
-            });
+            var result = _newsService.GetNewsWithComments(id);
+            return result == null ? NotFound() : Ok(result);
         }
+
 
 
         [HttpPost]

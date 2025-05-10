@@ -1,6 +1,4 @@
-﻿
-using FCUnirea.Domain.Entities;
-using System.Collections.Generic;
+﻿//TeamsModel
 using System.ComponentModel.DataAnnotations.Schema;
 
 namespace FCUnirea.Business.Models

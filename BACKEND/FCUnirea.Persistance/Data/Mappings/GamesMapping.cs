@@ -1,4 +1,4 @@
-﻿
+﻿//GamesMapping.cs
 using FCUnirea.Domain.Entities;
 using Microsoft.EntityFrameworkCore;
 
@@ -63,7 +63,6 @@ namespace FCUnirea.Persistance.Data.Mappings
                 .HasColumnName("IsPlayed")
                 .IsRequired();
 
-            // Definirea relațiilor cu alte tabele
             modelBuilder.Entity<Games>()
                 .HasMany(n => n.Games_Tickets)
                 .WithOne(c => c.Ticket_Games)

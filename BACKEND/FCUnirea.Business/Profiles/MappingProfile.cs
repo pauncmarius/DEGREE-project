@@ -1,4 +1,4 @@
-﻿
+﻿//MappingProfile
 using AutoMapper;
 using FCUnirea.Business.Models;
 using FCUnirea.Domain.Entities;
@@ -28,9 +28,6 @@ namespace FCUnirea.Business.Profiles
             CreateMap<Users, UsernameUpdateModel>().ReverseMap();
             CreateMap<Users, EmailUpdateModel>().ReverseMap();
             CreateMap<Users, PhoneUpdateModel>().ReverseMap();
-            CreateMap<Games, GameWithTeamNamesModel>().ReverseMap();
-            CreateMap<PlayerStatisticsPerCompetition, GameScorerModel>().ReverseMap();
-            CreateMap<Tickets, TicketWithDetailsModel>().ReverseMap();
 
 
 

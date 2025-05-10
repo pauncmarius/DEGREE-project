@@ -1,4 +1,5 @@
-﻿using FCUnirea.Domain.IRepositories;
+﻿//BaseRepository
+using FCUnirea.Domain.IRepositories;
 using FCUnirea.Persistance.Data;
 using Microsoft.EntityFrameworkCore;
 using System.Collections.Generic;
@@ -37,7 +38,7 @@ namespace FCUnirea.Persistance.Repositories
         public void Update(T entity)
         {
             _dbContext.Entry(entity).State = EntityState.Modified;
-            _dbContext.SaveChanges(); // <-- corecție aici
+            _dbContext.SaveChanges();
         }
 
         public void Delete(T entity)
@@ -66,13 +67,13 @@ namespace FCUnirea.Persistance.Repositories
         public async Task UpdateAsync(T entity)
         {
             _dbContext.Entry(entity).State = EntityState.Modified;
-            await Task.CompletedTask; // Operațiunea este instantanee, salvarea e separată
+            await Task.CompletedTask;
         }
 
         public async Task DeleteAsync(T entity)
         {
             _dbContext.Set<T>().Remove(entity);
-            await Task.CompletedTask; // Operațiunea este instantanee, salvarea e separată
+            await Task.CompletedTask;
         }
 
         public async Task SaveChangesAsync()
