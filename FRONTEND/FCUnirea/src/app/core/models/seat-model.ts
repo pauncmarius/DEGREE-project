@@ -5,4 +5,5 @@ export interface Seat {
   seatType: string;
   seat_StadiumsId: number;
   isTaken?: boolean;
+  stadiumName?: string; // ✅ corect, nu seat_StadiumName
 }

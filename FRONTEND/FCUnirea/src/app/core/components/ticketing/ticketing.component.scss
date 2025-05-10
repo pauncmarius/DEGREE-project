@@ -84,3 +84,152 @@
     cursor: not-allowed;
   }
 }
+
+.stadium-map {
+  width: 400px;
+  height: 250px;
+  margin: auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-content: center;
+  border: 3px solid black;
+  border-radius: 50%;
+
+  .zone {
+    width: 70px;
+    height: 40px;
+    margin: 5px;
+    border: 1px solid #000;
+    text-align: center;
+    line-height: 40px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
+
+    &.gray { background-color: gray; }
+    &.white { background-color: white; }
+    &.selected { background-color: #c8e6c9; }
+    &.taken { background-color: #ffcccc; }
+    &.available { background-color: #ffffff; }
+
+    &:hover {
+      transform: scale(1.05);
+    }
+  }
+}
+
+.curved-text-wrapper {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin-top: 30px;
+
+  svg {
+    width: 300px;
+    height: 150px;
+  }
+
+  text {
+    font-size: 42px;
+    fill: #2d572c;
+    font-weight: 700;
+    letter-spacing: 1px;
+  }
+}
+
+.stadium-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 40px;
+}
+
+.stadium-oval {
+  position: relative;
+  width: 600px;
+  height: 400px;
+  background: black;
+  border-radius: 50%;
+  overflow: hidden;
+}
+
+.field {
+  position: absolute;
+  top: 25%;
+  left: 25%;
+  width: 50%;
+  height: 50%;
+  background: #2ecc71;
+  border: 2px solid #000;
+}
+
+.goal {
+  position: absolute;
+  width: 10%;
+  height: 30%;
+  background: transparent;
+  border: 2px solid black;
+}
+
+.goal.left {
+  left: 0;
+  top: 35%;
+}
+
+.goal.right {
+  right: 0;
+  top: 35%;
+}
+
+.center-line {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  width: 2px;
+  height: 100%;
+  background: black;
+  transform: translateX(-50%);
+}
+
+.center-circle {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 60px;
+  height: 60px;
+  border: 2px solid black;
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.zone {
+  position: absolute;
+  width: 70px;
+  height: 50px;
+  background: #777;
+  color: black;
+  font-weight: bold;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.diamond2 {
+  transform: rotate(45deg);
+}
+
+.diamond1 {
+  transform: rotate(-45deg);
+}
+
+.A1 { bottom: 30px; left: 200px; }
+.A2 { bottom: 30px; right: 200px; }
+.B1 { bottom: 55px; right: 90px; }
+.B2 { top: 50%; right: 50px; transform: translateY(-50%); }
+.C1 { top: 55px; right: 90px; }
+.C2 { top: 25px; right: 200px; }
+.D1 { top: 25px; left: 200px; }
+.D2 { top: 60px; left: 90px; }
+.E1 { top: 50%; left: 50px; transform: translateY(-50%); }
+.E2 { bottom: 50px; left: 95px; }

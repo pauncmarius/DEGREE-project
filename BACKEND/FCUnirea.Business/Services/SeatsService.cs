@@ -37,11 +37,14 @@ namespace FCUnirea.Business.Services
         }
         public async Task<IEnumerable<SeatStatusModel>> GetSeatStatusForGameAsync(int gameId)
         {
-            var game = await _gamesRepository.GetByIdAsync(gameId);
+            var game = await _gamesRepository.GetByIdWithStadiumAsync(gameId);
             if (game == null || !game.Game_StadiumsId.HasValue)
                 return Enumerable.Empty<SeatStatusModel>();
 
             var stadiumId = game.Game_StadiumsId.Value;
+
+            // Asigură-te că ai include stadionul în entitatea Game (Include dacă e EF)
+            var stadiumName = game.Game_Stadiums?.StadiumName ?? "Stadion necunoscut";
 
             // 1. Ia TOATE locurile din acel stadion
             var seats = await _repository.ListAsync(s => s.Seat_StadiumsId == stadiumId);
@@ -60,9 +63,11 @@ namespace FCUnirea.Business.Services
                 SeatName = s.SeatName,
                 SeatType = s.SeatType.ToString(),
                 SeatPrice = s.SeatPrice,
-                IsTaken = takenSeatIds.Contains(s.Id)
+                IsTaken = takenSeatIds.Contains(s.Id),
+                StadiumName = stadiumName
             }).ToList();
         }
+
 
     }
 }

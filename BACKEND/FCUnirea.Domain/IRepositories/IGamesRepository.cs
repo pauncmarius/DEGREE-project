@@ -14,5 +14,8 @@ namespace FCUnirea.Domain.IRepositories
 
         Task<Games?> GetGameWithDetailsAsync(int id);
 
+        Task<Games> GetByIdWithStadiumAsync(int gameId);
+
+
     }
 }

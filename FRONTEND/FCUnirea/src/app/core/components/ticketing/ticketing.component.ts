@@ -22,6 +22,12 @@ export class TicketingComponent implements OnInit {
   selectedSeatId: number | null = null;
   userId!: number;
   gameId!: number;
+  selectedStadiumName: string = '';
+
+  sectionMap: { [key: string]: number } = {
+    A1: 1, A2: 2, B1: 3, B2: 4, C1: 5, C2: 6,
+    D1: 7, D2: 8, E1: 9, E2: 10
+  };
 
   constructor(
     private ticketService: TicketingService,
@@ -38,25 +44,27 @@ export class TicketingComponent implements OnInit {
     }
     this.userId = userId;
 
-    if (!this.userId) {
-      alert('Nu ești autentificat. Nu poți face rezervări.');
-      return;
-    }
-
     this.ticketService.getAvailableGames().subscribe(g => this.games = g);
 
     this.gameId = Number(this.route.snapshot.paramMap.get('gameId'));
     if (this.gameId) {
       this.selectedGameId = this.gameId;
-      this.seatService.getSeatsByGame(this.gameId).subscribe(seats => {
-        this.seats = seats;
-      });
+      this.loadSeats(this.gameId);
     }
   }
 
   onSelectGame(gameId: number) {
     this.selectedGameId = gameId;
-    this.seatService.getSeatsByGame(gameId).subscribe(seats => this.seats = seats);
+    this.loadSeats(gameId);
+  }
+
+  loadSeats(gameId: number) {
+    this.seatService.getSeatsByGame(gameId).subscribe(seats => {
+      this.seats = seats;
+      if (seats.length > 0) {
+        this.selectedStadiumName = seats[0]?.stadiumName || 'Stadion necunoscut';
+      }
+    });
   }
 
   onReserve() {
@@ -78,4 +86,30 @@ export class TicketingComponent implements OnInit {
   onSelectSeat(seatId: number) {
     this.selectedSeatId = seatId;
   }
+
+  onSelectByZone(zone: string) {
+    const seat = this.getSeatByName(zone);
+    if (seat && !seat.isTaken) {
+      this.selectedSeatId = seat.id;
+    }
+  }
+
+  getSeatByName(name: string): Seat | undefined {
+    return this.seats.find(s => s.seatName === name);
+  }
+
+  getColorForSeat(seat: Seat | undefined): string {
+    if (!seat) return 'gray';
+    if (seat.isTaken) return '#ffcccc';
+    if (this.selectedSeatId === seat.id) return '#c8e6c9';
+    return '#ffffff';
+  }
+
+  getZoneClass(seat: Seat | undefined): string {
+  if (!seat) return 'zone gray';
+  if (seat.isTaken) return 'zone taken';
+  if (this.selectedSeatId === seat.id) return 'zone selected';
+  return 'zone available';
+}
+
 }

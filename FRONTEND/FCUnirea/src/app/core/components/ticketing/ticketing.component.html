@@ -7,12 +7,49 @@
     - {{ game.homeTeamName }} vs {{ game.awayTeamName }}
     ({{ game.competitionName }})
   </li>
-</ul><br>
+</ul>
 
-<!-- SEATS -->
+<!-- Nume stadion arcuit -->
+<div *ngIf="selectedStadiumName" class="curved-text-wrapper">
+  <svg viewBox="0 0 400 20">
+    <defs>
+      <path id="curve" d="M 40,140 A 160,160 0 0,1 360,140" />
+    </defs>
+    <text text-anchor="middle" font-size="26" font-weight="bold" fill="#2d572c">
+      <textPath href="#curve" startOffset="50%">
+        {{ selectedStadiumName }}
+      </textPath>
+    </text>
+  </svg>
+</div>
+<div class="stadium-container">
+  <div class="stadium-oval">
+    <!-- Terenul de joc -->
+    <div class="field">
+      <div class="goal left"></div>
+      <div class="goal right"></div>
+      <div class="center-line"></div>
+      <div class="center-circle"></div>
+    </div>
+
+    <!-- Tribuna -->
+    <div class="zone A1">A1</div>
+    <div class="zone A2">A2</div>
+    <div class="zone B1 diamond1">B1</div>
+    <div class="zone B2">B2</div>
+    <div class="zone C1 diamond2">C1</div>
+    <div class="zone C2">C2</div>
+    <div class="zone D1">D1</div>
+    <div class="zone D2 diamond1">D2</div>
+    <div class="zone E1">E1</div>
+    <div class="zone E2 diamond2">E2</div>
+  </div>
+</div>
+
+
+<!-- Locuri -->
 <div class="seats-container" *ngIf="selectedGameId">
   <h3>Selectează un loc pentru meciul #{{ selectedGameId }}</h3>
-
   <div class="seats-grid">
     <div *ngFor="let seat of seats"
          [class.taken]="seat.isTaken"
