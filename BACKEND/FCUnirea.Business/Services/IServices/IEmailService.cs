@@ -1,4 +1,4 @@
-﻿
+﻿//IEmailService
 using System.Threading.Tasks;
 
 namespace FCUnirea.Business.Services.IServices

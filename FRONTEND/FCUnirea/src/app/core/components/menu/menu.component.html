@@ -28,8 +28,15 @@
     Online Tickets
   </a>
 
-  <!-- Login apare doar dacă nu e logat -->
   <a *ngIf="!isLoggedIn()" class="menu-item" routerLink="/login" routerLinkActive="active">
     Login
   </a>
+
+  <a *ngIf="isAdmin()" class="menu-item" >
+  ------------------------------------------------
+  </a>
+  <a *ngIf="isAdmin()" class="menu-item" routerLink="/admin-users" routerLinkActive="active">
+  Admin: Users
+  </a>
+
 </nav>

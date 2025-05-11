@@ -1,4 +1,4 @@
-﻿
+﻿//SeatsService
 using AutoMapper;
 using FCUnirea.Business.Models;
 using FCUnirea.Business.Services.IServices;
@@ -43,20 +43,16 @@ namespace FCUnirea.Business.Services
 
             var stadiumId = game.Game_StadiumsId.Value;
 
-            // Asigură-te că ai include stadionul în entitatea Game (Include dacă e EF)
             var stadiumName = game.Game_Stadiums?.StadiumName ?? "Stadion necunoscut";
 
-            // 1. Ia TOATE locurile din acel stadion
             var seats = await _repository.ListAsync(s => s.Seat_StadiumsId == stadiumId);
 
-            // 2. Ia toate biletele pentru acel meci
             var tickets = await _ticketsRepository.ListAllAsync();
             var takenSeatIds = tickets
                 .Where(t => t.Ticket_GamesId == gameId && t.Ticket_SeatsId.HasValue)
                 .Select(t => t.Ticket_SeatsId!.Value)
                 .ToHashSet();
 
-            // 3. Generează statusul locurilor
             return seats.Select(s => new SeatStatusModel
             {
                 Id = s.Id,

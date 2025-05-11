@@ -25,6 +25,7 @@ namespace FCUnirea.Business
             services.AddScoped<ITeamStatisticsService, TeamStatisticsService>();
             services.AddScoped<ITicketsService, TicketsService>();
             services.AddScoped<IUsersService, UsersService>();
+            services.AddScoped<IEmailService, EmailService>();
 
             services.AddAutoMapper(Assembly.GetExecutingAssembly());
             return services;

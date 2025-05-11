@@ -56,5 +56,18 @@ export class UserService {
       return null;
     }
   }
+  //admin section
+  getAllUsers(): Observable<any[]> {
+    return this.http.get<any[]>(`${this.apiUrl}`);
+  }
+
+  updateUser(user: any): Observable<any> {
+    return this.http.put(`${this.apiUrl}`, user);
+  }
+
+  deleteUser(id: number): Observable<any> {
+    return this.http.delete(`${this.apiUrl}/${id}`);
+  }
+
   
 }

@@ -1,10 +1,9 @@
-﻿
+﻿// TicketsService
 using AutoMapper;
 using FCUnirea.Business.Models;
 using FCUnirea.Business.Services.IServices;
 using FCUnirea.Domain.Entities;
 using FCUnirea.Domain.IRepositories;
-using FCUnirea.Persistance.Repositories;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -70,7 +69,6 @@ namespace FCUnirea.Business.Services
             await _gamesRepository.UpdateAsync(game);
             await _repository.SaveChangesAsync();
 
-            // 🔔 Trimite email de confirmare
             var user = await _usersRepository.GetByIdAsync(ticket.Ticket_UsersId!.Value);
             var seat = await _seatsRepository.GetByIdAsync(ticket.Ticket_SeatsId!.Value);
 

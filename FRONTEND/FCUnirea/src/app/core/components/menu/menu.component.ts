@@ -26,4 +26,17 @@ export class MenuComponent {
   toggleUserMenu(): void {
     this.userMenuOpen = !this.userMenuOpen;
   }
+
+  isAdmin(): boolean {
+  const token = localStorage.getItem('token');
+  if (!token) return false;
+
+  try {
+    const payload = JSON.parse(atob(token.split('.')[1]));
+    return payload["http://schemas.microsoft.com/ws/2008/06/identity/claims/role"] === 'Admin';
+  } catch {
+    return false;
+  }
+}
+
 }

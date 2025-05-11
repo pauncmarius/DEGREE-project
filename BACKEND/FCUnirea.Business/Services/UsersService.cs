@@ -1,4 +1,5 @@
-﻿using AutoMapper;
+﻿//UsersService
+using AutoMapper;
 using FCUnirea.Business.Models;
 using FCUnirea.Business.Services.IServices;
 using FCUnirea.Domain.Entities;
@@ -56,7 +57,7 @@ namespace FCUnirea.Business.Services
                 errors["phoneNumber"] = "Acest număr de telefon este deja utilizat.";
 
             if (errors.Count > 0)
-                return null; // semnalăm că nu s-a făcut înregistrarea
+                return null; 
 
             var user = _mapper.Map<Users>(request);
             user.Password = HashPassword(request.Password);
@@ -113,6 +114,7 @@ namespace FCUnirea.Business.Services
             {
             new Claim(ClaimTypes.Name, user.Username),
             new Claim("userId", user.Id.ToString()),
+            new Claim(ClaimTypes.Role, user.Role.ToString()),
             new Claim(JwtRegisteredClaimNames.Jti, Guid.NewGuid().ToString())
         };
             // creem tokenul

@@ -1,0 +1,45 @@
+<h2>👤 Administrare utilizatori</h2>
+
+<input type="text" [(ngModel)]="searchTerm" placeholder="Caută după username..." class="search-box"/>
+
+<ul class="user-list">
+  <li *ngFor="let user of filteredUsers" (click)="selectUser(user)">
+    {{ user.username }} ({{ user.email }})
+  </li>
+</ul>
+
+<!-- Formular editare -->
+<div *ngIf="selectedUser" class="edit-form">
+  <h3>Editare utilizator: {{ selectedUser.username }}</h3>
+
+  <label>First Name:</label>
+  <input [(ngModel)]="selectedUser.firstName" />
+
+  <label>Last Name:</label>
+  <input [(ngModel)]="selectedUser.lastName" />
+
+  <label>Email:</label>
+  <input [(ngModel)]="selectedUser.email" />
+
+  <label>Phone:</label>
+  <input [(ngModel)]="selectedUser.phoneNumber" />
+
+  <label>Username:</label>
+  <input [(ngModel)]="selectedUser.username" />
+
+  <label>Rol:</label>
+  <select [(ngModel)]="selectedUser.role">
+    <option value="User">User</option>
+    <option value="Admin">Admin</option>
+  </select>
+
+
+  <div class="btn-group">
+    <button (click)="saveUser()">💾 Salvează</button>
+    <button (click)="selectedUser = null">✖ Renunță</button>
+    <button (click)="deleteUser(selectedUser.id)" class="danger">🗑 Șterge</button>
+  </div>
+
+  <div class="success" *ngIf="successMessage">{{ successMessage }}</div>
+  <div class="error" *ngIf="errorMessage">{{ errorMessage }}</div>
+</div>

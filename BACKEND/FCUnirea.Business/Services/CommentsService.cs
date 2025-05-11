@@ -1,4 +1,4 @@
-﻿
+﻿//CommentsService
 using AutoMapper;
 using FCUnirea.Business.Models;
 using FCUnirea.Business.Services.IServices;
@@ -6,7 +6,6 @@ using FCUnirea.Domain.Entities;
 using FCUnirea.Domain.IRepositories;
 using System;
 using System.Collections.Generic;
-using System.Linq;
 
 namespace FCUnirea.Business.Services
 {

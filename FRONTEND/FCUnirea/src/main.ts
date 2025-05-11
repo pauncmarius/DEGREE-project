@@ -16,6 +16,8 @@ import { TeamsComponent } from './app/core/components/teams/teams.component';
 import { TeamDetailsComponent } from './app/core/components/team-details/team-details.component';
 import { MyTicketsComponent } from './app/core/components/my-tickets/my-tickets.component';
 import { TicketingComponent } from './app/core/components/ticketing/ticketing.component';
+import { AdminUsersComponent } from './app/core/components/admin-users/admin-users.component';
+import { adminGuard } from './app/core/guards/admin.guard';
 
 
 const routes: Routes = [
@@ -29,6 +31,8 @@ const routes: Routes = [
   { path: 'my-tickets', component: MyTicketsComponent , canActivate: [authGuard]},
   { path: 'ticketing', component: TicketingComponent , canActivate: [authGuard]},
   { path: 'teams/:id', component: TeamDetailsComponent, canActivate: [authGuard] },
+  { path: 'admin-users', component: AdminUsersComponent, canActivate: [authGuard, adminGuard] },
+
   { path: '**', component: PageNotFoundComponent},
 
 ];

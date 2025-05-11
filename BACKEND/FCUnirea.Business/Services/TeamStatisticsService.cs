@@ -1,4 +1,5 @@
-﻿using AutoMapper;
+﻿//TeamStatisticsService
+using AutoMapper;
 using FCUnirea.Business.Models;
 using FCUnirea.Business.Services.IServices;
 using FCUnirea.Domain.Entities;
@@ -55,7 +56,6 @@ namespace FCUnirea.Business.Services
 
         public async Task UpdateAllTeamStatisticsFromGamesAsync()
         {
-            // 🔴 ȘTERGI toate statisticile existente
             var existing = await _repository.ListAllAsync();
             foreach (var stat in existing)
             {
@@ -140,13 +140,13 @@ namespace FCUnirea.Business.Services
 
         public async Task<IEnumerable<TeamStatistics>> GetByCompetitionAsync(int competitionId)
         {
-            return await _repository.GetByCompetitionAsync(competitionId); // 👈 nou
+            return await _repository.GetByCompetitionAsync(competitionId);
         }
 
         public async Task<IEnumerable<TeamStatisticsModel>> GetStandingsByCompetitionAsync(int competitionId)
         {
             var standings = await _repository.GetStandingsByCompetitionAsync(competitionId);
-            var allTeams = await _gamesRepository.GetTeamsAsync(); // ai nevoie de această metodă
+            var allTeams = await _gamesRepository.GetTeamsAsync(); 
 
             var result = standings.Select(s =>
             {

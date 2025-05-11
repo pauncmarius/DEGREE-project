@@ -1,4 +1,5 @@
-﻿using AutoMapper;
+﻿//PlayerStatisticsPerGameService
+using AutoMapper;
 using FCUnirea.Business.Models;
 using FCUnirea.Business.Services.IServices;
 using FCUnirea.Domain.Entities;
@@ -80,7 +81,7 @@ namespace FCUnirea.Business.Services
                 await _repository.DeleteAsync(statistic);
                 await _repository.SaveChangesAsync();
 
-                await _compstatsService.UpdateStatisticsFromGamesAsync(); // 👈 actualizare clară competiție după ștergere
+                await _compstatsService.UpdateStatisticsFromGamesAsync(); 
 
                 await _repository.CommitTransactionAsync();
                 return true;
@@ -117,11 +118,9 @@ namespace FCUnirea.Business.Services
 
                 await _gameRepository.UpdateAsync(game);
 
-                // 👇 SALVEZI întâi toate datele înainte de recalcul
                 await _repository.SaveChangesAsync();
                 await _gameRepository.SaveChangesAsync();
 
-                // 👇 abia ACUM actualizezi competițiile și statisticile echipelor
                 await _teamStatisticsService.UpdateAllTeamStatisticsFromGamesAsync();
 
                 await _compstatsService.UpdateStatisticsFromGamesAsync();

@@ -1,10 +1,11 @@
-﻿using FCUnirea.Business.Services.IServices;
+﻿//EmailService
+using FCUnirea.Business.Services.IServices;
 using FCUnirea.Domain.Email;
 using Microsoft.Extensions.Options;
 using System.Net;
 using System.Net.Mail;
 using System.Threading.Tasks;
-
+// de schimbat
 public class EmailService : IEmailService
 {
     private readonly EmailSettings _settings;
