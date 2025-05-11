@@ -431,17 +431,17 @@
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/News"
+                "$ref": "#/components/schemas/NewsModel"
               }
             },
             "text/json": {
               "schema": {
-                "$ref": "#/components/schemas/News"
+                "$ref": "#/components/schemas/NewsModel"
               }
             },
             "application/*+json": {
               "schema": {
-                "$ref": "#/components/schemas/News"
+                "$ref": "#/components/schemas/NewsModel"
               }
             }
           }
@@ -2014,6 +2014,10 @@
       "CommentsModel": {
         "type": "object",
         "properties": {
+          "id": {
+            "type": "integer",
+            "format": "int32"
+          },
           "text": {
             "type": "string",
             "nullable": true
@@ -2300,6 +2304,10 @@
       "NewsModel": {
         "type": "object",
         "properties": {
+          "id": {
+            "type": "integer",
+            "format": "int32"
+          },
           "title": {
             "type": "string",
             "nullable": true

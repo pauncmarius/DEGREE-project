@@ -6,6 +6,8 @@ namespace FCUnirea.Business.Models
 {
     public class CommentsModel
     {
+        public int Id { get; set; }
+
         [Column(TypeName = "TEXT")]
         public string Text { get; set; }
 

@@ -6,6 +6,7 @@ namespace FCUnirea.Business.Models
 {
     public class NewsModel
     {
+        public int Id { get; set; }
         public string Title { get; set; }
 
         [Column(TypeName = "TEXT")]

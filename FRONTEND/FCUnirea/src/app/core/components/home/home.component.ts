@@ -16,9 +16,12 @@ export class HomeComponent {
 
   newsList: NewsModel[] = [];
   selectedNews: NewsModel | null = null;
+  editingNews: any = { title: '', text: '' };
 
   newCommentText = '';
   isLoggedIn = !!localStorage.getItem('token');
+  isAdmin = this.getRoleFromToken() === 'Admin';
+
   successMessage = '';
   errorMessage = '';
 
@@ -26,50 +29,102 @@ export class HomeComponent {
     this.loadNewsList();
   }
 
+  getUserIdFromToken(): number | null {
+    const token = localStorage.getItem('token');
+    if (!token) return null;
+    try {
+      const payload = JSON.parse(atob(token.split('.')[1]));
+      return payload["http://schemas.xmlsoap.org/ws/2005/05/identity/claims/nameidentifier"] || null;
+    } catch (e) {
+      return null;
+    }
+  }
+
+  getRoleFromToken(): string | null {
+    const token = localStorage.getItem('token');
+    if (!token) return null;
+    try {
+      const payload = JSON.parse(atob(token.split('.')[1]));
+      return payload["http://schemas.microsoft.com/ws/2008/06/identity/claims/role"] || null;
+    } catch (e) {
+      return null;
+    }
+  }
+
   loadNewsList(): void {
-    this.newsService.getAllNews().subscribe((data) => {
+    this.newsService.getAllNews().subscribe(data => {
       this.newsList = data;
     });
   }
 
   selectNews(news: any): void {
     if (this.selectedNews?.id === news.id) {
-      this.selectedNews = null; // dacă e deja selectată, o închidem
+      this.selectedNews = null;
     } else {
-      this.newsService.getNewsById(news.id).subscribe((data) => {
+      this.newsService.getNewsById(news.id).subscribe(data => {
         this.selectedNews = data;
         this.successMessage = '';
         this.errorMessage = '';
       });
     }
   }
-  
 
   addComment(): void {
     if (!this.newCommentText.trim()) return;
-  
+
     this.newsService.postComment({
       text: this.newCommentText,
       comment_NewsId: this.selectedNews?.id ?? 0
     }).subscribe({
       next: () => {
-        this.successMessage = 'Comentariu adăugat cu succes!';
-        this.errorMessage = '';
+        this.successMessage = 'Comentariu adăugat!';
         this.newCommentText = '';
-  
-        // reîncarcă datele fără a trece prin toggle
-        if (this.selectedNews?.id) {
-          this.newsService.getNewsById(this.selectedNews.id).subscribe((data) => {
-            this.selectedNews = data;
-          });
-        }
+        if (this.selectedNews?.id) this.selectNews(this.selectedNews);
       },
       error: () => {
-        this.errorMessage = 'A apărut o eroare la postarea comentariului.';
-        this.successMessage = '';
+        this.errorMessage = 'Eroare la postare comentariu.';
       }
     });
   }
-  
-  
+
+  editNews(news: any): void {
+    this.editingNews = { ...news };
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  }
+
+  cancelEdit(): void {
+    this.editingNews = { title: '', text: '' };
+  }
+
+  submitNews(): void {
+    this.editingNews.news_UsersId = this.getUserIdFromToken();
+    if (this.editingNews.id) {
+      this.newsService.updateNews(this.editingNews).subscribe(() => {
+        this.loadNewsList();
+        this.cancelEdit();
+      });
+    } else {
+      this.newsService.addNews(this.editingNews).subscribe(() => {
+        this.loadNewsList();
+        this.cancelEdit();
+      });
+    }
+  }
+
+  deleteNews(id: number): void {
+    if (confirm('Ești sigur că vrei să ștergi această știre?')) {
+      this.newsService.deleteNews(id).subscribe(() => {
+        this.loadNewsList();
+        this.selectedNews = null;
+      });
+    }
+  }
+
+  deleteComment(id: number): void {
+    if (confirm('Ștergi comentariul?')) {
+      this.newsService.deleteComment(id).subscribe(() => {
+        if (this.selectedNews?.id) this.selectNews(this.selectedNews);
+      });
+    }
+  }
 }

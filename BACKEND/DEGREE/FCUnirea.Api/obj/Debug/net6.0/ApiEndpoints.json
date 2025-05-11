@@ -282,8 +282,8 @@
     "Order": 0,
     "Parameters": [
       {
-        "Name": "news",
-        "Type": "FCUnirea.Domain.Entities.News",
+        "Name": "model",
+        "Type": "FCUnirea.Business.Models.NewsModel",
         "IsRequired": true
       }
     ],

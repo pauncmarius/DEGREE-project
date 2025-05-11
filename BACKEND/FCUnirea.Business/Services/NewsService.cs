@@ -23,18 +23,40 @@ namespace FCUnirea.Business.Services
         }
 
 
-        public IEnumerable<News> GetNews() => _newsRepository.ListAll();
+        public IEnumerable<News> GetNews() => _newsRepository.ListAll().OrderByDescending(n => n.CreatedAt);
         public News GetNewsItem(int id)
         {
             return _newsRepository.GetByIdWithAuthor(id);
         }
         public int AddNews(NewsModel news) => _newsRepository.Add(_mapper.Map<News>(news)).Id;
-        public void UpdateNews(News news) => _newsRepository.Update(news);
+        public void UpdateNews(NewsModel model)
+        {
+            var existing = _newsRepository.GetById(model.Id);
+            if (existing == null) return;
+
+            // Păstrăm datele care nu vin din frontend
+            existing.Title = model.Title;
+            existing.Text = model.Text;
+            existing.CreatedAt = existing.CreatedAt;
+            existing.News_UsersId = existing.News_UsersId;
+
+            _newsRepository.Update(existing);
+        }
+
         public void DeleteNews(int id)
         {
             var news = _newsRepository.GetById(id);
-            if (news != null) _newsRepository.Delete(news);
+            if (news == null) return;
+
+            var comments = _commentsRepository.GetByNewsIdWithUser(id).ToList();
+            foreach (var comment in comments)
+            {
+                _commentsRepository.Delete(comment);
+            }
+
+            _newsRepository.Delete(news);
         }
+
 
         public NewsWithCommentsModel GetNewsWithComments(int id)
         {
@@ -52,6 +74,7 @@ namespace FCUnirea.Business.Services
                 Username = news.News_Users != null ? news.News_Users.Username : "Autor necunoscut",
                 Comments = comments.Select(c => new CommentDto
                 {
+                    Id = c.Id,
                     Text = c.Text,
                     CreatedAt = c.CreatedAt,
                     Username = c.Comment_User?.Username
