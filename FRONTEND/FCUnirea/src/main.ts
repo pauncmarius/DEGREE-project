@@ -18,6 +18,9 @@ import { MyTicketsComponent } from './app/core/components/my-tickets/my-tickets.
 import { TicketingComponent } from './app/core/components/ticketing/ticketing.component';
 import { AdminUsersComponent } from './app/core/components/admin-users/admin-users.component';
 import { adminGuard } from './app/core/guards/admin.guard';
+import { AdminCompetitionsComponent } from './app/core/components/admin-competitions/admin-competitions.component';
+import { AdminPlayersComponent } from './app/core/components/admin-players/admin-players.component';
+import { AdminTeamsComponent } from './app/core/components/admin-teams/admin-teams.component';
 
 
 const routes: Routes = [
@@ -31,7 +34,10 @@ const routes: Routes = [
   { path: 'my-tickets', component: MyTicketsComponent , canActivate: [authGuard]},
   { path: 'ticketing', component: TicketingComponent , canActivate: [authGuard]},
   { path: 'teams/:id', component: TeamDetailsComponent, canActivate: [authGuard] },
-  { path: 'admin-users', component: AdminUsersComponent, canActivate: [authGuard, adminGuard] },
+  { path: 'admin/users', component: AdminUsersComponent, canActivate: [authGuard, adminGuard] },
+  { path: 'admin/competitions', component: AdminCompetitionsComponent, canActivate: [authGuard, adminGuard] },
+  { path: 'admin/players', component: AdminPlayersComponent, canActivate: [authGuard, adminGuard] },
+  { path: 'admin/teams', component: AdminTeamsComponent, canActivate: [authGuard, adminGuard] },
 
   { path: '**', component: PageNotFoundComponent},
 

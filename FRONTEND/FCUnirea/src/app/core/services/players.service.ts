@@ -12,4 +12,19 @@ export class PlayersService {
   getPlayersByTeam(teamId: number): Observable<Player[]> {
     return this.http.get<Player[]>(`${this.apiUrl}/byTeam/${teamId}`);
   }
+  getPlayers(): Observable<Player[]> {
+    return this.http.get<Player[]>(`${this.apiUrl}`);
+  }
+  addPlayer(player: Player): Observable<any> {
+    return this.http.post(`${this.apiUrl}`, player);
+  }
+  deletePlayer(id: number): Observable<any> {
+    return this.http.delete(`${this.apiUrl}/${id}`);
+  }
+
+  updatePlayer(player: Player): Observable<any> {
+  return this.http.put(`${this.apiUrl}`, player);
 }
+
+}
+

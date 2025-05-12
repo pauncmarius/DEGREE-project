@@ -1,0 +1,20 @@
+<h2>📋 Competiții</h2>
+
+<form (ngSubmit)="submitCompetition()" class="form-inline">
+  <input [(ngModel)]="editingCompetition.competitionName" name="name" placeholder="Nume competiție" required>
+  <select [(ngModel)]="editingCompetition.competitionType" name="type">
+    <option value="NationalLeague">National League</option>
+    <option value="NationalCup">National Cup</option>
+    <option value="ChampionsLeague">Champions League</option>
+  </select>
+  <button type="submit">{{ editingCompetition.id ? 'Salvează' : 'Adaugă' }}</button>
+  <button type="button" *ngIf="isEditing" (click)="cancelEdit()">✖ Renunță</button>
+</form>
+
+<ul>
+  <li *ngFor="let c of competitions">
+    {{ c.competitionName }} ({{ c.competitionType }})
+    <button (click)="startEdit(c)">EDIT</button>
+    <button (click)="deleteCompetition(c.id!)">🗑</button>
+  </li>
+</ul>

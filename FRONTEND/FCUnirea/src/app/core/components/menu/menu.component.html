@@ -35,8 +35,19 @@
   <a *ngIf="isAdmin()" class="menu-item" >
   ------------------------------------------------
   </a>
-  <a *ngIf="isAdmin()" class="menu-item" routerLink="/admin-users" routerLinkActive="active">
-  Admin: Users
+  <a *ngIf="isAdmin()" class="menu-item" routerLink="/admin/users" routerLinkActive="active">
+  Admin: USERS
   </a>
 
+  <a *ngIf="isAdmin()" class="menu-item" routerLink="/admin/competitions" routerLinkActive="active">
+  Admin: COMPETITIONS
+  </a>
+
+  <a *ngIf="isAdmin()" class="menu-item" routerLink="/admin/players" routerLinkActive="active">
+  Admin: PLAYERS
+  </a>
+  
+  <a *ngIf="isAdmin()" class="menu-item" routerLink="/admin/teams" routerLinkActive="active">
+  Admin: TEAMS
+  </a>
 </nav>

@@ -1,0 +1,38 @@
+<div class="admin-section">
+  <h2>👟 Jucători</h2>
+
+  <!-- 🔍 Filtrare -->
+  <div class="filters">
+    <input type="text" [(ngModel)]="nameFilter" (input)="applyFilters()" placeholder="Caută după nume..." />
+    <input type="number" [(ngModel)]="teamIdFilter" (input)="applyFilters()" placeholder="Filtru după ID echipă" />
+  </div>
+
+  <!-- ➕ Formular -->
+  <form (ngSubmit)="submitPlayer()" #playerForm="ngForm" class="admin-form">
+    <input type="text" [(ngModel)]="editingPlayer.playerName" name="playerName" placeholder="Nume jucător" required />
+    
+    <select [(ngModel)]="editingPlayer.position" name="position" required>
+      <option [ngValue]="'Atacker'">Atacant</option>
+      <option [ngValue]="'Midfielder'">Mijlocaș</option>
+      <option [ngValue]="'Defender'">Fundaș</option>
+      <option [ngValue]="'Goalkeeper'">Portar</option>
+    </select>
+
+    <input type="date" [(ngModel)]="editingPlayer.birthDate" name="birthDate" required />
+    <input type="number" [(ngModel)]="editingPlayer.player_TeamsId" name="player_TeamsId" placeholder="ID echipă" required />
+
+    <button type="submit">
+      {{ editingPlayer.id ? '💾 Salvează modificările' : '➕ Adaugă jucător' }}
+    </button>
+    <button type="button" *ngIf="editingPlayer.id" (click)="cancelEditPlayer()">✖ Anulează</button>
+  </form>
+
+  <!-- 📋 Listă -->
+  <ul class="entity-list">
+    <li *ngFor="let player of filteredPlayers">
+      <span>{{ player.playerName }} | {{ player.position }} | {{ player.birthDate | date }} | Echipă ID: {{ player.player_TeamsId }}</span>
+      <button (click)="editPlayer(player)">✏️ Edit</button>
+      <button (click)="deletePlayer(player.id)">🗑️ Delete</button>
+    </li>
+  </ul>
+</div>

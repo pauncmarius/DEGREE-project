@@ -8,12 +8,12 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
-using Newtonsoft.Json;
 using System.Security.Cryptography;
 using Microsoft.Extensions.Options;
 using Microsoft.IdentityModel.Tokens;
 using System.IdentityModel.Tokens.Jwt;
 using System.Security.Claims;
+using FCUnirea.Persistance.Repositories;
 
 namespace FCUnirea.Business.Services
 {
@@ -22,12 +22,16 @@ namespace FCUnirea.Business.Services
         private readonly IUsersRepository _userRepository;
         private readonly IMapper _mapper;
         private readonly JwtSettings _jwtSettings;
+        private readonly ICommentsRepository _commentsRepository;
+        private readonly ITicketsRepository _ticketsRepository;
 
-        public UsersService(IUsersRepository userRepository, IMapper mapper, IOptions<JwtSettings> jwtSettings)
+        public UsersService(IUsersRepository userRepository, IMapper mapper, IOptions<JwtSettings> jwtSettings, ICommentsRepository commentsRepository, ITicketsRepository ticketsRepository)
         {
             _userRepository = userRepository;
             _mapper = mapper;
             _jwtSettings = jwtSettings.Value;
+            _commentsRepository = commentsRepository;
+            _ticketsRepository = ticketsRepository;
         }
 
         public IEnumerable<Users> GetUsers() => _userRepository.ListAll();
@@ -39,8 +43,26 @@ namespace FCUnirea.Business.Services
         public void DeleteUser(int id)
         {
             var user = _userRepository.GetById(id);
-            if (user != null) _userRepository.Delete(user);
+            if (user == null) return;
+
+            // Șterge comentariile
+            var comments = _commentsRepository.ListAll().Where(c => c.Comment_UsersId == id).ToList();
+            foreach (var comment in comments)
+            {
+                _commentsRepository.Delete(comment);
+            }
+
+            // Șterge biletele
+            var tickets = _ticketsRepository.ListAll().Where(t => t.Ticket_UsersId == id).ToList();
+            foreach (var ticket in tickets)
+            {
+                _ticketsRepository.Delete(ticket);
+            }
+
+            // În final, șterge userul
+            _userRepository.Delete(user);
         }
+
 
         public int? RegisterUser(UsersModel request, out Dictionary<string, string> errors)
         {

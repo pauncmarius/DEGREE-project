@@ -1,0 +1,32 @@
+<div class="admin-section">
+  <h2>🏟️ Echipe</h2>
+
+  <input
+    type="text"
+    [(ngModel)]="searchTerm"
+    (input)="applyFilter()"
+    placeholder="🔍 Caută după nume echipă"
+    class="search-input"
+  />
+
+  <ul class="entity-list">
+    <li *ngFor="let team of filteredTeams">
+      <span>{{ team.teamName }} | {{ team.coachName }} | Internă: {{ team.isInternal ? 'Da' : 'Nu' }}</span>
+      <button (click)="editTeam(team)">✏️ Edit</button>
+      <button (click)="deleteTeam(team.id)">🗑️ Șterge</button>
+    </li>
+  </ul>
+
+  <div *ngIf="editingTeam" class="edit-form">
+    <h4>✏️ Editează echipa</h4>
+    <input type="text" [(ngModel)]="editingTeam.teamName" placeholder="Nume echipă" />
+    <input type="text" [(ngModel)]="editingTeam.coachName" placeholder="Antrenor" />
+    <textarea [(ngModel)]="editingTeam.description" placeholder="Descriere"></textarea>
+    <label>
+      <input type="checkbox" [(ngModel)]="editingTeam.isInternal" />
+      Internă
+    </label>
+    <button (click)="updateTeam()">💾 Salvează</button>
+    <button (click)="cancelEdit()">✖ Anulează</button>
+  </div>
+</div>
