@@ -14,11 +14,9 @@ namespace FCUnirea.Business.Services.IServices
         public void DeleteGame(int id);
 
         IEnumerable<Games> GetGamesByTeam(int teamId);
-
         public IEnumerable<GameWithTeamNamesModel> GetGamesWithTeamNamesByTeam(int teamId);
-
         public IEnumerable<GameForTicketModel> GetHomeUpcomingGames();
-
+        public IEnumerable<GameWithTeamNamesModel> GetAllGamesWithNames();
 
 
 

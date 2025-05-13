@@ -69,5 +69,12 @@ namespace FCUnirea.Api.Controllers
             return Ok(games);
         }
 
+        [HttpGet("withNames")]
+        public IActionResult GetAllWithNames()
+        {
+            var games = _gameService.GetAllGamesWithNames();
+            return Ok(games);
+        }
+
     }
 }

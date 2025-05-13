@@ -4,6 +4,7 @@ using FCUnirea.Business.Models;
 using FCUnirea.Business.Services.IServices;
 using FCUnirea.Domain.Entities;
 using FCUnirea.Domain.IRepositories;
+using FCUnirea.Persistance.Repositories;
 using System.Collections.Generic;
 using System.Linq;
 
@@ -87,5 +88,27 @@ namespace FCUnirea.Business.Services
                 StadiumLocation = g.Game_Stadiums?.StadiumLocation ?? ""
             });
         }
+
+        public IEnumerable<GameWithTeamNamesModel> GetAllGamesWithNames()
+        {
+            var games = _gamesRepository.ListAllWithIncludes();
+
+            return games.Select(g => new GameWithTeamNamesModel
+            {
+                Id = g.Id,
+                GameDate = g.GameDate,
+                HomeTeamScore = g.HomeTeamScore,
+                AwayTeamScore = g.AwayTeamScore,
+                IsPlayed = g.IsPlayed,
+                HomeTeamName = g.Game_HomeTeam?.TeamName ?? "",
+                AwayTeamName = g.Game_AwayTeam?.TeamName ?? "",
+                CompetitionName = g.Game_Competitions?.CompetitionName ?? "",
+                Game_HomeTeamId = g.Game_HomeTeamId ?? 0,
+                Game_AwayTeamId = g.Game_AwayTeamId ?? 0,
+                Game_CompetitionsId = g.Game_CompetitionsId ?? 0
+            });
+        }
+
+
     }
 }

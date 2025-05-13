@@ -62,6 +62,15 @@ namespace FCUnirea.Persistance.Repositories
                 .FirstOrDefaultAsync(g => g.Id == gameId);
         }
 
+        public IEnumerable<Games> ListAllWithIncludes()
+        {
+            return _dbContext.Games
+                .Include(g => g.Game_HomeTeam)
+                .Include(g => g.Game_AwayTeam)
+                .Include(g => g.Game_Competitions)
+                .ToList();
+        }
+
 
     }
 }

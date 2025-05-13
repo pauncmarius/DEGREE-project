@@ -16,6 +16,6 @@ namespace FCUnirea.Domain.IRepositories
 
         Task<Games> GetByIdWithStadiumAsync(int gameId);
 
-
+        public IEnumerable<Games> ListAllWithIncludes();
     }
 }

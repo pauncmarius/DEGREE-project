@@ -12,4 +12,8 @@ export class GamesService {
   getGamesByTeam(teamId: number): Observable<Game[]> {
     return this.http.get<Game[]>(`${this.apiUrl}/byTeam/${teamId}`);
   }
+  
+  getGames(): Observable<Game[]> {
+    return this.http.get<Game[]>(`${this.apiUrl}/withNames`);
+  }
 }

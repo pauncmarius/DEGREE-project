@@ -14,4 +14,16 @@ export class PlayerStatisticsPerGameService {
   getScorersByGame(gameId: number): Observable<GameScorer[]> {
     return this.http.get<GameScorer[]>(`${this.apiUrl}/scorersByGame/${gameId}`);
   }
+
+  addScorer(scorer: {
+    goals: number;
+    playerStatisticsPerGame_PlayersId: number;
+    playerStatisticsPerGame_GamesId: number;
+  }): Observable<any> {
+    return this.http.post(`${this.apiUrl}`, scorer);
+  }
+
+  deleteScorer(statId: number): Observable<any> {
+    return this.http.delete(`${this.apiUrl}/${statId}`);
+  }
 }

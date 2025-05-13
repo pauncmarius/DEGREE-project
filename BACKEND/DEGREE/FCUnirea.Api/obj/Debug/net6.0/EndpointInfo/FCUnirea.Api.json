@@ -383,6 +383,18 @@
         }
       }
     },
+    "/api/Games/withNames": {
+      "get": {
+        "tags": [
+          "Games"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
     "/api/News": {
       "get": {
         "tags": [

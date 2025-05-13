@@ -140,6 +140,7 @@ namespace FCUnirea.Business.Services
             var scorers = await _repository.GetScorersByGameAsync(gameId);
             return scorers.Select(p => new GameScorerModel
             {
+                Id = p.Id,
                 PlayerName = p.PlayerStatisticsPerGame_Players.PlayerName,
                 TeamName = p.PlayerStatisticsPerGame_Players.Player_Teams?.TeamName ?? "Necunoscut",
                 Goals = p.Goals
