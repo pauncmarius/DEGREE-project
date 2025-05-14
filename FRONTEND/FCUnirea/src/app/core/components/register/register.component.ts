@@ -7,7 +7,7 @@ import { UserService } from '../../services/users.service';
 @Component({
   selector: 'app-register',
   standalone: true,
-  imports: [CommonModule, RouterModule, FormsModule, ReactiveFormsModule],
+  imports: [CommonModule, RouterModule, ReactiveFormsModule],
   templateUrl: './register.component.html',
   styleUrl: './register.component.scss'
 })
@@ -39,17 +39,17 @@ export class RegisterComponent {
         this.router.navigate(['/login']);
       },
       (error) => {
-        console.log('Server error:', error); // 👈 păstrează pentru debugging
+        console.log('Server error:', error);
     
         if (error.status === 400 && error.error && error.error.errors) {
           const errors = error.error.errors;
     
-          // Resetăm erorile existente
+          // resetam erorile existente
           Object.keys(this.registerForm.controls).forEach(field => {
             this.registerForm.get(field)?.setErrors(null);
           });
     
-          // Setăm erorile specifice venite de la backend
+          // setam erorile specifice venite de la backend
           if (errors.username) {
             this.registerForm.get('username')?.setErrors({ server: errors.username });
           }

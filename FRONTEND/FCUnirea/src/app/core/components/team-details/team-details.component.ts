@@ -26,8 +26,6 @@ export class TeamDetailsComponent implements OnInit {
   teamId!: number;
   games: Game[] = [];
   players: Player[] = [];
-  goalScorersMap: { [gameId: number]: Scorer[] } = {};
-  visibleScorers: { [gameId: number]: boolean } = {};
 
   standingsMap: { [competitionId: number]: TeamStatistic[] } = {};
   competitionNames: { [competitionId: number]: string } = {};

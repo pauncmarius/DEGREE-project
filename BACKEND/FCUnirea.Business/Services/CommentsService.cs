@@ -25,7 +25,6 @@ namespace FCUnirea.Business.Services
 
         public IEnumerable<Comments> GetComments() => _commentsRepository.ListAll();
         public Comments GetComment(int id) => _commentsRepository.GetById(id);
-        public int AddComment(CommentsModel comment) => _commentsRepository.Add(_mapper.Map<Comments>(comment)).Id;
         public void UpdateComment(Comments comment) => _commentsRepository.Update(comment);
         public void DeleteComment(int id)
         {
@@ -33,13 +32,6 @@ namespace FCUnirea.Business.Services
             if (comment != null) 
                 _commentsRepository.Delete(comment);
         }
-
-        public IEnumerable<Comments> GetByNewsId(int newsId)
-        {
-            return _commentsRepository.GetByNewsIdWithUser(newsId);
-
-        }
-
         public int? AddCommentWithUser(CommentsModel model, string username)
         {
             var user = _usersRepository.GetByUsername(username);

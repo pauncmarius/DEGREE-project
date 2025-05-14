@@ -48,9 +48,6 @@ namespace FCUnirea.Business.Services
             var game = _gamesRepository.GetById(id);
             if (game != null) _gamesRepository.Delete(game);
         }
-
-        public IEnumerable<Games> GetGamesByTeam(int teamId) => _gamesRepository.GetGamesByTeam(teamId); 
-
         public IEnumerable<GameWithTeamNamesModel> GetGamesWithTeamNamesByTeam(int teamId)
         {
             var games = _gamesRepository.GetGamesByTeam(teamId);

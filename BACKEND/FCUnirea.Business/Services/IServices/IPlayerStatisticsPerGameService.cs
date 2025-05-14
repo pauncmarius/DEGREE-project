@@ -10,7 +10,6 @@ namespace FCUnirea.Business.Services.IServices
     {
         Task<IEnumerable<PlayerStatisticsPerGame>> GetPlayerStatisticsPerGamesAsync();
         Task<PlayerStatisticsPerGame> GetPlayerStatisticPerGameAsync(int id);
-        Task<int> AddPlayerStatisticPerGameAsync(PlayerStatisticsPerGameModel statistic);
         Task UpdatePlayerStatisticPerGameAsync(PlayerStatisticsPerGame statistic);
         Task<bool> DeletePlayerStatisticPerGameAsync(int id);
         Task<int> AddAndUpdateGameScoreAsync(PlayerStatisticsPerGameModel model);

@@ -6,9 +6,6 @@ import { Observable } from 'rxjs';
   providedIn: 'root'
 })
 export class UserService {
-  isAdmin(): boolean {
-    throw new Error("Method not implemented.");
-  }
   private apiUrl = 'https://localhost:5000/api/Users';
   private http = inject(HttpClient);
 
@@ -70,7 +67,5 @@ export class UserService {
 
   deleteUser(id: number): Observable<any> {
     return this.http.delete(`${this.apiUrl}/${id}`);
-  }
-
-  
+  } 
 }

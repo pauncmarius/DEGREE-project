@@ -760,29 +760,6 @@
         }
       }
     },
-    "/api/PlayerStatisticsPerCompetition/byPlayer/{playerId}": {
-      "get": {
-        "tags": [
-          "PlayerStatisticsPerCompetition"
-        ],
-        "parameters": [
-          {
-            "name": "playerId",
-            "in": "path",
-            "required": true,
-            "schema": {
-              "type": "integer",
-              "format": "int32"
-            }
-          }
-        ],
-        "responses": {
-          "200": {
-            "description": "OK"
-          }
-        }
-      }
-    },
     "/api/PlayerStatisticsPerCompetition/scorers/{competitionId}": {
       "get": {
         "tags": [
@@ -1419,29 +1396,6 @@
         "parameters": [
           {
             "name": "id",
-            "in": "path",
-            "required": true,
-            "schema": {
-              "type": "integer",
-              "format": "int32"
-            }
-          }
-        ],
-        "responses": {
-          "200": {
-            "description": "OK"
-          }
-        }
-      }
-    },
-    "/api/TeamStatistics/byCompetition/{competitionId}": {
-      "get": {
-        "tags": [
-          "TeamStatistics"
-        ],
-        "parameters": [
-          {
-            "name": "competitionId",
             "in": "path",
             "required": true,
             "schema": {

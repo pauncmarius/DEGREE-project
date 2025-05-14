@@ -57,7 +57,6 @@ namespace FCUnirea.Business.Services
             _newsRepository.Delete(news);
         }
 
-
         public NewsWithCommentsModel GetNewsWithComments(int id)
         {
             var news = _newsRepository.GetByIdWithAuthor(id);

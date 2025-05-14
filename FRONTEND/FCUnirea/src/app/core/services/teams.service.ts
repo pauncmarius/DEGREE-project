@@ -20,9 +20,7 @@ export class TeamService {
   getTeams(): Observable<Team[]> {
     return this.http.get<Team[]>(`${this.apiUrl}`);
   }
-  addTeam(team: Team): Observable<any> {
-    return this.http.post(`${this.apiUrl}`, team);
-  }
+
   deleteTeam(id: number): Observable<any> {
     return this.http.delete(`${this.apiUrl}/${id}`);
   }

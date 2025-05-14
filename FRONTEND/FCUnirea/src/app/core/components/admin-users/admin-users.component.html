@@ -10,12 +10,12 @@
 
   <ul class="entity-list">
     <li *ngFor="let user of filteredUsers">
-      <!-- Rând cu username + email -->
+
       <div class="team-row" (click)="selectUser(user)">
         <span>{{ user.username }} ({{ user.email }})</span>
       </div>
 
-      <!-- Taburi doar pentru utilizatorul selectat -->
+
       <div *ngIf="selectedUser && selectedUser.id === user.id" class="user-tabs">
         <button
           (click)="activeTab = 'edit'"
@@ -31,7 +31,7 @@
         </button>
       </div>
 
-      <!-- Formular editare -->
+
       <div
         *ngIf="selectedUser && selectedUser.id === user.id && activeTab === 'edit'"
         class="edit-form-inline"

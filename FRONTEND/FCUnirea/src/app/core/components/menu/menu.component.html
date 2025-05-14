@@ -3,7 +3,6 @@
     Home
   </a>
 
-  <!-- Arată secțiunea „User” doar dacă e logat -->
   <div *ngIf="isLoggedIn()" class="menu-section">
     <div class="menu-title clickable" (click)="toggleUserMenu()">
       User

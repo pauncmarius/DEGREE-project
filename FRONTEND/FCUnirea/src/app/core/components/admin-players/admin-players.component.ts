@@ -32,15 +32,15 @@ export class AdminPlayersComponent implements OnInit {
     });
   }
 
-applyFilters(): void {
-  const teamIdNumber = parseInt(this.teamIdFilter, 10);
+  applyFilters(): void {
+    const teamIdNumber = parseInt(this.teamIdFilter, 10);
 
-  this.filteredPlayers = this.players.filter(player => {
-    const matchesTeamId = isNaN(teamIdNumber) || player.player_TeamsId === teamIdNumber;
-    const matchesName = player.playerName.toLowerCase().includes(this.nameFilter.toLowerCase());
-    return matchesTeamId && matchesName;
-  });
-}
+    this.filteredPlayers = this.players.filter(player => {
+      const matchesTeamId = isNaN(teamIdNumber) || player.player_TeamsId === teamIdNumber;
+      const matchesName = player.playerName.toLowerCase().includes(this.nameFilter.toLowerCase());
+      return matchesTeamId && matchesName;
+    });
+  }
 
 
   submitPlayer(): void {

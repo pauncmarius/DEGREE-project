@@ -24,11 +24,6 @@ export class TicketingComponent implements OnInit {
   gameId!: number;
   selectedStadiumName: string = '';
 
-  sectionMap: { [key: string]: number } = {
-    A1: 1, A2: 2, B1: 3, B2: 4, C1: 5, C2: 6,
-    D1: 7, D2: 8, E1: 9, E2: 10
-  };
-
   constructor(
     private ticketService: TicketingService,
     private userService: UserService,
@@ -86,30 +81,4 @@ export class TicketingComponent implements OnInit {
   onSelectSeat(seatId: number) {
     this.selectedSeatId = seatId;
   }
-
-  onSelectByZone(zone: string) {
-    const seat = this.getSeatByName(zone);
-    if (seat && !seat.isTaken) {
-      this.selectedSeatId = seat.id;
-    }
-  }
-
-  getSeatByName(name: string): Seat | undefined {
-    return this.seats.find(s => s.seatName === name);
-  }
-
-  getColorForSeat(seat: Seat | undefined): string {
-    if (!seat) return 'gray';
-    if (seat.isTaken) return '#ffcccc';
-    if (this.selectedSeatId === seat.id) return '#c8e6c9';
-    return '#ffffff';
-  }
-
-  getZoneClass(seat: Seat | undefined): string {
-  if (!seat) return 'zone gray';
-  if (seat.isTaken) return 'zone taken';
-  if (this.selectedSeatId === seat.id) return 'zone selected';
-  return 'zone available';
-}
-
 }

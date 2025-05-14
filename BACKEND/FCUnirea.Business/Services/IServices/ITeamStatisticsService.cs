@@ -14,8 +14,6 @@ namespace FCUnirea.Business.Services.IServices
         Task UpdateTeamStatisticAsync(TeamStatistics teamStatistic);
         Task DeleteTeamStatisticAsync(int id);
         Task UpdateAllTeamStatisticsFromGamesAsync();
-
-        Task<IEnumerable<TeamStatistics>> GetByCompetitionAsync(int competitionId);
         Task<IEnumerable<TeamStatisticsModel>> GetStandingsByCompetitionAsync(int competitionId);
     }
 }

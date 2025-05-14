@@ -42,14 +42,6 @@ namespace FCUnirea.Business.Services
         public async Task<PlayerStatisticsPerGame> GetPlayerStatisticPerGameAsync(int id) =>
             await _repository.GetByIdAsync(id);
 
-        public async Task<int> AddPlayerStatisticPerGameAsync(PlayerStatisticsPerGameModel statistic)
-        {
-            var entity = _mapper.Map<PlayerStatisticsPerGame>(statistic);
-            await _repository.AddAsync(entity);
-            await _repository.SaveChangesAsync();
-            return entity.Id;
-        }
-
         public async Task UpdatePlayerStatisticPerGameAsync(PlayerStatisticsPerGame statistic)
         {
             await _repository.UpdateAsync(statistic);
@@ -92,8 +84,6 @@ namespace FCUnirea.Business.Services
                 throw;
             }
         }
-
-
         public async Task<int> AddAndUpdateGameScoreAsync(PlayerStatisticsPerGameModel model)
         {
             await _repository.BeginTransactionAsync();

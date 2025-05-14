@@ -10,7 +10,6 @@ namespace FCUnirea.Business.Services.IServices
     {
         public IEnumerable<Tickets> GetTickets();
         public Tickets GetTicket(int id);
-        public int AddTicket(TicketsModel ticket);
         public void UpdateTicket(Tickets ticket);
         public void DeleteTicket(int id);
 

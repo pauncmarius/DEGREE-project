@@ -13,9 +13,4 @@ export class TeamStatisticsService {
   getStandingsByCompetition(competitionId: number): Observable<TeamStatistic[]> {
     return this.http.get<TeamStatistic[]>(`${this.apiUrl}/standings/${competitionId}`);
   }  
-
-  getStandingsByTeamId(teamId: number): Observable<TeamStatistic[]> {
-    return this.http.get<TeamStatistic[]>(`${this.apiUrl}/standings/${teamId}`);
-  }
-  
 }

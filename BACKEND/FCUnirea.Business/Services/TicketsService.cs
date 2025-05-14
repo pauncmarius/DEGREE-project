@@ -41,7 +41,6 @@ namespace FCUnirea.Business.Services
 
         public IEnumerable<Tickets> GetTickets() => _repository.ListAll();
         public Tickets GetTicket(int id) => _repository.GetById(id);
-        public int AddTicket(TicketsModel ticket) => _repository.Add(_mapper.Map<Tickets>(ticket)).Id;
         public void UpdateTicket(Tickets ticket) => _repository.Update(ticket);
         public void DeleteTicket(int id)
         {

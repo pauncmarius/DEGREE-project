@@ -497,22 +497,6 @@
   },
   {
     "ContainingType": "FCUnirea.Api.Controllers.PlayerStatisticsPerCompetitionController",
-    "Method": "GetByPlayer",
-    "RelativePath": "api/PlayerStatisticsPerCompetition/byPlayer/{playerId}",
-    "HttpMethod": "GET",
-    "IsController": true,
-    "Order": 0,
-    "Parameters": [
-      {
-        "Name": "playerId",
-        "Type": "System.Int32",
-        "IsRequired": true
-      }
-    ],
-    "ReturnTypes": []
-  },
-  {
-    "ContainingType": "FCUnirea.Api.Controllers.PlayerStatisticsPerCompetitionController",
     "Method": "GetTopScorers",
     "RelativePath": "api/PlayerStatisticsPerCompetition/scorers/{competitionId}",
     "HttpMethod": "GET",
@@ -933,22 +917,6 @@
     "Parameters": [
       {
         "Name": "id",
-        "Type": "System.Int32",
-        "IsRequired": true
-      }
-    ],
-    "ReturnTypes": []
-  },
-  {
-    "ContainingType": "FCUnirea.Api.Controllers.TeamStatisticsController",
-    "Method": "GetByCompetition",
-    "RelativePath": "api/TeamStatistics/byCompetition/{competitionId}",
-    "HttpMethod": "GET",
-    "IsController": true,
-    "Order": 0,
-    "Parameters": [
-      {
-        "Name": "competitionId",
         "Type": "System.Int32",
         "IsRequired": true
       }

@@ -52,13 +52,6 @@ namespace FCUnirea.Api.Controllers
             return NoContent();
         }
 
-        [HttpGet("byPlayer/{playerId}")]
-        public async Task<IActionResult> GetByPlayer(int playerId)
-        {
-            var stats = await _statisticsService.GetByPlayerIdAsync(playerId);
-            return Ok(stats);
-        }
-
         [HttpGet("scorers/{competitionId}")]
         public async Task<IActionResult> GetTopScorers(int competitionId)
         {
