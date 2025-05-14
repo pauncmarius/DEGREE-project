@@ -6,6 +6,7 @@ import { Injectable } from "@angular/core";
 
 @Injectable({ providedIn: 'root' })
 export class TicketingService {
+
   private apiUrl = 'https://localhost:5000/api';
 
   constructor(private http: HttpClient) {}
@@ -21,4 +22,11 @@ export class TicketingService {
   }): Observable<any> {
     return this.http.post(`${this.apiUrl}/Tickets`, ticket);
   }
+
+  deleteTicket(id: number): Observable<any> {
+  return this.http.delete(`${this.apiUrl}/Tickets/${id}`);
+}
+
+
+
 }

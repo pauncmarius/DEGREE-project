@@ -21,9 +21,8 @@
   }
 }
 
-/* 🔥 Mutat aici, ca să fie aplicat corect de Angular */
 .highlight {
-  background-color: #e0f7fa; // albastru deschis
+  background-color: #e0f7fa; 
   font-weight: bold;
   border-left: 4px solid #00796b;
 }
@@ -47,7 +46,7 @@
   }
 }
 
-    .game-card {
+.game-card {
       border: 2px solid transparent;
       padding: 10px;
       margin-bottom: 10px;
@@ -58,22 +57,22 @@
 
     .win {
       background-color: #e0f7e9;
-      border-left: 6px solid #2e7d32; // verde
+      border-left: 6px solid #2e7d32;
     }
 
     .draw {
       background-color: #fff8e1;
-      border-left: 6px solid #f9a825; // galben
+      border-left: 6px solid #f9a825;
     }
 
     .loss {
       background-color: #ffebee;
-      border-left: 6px solid #c62828; // roșu
+      border-left: 6px solid #c62828;
     }
 
     .not-played {
       background-color: #f5f5f5;
-      border-left: 6px solid #bdbdbd; // gri
+      border-left: 6px solid #bdbdbd;
     }
 
   .game-header {
@@ -89,29 +88,3 @@
     padding: 8px;
     border-radius: 6px;
   }
-
-
-
-.tabs {
-  margin-bottom: 10px;
-
-  button {
-    margin-right: 10px;
-    padding: 6px 12px;
-    border: none;
-    background-color: #ddd;
-    border-radius: 5px;
-    cursor: pointer;
-
-    &.active {
-      background-color: #007bff;
-      color: white;
-      font-weight: bold;
-    }
-  }
-}
-
-.highlight {
-  background-color: #e0f7fa;
-  font-weight: bold;
-}

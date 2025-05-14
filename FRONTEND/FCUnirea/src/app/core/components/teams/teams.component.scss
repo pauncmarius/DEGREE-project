@@ -1,6 +1,6 @@
 .teams-container {
     padding: 1rem;
-  }
+}
   
   .team-card {
     border: 1px solid #ccc;
@@ -9,9 +9,10 @@
     border-radius: 8px;
     cursor: pointer;
     transition: 0.3s;
-  }
+    background-color: #dddddd;
+}
   
   .team-card:hover {
     background-color: #f4f4f4;
-  }
+}
   

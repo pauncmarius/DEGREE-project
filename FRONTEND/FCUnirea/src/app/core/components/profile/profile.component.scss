@@ -1,99 +1,170 @@
 :host {
-    display: block;
-    max-width: 600px;
-    margin: 40px auto;
-    padding: 20px;
-    background: #f8f9fa;
-    border-radius: 12px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  }
-  
-  h2, h3 {
-    color: #343a40;
-    margin-bottom: 16px;
-    border-bottom: 1px solid #dee2e6;
-    padding-bottom: 6px;
-  }
-  
-  p {
-    margin: 8px 0;
-    font-size: 16px;
-  }
-  
+  display: block;
+  max-width: 600px;
+  margin: 40px auto;
+  padding: 24px;
+  background: #f9f9f9;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+h2, h3 {
+  color: #343a40;
+  margin-bottom: 1rem;
+  border-bottom: 2px solid #dee2e6;
+  padding-bottom: 0.5rem;
+}
+
+p {
+  margin: 12px 0;
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+label {
+  display: block;
+  margin-top: 12px;
+  font-weight: 600;
+  color: #495057;
+}
+
+input[type="text"],
+input[type="password"],
+input[type="email"],
+input[type="tel"] {
+  width: 100%;
+  padding: 8px 12px;
+  margin-top: 4px;
+  font-size: 15px;
+  border: 1px solid #ced4da;
+  border-radius: 6px;
+  transition: border-color 0.2s ease-in-out;
+}
+
+input:focus {
+  border-color: #007bff;
+  outline: none;
+}
+
+button {
+  margin-top: 16px;
+  padding: 10px 18px;
+  background-color: #007bff;
+  color: white;
+  font-weight: 600;
+  font-size: 15px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.2s ease-in-out, transform 0.1s;
+}
+
+button:hover {
+  background-color: #0056b3;
+  transform: scale(1.02);
+}
+
+button:disabled {
+  background-color: #adb5bd;
+  cursor: not-allowed;
+}
+
+hr {
+  margin: 30px 0;
+  border-top: 1px solid #dee2e6;
+}
+
+.success {
+  margin-top: 16px;
+  padding: 10px 14px;
+  background-color: #d4edda;
+  color: #155724;
+  border: 1px solid #c3e6cb;
+  border-radius: 6px;
+  font-size: 14px;
+}
+
+.error {
+  margin-top: 16px;
+  padding: 10px 14px;
+  background-color: #f8d7da;
+  color: #721c24;
+  border: 1px solid #f5c6cb;
+  border-radius: 6px;
+  font-size: 14px;
+}
+
+.delete-account {
+  background-color: #dc3545;
+}
+
+.delete-account:hover {
+  background-color: #c82333;
+}
+
+.profile-section {
+  margin-top: 20px;
+
   label {
+    font-weight: 600;
     display: block;
-    margin-top: 12px;
-    font-weight: 500;
-  }
-  
-  input[type="password"] {
-    width: 100%;
-    padding: 8px;
-    margin-top: 4px;
-    border: 1px solid #ced4da;
-    border-radius: 6px;
-    transition: border-color 0.2s;
-  
-    &:focus {
-      border-color: #007bff;
-      outline: none;
-    }
-  }
-  
-  button {
-    margin-top: 16px;
-    padding: 10px 20px;
-    background-color: #007bff;
-    color: white;
-    font-weight: bold;
-    border: none;
-    border-radius: 6px;
-    cursor: pointer;
-    transition: background-color 0.2s;
-  
-    &:hover {
-      background-color: #0056b3;
-    }
-  
-    &:disabled {
-      background-color: #6c757d;
-      cursor: not-allowed;
-    }
-  }
-  
-  .success {
-    margin-top: 12px;
-    padding: 10px;
-    background-color: #d4edda;
-    color: #155724;
-    border: 1px solid #c3e6cb;
-    border-radius: 6px;
-  }
-  
-  .error {
-    margin-top: 12px;
-    padding: 10px;
-    background-color: #f8d7da;
-    color: #721c24;
-    border: 1px solid #f5c6cb;
-    border-radius: 6px;
+    margin-bottom: 6px;
+    color: #495057;
   }
 
-  .delete-account {
-    margin-top: 20px;
-    padding: 10px 20px;
-    background-color: #dc3545;
-    color: white;
-    font-weight: bold;
-    border: none;
-    border-radius: 6px;
-    cursor: pointer;
-    transition: background-color 0.2s;
-  
-    &:hover {
-      background-color: #c82333;
+  .field-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 10px;
+    background-color: #ffffff;
+    padding: 10px 14px;
+    border: 1px solid #dee2e6;
+    border-radius: 8px;
+    font-size: 16px;
+    min-height: 50px;
+
+    span {
+      flex: 1;
+      word-break: break-word;
+    }
+
+    input {
+      flex: 1;
+      min-width: 220px;
+      padding: 8px 10px;
+      border: 1px solid #ced4da;
+      border-radius: 6px;
+      font-size: 15px;
+
+      &:focus {
+        border-color: #007bff;
+        outline: none;
+      }
+    }
+
+    button {
+      padding: 6px 14px;
+      background-color: #007bff;
+      color: #fff;
+      font-weight: 500;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+      transition: background-color 0.2s;
+    }
+
+    button:hover {
+      background-color: #0056b3;
     }
   }
-  
-  
+
+  .error {
+    margin-top: 6px;
+    font-size: 14px;
+    color: #dc3545;
+  }
+}
+

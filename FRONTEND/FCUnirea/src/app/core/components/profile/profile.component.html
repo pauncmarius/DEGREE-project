@@ -10,38 +10,43 @@
 </form><br>
 
 <!-- USERNAME -->
-<p>
-  <strong>Username:</strong>
-  <span *ngIf="!editUsername">{{ profile.username }}</span>
-  <input *ngIf="editUsername" [formControl]="usernameControl" /><br>
-  <button (click)="toggleEdit('username')">
-    {{ editUsername ? 'Salvează' : 'Edit' }}
-  </button>
-</p>
-<div *ngIf="usernameError" class="error">{{ usernameError }}</div>
+<div class="profile-section">
+  <label>Username:</label>
+  <div class="field-wrapper">
+    <span *ngIf="!editUsername">{{ profile.username }}</span>
+    <input *ngIf="editUsername" [formControl]="usernameControl" />
+    <button (click)="toggleEdit('username')">
+      {{ editUsername ? 'Salvează' : 'Edit' }}
+    </button>
+  </div>
+  <div *ngIf="usernameError" class="error">{{ usernameError }}</div>
+</div>
 
 <!-- EMAIL -->
-<p>
-  <strong>Email:</strong>
-  <span *ngIf="!editEmail">{{ profile.email }}</span>
-  <input *ngIf="editEmail" [formControl]="emailControl" /><br>
-  <button (click)="toggleEdit('email')">
-    {{ editEmail ? 'Salvează' : 'Edit' }}
-  </button>
-</p>
-<div *ngIf="emailError" class="error">{{ emailError }}</div>
+<div class="profile-section">
+  <label>Email:</label>
+  <div class="field-wrapper">
+    <span *ngIf="!editEmail">{{ profile.email }}</span>
+    <input *ngIf="editEmail" [formControl]="emailControl" />
+    <button (click)="toggleEdit('email')">
+      {{ editEmail ? 'Salvează' : 'Edit' }}
+    </button>
+  </div>
+  <div *ngIf="emailError" class="error">{{ emailError }}</div>
+</div>
 
 <!-- PHONE -->
-<p>
-  <strong>Telefon:</strong>
-  <span *ngIf="!editPhone">{{ profile.phoneNumber }}</span>
-  <input *ngIf="editPhone" [formControl]="phoneControl" /><br>
-  <button (click)="toggleEdit('phone')">
-    {{ editPhone ? 'Salvează' : 'Edit' }}
-  </button>
-</p>
-<div *ngIf="phoneError" class="error">{{ phoneError }}</div>
-<hr /><br>
+<div class="profile-section">
+  <label>Telefon:</label>
+  <div class="field-wrapper">
+    <span *ngIf="!editPhone">{{ profile.phoneNumber }}</span>
+    <input *ngIf="editPhone" [formControl]="phoneControl" />
+    <button (click)="toggleEdit('phone')">
+      {{ editPhone ? 'Salvează' : 'Edit' }}
+    </button>
+  </div>
+  <div *ngIf="phoneError" class="error">{{ phoneError }}</div>
+</div>
 
 <h3>Schimbă parola</h3>
 <form [formGroup]="passwordForm" (ngSubmit)="onChangePassword()">
@@ -56,9 +61,6 @@
 
 <div class="success" *ngIf="successMessage">{{ successMessage }}</div>
 <div class="error" *ngIf="errorMessage">{{ errorMessage }}</div>
-
-<hr /><br>
-
 <hr /><br />
 <button (click)="onDeleteAccount()" class="delete-account">Șterge contul</button>
 

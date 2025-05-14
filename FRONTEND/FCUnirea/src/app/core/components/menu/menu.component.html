@@ -32,9 +32,8 @@
     Login
   </a>
 
-  <a *ngIf="isAdmin()" class="menu-item" >
-  ------------------------------------------------
-  </a>
+  <div *ngIf="isAdmin()" class="menu-separator"></div>
+
   <a *ngIf="isAdmin()" class="menu-item" routerLink="/admin/users" routerLinkActive="active">
   Admin: USERS
   </a>
@@ -49,14 +48,6 @@
   
   <a *ngIf="isAdmin()" class="menu-item" routerLink="/admin/teams" routerLinkActive="active">
   Admin: TEAMS
-  </a>
-
-    <a *ngIf="isAdmin()" class="menu-item" routerLink="/admin/stadiums" routerLinkActive="active">
-  Admin: STADIUMS
-  </a>
-
-  <a *ngIf="isAdmin()" class="menu-item" routerLink="/admin/tickets" routerLinkActive="active">
-  Admin: TICKETS
   </a>
   
   <a *ngIf="isAdmin()" class="menu-item" routerLink="/admin/games" routerLinkActive="active">

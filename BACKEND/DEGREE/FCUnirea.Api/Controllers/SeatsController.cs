@@ -64,6 +64,5 @@ namespace FCUnirea.Api.Controllers
             return Ok(result);
         }
 
-
     }
 }

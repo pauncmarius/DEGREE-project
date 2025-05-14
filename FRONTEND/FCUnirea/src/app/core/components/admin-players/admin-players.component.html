@@ -1,16 +1,18 @@
 <div class="admin-section">
-  <h2>👟 Jucători</h2>
+  <h2>Jucători</h2>
 
-  <!-- 🔍 Filtrare -->
+  <!--Filtrare -->
   <div class="filters">
     <input type="text" [(ngModel)]="nameFilter" (input)="applyFilters()" placeholder="Caută după nume..." />
     <input type="number" [(ngModel)]="teamIdFilter" (input)="applyFilters()" placeholder="Filtru după ID echipă" />
   </div>
 
-  <!-- ➕ Formular -->
-  <form (ngSubmit)="submitPlayer()" #playerForm="ngForm" class="admin-form">
+  <!--Formular -->
+  <form (ngSubmit)="submitPlayer()" #playerForm="ngForm" class="edit-form-inline">
+    <h4>{{ editingPlayer.id ? 'Editează jucătorul' : 'Adaugă jucător nou' }}</h4>
+
     <input type="text" [(ngModel)]="editingPlayer.playerName" name="playerName" placeholder="Nume jucător" required />
-    
+
     <select [(ngModel)]="editingPlayer.position" name="position" required>
       <option [ngValue]="'Atacker'">Atacant</option>
       <option [ngValue]="'Midfielder'">Mijlocaș</option>
@@ -21,18 +23,22 @@
     <input type="date" [(ngModel)]="editingPlayer.birthDate" name="birthDate" required />
     <input type="number" [(ngModel)]="editingPlayer.player_TeamsId" name="player_TeamsId" placeholder="ID echipă" required />
 
-    <button type="submit">
-      {{ editingPlayer.id ? '💾 Salvează modificările' : '➕ Adaugă jucător' }}
-    </button>
-    <button type="button" *ngIf="editingPlayer.id" (click)="cancelEditPlayer()">✖ Anulează</button>
+    <div class="btn-row">
+      <button type="submit">{{ editingPlayer.id ? 'Salvează' : 'Adaugă' }}</button>
+      <button type="button" *ngIf="editingPlayer.id" (click)="cancelEditPlayer()">Anulează</button>
+    </div>
   </form>
 
-  <!-- 📋 Listă -->
+  <!--Lista -->
   <ul class="entity-list">
     <li *ngFor="let player of filteredPlayers">
-      <span>{{ player.playerName }} | {{ player.position }} | {{ player.birthDate | date }} | Echipă ID: {{ player.player_TeamsId }}</span>
-      <button (click)="editPlayer(player)">✏️ Edit</button>
-      <button (click)="deletePlayer(player.id)">🗑️ Delete</button>
+      <div class="team-row">
+        <span>{{ player.playerName }} | {{ player.position }} | {{ player.birthDate | date }} | Echipă ID: {{ player.player_TeamsId }}</span>
+        <div class="action-buttons">
+          <button class="btn-edit" (click)="editPlayer(player)">Edit</button>
+          <button class="btn-delete" (click)="deletePlayer(player.id)">Șterge</button>
+        </div>
+      </div>
     </li>
   </ul>
 </div>

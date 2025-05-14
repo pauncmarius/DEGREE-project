@@ -1,20 +1,39 @@
-<h2>📋 Competiții</h2>
+<div class="admin-section">
+  <h2>Competiții</h2>
 
-<form (ngSubmit)="submitCompetition()" class="form-inline">
-  <input [(ngModel)]="editingCompetition.competitionName" name="name" placeholder="Nume competiție" required>
-  <select [(ngModel)]="editingCompetition.competitionType" name="type">
-    <option value="NationalLeague">National League</option>
-    <option value="NationalCup">National Cup</option>
-    <option value="ChampionsLeague">Champions League</option>
-  </select>
-  <button type="submit">{{ editingCompetition.id ? 'Salvează' : 'Adaugă' }}</button>
-  <button type="button" *ngIf="isEditing" (click)="cancelEdit()">✖ Renunță</button>
-</form>
+  <form (ngSubmit)="submitCompetition()" class="edit-form-inline">
+    <h4>{{ editingCompetition.id ? 'Editează competiția' : 'Adaugă competiție nouă' }}</h4>
 
-<ul>
-  <li *ngFor="let c of competitions">
-    {{ c.competitionName }} ({{ c.competitionType }})
-    <button (click)="startEdit(c)">EDIT</button>
-    <button (click)="deleteCompetition(c.id!)">🗑</button>
-  </li>
-</ul>
+    <input
+      [(ngModel)]="editingCompetition.competitionName"
+      name="name"
+      placeholder="Nume competiție"
+      required
+    />
+
+    <select [(ngModel)]="editingCompetition.competitionType" name="type">
+      <option value="NationalLeague">National League</option>
+      <option value="NationalCup">National Cup</option>
+      <option value="ChampionsLeague">Champions League</option>
+    </select>
+
+    <div class="btn-row">
+      <button type="submit">
+        {{ editingCompetition.id ? 'Salvează' : 'Adaugă' }}
+      </button>
+      <button type="button" *ngIf="isEditing" (click)="cancelEdit()">Renunță</button>
+    </div>
+  </form>
+
+  <ul class="entity-list">
+    <li *ngFor="let c of competitions">
+      <div class="team-row">
+        <span>{{ c.competitionName }} ({{ c.competitionType }})</span>
+        <div class="action-buttons">
+          <button class="btn-edit" (click)="startEdit(c)">Edit</button>
+          <button class="btn-delete" (click)="deleteCompetition(c.id!)">Șterge</button>
+        </div>
+      </div>
+    </li>
+  </ul>
+</div>

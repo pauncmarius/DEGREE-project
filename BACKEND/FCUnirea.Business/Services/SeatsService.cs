@@ -63,7 +63,5 @@ namespace FCUnirea.Business.Services
                 StadiumName = stadiumName
             }).ToList();
         }
-
-
     }
 }

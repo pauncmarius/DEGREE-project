@@ -1,45 +1,87 @@
-<h2>👤 Administrare utilizatori</h2>
+<div class="admin-section">
+  <h2>Administrare utilizatori</h2>
 
-<input type="text" [(ngModel)]="searchTerm" placeholder="Caută după username..." class="search-box"/>
+  <input
+    type="text"
+    [(ngModel)]="searchTerm"
+    placeholder="🔍 Caută după username..."
+    class="search-input"
+  />
 
-<ul class="user-list">
-  <li *ngFor="let user of filteredUsers" (click)="selectUser(user)">
-    {{ user.username }} ({{ user.email }})
-  </li>
-</ul>
+  <ul class="entity-list">
+    <li *ngFor="let user of filteredUsers">
+      <!-- Rând cu username + email -->
+      <div class="team-row" (click)="selectUser(user)">
+        <span>{{ user.username }} ({{ user.email }})</span>
+      </div>
 
-<!-- Formular editare -->
-<div *ngIf="selectedUser" class="edit-form">
-  <h3>Editare utilizator: {{ selectedUser.username }}</h3>
+      <!-- Taburi doar pentru utilizatorul selectat -->
+      <div *ngIf="selectedUser && selectedUser.id === user.id" class="user-tabs">
+        <button
+          (click)="activeTab = 'edit'"
+          [class.active]="activeTab === 'edit'"
+        >
+          Edit
+        </button>
+        <button
+          (click)="activeTab = 'tickets'"
+          [class.active]="activeTab === 'tickets'"
+        >
+          Bilete
+        </button>
+      </div>
 
-  <label>First Name:</label>
-  <input [(ngModel)]="selectedUser.firstName" />
+      <!-- Formular editare -->
+      <div
+        *ngIf="selectedUser && selectedUser.id === user.id && activeTab === 'edit'"
+        class="edit-form-inline"
+      >
+        <h4>Editare utilizator: {{ selectedUser.username }}</h4>
+        <input [(ngModel)]="selectedUser.firstName" placeholder="Prenume" />
+        <input [(ngModel)]="selectedUser.lastName" placeholder="Nume" />
+        <input [(ngModel)]="selectedUser.email" placeholder="Email" />
+        <input [(ngModel)]="selectedUser.phoneNumber" placeholder="Telefon" />
+        <input [(ngModel)]="selectedUser.username" placeholder="Username" />
+        <select [(ngModel)]="selectedUser.role">
+          <option value="User">User</option>
+          <option value="Admin">Admin</option>
+        </select>
 
-  <label>Last Name:</label>
-  <input [(ngModel)]="selectedUser.lastName" />
+        <div class="btn-row">
+          <button (click)="saveUser()">Salvează</button>
+          <button (click)="selectedUser = null">Renunță</button>
+          <button (click)="deleteUser(selectedUser.id)">Șterge</button>
+        </div>
 
-  <label>Email:</label>
-  <input [(ngModel)]="selectedUser.email" />
+        <div class="success" *ngIf="successMessage">{{ successMessage }}</div>
+        <div class="error" *ngIf="errorMessage">{{ errorMessage }}</div>
+      </div>
 
-  <label>Phone:</label>
-  <input [(ngModel)]="selectedUser.phoneNumber" />
+      <!-- Tab Bilete -->
+      <div
+        *ngIf="selectedUser && selectedUser.id === user.id && activeTab === 'tickets'"
+        class="edit-form-inline"
+      >
+        <h4>🎟️ Bilete rezervate</h4>
 
-  <label>Username:</label>
-  <input [(ngModel)]="selectedUser.username" />
+        <div *ngIf="userTickets.length > 0; else noTickets">
+          <div *ngFor="let ticket of userTickets" class="ticket-item">
+            <p><strong>{{ ticket.homeTeamName }} vs {{ ticket.awayTeamName }}</strong> - {{ ticket.gameDate | date: 'short' }}</p>
+            <p>Loc: {{ ticket.seatName }} | {{ ticket.seatType }} - {{ ticket.seatPrice }} RON</p>
+            <p>Stadion: {{ ticket.stadiumName }} | Competiție: {{ ticket.competitionName }}</p>
+            <p>Status:
+              <span [style.color]="ticket.isPlayed ? 'red' : 'green'">
+                {{ ticket.isPlayed ? 'Jucat' : 'În viitor' }}
+              </span>
+            </p>
+            <button (click)="deleteTicket(ticket.id)">🗑 Șterge</button>
+          </div>
+        </div>
 
-  <label>Rol:</label>
-  <select [(ngModel)]="selectedUser.role">
-    <option value="User">User</option>
-    <option value="Admin">Admin</option>
-  </select>
-
-
-  <div class="btn-group">
-    <button (click)="saveUser()">💾 Salvează</button>
-    <button (click)="selectedUser = null">✖ Renunță</button>
-    <button (click)="deleteUser(selectedUser.id)" class="danger">🗑 Șterge</button>
-  </div>
-
-  <div class="success" *ngIf="successMessage">{{ successMessage }}</div>
-  <div class="error" *ngIf="errorMessage">{{ errorMessage }}</div>
+        <ng-template #noTickets>
+          <p>Acest utilizator nu are bilete rezervate.</p>
+        </ng-template>
+      </div>
+    </li>
+  </ul>
 </div>
