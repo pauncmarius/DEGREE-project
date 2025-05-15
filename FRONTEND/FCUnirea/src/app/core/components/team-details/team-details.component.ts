@@ -57,7 +57,7 @@ export class TeamDetailsComponent implements OnInit {
     this.gamesService.getGamesByTeam(this.teamId).subscribe(games => {
       this.games = games;
 
-      // extrage toate competițiile distincte
+      // extrage toate competitiile distincte
       const uniqueCompetitions = [...new Set(games.map(g => g.game_CompetitionsId))];
 
       for (const competitionId of uniqueCompetitions) {
@@ -70,7 +70,7 @@ export class TeamDetailsComponent implements OnInit {
           this.standingsMap[competitionId] = standings;
           this.activeTabMap[competitionId] = 'standings';
       
-          // doar aici putem accesa competitionId în context
+          // doar aici putem accesa competitionId in context
           this.scorersService.getTopScorersByCompetition(competitionId).subscribe(scorers => {
             this.scorersMap[competitionId] = scorers;
           });

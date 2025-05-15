@@ -1,12 +1,7 @@
 <div class="admin-section">
   <h2>Administrare utilizatori</h2>
 
-  <input
-    type="text"
-    [(ngModel)]="searchTerm"
-    placeholder="🔍 Caută după username..."
-    class="search-input"
-  />
+  <input type="text" [(ngModel)]="searchTerm" placeholder="🔍 Caută după username..." class="search-input"  />
 
   <ul class="entity-list">
     <li *ngFor="let user of filteredUsers">
@@ -15,27 +10,12 @@
         <span>{{ user.username }} ({{ user.email }})</span>
       </div>
 
-
       <div *ngIf="selectedUser && selectedUser.id === user.id" class="user-tabs">
-        <button
-          (click)="activeTab = 'edit'"
-          [class.active]="activeTab === 'edit'"
-        >
-          Edit
-        </button>
-        <button
-          (click)="activeTab = 'tickets'"
-          [class.active]="activeTab === 'tickets'"
-        >
-          Bilete
-        </button>
+        <button (click)="activeTab = 'edit'"  [class.active]="activeTab === 'edit'">Edit</button>
+        <button (click)="activeTab = 'tickets'" [class.active]="activeTab === 'tickets'">Bilete</button>
       </div>
 
-
-      <div
-        *ngIf="selectedUser && selectedUser.id === user.id && activeTab === 'edit'"
-        class="edit-form-inline"
-      >
+      <div *ngIf="selectedUser && selectedUser.id === user.id && activeTab === 'edit'" class="edit-form-inline">
         <h4>Editare utilizator: {{ selectedUser.username }}</h4>
         <input [(ngModel)]="selectedUser.firstName" placeholder="Prenume" />
         <input [(ngModel)]="selectedUser.lastName" placeholder="Nume" />

@@ -9,19 +9,26 @@
   </li>
 </ul>
 
-<!-- Nume stadion arcuit -->
+<!-- afiseaza numele stadionului arcuit deasupra daca exista un stadion selectat -->
 <div *ngIf="selectedStadiumName" class="curved-text-wrapper">
+  <!-- svg creeaza zona grafica unde va fi desenat textul pe curba (viewBox defineste dimensiunea, ex: 400x20) -->
   <svg viewBox="0 0 400 20">
     <defs>
+      <!-- defineste o curba cu id="curve" pe care va fi afisat textul (d descrie traiectoria curbei, de la x=40 la x=360) -->
       <path id="curve" d="M 40,140 A 160,160 0 0,1 360,140" />
     </defs>
     <text text-anchor="middle" font-size="26" font-weight="bold" fill="#2d572c">
+      <!-- textPath asociaza textul cu curba definita prin href="#curve" si il pozitioneaza pe mijloc cu startOffset="50%" -->
       <textPath href="#curve" startOffset="50%">
+        <!-- afiseaza efectiv numele stadionului selectat pe curba (ex: Arena Nationala) -->
         {{ selectedStadiumName }}
       </textPath>
     </text>
   </svg>
 </div>
+
+
+<!-- Stadion -->
 <div class="stadium-container">
   <div class="stadium-oval">
     <!-- Terenul de joc -->
@@ -51,12 +58,7 @@
 <div class="seats-container" *ngIf="selectedGameId">
   <h3>Selectează un loc pentru meciul #{{ selectedGameId }}</h3>
   <div class="seats-grid">
-    <div *ngFor="let seat of seats"
-         [class.taken]="seat.isTaken"
-         [class.available]="!seat.isTaken"
-         [class.selected]="selectedSeatId === seat.id"
-         class="seat-card"
-         (click)="onSelectSeat(seat.id)">
+    <div *ngFor="let seat of seats" [class.taken]="seat.isTaken" [class.available]="!seat.isTaken" [class.selected]="selectedSeatId === seat.id" class="seat-card" (click)="onSelectSeat(seat.id)">
       {{ seat.seatName }}<br>
       {{ seat.seatType }}<br>
       {{ seat.seatPrice }} RON

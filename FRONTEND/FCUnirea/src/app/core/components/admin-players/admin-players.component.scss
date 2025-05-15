@@ -17,7 +17,7 @@ h2 {
 .filters {
   display: flex;
   gap: 10px;
-  flex-wrap: wrap;
+  flex-wrap: wrap; //  muta pe urm linie daca nu au loc
   margin-bottom: 16px;
 }
 

@@ -4,12 +4,7 @@
   <form (ngSubmit)="submitCompetition()" class="edit-form-inline">
     <h4>{{ editingCompetition.id ? 'Editează competiția' : 'Adaugă competiție nouă' }}</h4>
 
-    <input
-      [(ngModel)]="editingCompetition.competitionName"
-      name="name"
-      placeholder="Nume competiție"
-      required
-    />
+    <input [(ngModel)]="editingCompetition.competitionName" name="name" placeholder="Nume competiție" required/>
 
     <select [(ngModel)]="editingCompetition.competitionType" name="type">
       <option value="NationalLeague">National League</option>

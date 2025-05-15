@@ -45,16 +45,18 @@ export class AdminGamesComponent implements OnInit {
     );
   }
 
-  selectGame(game: Game): void {
+selectGame(game: Game): void {
     this.selectedGame = game;
+    // ia marcatorii pentru acest meci
     this.statsService.getScorersByGame(game.id).subscribe(data => this.scorers = data);
-
     const teamIds = [game.game_HomeTeamId, game.game_AwayTeamId];
     this.players = [];
+    // ia jucatorii pentru fiecare echipa si-i adauga in lista
     teamIds.forEach(id => {
       this.playersService.getPlayersByTeam(id).subscribe(data => this.players.push(...data));
     });
-  }
+}
+
 
   addScorer(): void {
     if (!this.newScorer.playerId || !this.selectedGame) return;

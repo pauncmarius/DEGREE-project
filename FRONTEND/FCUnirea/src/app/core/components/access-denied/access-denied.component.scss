@@ -1,9 +1,10 @@
 .access-denied-container {
-    display: flex;
-    flex-direction: column;
+    display: flex; // Creează un container flexibil (flexbox)
+    flex-direction: column; // elementele din el se aliniază vertical
+    //sunt centrate orizontal și vertical
     align-items: center;
-    justify-content: center;
-    margin-top: 100px;
+    justify-content: center; 
+    margin-top: 100px; // adauga un spatiu de 100px deasupra
   }
   
   .access-denied-img {
@@ -18,12 +19,12 @@
   
   button {
     margin-top: 15px;
-    padding: 10px 20px;
+    padding: 10px 20px; //spatiul din interiorul butonului paan la border
     background-color: #004085;
     color: #fff;
-    border: none;
-    cursor: pointer;
-    border-radius: 4px;
+    border: none; //fara chenar
+    cursor: pointer; //mouse-ul devine manuta la hover
+    border-radius: 4px;//colturi rotunjite
   
     &:hover {
       background-color: #002752;
