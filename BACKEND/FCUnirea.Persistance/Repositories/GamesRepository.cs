@@ -11,10 +11,7 @@ namespace FCUnirea.Persistance.Repositories
 {
     public class GamesRepository : BaseRepository<Games>, IGamesRepository
     {
-        public GamesRepository(FCUnireaDbContext fcUnireaDbContext) : base(fcUnireaDbContext)
-        {
-
-        }
+        public GamesRepository(FCUnireaDbContext fcUnireaDbContext) : base(fcUnireaDbContext){}
 
         public IEnumerable<Games> GetGamesByTeam(int teamId)
         {
@@ -22,6 +19,7 @@ namespace FCUnirea.Persistance.Repositories
                 .Include(g => g.Game_HomeTeam)
                 .Include(g => g.Game_AwayTeam)
                 .Include(g => g.Game_Competitions)
+                // filtreaza meciurile in care echipa cautata e fie gazda, fie oaspete
                 .Where(g => g.Game_HomeTeamId == teamId || g.Game_AwayTeamId == teamId)
                 .OrderBy(g => g.GameDate)
                 .ToList();
@@ -52,6 +50,7 @@ namespace FCUnirea.Persistance.Repositories
                 .Include(g => g.Game_HomeTeam)
                 .Include(g => g.Game_AwayTeam)
                 .Include(g => g.Game_Stadiums)
+                // cauta primul meci care are id-ul dorit (g.Id == id)
                 .FirstOrDefaultAsync(g => g.Id == id);
         }
 

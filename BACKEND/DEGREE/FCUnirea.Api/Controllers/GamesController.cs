@@ -2,6 +2,7 @@
 using FCUnirea.Business.Models;
 using FCUnirea.Business.Services.IServices;
 using FCUnirea.Domain.Entities;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
 namespace FCUnirea.Api.Controllers
@@ -56,7 +57,7 @@ namespace FCUnirea.Api.Controllers
         }
 
         [HttpGet("byTeam/{teamId}")]
-        public IActionResult GetGamesByTeam(int teamId)
+        public IActionResult GetGamesByTeam(int teamId)//
         {
             var games = _gameService.GetGamesWithTeamNamesByTeam(teamId);
             return Ok(games);
@@ -69,6 +70,7 @@ namespace FCUnirea.Api.Controllers
             return Ok(games);
         }
 
+        [Authorize(Roles = "Admin")]
         [HttpGet("withNames")]
         public IActionResult GetAllWithNames()
         {

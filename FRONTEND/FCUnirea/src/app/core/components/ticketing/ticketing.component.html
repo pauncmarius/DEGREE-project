@@ -14,13 +14,14 @@
   <!-- svg creeaza zona grafica unde va fi desenat textul pe curba (viewBox defineste dimensiunea, ex: 400x20) -->
   <svg viewBox="0 0 400 20">
     <defs>
-      <!-- defineste o curba cu id="curve" pe care va fi afisat textul (d descrie traiectoria curbei, de la x=40 la x=360) -->
-      <path id="curve" d="M 40,140 A 160,160 0 0,1 360,140" />
+      <!-- defineste o curba pe care va fi afisat textul (d descrie traiectoria curbei, de la x=40 y=140 la x=360 y=140) -->
+      <path id="curve" d="M 40,140 
+      A 160,160 0 0,1 360,140" /> <!-- A defineste curba eliptica, 160 este raza pe axa x si y -->
     </defs>
     <text text-anchor="middle" font-size="26" font-weight="bold" fill="#2d572c">
-      <!-- textPath asociaza textul cu curba definita prin href="#curve" si il pozitioneaza pe mijloc cu startOffset="50%" -->
+      <!-- textPath asociaza textul cu curba definita si il pozitioneaza pe mijloc cu startOffset="50%" -->
       <textPath href="#curve" startOffset="50%">
-        <!-- afiseaza efectiv numele stadionului selectat pe curba (ex: Arena Nationala) -->
+        <!-- afiseaza efectiv numele stadionului selectat pe curba -->
         {{ selectedStadiumName }}
       </textPath>
     </text>

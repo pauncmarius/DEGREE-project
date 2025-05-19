@@ -7,9 +7,7 @@ namespace FCUnirea.Domain.Entities
     public class Players : BaseEntity
     {
         public string PlayerName { get; set; }
-
         public Position Position { get; set; }
-
         public DateTime BirthDate { get; set; }
 
         //--------------Relations--------------------//

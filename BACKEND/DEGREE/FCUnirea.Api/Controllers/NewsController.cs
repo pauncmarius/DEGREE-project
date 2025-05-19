@@ -1,10 +1,7 @@
 ﻿//NewsController.cs
 using System;
-using System.Linq;
 using FCUnirea.Business.Models;
-using FCUnirea.Business.Services;
 using FCUnirea.Business.Services.IServices;
-using FCUnirea.Domain.Entities;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
@@ -68,27 +65,13 @@ namespace FCUnirea.Api.Controllers
 
 
 
-        [Authorize]
+        [Authorize(Roles = "Admin")]
         [HttpDelete("{id}")]
         public IActionResult Delete(int id)
         {
             var news = _newsService.GetNewsItem(id);
             if (news == null)
                 return NotFound("Știrea nu a fost găsită.");
-
-            var username = User.Identity?.Name;
-            if (string.IsNullOrEmpty(username))
-                return Unauthorized();
-
-            var user = _usersService.GetByUsername(username);
-            if (user == null)
-                return Unauthorized();
-
-            bool isAdmin = User.IsInRole("Admin");
-            bool isAuthor = news.News_UsersId == user.Id;
-
-            if (!isAdmin && !isAuthor)
-                return Forbid("Nu ai dreptul să ștergi această știre.");
 
             _newsService.DeleteNews(id);
             return Ok(new { message = "Știrea a fost ștearsă." });

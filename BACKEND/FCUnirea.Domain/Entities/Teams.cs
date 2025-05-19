@@ -7,14 +7,10 @@ namespace FCUnirea.Domain.Entities
     public class Teams : BaseEntity
     {
         public string TeamName { get; set; }
-
         public TeamType TeamType { get; set; }
-
         public bool IsInternal { get; set; }
-
         [Column(TypeName = "TEXT")]
-        public string Description { get; set; }
-
+        public string Description { get; set;}
         public string CoachName { get; set; }
 
 

@@ -6,7 +6,6 @@ namespace FCUnirea.Domain.Entities
     public class Competitions : BaseEntity
     {
         public string CompetitionName { get; set; }
-
         public CompetitionType CompetitionType { get; set; }
 
         //--------------Relations--------------------//

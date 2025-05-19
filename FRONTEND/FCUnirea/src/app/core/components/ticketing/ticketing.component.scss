@@ -103,14 +103,14 @@
   font-weight: 700;
   letter-spacing: 1px;
 }
-
+//Container principal:
 .stadium-container {
   display: flex;
   justify-content: center;
   align-items: center;
   padding: 40px;
 }
-
+//Forma stadionului:
 .stadium-oval {
   position: relative;
   width: 600px;
@@ -119,7 +119,7 @@
   border-radius: 50%;
   overflow: hidden;
 }
-
+//Terenul de joc:
 .field {
   position: absolute;
   top: 25%;
@@ -129,7 +129,7 @@
   background: #2ecc71;
   border: 2px solid #000;
 }
-
+//Portile:
 .goal {
   position: absolute;
   width: 10%;
@@ -137,12 +137,10 @@
   background: transparent;
   border: 2px solid black;
 }
-
 .goal.left {
   left: 0;
   top: 35%;
 }
-
 .goal.right {
   right: 0;
   top: 35%;
@@ -157,7 +155,6 @@
   background: black;
   transform: translateX(-50%);
 }
-
 .center-circle {
   position: absolute;
   top: 50%;
@@ -185,31 +182,24 @@
 .zone.gray {
   background-color: gray;
 }
-
 .zone.white {
   background-color: white;
 }
-
 .zone.selected {
   background-color: #c8e6c9;
 }
-
 .zone.taken {
   background-color: #ffcccc;
 }
-
 .zone.available {
   background-color: #ffffff;
 }
-
 .zone:hover {
   transform: scale(1.05);
 }
-
 .diamond1 {
   transform: rotate(-45deg);
 }
-
 .diamond2 {
   transform: rotate(45deg);
 }

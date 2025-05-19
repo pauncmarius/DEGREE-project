@@ -15,7 +15,9 @@ namespace FCUnirea.Persistance.Repositories
         }
         public IEnumerable<Players> GetPlayersByTeam(int teamId)
         {
-            return _dbContext.Players.Where(p => p.Player_TeamsId == teamId).ToList();
+            return _dbContext.Players
+                .Where(p => p.Player_TeamsId == teamId)
+                .ToList();
         }
     }
 }

@@ -31,41 +31,42 @@ namespace FCUnirea.Api
 
         public void ConfigureServices(IServiceCollection services)
         {
-            // inregistram controlerele si FV
+            // inregistram controlerele si fluentvalidation pentru validarea modelelor
             services.AddControllers()
                 .AddJsonOptions(options =>
                 {
+                    // ignora ciclurile de referinta la serializare json
                     options.JsonSerializerOptions.ReferenceHandler = System.Text.Json.Serialization.ReferenceHandler.IgnoreCycles;
+                    // serializeaza enum-urile ca string
                     options.JsonSerializerOptions.Converters.Add(new System.Text.Json.Serialization.JsonStringEnumConverter());
-
                 })
                 .AddFluentValidation(fv =>
                 {
+                    // inregistreaza validatorii din proiect pentru modelele de utilizator si login
                     fv.RegisterValidatorsFromAssemblyContaining<UsersModelValidator>();
                     fv.RegisterValidatorsFromAssemblyContaining<LoginModelValidator>();
                 });
 
-
-            // inregistram Swagger API
+            // inregistram swagger pentru documentatia api
             services.AddSwaggerGen(c =>
             {
                 c.SwaggerDoc("v1", new OpenApiInfo
                 {
                     Title = "FCUnirea.Api",
                     Version = "v1",
-                    Description = "API pentru gestionarea utilizatorilor și statisticilor echipei FC Unirea."
+                    Description = "api pentru gestionarea utilizatorilor si statisticilor echipei fc unirea"
                 });
             });
 
-            //  inregistram serviciile personalizate (Dependency Injection)
+            // inregistram serviciile de infrastructura si business cu dependency injection
             services.AddPersistanceServices(Configuration);
             services.AddBusinessServices();
 
+            // configuram serviciul de email cu setari din appsettings.json
             services.Configure<EmailSettings>(Configuration.GetSection("EmailSettings"));
             services.AddTransient<IEmailService, EmailService>();
 
-
-            // configuraram CORS pentru a permite accesul din frontend Angular
+            // configuram cors ca sa permita accesul din frontend angular
             services.AddCors(options =>
             {
                 options.AddPolicy("AllowAll",
@@ -74,8 +75,7 @@ namespace FCUnirea.Api
                                       .AllowAnyHeader());
             });
 
-
-            // configuram JWT
+            // configuram setarile pentru jwt (autentificare cu token)
             services.Configure<JwtSettings>(Configuration.GetSection("JwtSettings"));
 
             var jwtSettings = Configuration.GetSection("JwtSettings").Get<JwtSettings>();
@@ -88,6 +88,7 @@ namespace FCUnirea.Api
             })
             .AddJwtBearer(options =>
             {
+                // seteaza parametrii pentru validarea tokenului jwt
                 options.TokenValidationParameters = new TokenValidationParameters
                 {
                     ValidateIssuer = true,
@@ -103,28 +104,30 @@ namespace FCUnirea.Api
                     IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(jwtSettings.SecretKey))
                 };
             });
-
-
         }
 
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
         {
             if (env.IsDevelopment())
             {
+                // activeaza pagina de exceptii si swagger in development
                 app.UseDeveloperExceptionPage();
                 app.UseSwagger();
                 app.UseSwaggerUI(c => c.SwaggerEndpoint("/swagger/v1/swagger.json", "FCUnirea.Api v1"));
             }
 
+            // forteaza https
             app.UseHttpsRedirection();
             app.UseRouting();
 
+            // activeaza politica de cors (pentru frontend)
             app.UseCors("AllowAll");
 
+            // activeaza autentificarea si autorizarea
             app.UseAuthentication();
-
             app.UseAuthorization();
 
+            // maparea endpointurilor catre controlere
             app.UseEndpoints(endpoints =>
             {
                 endpoints.MapControllers();
@@ -132,3 +135,4 @@ namespace FCUnirea.Api
         }
     }
 }
+

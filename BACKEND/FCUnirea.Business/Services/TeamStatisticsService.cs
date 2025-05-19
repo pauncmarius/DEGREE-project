@@ -56,50 +56,59 @@ namespace FCUnirea.Business.Services
 
         public async Task UpdateAllTeamStatisticsFromGamesAsync()
         {
+            // sterge toate statisticile existente din tabela teamstatistics
             var existing = await _repository.ListAllAsync();
             foreach (var stat in existing)
             {
+                // sterge fiecare intrare existenta
                 _repository.Delete(stat);
             }
+            // salveaza modificarile dupa stergere
             await _repository.SaveChangesAsync();
 
+            // obtine toate meciurile jucate care au competitie asociata
             var playedGames = (await _gamesRepository.ListAllAsync())
                 .Where(g => g.IsPlayed && g.Game_CompetitionsId.HasValue)
                 .ToList();
 
+            // dictionar pentru statistici per echipa si competitie
             var teamStats = new Dictionary<(int teamId, int competitionId), TeamStatistics>();
+            //fiecare pereche(teamId, competitionId) va avea o statistica unica.
 
+            // parcurgerea fiecarui meci si actualizarea statisticilor
             foreach (var game in playedGames)
             {
                 int homeId = game.Game_HomeTeamId ?? 0;
                 int awayId = game.Game_AwayTeamId ?? 0;
                 int competitionId = game.Game_CompetitionsId ?? 0;
 
+                // actualizeaza statisticile pentru echipa gazda
                 UpdateStats(teamStats, homeId, competitionId,
                     goalsScored: game.HomeTeamScore,
                     goalsConceded: game.AwayTeamScore,
                     result: GetResult(game.HomeTeamScore, game.AwayTeamScore));
 
+                // actualizeaza statisticile pentru echipa oaspete
                 UpdateStats(teamStats, awayId, competitionId,
                     goalsScored: game.AwayTeamScore,
                     goalsConceded: game.HomeTeamScore,
                     result: GetResult(game.AwayTeamScore, game.HomeTeamScore));
             }
 
+            // adauga toate statisticile calculate in repository
             foreach (var stat in teamStats.Values)
             {
                 await _repository.AddAsync(stat);
             }
 
+            // salveaza toate modificarile la final
             await _repository.SaveChangesAsync();
         }
 
+        private void UpdateStats(Dictionary<(int teamId, int competitionId), TeamStatistics> stats,
+            int teamId, int competitionId, int goalsScored, int goalsConceded, string result){
 
-        private void UpdateStats(
-            Dictionary<(int teamId, int competitionId), TeamStatistics> stats,
-            int teamId, int competitionId,
-            int goalsScored, int goalsConceded, string result)
-        {
+            // verifica daca exista statistica pentru echipa si competitie, daca nu o creeaza
             var key = (teamId, competitionId);
             if (!stats.ContainsKey(key))
             {
@@ -111,10 +120,14 @@ namespace FCUnirea.Business.Services
             }
 
             var teamStat = stats[key];
+            // creste numarul de meciuri jucate
             teamStat.GamesPlayed++;
+            // adauga golurile marcate
             teamStat.GoalsScored += goalsScored;
+            // adauga golurile primite
             teamStat.GoalsConceded += goalsConceded;
 
+            // actualizeaza rezultatele in functie de rezultat
             switch (result)
             {
                 case "WIN":
@@ -130,6 +143,7 @@ namespace FCUnirea.Business.Services
                     break;
             }
         }
+
 
         private string GetResult(int scored, int conceded)
         {

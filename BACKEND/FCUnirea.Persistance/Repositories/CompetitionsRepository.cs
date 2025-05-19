@@ -8,9 +8,6 @@ namespace FCUnirea.Persistance.Repositories
 {
     public class CompetitionsRepository : BaseRepository<Competitions>, ICompetitionsRepository
     {
-        public CompetitionsRepository(FCUnireaDbContext fcUnireaDbContext) : base(fcUnireaDbContext)
-        {
-
-        }
+        public CompetitionsRepository(FCUnireaDbContext fcUnireaDbContext) : base(fcUnireaDbContext){ }
     }
 }

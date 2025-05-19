@@ -41,16 +41,17 @@ namespace FCUnirea.Api.Controllers
         [HttpPost]
         public IActionResult Add([FromBody] CommentsModel model)
         {
+            // preia username-ul utilizatorului autentificat din token
             var username = User.Identity?.Name;
             if (string.IsNullOrEmpty(username)) return Unauthorized();
 
             var commentId = _commentService.AddCommentWithUser(model, username);
+
             if (commentId == null)
                 return BadRequest(new { message = "Utilizatorul nu există sau datele sunt invalide." });
 
             return Ok(new { message = "Comentariu adăugat cu succes!", commentId });
         }
-
 
         [HttpPut]
         public IActionResult Update([FromBody] Comments comment)

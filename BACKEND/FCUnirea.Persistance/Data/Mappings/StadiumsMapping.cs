@@ -41,6 +41,7 @@ namespace FCUnirea.Persistance.Data.Mappings
                 .WithOne(c => c.Seat_Stadiums)
                 .HasForeignKey(c => c.Seat_StadiumsId)
                 .OnDelete(DeleteBehavior.Restrict);
+
             modelBuilder.Entity<Stadiums>()
                 .HasMany(n => n.Stadiums_Games)
                 .WithOne(c => c.Game_Stadiums)

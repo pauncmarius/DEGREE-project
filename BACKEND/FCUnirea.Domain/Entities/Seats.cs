@@ -6,9 +6,7 @@ namespace FCUnirea.Domain.Entities
     public class Seats : BaseEntity
     {
         public SeatType SeatType { get; set; }
-
         public string SeatName { get; set; }
-
         public int SeatPrice { get; set; }
 
         //--------------Relations--------------------//
@@ -17,7 +15,6 @@ namespace FCUnirea.Domain.Entities
 
         // Foreign Key
         public int? Seat_StadiumsId { get; set; }
-
         public Stadiums Seat_Stadiums { get; set; }
     }
 

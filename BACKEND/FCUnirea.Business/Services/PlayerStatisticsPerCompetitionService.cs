@@ -51,7 +51,6 @@ namespace FCUnirea.Business.Services
 
         public async Task UpdateStatisticsFromGamesAsync()
         {
-            // 🧹 Ștergi complet toate statisticile din competiții
             var all = await _repository.ListAllAsync();
             foreach (var entry in all)
             {
@@ -59,7 +58,6 @@ namespace FCUnirea.Business.Services
             }
             await _repository.SaveChangesAsync();
 
-            // ♻️ Recalculezi tot din nou, curat
             var groupedGoals = await _repository.GetGoalsGroupedByPlayerAndCompetitionAsync();
 
             foreach (var entry in groupedGoals)

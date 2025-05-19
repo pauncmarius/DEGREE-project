@@ -52,6 +52,7 @@ namespace FCUnirea.Business.Services
             var ticket = _mapper.Map<Tickets>(model);
 
             var existingTickets = await _repository.ListAllAsync();
+
             bool isTaken = existingTickets.Any(t =>
                 t.Ticket_GamesId == ticket.Ticket_GamesId &&
                 t.Ticket_SeatsId == ticket.Ticket_SeatsId);

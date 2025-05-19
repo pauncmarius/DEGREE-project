@@ -19,13 +19,15 @@ namespace FCUnirea.Persistance.Repositories
         public Users Authenticate(string username)
         {
             return _context.Users
+                 //nu incarca entitatea pentru tracking
                 .AsNoTracking()
                 .FirstOrDefault(u => u.Username == username);
         }
 
         public Users GetByUsername(string username)
         {
-            return _context.Users.FirstOrDefault(u => u.Username == username);
+            return _context.Users
+                .FirstOrDefault(u => u.Username == username);
         }
 
         public void UpdatePassword(int userId, string newHashedPassword)

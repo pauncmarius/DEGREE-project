@@ -45,21 +45,21 @@ namespace FCUnirea.Business.Services
             var user = _userRepository.GetById(id);
             if (user == null) return;
 
-            // Șterge comentariile
+            // sterge comentariile
             var comments = _commentsRepository.ListAll().Where(c => c.Comment_UsersId == id).ToList();
             foreach (var comment in comments)
             {
                 _commentsRepository.Delete(comment);
             }
 
-            // Șterge biletele
+            // sterge biletele
             var tickets = _ticketsRepository.ListAll().Where(t => t.Ticket_UsersId == id).ToList();
             foreach (var ticket in tickets)
             {
                 _ticketsRepository.Delete(ticket);
             }
 
-            // În final, șterge userul
+            // sterge userul
             _userRepository.Delete(user);
         }
 

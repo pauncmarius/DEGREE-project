@@ -17,19 +17,23 @@ public class EmailService : IEmailService
 
     public async Task SendEmailAsync(string toEmail, string subject, string body)
     {
+        // creeaza un mesaj de email nou
         var message = new MailMessage();
-        message.From = new MailAddress(_settings.SenderEmail, _settings.SenderName);
-        message.To.Add(new MailAddress(toEmail));
-        message.Subject = subject;
-        message.Body = body;
-        message.IsBodyHtml = true;
+        message.From = new MailAddress(_settings.SenderEmail, _settings.SenderName); // adresa si numele expeditorului
+        message.To.Add(new MailAddress(toEmail));                                     // adauga destinatarul
+        message.Subject = subject;                                                    // subiectul emailului
+        message.Body = body;                                                          // continutul emailului
+        message.IsBodyHtml = true;                                                    // specifica daca body-ul este HTML
 
+        // creeaza clientul SMTP folosind serverul si portul din setari
         using var client = new SmtpClient(_settings.SmtpServer, _settings.Port)
         {
-            Credentials = new NetworkCredential(_settings.Username, _settings.Password),
-            EnableSsl = true
+            Credentials = new NetworkCredential(_settings.Username, _settings.Password), // user si parola pentru autentificare
+            EnableSsl = true                                                            // foloseste conexiune securizata
         };
 
+        // trimite emailul in mod asincron
         await client.SendMailAsync(message);
     }
+
 }

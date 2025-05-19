@@ -2,7 +2,7 @@
   "openapi": "3.0.1",
   "info": {
     "title": "FCUnirea.Api",
-    "description": "API pentru gestionarea utilizatorilor și statisticilor echipei FC Unirea.",
+    "description": "api pentru gestionarea utilizatorilor si statisticilor echipei fc unirea",
     "version": "v1"
   },
   "paths": {

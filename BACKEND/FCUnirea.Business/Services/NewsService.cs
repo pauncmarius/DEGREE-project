@@ -34,7 +34,7 @@ namespace FCUnirea.Business.Services
             var existing = _newsRepository.GetById(model.Id);
             if (existing == null) return;
 
-            // Păstrăm datele care nu vin din frontend
+            // pastram datele care nu vin din frontend
             existing.Title = model.Title;
             existing.Text = model.Text;
             existing.CreatedAt = existing.CreatedAt;

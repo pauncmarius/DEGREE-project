@@ -8,10 +8,8 @@ namespace FCUnirea.Domain.Entities
     public class News : BaseEntity
     {
         public string Title { get; set; }
-
         [Column(TypeName = "TEXT")]
         public string Text { get; set; }
-
         public DateTime CreatedAt { get; set; }
 
         //--------------Relations--------------------//
@@ -20,7 +18,6 @@ namespace FCUnirea.Domain.Entities
 
         // Foreign Key
         public int? News_UsersId { get; set; }
-
         public Users News_Users { get; set; }
 
     }

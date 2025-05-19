@@ -36,7 +36,7 @@ namespace FCUnirea.Business.Services
 
             _gamesRepository.Update(game);
 
-            // dacă acum devine jucat și nu era înainte
+            // daca acum devine jucat si nu era înainte
             if (wasNotPlayed && nowPlayed)
             {
                 _teamStatisticsService.UpdateAllTeamStatisticsFromGamesAsync();

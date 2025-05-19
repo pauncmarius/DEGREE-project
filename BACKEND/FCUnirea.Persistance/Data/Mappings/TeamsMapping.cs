@@ -44,16 +44,19 @@ namespace FCUnirea.Persistance.Data.Mappings
                 .WithOne(c => c.TeamsStatistics_Teams)
                 .HasForeignKey(c => c.TeamsStatistics_TeamsId)
                 .OnDelete(DeleteBehavior.Restrict);
+
             modelBuilder.Entity<Teams>()
                 .HasMany(n => n.Teams_Players)
                 .WithOne(c => c.Player_Teams)
                 .HasForeignKey(c => c.Player_TeamsId)
                 .OnDelete(DeleteBehavior.Restrict);
+
             modelBuilder.Entity<Teams>()
                 .HasMany(n => n.Team_HomeTeam)
                 .WithOne(c => c.Game_HomeTeam)
                 .HasForeignKey(c => c.Game_HomeTeamId)
                 .OnDelete(DeleteBehavior.Restrict);
+
             modelBuilder.Entity<Teams>()
                 .HasMany(n => n.Team_AwayTeam)
                 .WithOne(c => c.Game_AwayTeam)

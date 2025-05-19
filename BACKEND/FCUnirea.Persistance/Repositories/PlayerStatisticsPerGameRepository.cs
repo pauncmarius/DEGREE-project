@@ -22,24 +22,27 @@ namespace FCUnirea.Persistance.Repositories
 
         public async Task BeginTransactionAsync()
         {
+            // incepe o noua tranzactie in baza de date
             _transaction = await _context.Database.BeginTransactionAsync();
         }
 
         public async Task CommitTransactionAsync()
         {
+            // daca exista o tranzactie, confirma modificarile si elibereaza resursele
             if (_transaction != null)
             {
-                await _transaction.CommitAsync();
-                await _transaction.DisposeAsync();
+                await _transaction.CommitAsync();      // salveaza toate schimbarile facute in tranzactie
+                await _transaction.DisposeAsync();     // elibereaza obiectul tranzactie din memorie
             }
         }
 
         public async Task RollbackTransactionAsync()
         {
+            // daca exista o tranzactie, anuleaza toate modificarile si elibereaza resursele
             if (_transaction != null)
             {
-                await _transaction.RollbackAsync();
-                await _transaction.DisposeAsync();
+                await _transaction.RollbackAsync();    // revine la starea initiala, fara modificarile din tranzactie
+                await _transaction.DisposeAsync();     // elibereaza obiectul tranzactie din memorie
             }
         }
 
@@ -52,7 +55,7 @@ namespace FCUnirea.Persistance.Repositories
         {
             return await _dbContext.PlayerStatisticsPerGame
                 .Include(p => p.PlayerStatisticsPerGame_Players)
-                .ThenInclude(p => p.Player_Teams)
+                    .ThenInclude(p => p.Player_Teams)
                 .Where(p => p.PlayerStatisticsPerGame_GamesId == gameId && p.Goals > 0)
                 .ToListAsync();
         }

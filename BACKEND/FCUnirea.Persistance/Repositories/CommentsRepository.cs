@@ -10,20 +10,19 @@ namespace FCUnirea.Persistance.Repositories
 {
     public class CommentsRepository : BaseRepository<Comments>, ICommentsRepository
     {
-        public CommentsRepository(FCUnireaDbContext fcUnireaDbContext): base(fcUnireaDbContext)
-        {
-
-
-        }
+        public CommentsRepository(FCUnireaDbContext fcUnireaDbContext): base(fcUnireaDbContext){}
 
         public IEnumerable<Comments> GetByNewsIdWithUser(int newsId)
         {
+            // selecteaza comentariile care au id-ul stirei egal cu newsId
             return _dbContext.Comments
                 .Where(c => c.Comment_NewsId == newsId)
-                .Include(c => c.Comment_User) // navigare spre utilizator
+                // incarca si informatiile despre utilizatorul care a scris comentariul (Include = eager loading)
+                .Include(c => c.Comment_User)
+                // sorteaza comentariile descrescator dupa data crearii
                 .OrderByDescending(c => c.CreatedAt)
+                // returneaza rezultatul ca lista
                 .ToList();
         }
-
     }
 }
