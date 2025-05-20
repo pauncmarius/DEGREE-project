@@ -1,1 +1,7 @@
 BACKEND/DEGREE/FCUnirea.Api/appsettings.json
+BACKEND/DEGREE/FCUnirea.Api/appsettings.Development.json
+BACKEND/DEGREE/FCUnirea.Api/appsettings.Production.json
+BACKEND/DEGREE/FCUnirea.Api/Properties/launchSettings.json
+BACKEND/DEGREE/FCUnirea.Api/obj/
+BACKEND/DEGREE/FCUnirea.Api/bin/
+
