@@ -62,6 +62,10 @@ namespace FCUnirea.Api
             services.AddPersistanceServices(Configuration);
             services.AddBusinessServices();
 
+            // aici e serviciul pentru chat AI
+            services.AddSingleton<OpenAiChatService>();
+
+
             // configuram serviciul de email cu setari din appsettings.json
             services.Configure<EmailSettings>(Configuration.GetSection("EmailSettings"));
             services.AddTransient<IEmailService, EmailService>();

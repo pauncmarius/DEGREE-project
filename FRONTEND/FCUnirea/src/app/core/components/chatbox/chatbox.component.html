@@ -1,0 +1,16 @@
+<div class="chatbox-container">
+  <div class="chat-messages">
+    <div *ngFor="let msg of messages">
+      <div [ngClass]="{'user-message': msg.sender === 'user', 'ai-message': msg.sender === 'ai'}">
+        <b *ngIf="msg.sender === 'ai'">Asistent:</b>
+        <b *ngIf="msg.sender === 'user'">Tu:</b>
+        <span>{{ msg.text }}</span>
+      </div>
+    </div>
+  </div>
+  <form (ngSubmit)="sendMessage()">
+    <input [(ngModel)]="userInput" name="userInput" autocomplete="off" placeholder="Scrie intrebarea..." />
+    <button type="submit" [disabled]="loading || !userInput">Trimite</button>
+  </form>
+</div>
+
