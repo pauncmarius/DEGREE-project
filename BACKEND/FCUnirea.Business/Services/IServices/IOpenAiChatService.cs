@@ -7,6 +7,6 @@ namespace FCUnirea.Business.Services.IServices
 {
     public interface IOpenAiChatService
     {
-        Task<string> GetChatGptReplyAsync(string prompt);
+        Task<string> GetReplySmartAsync(string message, string username);
     }
 }

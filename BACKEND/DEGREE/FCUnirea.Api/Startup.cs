@@ -63,7 +63,7 @@ namespace FCUnirea.Api
             services.AddBusinessServices();
 
             // aici e serviciul pentru chat AI
-            services.AddSingleton<OpenAiChatService>();
+            services.AddScoped<OpenAiChatService>();
 
 
             // configuram serviciul de email cu setari din appsettings.json

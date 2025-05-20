@@ -12,6 +12,7 @@
   right: 0;
   top: 0;
 
+
   .menu-section {
     display: flex;
     flex-direction: column;
@@ -101,9 +102,8 @@
   
 }
 
-.menu-separator {
-  border: none;
-  height: 1px;
-  background-color: #ccc;
-  margin: 10px 0;
+.chatbox-in-menu {
+  width: 100%;
+  flex-shrink: 0;
+  margin-top: auto; 
 }

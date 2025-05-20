@@ -1,10 +1,13 @@
-﻿// Controllers/ChatController.cs
+﻿// ChatController.cs
 using FCUnirea.Business.Models;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using System.Threading.Tasks;
 
+
+[Authorize]
 [ApiController]
-[Route("api/[controller]")]
+[Route("api/chat")]
 public class ChatController : ControllerBase
 {
     private readonly OpenAiChatService _chatService;
@@ -20,9 +23,11 @@ public class ChatController : ControllerBase
         if (string.IsNullOrWhiteSpace(request.Message))
             return BadRequest(new ChatResponse { Reply = "Mesajul nu poate fi gol." });
 
-        var prompt = $"Esti asistentul virtual FC Unirea. Raspunde la intrebari legate de bilete, meciuri, profil etc. Intrebarea utilizatorului: \"{request.Message}\"";
-        var reply = await _chatService.GetChatGptReplyAsync(prompt);
+        var username = User.Identity?.Name;
+
+        var reply = await _chatService.GetReplySmartAsync(request.Message, username);
 
         return Ok(new ChatResponse { Reply = reply });
     }
 }
+

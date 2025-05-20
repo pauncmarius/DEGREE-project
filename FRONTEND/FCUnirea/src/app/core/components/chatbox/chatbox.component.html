@@ -1,5 +1,9 @@
 <div class="chatbox-container">
   <div class="chat-messages">
+    <h2 class="chatbox-title">
+      <span class="ai-icon">🤖</span> ASISTENT AI
+    </h2>
+
     <div *ngFor="let msg of messages">
       <div [ngClass]="{'user-message': msg.sender === 'user', 'ai-message': msg.sender === 'ai'}">
         <b *ngIf="msg.sender === 'ai'">Asistent:</b>
