@@ -79,8 +79,7 @@
               "RelativeToolTip": "FCUnirea.Api\\Controllers\\ChatController.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABcAAAA7AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-19T21:41:42.479Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-05-19T21:41:42.479Z"
             },
             {
               "$type": "Document",
@@ -92,8 +91,7 @@
               "RelativeToolTip": "FCUnirea.Api\\Controllers\\CommentsController.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAwAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-19T21:41:06.774Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-05-19T21:41:06.774Z"
             },
             {
               "$type": "Document",
@@ -105,8 +103,7 @@
               "RelativeToolTip": "FCUnirea.Api\\Startup.cs",
               "ViewState": "AgIAACYAAAAAAAAAAAAYwEAAAAAWAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-19T21:38:55.523Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-05-19T21:38:55.523Z"
             },
             {
               "$type": "Document",
@@ -118,8 +115,7 @@
               "RelativeToolTip": "FCUnirea.Api\\Program.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-19T21:38:54.75Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-05-19T21:38:54.75Z"
             },
             {
               "$type": "Document",
@@ -131,8 +127,7 @@
               "RelativeToolTip": "FCUnirea.Api\\appsettings.json",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAAGAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2025-05-19T21:33:53.534Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-05-19T21:33:53.534Z"
             },
             {
               "$type": "Document",
@@ -157,8 +152,7 @@
               "RelativeToolTip": "..\\FCUnirea.Business\\Services\\IServices\\INewsService.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-19T21:28:15.66Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-05-19T21:28:15.66Z"
             },
             {
               "$type": "Document",
@@ -170,8 +164,7 @@
               "RelativeToolTip": "..\\FCUnirea.Business\\Services\\IServices\\ITeamsService.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-19T21:28:11.806Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-05-19T21:28:11.806Z"
             },
             {
               "$type": "Document",
@@ -183,8 +176,7 @@
               "RelativeToolTip": "..\\FCUnirea.Business\\Services\\IServices\\IPlayersService.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-19T21:27:51.428Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-05-19T21:27:51.428Z"
             },
             {
               "$type": "Document",
@@ -196,8 +188,7 @@
               "RelativeToolTip": "..\\FCUnirea.Business\\Services\\IServices\\IGamesService.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-19T21:27:43.567Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-05-19T21:27:43.567Z"
             },
             {
               "$type": "Document",
@@ -209,8 +200,7 @@
               "RelativeToolTip": "..\\FCUnirea.Business\\Services\\NewsService.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-19T21:27:39.484Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-05-19T21:27:39.484Z"
             },
             {
               "$type": "Document",
@@ -222,8 +212,7 @@
               "RelativeToolTip": "..\\FCUnirea.Business\\Services\\IServices\\IEmailService.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-19T21:27:36.83Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-05-19T21:27:36.83Z"
             },
             {
               "$type": "Document",
@@ -235,8 +224,7 @@
               "RelativeToolTip": "..\\FCUnirea.Business\\Services\\CompetitionsService.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-19T21:27:23.266Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-05-19T21:27:23.266Z"
             },
             {
               "$type": "Document",
@@ -248,8 +236,7 @@
               "RelativeToolTip": "..\\FCUnirea.Business\\Services\\IServices\\ICommentsService.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-19T21:27:18.513Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-05-19T21:27:18.513Z"
             },
             {
               "$type": "Document",
@@ -261,8 +248,7 @@
               "RelativeToolTip": "..\\FCUnirea.Business\\Services\\IServices\\IOpenAiChatService.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAWAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-19T21:26:44.896Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-05-19T21:26:44.896Z"
             },
             {
               "$type": "Document",
@@ -274,8 +260,7 @@
               "RelativeToolTip": "..\\FCUnirea.Business\\Models\\ChatBoxModel.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-19T21:24:04.129Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-05-19T21:24:04.129Z"
             }
           ]
         }
