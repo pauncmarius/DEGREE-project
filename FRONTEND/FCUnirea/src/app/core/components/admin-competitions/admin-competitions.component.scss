@@ -1,124 +1,148 @@
 .admin-section {
   max-width: 800px;
-  margin: 30px auto;
-  padding: 20px;
-  background-color: #f9fafb;
-  border: 1px solid #ddd;
-  border-radius: 12px;
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
-}
+  margin: 32px auto;
+  padding: 28px;
+  background: #fff;
+  border-radius: 16px;
+  box-shadow: 0 4px 32px 4px rgba(25, 64, 241, 0.18),
+              0 2px 8px 0 rgba(40, 72, 255, 0.09);
 
-h2 {
-  text-align: center;
-  margin-bottom: 20px;
-  color: #333;
-}
+  h1 {
+    color: #1677ff;
+    font-size: 2.1rem;
+    font-weight: 800;
+    letter-spacing: 0.5px;
+    margin: 30px 0 24px 0;
+    padding-left: 18px;
+    text-shadow: 0 2px 10px rgba(22,119,255,0.08);
+    border-left: 5px solid #1677ff18;
+    background: linear-gradient(90deg, #eaf3ff 0 60%, transparent 100%);
+    border-radius: 10px 0 0 10px;
+    display: inline-block;
+  }
 
-.edit-form-inline {
-  margin-bottom: 20px;
-  background-color: #f1f1f1;
-  border-radius: 8px;
-  padding: 16px;
-  border: 1px dashed #ccc;
-}
+  .edit-form-inline {
+    margin-bottom: 25px;
+    background: #eaf3ff;
+    border-radius: 13px;
+    padding: 20px;
+    border: 2px dashed #b6cdfc;
+    box-shadow: 0 2px 8px rgba(22,119,255,0.04);
 
-.edit-form-inline h4 {
-  margin-bottom: 12px;
-  font-size: 16px;
-  font-weight: 600;
-}
+    h4 {
+      margin-bottom: 14px;
+      font-size: 1.15rem;
+      font-weight: 700;
+      color: #1677ff;
+    }
 
-.edit-form-inline input, .edit-form-inline select {
-  width: 100%;
-  margin-bottom: 10px;
-  padding: 8px;
-  border-radius: 6px;
-  border: 1px solid #ccc;
-  font-size: 14px;
-}
+    input,
+    select {
+      border: 1.2px solid #b6cdfc;
+      background: #fff;
+      border-radius: 6px;
+      padding: 9px 11px;
+      margin-bottom: 11px;
+      font-size: 1.08rem;
+      color: #343a40;
+    }
 
-.btn-row {
-  display: flex;
-  gap: 10px; //creeaza spatiu de 10px între fiecare element
-  margin-top: 10px;
-}
+    .btn-row {
+      display: flex;
+      gap: 10px;
+      margin-top: 8px;
 
-.btn-row button {
-  padding: 8px 14px;
-  border: none;
-  border-radius: 6px;
-  cursor: pointer;
-  font-weight: 600;
-  transition: background-color 0.2s ease;
-}
+      button {
+        font-size: 15px;
+        border-radius: 7px;
+        padding: 8px 22px;
+        font-weight: bold;
+        border: none;
+        box-shadow: 0 1px 5px 0 rgba(22,119,255,0.03);
+        transition: background 0.16s, color 0.13s;
 
-.btn-row button:first-child {
-  background-color: #28a745;
-  color: white;
-}
+        &:first-child {
+          background: #1677ff;
+          color: #fff;
 
-.btn-row button:last-child {
-  background-color: #6c757d;
-  color: white;
-}
+          &:hover {
+            background: #0e53a7;
+          }
+        }
+        &:last-child {
+          background: #dc3545;
+          color: #fff;
 
-.entity-list {
-  list-style: none; // elimină punctele de la începutul fiecărui element
-  padding: 0;
-}
+          &:hover {
+            background: #c82333;
+            transform: scale(1.06);
+          }
+        }
+      }
+    }
+  }
 
-.entity-list li {
-  background-color: #fff;
-  border: 1px solid #eee;
-  padding: 12px 16px;
-  margin-bottom: 10px;
-  border-radius: 8px;
-}
+  .entity-list {
+    list-style: none;
+    padding: 0;
 
-.team-row {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
+    li {
+      background-color: #f6f9ff;
+      border: 1.5px solid #b6cdfc;
+      box-shadow: 0 2px 12px 0 rgba(22,119,255,0.07);
+      padding: 1rem 1.2rem;
+      margin-bottom: 15px;
+      border-radius: 13px;
+      transition: box-shadow 0.19s, border-color 0.17s;
 
-.team-row span {
-  font-size: 15px;
-  font-weight: 500;
-}
+      &:hover {
+        border-color: #1677ff;
+        box-shadow: 0 4px 18px 0 rgba(22,119,255,0.11);
+      }
 
-.action-buttons {
-  display: flex;
-  gap: 10px;
-}
+      .team-row {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
 
-.btn-edit {
-  background-color: #ffc107;
-  color: #000;
-  border: none;
-  padding: 6px 14px;
-  border-radius: 6px;
-  font-weight: bold;
-  font-size: 14px;
-  cursor: pointer;
-  transition: background-color 0.2s ease;
-}
+        span {
+          font-size: 16px;
+          font-weight: 600;
+          color: #1756a8;
+        }
 
-.btn-edit:hover {
-  background-color: #e0a800;
-}
+        .action-buttons {
+          display: flex;
+          gap: 10px;
 
-.btn-delete {
-  background-color: #dc3545;
-  color: #fff;
-  border: none;
-  padding: 6px 14px;
-  border-radius: 6px;
-  font-weight: bold;
-  font-size: 14px;
-  cursor: pointer;
-  transition: background-color 0.2s ease;
-}
+          .btn-edit,
+          .btn-delete {
+            font-size: 15px;
+            border-radius: 7px;
+            padding: 8px 22px;
+            font-weight: bold;
+            border: none;
+            box-shadow: 0 1px 5px 0 rgba(22,119,255,0.03);
+            transition: background 0.16s, color 0.13s;
+          }
 
-.btn-delete:hover {
-  background-color: #c82333;
+          .btn-edit {
+            background: #1677ff;
+            color: #fff;
+            &:hover {
+              background: #0e53a7;
+            }
+          }
+          .btn-delete {
+            background: #dc3545;
+            color: #fff;
+            &:hover {
+              background: #c82333;
+              transform: scale(1.06);
+            }
+          }
+        }
+      }
+    }
+  }
 }

@@ -1,4 +1,4 @@
-<h1>Știri recente</h1><br>
+<h1 class="section-title">Știri recente</h1><br>
 
 <div *ngIf="isAdmin" class="admin-news-form">
   <h3>{{ editingNews?.id ? 'Editează știrea' : 'Adaugă știre' }}</h3>
@@ -29,7 +29,7 @@
     </div>
 
     <div class="comments"><br>
-      <h4>Comentarii</h4>
+      <h4>Comentarii:</h4>
 
       <div *ngIf="selectedNews?.comments?.length ?? 0 > 0; else noComments">
         <div *ngFor="let c of selectedNews?.comments" class="comment">

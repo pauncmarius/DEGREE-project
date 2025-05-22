@@ -7,6 +7,8 @@ import { TicketingService } from "../../services/ticketing.service";
 import { UserService } from "../../services/users.service";
 import { SeatsService } from "../../services/seats.service";
 import { ActivatedRoute } from "@angular/router";
+import { ViewChild, ElementRef } from '@angular/core';
+
 
 @Component({
   selector: 'app-ticketing',
@@ -16,6 +18,7 @@ import { ActivatedRoute } from "@angular/router";
   styleUrls: ['./ticketing.component.scss']
 })
 export class TicketingComponent implements OnInit {
+   @ViewChild('stadiumZone') stadiumZone!: ElementRef;
   games: GameForTicket[] = [];
   selectedGameId: number | null = null;
   seats: Seat[] = [];
@@ -51,6 +54,10 @@ export class TicketingComponent implements OnInit {
   onSelectGame(gameId: number) {
     this.selectedGameId = gameId;
     this.loadSeats(gameId);
+    setTimeout(() => {
+      // Dă scroll smooth la stadion
+      this.stadiumZone?.nativeElement.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }, 50);
   }
 
   loadSeats(gameId: number) {

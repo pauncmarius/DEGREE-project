@@ -1,5 +1,7 @@
+<img src="./assets/images/logo.png" alt="FC Unirea Logo" class="landing-logo" />
+
 <div class="teams-container">
-    <h1>Echipele noastre:</h1><br>
+    <h1 class="section-title">Echipele noastre:</h1><br>
   
     <div class="team-card" *ngFor="let team of internalTeams" (click)="goToTeam(team.id)">
       <h3>{{ team.teamName }}</h3>

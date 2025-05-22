@@ -1,11 +1,11 @@
 <div class="admin-section">
-  <h2>Jucători</h2>
+  <h1>Jucători</h1>
 
   <!--Filtrare -->
   <div class="filters">
     <input type="text" [(ngModel)]="nameFilter" (input)="applyFilters()" placeholder="Caută după nume..." />
     <input type="number" [(ngModel)]="teamIdFilter" (input)="applyFilters()" placeholder="Filtru după ID echipă" />
-  </div>
+  </div><br>
 
   <!--Formular -->
   <form (ngSubmit)="submitPlayer()" #playerForm="ngForm" class="edit-form-inline">

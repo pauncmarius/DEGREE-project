@@ -2,141 +2,173 @@
   max-width: 800px;
   margin: 30px auto;
   padding: 20px;
-  background-color: #fefefe;
+  background-color: #fff;
   border-radius: 12px;
   border: 1px solid #ddd;
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
-}
+  box-shadow: 0 4px 32px 4px rgba(25, 64, 241, 0.18),
+              0 2px 8px 0 rgba(40, 72, 255, 0.09);
 
-h2 {
-  text-align: center;
-  margin-bottom: 20px;
-  color: #333;
-}
+  h1 {
+    color: #1677ff;
+    font-size: 2.1rem;
+    font-weight: 800;
+    letter-spacing: 0.5px;
+    margin: 40px 0 24px 0;
+    padding-left: 18px;
+    text-shadow: 0 2px 10px rgba(22, 119, 255, 0.08);
+    border-left: 5px solid #1677ff18;
+    background: linear-gradient(90deg, #eaf3ff 0 60%, transparent 100%);
+    border-radius: 10px 0 0 10px;
+    display: inline-block;
+    text-align: left;
+  }
 
-.filters {
-  display: flex;
-  gap: 10px;
-  flex-wrap: wrap; //  muta pe urm linie daca nu au loc
-  margin-bottom: 16px;
-}
+  .filters {
+    display: flex;
+    gap: 12px;
+    input {
+      padding: 10px 14px;
+      border-radius: 7px;
+      border: 1.2px solid #b6cdfc;
+      font-size: 1.07rem;
+      background: #f6f9ff;
+      color: #1756a8;
+      transition: border 0.2s;
+      margin-bottom: 0;
+      &:focus {
+        border-color: #1677ff;
+        outline: none;
+        background: #fff;
+      }
+    }
+  }
 
-.filters input {
-  padding: 10px;
-  border-radius: 6px;
-  border: 1px solid #ccc;
-  font-size: 14px;
-  flex: 1;
-  min-width: 200px;
-}
+  .edit-form-inline {
+    background: #eaf3ff;
+    border-radius: 13px;
+    padding: 20px;
+    border: 2px dashed #b6cdfc;
+    box-shadow: 0 2px 8px rgba(22,119,255,0.04);
+    margin-bottom: 20px;
 
-.edit-form-inline {
-  background-color: #f1f1f1;
-  border: 1px dashed #ccc;
-  padding: 16px;
-  border-radius: 8px;
-  margin-bottom: 20px;
-}
+    h4 {
+      color: #1677ff;
+      margin-bottom: 16px;
+      font-size: 1.13rem;
+      font-weight: 700;
+    }
 
-.edit-form-inline h4 {
-  margin-bottom: 12px;
-  font-size: 16px;
-  font-weight: 600;
-}
+    input,
+    select {
+      width: 97%;
+      margin-bottom: 10px;
+      padding: 8px 10px;
+      border-radius: 6px;
+      border: 1.2px solid #b6cdfc;
+      font-size: 15px;
+      background: #fff;
+      color: #1756a8;
+      transition: border 0.2s;
+      &:focus {
+        border-color: #1677ff;
+        outline: none;
+      }
+    }
 
-.edit-form-inline input,
-.edit-form-inline select {
-  width: 100%;
-  margin-bottom: 10px;
-  padding: 8px;
-  border-radius: 6px;
-  border: 1px solid #ccc;
-  font-size: 14px;
-  box-sizing: border-box;
-}
+    .btn-row {
+      display: flex;
+      gap: 10px;
+      margin-top: 10px;
 
-.btn-row {
-  display: flex;
-  gap: 10px;
-  margin-top: 10px;
-}
+      button {
+        padding: 8px 14px;
+        border: none;
+        border-radius: 6px;
+        cursor: pointer;
+        font-weight: 600;
+        transition: background-color 0.2s ease;
+        background-color: #1677ff;
+        color: white;
 
-.btn-row button {
-  padding: 8px 14px;
-  border: none;
-  border-radius: 6px;
-  cursor: pointer;
-  font-weight: 600;
-  transition: background-color 0.2s ease;
-}
+        &:last-child {
+          background-color: #dc3545;
+          &:hover {
+            background-color: #c82333;
+          }
+        }
+        &:hover {
+          background-color: #1756a8;
+        }
+      }
+    }
+  }
 
-.btn-row button:first-child {
-  background-color: #28a745;
-  color: white;
-}
+  .entity-list {
+    list-style: none;
+    padding: 0;
 
-.btn-row button:last-child {
-  background-color: #6c757d;
-  color: white;
-}
+    li {
+      background-color: #f6f9ff;
+      border: 1.5px solid #b6cdfc;
+      box-shadow: 0 2px 12px 0 rgba(22,119,255,0.07);
+      padding: 1rem 1.2rem;
+      margin-bottom: 15px;
+      border-radius: 13px;
+      cursor: pointer;
+      transition: box-shadow 0.19s, border-color 0.17s, background 0.14s;
 
-.entity-list {
-  list-style: none;
-  padding: 0;
-}
+      &:hover {
+        border-color: #1677ff;
+        box-shadow: 0 4px 18px 0 rgba(22,119,255,0.11);
+        background: #eaf3ff;
+      }
 
-.entity-list li {
-  background-color: #fff;
-  border: 1px solid #eee;
-  padding: 12px 16px;
-  margin-bottom: 10px;
-  border-radius: 8px;
-}
+      .team-row {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
 
-.team-row {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
+        span {
+          font-size: 15px;
+          font-weight: 500;
+        }
 
-.team-row span {
-  font-size: 15px;
-  font-weight: 500;
-}
+        .action-buttons {
+          display: flex;
+          gap: 10px;
 
-.action-buttons {
-  display: flex;
-  gap: 10px;
-}
+          .btn-edit {
+            background: #1677ff;
+            color: #fff;
+            border: none;
+            padding: 6px 14px;
+            border-radius: 6px;
+            font-weight: bold;
+            font-size: 14px;
+            cursor: pointer;
+            transition: background 0.15s;
+            &:hover {
+              background: #1756a8;
+            }
+          }
 
-.btn-edit {
-  background-color: #ffc107;
-  color: #000;
-  border: none;
-  padding: 6px 14px;
-  border-radius: 6px;
-  font-weight: bold;
-  font-size: 14px;
-  cursor: pointer;
-  transition: background-color 0.2s ease;
-}
-
-.btn-edit:hover {
-  background-color: #e0a800;
-}
-
-.btn-delete {
-  background-color: #dc3545;
-  color: #fff;
-  border: none;
-  padding: 6px 14px;
-  border-radius: 6px;
-  font-weight: bold;
-  font-size: 14px;
-  cursor: pointer;
-  transition: background-color 0.2s ease;
-}
-
-.btn-delete:hover {
-  background-color: #c82333;
+          .btn-delete {
+            background: #dc3545;
+            color: #fff;
+            border: none;
+            padding: 6px 14px;
+            border-radius: 6px;
+            font-weight: bold;
+            font-size: 14px;
+            cursor: pointer;
+            transition: background 0.15s;
+            &:hover {
+              background: #c82333;
+              transform: scale(1.06);
+            }
+          }
+        }
+      }
+    }
+  }
 }

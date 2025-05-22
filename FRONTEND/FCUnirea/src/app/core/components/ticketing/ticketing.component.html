@@ -1,4 +1,6 @@
-<h2>Selectează meciul:</h2>
+<div class="section-title-wrapper">
+  <h1 class="section-title">Selectează meciul:</h1>
+</div>
 <ul class="games-list">
   <li *ngFor="let game of games"
       [class.selected]="game.id === selectedGameId"
@@ -56,19 +58,26 @@
 
 
 <!-- Locuri -->
-<div class="seats-container" *ngIf="selectedGameId">
-  <h3>Selectează un loc pentru meciul #{{ selectedGameId }}</h3>
+<div class="seats-container" *ngIf="selectedGameId" #stadiumZone>
+  <div class="section-title-wrapper">
+  <h3 class="section-title">Selectează un loc pentru meciul #{{ selectedGameId }}</h3>
+</div>
+
   <div class="seats-grid">
-    <div *ngFor="let seat of seats" [class.taken]="seat.isTaken" [class.available]="!seat.isTaken" [class.selected]="selectedSeatId === seat.id" class="seat-card" (click)="onSelectSeat(seat.id)">
+    <div *ngFor="let seat of seats" 
+      [class.taken]="seat.isTaken" [class.available]="!seat.isTaken" 
+      [class.selected]="selectedSeatId === seat.id" class="seat-card" 
+      (click)="!seat.isTaken && onSelectSeat(seat.id)">
+
       {{ seat.seatName }}<br>
       {{ seat.seatType }}<br>
       {{ seat.seatPrice }} RON
     </div>
   </div>
-
-  <button class="reserve-btn"
-          (click)="onReserve()"
-          [disabled]="!selectedSeatId || !selectedGameId">
-    Rezervă bilet
-  </button>
+  <div class="section-title-wrapper">
+    <button class="reserve-btn"
+            (click)="onReserve()"
+            [disabled]="!selectedSeatId || !selectedGameId">
+      Rezervă bilet
+    </button></div>
 </div>

@@ -1,164 +1,237 @@
-.news-title-wrapper {
-  margin-bottom: 1rem;
-}
-
-.news-title {
-  border: 1px solid #ccc;
-  padding: 1rem;
-  margin-bottom: 1rem;
-  border-radius: 8px;
-  cursor: pointer;
-  transition: 0.3s;
-  background-color: #dddddd;
-}
-
-.news-title:hover {
-  background-color: #f4f4f4;
-}
-
-.news-details {
-  background-color: #f1f3f5;
-  padding: 1rem;
-  border-radius: 12px;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
-  animation: fadeIn 0.3s ease-in-out;
-  max-width: 800px;
-  margin: 0 auto;
-}
-
-@keyframes fadeIn {
-  from {
-    opacity: 0;
-    transform: translateY(-6px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-.comment {
-  background-color: #ffffff;
-  padding: 0.75rem 1rem;
-  border-radius: 10px;
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
-  margin-bottom: 0.75rem;
-  border-bottom: 1px solid #ccc;
-  position: relative;
-}
-
-.comment strong {
-  color: #007bff;
-  font-weight: bold;
-}
-
-.comment small {
-  color: #6c757d;
-  font-size: 0.8rem;
-}
-
-.delete-comment {
-  position: absolute;
-  top: 20px;
-  right: 10px;
-
-  background-color: #dc3545;
-  color: black;
-  font-weight: bold;
-
-  border: none;
-  border-radius: 20px;
-  padding: 6px 12px;
-
-  font-size: 14px;
-  cursor: pointer;
-  transition: background-color 0.2s, transform 0.2s;
-
-  &:hover {
-    background-color: #c82333;
-    transform: scale(1.05);
-  }
-
-  &:active {
-    transform: scale(0.95);
-  }
-}
-
-
-.comment-form {
-  margin-top: 10px;
-}
-
-.comment-textarea {
-  background-color: #ffffff;
-  padding: 0.75rem 1rem;
-  border-radius: 10px;
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
-  margin-bottom: 0.75rem;
-  resize: none;
-  width: 96%;
-  border: 1px solid #ccc;
-}
-
-.comment-textarea:focus {
-  outline: none;
-  box-shadow: 0 0 0 3px rgba(40, 167, 69, 0.25);
-}
-
-.submit-comment {
-  padding: 10px 20px;
-  background-color: #28a745;
-  color: white;
-  font-weight: 600;
-  font-size: 15px;
-  border: none;
-  border-radius: 6px;
-  cursor: pointer;
-  transition: background-color 0.2s, transform 0.1s;
-}
-
-.submit-comment:hover {
-  background-color: #218838;
-  transform: scale(1.02);
-}
-
-.submit-comment:active {
-  background-color: #1e7e34;
-  transform: scale(0.98);
+.section-title {
+  color: #1677ff;
+  font-size: 2.1rem;
+  font-weight: 800;
+  letter-spacing: 0.5px;
+  margin: 40px 0 24px 0;
+  padding-left: 18px;
+  text-shadow: 0 2px 10px rgba(22, 119, 255, 0.07);
+  border-left: 5px solid #1677ff18;
+  background: linear-gradient(90deg, #eaf3ff 0 60%, transparent 100%);
+  border-radius: 10px 0 0 10px;
+  display: inline-block;
 }
 
 .admin-news-form {
-  border: 2px dashed #ccc;
-  padding: 15px;
-  margin-bottom: 25px;
-  background-color: #f9f9f9;
+  border: 2.2px dashed #b6cdfc;
+  padding: 18px;
+  margin-bottom: 30px;
+  background: #f6f9ff;
+  border-radius: 13px;
+  box-shadow: 0 2px 8px rgba(22,119,255,0.03);
+
+  h3 {
+    margin-top: 0;
+    color: #1677ff;
+    font-weight: 700;
+    font-size: 1.18rem;
+  }
+
+  label {
+    margin-top: 4px;
+    font-weight: 600;
+    color: #1756a8;
+  }
+
+  input,
+  textarea {
+    display: block;
+    width: 97%;
+    max-width: 97%;
+    margin-bottom: 10px;
+    padding: 8px 10px;
+    border: 1.2px solid #b6cdfc;
+    border-radius: 6px;
+    background: #fff;
+    font-size: 1rem;
+  }
+
+  button {
+    background: #1677ff;
+    color: #fff;
+    border-radius: 7px;
+    font-weight: bold;
+    padding: 8px 22px;
+    margin-right: 8px;
+    border: none;
+    font-size: 1rem;
+    transition: background 0.14s;
+
+    &:hover {
+      background: #0d4cbc;
+    }
+  }
 }
 
-.admin-news-form input,
-.admin-news-form textarea {
-  display: block;
-  width: 100%;
-  margin-bottom: 10px;
-  padding: 6px;
-  border: 1px solid #ccc;
-  border-radius: 6px;
+.news-title-wrapper {
+  margin-bottom: 1.5rem;
+
+  .news-title {
+    border: 1.5px solid #b6cdfc;
+    padding: 1.1rem 1.4rem;
+    margin-bottom: 0.5rem;
+    border-radius: 13px;
+    cursor: pointer;
+    background-color: #f6f9ff;
+    transition: box-shadow 0.23s, background 0.21s;
+    box-shadow: 0 2px 12px 0 rgba(22,119,255,0.07);
+
+    &:hover {
+      background: #e2eeff;
+      box-shadow: 0 4px 18px 0 rgba(22,119,255,0.15);
+    }
+
+    h4 {
+      color: #1677ff;
+      margin: 0;
+      font-weight: bold;
+      font-size: 1.13rem;
+    }
+  }
+
+  .news-details {
+    background: #fff;
+    padding: 1.3rem 1.2rem 1.3rem 1.2rem;
+    border-radius: 16px;
+    box-shadow: 0 6px 32px 0 rgba(22,119,255,0.10);
+    border: 1.5px solid #e0e4ef;
+    animation: fadeIn 0.34s;
+    max-width: 700px;
+    margin: 0 auto;
+
+    .admin-actions {
+      button {
+        background: #f7f7f7;
+        color: #1677ff;
+        border: 1px solid #d0e1ff;
+        border-radius: 8px;
+        font-weight: 500;
+        margin-right: 10px;
+        margin-top: 4px;
+        padding: 7px 17px;
+        transition: background 0.17s, color 0.17s;
+
+        &:hover {
+          background: #e2eeff;
+          color: #1656ff;
+        }
+      }
+    }
+
+    .comments {
+      margin-top: 14px;
+
+      h4 {
+        color: #1756a8;
+        font-size: 1.06rem;
+        font-weight: 700;
+        margin-bottom: 7px;
+      }
+
+      .comment {
+        background: #f6f9ff;
+        border-radius: 11px;
+        box-shadow: 0 2px 8px rgba(22,119,255,0.04);
+        padding: 0.85rem 1.2rem 0.7rem 1.2rem;
+        margin-bottom: 0.65rem;
+        border: 1px solid #e0e4ef;
+        position: relative;
+
+        strong {
+          color: #1677ff;
+        }
+
+        small {
+          color: #878ea5;
+          font-size: 0.82rem;
+        }
+
+        .delete-comment {
+          position: absolute;
+          top: 18px;
+          right: 10px;
+          background: #eaf0fa;
+          color: #dc3545;
+          font-weight: 600;
+          border: none;
+          border-radius: 18px;
+          padding: 6px 12px;
+          font-size: 13px;
+          cursor: pointer;
+          transition: background 0.2s, color 0.2s, transform 0.13s;
+
+          &:hover {
+            background: #ffeaea;
+            color: #b52d3a;
+            transform: scale(1.06);
+          }
+        }
+      }
+    }
+
+    .comment-form {
+      margin-top: 12px;
+
+      .comment-textarea {
+        background: #fff;
+        padding: 0.75rem 1rem;
+        border-radius: 10px;
+        box-shadow: 0 2px 6px rgba(22,119,255,0.07);
+        margin-bottom: 0.75rem;
+        resize: none;
+        width: 95.5%;
+        border: 1px solid #e0e4ef;
+        font-size: 1rem;
+
+        &:focus {
+          outline: none;
+          box-shadow: 0 0 0 2px #1677ff55;
+        }
+      }
+
+      .submit-comment {
+        padding: 10px 24px;
+        background: #1677ff;
+        color: #fff;
+        font-weight: 600;
+        font-size: 15px;
+        border: none;
+        border-radius: 7px;
+        cursor: pointer;
+        transition: background 0.17s, transform 0.1s;
+
+        &:hover {
+          background: #0e53a7;
+          transform: scale(1.02);
+        }
+        &:active {
+          background: #174987;
+          transform: scale(0.98);
+        }
+      }
+      .success {
+        color: #219653;
+        background: #eafaf1;
+        border-radius: 4px;
+        padding: 3px 8px;
+        margin-top: 8px;
+        font-weight: 500;
+        display: inline-block;
+      }
+      .error {
+        color: #e53935;
+        background: #fff0f0;
+        border-radius: 4px;
+        padding: 3px 8px;
+        margin-top: 8px;
+        font-weight: 500;
+        display: inline-block;
+      }
+    }
+  }
 }
 
-button {
-  margin-right: 10px;
-  background-color: #57acec;
-  border: none;
-  padding: 6px 12px;
-  cursor: pointer;
-  margin-bottom: 1px;
-}
-
-.success {
-  color: green;
-  margin-top: 5px;
-}
-
-.error {
-  color: red;
-  margin-top: 5px;
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(-8px);}
+  to { opacity: 1; transform: none;}
 }

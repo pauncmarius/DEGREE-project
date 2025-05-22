@@ -23,15 +23,10 @@ public class OpenAiChatService
     private readonly ICompetitionsService _competitionsService;
     private readonly ITeamsService _teamsService;
     private readonly IPlayersService _playersService;
-
     private readonly IGamesService _gamesService;
     private readonly IPlayerStatisticsPerGameService _playerStatisticsPerGameService;
-
     private readonly IStadiumsService _stadiumsService;
     private readonly ITicketsService _ticketsService;
-
-
-
 
     public OpenAiChatService(IConfiguration configuration, 
         IUsersService usersService, 
