@@ -8,7 +8,6 @@ using System.Text;
 using System.Text.Json;
 using System.Threading.Tasks;
 using FCUnirea.Business.Models;
-using FCUnirea.Business.Services;
 using FCUnirea.Business.Services.IServices;
 using FCUnirea.Domain.Entities;
 using Microsoft.Extensions.Configuration;
@@ -70,7 +69,7 @@ public class OpenAiChatService
     {
         string msg = message.ToLower();
 
-        // cuvinte cheie pentru fiecare statistică:
+        // cuvinte cheie pentru fiecare statistica:
         var statsKeywords = new Dictionary<string, Func<TeamStatisticsModel, string>>
         {
             {"puncte", s => $"{s.TeamName} are {s.TotalPoints} puncte."},
@@ -91,7 +90,6 @@ public class OpenAiChatService
         };
 
 
-
         if (user != null)
         {
             //UsersTable
@@ -101,6 +99,7 @@ public class OpenAiChatService
                 return $"Utilizatorul a întrebat: '{message}'. Username-ul este: {user.Username}.";
             if (msg.Contains("nume"))
                 return $"Utilizatorul a întrebat: '{message}'. Numele tau este: {user.FirstName} {user.LastName}.";
+
             //NewsTable
             if (msg.Contains("stiri")|| msg.Contains("news") || msg.Contains("ultimele") || msg.Contains("recente"))
             {
@@ -117,6 +116,7 @@ public class OpenAiChatService
                     return $"Momentan nu există știri noi în platformă.";
                 }
             }
+
             //TeamStatisticsTable
             foreach (var ek in echipeNoastre)
             {
@@ -141,6 +141,7 @@ public class OpenAiChatService
                     }
                 }
             }
+
             //CompetitionsTable
             if (msg.Contains("competitii") || msg.Contains("competiții") || msg.Contains("competitions") || msg.Contains("joaca in") || msg.Contains("joacă în") || msg.Contains("participa in") || msg.Contains("participă în"))
             {
@@ -172,6 +173,7 @@ public class OpenAiChatService
                     return $"FC Unirea Youth participă în următoarele competiții:\n- {string.Join("\n- ", compNames)}";
                 }
             }
+
             //TeamsTable
             if (msg.Contains("echipele noastre") || msg.Contains("ce echipe avem") ||
                 msg.Contains("echipe fc unirea") || msg.Contains("subechipe") || msg.Contains("echipe interne"))
@@ -187,6 +189,7 @@ public class OpenAiChatService
                     return "Momentan nu există echipe interne definite.";
                 }
             }
+
             // PlayersTable
             if ((msg.Contains("jucatori") || msg.Contains("jucători") || msg.Contains("lot") || msg.Contains("player")))
             {
@@ -223,6 +226,7 @@ public class OpenAiChatService
                         return $"Momentan nu există jucători înregistrați pentru FC Unirea.";
                 }
             }
+
             //GamesTable
             if ((msg.Contains("ultimul meci") || msg.Contains("ultimul rezultat") || msg.Contains("rezultatul ultimului meci") || msg.Contains("a facut in ultimul meci")) &&
                 (msg.Contains("fc unirea") || msg.Contains("unirea u21") || msg.Contains("unirea youth") || msg.Contains("cf youth") || msg.Contains("u21")))
@@ -264,6 +268,7 @@ public class OpenAiChatService
                     return $"Nu există date despre meciuri jucate pentru {ekipa.Name}.";
                 }
             }
+
             //Stadiumstable
             if ((msg.Contains("stadion") || msg.Contains("stadium") || msg.Contains("arena")))
             {
@@ -283,6 +288,7 @@ public class OpenAiChatService
                     return $"Echipa FC Unirea joacă pe stadionul {stadium.StadiumName}.";
                 }
             }
+
             //TicketsTable
             if ((msg.Contains("bilete") || msg.Contains("bilet") || msg.Contains("rezervari") || msg.Contains("rezervări")) &&
                 (msg.Contains("mele") || msg.Contains("am") || msg.Contains("ale mele") || msg.Contains("rezervat")))
@@ -317,11 +323,6 @@ public class OpenAiChatService
 
                 return result;
             }
-
-
-
-
-
         }
         // fallback generic
         return $"Ești asistentul virtual FC Unirea. Răspunde la întrebarea: \"{message}\" despre bilete, meciuri, profil, etc.";

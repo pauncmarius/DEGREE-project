@@ -2,6 +2,13 @@
     <div class="menu-logo-box">
     <img src="./assets/images/logo.png" alt="FC Unirea Logo" class="menu-logo" />
   </div>
+
+  <a *ngIf="!isLoggedIn()" class="menu-item" routerLink="/login" routerLinkActive="active">
+    Login
+  </a>
+  <a *ngIf="!isLoggedIn()" class="menu-item" routerLink="/register" routerLinkActive="active">
+    Register</a>
+
   <a *ngIf="isLoggedIn()" class="menu-item" routerLink="/home" routerLinkActive="active">
     Home
   </a>
@@ -28,10 +35,6 @@
 
   <a *ngIf="isLoggedIn()" class="menu-item" routerLink="/ticketing" routerLinkActive="active">
     Online Tickets
-  </a>
-
-  <a *ngIf="!isLoggedIn()" class="menu-item" routerLink="/login" routerLinkActive="active">
-    Login
   </a>
 
   <a *ngIf="isAdmin()" class="menu-item" routerLink="/admin/users" routerLinkActive="active">

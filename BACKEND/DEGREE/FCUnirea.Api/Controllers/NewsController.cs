@@ -13,35 +13,43 @@ namespace FCUnirea.Api.Controllers
     {
         private readonly INewsService _newsService;
         private readonly IUsersService _usersService;
-        private readonly ICommentsService _commentsService;
 
 
-        public NewsController(INewsService newsService, ICommentsService commentsService, IUsersService usersService)
+        public NewsController(INewsService newsService, IUsersService usersService)
         {
             _newsService = newsService;
-            _commentsService = commentsService;
             _usersService = usersService;
         }
 
+        [Authorize]
         [HttpGet]
         public IActionResult GetAll()
         {
             return Ok(_newsService.GetNews());
         }
 
+        [Authorize]
         [HttpGet("{id}")]
         public IActionResult GetById(int id)
         {
             var result = _newsService.GetNewsWithComments(id);
-            return result == null ? NotFound() : Ok(result);
+            if (result == null)
+            {
+                return NotFound("Știrea nu a fost găsită.");
+            }
+            return Ok(result);
+
         }
 
 
 
-        [Authorize]
+        [Authorize(Roles = "Admin")]
         [HttpPost]
         public IActionResult Add([FromBody] NewsModel model)
         {
+            if (!ModelState.IsValid)
+                return BadRequest(ModelState);
+
             var username = User.Identity?.Name;
             if (string.IsNullOrEmpty(username)) return Unauthorized();
 
@@ -52,13 +60,19 @@ namespace FCUnirea.Api.Controllers
             model.CreatedAt = DateTime.UtcNow;
 
             var id = _newsService.AddNews(model);
+            if (id == 0)
+                return BadRequest(new { message = "Știrea nu a fost adăugată." });
+
             return CreatedAtAction(null, id);
         }
 
-
+        [Authorize(Roles = "Admin")]
         [HttpPut]
         public IActionResult Update([FromBody] NewsModel model)
         {
+            if (!ModelState.IsValid)
+                return BadRequest(ModelState);
+
             _newsService.UpdateNews(model);
             return NoContent();
         }
@@ -69,12 +83,8 @@ namespace FCUnirea.Api.Controllers
         [HttpDelete("{id}")]
         public IActionResult Delete(int id)
         {
-            var news = _newsService.GetNewsItem(id);
-            if (news == null)
-                return NotFound("Știrea nu a fost găsită.");
-
             _newsService.DeleteNews(id);
-            return Ok(new { message = "Știrea a fost ștearsă." });
+            return NoContent();
         }
 
 

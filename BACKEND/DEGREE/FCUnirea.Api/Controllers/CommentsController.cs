@@ -10,7 +10,7 @@ namespace FCUnirea.Api.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
-    public class CommentsController : Controller
+    public class CommentsController : ControllerBase
     {
         private readonly ICommentsService _commentService;
 
@@ -19,43 +19,47 @@ namespace FCUnirea.Api.Controllers
             _commentService = commentsService;
         }
 
+        [Authorize]
         [HttpGet]
-        public IActionResult GetAll()
-        {
-            return Ok(_commentService.GetComments());
-        }
+        public IActionResult GetAll() => Ok(_commentService.GetComments());
 
+        [Authorize]
         [HttpGet("{id}")]
         public IActionResult GetById(int id)
         {
             var comment = _commentService.GetComment(id);
-            if (comment != null)
-            {
-                return Ok(comment);
-            }
+            if (comment == null)
+                return NotFound(new { message = "Comentariul nu a fost găsit." });
 
-            return NotFound();
+            return Ok(comment);
         }
 
         [Authorize]
         [HttpPost]
         public IActionResult Add([FromBody] CommentsModel model)
         {
+            if (!ModelState.IsValid)
+                return BadRequest(ModelState);
+
             // preia username-ul utilizatorului autentificat din token
             var username = User.Identity?.Name;
-            if (string.IsNullOrEmpty(username)) return Unauthorized();
+            if (string.IsNullOrEmpty(username))
+                return BadRequest(new { message = "Utilizatorul nu este autentificat." });
 
             var commentId = _commentService.AddCommentWithUser(model, username);
-
             if (commentId == null)
                 return BadRequest(new { message = "Utilizatorul nu există sau datele sunt invalide." });
 
             return Ok(new { message = "Comentariu adăugat cu succes!", commentId });
         }
 
+        [Authorize(Roles = "Admin")]
         [HttpPut]
         public IActionResult Update([FromBody] Comments comment)
         {
+            if (!ModelState.IsValid)
+                return BadRequest(ModelState);
+
             _commentService.UpdateComment(comment);
             return NoContent();
         }
@@ -69,3 +73,4 @@ namespace FCUnirea.Api.Controllers
         }
     }
 }
+

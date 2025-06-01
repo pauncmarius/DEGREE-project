@@ -2,6 +2,7 @@
 using FCUnirea.Business.Models;
 using FCUnirea.Business.Services.IServices;
 using FCUnirea.Domain.Entities;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
 namespace FCUnirea.Api.Controllers
@@ -17,12 +18,14 @@ namespace FCUnirea.Api.Controllers
             _stadiumService = stadiumService;
         }
 
+        [Authorize]
         [HttpGet]
         public IActionResult GetAll()
         {
             return Ok(_stadiumService.GetStadiums());
         }
 
+        [Authorize]
         [HttpGet("{id}")]
         public IActionResult GetById(int id)
         {
@@ -31,23 +34,31 @@ namespace FCUnirea.Api.Controllers
             {
                 return Ok(stadium);
             }
-
             return NotFound();
         }
 
+        [Authorize(Roles = "Admin")]
         [HttpPost]
         public IActionResult Add([FromBody] StadiumsModel model)
         {
+            if (!ModelState.IsValid)
+                return BadRequest(ModelState);
+
             return CreatedAtAction(null, _stadiumService.AddStadium(model));
         }
 
+        [Authorize(Roles = "Admin")]
         [HttpPut]
         public IActionResult Update([FromBody] Stadiums stadium)
         {
+            if (!ModelState.IsValid)
+                return BadRequest(ModelState);
+
             _stadiumService.UpdateStadium(stadium);
             return NoContent();
         }
 
+        [Authorize(Roles = "Admin")]
         [HttpDelete("{id}")]
         public IActionResult Delete(int id)
         {

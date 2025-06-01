@@ -9,7 +9,7 @@ namespace FCUnirea.Domain.Entities
         public string TeamName { get; set; }
         public TeamType TeamType { get; set; }
         public bool IsInternal { get; set; }
-        [Column(TypeName = "TEXT")]
+        [Column(TypeName = "NVARCHAR(MAX)")]
         public string Description { get; set;}
         public string CoachName { get; set; }
 

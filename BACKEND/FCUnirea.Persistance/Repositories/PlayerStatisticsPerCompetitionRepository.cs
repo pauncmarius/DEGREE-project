@@ -13,9 +13,9 @@ namespace FCUnirea.Persistance.Repositories
     {
         public PlayerStatisticsPerCompetitionRepository(FCUnireaDbContext fcUnireaDbContext) : base(fcUnireaDbContext) { }
 
+        // grupeaza golurile inscrise de fiecare jucator in fiecare competitie si returneaza rezultatul ca dictionar
         public async Task<Dictionary<(int PlayerId, int CompetitionId), int>> GetGoalsGroupedByPlayerAndCompetitionAsync()
         {
-            // grupeaza golurile inscrise de fiecare jucator in fiecare competitie si returneaza rezultatul ca dictionar
             return await (
                 // selecteaza statisticile jucatorilor din fiecare meci
                 from stat in _dbContext.PlayerStatisticsPerGame
@@ -48,14 +48,14 @@ namespace FCUnirea.Persistance.Repositories
 
         public async Task<IEnumerable<PlayerStatisticsPerCompetition>> GetByPlayerIdAsync(int playerId)
         {
-            return await _dbContext.PlayerStatisticsPerCompetiton
+            return await _dbContext.PlayerStatisticsPerCompetition
                 .Where(p => p.PlayerStatisticsPerCompetition_PlayersId == playerId)
                 .ToListAsync();
         }
 
         public async Task<IEnumerable<PlayerStatisticsPerCompetition>> GetTopScorersByCompetitionAsync(int competitionId)
         {
-            return await _dbContext.PlayerStatisticsPerCompetiton
+            return await _dbContext.PlayerStatisticsPerCompetition
                 .Include(p => p.PlayerStatisticsPerCompetition_Players)
                     // pentru fiecare jucator, incarca si echipa din care face parte (Player_Teams)
                     .ThenInclude(p => p.Player_Teams)

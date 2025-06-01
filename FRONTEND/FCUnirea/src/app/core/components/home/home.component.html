@@ -19,7 +19,8 @@
   </div>
 
   <div *ngIf="selectedNews?.id === news.id" class="news-details">
-    <p>{{ selectedNews?.text }}</p><br>
+    <p [innerHTML]="parseNewsText(selectedNews?.text ?? '')"></p>
+<br>
     <p><strong>Data publicării:</strong> {{ selectedNews?.createdAt | date: 'short' }}</p>
     <p><strong>Autor:</strong> {{ selectedNews?.username }}</p>
 

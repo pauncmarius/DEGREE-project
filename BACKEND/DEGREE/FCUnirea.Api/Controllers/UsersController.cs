@@ -30,6 +30,7 @@ namespace FCUnirea.Api.Controllers
             return Ok(_userService.GetUsers());
         }
 
+        [Authorize(Roles = "Admin")]
         [HttpGet("{id}")]
         public IActionResult GetById(int id)
         {
@@ -42,12 +43,16 @@ namespace FCUnirea.Api.Controllers
             return NotFound();
         }
 
+        [Authorize(Roles = "Admin")]
         [HttpPost]
         public IActionResult Add([FromBody] UsersModel model)
         {
+            if (!ModelState.IsValid)
+                return BadRequest(ModelState);
             return CreatedAtAction(null, _userService.AddUser(model));
         }
 
+        [Authorize]
         [HttpPut]
         public IActionResult Update([FromBody] Users user)
         {
@@ -55,7 +60,7 @@ namespace FCUnirea.Api.Controllers
             return NoContent();
         }
 
-        [Authorize(Roles = "Admin")]
+        [Authorize]
         [HttpDelete("{id}")]
         public IActionResult Delete(int id)
         {
@@ -66,6 +71,9 @@ namespace FCUnirea.Api.Controllers
         [HttpPost("register")]
         public IActionResult Register([FromBody] UsersModel model)
         {
+            if (!ModelState.IsValid)
+                return BadRequest(ModelState);
+
             Dictionary<string, string> errors;
             var userId = _userService.RegisterUser(model, out errors);
 
@@ -114,6 +122,7 @@ namespace FCUnirea.Api.Controllers
             if (user == null) return NotFound();
 
             var profile = _mapper.Map<UsersModel>(user);
+            if (profile == null) return NotFound();
             return Ok(profile);
         }
 
@@ -121,6 +130,9 @@ namespace FCUnirea.Api.Controllers
         [HttpPost("change-password")]
         public IActionResult ChangePassword([FromBody] ChangePasswordModel model)
         {
+            if (!ModelState.IsValid)
+                return BadRequest(ModelState);
+
             var username = User.Identity?.Name;
 
             if (!_userService.ChangePassword(username, model.CurrentPassword, model.NewPassword))
@@ -133,16 +145,29 @@ namespace FCUnirea.Api.Controllers
         [HttpPost("update-name")]
         public IActionResult UpdateName([FromBody] NameUpdateModel model)
         {
+            if (!ModelState.IsValid)
+                return BadRequest(ModelState);
+
             var username = User.Identity?.Name;
+            if (string.IsNullOrEmpty(username))
+                return Unauthorized();
+
             _userService.UpdateName(username, model.FirstName, model.LastName);
-            return Ok();
+
+            return NoContent();
         }
 
         [Authorize]
         [HttpPost("update-username")]
         public IActionResult UpdateUsername([FromBody] UsernameUpdateModel model)
         {
+            if (!ModelState.IsValid)
+                return BadRequest(ModelState);
+
             var username = User.Identity?.Name;
+            if (string.IsNullOrEmpty(username))
+                return Unauthorized();
+
             if (!_userService.UpdateUsername(username, model.Username, out string error))
                 return BadRequest(new { message = error });
 
@@ -153,7 +178,11 @@ namespace FCUnirea.Api.Controllers
         [HttpPost("update-email")]
         public IActionResult UpdateEmail([FromBody] EmailUpdateModel model)
         {
+            if (!ModelState.IsValid)
+                return BadRequest(ModelState);
             var username = User.Identity?.Name;
+            if (string.IsNullOrEmpty(username))
+                return Unauthorized();
             if (!_userService.UpdateEmail(username, model.Email, out string error))
                 return BadRequest(new { message = error });
 
@@ -164,7 +193,11 @@ namespace FCUnirea.Api.Controllers
         [HttpPost("update-phone")]
         public IActionResult UpdatePhone([FromBody] PhoneUpdateModel model)
         {
+            if (!ModelState.IsValid)
+                return BadRequest(ModelState);
             var username = User.Identity?.Name;
+            if (string.IsNullOrEmpty(username))
+                return Unauthorized();
             if (!_userService.UpdatePhone(username, model.PhoneNumber, out string error))
                 return BadRequest(new { message = error });
 
@@ -176,13 +209,15 @@ namespace FCUnirea.Api.Controllers
         public IActionResult DeleteAccount()
         {
             var username = User.Identity?.Name;
-            var user = _userService.GetByUsername(username);
+            if (string.IsNullOrEmpty(username))
+                return Unauthorized();
 
+            var user = _userService.GetByUsername(username);
             if (user == null)
                 return NotFound();
 
             _userService.DeleteUser(user.Id);
-            return Ok(new { message = "Contul a fost șters." });
+            return NoContent();
         }
 
     }

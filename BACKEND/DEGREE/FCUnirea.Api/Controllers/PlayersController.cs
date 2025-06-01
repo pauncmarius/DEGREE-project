@@ -1,7 +1,9 @@
 ﻿//playersController.cs
+using System.Linq;
 using FCUnirea.Business.Models;
 using FCUnirea.Business.Services.IServices;
 using FCUnirea.Domain.Entities;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
 namespace FCUnirea.Api.Controllers
@@ -17,12 +19,14 @@ namespace FCUnirea.Api.Controllers
             _playerService = playerService;
         }
 
+        [Authorize]
         [HttpGet]
         public IActionResult GetAll()
         {
             return Ok(_playerService.GetPlayers());
         }
 
+        [Authorize(Roles = "Admin")]
         [HttpGet("{id}")]
         public IActionResult GetById(int id)
         {
@@ -35,19 +39,28 @@ namespace FCUnirea.Api.Controllers
             return NotFound();
         }
 
+        [Authorize(Roles = "Admin")]
         [HttpPost]
         public IActionResult Add([FromBody] PlayersModel model)
         {
+            if (!ModelState.IsValid)
+                return BadRequest(ModelState);
+
             return CreatedAtAction(null, _playerService.AddPlayer(model));
         }
 
+        [Authorize(Roles = "Admin")]
         [HttpPut]
         public IActionResult Update([FromBody] Players player)
         {
+            if (!ModelState.IsValid)
+                return BadRequest(ModelState);
+
             _playerService.UpdatePlayer(player);
             return NoContent();
         }
 
+        [Authorize(Roles = "Admin")]
         [HttpDelete("{id}")]
         public IActionResult Delete(int id)
         {
@@ -55,10 +68,15 @@ namespace FCUnirea.Api.Controllers
             return NoContent();
         }
 
+        [Authorize]
         [HttpGet("byTeam/{teamId}")]
         public IActionResult GetByTeam(int teamId)
         {
             var players = _playerService.GetPlayersByTeam(teamId);
+            if (players == null || !players.Any())
+            {
+                return NotFound("Nu există jucători pentru această echipă.");
+            }
             return Ok(players);
         }
 

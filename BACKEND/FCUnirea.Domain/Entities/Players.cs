@@ -12,7 +12,7 @@ namespace FCUnirea.Domain.Entities
 
         //--------------Relations--------------------//
 
-        public ICollection<PlayerStatisticsPerCompetition> Players_PlayerStatisticsPerCompetitons { get; set; }
+        public ICollection<PlayerStatisticsPerCompetition> Players_PlayerStatisticsPerCompetitions { get; set; }
         public ICollection<PlayerStatisticsPerGame> Players_PlayerStatisticsPerGame { get; set; }
 
         // Foreign Key

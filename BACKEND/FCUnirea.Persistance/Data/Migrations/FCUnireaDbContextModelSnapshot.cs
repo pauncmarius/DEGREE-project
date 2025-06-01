@@ -48,7 +48,7 @@ namespace FCUnirea.Persistance.Data.Migrations
                     b.Property<string>("Text")
                         .IsRequired()
                         .HasMaxLength(300)
-                        .HasColumnType("TEXT")
+                        .HasColumnType("NVARCHAR(MAX)")
                         .HasColumnName("Text");
 
                     b.HasKey("Id");
@@ -64,601 +64,2641 @@ namespace FCUnirea.Persistance.Data.Migrations
                         {
                             Id = 1,
                             Comment_NewsId = 1,
-                            Comment_UsersId = 9,
-                            CreatedAt = new DateTime(2025, 5, 9, 9, 54, 42, 601, DateTimeKind.Utc).AddTicks(1181),
-                            Text = "Comentariu de la user 9 pentru știrea 1."
+                            Comment_UsersId = 2,
+                            CreatedAt = new DateTime(2025, 6, 1, 10, 0, 6, 817, DateTimeKind.Utc).AddTicks(4109),
+                            Text = "Felicitări echipei! Suntem mândri că FC Unirea ajunge și în Champions League!"
                         },
                         new
                         {
                             Id = 2,
                             Comment_NewsId = 1,
-                            Comment_UsersId = 1,
-                            CreatedAt = new DateTime(2025, 5, 9, 9, 54, 42, 601, DateTimeKind.Utc).AddTicks(1183),
-                            Text = "Comentariu de la user 1 pentru știrea 1."
+                            Comment_UsersId = 3,
+                            CreatedAt = new DateTime(2025, 6, 1, 10, 0, 6, 817, DateTimeKind.Utc).AddTicks(4113),
+                            Text = "Forza Unirea! Abia aștept meciurile din toate cele trei competiții!"
                         },
                         new
                         {
                             Id = 3,
                             Comment_NewsId = 1,
                             Comment_UsersId = 4,
-                            CreatedAt = new DateTime(2025, 5, 9, 9, 54, 42, 601, DateTimeKind.Utc).AddTicks(1184),
-                            Text = "Comentariu de la user 4 pentru știrea 1."
+                            CreatedAt = new DateTime(2025, 6, 1, 10, 0, 6, 817, DateTimeKind.Utc).AddTicks(4114),
+                            Text = "Va fi un sezon greu, dar cu susținerea noastră sigur veți reuși!"
                         },
                         new
                         {
                             Id = 4,
                             Comment_NewsId = 1,
-                            Comment_UsersId = 8,
-                            CreatedAt = new DateTime(2025, 5, 9, 9, 54, 42, 601, DateTimeKind.Utc).AddTicks(1185),
-                            Text = "Comentariu de la user 8 pentru știrea 1."
+                            Comment_UsersId = 5,
+                            CreatedAt = new DateTime(2025, 6, 1, 10, 0, 6, 817, DateTimeKind.Utc).AddTicks(4115),
+                            Text = "Mult succes băieților, mai ales în Champions League! Suntem alături de voi!"
                         },
                         new
                         {
                             Id = 5,
                             Comment_NewsId = 1,
-                            Comment_UsersId = 2,
-                            CreatedAt = new DateTime(2025, 5, 9, 9, 54, 42, 601, DateTimeKind.Utc).AddTicks(1185),
-                            Text = "Comentariu de la user 2 pentru știrea 1."
+                            Comment_UsersId = 6,
+                            CreatedAt = new DateTime(2025, 6, 1, 10, 0, 6, 817, DateTimeKind.Utc).AddTicks(4116),
+                            Text = "Bravo! Să dovediți că sunteți cei mai buni atât în țară, cât și în Europa!"
                         },
                         new
                         {
                             Id = 6,
-                            Comment_NewsId = 2,
-                            Comment_UsersId = 6,
-                            CreatedAt = new DateTime(2025, 5, 9, 9, 54, 42, 601, DateTimeKind.Utc).AddTicks(1186),
-                            Text = "Comentariu de la user 6 pentru știrea 2."
+                            Comment_NewsId = 1,
+                            Comment_UsersId = 7,
+                            CreatedAt = new DateTime(2025, 6, 1, 10, 0, 6, 817, DateTimeKind.Utc).AddTicks(4117),
+                            Text = "Aștept cu nerăbdare derby-urile din Liga 1! Haideți să câștigăm tot!"
                         },
                         new
                         {
                             Id = 7,
-                            Comment_NewsId = 2,
-                            Comment_UsersId = 7,
-                            CreatedAt = new DateTime(2025, 5, 9, 9, 54, 42, 601, DateTimeKind.Utc).AddTicks(1187),
-                            Text = "Comentariu de la user 7 pentru știrea 2."
+                            Comment_NewsId = 1,
+                            Comment_UsersId = 8,
+                            CreatedAt = new DateTime(2025, 6, 1, 10, 0, 6, 817, DateTimeKind.Utc).AddTicks(4119),
+                            Text = "Băieți, să jucați cu inima și să nu vă lăsați niciodată!"
                         },
                         new
                         {
                             Id = 8,
-                            Comment_NewsId = 2,
-                            Comment_UsersId = 10,
-                            CreatedAt = new DateTime(2025, 5, 9, 9, 54, 42, 601, DateTimeKind.Utc).AddTicks(1188),
-                            Text = "Comentariu de la user 10 pentru știrea 2."
+                            Comment_NewsId = 1,
+                            Comment_UsersId = 9,
+                            CreatedAt = new DateTime(2025, 6, 1, 10, 0, 6, 817, DateTimeKind.Utc).AddTicks(4120),
+                            Text = "Să avem un sezon plin de victorii! Mult succes și în Cupa României!"
                         },
                         new
                         {
                             Id = 9,
-                            Comment_NewsId = 2,
-                            Comment_UsersId = 4,
-                            CreatedAt = new DateTime(2025, 5, 9, 9, 54, 42, 601, DateTimeKind.Utc).AddTicks(1188),
-                            Text = "Comentariu de la user 4 pentru știrea 2."
+                            Comment_NewsId = 1,
+                            Comment_UsersId = 10,
+                            CreatedAt = new DateTime(2025, 6, 1, 10, 0, 6, 817, DateTimeKind.Utc).AddTicks(4121),
+                            Text = "Ne vedem pe stadion! Vom fi mereu în spatele vostru, orice ar fi!"
                         },
                         new
                         {
                             Id = 10,
-                            Comment_NewsId = 2,
-                            Comment_UsersId = 5,
-                            CreatedAt = new DateTime(2025, 5, 9, 9, 54, 42, 601, DateTimeKind.Utc).AddTicks(1189),
-                            Text = "Comentariu de la user 5 pentru știrea 2."
+                            Comment_NewsId = 1,
+                            Comment_UsersId = 11,
+                            CreatedAt = new DateTime(2025, 6, 1, 10, 0, 6, 817, DateTimeKind.Utc).AddTicks(4122),
+                            Text = "Felicitări întregului staff! Muncă, pasiune și dedicare – doar așa vom ajunge departe!"
                         },
                         new
                         {
                             Id = 11,
-                            Comment_NewsId = 3,
-                            Comment_UsersId = 6,
-                            CreatedAt = new DateTime(2025, 5, 9, 9, 54, 42, 601, DateTimeKind.Utc).AddTicks(1190),
-                            Text = "Comentariu de la user 6 pentru știrea 3."
+                            Comment_NewsId = 2,
+                            Comment_UsersId = 12,
+                            CreatedAt = new DateTime(2025, 6, 1, 10, 0, 6, 817, DateTimeKind.Utc).AddTicks(4133),
+                            Text = "Mult succes băieților din U21! Abia aștept să văd tineri noi pe teren."
                         },
                         new
                         {
                             Id = 12,
-                            Comment_NewsId = 3,
-                            Comment_UsersId = 2,
-                            CreatedAt = new DateTime(2025, 5, 9, 9, 54, 42, 601, DateTimeKind.Utc).AddTicks(1191),
-                            Text = "Comentariu de la user 2 pentru știrea 3."
+                            Comment_NewsId = 2,
+                            Comment_UsersId = 13,
+                            CreatedAt = new DateTime(2025, 6, 1, 10, 0, 6, 817, DateTimeKind.Utc).AddTicks(4134),
+                            Text = "Bravo, Unirea! E important să investiți în tineret."
                         },
                         new
                         {
                             Id = 13,
-                            Comment_NewsId = 3,
-                            Comment_UsersId = 11,
-                            CreatedAt = new DateTime(2025, 5, 9, 9, 54, 42, 601, DateTimeKind.Utc).AddTicks(1191),
-                            Text = "Comentariu de la user 11 pentru știrea 3."
+                            Comment_NewsId = 2,
+                            Comment_UsersId = 14,
+                            CreatedAt = new DateTime(2025, 6, 1, 10, 0, 6, 817, DateTimeKind.Utc).AddTicks(4135),
+                            Text = "Forță, U21! Aveți toată susținerea noastră, haideți să arătați ce puteți!"
                         },
                         new
                         {
                             Id = 14,
-                            Comment_NewsId = 3,
-                            Comment_UsersId = 8,
-                            CreatedAt = new DateTime(2025, 5, 9, 9, 54, 42, 601, DateTimeKind.Utc).AddTicks(1192),
-                            Text = "Comentariu de la user 8 pentru știrea 3."
+                            Comment_NewsId = 2,
+                            Comment_UsersId = 15,
+                            CreatedAt = new DateTime(2025, 6, 1, 10, 0, 6, 817, DateTimeKind.Utc).AddTicks(4136),
+                            Text = "Felicitări staff-ului pentru încrederea oferită tinerilor!"
                         },
                         new
                         {
                             Id = 15,
-                            Comment_NewsId = 3,
-                            Comment_UsersId = 9,
-                            CreatedAt = new DateTime(2025, 5, 9, 9, 54, 42, 601, DateTimeKind.Utc).AddTicks(1193),
-                            Text = "Comentariu de la user 9 pentru știrea 3."
+                            Comment_NewsId = 2,
+                            Comment_UsersId = 16,
+                            CreatedAt = new DateTime(2025, 6, 1, 10, 0, 6, 817, DateTimeKind.Utc).AddTicks(4137),
+                            Text = "Este o șansă mare pentru voi. Luptați până la capăt!"
                         },
                         new
                         {
                             Id = 16,
-                            Comment_NewsId = 4,
-                            Comment_UsersId = 2,
-                            CreatedAt = new DateTime(2025, 5, 9, 9, 54, 42, 601, DateTimeKind.Utc).AddTicks(1193),
-                            Text = "Comentariu de la user 2 pentru știrea 4."
+                            Comment_NewsId = 2,
+                            Comment_UsersId = 17,
+                            CreatedAt = new DateTime(2025, 6, 1, 10, 0, 6, 817, DateTimeKind.Utc).AddTicks(4139),
+                            Text = "Hai, Unirea U21! Viitorul începe cu voi!"
                         },
                         new
                         {
                             Id = 17,
-                            Comment_NewsId = 4,
-                            Comment_UsersId = 10,
-                            CreatedAt = new DateTime(2025, 5, 9, 9, 54, 42, 601, DateTimeKind.Utc).AddTicks(1194),
-                            Text = "Comentariu de la user 10 pentru știrea 4."
+                            Comment_NewsId = 2,
+                            Comment_UsersId = 18,
+                            CreatedAt = new DateTime(2025, 6, 1, 10, 0, 6, 817, DateTimeKind.Utc).AddTicks(4140),
+                            Text = "Sper să vedem cât mai mulți dintre voi în echipa mare!"
                         },
                         new
                         {
                             Id = 18,
-                            Comment_NewsId = 4,
-                            Comment_UsersId = 1,
-                            CreatedAt = new DateTime(2025, 5, 9, 9, 54, 42, 601, DateTimeKind.Utc).AddTicks(1195),
-                            Text = "Comentariu de la user 1 pentru știrea 4."
+                            Comment_NewsId = 2,
+                            Comment_UsersId = 19,
+                            CreatedAt = new DateTime(2025, 6, 1, 10, 0, 6, 817, DateTimeKind.Utc).AddTicks(4141),
+                            Text = "Este important să creștem talente locale. Mult succes!"
                         },
                         new
                         {
                             Id = 19,
-                            Comment_NewsId = 4,
-                            Comment_UsersId = 7,
-                            CreatedAt = new DateTime(2025, 5, 9, 9, 54, 42, 601, DateTimeKind.Utc).AddTicks(1195),
-                            Text = "Comentariu de la user 7 pentru știrea 4."
+                            Comment_NewsId = 2,
+                            Comment_UsersId = 20,
+                            CreatedAt = new DateTime(2025, 6, 1, 10, 0, 6, 817, DateTimeKind.Utc).AddTicks(4142),
+                            Text = "Fiecare meci e o experiență nouă. Dați totul pe teren!"
                         },
                         new
                         {
                             Id = 20,
-                            Comment_NewsId = 4,
-                            Comment_UsersId = 8,
-                            CreatedAt = new DateTime(2025, 5, 9, 9, 54, 42, 601, DateTimeKind.Utc).AddTicks(1196),
-                            Text = "Comentariu de la user 8 pentru știrea 4."
+                            Comment_NewsId = 2,
+                            Comment_UsersId = 21,
+                            CreatedAt = new DateTime(2025, 6, 1, 10, 0, 6, 817, DateTimeKind.Utc).AddTicks(4144),
+                            Text = "Vă țin pumnii la fiecare etapă! Hai, băieții!"
                         },
                         new
                         {
                             Id = 21,
-                            Comment_NewsId = 5,
-                            Comment_UsersId = 4,
-                            CreatedAt = new DateTime(2025, 5, 9, 9, 54, 42, 601, DateTimeKind.Utc).AddTicks(1197),
-                            Text = "Comentariu de la user 4 pentru știrea 5."
+                            Comment_NewsId = 3,
+                            Comment_UsersId = 22,
+                            CreatedAt = new DateTime(2025, 6, 1, 10, 0, 6, 817, DateTimeKind.Utc).AddTicks(4154),
+                            Text = "Felicitări micilor Uniriști! Sunteți viitorul clubului!"
                         },
                         new
                         {
                             Id = 22,
-                            Comment_NewsId = 5,
-                            Comment_UsersId = 9,
-                            CreatedAt = new DateTime(2025, 5, 9, 9, 54, 42, 601, DateTimeKind.Utc).AddTicks(1197),
-                            Text = "Comentariu de la user 9 pentru știrea 5."
+                            Comment_NewsId = 3,
+                            Comment_UsersId = 23,
+                            CreatedAt = new DateTime(2025, 6, 1, 10, 0, 6, 817, DateTimeKind.Utc).AddTicks(4155),
+                            Text = "Este minunat să vedem atât de mulți copii talentați la Unirea!"
                         },
                         new
                         {
                             Id = 23,
-                            Comment_NewsId = 5,
-                            Comment_UsersId = 8,
-                            CreatedAt = new DateTime(2025, 5, 9, 9, 54, 42, 601, DateTimeKind.Utc).AddTicks(1198),
-                            Text = "Comentariu de la user 8 pentru știrea 5."
+                            Comment_NewsId = 3,
+                            Comment_UsersId = 24,
+                            CreatedAt = new DateTime(2025, 6, 1, 10, 0, 6, 817, DateTimeKind.Utc).AddTicks(4157),
+                            Text = "Mult succes în noul sezon! Să creșteți frumos și cu ambiție!"
                         },
                         new
                         {
                             Id = 24,
-                            Comment_NewsId = 5,
-                            Comment_UsersId = 11,
-                            CreatedAt = new DateTime(2025, 5, 9, 9, 54, 42, 601, DateTimeKind.Utc).AddTicks(1199),
-                            Text = "Comentariu de la user 11 pentru știrea 5."
+                            Comment_NewsId = 3,
+                            Comment_UsersId = 25,
+                            CreatedAt = new DateTime(2025, 6, 1, 10, 0, 6, 817, DateTimeKind.Utc).AddTicks(4158),
+                            Text = "Bravo, FC Unirea Youth! Sunt sigur că veți impresiona!"
                         },
                         new
                         {
                             Id = 25,
-                            Comment_NewsId = 5,
-                            Comment_UsersId = 10,
-                            CreatedAt = new DateTime(2025, 5, 9, 9, 54, 42, 601, DateTimeKind.Utc).AddTicks(1199),
-                            Text = "Comentariu de la user 10 pentru știrea 5."
+                            Comment_NewsId = 3,
+                            Comment_UsersId = 26,
+                            CreatedAt = new DateTime(2025, 6, 1, 10, 0, 6, 817, DateTimeKind.Utc).AddTicks(4159),
+                            Text = "Susținerea suporterilor e mereu cu voi, indiferent de vârstă!"
                         },
                         new
                         {
                             Id = 26,
-                            Comment_NewsId = 6,
-                            Comment_UsersId = 2,
-                            CreatedAt = new DateTime(2025, 5, 9, 9, 54, 42, 601, DateTimeKind.Utc).AddTicks(1200),
-                            Text = "Comentariu de la user 2 pentru știrea 6."
+                            Comment_NewsId = 3,
+                            Comment_UsersId = 27,
+                            CreatedAt = new DateTime(2025, 6, 1, 10, 0, 6, 817, DateTimeKind.Utc).AddTicks(4160),
+                            Text = "Aștept să văd următoarea generație pe terenul mare!"
                         },
                         new
                         {
                             Id = 27,
-                            Comment_NewsId = 6,
-                            Comment_UsersId = 7,
-                            CreatedAt = new DateTime(2025, 5, 9, 9, 54, 42, 601, DateTimeKind.Utc).AddTicks(1200),
-                            Text = "Comentariu de la user 7 pentru știrea 6."
+                            Comment_NewsId = 3,
+                            Comment_UsersId = 28,
+                            CreatedAt = new DateTime(2025, 6, 1, 10, 0, 6, 817, DateTimeKind.Utc).AddTicks(4161),
+                            Text = "Este foarte important să investiți în copii! Multă baftă!"
                         },
                         new
                         {
                             Id = 28,
-                            Comment_NewsId = 6,
-                            Comment_UsersId = 8,
-                            CreatedAt = new DateTime(2025, 5, 9, 9, 54, 42, 601, DateTimeKind.Utc).AddTicks(1201),
-                            Text = "Comentariu de la user 8 pentru știrea 6."
+                            Comment_NewsId = 3,
+                            Comment_UsersId = 29,
+                            CreatedAt = new DateTime(2025, 6, 1, 10, 0, 6, 817, DateTimeKind.Utc).AddTicks(4162),
+                            Text = "Bucuria și pasiunea voastră pentru fotbal ne inspiră pe toți!"
                         },
                         new
                         {
                             Id = 29,
-                            Comment_NewsId = 6,
-                            Comment_UsersId = 5,
-                            CreatedAt = new DateTime(2025, 5, 9, 9, 54, 42, 601, DateTimeKind.Utc).AddTicks(1202),
-                            Text = "Comentariu de la user 5 pentru știrea 6."
+                            Comment_NewsId = 3,
+                            Comment_UsersId = 30,
+                            CreatedAt = new DateTime(2025, 6, 1, 10, 0, 6, 817, DateTimeKind.Utc).AddTicks(4163),
+                            Text = "Să aveți parte de un sezon plin de goluri și zâmbete!"
                         },
                         new
                         {
                             Id = 30,
-                            Comment_NewsId = 6,
-                            Comment_UsersId = 11,
-                            CreatedAt = new DateTime(2025, 5, 9, 9, 54, 42, 601, DateTimeKind.Utc).AddTicks(1202),
-                            Text = "Comentariu de la user 11 pentru știrea 6."
+                            Comment_NewsId = 3,
+                            Comment_UsersId = 31,
+                            CreatedAt = new DateTime(2025, 6, 1, 10, 0, 6, 817, DateTimeKind.Utc).AddTicks(4165),
+                            Text = "Felicitări și succes! Sper să vă vedem în curând la echipa mare!"
                         },
                         new
                         {
                             Id = 31,
-                            Comment_NewsId = 7,
-                            Comment_UsersId = 4,
-                            CreatedAt = new DateTime(2025, 5, 9, 9, 54, 42, 601, DateTimeKind.Utc).AddTicks(1203),
-                            Text = "Comentariu de la user 4 pentru știrea 7."
+                            Comment_NewsId = 4,
+                            Comment_UsersId = 2,
+                            CreatedAt = new DateTime(2025, 6, 1, 10, 0, 6, 817, DateTimeKind.Utc).AddTicks(4173),
+                            Text = "Respect pentru întreaga istorie a clubului! Hai Unirea!"
                         },
                         new
                         {
                             Id = 32,
-                            Comment_NewsId = 7,
-                            Comment_UsersId = 8,
-                            CreatedAt = new DateTime(2025, 5, 9, 9, 54, 42, 601, DateTimeKind.Utc).AddTicks(1203),
-                            Text = "Comentariu de la user 8 pentru știrea 7."
+                            Comment_NewsId = 4,
+                            Comment_UsersId = 3,
+                            CreatedAt = new DateTime(2025, 6, 1, 10, 0, 6, 817, DateTimeKind.Utc).AddTicks(4213),
+                            Text = "Felicitări pentru toate promovările și pentru ce ați construit!"
                         },
                         new
                         {
                             Id = 33,
-                            Comment_NewsId = 7,
-                            Comment_UsersId = 3,
-                            CreatedAt = new DateTime(2025, 5, 9, 9, 54, 42, 601, DateTimeKind.Utc).AddTicks(1204),
-                            Text = "Comentariu de la user 3 pentru știrea 7."
+                            Comment_NewsId = 4,
+                            Comment_UsersId = 4,
+                            CreatedAt = new DateTime(2025, 6, 1, 10, 0, 6, 817, DateTimeKind.Utc).AddTicks(4214),
+                            Text = "Antrenorul Petrica Florea a făcut o treabă excelentă. Mult succes în continuare!"
                         },
                         new
                         {
                             Id = 34,
-                            Comment_NewsId = 7,
-                            Comment_UsersId = 6,
-                            CreatedAt = new DateTime(2025, 5, 9, 9, 54, 42, 601, DateTimeKind.Utc).AddTicks(1205),
-                            Text = "Comentariu de la user 6 pentru știrea 7."
+                            Comment_NewsId = 4,
+                            Comment_UsersId = 5,
+                            CreatedAt = new DateTime(2025, 6, 1, 10, 0, 6, 817, DateTimeKind.Utc).AddTicks(4215),
+                            Text = "FC Unirea este un exemplu pentru fotbalul românesc!"
                         },
                         new
                         {
                             Id = 35,
-                            Comment_NewsId = 7,
-                            Comment_UsersId = 11,
-                            CreatedAt = new DateTime(2025, 5, 9, 9, 54, 42, 601, DateTimeKind.Utc).AddTicks(1206),
-                            Text = "Comentariu de la user 11 pentru știrea 7."
+                            Comment_NewsId = 4,
+                            Comment_UsersId = 6,
+                            CreatedAt = new DateTime(2025, 6, 1, 10, 0, 6, 817, DateTimeKind.Utc).AddTicks(4216),
+                            Text = "Mă bucur că investește în tineri și promovează valorile locale."
                         },
                         new
                         {
                             Id = 36,
-                            Comment_NewsId = 8,
-                            Comment_UsersId = 4,
-                            CreatedAt = new DateTime(2025, 5, 9, 9, 54, 42, 601, DateTimeKind.Utc).AddTicks(1206),
-                            Text = "Comentariu de la user 4 pentru știrea 8."
+                            Comment_NewsId = 4,
+                            Comment_UsersId = 7,
+                            CreatedAt = new DateTime(2025, 6, 1, 10, 0, 6, 817, DateTimeKind.Utc).AddTicks(4218),
+                            Text = "Succes pe mai departe, Petrica Florea și întreaga echipă!"
                         },
                         new
                         {
                             Id = 37,
-                            Comment_NewsId = 8,
-                            Comment_UsersId = 2,
-                            CreatedAt = new DateTime(2025, 5, 9, 9, 54, 42, 601, DateTimeKind.Utc).AddTicks(1207),
-                            Text = "Comentariu de la user 2 pentru știrea 8."
+                            Comment_NewsId = 4,
+                            Comment_UsersId = 8,
+                            CreatedAt = new DateTime(2025, 6, 1, 10, 0, 6, 817, DateTimeKind.Utc).AddTicks(4219),
+                            Text = "Felicitări pentru tot ce ați realizat de la înființare până azi!"
                         },
                         new
                         {
                             Id = 38,
-                            Comment_NewsId = 8,
+                            Comment_NewsId = 4,
                             Comment_UsersId = 9,
-                            CreatedAt = new DateTime(2025, 5, 9, 9, 54, 42, 601, DateTimeKind.Utc).AddTicks(1208),
-                            Text = "Comentariu de la user 9 pentru știrea 8."
+                            CreatedAt = new DateTime(2025, 6, 1, 10, 0, 6, 817, DateTimeKind.Utc).AddTicks(4220),
+                            Text = "Echipa asta chiar merită să fie susținută, se vede progresul an de an."
                         },
                         new
                         {
                             Id = 39,
-                            Comment_NewsId = 8,
-                            Comment_UsersId = 11,
-                            CreatedAt = new DateTime(2025, 5, 9, 9, 54, 42, 601, DateTimeKind.Utc).AddTicks(1208),
-                            Text = "Comentariu de la user 11 pentru știrea 8."
+                            Comment_NewsId = 4,
+                            Comment_UsersId = 10,
+                            CreatedAt = new DateTime(2025, 6, 1, 10, 0, 6, 817, DateTimeKind.Utc).AddTicks(4221),
+                            Text = "Hai Unirea! Să continuați să ne faceți mândri!"
                         },
                         new
                         {
                             Id = 40,
-                            Comment_NewsId = 8,
-                            Comment_UsersId = 7,
-                            CreatedAt = new DateTime(2025, 5, 9, 9, 54, 42, 601, DateTimeKind.Utc).AddTicks(1209),
-                            Text = "Comentariu de la user 7 pentru știrea 8."
+                            Comment_NewsId = 4,
+                            Comment_UsersId = 11,
+                            CreatedAt = new DateTime(2025, 6, 1, 10, 0, 6, 817, DateTimeKind.Utc).AddTicks(4223),
+                            Text = "Toată stima pentru staff și pentru antrenorul nostru! Înainte, Unirea!"
                         },
                         new
                         {
                             Id = 41,
-                            Comment_NewsId = 9,
-                            Comment_UsersId = 1,
-                            CreatedAt = new DateTime(2025, 5, 9, 9, 54, 42, 601, DateTimeKind.Utc).AddTicks(1209),
-                            Text = "Comentariu de la user 1 pentru știrea 9."
+                            Comment_NewsId = 5,
+                            Comment_UsersId = 12,
+                            CreatedAt = new DateTime(2025, 6, 1, 10, 0, 6, 817, DateTimeKind.Utc).AddTicks(4232),
+                            Text = "Felicitări pentru tot ce faceți pentru tinerii jucători!"
                         },
                         new
                         {
                             Id = 42,
-                            Comment_NewsId = 9,
-                            Comment_UsersId = 2,
-                            CreatedAt = new DateTime(2025, 5, 9, 9, 54, 42, 601, DateTimeKind.Utc).AddTicks(1210),
-                            Text = "Comentariu de la user 2 pentru știrea 9."
+                            Comment_NewsId = 5,
+                            Comment_UsersId = 13,
+                            CreatedAt = new DateTime(2025, 6, 1, 10, 0, 6, 817, DateTimeKind.Utc).AddTicks(4233),
+                            Text = "Strategia clubului dă rezultate. Mulți dintre favoriții mei au venit de aici!"
                         },
                         new
                         {
                             Id = 43,
-                            Comment_NewsId = 9,
-                            Comment_UsersId = 7,
-                            CreatedAt = new DateTime(2025, 5, 9, 9, 54, 42, 601, DateTimeKind.Utc).AddTicks(1211),
-                            Text = "Comentariu de la user 7 pentru știrea 9."
+                            Comment_NewsId = 5,
+                            Comment_UsersId = 14,
+                            CreatedAt = new DateTime(2025, 6, 1, 10, 0, 6, 817, DateTimeKind.Utc).AddTicks(4235),
+                            Text = "Bravo, Mihai Olaru! Se vede implicarea și profesionalismul echipei."
                         },
                         new
                         {
                             Id = 44,
-                            Comment_NewsId = 9,
-                            Comment_UsersId = 5,
-                            CreatedAt = new DateTime(2025, 5, 9, 9, 54, 42, 601, DateTimeKind.Utc).AddTicks(1211),
-                            Text = "Comentariu de la user 5 pentru știrea 9."
+                            Comment_NewsId = 5,
+                            Comment_UsersId = 15,
+                            CreatedAt = new DateTime(2025, 6, 1, 10, 0, 6, 817, DateTimeKind.Utc).AddTicks(4236),
+                            Text = "Îmi place că se pune accent pe disciplină și joc de echipă."
                         },
                         new
                         {
                             Id = 45,
-                            Comment_NewsId = 9,
-                            Comment_UsersId = 6,
-                            CreatedAt = new DateTime(2025, 5, 9, 9, 54, 42, 601, DateTimeKind.Utc).AddTicks(1235),
-                            Text = "Comentariu de la user 6 pentru știrea 9."
+                            Comment_NewsId = 5,
+                            Comment_UsersId = 16,
+                            CreatedAt = new DateTime(2025, 6, 1, 10, 0, 6, 817, DateTimeKind.Utc).AddTicks(4237),
+                            Text = "Este foarte importantă această legătură între juniori și seniori!"
                         },
                         new
                         {
                             Id = 46,
-                            Comment_NewsId = 10,
-                            Comment_UsersId = 2,
-                            CreatedAt = new DateTime(2025, 5, 9, 9, 54, 42, 601, DateTimeKind.Utc).AddTicks(1236),
-                            Text = "Comentariu de la user 2 pentru știrea 10."
+                            Comment_NewsId = 5,
+                            Comment_UsersId = 17,
+                            CreatedAt = new DateTime(2025, 6, 1, 10, 0, 6, 817, DateTimeKind.Utc).AddTicks(4238),
+                            Text = "Succes în noul sezon! Sunt sigur că veți promova noi talente."
                         },
                         new
                         {
                             Id = 47,
-                            Comment_NewsId = 10,
-                            Comment_UsersId = 1,
-                            CreatedAt = new DateTime(2025, 5, 9, 9, 54, 42, 601, DateTimeKind.Utc).AddTicks(1236),
-                            Text = "Comentariu de la user 1 pentru știrea 10."
+                            Comment_NewsId = 5,
+                            Comment_UsersId = 18,
+                            CreatedAt = new DateTime(2025, 6, 1, 10, 0, 6, 817, DateTimeKind.Utc).AddTicks(4239),
+                            Text = "FC Unirea U21 a devenit o adevărată pepinieră de jucători."
                         },
                         new
                         {
                             Id = 48,
-                            Comment_NewsId = 10,
-                            Comment_UsersId = 11,
-                            CreatedAt = new DateTime(2025, 5, 9, 9, 54, 42, 601, DateTimeKind.Utc).AddTicks(1237),
-                            Text = "Comentariu de la user 11 pentru știrea 10."
+                            Comment_NewsId = 5,
+                            Comment_UsersId = 19,
+                            CreatedAt = new DateTime(2025, 6, 1, 10, 0, 6, 817, DateTimeKind.Utc).AddTicks(4240),
+                            Text = "Felicitări întregului staff pentru munca depusă!"
                         },
                         new
                         {
                             Id = 49,
-                            Comment_NewsId = 10,
-                            Comment_UsersId = 7,
-                            CreatedAt = new DateTime(2025, 5, 9, 9, 54, 42, 601, DateTimeKind.Utc).AddTicks(1237),
-                            Text = "Comentariu de la user 7 pentru știrea 10."
+                            Comment_NewsId = 5,
+                            Comment_UsersId = 20,
+                            CreatedAt = new DateTime(2025, 6, 1, 10, 0, 6, 817, DateTimeKind.Utc).AddTicks(4241),
+                            Text = "Am încredere că veți duce mai departe tradiția clubului!"
                         },
                         new
                         {
                             Id = 50,
-                            Comment_NewsId = 10,
-                            Comment_UsersId = 3,
-                            CreatedAt = new DateTime(2025, 5, 9, 9, 54, 42, 601, DateTimeKind.Utc).AddTicks(1238),
-                            Text = "Comentariu de la user 3 pentru știrea 10."
+                            Comment_NewsId = 5,
+                            Comment_UsersId = 21,
+                            CreatedAt = new DateTime(2025, 6, 1, 10, 0, 6, 817, DateTimeKind.Utc).AddTicks(4243),
+                            Text = "Hai Unirea U21, să aveți un sezon excelent!"
                         },
                         new
                         {
                             Id = 51,
-                            Comment_NewsId = 11,
-                            Comment_UsersId = 2,
-                            CreatedAt = new DateTime(2025, 5, 9, 9, 54, 42, 601, DateTimeKind.Utc).AddTicks(1239),
-                            Text = "Comentariu de la user 2 pentru știrea 11."
+                            Comment_NewsId = 6,
+                            Comment_UsersId = 22,
+                            CreatedAt = new DateTime(2025, 6, 1, 10, 0, 6, 817, DateTimeKind.Utc).AddTicks(4252),
+                            Text = "Felicitări pentru investiția în copii și pentru tot ce faceți la nivel de academie!"
                         },
                         new
                         {
                             Id = 52,
-                            Comment_NewsId = 11,
-                            Comment_UsersId = 1,
-                            CreatedAt = new DateTime(2025, 5, 9, 9, 54, 42, 601, DateTimeKind.Utc).AddTicks(1239),
-                            Text = "Comentariu de la user 1 pentru știrea 11."
+                            Comment_NewsId = 6,
+                            Comment_UsersId = 23,
+                            CreatedAt = new DateTime(2025, 6, 1, 10, 0, 6, 817, DateTimeKind.Utc).AddTicks(4253),
+                            Text = "Este minunat să vedem o academie care chiar scoate talente!"
                         },
                         new
                         {
                             Id = 53,
-                            Comment_NewsId = 11,
-                            Comment_UsersId = 7,
-                            CreatedAt = new DateTime(2025, 5, 9, 9, 54, 42, 601, DateTimeKind.Utc).AddTicks(1240),
-                            Text = "Comentariu de la user 7 pentru știrea 11."
+                            Comment_NewsId = 6,
+                            Comment_UsersId = 24,
+                            CreatedAt = new DateTime(2025, 6, 1, 10, 0, 6, 817, DateTimeKind.Utc).AddTicks(4254),
+                            Text = "Respect pentru Nica Cercel și pentru toți antrenorii de la Youth."
                         },
                         new
                         {
                             Id = 54,
-                            Comment_NewsId = 11,
-                            Comment_UsersId = 11,
-                            CreatedAt = new DateTime(2025, 5, 9, 9, 54, 42, 601, DateTimeKind.Utc).AddTicks(1240),
-                            Text = "Comentariu de la user 11 pentru știrea 11."
+                            Comment_NewsId = 6,
+                            Comment_UsersId = 25,
+                            CreatedAt = new DateTime(2025, 6, 1, 10, 0, 6, 817, DateTimeKind.Utc).AddTicks(4255),
+                            Text = "Unirea Youth este un exemplu pentru multe cluburi din țară."
                         },
                         new
                         {
                             Id = 55,
-                            Comment_NewsId = 11,
-                            Comment_UsersId = 5,
-                            CreatedAt = new DateTime(2025, 5, 9, 9, 54, 42, 601, DateTimeKind.Utc).AddTicks(1241),
-                            Text = "Comentariu de la user 5 pentru știrea 11."
+                            Comment_NewsId = 6,
+                            Comment_UsersId = 26,
+                            CreatedAt = new DateTime(2025, 6, 1, 10, 0, 6, 817, DateTimeKind.Utc).AddTicks(4256),
+                            Text = "Mă bucur să văd accent pe educație și respect, nu doar pe performanță."
                         },
                         new
                         {
                             Id = 56,
-                            Comment_NewsId = 12,
-                            Comment_UsersId = 9,
-                            CreatedAt = new DateTime(2025, 5, 9, 9, 54, 42, 601, DateTimeKind.Utc).AddTicks(1242),
-                            Text = "Comentariu de la user 9 pentru știrea 12."
+                            Comment_NewsId = 6,
+                            Comment_UsersId = 27,
+                            CreatedAt = new DateTime(2025, 6, 1, 10, 0, 6, 817, DateTimeKind.Utc).AddTicks(4258),
+                            Text = "Hai Unirea Youth! Să creșteți mari și să ajungeți cât mai sus!"
                         },
                         new
                         {
                             Id = 57,
-                            Comment_NewsId = 12,
-                            Comment_UsersId = 3,
-                            CreatedAt = new DateTime(2025, 5, 9, 9, 54, 42, 601, DateTimeKind.Utc).AddTicks(1242),
-                            Text = "Comentariu de la user 3 pentru știrea 12."
+                            Comment_NewsId = 6,
+                            Comment_UsersId = 28,
+                            CreatedAt = new DateTime(2025, 6, 1, 10, 0, 6, 817, DateTimeKind.Utc).AddTicks(4259),
+                            Text = "Bravo tuturor pentru rezultatele obținute la nivel de juniori!"
                         },
                         new
                         {
                             Id = 58,
-                            Comment_NewsId = 12,
-                            Comment_UsersId = 11,
-                            CreatedAt = new DateTime(2025, 5, 9, 9, 54, 42, 601, DateTimeKind.Utc).AddTicks(1243),
-                            Text = "Comentariu de la user 11 pentru știrea 12."
+                            Comment_NewsId = 6,
+                            Comment_UsersId = 29,
+                            CreatedAt = new DateTime(2025, 6, 1, 10, 0, 6, 817, DateTimeKind.Utc).AddTicks(4260),
+                            Text = "Sprijinul pentru copii și adolescenți face diferența pe termen lung."
                         },
                         new
                         {
                             Id = 59,
-                            Comment_NewsId = 12,
-                            Comment_UsersId = 2,
-                            CreatedAt = new DateTime(2025, 5, 9, 9, 54, 42, 601, DateTimeKind.Utc).AddTicks(1243),
-                            Text = "Comentariu de la user 2 pentru știrea 12."
+                            Comment_NewsId = 6,
+                            Comment_UsersId = 30,
+                            CreatedAt = new DateTime(2025, 6, 1, 10, 0, 6, 817, DateTimeKind.Utc).AddTicks(4261),
+                            Text = "Am încredere că Unirea Youth va produce generații de campioni."
                         },
                         new
                         {
                             Id = 60,
-                            Comment_NewsId = 12,
-                            Comment_UsersId = 7,
-                            CreatedAt = new DateTime(2025, 5, 9, 9, 54, 42, 601, DateTimeKind.Utc).AddTicks(1244),
-                            Text = "Comentariu de la user 7 pentru știrea 12."
+                            Comment_NewsId = 6,
+                            Comment_UsersId = 31,
+                            CreatedAt = new DateTime(2025, 6, 1, 10, 0, 6, 817, DateTimeKind.Utc).AddTicks(4263),
+                            Text = "Felicitări Nica Cercel pentru munca extraordinară din academie!"
                         },
                         new
                         {
                             Id = 61,
-                            Comment_NewsId = 13,
-                            Comment_UsersId = 1,
-                            CreatedAt = new DateTime(2025, 5, 9, 9, 54, 42, 601, DateTimeKind.Utc).AddTicks(1245),
-                            Text = "Comentariu de la user 1 pentru știrea 13."
+                            Comment_NewsId = 7,
+                            Comment_UsersId = 2,
+                            CreatedAt = new DateTime(2025, 6, 1, 10, 0, 6, 817, DateTimeKind.Utc).AddTicks(4270),
+                            Text = "Lot foarte echilibrat, avem șanse mari la titlu anul acesta!"
                         },
                         new
                         {
                             Id = 62,
-                            Comment_NewsId = 13,
-                            Comment_UsersId = 10,
-                            CreatedAt = new DateTime(2025, 5, 9, 9, 54, 42, 601, DateTimeKind.Utc).AddTicks(1245),
-                            Text = "Comentariu de la user 10 pentru știrea 13."
+                            Comment_NewsId = 7,
+                            Comment_UsersId = 3,
+                            CreatedAt = new DateTime(2025, 6, 1, 10, 0, 6, 817, DateTimeKind.Utc).AddTicks(4272),
+                            Text = "Mă bucur să văd și mulți tineri promovați în echipă!"
                         },
                         new
                         {
                             Id = 63,
-                            Comment_NewsId = 13,
-                            Comment_UsersId = 9,
-                            CreatedAt = new DateTime(2025, 5, 9, 9, 54, 42, 601, DateTimeKind.Utc).AddTicks(1246),
-                            Text = "Comentariu de la user 9 pentru știrea 13."
+                            Comment_NewsId = 7,
+                            Comment_UsersId = 4,
+                            CreatedAt = new DateTime(2025, 6, 1, 10, 0, 6, 817, DateTimeKind.Utc).AddTicks(4273),
+                            Text = "Forza Unirea! Fundașii noștri sunt printre cei mai buni din campionat."
                         },
                         new
                         {
                             Id = 64,
-                            Comment_NewsId = 13,
-                            Comment_UsersId = 3,
-                            CreatedAt = new DateTime(2025, 5, 9, 9, 54, 42, 601, DateTimeKind.Utc).AddTicks(1246),
-                            Text = "Comentariu de la user 3 pentru știrea 13."
+                            Comment_NewsId = 7,
+                            Comment_UsersId = 5,
+                            CreatedAt = new DateTime(2025, 6, 1, 10, 0, 6, 817, DateTimeKind.Utc).AddTicks(4274),
+                            Text = "Portarii au experiență și pot aduce multe puncte!"
                         },
                         new
                         {
                             Id = 65,
-                            Comment_NewsId = 13,
-                            Comment_UsersId = 11,
-                            CreatedAt = new DateTime(2025, 5, 9, 9, 54, 42, 601, DateTimeKind.Utc).AddTicks(1247),
-                            Text = "Comentariu de la user 11 pentru știrea 13."
+                            Comment_NewsId = 7,
+                            Comment_UsersId = 6,
+                            CreatedAt = new DateTime(2025, 6, 1, 10, 0, 6, 817, DateTimeKind.Utc).AddTicks(4275),
+                            Text = "Felicitări staff-ului pentru selecție! Arată foarte bine lotul."
                         },
                         new
                         {
                             Id = 66,
-                            Comment_NewsId = 14,
-                            Comment_UsersId = 3,
-                            CreatedAt = new DateTime(2025, 5, 9, 9, 54, 42, 601, DateTimeKind.Utc).AddTicks(1248),
-                            Text = "Comentariu de la user 3 pentru știrea 14."
+                            Comment_NewsId = 7,
+                            Comment_UsersId = 7,
+                            CreatedAt = new DateTime(2025, 6, 1, 10, 0, 6, 817, DateTimeKind.Utc).AddTicks(4276),
+                            Text = "Sper să vedem cât mai multe goluri de la atacanți!"
                         },
                         new
                         {
                             Id = 67,
-                            Comment_NewsId = 14,
-                            Comment_UsersId = 10,
-                            CreatedAt = new DateTime(2025, 5, 9, 9, 54, 42, 601, DateTimeKind.Utc).AddTicks(1249),
-                            Text = "Comentariu de la user 10 pentru știrea 14."
+                            Comment_NewsId = 7,
+                            Comment_UsersId = 8,
+                            CreatedAt = new DateTime(2025, 6, 1, 10, 0, 6, 817, DateTimeKind.Utc).AddTicks(4277),
+                            Text = "Mult succes echipei în noul sezon, vom fi mereu în tribune!"
                         },
                         new
                         {
                             Id = 68,
-                            Comment_NewsId = 14,
-                            Comment_UsersId = 1,
-                            CreatedAt = new DateTime(2025, 5, 9, 9, 54, 42, 601, DateTimeKind.Utc).AddTicks(1249),
-                            Text = "Comentariu de la user 1 pentru știrea 14."
+                            Comment_NewsId = 7,
+                            Comment_UsersId = 9,
+                            CreatedAt = new DateTime(2025, 6, 1, 10, 0, 6, 817, DateTimeKind.Utc).AddTicks(4278),
+                            Text = "Îmi place echilibrul între experiență și tinerețe."
                         },
                         new
                         {
                             Id = 69,
-                            Comment_NewsId = 14,
-                            Comment_UsersId = 11,
-                            CreatedAt = new DateTime(2025, 5, 9, 9, 54, 42, 601, DateTimeKind.Utc).AddTicks(1250),
-                            Text = "Comentariu de la user 11 pentru știrea 14."
+                            Comment_NewsId = 7,
+                            Comment_UsersId = 10,
+                            CreatedAt = new DateTime(2025, 6, 1, 10, 0, 6, 817, DateTimeKind.Utc).AddTicks(4279),
+                            Text = "Haideți băieți, să facem un sezon de neuitat!"
                         },
                         new
                         {
                             Id = 70,
-                            Comment_NewsId = 14,
-                            Comment_UsersId = 2,
-                            CreatedAt = new DateTime(2025, 5, 9, 9, 54, 42, 601, DateTimeKind.Utc).AddTicks(1251),
-                            Text = "Comentariu de la user 2 pentru știrea 14."
+                            Comment_NewsId = 7,
+                            Comment_UsersId = 11,
+                            CreatedAt = new DateTime(2025, 6, 1, 10, 0, 6, 817, DateTimeKind.Utc).AddTicks(4281),
+                            Text = "Bravo Unirea, arătați ca o echipă pregătită pentru orice!"
                         },
                         new
                         {
                             Id = 71,
-                            Comment_NewsId = 15,
-                            Comment_UsersId = 10,
-                            CreatedAt = new DateTime(2025, 5, 9, 9, 54, 42, 601, DateTimeKind.Utc).AddTicks(1251),
-                            Text = "Comentariu de la user 10 pentru știrea 15."
+                            Comment_NewsId = 8,
+                            Comment_UsersId = 12,
+                            CreatedAt = new DateTime(2025, 6, 1, 10, 0, 6, 817, DateTimeKind.Utc).AddTicks(4290),
+                            Text = "Lot promițător! Avem mulți tineri cu potențial în acest sezon."
                         },
                         new
                         {
                             Id = 72,
-                            Comment_NewsId = 15,
-                            Comment_UsersId = 3,
-                            CreatedAt = new DateTime(2025, 5, 9, 9, 54, 42, 601, DateTimeKind.Utc).AddTicks(1252),
-                            Text = "Comentariu de la user 3 pentru știrea 15."
+                            Comment_NewsId = 8,
+                            Comment_UsersId = 13,
+                            CreatedAt = new DateTime(2025, 6, 1, 10, 0, 6, 817, DateTimeKind.Utc).AddTicks(4291),
+                            Text = "Portarii sunt foarte tineri, abia aștept să-i văd la lucru!"
                         },
                         new
                         {
                             Id = 73,
-                            Comment_NewsId = 15,
-                            Comment_UsersId = 4,
-                            CreatedAt = new DateTime(2025, 5, 9, 9, 54, 42, 601, DateTimeKind.Utc).AddTicks(1252),
-                            Text = "Comentariu de la user 4 pentru știrea 15."
+                            Comment_NewsId = 8,
+                            Comment_UsersId = 14,
+                            CreatedAt = new DateTime(2025, 6, 1, 10, 0, 6, 817, DateTimeKind.Utc).AddTicks(4292),
+                            Text = "Fundașii noștri par foarte bine pregătiți. Hai, Unirea U21!"
                         },
                         new
                         {
                             Id = 74,
-                            Comment_NewsId = 15,
-                            Comment_UsersId = 9,
-                            CreatedAt = new DateTime(2025, 5, 9, 9, 54, 42, 601, DateTimeKind.Utc).AddTicks(1253),
-                            Text = "Comentariu de la user 9 pentru știrea 15."
+                            Comment_NewsId = 8,
+                            Comment_UsersId = 15,
+                            CreatedAt = new DateTime(2025, 6, 1, 10, 0, 6, 817, DateTimeKind.Utc).AddTicks(4293),
+                            Text = "Felicitări staff-ului pentru alegerea lotului, multă baftă!"
                         },
                         new
                         {
                             Id = 75,
-                            Comment_NewsId = 15,
+                            Comment_NewsId = 8,
+                            Comment_UsersId = 16,
+                            CreatedAt = new DateTime(2025, 6, 1, 10, 0, 6, 817, DateTimeKind.Utc).AddTicks(4294),
+                            Text = "Mijlocul arată echilibrat, cu jucători din generații diferite."
+                        },
+                        new
+                        {
+                            Id = 76,
+                            Comment_NewsId = 8,
+                            Comment_UsersId = 17,
+                            CreatedAt = new DateTime(2025, 6, 1, 10, 0, 6, 817, DateTimeKind.Utc).AddTicks(4296),
+                            Text = "Atacanții noștri sunt talentați, sper să înscrie cât mai mult!"
+                        },
+                        new
+                        {
+                            Id = 77,
+                            Comment_NewsId = 8,
+                            Comment_UsersId = 18,
+                            CreatedAt = new DateTime(2025, 6, 1, 10, 0, 6, 817, DateTimeKind.Utc).AddTicks(4297),
+                            Text = "Se vede accentul pus pe formarea tinerilor, bravo clubului!"
+                        },
+                        new
+                        {
+                            Id = 78,
+                            Comment_NewsId = 8,
+                            Comment_UsersId = 19,
+                            CreatedAt = new DateTime(2025, 6, 1, 10, 0, 6, 817, DateTimeKind.Utc).AddTicks(4298),
+                            Text = "Să avem un sezon plin de reușite și fără accidentări!"
+                        },
+                        new
+                        {
+                            Id = 79,
+                            Comment_NewsId = 8,
+                            Comment_UsersId = 20,
+                            CreatedAt = new DateTime(2025, 6, 1, 10, 0, 6, 817, DateTimeKind.Utc).AddTicks(4299),
+                            Text = "Hai Unirea U21, susținem viitorul echipei mari!"
+                        },
+                        new
+                        {
+                            Id = 80,
+                            Comment_NewsId = 8,
+                            Comment_UsersId = 21,
+                            CreatedAt = new DateTime(2025, 6, 1, 10, 0, 6, 817, DateTimeKind.Utc).AddTicks(4300),
+                            Text = "Mult succes tuturor băieților! Haideți să arătăm ce putem!"
+                        },
+                        new
+                        {
+                            Id = 81,
+                            Comment_NewsId = 9,
+                            Comment_UsersId = 22,
+                            CreatedAt = new DateTime(2025, 6, 1, 10, 0, 6, 817, DateTimeKind.Utc).AddTicks(4308),
+                            Text = "Felicitări tuturor copiilor și antrenorilor, să aveți un sezon minunat!"
+                        },
+                        new
+                        {
+                            Id = 82,
+                            Comment_NewsId = 9,
+                            Comment_UsersId = 23,
+                            CreatedAt = new DateTime(2025, 6, 1, 10, 0, 6, 817, DateTimeKind.Utc).AddTicks(4310),
+                            Text = "Lot numeros și diversificat, viitorul sună bine la Unirea!"
+                        },
+                        new
+                        {
+                            Id = 83,
+                            Comment_NewsId = 9,
+                            Comment_UsersId = 24,
+                            CreatedAt = new DateTime(2025, 6, 1, 10, 0, 6, 817, DateTimeKind.Utc).AddTicks(4311),
+                            Text = "Succes portărilor noștri cei mici! Să apere cu curaj poarta Unirii!"
+                        },
+                        new
+                        {
+                            Id = 84,
+                            Comment_NewsId = 9,
+                            Comment_UsersId = 25,
+                            CreatedAt = new DateTime(2025, 6, 1, 10, 0, 6, 817, DateTimeKind.Utc).AddTicks(4312),
+                            Text = "Mijlocașii sunt motorul echipei! Bravo, băieți!"
+                        },
+                        new
+                        {
+                            Id = 85,
+                            Comment_NewsId = 9,
+                            Comment_UsersId = 26,
+                            CreatedAt = new DateTime(2025, 6, 1, 10, 0, 6, 817, DateTimeKind.Utc).AddTicks(4313),
+                            Text = "Felicitări tuturor atacanților, să aveți un sezon plin de goluri!"
+                        },
+                        new
+                        {
+                            Id = 86,
+                            Comment_NewsId = 9,
+                            Comment_UsersId = 27,
+                            CreatedAt = new DateTime(2025, 6, 1, 10, 0, 6, 817, DateTimeKind.Utc).AddTicks(4314),
+                            Text = "Echipa Youth arată foarte bine, multă baftă pe teren!"
+                        },
+                        new
+                        {
+                            Id = 87,
+                            Comment_NewsId = 9,
+                            Comment_UsersId = 28,
+                            CreatedAt = new DateTime(2025, 6, 1, 10, 0, 6, 817, DateTimeKind.Utc).AddTicks(4354),
+                            Text = "Bravo clubului pentru investiția constantă în copii!"
+                        },
+                        new
+                        {
+                            Id = 88,
+                            Comment_NewsId = 9,
+                            Comment_UsersId = 29,
+                            CreatedAt = new DateTime(2025, 6, 1, 10, 0, 6, 817, DateTimeKind.Utc).AddTicks(4356),
+                            Text = "Sper ca mulți dintre acești jucători să ajungă la seniori!"
+                        },
+                        new
+                        {
+                            Id = 89,
+                            Comment_NewsId = 9,
+                            Comment_UsersId = 30,
+                            CreatedAt = new DateTime(2025, 6, 1, 10, 0, 6, 817, DateTimeKind.Utc).AddTicks(4357),
+                            Text = "Un sezon plin de reușite vă doresc, haideți să ne faceți mândri!"
+                        },
+                        new
+                        {
+                            Id = 90,
+                            Comment_NewsId = 9,
+                            Comment_UsersId = 31,
+                            CreatedAt = new DateTime(2025, 6, 1, 10, 0, 6, 817, DateTimeKind.Utc).AddTicks(4359),
+                            Text = "Hai Unirea Youth, sunteți viitorul echipei mari!"
+                        },
+                        new
+                        {
+                            Id = 91,
+                            Comment_NewsId = 10,
+                            Comment_UsersId = 22,
+                            CreatedAt = new DateTime(2025, 6, 1, 10, 0, 6, 817, DateTimeKind.Utc).AddTicks(4368),
+                            Text = "Se vede câtă muncă se depune la nivel de copii, felicitări clubului!"
+                        },
+                        new
+                        {
+                            Id = 92,
+                            Comment_NewsId = 10,
+                            Comment_UsersId = 23,
+                            CreatedAt = new DateTime(2025, 6, 1, 10, 0, 6, 817, DateTimeKind.Utc).AddTicks(4369),
+                            Text = "Mult succes portărilor noștri, să aveți un sezon de excepție!"
+                        },
+                        new
+                        {
+                            Id = 93,
+                            Comment_NewsId = 10,
+                            Comment_UsersId = 24,
+                            CreatedAt = new DateTime(2025, 6, 1, 10, 0, 6, 817, DateTimeKind.Utc).AddTicks(4370),
+                            Text = "Fundașii sunt foarte bine reprezentanți, bravo băieți!"
+                        },
+                        new
+                        {
+                            Id = 94,
+                            Comment_NewsId = 10,
+                            Comment_UsersId = 25,
+                            CreatedAt = new DateTime(2025, 6, 1, 10, 0, 6, 817, DateTimeKind.Utc).AddTicks(4371),
+                            Text = "Mijlocul echipei Youth arată foarte bine, multă energie și determinare!"
+                        },
+                        new
+                        {
+                            Id = 95,
+                            Comment_NewsId = 10,
+                            Comment_UsersId = 26,
+                            CreatedAt = new DateTime(2025, 6, 1, 10, 0, 6, 817, DateTimeKind.Utc).AddTicks(4372),
+                            Text = "Atacanții noștri vor marca sigur multe goluri!"
+                        },
+                        new
+                        {
+                            Id = 96,
+                            Comment_NewsId = 10,
+                            Comment_UsersId = 27,
+                            CreatedAt = new DateTime(2025, 6, 1, 10, 0, 6, 817, DateTimeKind.Utc).AddTicks(4374),
+                            Text = "Felicitări antrenorilor pentru selecție și muncă!"
+                        },
+                        new
+                        {
+                            Id = 97,
+                            Comment_NewsId = 10,
+                            Comment_UsersId = 28,
+                            CreatedAt = new DateTime(2025, 6, 1, 10, 0, 6, 817, DateTimeKind.Utc).AddTicks(4375),
+                            Text = "Hai Unirea Youth, să fiți uniți și să vă bucurați de fotbal!"
+                        },
+                        new
+                        {
+                            Id = 98,
+                            Comment_NewsId = 10,
+                            Comment_UsersId = 29,
+                            CreatedAt = new DateTime(2025, 6, 1, 10, 0, 6, 817, DateTimeKind.Utc).AddTicks(4376),
+                            Text = "Clubul are cu adevărat grijă de viitorul fotbalului local!"
+                        },
+                        new
+                        {
+                            Id = 99,
+                            Comment_NewsId = 10,
+                            Comment_UsersId = 30,
+                            CreatedAt = new DateTime(2025, 6, 1, 10, 0, 6, 817, DateTimeKind.Utc).AddTicks(4377),
+                            Text = "Sper să vedem cât mai mulți dintre voi la echipa mare în curând!"
+                        },
+                        new
+                        {
+                            Id = 100,
+                            Comment_NewsId = 10,
+                            Comment_UsersId = 31,
+                            CreatedAt = new DateTime(2025, 6, 1, 10, 0, 6, 817, DateTimeKind.Utc).AddTicks(4379),
+                            Text = "Mult succes tuturor copiilor și un sezon fără accidentări!"
+                        },
+                        new
+                        {
+                            Id = 101,
+                            Comment_NewsId = 11,
                             Comment_UsersId = 2,
-                            CreatedAt = new DateTime(2025, 5, 9, 9, 54, 42, 601, DateTimeKind.Utc).AddTicks(1254),
-                            Text = "Comentariu de la user 2 pentru știrea 15."
+                            CreatedAt = new DateTime(2025, 6, 1, 10, 0, 6, 817, DateTimeKind.Utc).AddTicks(4388),
+                            Text = "Un stadion mic, dar cu o atmosferă extraordinară!"
+                        },
+                        new
+                        {
+                            Id = 102,
+                            Comment_NewsId = 11,
+                            Comment_UsersId = 3,
+                            CreatedAt = new DateTime(2025, 6, 1, 10, 0, 6, 817, DateTimeKind.Utc).AddTicks(4389),
+                            Text = "Odobestiul trăiește pentru fotbal! Hai Unirea!"
+                        },
+                        new
+                        {
+                            Id = 103,
+                            Comment_NewsId = 11,
+                            Comment_UsersId = 4,
+                            CreatedAt = new DateTime(2025, 6, 1, 10, 0, 6, 817, DateTimeKind.Utc).AddTicks(4390),
+                            Text = "Aici ne simțim cu adevărat acasă, aproape de echipă!"
+                        },
+                        new
+                        {
+                            Id = 104,
+                            Comment_NewsId = 11,
+                            Comment_UsersId = 5,
+                            CreatedAt = new DateTime(2025, 6, 1, 10, 0, 6, 817, DateTimeKind.Utc).AddTicks(4391),
+                            Text = "Fiecare meci pe acest stadion e special pentru noi."
+                        },
+                        new
+                        {
+                            Id = 105,
+                            Comment_NewsId = 11,
+                            Comment_UsersId = 6,
+                            CreatedAt = new DateTime(2025, 6, 1, 10, 0, 6, 817, DateTimeKind.Utc).AddTicks(4392),
+                            Text = "De-abia aștept să reînceapă sezonul și să fiu pe stadion!"
+                        },
+                        new
+                        {
+                            Id = 106,
+                            Comment_NewsId = 11,
+                            Comment_UsersId = 7,
+                            CreatedAt = new DateTime(2025, 6, 1, 10, 0, 6, 817, DateTimeKind.Utc).AddTicks(4394),
+                            Text = "Hai Unirea, să ne faceți mândri pe Unirea Stadium!"
+                        },
+                        new
+                        {
+                            Id = 107,
+                            Comment_NewsId = 11,
+                            Comment_UsersId = 8,
+                            CreatedAt = new DateTime(2025, 6, 1, 10, 0, 6, 817, DateTimeKind.Utc).AddTicks(4395),
+                            Text = "Sunt multe amintiri frumoase legate de acest stadion."
+                        },
+                        new
+                        {
+                            Id = 108,
+                            Comment_NewsId = 11,
+                            Comment_UsersId = 9,
+                            CreatedAt = new DateTime(2025, 6, 1, 10, 0, 6, 817, DateTimeKind.Utc).AddTicks(4396),
+                            Text = "Respect pentru toți suporterii care vin la fiecare meci!"
+                        },
+                        new
+                        {
+                            Id = 109,
+                            Comment_NewsId = 11,
+                            Comment_UsersId = 10,
+                            CreatedAt = new DateTime(2025, 6, 1, 10, 0, 6, 817, DateTimeKind.Utc).AddTicks(4397),
+                            Text = "Mic, dar esențial pentru spiritul echipei noastre!"
+                        },
+                        new
+                        {
+                            Id = 110,
+                            Comment_NewsId = 11,
+                            Comment_UsersId = 11,
+                            CreatedAt = new DateTime(2025, 6, 1, 10, 0, 6, 817, DateTimeKind.Utc).AddTicks(4399),
+                            Text = "Hai Unirea, pe Unirea Stadium scriem istorie!"
+                        },
+                        new
+                        {
+                            Id = 111,
+                            Comment_NewsId = 12,
+                            Comment_UsersId = 12,
+                            CreatedAt = new DateTime(2025, 6, 1, 10, 0, 6, 817, DateTimeKind.Utc).AddTicks(4406),
+                            Text = "Atmosfera la meciurile U21 e mereu specială!"
+                        },
+                        new
+                        {
+                            Id = 112,
+                            Comment_NewsId = 12,
+                            Comment_UsersId = 13,
+                            CreatedAt = new DateTime(2025, 6, 1, 10, 0, 6, 817, DateTimeKind.Utc).AddTicks(4408),
+                            Text = "Un stadion mic, dar perfect pentru meciurile tinerilor."
+                        },
+                        new
+                        {
+                            Id = 113,
+                            Comment_NewsId = 12,
+                            Comment_UsersId = 14,
+                            CreatedAt = new DateTime(2025, 6, 1, 10, 0, 6, 817, DateTimeKind.Utc).AddTicks(4409),
+                            Text = "Sunt mândru să văd juniorii noștri crescând pe acest teren."
+                        },
+                        new
+                        {
+                            Id = 114,
+                            Comment_NewsId = 12,
+                            Comment_UsersId = 15,
+                            CreatedAt = new DateTime(2025, 6, 1, 10, 0, 6, 817, DateTimeKind.Utc).AddTicks(4410),
+                            Text = "Fiecare meci e o lecție de fotbal pentru tinerii noștri."
+                        },
+                        new
+                        {
+                            Id = 115,
+                            Comment_NewsId = 12,
+                            Comment_UsersId = 16,
+                            CreatedAt = new DateTime(2025, 6, 1, 10, 0, 6, 817, DateTimeKind.Utc).AddTicks(4411),
+                            Text = "Felicitări clubului că investește în tineret!"
+                        },
+                        new
+                        {
+                            Id = 116,
+                            Comment_NewsId = 12,
+                            Comment_UsersId = 17,
+                            CreatedAt = new DateTime(2025, 6, 1, 10, 0, 6, 817, DateTimeKind.Utc).AddTicks(4413),
+                            Text = "Hai Unirea U21, să aveți un sezon plin de victorii!"
+                        },
+                        new
+                        {
+                            Id = 117,
+                            Comment_NewsId = 12,
+                            Comment_UsersId = 18,
+                            CreatedAt = new DateTime(2025, 6, 1, 10, 0, 6, 817, DateTimeKind.Utc).AddTicks(4414),
+                            Text = "Toți cei care vin la stadion sunt parte din familia Unirea!"
+                        },
+                        new
+                        {
+                            Id = 118,
+                            Comment_NewsId = 12,
+                            Comment_UsersId = 19,
+                            CreatedAt = new DateTime(2025, 6, 1, 10, 0, 6, 817, DateTimeKind.Utc).AddTicks(4415),
+                            Text = "Este important ca juniorii să aibă propriul lor stadion."
+                        },
+                        new
+                        {
+                            Id = 119,
+                            Comment_NewsId = 12,
+                            Comment_UsersId = 20,
+                            CreatedAt = new DateTime(2025, 6, 1, 10, 0, 6, 817, DateTimeKind.Utc).AddTicks(4416),
+                            Text = "Meciurile U21 sunt întotdeauna pline de energie!"
+                        },
+                        new
+                        {
+                            Id = 120,
+                            Comment_NewsId = 12,
+                            Comment_UsersId = 21,
+                            CreatedAt = new DateTime(2025, 6, 1, 10, 0, 6, 817, DateTimeKind.Utc).AddTicks(4417),
+                            Text = "Sunt sigur că Unirea U21 va avea un sezon de excepție pe acest stadion!"
+                        },
+                        new
+                        {
+                            Id = 121,
+                            Comment_NewsId = 13,
+                            Comment_UsersId = 22,
+                            CreatedAt = new DateTime(2025, 6, 1, 10, 0, 6, 817, DateTimeKind.Utc).AddTicks(4425),
+                            Text = "Felicitări pentru grija față de cei mici! Un stadion cu adevărat special."
+                        },
+                        new
+                        {
+                            Id = 122,
+                            Comment_NewsId = 13,
+                            Comment_UsersId = 23,
+                            CreatedAt = new DateTime(2025, 6, 1, 10, 0, 6, 817, DateTimeKind.Utc).AddTicks(4427),
+                            Text = "Unirea Youth Stadium e locul unde începe povestea fiecărui campion!"
+                        },
+                        new
+                        {
+                            Id = 123,
+                            Comment_NewsId = 13,
+                            Comment_UsersId = 24,
+                            CreatedAt = new DateTime(2025, 6, 1, 10, 0, 6, 817, DateTimeKind.Utc).AddTicks(4428),
+                            Text = "Fiecare copil merită să joace pe un teren atât de primitor."
+                        },
+                        new
+                        {
+                            Id = 124,
+                            Comment_NewsId = 13,
+                            Comment_UsersId = 25,
+                            CreatedAt = new DateTime(2025, 6, 1, 10, 0, 6, 817, DateTimeKind.Utc).AddTicks(4429),
+                            Text = "Aici se simte bucuria fotbalului autentic!"
+                        },
+                        new
+                        {
+                            Id = 125,
+                            Comment_NewsId = 13,
+                            Comment_UsersId = 26,
+                            CreatedAt = new DateTime(2025, 6, 1, 10, 0, 6, 817, DateTimeKind.Utc).AddTicks(4430),
+                            Text = "Bravo clubului că investește în condiții pentru copii!"
+                        },
+                        new
+                        {
+                            Id = 126,
+                            Comment_NewsId = 13,
+                            Comment_UsersId = 27,
+                            CreatedAt = new DateTime(2025, 6, 1, 10, 0, 6, 817, DateTimeKind.Utc).AddTicks(4432),
+                            Text = "Meciurile de la Youth Stadium sunt mereu pline de entuziasm."
+                        },
+                        new
+                        {
+                            Id = 127,
+                            Comment_NewsId = 13,
+                            Comment_UsersId = 28,
+                            CreatedAt = new DateTime(2025, 6, 1, 10, 0, 6, 817, DateTimeKind.Utc).AddTicks(4433),
+                            Text = "Felicitări tinerilor jucători pentru determinare și curaj!"
+                        },
+                        new
+                        {
+                            Id = 128,
+                            Comment_NewsId = 13,
+                            Comment_UsersId = 29,
+                            CreatedAt = new DateTime(2025, 6, 1, 10, 0, 6, 817, DateTimeKind.Utc).AddTicks(4434),
+                            Text = "Hai Unirea Youth! Vă susținem la fiecare meci!"
+                        },
+                        new
+                        {
+                            Id = 129,
+                            Comment_NewsId = 13,
+                            Comment_UsersId = 30,
+                            CreatedAt = new DateTime(2025, 6, 1, 10, 0, 6, 817, DateTimeKind.Utc).AddTicks(4435),
+                            Text = "Important să avem astfel de baze pentru generațiile următoare."
+                        },
+                        new
+                        {
+                            Id = 130,
+                            Comment_NewsId = 13,
+                            Comment_UsersId = 31,
+                            CreatedAt = new DateTime(2025, 6, 1, 10, 0, 6, 817, DateTimeKind.Utc).AddTicks(4436),
+                            Text = "Succes tuturor copiilor care își trăiesc visul pe acest stadion!"
+                        },
+                        new
+                        {
+                            Id = 131,
+                            Comment_NewsId = 14,
+                            Comment_UsersId = 2,
+                            CreatedAt = new DateTime(2025, 6, 1, 10, 0, 6, 817, DateTimeKind.Utc).AddTicks(4445),
+                            Text = "VIP-ul e perfect pentru cei care vor să vadă meciul în cele mai bune condiții!"
+                        },
+                        new
+                        {
+                            Id = 132,
+                            Comment_NewsId = 14,
+                            Comment_UsersId = 3,
+                            CreatedAt = new DateTime(2025, 6, 1, 10, 0, 6, 817, DateTimeKind.Utc).AddTicks(4447),
+                            Text = "Prețurile sunt accesibile pentru toată lumea, bravo clubului!"
+                        },
+                        new
+                        {
+                            Id = 133,
+                            Comment_NewsId = 14,
+                            Comment_UsersId = 4,
+                            CreatedAt = new DateTime(2025, 6, 1, 10, 0, 6, 817, DateTimeKind.Utc).AddTicks(4448),
+                            Text = "Mereu aleg Standard, acolo atmosfera e cea mai tare!"
+                        },
+                        new
+                        {
+                            Id = 134,
+                            Comment_NewsId = 14,
+                            Comment_UsersId = 5,
+                            CreatedAt = new DateTime(2025, 6, 1, 10, 0, 6, 817, DateTimeKind.Utc).AddTicks(4449),
+                            Text = "Felicitări pentru organizare, abia aștept următorul meci acasă!"
+                        },
+                        new
+                        {
+                            Id = 135,
+                            Comment_NewsId = 14,
+                            Comment_UsersId = 6,
+                            CreatedAt = new DateTime(2025, 6, 1, 10, 0, 6, 817, DateTimeKind.Utc).AddTicks(4450),
+                            Text = "Îmi place diversitatea locurilor, fiecare își găsește ceva pe plac."
+                        },
+                        new
+                        {
+                            Id = 136,
+                            Comment_NewsId = 14,
+                            Comment_UsersId = 7,
+                            CreatedAt = new DateTime(2025, 6, 1, 10, 0, 6, 817, DateTimeKind.Utc).AddTicks(4488),
+                            Text = "Vreau să-mi iau bilet VIP la derby-ul cu rivala, e clar!"
+                        },
+                        new
+                        {
+                            Id = 137,
+                            Comment_NewsId = 14,
+                            Comment_UsersId = 8,
+                            CreatedAt = new DateTime(2025, 6, 1, 10, 0, 6, 817, DateTimeKind.Utc).AddTicks(4491),
+                            Text = "Hai Unirea, oriunde aș sta, important e să fim alături de voi!"
+                        },
+                        new
+                        {
+                            Id = 138,
+                            Comment_NewsId = 14,
+                            Comment_UsersId = 9,
+                            CreatedAt = new DateTime(2025, 6, 1, 10, 0, 6, 817, DateTimeKind.Utc).AddTicks(4491),
+                            Text = "Apreciez efortul clubului de a oferi condiții cât mai bune fanilor."
+                        },
+                        new
+                        {
+                            Id = 139,
+                            Comment_NewsId = 14,
+                            Comment_UsersId = 10,
+                            CreatedAt = new DateTime(2025, 6, 1, 10, 0, 6, 817, DateTimeKind.Utc).AddTicks(4492),
+                            Text = "Să fie stadionul plin la fiecare meci, doar așa câștigăm împreună!"
+                        },
+                        new
+                        {
+                            Id = 140,
+                            Comment_NewsId = 14,
+                            Comment_UsersId = 11,
+                            CreatedAt = new DateTime(2025, 6, 1, 10, 0, 6, 817, DateTimeKind.Utc).AddTicks(4494),
+                            Text = "Forza Unirea! Ne vedem la următorul meci pe Unirea Stadium!"
+                        },
+                        new
+                        {
+                            Id = 151,
+                            Comment_NewsId = 19,
+                            Comment_UsersId = 6,
+                            CreatedAt = new DateTime(2025, 6, 1, 10, 0, 6, 817, DateTimeKind.Utc).AddTicks(4503),
+                            Text = "Un meci intens, bravo băieți!"
+                        },
+                        new
+                        {
+                            Id = 152,
+                            Comment_NewsId = 19,
+                            Comment_UsersId = 18,
+                            CreatedAt = new DateTime(2025, 6, 1, 10, 0, 6, 817, DateTimeKind.Utc).AddTicks(4505),
+                            Text = "Remiză muncită, continuați tot așa!"
+                        },
+                        new
+                        {
+                            Id = 153,
+                            Comment_NewsId = 19,
+                            Comment_UsersId = 14,
+                            CreatedAt = new DateTime(2025, 6, 1, 10, 0, 6, 817, DateTimeKind.Utc).AddTicks(4506),
+                            Text = "Paul și Alex, de urmărit pe viitor!"
+                        },
+                        new
+                        {
+                            Id = 154,
+                            Comment_NewsId = 19,
+                            Comment_UsersId = 25,
+                            CreatedAt = new DateTime(2025, 6, 1, 10, 0, 6, 817, DateTimeKind.Utc).AddTicks(4507),
+                            Text = "Frumos joc, să vină și victoriile!"
+                        },
+                        new
+                        {
+                            Id = 155,
+                            Comment_NewsId = 19,
+                            Comment_UsersId = 3,
+                            CreatedAt = new DateTime(2025, 6, 1, 10, 0, 6, 817, DateTimeKind.Utc).AddTicks(4508),
+                            Text = "Atmosferă bună, tineri talentați!"
+                        },
+                        new
+                        {
+                            Id = 156,
+                            Comment_NewsId = 20,
+                            Comment_UsersId = 22,
+                            CreatedAt = new DateTime(2025, 6, 1, 10, 0, 6, 817, DateTimeKind.Utc).AddTicks(4510),
+                            Text = "Ce meci! 4 goluri, respect!"
+                        },
+                        new
+                        {
+                            Id = 157,
+                            Comment_NewsId = 20,
+                            Comment_UsersId = 7,
+                            CreatedAt = new DateTime(2025, 6, 1, 10, 0, 6, 817, DateTimeKind.Utc).AddTicks(4511),
+                            Text = "Bravo FC Unirea, victorie clară!"
+                        },
+                        new
+                        {
+                            Id = 158,
+                            Comment_NewsId = 20,
+                            Comment_UsersId = 27,
+                            CreatedAt = new DateTime(2025, 6, 1, 10, 0, 6, 817, DateTimeKind.Utc).AddTicks(4512),
+                            Text = "Daniel Stan și Denis Ilie, super jucători!"
+                        },
+                        new
+                        {
+                            Id = 159,
+                            Comment_NewsId = 20,
+                            Comment_UsersId = 11,
+                            CreatedAt = new DateTime(2025, 6, 1, 10, 0, 6, 817, DateTimeKind.Utc).AddTicks(4513),
+                            Text = "Așa vrem să vă vedem în fiecare meci!"
+                        },
+                        new
+                        {
+                            Id = 160,
+                            Comment_NewsId = 20,
+                            Comment_UsersId = 29,
+                            CreatedAt = new DateTime(2025, 6, 1, 10, 0, 6, 817, DateTimeKind.Utc).AddTicks(4514),
+                            Text = "Felicitări băieți, spectacol total!"
+                        },
+                        new
+                        {
+                            Id = 161,
+                            Comment_NewsId = 21,
+                            Comment_UsersId = 9,
+                            CreatedAt = new DateTime(2025, 6, 1, 10, 0, 6, 817, DateTimeKind.Utc).AddTicks(4516),
+                            Text = "Excelent în Cupă, țineți-o tot așa!"
+                        },
+                        new
+                        {
+                            Id = 162,
+                            Comment_NewsId = 21,
+                            Comment_UsersId = 1,
+                            CreatedAt = new DateTime(2025, 6, 1, 10, 0, 6, 817, DateTimeKind.Utc).AddTicks(4517),
+                            Text = "Ionuț Rădulescu din nou decisiv!"
+                        },
+                        new
+                        {
+                            Id = 163,
+                            Comment_NewsId = 21,
+                            Comment_UsersId = 13,
+                            CreatedAt = new DateTime(2025, 6, 1, 10, 0, 6, 817, DateTimeKind.Utc).AddTicks(4518),
+                            Text = "Felicitări pentru calificare!"
+                        },
+                        new
+                        {
+                            Id = 164,
+                            Comment_NewsId = 21,
+                            Comment_UsersId = 28,
+                            CreatedAt = new DateTime(2025, 6, 1, 10, 0, 6, 817, DateTimeKind.Utc).AddTicks(4520),
+                            Text = "Apărare de fier, bravo Unirea!"
+                        },
+                        new
+                        {
+                            Id = 165,
+                            Comment_NewsId = 21,
+                            Comment_UsersId = 23,
+                            CreatedAt = new DateTime(2025, 6, 1, 10, 0, 6, 817, DateTimeKind.Utc).AddTicks(4521),
+                            Text = "Cupa e aproape, hai băieți!"
+                        },
+                        new
+                        {
+                            Id = 166,
+                            Comment_NewsId = 22,
+                            Comment_UsersId = 17,
+                            CreatedAt = new DateTime(2025, 6, 1, 10, 0, 6, 817, DateTimeKind.Utc).AddTicks(4522),
+                            Text = "Spectacol în Champions League!"
+                        },
+                        new
+                        {
+                            Id = 167,
+                            Comment_NewsId = 22,
+                            Comment_UsersId = 24,
+                            CreatedAt = new DateTime(2025, 6, 1, 10, 0, 6, 817, DateTimeKind.Utc).AddTicks(4523),
+                            Text = "Remiză bună cu o echipă puternică!"
+                        },
+                        new
+                        {
+                            Id = 168,
+                            Comment_NewsId = 22,
+                            Comment_UsersId = 12,
+                            CreatedAt = new DateTime(2025, 6, 1, 10, 0, 6, 817, DateTimeKind.Utc).AddTicks(4524),
+                            Text = "Alex Vasilescu și Denis Neagu, excepționali!"
+                        },
+                        new
+                        {
+                            Id = 169,
+                            Comment_NewsId = 22,
+                            Comment_UsersId = 30,
+                            CreatedAt = new DateTime(2025, 6, 1, 10, 0, 6, 817, DateTimeKind.Utc).AddTicks(4526),
+                            Text = "Bravo băieți, ați luptat până la capăt!"
+                        },
+                        new
+                        {
+                            Id = 170,
+                            Comment_NewsId = 22,
+                            Comment_UsersId = 20,
+                            CreatedAt = new DateTime(2025, 6, 1, 10, 0, 6, 817, DateTimeKind.Utc).AddTicks(4527),
+                            Text = "Vrem să vă vedem în optimi!"
+                        },
+                        new
+                        {
+                            Id = 171,
+                            Comment_NewsId = 23,
+                            Comment_UsersId = 5,
+                            CreatedAt = new DateTime(2025, 6, 1, 10, 0, 6, 817, DateTimeKind.Utc).AddTicks(4528),
+                            Text = "Victorie importantă pentru moral!"
+                        },
+                        new
+                        {
+                            Id = 172,
+                            Comment_NewsId = 23,
+                            Comment_UsersId = 19,
+                            CreatedAt = new DateTime(2025, 6, 1, 10, 0, 6, 817, DateTimeKind.Utc).AddTicks(4529),
+                            Text = "Denis Chiriac și Ștefan Popescu, bravo!"
+                        },
+                        new
+                        {
+                            Id = 173,
+                            Comment_NewsId = 23,
+                            Comment_UsersId = 31,
+                            CreatedAt = new DateTime(2025, 6, 1, 10, 0, 6, 817, DateTimeKind.Utc).AddTicks(4530),
+                            Text = "Încă trei puncte, să urcăm în clasament!"
+                        },
+                        new
+                        {
+                            Id = 174,
+                            Comment_NewsId = 23,
+                            Comment_UsersId = 8,
+                            CreatedAt = new DateTime(2025, 6, 1, 10, 0, 6, 817, DateTimeKind.Utc).AddTicks(4531),
+                            Text = "Echipa joacă din ce în ce mai bine!"
+                        },
+                        new
+                        {
+                            Id = 175,
+                            Comment_NewsId = 23,
+                            Comment_UsersId = 26,
+                            CreatedAt = new DateTime(2025, 6, 1, 10, 0, 6, 817, DateTimeKind.Utc).AddTicks(4532),
+                            Text = "Să vină următoarea victorie!"
+                        },
+                        new
+                        {
+                            Id = 176,
+                            Comment_NewsId = 24,
+                            Comment_UsersId = 12,
+                            CreatedAt = new DateTime(2025, 6, 1, 10, 0, 6, 817, DateTimeKind.Utc).AddTicks(4533),
+                            Text = "Nu renunțăm, încă avem șanse!"
+                        },
+                        new
+                        {
+                            Id = 177,
+                            Comment_NewsId = 24,
+                            Comment_UsersId = 25,
+                            CreatedAt = new DateTime(2025, 6, 1, 10, 0, 6, 817, DateTimeKind.Utc).AddTicks(4534),
+                            Text = "Juventus a fost prea puternică azi."
+                        },
+                        new
+                        {
+                            Id = 178,
+                            Comment_NewsId = 24,
+                            Comment_UsersId = 19,
+                            CreatedAt = new DateTime(2025, 6, 1, 10, 0, 6, 817, DateTimeKind.Utc).AddTicks(4535),
+                            Text = "Hai Unirea, capul sus!"
+                        },
+                        new
+                        {
+                            Id = 179,
+                            Comment_NewsId = 24,
+                            Comment_UsersId = 4,
+                            CreatedAt = new DateTime(2025, 6, 1, 10, 0, 6, 817, DateTimeKind.Utc).AddTicks(4536),
+                            Text = "Așteptăm revanșa pe teren propriu!"
+                        },
+                        new
+                        {
+                            Id = 180,
+                            Comment_NewsId = 24,
+                            Comment_UsersId = 7,
+                            CreatedAt = new DateTime(2025, 6, 1, 10, 0, 6, 817, DateTimeKind.Utc).AddTicks(4537),
+                            Text = "Credem în voi până la final!"
+                        },
+                        new
+                        {
+                            Id = 181,
+                            Comment_NewsId = 25,
+                            Comment_UsersId = 10,
+                            CreatedAt = new DateTime(2025, 6, 1, 10, 0, 6, 817, DateTimeKind.Utc).AddTicks(4538),
+                            Text = "Trei puncte muncite, felicitări!"
+                        },
+                        new
+                        {
+                            Id = 182,
+                            Comment_NewsId = 25,
+                            Comment_UsersId = 20,
+                            CreatedAt = new DateTime(2025, 6, 1, 10, 0, 6, 817, DateTimeKind.Utc).AddTicks(4539),
+                            Text = "Andrei Neagu, eroul nostru!"
+                        },
+                        new
+                        {
+                            Id = 183,
+                            Comment_NewsId = 25,
+                            Comment_UsersId = 29,
+                            CreatedAt = new DateTime(2025, 6, 1, 10, 0, 6, 817, DateTimeKind.Utc).AddTicks(4540),
+                            Text = "Bravo băieți, continuăm seria bună!"
+                        },
+                        new
+                        {
+                            Id = 184,
+                            Comment_NewsId = 25,
+                            Comment_UsersId = 5,
+                            CreatedAt = new DateTime(2025, 6, 1, 10, 0, 6, 817, DateTimeKind.Utc).AddTicks(4542),
+                            Text = "Forța Unirea, urcăm în clasament!"
+                        },
+                        new
+                        {
+                            Id = 185,
+                            Comment_NewsId = 25,
+                            Comment_UsersId = 16,
+                            CreatedAt = new DateTime(2025, 6, 1, 10, 0, 6, 817, DateTimeKind.Utc).AddTicks(4543),
+                            Text = "Victorie importantă pentru moral!"
+                        },
+                        new
+                        {
+                            Id = 186,
+                            Comment_NewsId = 26,
+                            Comment_UsersId = 28,
+                            CreatedAt = new DateTime(2025, 6, 1, 10, 0, 6, 817, DateTimeKind.Utc).AddTicks(4544),
+                            Text = "Super meci, emoții până la final!"
+                        },
+                        new
+                        {
+                            Id = 187,
+                            Comment_NewsId = 26,
+                            Comment_UsersId = 23,
+                            CreatedAt = new DateTime(2025, 6, 1, 10, 0, 6, 817, DateTimeKind.Utc).AddTicks(4545),
+                            Text = "Bravo, Unirea Youth!"
+                        },
+                        new
+                        {
+                            Id = 188,
+                            Comment_NewsId = 26,
+                            Comment_UsersId = 2,
+                            CreatedAt = new DateTime(2025, 6, 1, 10, 0, 6, 817, DateTimeKind.Utc).AddTicks(4546),
+                            Text = "Alin și Ionuț, de viitor!"
+                        },
+                        new
+                        {
+                            Id = 189,
+                            Comment_NewsId = 26,
+                            Comment_UsersId = 31,
+                            CreatedAt = new DateTime(2025, 6, 1, 10, 0, 6, 817, DateTimeKind.Utc).AddTicks(4548),
+                            Text = "Remiză echitabilă, ambele echipe au luptat!"
+                        },
+                        new
+                        {
+                            Id = 190,
+                            Comment_NewsId = 26,
+                            Comment_UsersId = 18,
+                            CreatedAt = new DateTime(2025, 6, 1, 10, 0, 6, 817, DateTimeKind.Utc).AddTicks(4549),
+                            Text = "Hai Unirea, la mai multe goluri!"
+                        },
+                        new
+                        {
+                            Id = 191,
+                            Comment_NewsId = 27,
+                            Comment_UsersId = 1,
+                            CreatedAt = new DateTime(2025, 6, 1, 10, 0, 6, 817, DateTimeKind.Utc).AddTicks(4550),
+                            Text = "Victorie clară, felicitări U21!"
+                        },
+                        new
+                        {
+                            Id = 192,
+                            Comment_NewsId = 27,
+                            Comment_UsersId = 8,
+                            CreatedAt = new DateTime(2025, 6, 1, 10, 0, 6, 817, DateTimeKind.Utc).AddTicks(4551),
+                            Text = "Sergiu Neagu și Radulescu, super goluri!"
+                        },
+                        new
+                        {
+                            Id = 193,
+                            Comment_NewsId = 27,
+                            Comment_UsersId = 27,
+                            CreatedAt = new DateTime(2025, 6, 1, 10, 0, 6, 817, DateTimeKind.Utc).AddTicks(4552),
+                            Text = "Meci foarte bun în deplasare!"
+                        },
+                        new
+                        {
+                            Id = 194,
+                            Comment_NewsId = 27,
+                            Comment_UsersId = 14,
+                            CreatedAt = new DateTime(2025, 6, 1, 10, 0, 6, 817, DateTimeKind.Utc).AddTicks(4553),
+                            Text = "Felicitări tuturor pentru efort!"
+                        },
+                        new
+                        {
+                            Id = 195,
+                            Comment_NewsId = 27,
+                            Comment_UsersId = 21,
+                            CreatedAt = new DateTime(2025, 6, 1, 10, 0, 6, 817, DateTimeKind.Utc).AddTicks(4554),
+                            Text = "Forța Unirea U21!"
+                        },
+                        new
+                        {
+                            Id = 196,
+                            Comment_NewsId = 28,
+                            Comment_UsersId = 6,
+                            CreatedAt = new DateTime(2025, 6, 1, 10, 0, 6, 817, DateTimeKind.Utc).AddTicks(4556),
+                            Text = "Capul sus, băieți! Vor veni și victoriile!"
+                        },
+                        new
+                        {
+                            Id = 197,
+                            Comment_NewsId = 28,
+                            Comment_UsersId = 15,
+                            CreatedAt = new DateTime(2025, 6, 1, 10, 0, 6, 817, DateTimeKind.Utc).AddTicks(4557),
+                            Text = "U21 Voluntari a fost mai bună azi."
+                        },
+                        new
+                        {
+                            Id = 198,
+                            Comment_NewsId = 28,
+                            Comment_UsersId = 17,
+                            CreatedAt = new DateTime(2025, 6, 1, 10, 0, 6, 817, DateTimeKind.Utc).AddTicks(4558),
+                            Text = "Ne revenim la următorul meci!"
+                        },
+                        new
+                        {
+                            Id = 199,
+                            Comment_NewsId = 28,
+                            Comment_UsersId = 9,
+                            CreatedAt = new DateTime(2025, 6, 1, 10, 0, 6, 817, DateTimeKind.Utc).AddTicks(4559),
+                            Text = "Hai Unirea U21!"
+                        },
+                        new
+                        {
+                            Id = 200,
+                            Comment_NewsId = 28,
+                            Comment_UsersId = 13,
+                            CreatedAt = new DateTime(2025, 6, 1, 10, 0, 6, 817, DateTimeKind.Utc).AddTicks(4560),
+                            Text = "Nu renunțăm, suntem alături de voi!"
+                        },
+                        new
+                        {
+                            Id = 201,
+                            Comment_NewsId = 29,
+                            Comment_UsersId = 2,
+                            CreatedAt = new DateTime(2025, 6, 1, 10, 0, 6, 817, DateTimeKind.Utc).AddTicks(4561),
+                            Text = "Băieții au luptat frumos!"
+                        },
+                        new
+                        {
+                            Id = 202,
+                            Comment_NewsId = 29,
+                            Comment_UsersId = 17,
+                            CreatedAt = new DateTime(2025, 6, 1, 10, 0, 6, 817, DateTimeKind.Utc).AddTicks(4562),
+                            Text = "Eduard Diaconu a făcut un meci bun!"
+                        },
+                        new
+                        {
+                            Id = 203,
+                            Comment_NewsId = 29,
+                            Comment_UsersId = 25,
+                            CreatedAt = new DateTime(2025, 6, 1, 10, 0, 6, 817, DateTimeKind.Utc).AddTicks(4563),
+                            Text = "Meci greu, capul sus!"
+                        },
+                        new
+                        {
+                            Id = 204,
+                            Comment_NewsId = 29,
+                            Comment_UsersId = 8,
+                            CreatedAt = new DateTime(2025, 6, 1, 10, 0, 6, 817, DateTimeKind.Utc).AddTicks(4564),
+                            Text = "Felicitări pentru atitudine, mergem mai departe!"
+                        },
+                        new
+                        {
+                            Id = 205,
+                            Comment_NewsId = 29,
+                            Comment_UsersId = 30,
+                            CreatedAt = new DateTime(2025, 6, 1, 10, 0, 6, 817, DateTimeKind.Utc).AddTicks(4565),
+                            Text = "Nu renunțăm, Unirea U21!"
+                        },
+                        new
+                        {
+                            Id = 206,
+                            Comment_NewsId = 30,
+                            Comment_UsersId = 4,
+                            CreatedAt = new DateTime(2025, 6, 1, 10, 0, 6, 817, DateTimeKind.Utc).AddTicks(4566),
+                            Text = "A fost greu la Vaslui, dar avem potențial!"
+                        },
+                        new
+                        {
+                            Id = 207,
+                            Comment_NewsId = 30,
+                            Comment_UsersId = 14,
+                            CreatedAt = new DateTime(2025, 6, 1, 10, 0, 6, 817, DateTimeKind.Utc).AddTicks(4567),
+                            Text = "Bravo Ionuț Neagu pentru gol!"
+                        },
+                        new
+                        {
+                            Id = 208,
+                            Comment_NewsId = 30,
+                            Comment_UsersId = 29,
+                            CreatedAt = new DateTime(2025, 6, 1, 10, 0, 6, 817, DateTimeKind.Utc).AddTicks(4568),
+                            Text = "Hai Unirea Youth, revenim la următorul meci!"
+                        },
+                        new
+                        {
+                            Id = 209,
+                            Comment_NewsId = 30,
+                            Comment_UsersId = 10,
+                            CreatedAt = new DateTime(2025, 6, 1, 10, 0, 6, 817, DateTimeKind.Utc).AddTicks(4569),
+                            Text = "Tinerii merită încurajați mereu!"
+                        },
+                        new
+                        {
+                            Id = 210,
+                            Comment_NewsId = 30,
+                            Comment_UsersId = 19,
+                            CreatedAt = new DateTime(2025, 6, 1, 10, 0, 6, 817, DateTimeKind.Utc).AddTicks(4570),
+                            Text = "Capul sus, se poate mai bine!"
+                        },
+                        new
+                        {
+                            Id = 211,
+                            Comment_NewsId = 31,
+                            Comment_UsersId = 22,
+                            CreatedAt = new DateTime(2025, 6, 1, 10, 0, 6, 817, DateTimeKind.Utc).AddTicks(4571),
+                            Text = "Meci bun, păcat de rezultat!"
+                        },
+                        new
+                        {
+                            Id = 212,
+                            Comment_NewsId = 31,
+                            Comment_UsersId = 6,
+                            CreatedAt = new DateTime(2025, 6, 1, 10, 0, 6, 817, DateTimeKind.Utc).AddTicks(4572),
+                            Text = "Alex Lazăr a arătat calitate!"
+                        },
+                        new
+                        {
+                            Id = 213,
+                            Comment_NewsId = 31,
+                            Comment_UsersId = 24,
+                            CreatedAt = new DateTime(2025, 6, 1, 10, 0, 6, 817, DateTimeKind.Utc).AddTicks(4573),
+                            Text = "Rapid Nord ne-a surprins azi."
+                        },
+                        new
+                        {
+                            Id = 214,
+                            Comment_NewsId = 31,
+                            Comment_UsersId = 13,
+                            CreatedAt = new DateTime(2025, 6, 1, 10, 0, 6, 817, DateTimeKind.Utc).AddTicks(4574),
+                            Text = "Nu e nimic, continuăm lupta!"
+                        },
+                        new
+                        {
+                            Id = 215,
+                            Comment_NewsId = 31,
+                            Comment_UsersId = 28,
+                            CreatedAt = new DateTime(2025, 6, 1, 10, 0, 6, 817, DateTimeKind.Utc).AddTicks(4575),
+                            Text = "Hai Unirea, credem în voi!"
+                        },
+                        new
+                        {
+                            Id = 216,
+                            Comment_NewsId = 32,
+                            Comment_UsersId = 18,
+                            CreatedAt = new DateTime(2025, 6, 1, 10, 0, 6, 817, DateTimeKind.Utc).AddTicks(4577),
+                            Text = "Meci echilibrat, portar bun!"
+                        },
+                        new
+                        {
+                            Id = 217,
+                            Comment_NewsId = 32,
+                            Comment_UsersId = 21,
+                            CreatedAt = new DateTime(2025, 6, 1, 10, 0, 6, 817, DateTimeKind.Utc).AddTicks(4578),
+                            Text = "0-0, dar echipa a jucat bine."
+                        },
+                        new
+                        {
+                            Id = 218,
+                            Comment_NewsId = 32,
+                            Comment_UsersId = 7,
+                            CreatedAt = new DateTime(2025, 6, 1, 10, 0, 6, 817, DateTimeKind.Utc).AddTicks(4579),
+                            Text = "Felicitări pentru efort!"
+                        },
+                        new
+                        {
+                            Id = 219,
+                            Comment_NewsId = 32,
+                            Comment_UsersId = 26,
+                            CreatedAt = new DateTime(2025, 6, 1, 10, 0, 6, 817, DateTimeKind.Utc).AddTicks(4580),
+                            Text = "Ne vedem la următorul meci!"
+                        },
+                        new
+                        {
+                            Id = 220,
+                            Comment_NewsId = 32,
+                            Comment_UsersId = 15,
+                            CreatedAt = new DateTime(2025, 6, 1, 10, 0, 6, 817, DateTimeKind.Utc).AddTicks(4581),
+                            Text = "Un punct e mai bun decât nimic!"
+                        },
+                        new
+                        {
+                            Id = 221,
+                            Comment_NewsId = 33,
+                            Comment_UsersId = 11,
+                            CreatedAt = new DateTime(2025, 6, 1, 10, 0, 6, 817, DateTimeKind.Utc).AddTicks(4582),
+                            Text = "Tinerii s-au ținut bine!"
+                        },
+                        new
+                        {
+                            Id = 222,
+                            Comment_NewsId = 33,
+                            Comment_UsersId = 5,
+                            CreatedAt = new DateTime(2025, 6, 1, 10, 0, 6, 817, DateTimeKind.Utc).AddTicks(4583),
+                            Text = "Meci echilibrat, ghinion la final."
+                        },
+                        new
+                        {
+                            Id = 223,
+                            Comment_NewsId = 33,
+                            Comment_UsersId = 27,
+                            CreatedAt = new DateTime(2025, 6, 1, 10, 0, 6, 817, DateTimeKind.Utc).AddTicks(4584),
+                            Text = "Felicitări pentru efort!"
+                        },
+                        new
+                        {
+                            Id = 224,
+                            Comment_NewsId = 33,
+                            Comment_UsersId = 16,
+                            CreatedAt = new DateTime(2025, 6, 1, 10, 0, 6, 817, DateTimeKind.Utc).AddTicks(4586),
+                            Text = "Hai Unirea Youth, mergem înainte!"
+                        },
+                        new
+                        {
+                            Id = 225,
+                            Comment_NewsId = 33,
+                            Comment_UsersId = 12,
+                            CreatedAt = new DateTime(2025, 6, 1, 10, 0, 6, 817, DateTimeKind.Utc).AddTicks(4624),
+                            Text = "Public frumos, mulțumim pentru susținere!"
+                        },
+                        new
+                        {
+                            Id = 226,
+                            Comment_NewsId = 34,
+                            Comment_UsersId = 7,
+                            CreatedAt = new DateTime(2025, 6, 1, 10, 0, 6, 817, DateTimeKind.Utc).AddTicks(4627),
+                            Text = "Victorie de moral, bravo băieți!"
+                        },
+                        new
+                        {
+                            Id = 227,
+                            Comment_NewsId = 34,
+                            Comment_UsersId = 11,
+                            CreatedAt = new DateTime(2025, 6, 1, 10, 0, 6, 817, DateTimeKind.Utc).AddTicks(4627),
+                            Text = "Andrei Neagu a făcut diferența din nou!"
+                        },
+                        new
+                        {
+                            Id = 228,
+                            Comment_NewsId = 34,
+                            Comment_UsersId = 21,
+                            CreatedAt = new DateTime(2025, 6, 1, 10, 0, 6, 817, DateTimeKind.Utc).AddTicks(4629),
+                            Text = "Super meci, trei puncte importante!"
+                        },
+                        new
+                        {
+                            Id = 229,
+                            Comment_NewsId = 34,
+                            Comment_UsersId = 29,
+                            CreatedAt = new DateTime(2025, 6, 1, 10, 0, 6, 817, DateTimeKind.Utc).AddTicks(4630),
+                            Text = "Forța Unirea în Europa!"
+                        },
+                        new
+                        {
+                            Id = 230,
+                            Comment_NewsId = 34,
+                            Comment_UsersId = 4,
+                            CreatedAt = new DateTime(2025, 6, 1, 10, 0, 6, 817, DateTimeKind.Utc).AddTicks(4631),
+                            Text = "Felicitări întregii echipe pentru efort!"
+                        },
+                        new
+                        {
+                            Id = 231,
+                            Comment_NewsId = 35,
+                            Comment_UsersId = 16,
+                            CreatedAt = new DateTime(2025, 6, 1, 10, 0, 6, 817, DateTimeKind.Utc).AddTicks(4632),
+                            Text = "Ce spectacol! Felicitări băieților!"
+                        },
+                        new
+                        {
+                            Id = 232,
+                            Comment_NewsId = 35,
+                            Comment_UsersId = 12,
+                            CreatedAt = new DateTime(2025, 6, 1, 10, 0, 6, 817, DateTimeKind.Utc).AddTicks(4633),
+                            Text = "Patru goluri, apărare perfectă!"
+                        },
+                        new
+                        {
+                            Id = 233,
+                            Comment_NewsId = 35,
+                            Comment_UsersId = 26,
+                            CreatedAt = new DateTime(2025, 6, 1, 10, 0, 6, 817, DateTimeKind.Utc).AddTicks(4634),
+                            Text = "Vrem trofeul în acest an!"
+                        },
+                        new
+                        {
+                            Id = 234,
+                            Comment_NewsId = 35,
+                            Comment_UsersId = 18,
+                            CreatedAt = new DateTime(2025, 6, 1, 10, 0, 6, 817, DateTimeKind.Utc).AddTicks(4635),
+                            Text = "Alex Lazăr și George Ilie, de nota 10!"
+                        },
+                        new
+                        {
+                            Id = 235,
+                            Comment_NewsId = 35,
+                            Comment_UsersId = 24,
+                            CreatedAt = new DateTime(2025, 6, 1, 10, 0, 6, 817, DateTimeKind.Utc).AddTicks(4636),
+                            Text = "Felicitări și staff-ului tehnic!"
+                        },
+                        new
+                        {
+                            Id = 236,
+                            Comment_NewsId = 36,
+                            Comment_UsersId = 5,
+                            CreatedAt = new DateTime(2025, 6, 1, 10, 0, 6, 817, DateTimeKind.Utc).AddTicks(4637),
+                            Text = "Meci echilibrat, am fi meritat victoria."
+                        },
+                        new
+                        {
+                            Id = 237,
+                            Comment_NewsId = 36,
+                            Comment_UsersId = 27,
+                            CreatedAt = new DateTime(2025, 6, 1, 10, 0, 6, 817, DateTimeKind.Utc).AddTicks(4639),
+                            Text = "Bravo Denis Chiriac pentru gol!"
+                        },
+                        new
+                        {
+                            Id = 238,
+                            Comment_NewsId = 36,
+                            Comment_UsersId = 1,
+                            CreatedAt = new DateTime(2025, 6, 1, 10, 0, 6, 817, DateTimeKind.Utc).AddTicks(4640),
+                            Text = "Hai Unirea, luptați până la final!"
+                        },
+                        new
+                        {
+                            Id = 239,
+                            Comment_NewsId = 36,
+                            Comment_UsersId = 22,
+                            CreatedAt = new DateTime(2025, 6, 1, 10, 0, 6, 817, DateTimeKind.Utc).AddTicks(4641),
+                            Text = "Un punct câștigat, mergem înainte!"
+                        },
+                        new
+                        {
+                            Id = 240,
+                            Comment_NewsId = 36,
+                            Comment_UsersId = 31,
+                            CreatedAt = new DateTime(2025, 6, 1, 10, 0, 6, 817, DateTimeKind.Utc).AddTicks(4642),
+                            Text = "Încă un pas spre play-off!"
+                        },
+                        new
+                        {
+                            Id = 241,
+                            Comment_NewsId = 37,
+                            Comment_UsersId = 5,
+                            CreatedAt = new DateTime(2025, 6, 1, 10, 0, 6, 817, DateTimeKind.Utc).AddTicks(4643),
+                            Text = "Capul sus, urmează alte meciuri!"
+                        },
+                        new
+                        {
+                            Id = 242,
+                            Comment_NewsId = 37,
+                            Comment_UsersId = 19,
+                            CreatedAt = new DateTime(2025, 6, 1, 10, 0, 6, 817, DateTimeKind.Utc).AddTicks(4644),
+                            Text = "CSM Cluj a fost în formă azi."
+                        },
+                        new
+                        {
+                            Id = 243,
+                            Comment_NewsId = 37,
+                            Comment_UsersId = 8,
+                            CreatedAt = new DateTime(2025, 6, 1, 10, 0, 6, 817, DateTimeKind.Utc).AddTicks(4645),
+                            Text = "Hai Unirea, revenim cu victorie!"
+                        },
+                        new
+                        {
+                            Id = 244,
+                            Comment_NewsId = 37,
+                            Comment_UsersId = 25,
+                            CreatedAt = new DateTime(2025, 6, 1, 10, 0, 6, 817, DateTimeKind.Utc).AddTicks(4646),
+                            Text = "Trebuie să strângem rândurile!"
+                        },
+                        new
+                        {
+                            Id = 245,
+                            Comment_NewsId = 37,
+                            Comment_UsersId = 13,
+                            CreatedAt = new DateTime(2025, 6, 1, 10, 0, 6, 817, DateTimeKind.Utc).AddTicks(4647),
+                            Text = "Ne vedem la următorul meci!"
+                        },
+                        new
+                        {
+                            Id = 246,
+                            Comment_NewsId = 38,
+                            Comment_UsersId = 27,
+                            CreatedAt = new DateTime(2025, 6, 1, 10, 0, 6, 817, DateTimeKind.Utc).AddTicks(4648),
+                            Text = "Remiză bună în deplasare!"
+                        },
+                        new
+                        {
+                            Id = 247,
+                            Comment_NewsId = 38,
+                            Comment_UsersId = 1,
+                            CreatedAt = new DateTime(2025, 6, 1, 10, 0, 6, 817, DateTimeKind.Utc).AddTicks(4649),
+                            Text = "Denis Cojocaru, felicitări pentru gol!"
+                        },
+                        new
+                        {
+                            Id = 248,
+                            Comment_NewsId = 38,
+                            Comment_UsersId = 6,
+                            CreatedAt = new DateTime(2025, 6, 1, 10, 0, 6, 817, DateTimeKind.Utc).AddTicks(4650),
+                            Text = "Un punct câștigat, urcăm în clasament!"
+                        },
+                        new
+                        {
+                            Id = 249,
+                            Comment_NewsId = 38,
+                            Comment_UsersId = 15,
+                            CreatedAt = new DateTime(2025, 6, 1, 10, 0, 6, 817, DateTimeKind.Utc).AddTicks(4651),
+                            Text = "Bravo băieți, continuăm seria bună!"
+                        },
+                        new
+                        {
+                            Id = 250,
+                            Comment_NewsId = 38,
+                            Comment_UsersId = 30,
+                            CreatedAt = new DateTime(2025, 6, 1, 10, 0, 6, 817, DateTimeKind.Utc).AddTicks(4652),
+                            Text = "Hai Unirea U21!"
+                        },
+                        new
+                        {
+                            Id = 251,
+                            Comment_NewsId = 39,
+                            Comment_UsersId = 2,
+                            CreatedAt = new DateTime(2025, 6, 1, 10, 0, 6, 817, DateTimeKind.Utc).AddTicks(4653),
+                            Text = "Ionuț Diaconu a fost în mare formă!"
+                        },
+                        new
+                        {
+                            Id = 252,
+                            Comment_NewsId = 39,
+                            Comment_UsersId = 23,
+                            CreatedAt = new DateTime(2025, 6, 1, 10, 0, 6, 817, DateTimeKind.Utc).AddTicks(4654),
+                            Text = "Un egal meritat pentru ambele echipe!"
+                        },
+                        new
+                        {
+                            Id = 253,
+                            Comment_NewsId = 39,
+                            Comment_UsersId = 14,
+                            CreatedAt = new DateTime(2025, 6, 1, 10, 0, 6, 817, DateTimeKind.Utc).AddTicks(4655),
+                            Text = "Bravo Unirea Youth!"
+                        },
+                        new
+                        {
+                            Id = 254,
+                            Comment_NewsId = 39,
+                            Comment_UsersId = 12,
+                            CreatedAt = new DateTime(2025, 6, 1, 10, 0, 6, 817, DateTimeKind.Utc).AddTicks(4656),
+                            Text = "Felicitări pentru rezultat!"
+                        },
+                        new
+                        {
+                            Id = 255,
+                            Comment_NewsId = 39,
+                            Comment_UsersId = 28,
+                            CreatedAt = new DateTime(2025, 6, 1, 10, 0, 6, 817, DateTimeKind.Utc).AddTicks(4657),
+                            Text = "Continuăm cu aceeași atitudine!"
+                        },
+                        new
+                        {
+                            Id = 256,
+                            Comment_NewsId = 40,
+                            Comment_UsersId = 16,
+                            CreatedAt = new DateTime(2025, 6, 1, 10, 0, 6, 817, DateTimeKind.Utc).AddTicks(4658),
+                            Text = "Remiză bună în deplasare!"
+                        },
+                        new
+                        {
+                            Id = 257,
+                            Comment_NewsId = 40,
+                            Comment_UsersId = 22,
+                            CreatedAt = new DateTime(2025, 6, 1, 10, 0, 6, 817, DateTimeKind.Utc).AddTicks(4659),
+                            Text = "Apărarea a funcționat perfect azi!"
+                        },
+                        new
+                        {
+                            Id = 258,
+                            Comment_NewsId = 40,
+                            Comment_UsersId = 3,
+                            CreatedAt = new DateTime(2025, 6, 1, 10, 0, 6, 817, DateTimeKind.Utc).AddTicks(4660),
+                            Text = "Hai Unirea, se poate mai mult!"
+                        },
+                        new
+                        {
+                            Id = 259,
+                            Comment_NewsId = 40,
+                            Comment_UsersId = 10,
+                            CreatedAt = new DateTime(2025, 6, 1, 10, 0, 6, 817, DateTimeKind.Utc).AddTicks(4661),
+                            Text = "Meci bun, fără goluri."
+                        },
+                        new
+                        {
+                            Id = 260,
+                            Comment_NewsId = 40,
+                            Comment_UsersId = 18,
+                            CreatedAt = new DateTime(2025, 6, 1, 10, 0, 6, 817, DateTimeKind.Utc).AddTicks(4662),
+                            Text = "Continuăm drumul spre trofeu!"
+                        },
+                        new
+                        {
+                            Id = 261,
+                            Comment_NewsId = 41,
+                            Comment_UsersId = 4,
+                            CreatedAt = new DateTime(2025, 6, 1, 10, 0, 6, 817, DateTimeKind.Utc).AddTicks(4663),
+                            Text = "Egal echitabil, bun pentru moral!"
+                        },
+                        new
+                        {
+                            Id = 262,
+                            Comment_NewsId = 41,
+                            Comment_UsersId = 29,
+                            CreatedAt = new DateTime(2025, 6, 1, 10, 0, 6, 817, DateTimeKind.Utc).AddTicks(4664),
+                            Text = "Alex Vasilescu, gol frumos!"
+                        },
+                        new
+                        {
+                            Id = 263,
+                            Comment_NewsId = 41,
+                            Comment_UsersId = 9,
+                            CreatedAt = new DateTime(2025, 6, 1, 10, 0, 6, 817, DateTimeKind.Utc).AddTicks(4665),
+                            Text = "Universitatea Brașov a jucat bine!"
+                        },
+                        new
+                        {
+                            Id = 264,
+                            Comment_NewsId = 41,
+                            Comment_UsersId = 26,
+                            CreatedAt = new DateTime(2025, 6, 1, 10, 0, 6, 817, DateTimeKind.Utc).AddTicks(4667),
+                            Text = "Hai Unirea, urmează victoriile!"
+                        },
+                        new
+                        {
+                            Id = 265,
+                            Comment_NewsId = 41,
+                            Comment_UsersId = 20,
+                            CreatedAt = new DateTime(2025, 6, 1, 10, 0, 6, 817, DateTimeKind.Utc).AddTicks(4668),
+                            Text = "Felicitări băieților pentru efort!"
+                        },
+                        new
+                        {
+                            Id = 266,
+                            Comment_NewsId = 42,
+                            Comment_UsersId = 7,
+                            CreatedAt = new DateTime(2025, 6, 1, 10, 0, 6, 817, DateTimeKind.Utc).AddTicks(4669),
+                            Text = "U21 UTA a fost mai bună azi."
+                        },
+                        new
+                        {
+                            Id = 267,
+                            Comment_NewsId = 42,
+                            Comment_UsersId = 31,
+                            CreatedAt = new DateTime(2025, 6, 1, 10, 0, 6, 817, DateTimeKind.Utc).AddTicks(4670),
+                            Text = "Băieții au dat totul pe teren!"
+                        },
+                        new
+                        {
+                            Id = 268,
+                            Comment_NewsId = 42,
+                            Comment_UsersId = 21,
+                            CreatedAt = new DateTime(2025, 6, 1, 10, 0, 6, 817, DateTimeKind.Utc).AddTicks(4671),
+                            Text = "Capul sus, Unirea U21!"
+                        },
+                        new
+                        {
+                            Id = 269,
+                            Comment_NewsId = 42,
+                            Comment_UsersId = 17,
+                            CreatedAt = new DateTime(2025, 6, 1, 10, 0, 6, 817, DateTimeKind.Utc).AddTicks(4672),
+                            Text = "Ne revanșăm la următorul meci!"
+                        },
+                        new
+                        {
+                            Id = 270,
+                            Comment_NewsId = 42,
+                            Comment_UsersId = 27,
+                            CreatedAt = new DateTime(2025, 6, 1, 10, 0, 6, 817, DateTimeKind.Utc).AddTicks(4673),
+                            Text = "Hai Unirea U21, suntem cu voi!"
+                        },
+                        new
+                        {
+                            Id = 271,
+                            Comment_NewsId = 43,
+                            Comment_UsersId = 24,
+                            CreatedAt = new DateTime(2025, 6, 1, 10, 0, 6, 817, DateTimeKind.Utc).AddTicks(4674),
+                            Text = "Băieții au muncit, păcat de rezultat."
+                        },
+                        new
+                        {
+                            Id = 272,
+                            Comment_NewsId = 43,
+                            Comment_UsersId = 11,
+                            CreatedAt = new DateTime(2025, 6, 1, 10, 0, 6, 817, DateTimeKind.Utc).AddTicks(4675),
+                            Text = "Youth Baia Mare a fost pragmatică."
+                        },
+                        new
+                        {
+                            Id = 273,
+                            Comment_NewsId = 43,
+                            Comment_UsersId = 2,
+                            CreatedAt = new DateTime(2025, 6, 1, 10, 0, 6, 817, DateTimeKind.Utc).AddTicks(4676),
+                            Text = "Hai Unirea Youth, revenim la victorie!"
+                        },
+                        new
+                        {
+                            Id = 274,
+                            Comment_NewsId = 43,
+                            Comment_UsersId = 23,
+                            CreatedAt = new DateTime(2025, 6, 1, 10, 0, 6, 817, DateTimeKind.Utc).AddTicks(4677),
+                            Text = "Atmosferă frumoasă la stadion!"
+                        },
+                        new
+                        {
+                            Id = 275,
+                            Comment_NewsId = 43,
+                            Comment_UsersId = 14,
+                            CreatedAt = new DateTime(2025, 6, 1, 10, 0, 6, 817, DateTimeKind.Utc).AddTicks(4678),
+                            Text = "Tinerii au nevoie de susținere!"
+                        },
+                        new
+                        {
+                            Id = 276,
+                            Comment_NewsId = 44,
+                            Comment_UsersId = 4,
+                            CreatedAt = new DateTime(2025, 6, 1, 10, 0, 6, 817, DateTimeKind.Utc).AddTicks(4679),
+                            Text = "Un punct muncit în deplasare!"
+                        },
+                        new
+                        {
+                            Id = 277,
+                            Comment_NewsId = 44,
+                            Comment_UsersId = 15,
+                            CreatedAt = new DateTime(2025, 6, 1, 10, 0, 6, 817, DateTimeKind.Utc).AddTicks(4680),
+                            Text = "Băieții au dat totul!"
+                        },
+                        new
+                        {
+                            Id = 278,
+                            Comment_NewsId = 44,
+                            Comment_UsersId = 23,
+                            CreatedAt = new DateTime(2025, 6, 1, 10, 0, 6, 817, DateTimeKind.Utc).AddTicks(4681),
+                            Text = "Bravo Unirea U21!"
+                        },
+                        new
+                        {
+                            Id = 279,
+                            Comment_NewsId = 44,
+                            Comment_UsersId = 29,
+                            CreatedAt = new DateTime(2025, 6, 1, 10, 0, 6, 817, DateTimeKind.Utc).AddTicks(4682),
+                            Text = "Felicitări pentru efort!"
+                        },
+                        new
+                        {
+                            Id = 280,
+                            Comment_NewsId = 44,
+                            Comment_UsersId = 2,
+                            CreatedAt = new DateTime(2025, 6, 1, 10, 0, 6, 817, DateTimeKind.Utc).AddTicks(4684),
+                            Text = "Hai Unirea U21 la următorul meci!"
+                        },
+                        new
+                        {
+                            Id = 281,
+                            Comment_NewsId = 45,
+                            Comment_UsersId = 1,
+                            CreatedAt = new DateTime(2025, 6, 1, 10, 0, 6, 817, DateTimeKind.Utc).AddTicks(4686),
+                            Text = "Super victorie la Oradea!"
+                        },
+                        new
+                        {
+                            Id = 282,
+                            Comment_NewsId = 45,
+                            Comment_UsersId = 10,
+                            CreatedAt = new DateTime(2025, 6, 1, 10, 0, 6, 817, DateTimeKind.Utc).AddTicks(4687),
+                            Text = "Felicitări Vlad Ionescu pentru gol!"
+                        },
+                        new
+                        {
+                            Id = 283,
+                            Comment_NewsId = 45,
+                            Comment_UsersId = 19,
+                            CreatedAt = new DateTime(2025, 6, 1, 10, 0, 6, 817, DateTimeKind.Utc).AddTicks(4688),
+                            Text = "Tinerii arată bine sezonul acesta!"
+                        },
+                        new
+                        {
+                            Id = 284,
+                            Comment_NewsId = 45,
+                            Comment_UsersId = 28,
+                            CreatedAt = new DateTime(2025, 6, 1, 10, 0, 6, 817, DateTimeKind.Utc).AddTicks(4689),
+                            Text = "Hai Unirea Youth, mergeți înainte!"
+                        },
+                        new
+                        {
+                            Id = 285,
+                            Comment_NewsId = 45,
+                            Comment_UsersId = 7,
+                            CreatedAt = new DateTime(2025, 6, 1, 10, 0, 6, 817, DateTimeKind.Utc).AddTicks(4690),
+                            Text = "Bravo tuturor pentru atitudine!"
+                        },
+                        new
+                        {
+                            Id = 286,
+                            Comment_NewsId = 46,
+                            Comment_UsersId = 13,
+                            CreatedAt = new DateTime(2025, 6, 1, 10, 0, 6, 817, DateTimeKind.Utc).AddTicks(4691),
+                            Text = "Victorie meritată la Constanța!"
+                        },
+                        new
+                        {
+                            Id = 287,
+                            Comment_NewsId = 46,
+                            Comment_UsersId = 6,
+                            CreatedAt = new DateTime(2025, 6, 1, 10, 0, 6, 817, DateTimeKind.Utc).AddTicks(4692),
+                            Text = "Denis Chiriac, Alex Vasilescu – super joc!"
+                        },
+                        new
+                        {
+                            Id = 288,
+                            Comment_NewsId = 46,
+                            Comment_UsersId = 18,
+                            CreatedAt = new DateTime(2025, 6, 1, 10, 0, 6, 817, DateTimeKind.Utc).AddTicks(4693),
+                            Text = "Felicitări echipei pentru efort!"
+                        },
+                        new
+                        {
+                            Id = 289,
+                            Comment_NewsId = 46,
+                            Comment_UsersId = 24,
+                            CreatedAt = new DateTime(2025, 6, 1, 10, 0, 6, 817, DateTimeKind.Utc).AddTicks(4694),
+                            Text = "Un meci cu multe emoții!"
+                        },
+                        new
+                        {
+                            Id = 290,
+                            Comment_NewsId = 46,
+                            Comment_UsersId = 12,
+                            CreatedAt = new DateTime(2025, 6, 1, 10, 0, 6, 817, DateTimeKind.Utc).AddTicks(4695),
+                            Text = "Hai Unirea, la cât mai multe victorii!"
+                        },
+                        new
+                        {
+                            Id = 291,
+                            Comment_NewsId = 47,
+                            Comment_UsersId = 27,
+                            CreatedAt = new DateTime(2025, 6, 1, 10, 0, 6, 817, DateTimeKind.Utc).AddTicks(4696),
+                            Text = "Un punct câștigat cu Buzău!"
+                        },
+                        new
+                        {
+                            Id = 292,
+                            Comment_NewsId = 47,
+                            Comment_UsersId = 17,
+                            CreatedAt = new DateTime(2025, 6, 1, 10, 0, 6, 817, DateTimeKind.Utc).AddTicks(4697),
+                            Text = "Portarii au fost la post!"
+                        },
+                        new
+                        {
+                            Id = 293,
+                            Comment_NewsId = 47,
+                            Comment_UsersId = 30,
+                            CreatedAt = new DateTime(2025, 6, 1, 10, 0, 6, 817, DateTimeKind.Utc).AddTicks(4698),
+                            Text = "Meci echilibrat, ne vedem la următorul!"
+                        },
+                        new
+                        {
+                            Id = 294,
+                            Comment_NewsId = 47,
+                            Comment_UsersId = 21,
+                            CreatedAt = new DateTime(2025, 6, 1, 10, 0, 6, 817, DateTimeKind.Utc).AddTicks(4699),
+                            Text = "Hai Unirea!"
+                        },
+                        new
+                        {
+                            Id = 295,
+                            Comment_NewsId = 47,
+                            Comment_UsersId = 3,
+                            CreatedAt = new DateTime(2025, 6, 1, 10, 0, 6, 817, DateTimeKind.Utc).AddTicks(4700),
+                            Text = "Capul sus, băieți!"
+                        },
+                        new
+                        {
+                            Id = 296,
+                            Comment_NewsId = 48,
+                            Comment_UsersId = 8,
+                            CreatedAt = new DateTime(2025, 6, 1, 10, 0, 6, 817, DateTimeKind.Utc).AddTicks(4701),
+                            Text = "Nu-i nimic, băieții au dat totul!"
+                        },
+                        new
+                        {
+                            Id = 297,
+                            Comment_NewsId = 48,
+                            Comment_UsersId = 25,
+                            CreatedAt = new DateTime(2025, 6, 1, 10, 0, 6, 817, DateTimeKind.Utc).AddTicks(4702),
+                            Text = "Felicitări Andrei Ionescu pentru gol!"
+                        },
+                        new
+                        {
+                            Id = 298,
+                            Comment_NewsId = 48,
+                            Comment_UsersId = 31,
+                            CreatedAt = new DateTime(2025, 6, 1, 10, 0, 6, 817, DateTimeKind.Utc).AddTicks(4703),
+                            Text = "Hai Unirea Youth, ne revenim la următorul!"
+                        },
+                        new
+                        {
+                            Id = 299,
+                            Comment_NewsId = 48,
+                            Comment_UsersId = 14,
+                            CreatedAt = new DateTime(2025, 6, 1, 10, 0, 6, 817, DateTimeKind.Utc).AddTicks(4704),
+                            Text = "Trebuie să avem încredere în tineri!"
+                        },
+                        new
+                        {
+                            Id = 300,
+                            Comment_NewsId = 48,
+                            Comment_UsersId = 22,
+                            CreatedAt = new DateTime(2025, 6, 1, 10, 0, 6, 817, DateTimeKind.Utc).AddTicks(4705),
+                            Text = "Atmosferă frumoasă pe stadion!"
+                        },
+                        new
+                        {
+                            Id = 301,
+                            Comment_NewsId = 49,
+                            Comment_UsersId = 5,
+                            CreatedAt = new DateTime(2025, 6, 1, 10, 0, 6, 817, DateTimeKind.Utc).AddTicks(4706),
+                            Text = "Victorie clară, felicitări U21!"
+                        },
+                        new
+                        {
+                            Id = 302,
+                            Comment_NewsId = 49,
+                            Comment_UsersId = 16,
+                            CreatedAt = new DateTime(2025, 6, 1, 10, 0, 6, 817, DateTimeKind.Utc).AddTicks(4707),
+                            Text = "Alin Voicu și Sergiu Neagu – decisivi!"
+                        },
+                        new
+                        {
+                            Id = 303,
+                            Comment_NewsId = 49,
+                            Comment_UsersId = 9,
+                            CreatedAt = new DateTime(2025, 6, 1, 10, 0, 6, 817, DateTimeKind.Utc).AddTicks(4708),
+                            Text = "Meci perfect, băieții au jucat bine!"
+                        },
+                        new
+                        {
+                            Id = 304,
+                            Comment_NewsId = 49,
+                            Comment_UsersId = 11,
+                            CreatedAt = new DateTime(2025, 6, 1, 10, 0, 6, 817, DateTimeKind.Utc).AddTicks(4709),
+                            Text = "Să continuăm tot așa!"
+                        },
+                        new
+                        {
+                            Id = 305,
+                            Comment_NewsId = 49,
+                            Comment_UsersId = 26,
+                            CreatedAt = new DateTime(2025, 6, 1, 10, 0, 6, 817, DateTimeKind.Utc).AddTicks(4710),
+                            Text = "Hai Unirea U21!"
+                        },
+                        new
+                        {
+                            Id = 306,
+                            Comment_NewsId = 50,
+                            Comment_UsersId = 20,
+                            CreatedAt = new DateTime(2025, 6, 1, 10, 0, 6, 817, DateTimeKind.Utc).AddTicks(4711),
+                            Text = "Meci greu la Paris, continuăm lupta!"
+                        },
+                        new
+                        {
+                            Id = 307,
+                            Comment_NewsId = 50,
+                            Comment_UsersId = 18,
+                            CreatedAt = new DateTime(2025, 6, 1, 10, 0, 6, 817, DateTimeKind.Utc).AddTicks(4712),
+                            Text = "Bravo Alin Neagu pentru gol!"
+                        },
+                        new
+                        {
+                            Id = 308,
+                            Comment_NewsId = 50,
+                            Comment_UsersId = 24,
+                            CreatedAt = new DateTime(2025, 6, 1, 10, 0, 6, 817, DateTimeKind.Utc).AddTicks(4713),
+                            Text = "Hai Unirea, credem în voi!"
+                        },
+                        new
+                        {
+                            Id = 309,
+                            Comment_NewsId = 50,
+                            Comment_UsersId = 29,
+                            CreatedAt = new DateTime(2025, 6, 1, 10, 0, 6, 817, DateTimeKind.Utc).AddTicks(4750),
+                            Text = "PSG e o echipă grea, felicitări pentru atitudine!"
+                        },
+                        new
+                        {
+                            Id = 310,
+                            Comment_NewsId = 50,
+                            Comment_UsersId = 6,
+                            CreatedAt = new DateTime(2025, 6, 1, 10, 0, 6, 817, DateTimeKind.Utc).AddTicks(4753),
+                            Text = "Așteptăm revanșa pe teren propriu!"
+                        },
+                        new
+                        {
+                            Id = 311,
+                            Comment_NewsId = 51,
+                            Comment_UsersId = 17,
+                            CreatedAt = new DateTime(2025, 6, 1, 10, 0, 6, 817, DateTimeKind.Utc).AddTicks(4754),
+                            Text = "Ce meci nebun! Bravo Unirea!"
+                        },
+                        new
+                        {
+                            Id = 312,
+                            Comment_NewsId = 51,
+                            Comment_UsersId = 6,
+                            CreatedAt = new DateTime(2025, 6, 1, 10, 0, 6, 817, DateTimeKind.Utc).AddTicks(4755),
+                            Text = "Calificare meritată, felicitări băieți!"
+                        },
+                        new
+                        {
+                            Id = 313,
+                            Comment_NewsId = 51,
+                            Comment_UsersId = 12,
+                            CreatedAt = new DateTime(2025, 6, 1, 10, 0, 6, 817, DateTimeKind.Utc).AddTicks(4756),
+                            Text = "Andrei Neagu, decisiv ca de obicei!"
+                        },
+                        new
+                        {
+                            Id = 314,
+                            Comment_NewsId = 51,
+                            Comment_UsersId = 29,
+                            CreatedAt = new DateTime(2025, 6, 1, 10, 0, 6, 817, DateTimeKind.Utc).AddTicks(4757),
+                            Text = "Trei goluri superbe!"
+                        },
+                        new
+                        {
+                            Id = 315,
+                            Comment_NewsId = 51,
+                            Comment_UsersId = 23,
+                            CreatedAt = new DateTime(2025, 6, 1, 10, 0, 6, 817, DateTimeKind.Utc).AddTicks(4758),
+                            Text = "Hai Unirea în semifinale!"
+                        },
+                        new
+                        {
+                            Id = 316,
+                            Comment_NewsId = 52,
+                            Comment_UsersId = 2,
+                            CreatedAt = new DateTime(2025, 6, 1, 10, 0, 6, 817, DateTimeKind.Utc).AddTicks(4759),
+                            Text = "Păcat de rezultat, dar mergem înainte!"
+                        },
+                        new
+                        {
+                            Id = 317,
+                            Comment_NewsId = 52,
+                            Comment_UsersId = 26,
+                            CreatedAt = new DateTime(2025, 6, 1, 10, 0, 6, 817, DateTimeKind.Utc).AddTicks(4760),
+                            Text = "CS Mioveni a profitat de ocazii."
+                        },
+                        new
+                        {
+                            Id = 318,
+                            Comment_NewsId = 52,
+                            Comment_UsersId = 5,
+                            CreatedAt = new DateTime(2025, 6, 1, 10, 0, 6, 817, DateTimeKind.Utc).AddTicks(4761),
+                            Text = "Hai Unirea, ne revenim!"
+                        },
+                        new
+                        {
+                            Id = 319,
+                            Comment_NewsId = 52,
+                            Comment_UsersId = 19,
+                            CreatedAt = new DateTime(2025, 6, 1, 10, 0, 6, 817, DateTimeKind.Utc).AddTicks(4762),
+                            Text = "Capul sus, băieți!"
+                        },
+                        new
+                        {
+                            Id = 320,
+                            Comment_NewsId = 52,
+                            Comment_UsersId = 21,
+                            CreatedAt = new DateTime(2025, 6, 1, 10, 0, 6, 817, DateTimeKind.Utc).AddTicks(4763),
+                            Text = "Ne vedem pe stadion la următorul meci."
+                        },
+                        new
+                        {
+                            Id = 321,
+                            Comment_NewsId = 53,
+                            Comment_UsersId = 15,
+                            CreatedAt = new DateTime(2025, 6, 1, 10, 0, 6, 817, DateTimeKind.Utc).AddTicks(4764),
+                            Text = "Victorie muncită, bravo Youth!"
+                        },
+                        new
+                        {
+                            Id = 322,
+                            Comment_NewsId = 53,
+                            Comment_UsersId = 4,
+                            CreatedAt = new DateTime(2025, 6, 1, 10, 0, 6, 817, DateTimeKind.Utc).AddTicks(4765),
+                            Text = "Felicitări pentru cele 3 puncte!"
+                        },
+                        new
+                        {
+                            Id = 323,
+                            Comment_NewsId = 53,
+                            Comment_UsersId = 13,
+                            CreatedAt = new DateTime(2025, 6, 1, 10, 0, 6, 817, DateTimeKind.Utc).AddTicks(4769),
+                            Text = "Tinerii promit mult!"
+                        },
+                        new
+                        {
+                            Id = 324,
+                            Comment_NewsId = 53,
+                            Comment_UsersId = 24,
+                            CreatedAt = new DateTime(2025, 6, 1, 10, 0, 6, 817, DateTimeKind.Utc).AddTicks(4770),
+                            Text = "Hai Unirea Youth!"
+                        },
+                        new
+                        {
+                            Id = 325,
+                            Comment_NewsId = 53,
+                            Comment_UsersId = 31,
+                            CreatedAt = new DateTime(2025, 6, 1, 10, 0, 6, 817, DateTimeKind.Utc).AddTicks(4771),
+                            Text = "Atmosferă frumoasă la Arad!"
+                        },
+                        new
+                        {
+                            Id = 326,
+                            Comment_NewsId = 54,
+                            Comment_UsersId = 27,
+                            CreatedAt = new DateTime(2025, 6, 1, 10, 0, 6, 817, DateTimeKind.Utc).AddTicks(4772),
+                            Text = "Victorie clară pentru U21, felicitări!"
+                        },
+                        new
+                        {
+                            Id = 327,
+                            Comment_NewsId = 54,
+                            Comment_UsersId = 8,
+                            CreatedAt = new DateTime(2025, 6, 1, 10, 0, 6, 817, DateTimeKind.Utc).AddTicks(4773),
+                            Text = "Meci foarte bun al băieților!"
+                        },
+                        new
+                        {
+                            Id = 328,
+                            Comment_NewsId = 54,
+                            Comment_UsersId = 11,
+                            CreatedAt = new DateTime(2025, 6, 1, 10, 0, 6, 817, DateTimeKind.Utc).AddTicks(4774),
+                            Text = "Hai Unirea U21, susținem echipa!"
+                        },
+                        new
+                        {
+                            Id = 329,
+                            Comment_NewsId = 54,
+                            Comment_UsersId = 3,
+                            CreatedAt = new DateTime(2025, 6, 1, 10, 0, 6, 817, DateTimeKind.Utc).AddTicks(4775),
+                            Text = "Trei puncte uriașe în deplasare!"
+                        },
+                        new
+                        {
+                            Id = 330,
+                            Comment_NewsId = 54,
+                            Comment_UsersId = 28,
+                            CreatedAt = new DateTime(2025, 6, 1, 10, 0, 6, 817, DateTimeKind.Utc).AddTicks(4776),
+                            Text = "Continuăm seria bună!"
+                        },
+                        new
+                        {
+                            Id = 331,
+                            Comment_NewsId = 55,
+                            Comment_UsersId = 1,
+                            CreatedAt = new DateTime(2025, 6, 1, 10, 0, 6, 817, DateTimeKind.Utc).AddTicks(4777),
+                            Text = "Remiză utilă în grupele Champions League!"
+                        },
+                        new
+                        {
+                            Id = 332,
+                            Comment_NewsId = 55,
+                            Comment_UsersId = 25,
+                            CreatedAt = new DateTime(2025, 6, 1, 10, 0, 6, 817, DateTimeKind.Utc).AddTicks(4778),
+                            Text = "Felicitări Sergiu Chiriac pentru gol!"
+                        },
+                        new
+                        {
+                            Id = 333,
+                            Comment_NewsId = 55,
+                            Comment_UsersId = 18,
+                            CreatedAt = new DateTime(2025, 6, 1, 10, 0, 6, 817, DateTimeKind.Utc).AddTicks(4779),
+                            Text = "Olympiakos, adversar puternic!"
+                        },
+                        new
+                        {
+                            Id = 334,
+                            Comment_NewsId = 55,
+                            Comment_UsersId = 10,
+                            CreatedAt = new DateTime(2025, 6, 1, 10, 0, 6, 817, DateTimeKind.Utc).AddTicks(4780),
+                            Text = "Hai Unirea, credem în calificare!"
+                        },
+                        new
+                        {
+                            Id = 335,
+                            Comment_NewsId = 55,
+                            Comment_UsersId = 14,
+                            CreatedAt = new DateTime(2025, 6, 1, 10, 0, 6, 817, DateTimeKind.Utc).AddTicks(4781),
+                            Text = "Un punct important, felicitări!"
+                        },
+                        new
+                        {
+                            Id = 336,
+                            Comment_NewsId = 56,
+                            Comment_UsersId = 7,
+                            CreatedAt = new DateTime(2025, 6, 1, 10, 0, 6, 817, DateTimeKind.Utc).AddTicks(4782),
+                            Text = "Felicitări pentru calificare!"
+                        },
+                        new
+                        {
+                            Id = 337,
+                            Comment_NewsId = 56,
+                            Comment_UsersId = 16,
+                            CreatedAt = new DateTime(2025, 6, 1, 10, 0, 6, 817, DateTimeKind.Utc).AddTicks(4783),
+                            Text = "Trei goluri și fără gol primit!"
+                        },
+                        new
+                        {
+                            Id = 338,
+                            Comment_NewsId = 56,
+                            Comment_UsersId = 9,
+                            CreatedAt = new DateTime(2025, 6, 1, 10, 0, 6, 817, DateTimeKind.Utc).AddTicks(4784),
+                            Text = "Denis Ilie din nou decisiv!"
+                        },
+                        new
+                        {
+                            Id = 339,
+                            Comment_NewsId = 56,
+                            Comment_UsersId = 22,
+                            CreatedAt = new DateTime(2025, 6, 1, 10, 0, 6, 817, DateTimeKind.Utc).AddTicks(4785),
+                            Text = "Bravo echipei, se simte progresul!"
+                        },
+                        new
+                        {
+                            Id = 340,
+                            Comment_NewsId = 56,
+                            Comment_UsersId = 20,
+                            CreatedAt = new DateTime(2025, 6, 1, 10, 0, 6, 817, DateTimeKind.Utc).AddTicks(4786),
+                            Text = "Hai Unirea spre trofeu!"
                         });
                 });
 
@@ -713,31 +2753,13 @@ namespace FCUnirea.Persistance.Data.Migrations
                         new
                         {
                             Id = 5,
-                            CompetitionName = "Cupa Romaniei U21",
-                            CompetitionType = 1
-                        },
-                        new
-                        {
-                            Id = 6,
-                            CompetitionName = "Champions League U21",
-                            CompetitionType = 2
-                        },
-                        new
-                        {
-                            Id = 7,
                             CompetitionName = "Liga 1 Tineret",
                             CompetitionType = 0
                         },
                         new
                         {
-                            Id = 8,
-                            CompetitionName = "Cupa Romaniei Tineret",
-                            CompetitionType = 1
-                        },
-                        new
-                        {
-                            Id = 9,
-                            CompetitionName = "Champions League Tineret",
+                            Id = 6,
+                            CompetitionName = "Champions League Knockout stage",
                             CompetitionType = 2
                         });
                 });
@@ -813,1387 +2835,1387 @@ namespace FCUnirea.Persistance.Data.Migrations
                         {
                             Id = 1,
                             AwayTeamScore = 1,
-                            GameDate = new DateTime(2025, 4, 1, 18, 0, 0, 0, DateTimeKind.Unspecified),
+                            GameDate = new DateTime(2025, 5, 1, 18, 0, 0, 0, DateTimeKind.Unspecified),
                             Game_AwayTeamId = 10,
                             Game_CompetitionsId = 1,
                             Game_HomeTeamId = 1,
                             Game_StadiumsId = 1,
                             HomeTeamScore = 2,
                             IsPlayed = true,
-                            RefereeName = "Arbitru 1",
+                            RefereeName = "Marius Popa",
                             TicketsSold = 5
                         },
                         new
                         {
                             Id = 2,
                             AwayTeamScore = 0,
-                            GameDate = new DateTime(2025, 4, 1, 20, 0, 0, 0, DateTimeKind.Unspecified),
+                            GameDate = new DateTime(2025, 5, 1, 20, 0, 0, 0, DateTimeKind.Unspecified),
                             Game_AwayTeamId = 9,
                             Game_CompetitionsId = 1,
                             Game_HomeTeamId = 2,
                             Game_StadiumsId = 2,
                             HomeTeamScore = 0,
                             IsPlayed = true,
-                            RefereeName = "Arbitru 2",
+                            RefereeName = "Cătălin Gheorghe",
                             TicketsSold = 9
                         },
                         new
                         {
                             Id = 3,
                             AwayTeamScore = 1,
-                            GameDate = new DateTime(2025, 4, 1, 19, 0, 0, 0, DateTimeKind.Unspecified),
+                            GameDate = new DateTime(2025, 5, 1, 19, 0, 0, 0, DateTimeKind.Unspecified),
                             Game_AwayTeamId = 8,
                             Game_CompetitionsId = 1,
                             Game_HomeTeamId = 3,
                             Game_StadiumsId = 3,
                             HomeTeamScore = 2,
                             IsPlayed = true,
-                            RefereeName = "Arbitru 3",
+                            RefereeName = "Daniel Petrescu",
                             TicketsSold = 6
                         },
                         new
                         {
                             Id = 4,
                             AwayTeamScore = 1,
-                            GameDate = new DateTime(2025, 4, 1, 21, 0, 0, 0, DateTimeKind.Unspecified),
+                            GameDate = new DateTime(2025, 5, 1, 21, 0, 0, 0, DateTimeKind.Unspecified),
                             Game_AwayTeamId = 7,
                             Game_CompetitionsId = 1,
                             Game_HomeTeamId = 4,
                             Game_StadiumsId = 4,
                             HomeTeamScore = 0,
                             IsPlayed = true,
-                            RefereeName = "Arbitru 4",
+                            RefereeName = "Bogdan Neagu",
                             TicketsSold = 4
                         },
                         new
                         {
                             Id = 5,
                             AwayTeamScore = 2,
-                            GameDate = new DateTime(2025, 4, 1, 2, 0, 0, 0, DateTimeKind.Unspecified),
+                            GameDate = new DateTime(2025, 5, 1, 2, 0, 0, 0, DateTimeKind.Unspecified),
                             Game_AwayTeamId = 6,
                             Game_CompetitionsId = 1,
                             Game_HomeTeamId = 5,
                             Game_StadiumsId = 5,
                             HomeTeamScore = 1,
                             IsPlayed = true,
-                            RefereeName = "Arbitru 5",
+                            RefereeName = "Mihai Rusu",
                             TicketsSold = 12
                         },
                         new
                         {
                             Id = 6,
                             AwayTeamScore = 0,
-                            GameDate = new DateTime(2025, 4, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            GameDate = new DateTime(2025, 5, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Game_AwayTeamId = 20,
                             Game_CompetitionsId = 4,
                             Game_HomeTeamId = 11,
                             Game_StadiumsId = 11,
                             HomeTeamScore = 0,
                             IsPlayed = true,
-                            RefereeName = "Arbitru 6",
+                            RefereeName = "Paul Voicu",
                             TicketsSold = 5
                         },
                         new
                         {
                             Id = 7,
                             AwayTeamScore = 3,
-                            GameDate = new DateTime(2025, 4, 1, 1, 0, 0, 0, DateTimeKind.Unspecified),
+                            GameDate = new DateTime(2025, 5, 1, 1, 0, 0, 0, DateTimeKind.Unspecified),
                             Game_AwayTeamId = 19,
                             Game_CompetitionsId = 4,
                             Game_HomeTeamId = 12,
                             Game_StadiumsId = 12,
                             HomeTeamScore = 2,
                             IsPlayed = true,
-                            RefereeName = "Arbitru 7",
+                            RefereeName = "Paul Voicu",
                             TicketsSold = 6
                         },
                         new
                         {
                             Id = 8,
                             AwayTeamScore = 3,
-                            GameDate = new DateTime(2025, 4, 1, 18, 0, 0, 0, DateTimeKind.Unspecified),
+                            GameDate = new DateTime(2025, 5, 1, 18, 0, 0, 0, DateTimeKind.Unspecified),
                             Game_AwayTeamId = 18,
                             Game_CompetitionsId = 4,
                             Game_HomeTeamId = 13,
                             Game_StadiumsId = 13,
                             HomeTeamScore = 3,
                             IsPlayed = true,
-                            RefereeName = "Arbitru 8",
+                            RefereeName = "Cosmin Ionescu",
                             TicketsSold = 7
                         },
                         new
                         {
                             Id = 9,
                             AwayTeamScore = 1,
-                            GameDate = new DateTime(2025, 4, 1, 6, 0, 0, 0, DateTimeKind.Unspecified),
+                            GameDate = new DateTime(2025, 5, 1, 6, 0, 0, 0, DateTimeKind.Unspecified),
                             Game_AwayTeamId = 17,
                             Game_CompetitionsId = 4,
                             Game_HomeTeamId = 14,
                             Game_StadiumsId = 14,
                             HomeTeamScore = 2,
                             IsPlayed = true,
-                            RefereeName = "Arbitru 9",
+                            RefereeName = "Radu Marin",
                             TicketsSold = 8
                         },
                         new
                         {
                             Id = 10,
                             AwayTeamScore = 3,
-                            GameDate = new DateTime(2025, 4, 1, 11, 0, 0, 0, DateTimeKind.Unspecified),
+                            GameDate = new DateTime(2025, 5, 1, 11, 0, 0, 0, DateTimeKind.Unspecified),
                             Game_AwayTeamId = 16,
                             Game_CompetitionsId = 4,
                             Game_HomeTeamId = 15,
                             Game_StadiumsId = 15,
                             HomeTeamScore = 2,
                             IsPlayed = true,
-                            RefereeName = "Arbitru 10",
+                            RefereeName = "Silviu Barbu",
                             TicketsSold = 9
                         },
                         new
                         {
                             Id = 11,
                             AwayTeamScore = 1,
-                            GameDate = new DateTime(2025, 4, 1, 3, 0, 0, 0, DateTimeKind.Unspecified),
+                            GameDate = new DateTime(2025, 5, 1, 3, 0, 0, 0, DateTimeKind.Unspecified),
                             Game_AwayTeamId = 26,
-                            Game_CompetitionsId = 7,
+                            Game_CompetitionsId = 5,
                             Game_HomeTeamId = 21,
                             Game_StadiumsId = 21,
                             HomeTeamScore = 2,
                             IsPlayed = true,
-                            RefereeName = "Arbitru 11",
+                            RefereeName = "Florin Stan",
                             TicketsSold = 5
                         },
                         new
                         {
                             Id = 12,
                             AwayTeamScore = 1,
-                            GameDate = new DateTime(2025, 4, 1, 20, 0, 0, 0, DateTimeKind.Unspecified),
+                            GameDate = new DateTime(2025, 5, 1, 20, 0, 0, 0, DateTimeKind.Unspecified),
                             Game_AwayTeamId = 27,
-                            Game_CompetitionsId = 7,
+                            Game_CompetitionsId = 5,
                             Game_HomeTeamId = 22,
                             Game_StadiumsId = 22,
                             HomeTeamScore = 2,
                             IsPlayed = true,
-                            RefereeName = "Arbitru 12",
+                            RefereeName = "Andrei Dumitrescu",
                             TicketsSold = 4
                         },
                         new
                         {
                             Id = 13,
                             AwayTeamScore = 0,
-                            GameDate = new DateTime(2025, 4, 1, 5, 0, 0, 0, DateTimeKind.Unspecified),
+                            GameDate = new DateTime(2025, 5, 1, 5, 0, 0, 0, DateTimeKind.Unspecified),
                             Game_AwayTeamId = 28,
-                            Game_CompetitionsId = 7,
+                            Game_CompetitionsId = 5,
                             Game_HomeTeamId = 23,
                             Game_StadiumsId = 23,
                             HomeTeamScore = 2,
                             IsPlayed = true,
-                            RefereeName = "Arbitru 13",
+                            RefereeName = "Alexandru Vasilescu",
                             TicketsSold = 3
                         },
                         new
                         {
                             Id = 14,
                             AwayTeamScore = 1,
-                            GameDate = new DateTime(2025, 4, 1, 6, 0, 0, 0, DateTimeKind.Unspecified),
+                            GameDate = new DateTime(2025, 5, 1, 6, 0, 0, 0, DateTimeKind.Unspecified),
                             Game_AwayTeamId = 29,
-                            Game_CompetitionsId = 7,
+                            Game_CompetitionsId = 5,
                             Game_HomeTeamId = 24,
                             Game_StadiumsId = 24,
                             HomeTeamScore = 2,
                             IsPlayed = true,
-                            RefereeName = "Arbitru 14",
+                            RefereeName = "George Ilie",
                             TicketsSold = 4
                         },
                         new
                         {
                             Id = 15,
                             AwayTeamScore = 2,
-                            GameDate = new DateTime(2025, 4, 1, 8, 0, 0, 0, DateTimeKind.Unspecified),
+                            GameDate = new DateTime(2025, 5, 1, 8, 0, 0, 0, DateTimeKind.Unspecified),
                             Game_AwayTeamId = 30,
-                            Game_CompetitionsId = 7,
+                            Game_CompetitionsId = 5,
                             Game_HomeTeamId = 25,
                             Game_StadiumsId = 25,
                             HomeTeamScore = 1,
                             IsPlayed = true,
-                            RefereeName = "Arbitru 15",
+                            RefereeName = "Iulian Nistor",
                             TicketsSold = 5
                         },
                         new
                         {
                             Id = 16,
-                            AwayTeamScore = 0,
-                            GameDate = new DateTime(2025, 4, 8, 18, 0, 0, 0, DateTimeKind.Unspecified),
+                            AwayTeamScore = 1,
+                            GameDate = new DateTime(2025, 5, 8, 18, 0, 0, 0, DateTimeKind.Unspecified),
                             Game_AwayTeamId = 6,
                             Game_CompetitionsId = 1,
                             Game_HomeTeamId = 10,
                             Game_StadiumsId = 10,
-                            HomeTeamScore = 0,
-                            IsPlayed = false,
-                            RefereeName = "Arbitru 1",
-                            TicketsSold = 0
+                            HomeTeamScore = 2,
+                            IsPlayed = true,
+                            RefereeName = "Cristian Ene",
+                            TicketsSold = 22
                         },
                         new
                         {
                             Id = 17,
-                            AwayTeamScore = 0,
-                            GameDate = new DateTime(2025, 4, 8, 20, 0, 0, 0, DateTimeKind.Unspecified),
+                            AwayTeamScore = 3,
+                            GameDate = new DateTime(2025, 5, 8, 20, 0, 0, 0, DateTimeKind.Unspecified),
                             Game_AwayTeamId = 5,
                             Game_CompetitionsId = 1,
                             Game_HomeTeamId = 7,
                             Game_StadiumsId = 7,
-                            HomeTeamScore = 0,
-                            IsPlayed = false,
-                            RefereeName = "Arbitru 2",
-                            TicketsSold = 0
+                            HomeTeamScore = 1,
+                            IsPlayed = true,
+                            RefereeName = "Paul Voicu",
+                            TicketsSold = 12
                         },
                         new
                         {
                             Id = 18,
-                            AwayTeamScore = 0,
-                            GameDate = new DateTime(2025, 4, 8, 19, 0, 0, 0, DateTimeKind.Unspecified),
+                            AwayTeamScore = 2,
+                            GameDate = new DateTime(2025, 5, 8, 19, 0, 0, 0, DateTimeKind.Unspecified),
                             Game_AwayTeamId = 4,
                             Game_CompetitionsId = 1,
                             Game_HomeTeamId = 8,
                             Game_StadiumsId = 8,
-                            HomeTeamScore = 0,
-                            IsPlayed = false,
-                            RefereeName = "Arbitru 3",
-                            TicketsSold = 0
+                            HomeTeamScore = 2,
+                            IsPlayed = true,
+                            RefereeName = "Iulian Nistor",
+                            TicketsSold = 23
                         },
                         new
                         {
                             Id = 19,
-                            AwayTeamScore = 0,
-                            GameDate = new DateTime(2025, 4, 8, 21, 0, 0, 0, DateTimeKind.Unspecified),
+                            AwayTeamScore = 1,
+                            GameDate = new DateTime(2025, 5, 8, 21, 0, 0, 0, DateTimeKind.Unspecified),
                             Game_AwayTeamId = 3,
                             Game_CompetitionsId = 1,
                             Game_HomeTeamId = 9,
                             Game_StadiumsId = 9,
                             HomeTeamScore = 0,
-                            IsPlayed = false,
-                            RefereeName = "Arbitru 4",
-                            TicketsSold = 0
+                            IsPlayed = true,
+                            RefereeName = "Mihai Rusu",
+                            TicketsSold = 17
                         },
                         new
                         {
                             Id = 20,
-                            AwayTeamScore = 0,
-                            GameDate = new DateTime(2025, 4, 8, 2, 0, 0, 0, DateTimeKind.Unspecified),
+                            AwayTeamScore = 1,
+                            GameDate = new DateTime(2025, 5, 8, 2, 0, 0, 0, DateTimeKind.Unspecified),
                             Game_AwayTeamId = 2,
                             Game_CompetitionsId = 1,
                             Game_HomeTeamId = 1,
                             Game_StadiumsId = 1,
-                            HomeTeamScore = 0,
-                            IsPlayed = false,
-                            RefereeName = "Arbitru 5",
-                            TicketsSold = 0
+                            HomeTeamScore = 4,
+                            IsPlayed = true,
+                            RefereeName = "Silviu Barbu",
+                            TicketsSold = 8
                         },
                         new
                         {
                             Id = 21,
                             AwayTeamScore = 0,
-                            GameDate = new DateTime(2025, 4, 8, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            GameDate = new DateTime(2025, 5, 8, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Game_AwayTeamId = 16,
                             Game_CompetitionsId = 4,
                             Game_HomeTeamId = 20,
                             Game_StadiumsId = 20,
-                            HomeTeamScore = 0,
-                            IsPlayed = false,
-                            RefereeName = "Arbitru 6",
-                            TicketsSold = 0
+                            HomeTeamScore = 2,
+                            IsPlayed = true,
+                            RefereeName = "Cătălin Gheorghe",
+                            TicketsSold = 20
                         },
                         new
                         {
                             Id = 22,
-                            AwayTeamScore = 0,
-                            GameDate = new DateTime(2025, 4, 8, 1, 0, 0, 0, DateTimeKind.Unspecified),
+                            AwayTeamScore = 2,
+                            GameDate = new DateTime(2025, 5, 8, 1, 0, 0, 0, DateTimeKind.Unspecified),
                             Game_AwayTeamId = 15,
                             Game_CompetitionsId = 4,
                             Game_HomeTeamId = 17,
                             Game_StadiumsId = 17,
-                            HomeTeamScore = 0,
-                            IsPlayed = false,
-                            RefereeName = "Arbitru 7",
-                            TicketsSold = 0
+                            HomeTeamScore = 2,
+                            IsPlayed = true,
+                            RefereeName = "Cătălin Gheorghe",
+                            TicketsSold = 16
                         },
                         new
                         {
                             Id = 23,
-                            AwayTeamScore = 0,
-                            GameDate = new DateTime(2025, 4, 8, 18, 0, 0, 0, DateTimeKind.Unspecified),
+                            AwayTeamScore = 3,
+                            GameDate = new DateTime(2025, 5, 8, 18, 0, 0, 0, DateTimeKind.Unspecified),
                             Game_AwayTeamId = 14,
                             Game_CompetitionsId = 4,
                             Game_HomeTeamId = 18,
                             Game_StadiumsId = 18,
                             HomeTeamScore = 0,
-                            IsPlayed = false,
-                            RefereeName = "Arbitru 8",
-                            TicketsSold = 0
+                            IsPlayed = true,
+                            RefereeName = "Daniel Petrescu",
+                            TicketsSold = 14
                         },
                         new
                         {
                             Id = 24,
-                            AwayTeamScore = 0,
-                            GameDate = new DateTime(2025, 4, 8, 6, 0, 0, 0, DateTimeKind.Unspecified),
+                            AwayTeamScore = 1,
+                            GameDate = new DateTime(2025, 5, 8, 6, 0, 0, 0, DateTimeKind.Unspecified),
                             Game_AwayTeamId = 13,
                             Game_CompetitionsId = 4,
                             Game_HomeTeamId = 19,
                             Game_StadiumsId = 19,
-                            HomeTeamScore = 0,
-                            IsPlayed = false,
-                            RefereeName = "Arbitru 9",
-                            TicketsSold = 0
+                            HomeTeamScore = 1,
+                            IsPlayed = true,
+                            RefereeName = "Florin Stan",
+                            TicketsSold = 9
                         },
                         new
                         {
                             Id = 25,
-                            AwayTeamScore = 0,
-                            GameDate = new DateTime(2025, 4, 8, 11, 0, 0, 0, DateTimeKind.Unspecified),
+                            AwayTeamScore = 2,
+                            GameDate = new DateTime(2025, 5, 8, 11, 0, 0, 0, DateTimeKind.Unspecified),
                             Game_AwayTeamId = 12,
                             Game_CompetitionsId = 4,
                             Game_HomeTeamId = 11,
                             Game_StadiumsId = 11,
                             HomeTeamScore = 0,
-                            IsPlayed = false,
-                            RefereeName = "Arbitru 10",
-                            TicketsSold = 0
+                            IsPlayed = true,
+                            RefereeName = "Cristian Ene",
+                            TicketsSold = 5
                         },
                         new
                         {
                             Id = 26,
                             AwayTeamScore = 0,
-                            GameDate = new DateTime(2025, 4, 8, 3, 0, 0, 0, DateTimeKind.Unspecified),
+                            GameDate = new DateTime(2025, 5, 8, 3, 0, 0, 0, DateTimeKind.Unspecified),
                             Game_AwayTeamId = 26,
-                            Game_CompetitionsId = 7,
+                            Game_CompetitionsId = 5,
                             Game_HomeTeamId = 30,
                             Game_StadiumsId = 30,
-                            HomeTeamScore = 0,
-                            IsPlayed = false,
-                            RefereeName = "Arbitru 11",
-                            TicketsSold = 0
+                            HomeTeamScore = 3,
+                            IsPlayed = true,
+                            RefereeName = "Alexandru Vasilescu",
+                            TicketsSold = 19
                         },
                         new
                         {
                             Id = 27,
-                            AwayTeamScore = 0,
-                            GameDate = new DateTime(2025, 4, 8, 20, 0, 0, 0, DateTimeKind.Unspecified),
+                            AwayTeamScore = 1,
+                            GameDate = new DateTime(2025, 5, 8, 20, 0, 0, 0, DateTimeKind.Unspecified),
                             Game_AwayTeamId = 25,
-                            Game_CompetitionsId = 7,
+                            Game_CompetitionsId = 5,
                             Game_HomeTeamId = 27,
                             Game_StadiumsId = 27,
-                            HomeTeamScore = 0,
-                            IsPlayed = false,
-                            RefereeName = "Arbitru 12",
-                            TicketsSold = 0
+                            HomeTeamScore = 2,
+                            IsPlayed = true,
+                            RefereeName = "Marius Popa",
+                            TicketsSold = 16
                         },
                         new
                         {
                             Id = 28,
-                            AwayTeamScore = 0,
-                            GameDate = new DateTime(2025, 4, 8, 5, 0, 0, 0, DateTimeKind.Unspecified),
+                            AwayTeamScore = 2,
+                            GameDate = new DateTime(2025, 5, 8, 5, 0, 0, 0, DateTimeKind.Unspecified),
                             Game_AwayTeamId = 24,
-                            Game_CompetitionsId = 7,
+                            Game_CompetitionsId = 5,
                             Game_HomeTeamId = 28,
                             Game_StadiumsId = 28,
                             HomeTeamScore = 0,
-                            IsPlayed = false,
-                            RefereeName = "Arbitru 13",
-                            TicketsSold = 0
+                            IsPlayed = true,
+                            RefereeName = "Andrei Dumitrescu",
+                            TicketsSold = 11
                         },
                         new
                         {
                             Id = 29,
-                            AwayTeamScore = 0,
-                            GameDate = new DateTime(2025, 4, 8, 6, 0, 0, 0, DateTimeKind.Unspecified),
+                            AwayTeamScore = 3,
+                            GameDate = new DateTime(2025, 5, 8, 6, 0, 0, 0, DateTimeKind.Unspecified),
                             Game_AwayTeamId = 23,
-                            Game_CompetitionsId = 7,
+                            Game_CompetitionsId = 5,
                             Game_HomeTeamId = 29,
                             Game_StadiumsId = 29,
-                            HomeTeamScore = 0,
-                            IsPlayed = false,
-                            RefereeName = "Arbitru 14",
-                            TicketsSold = 0
+                            HomeTeamScore = 1,
+                            IsPlayed = true,
+                            RefereeName = "George Ilie",
+                            TicketsSold = 14
                         },
                         new
                         {
                             Id = 30,
-                            AwayTeamScore = 0,
-                            GameDate = new DateTime(2025, 4, 8, 8, 0, 0, 0, DateTimeKind.Unspecified),
+                            AwayTeamScore = 2,
+                            GameDate = new DateTime(2025, 5, 8, 8, 0, 0, 0, DateTimeKind.Unspecified),
                             Game_AwayTeamId = 22,
-                            Game_CompetitionsId = 7,
+                            Game_CompetitionsId = 5,
                             Game_HomeTeamId = 21,
                             Game_StadiumsId = 21,
-                            HomeTeamScore = 0,
-                            IsPlayed = false,
-                            RefereeName = "Arbitru 15",
-                            TicketsSold = 0
+                            HomeTeamScore = 2,
+                            IsPlayed = true,
+                            RefereeName = "Radu Marin",
+                            TicketsSold = 9
                         },
                         new
                         {
                             Id = 31,
-                            AwayTeamScore = 0,
-                            GameDate = new DateTime(2025, 4, 15, 18, 0, 0, 0, DateTimeKind.Unspecified),
+                            AwayTeamScore = 2,
+                            GameDate = new DateTime(2025, 5, 15, 18, 0, 0, 0, DateTimeKind.Unspecified),
                             Game_AwayTeamId = 10,
                             Game_CompetitionsId = 1,
                             Game_HomeTeamId = 2,
                             Game_StadiumsId = 2,
-                            HomeTeamScore = 0,
-                            IsPlayed = false,
-                            RefereeName = "Arbitru 1",
-                            TicketsSold = 0
+                            HomeTeamScore = 1,
+                            IsPlayed = true,
+                            RefereeName = "Bogdan Neagu",
+                            TicketsSold = 16
                         },
                         new
                         {
                             Id = 32,
-                            AwayTeamScore = 0,
-                            GameDate = new DateTime(2025, 4, 15, 20, 0, 0, 0, DateTimeKind.Unspecified),
+                            AwayTeamScore = 1,
+                            GameDate = new DateTime(2025, 5, 15, 20, 0, 0, 0, DateTimeKind.Unspecified),
                             Game_AwayTeamId = 1,
                             Game_CompetitionsId = 1,
                             Game_HomeTeamId = 3,
                             Game_StadiumsId = 3,
                             HomeTeamScore = 0,
-                            IsPlayed = false,
-                            RefereeName = "Arbitru 2",
-                            TicketsSold = 0
+                            IsPlayed = true,
+                            RefereeName = "Cosmin Ionescu",
+                            TicketsSold = 10
                         },
                         new
                         {
                             Id = 33,
-                            AwayTeamScore = 0,
-                            GameDate = new DateTime(2025, 4, 15, 19, 0, 0, 0, DateTimeKind.Unspecified),
+                            AwayTeamScore = 2,
+                            GameDate = new DateTime(2025, 5, 15, 19, 0, 0, 0, DateTimeKind.Unspecified),
                             Game_AwayTeamId = 9,
                             Game_CompetitionsId = 1,
                             Game_HomeTeamId = 4,
                             Game_StadiumsId = 4,
-                            HomeTeamScore = 0,
-                            IsPlayed = false,
-                            RefereeName = "Arbitru 3",
-                            TicketsSold = 0
+                            HomeTeamScore = 2,
+                            IsPlayed = true,
+                            RefereeName = "Andrei Dumitrescu",
+                            TicketsSold = 7
                         },
                         new
                         {
                             Id = 34,
                             AwayTeamScore = 0,
-                            GameDate = new DateTime(2025, 4, 15, 21, 0, 0, 0, DateTimeKind.Unspecified),
+                            GameDate = new DateTime(2025, 5, 15, 21, 0, 0, 0, DateTimeKind.Unspecified),
                             Game_AwayTeamId = 8,
                             Game_CompetitionsId = 1,
                             Game_HomeTeamId = 5,
                             Game_StadiumsId = 5,
-                            HomeTeamScore = 0,
-                            IsPlayed = false,
-                            RefereeName = "Arbitru 4",
-                            TicketsSold = 0
+                            HomeTeamScore = 3,
+                            IsPlayed = true,
+                            RefereeName = "Alexandru Vasilescu",
+                            TicketsSold = 21
                         },
                         new
                         {
                             Id = 35,
-                            AwayTeamScore = 0,
-                            GameDate = new DateTime(2025, 4, 15, 2, 0, 0, 0, DateTimeKind.Unspecified),
+                            AwayTeamScore = 1,
+                            GameDate = new DateTime(2025, 5, 15, 2, 0, 0, 0, DateTimeKind.Unspecified),
                             Game_AwayTeamId = 7,
                             Game_CompetitionsId = 1,
                             Game_HomeTeamId = 6,
                             Game_StadiumsId = 6,
-                            HomeTeamScore = 0,
-                            IsPlayed = false,
-                            RefereeName = "Arbitru 5",
-                            TicketsSold = 0
+                            HomeTeamScore = 1,
+                            IsPlayed = true,
+                            RefereeName = "Marius Popa",
+                            TicketsSold = 5
                         },
                         new
                         {
                             Id = 36,
-                            AwayTeamScore = 0,
-                            GameDate = new DateTime(2025, 4, 15, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            AwayTeamScore = 1,
+                            GameDate = new DateTime(2025, 5, 15, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Game_AwayTeamId = 20,
                             Game_CompetitionsId = 4,
                             Game_HomeTeamId = 12,
                             Game_StadiumsId = 12,
-                            HomeTeamScore = 0,
-                            IsPlayed = false,
-                            RefereeName = "Arbitru 6",
-                            TicketsSold = 0
+                            HomeTeamScore = 1,
+                            IsPlayed = true,
+                            RefereeName = "Paul Voicu",
+                            TicketsSold = 8
                         },
                         new
                         {
                             Id = 37,
-                            AwayTeamScore = 0,
-                            GameDate = new DateTime(2025, 4, 15, 1, 0, 0, 0, DateTimeKind.Unspecified),
+                            AwayTeamScore = 2,
+                            GameDate = new DateTime(2025, 5, 15, 1, 0, 0, 0, DateTimeKind.Unspecified),
                             Game_AwayTeamId = 11,
                             Game_CompetitionsId = 4,
                             Game_HomeTeamId = 13,
                             Game_StadiumsId = 13,
                             HomeTeamScore = 0,
-                            IsPlayed = false,
-                            RefereeName = "Arbitru 7",
-                            TicketsSold = 0
+                            IsPlayed = true,
+                            RefereeName = "Paul Voicu",
+                            TicketsSold = 11
                         },
                         new
                         {
                             Id = 38,
-                            AwayTeamScore = 0,
-                            GameDate = new DateTime(2025, 4, 15, 18, 0, 0, 0, DateTimeKind.Unspecified),
+                            AwayTeamScore = 3,
+                            GameDate = new DateTime(2025, 5, 15, 18, 0, 0, 0, DateTimeKind.Unspecified),
                             Game_AwayTeamId = 19,
                             Game_CompetitionsId = 4,
                             Game_HomeTeamId = 14,
                             Game_StadiumsId = 14,
-                            HomeTeamScore = 0,
-                            IsPlayed = false,
-                            RefereeName = "Arbitru 8",
-                            TicketsSold = 0
+                            HomeTeamScore = 4,
+                            IsPlayed = true,
+                            RefereeName = "Daniel Petrescu",
+                            TicketsSold = 25
                         },
                         new
                         {
                             Id = 39,
                             AwayTeamScore = 0,
-                            GameDate = new DateTime(2025, 4, 15, 6, 0, 0, 0, DateTimeKind.Unspecified),
+                            GameDate = new DateTime(2025, 5, 15, 6, 0, 0, 0, DateTimeKind.Unspecified),
                             Game_AwayTeamId = 18,
                             Game_CompetitionsId = 4,
                             Game_HomeTeamId = 15,
                             Game_StadiumsId = 15,
-                            HomeTeamScore = 0,
-                            IsPlayed = false,
-                            RefereeName = "Arbitru 9",
-                            TicketsSold = 0
+                            HomeTeamScore = 2,
+                            IsPlayed = true,
+                            RefereeName = "Radu Marin",
+                            TicketsSold = 15
                         },
                         new
                         {
                             Id = 40,
-                            AwayTeamScore = 0,
-                            GameDate = new DateTime(2025, 4, 15, 11, 0, 0, 0, DateTimeKind.Unspecified),
+                            AwayTeamScore = 2,
+                            GameDate = new DateTime(2025, 5, 15, 11, 0, 0, 0, DateTimeKind.Unspecified),
                             Game_AwayTeamId = 17,
                             Game_CompetitionsId = 4,
                             Game_HomeTeamId = 16,
                             Game_StadiumsId = 16,
-                            HomeTeamScore = 0,
-                            IsPlayed = false,
-                            RefereeName = "Arbitru 10",
-                            TicketsSold = 0
+                            HomeTeamScore = 1,
+                            IsPlayed = true,
+                            RefereeName = "Cosmin Ionescu",
+                            TicketsSold = 12
                         },
                         new
                         {
                             Id = 41,
-                            AwayTeamScore = 0,
-                            GameDate = new DateTime(2025, 4, 15, 3, 0, 0, 0, DateTimeKind.Unspecified),
+                            AwayTeamScore = 3,
+                            GameDate = new DateTime(2025, 5, 15, 3, 0, 0, 0, DateTimeKind.Unspecified),
                             Game_AwayTeamId = 30,
-                            Game_CompetitionsId = 7,
+                            Game_CompetitionsId = 5,
                             Game_HomeTeamId = 22,
                             Game_StadiumsId = 22,
                             HomeTeamScore = 0,
-                            IsPlayed = false,
-                            RefereeName = "Arbitru 11",
-                            TicketsSold = 0
+                            IsPlayed = true,
+                            RefereeName = "Silviu Barbu",
+                            TicketsSold = 7
                         },
                         new
                         {
                             Id = 42,
-                            AwayTeamScore = 0,
-                            GameDate = new DateTime(2025, 4, 15, 20, 0, 0, 0, DateTimeKind.Unspecified),
+                            AwayTeamScore = 2,
+                            GameDate = new DateTime(2025, 5, 15, 20, 0, 0, 0, DateTimeKind.Unspecified),
                             Game_AwayTeamId = 21,
-                            Game_CompetitionsId = 7,
+                            Game_CompetitionsId = 5,
                             Game_HomeTeamId = 23,
                             Game_StadiumsId = 23,
-                            HomeTeamScore = 0,
-                            IsPlayed = false,
-                            RefereeName = "Arbitru 12",
-                            TicketsSold = 0
+                            HomeTeamScore = 2,
+                            IsPlayed = true,
+                            RefereeName = "Bogdan Neagu",
+                            TicketsSold = 17
                         },
                         new
                         {
                             Id = 43,
-                            AwayTeamScore = 0,
-                            GameDate = new DateTime(2025, 4, 15, 5, 0, 0, 0, DateTimeKind.Unspecified),
+                            AwayTeamScore = 1,
+                            GameDate = new DateTime(2025, 5, 15, 5, 0, 0, 0, DateTimeKind.Unspecified),
                             Game_AwayTeamId = 29,
-                            Game_CompetitionsId = 7,
+                            Game_CompetitionsId = 5,
                             Game_HomeTeamId = 24,
                             Game_StadiumsId = 24,
                             HomeTeamScore = 0,
-                            IsPlayed = false,
-                            RefereeName = "Arbitru 13",
-                            TicketsSold = 0
+                            IsPlayed = true,
+                            RefereeName = "Cătălin Gheorghe",
+                            TicketsSold = 16
                         },
                         new
                         {
                             Id = 44,
                             AwayTeamScore = 0,
-                            GameDate = new DateTime(2025, 4, 15, 6, 0, 0, 0, DateTimeKind.Unspecified),
+                            GameDate = new DateTime(2025, 5, 15, 6, 0, 0, 0, DateTimeKind.Unspecified),
                             Game_AwayTeamId = 28,
-                            Game_CompetitionsId = 7,
+                            Game_CompetitionsId = 5,
                             Game_HomeTeamId = 25,
                             Game_StadiumsId = 25,
-                            HomeTeamScore = 0,
-                            IsPlayed = false,
-                            RefereeName = "Arbitru 14",
-                            TicketsSold = 0
+                            HomeTeamScore = 1,
+                            IsPlayed = true,
+                            RefereeName = "Cristian Ene",
+                            TicketsSold = 10
                         },
                         new
                         {
                             Id = 45,
-                            AwayTeamScore = 0,
-                            GameDate = new DateTime(2025, 4, 15, 8, 0, 0, 0, DateTimeKind.Unspecified),
+                            AwayTeamScore = 2,
+                            GameDate = new DateTime(2025, 5, 15, 8, 0, 0, 0, DateTimeKind.Unspecified),
                             Game_AwayTeamId = 27,
-                            Game_CompetitionsId = 7,
+                            Game_CompetitionsId = 5,
                             Game_HomeTeamId = 26,
                             Game_StadiumsId = 26,
-                            HomeTeamScore = 0,
-                            IsPlayed = false,
-                            RefereeName = "Arbitru 15",
-                            TicketsSold = 0
+                            HomeTeamScore = 3,
+                            IsPlayed = true,
+                            RefereeName = "Mihai Rusu",
+                            TicketsSold = 14
                         },
                         new
                         {
                             Id = 46,
-                            AwayTeamScore = 0,
-                            GameDate = new DateTime(2025, 4, 22, 18, 0, 0, 0, DateTimeKind.Unspecified),
+                            AwayTeamScore = 1,
+                            GameDate = new DateTime(2025, 5, 22, 18, 0, 0, 0, DateTimeKind.Unspecified),
                             Game_AwayTeamId = 7,
                             Game_CompetitionsId = 1,
                             Game_HomeTeamId = 10,
                             Game_StadiumsId = 10,
-                            HomeTeamScore = 0,
-                            IsPlayed = false,
-                            RefereeName = "Arbitru 1",
-                            TicketsSold = 0
+                            HomeTeamScore = 2,
+                            IsPlayed = true,
+                            RefereeName = "Florin Stan",
+                            TicketsSold = 16
                         },
                         new
                         {
                             Id = 47,
                             AwayTeamScore = 0,
-                            GameDate = new DateTime(2025, 4, 22, 20, 0, 0, 0, DateTimeKind.Unspecified),
+                            GameDate = new DateTime(2025, 5, 22, 20, 0, 0, 0, DateTimeKind.Unspecified),
                             Game_AwayTeamId = 6,
                             Game_CompetitionsId = 1,
                             Game_HomeTeamId = 8,
                             Game_StadiumsId = 8,
-                            HomeTeamScore = 0,
-                            IsPlayed = false,
-                            RefereeName = "Arbitru 2",
-                            TicketsSold = 0
+                            HomeTeamScore = 3,
+                            IsPlayed = true,
+                            RefereeName = "Iulian Nistor",
+                            TicketsSold = 19
                         },
                         new
                         {
                             Id = 48,
-                            AwayTeamScore = 0,
-                            GameDate = new DateTime(2025, 4, 22, 19, 0, 0, 0, DateTimeKind.Unspecified),
+                            AwayTeamScore = 2,
+                            GameDate = new DateTime(2025, 5, 22, 19, 0, 0, 0, DateTimeKind.Unspecified),
                             Game_AwayTeamId = 5,
                             Game_CompetitionsId = 1,
                             Game_HomeTeamId = 9,
                             Game_StadiumsId = 9,
-                            HomeTeamScore = 0,
-                            IsPlayed = false,
-                            RefereeName = "Arbitru 3",
-                            TicketsSold = 0
+                            HomeTeamScore = 2,
+                            IsPlayed = true,
+                            RefereeName = "George Ilie",
+                            TicketsSold = 25
                         },
                         new
                         {
                             Id = 49,
-                            AwayTeamScore = 0,
-                            GameDate = new DateTime(2025, 4, 22, 21, 0, 0, 0, DateTimeKind.Unspecified),
+                            AwayTeamScore = 2,
+                            GameDate = new DateTime(2025, 5, 22, 21, 0, 0, 0, DateTimeKind.Unspecified),
                             Game_AwayTeamId = 4,
                             Game_CompetitionsId = 1,
                             Game_HomeTeamId = 1,
                             Game_StadiumsId = 1,
-                            HomeTeamScore = 0,
-                            IsPlayed = false,
-                            RefereeName = "Arbitru 4",
-                            TicketsSold = 0
+                            HomeTeamScore = 1,
+                            IsPlayed = true,
+                            RefereeName = "Alexandru Vasilescu",
+                            TicketsSold = 7
                         },
                         new
                         {
                             Id = 50,
                             AwayTeamScore = 0,
-                            GameDate = new DateTime(2025, 4, 22, 2, 0, 0, 0, DateTimeKind.Unspecified),
+                            GameDate = new DateTime(2025, 5, 22, 2, 0, 0, 0, DateTimeKind.Unspecified),
                             Game_AwayTeamId = 3,
                             Game_CompetitionsId = 1,
                             Game_HomeTeamId = 2,
                             Game_StadiumsId = 2,
-                            HomeTeamScore = 0,
-                            IsPlayed = false,
-                            RefereeName = "Arbitru 5",
-                            TicketsSold = 0
+                            HomeTeamScore = 2,
+                            IsPlayed = true,
+                            RefereeName = "Radu Marin",
+                            TicketsSold = 12
                         },
                         new
                         {
                             Id = 51,
-                            AwayTeamScore = 0,
-                            GameDate = new DateTime(2025, 4, 22, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            AwayTeamScore = 1,
+                            GameDate = new DateTime(2025, 5, 22, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Game_AwayTeamId = 17,
                             Game_CompetitionsId = 4,
                             Game_HomeTeamId = 20,
                             Game_StadiumsId = 20,
-                            HomeTeamScore = 0,
-                            IsPlayed = false,
-                            RefereeName = "Arbitru 6",
-                            TicketsSold = 0
+                            HomeTeamScore = 2,
+                            IsPlayed = true,
+                            RefereeName = "Paul Voicu",
+                            TicketsSold = 18
                         },
                         new
                         {
                             Id = 52,
-                            AwayTeamScore = 0,
-                            GameDate = new DateTime(2025, 4, 22, 1, 0, 0, 0, DateTimeKind.Unspecified),
+                            AwayTeamScore = 1,
+                            GameDate = new DateTime(2025, 5, 22, 1, 0, 0, 0, DateTimeKind.Unspecified),
                             Game_AwayTeamId = 16,
                             Game_CompetitionsId = 4,
                             Game_HomeTeamId = 18,
                             Game_StadiumsId = 18,
                             HomeTeamScore = 0,
-                            IsPlayed = false,
-                            RefereeName = "Arbitru 7",
-                            TicketsSold = 0
+                            IsPlayed = true,
+                            RefereeName = "Paul Voicu",
+                            TicketsSold = 11
                         },
                         new
                         {
                             Id = 53,
-                            AwayTeamScore = 0,
-                            GameDate = new DateTime(2025, 4, 22, 18, 0, 0, 0, DateTimeKind.Unspecified),
+                            AwayTeamScore = 2,
+                            GameDate = new DateTime(2025, 5, 22, 18, 0, 0, 0, DateTimeKind.Unspecified),
                             Game_AwayTeamId = 15,
                             Game_CompetitionsId = 4,
                             Game_HomeTeamId = 19,
                             Game_StadiumsId = 19,
-                            HomeTeamScore = 0,
-                            IsPlayed = false,
-                            RefereeName = "Arbitru 8",
-                            TicketsSold = 0
+                            HomeTeamScore = 1,
+                            IsPlayed = true,
+                            RefereeName = "Bogdan Neagu",
+                            TicketsSold = 17
                         },
                         new
                         {
                             Id = 54,
                             AwayTeamScore = 0,
-                            GameDate = new DateTime(2025, 4, 22, 6, 0, 0, 0, DateTimeKind.Unspecified),
+                            GameDate = new DateTime(2025, 5, 22, 6, 0, 0, 0, DateTimeKind.Unspecified),
                             Game_AwayTeamId = 14,
                             Game_CompetitionsId = 4,
                             Game_HomeTeamId = 11,
                             Game_StadiumsId = 11,
                             HomeTeamScore = 0,
-                            IsPlayed = false,
-                            RefereeName = "Arbitru 9",
-                            TicketsSold = 0
+                            IsPlayed = true,
+                            RefereeName = "Cristian Ene",
+                            TicketsSold = 4
                         },
                         new
                         {
                             Id = 55,
-                            AwayTeamScore = 0,
-                            GameDate = new DateTime(2025, 4, 22, 11, 0, 0, 0, DateTimeKind.Unspecified),
+                            AwayTeamScore = 1,
+                            GameDate = new DateTime(2025, 5, 22, 11, 0, 0, 0, DateTimeKind.Unspecified),
                             Game_AwayTeamId = 13,
                             Game_CompetitionsId = 4,
                             Game_HomeTeamId = 12,
                             Game_StadiumsId = 12,
-                            HomeTeamScore = 0,
-                            IsPlayed = false,
-                            RefereeName = "Arbitru 10",
-                            TicketsSold = 0
+                            HomeTeamScore = 1,
+                            IsPlayed = true,
+                            RefereeName = "Silviu Barbu",
+                            TicketsSold = 10
                         },
                         new
                         {
                             Id = 56,
-                            AwayTeamScore = 0,
-                            GameDate = new DateTime(2025, 4, 22, 3, 0, 0, 0, DateTimeKind.Unspecified),
+                            AwayTeamScore = 2,
+                            GameDate = new DateTime(2025, 5, 22, 3, 0, 0, 0, DateTimeKind.Unspecified),
                             Game_AwayTeamId = 27,
-                            Game_CompetitionsId = 7,
+                            Game_CompetitionsId = 5,
                             Game_HomeTeamId = 30,
                             Game_StadiumsId = 30,
                             HomeTeamScore = 0,
-                            IsPlayed = false,
-                            RefereeName = "Arbitru 11",
-                            TicketsSold = 0
+                            IsPlayed = true,
+                            RefereeName = "Andrei Dumitrescu",
+                            TicketsSold = 16
                         },
                         new
                         {
                             Id = 57,
                             AwayTeamScore = 0,
-                            GameDate = new DateTime(2025, 4, 22, 20, 0, 0, 0, DateTimeKind.Unspecified),
+                            GameDate = new DateTime(2025, 5, 22, 20, 0, 0, 0, DateTimeKind.Unspecified),
                             Game_AwayTeamId = 26,
-                            Game_CompetitionsId = 7,
+                            Game_CompetitionsId = 5,
                             Game_HomeTeamId = 28,
                             Game_StadiumsId = 28,
-                            HomeTeamScore = 0,
-                            IsPlayed = false,
-                            RefereeName = "Arbitru 12",
-                            TicketsSold = 0
+                            HomeTeamScore = 2,
+                            IsPlayed = true,
+                            RefereeName = "Daniel Petrescu",
+                            TicketsSold = 13
                         },
                         new
                         {
                             Id = 58,
-                            AwayTeamScore = 0,
-                            GameDate = new DateTime(2025, 4, 22, 5, 0, 0, 0, DateTimeKind.Unspecified),
+                            AwayTeamScore = 1,
+                            GameDate = new DateTime(2025, 5, 22, 5, 0, 0, 0, DateTimeKind.Unspecified),
                             Game_AwayTeamId = 25,
-                            Game_CompetitionsId = 7,
+                            Game_CompetitionsId = 5,
                             Game_HomeTeamId = 29,
                             Game_StadiumsId = 29,
-                            HomeTeamScore = 0,
-                            IsPlayed = false,
-                            RefereeName = "Arbitru 13",
-                            TicketsSold = 0
+                            HomeTeamScore = 1,
+                            IsPlayed = true,
+                            RefereeName = "Cosmin Ionescu",
+                            TicketsSold = 7
                         },
                         new
                         {
                             Id = 59,
-                            AwayTeamScore = 0,
-                            GameDate = new DateTime(2025, 4, 22, 6, 0, 0, 0, DateTimeKind.Unspecified),
+                            AwayTeamScore = 1,
+                            GameDate = new DateTime(2025, 5, 22, 6, 0, 0, 0, DateTimeKind.Unspecified),
                             Game_AwayTeamId = 24,
-                            Game_CompetitionsId = 7,
+                            Game_CompetitionsId = 5,
                             Game_HomeTeamId = 21,
                             Game_StadiumsId = 21,
                             HomeTeamScore = 0,
-                            IsPlayed = false,
-                            RefereeName = "Arbitru 14",
-                            TicketsSold = 0
+                            IsPlayed = true,
+                            RefereeName = "Mihai Rusu",
+                            TicketsSold = 7
                         },
                         new
                         {
                             Id = 60,
-                            AwayTeamScore = 0,
-                            GameDate = new DateTime(2025, 4, 22, 8, 0, 0, 0, DateTimeKind.Unspecified),
+                            AwayTeamScore = 2,
+                            GameDate = new DateTime(2025, 5, 22, 8, 0, 0, 0, DateTimeKind.Unspecified),
                             Game_AwayTeamId = 23,
-                            Game_CompetitionsId = 7,
+                            Game_CompetitionsId = 5,
                             Game_HomeTeamId = 22,
                             Game_StadiumsId = 22,
-                            HomeTeamScore = 0,
-                            IsPlayed = false,
-                            RefereeName = "Arbitru 15",
-                            TicketsSold = 0
+                            HomeTeamScore = 2,
+                            IsPlayed = true,
+                            RefereeName = "Iulian Nistor",
+                            TicketsSold = 13
                         },
                         new
                         {
                             Id = 61,
                             AwayTeamScore = 0,
-                            GameDate = new DateTime(2025, 4, 29, 18, 0, 0, 0, DateTimeKind.Unspecified),
+                            GameDate = new DateTime(2025, 5, 29, 18, 0, 0, 0, DateTimeKind.Unspecified),
                             Game_AwayTeamId = 10,
                             Game_CompetitionsId = 1,
                             Game_HomeTeamId = 3,
                             Game_StadiumsId = 3,
-                            HomeTeamScore = 0,
-                            IsPlayed = false,
-                            RefereeName = "Arbitru 1",
-                            TicketsSold = 0
+                            HomeTeamScore = 2,
+                            IsPlayed = true,
+                            RefereeName = "Cătălin Gheorghe",
+                            TicketsSold = 10
                         },
                         new
                         {
                             Id = 62,
-                            AwayTeamScore = 0,
-                            GameDate = new DateTime(2025, 4, 29, 20, 0, 0, 0, DateTimeKind.Unspecified),
+                            AwayTeamScore = 3,
+                            GameDate = new DateTime(2025, 5, 29, 20, 0, 0, 0, DateTimeKind.Unspecified),
                             Game_AwayTeamId = 2,
                             Game_CompetitionsId = 1,
                             Game_HomeTeamId = 4,
                             Game_StadiumsId = 4,
-                            HomeTeamScore = 0,
-                            IsPlayed = false,
-                            RefereeName = "Arbitru 2",
-                            TicketsSold = 0
+                            HomeTeamScore = 1,
+                            IsPlayed = true,
+                            RefereeName = "George Ilie",
+                            TicketsSold = 6
                         },
                         new
                         {
                             Id = 63,
-                            AwayTeamScore = 0,
-                            GameDate = new DateTime(2025, 4, 29, 19, 0, 0, 0, DateTimeKind.Unspecified),
+                            AwayTeamScore = 1,
+                            GameDate = new DateTime(2025, 5, 29, 19, 0, 0, 0, DateTimeKind.Unspecified),
                             Game_AwayTeamId = 1,
                             Game_CompetitionsId = 1,
                             Game_HomeTeamId = 5,
                             Game_StadiumsId = 5,
-                            HomeTeamScore = 0,
-                            IsPlayed = false,
-                            RefereeName = "Arbitru 3",
-                            TicketsSold = 0
+                            HomeTeamScore = 1,
+                            IsPlayed = true,
+                            RefereeName = "Florin Stan",
+                            TicketsSold = 19
                         },
                         new
                         {
                             Id = 64,
-                            AwayTeamScore = 0,
-                            GameDate = new DateTime(2025, 4, 29, 21, 0, 0, 0, DateTimeKind.Unspecified),
+                            AwayTeamScore = 1,
+                            GameDate = new DateTime(2025, 5, 29, 21, 0, 0, 0, DateTimeKind.Unspecified),
                             Game_AwayTeamId = 9,
                             Game_CompetitionsId = 1,
                             Game_HomeTeamId = 6,
                             Game_StadiumsId = 6,
                             HomeTeamScore = 0,
-                            IsPlayed = false,
-                            RefereeName = "Arbitru 4",
-                            TicketsSold = 0
+                            IsPlayed = true,
+                            RefereeName = "Marius Popa",
+                            TicketsSold = 7
                         },
                         new
                         {
                             Id = 65,
-                            AwayTeamScore = 0,
-                            GameDate = new DateTime(2025, 4, 29, 2, 0, 0, 0, DateTimeKind.Unspecified),
+                            AwayTeamScore = 2,
+                            GameDate = new DateTime(2025, 5, 29, 2, 0, 0, 0, DateTimeKind.Unspecified),
                             Game_AwayTeamId = 8,
                             Game_CompetitionsId = 1,
                             Game_HomeTeamId = 7,
                             Game_StadiumsId = 7,
-                            HomeTeamScore = 0,
-                            IsPlayed = false,
-                            RefereeName = "Arbitru 5",
-                            TicketsSold = 0
+                            HomeTeamScore = 2,
+                            IsPlayed = true,
+                            RefereeName = "Marius Popa",
+                            TicketsSold = 8
                         },
                         new
                         {
                             Id = 66,
                             AwayTeamScore = 0,
-                            GameDate = new DateTime(2025, 4, 29, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            GameDate = new DateTime(2025, 5, 29, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Game_AwayTeamId = 20,
                             Game_CompetitionsId = 4,
                             Game_HomeTeamId = 13,
                             Game_StadiumsId = 13,
-                            HomeTeamScore = 0,
-                            IsPlayed = false,
-                            RefereeName = "Arbitru 6",
-                            TicketsSold = 0
+                            HomeTeamScore = 1,
+                            IsPlayed = true,
+                            RefereeName = "Paul Voicu",
+                            TicketsSold = 14
                         },
                         new
                         {
                             Id = 67,
                             AwayTeamScore = 0,
-                            GameDate = new DateTime(2025, 4, 29, 1, 0, 0, 0, DateTimeKind.Unspecified),
+                            GameDate = new DateTime(2025, 5, 29, 1, 0, 0, 0, DateTimeKind.Unspecified),
                             Game_AwayTeamId = 12,
                             Game_CompetitionsId = 4,
                             Game_HomeTeamId = 14,
                             Game_StadiumsId = 14,
                             HomeTeamScore = 0,
-                            IsPlayed = false,
-                            RefereeName = "Arbitru 7",
-                            TicketsSold = 0
+                            IsPlayed = true,
+                            RefereeName = "Paul Voicu",
+                            TicketsSold = 28
                         },
                         new
                         {
                             Id = 68,
-                            AwayTeamScore = 0,
-                            GameDate = new DateTime(2025, 4, 29, 18, 0, 0, 0, DateTimeKind.Unspecified),
+                            AwayTeamScore = 1,
+                            GameDate = new DateTime(2025, 5, 29, 18, 0, 0, 0, DateTimeKind.Unspecified),
                             Game_AwayTeamId = 11,
                             Game_CompetitionsId = 4,
                             Game_HomeTeamId = 15,
                             Game_StadiumsId = 15,
-                            HomeTeamScore = 0,
-                            IsPlayed = false,
-                            RefereeName = "Arbitru 8",
-                            TicketsSold = 0
+                            HomeTeamScore = 2,
+                            IsPlayed = true,
+                            RefereeName = "Radu Marin",
+                            TicketsSold = 20
                         },
                         new
                         {
                             Id = 69,
-                            AwayTeamScore = 0,
-                            GameDate = new DateTime(2025, 4, 29, 6, 0, 0, 0, DateTimeKind.Unspecified),
+                            AwayTeamScore = 3,
+                            GameDate = new DateTime(2025, 5, 29, 6, 0, 0, 0, DateTimeKind.Unspecified),
                             Game_AwayTeamId = 19,
                             Game_CompetitionsId = 4,
                             Game_HomeTeamId = 16,
                             Game_StadiumsId = 16,
                             HomeTeamScore = 0,
-                            IsPlayed = false,
-                            RefereeName = "Arbitru 9",
-                            TicketsSold = 0
+                            IsPlayed = true,
+                            RefereeName = "Cătălin Gheorghe",
+                            TicketsSold = 24
                         },
                         new
                         {
                             Id = 70,
-                            AwayTeamScore = 0,
-                            GameDate = new DateTime(2025, 4, 29, 11, 0, 0, 0, DateTimeKind.Unspecified),
+                            AwayTeamScore = 1,
+                            GameDate = new DateTime(2025, 5, 29, 11, 0, 0, 0, DateTimeKind.Unspecified),
                             Game_AwayTeamId = 18,
                             Game_CompetitionsId = 4,
                             Game_HomeTeamId = 17,
                             Game_StadiumsId = 17,
-                            HomeTeamScore = 0,
-                            IsPlayed = false,
-                            RefereeName = "Arbitru 10",
-                            TicketsSold = 0
+                            HomeTeamScore = 1,
+                            IsPlayed = true,
+                            RefereeName = "Silviu Barbu",
+                            TicketsSold = 19
                         },
                         new
                         {
                             Id = 71,
                             AwayTeamScore = 0,
-                            GameDate = new DateTime(2025, 4, 29, 3, 0, 0, 0, DateTimeKind.Unspecified),
+                            GameDate = new DateTime(2025, 5, 29, 3, 0, 0, 0, DateTimeKind.Unspecified),
                             Game_AwayTeamId = 30,
-                            Game_CompetitionsId = 7,
+                            Game_CompetitionsId = 5,
                             Game_HomeTeamId = 23,
                             Game_StadiumsId = 23,
-                            HomeTeamScore = 0,
-                            IsPlayed = false,
-                            RefereeName = "Arbitru 11",
-                            TicketsSold = 0
+                            HomeTeamScore = 2,
+                            IsPlayed = true,
+                            RefereeName = "Cosmin Ionescu",
+                            TicketsSold = 11
                         },
                         new
                         {
                             Id = 72,
-                            AwayTeamScore = 0,
-                            GameDate = new DateTime(2025, 4, 29, 20, 0, 0, 0, DateTimeKind.Unspecified),
+                            AwayTeamScore = 2,
+                            GameDate = new DateTime(2025, 5, 29, 20, 0, 0, 0, DateTimeKind.Unspecified),
                             Game_AwayTeamId = 22,
-                            Game_CompetitionsId = 7,
+                            Game_CompetitionsId = 5,
                             Game_HomeTeamId = 24,
                             Game_StadiumsId = 24,
-                            HomeTeamScore = 0,
-                            IsPlayed = false,
-                            RefereeName = "Arbitru 12",
-                            TicketsSold = 0
+                            HomeTeamScore = 2,
+                            IsPlayed = true,
+                            RefereeName = "Iulian Nistor",
+                            TicketsSold = 12
                         },
                         new
                         {
                             Id = 73,
-                            AwayTeamScore = 0,
-                            GameDate = new DateTime(2025, 4, 29, 5, 0, 0, 0, DateTimeKind.Unspecified),
+                            AwayTeamScore = 1,
+                            GameDate = new DateTime(2025, 5, 29, 5, 0, 0, 0, DateTimeKind.Unspecified),
                             Game_AwayTeamId = 21,
-                            Game_CompetitionsId = 7,
+                            Game_CompetitionsId = 5,
                             Game_HomeTeamId = 25,
                             Game_StadiumsId = 25,
-                            HomeTeamScore = 0,
-                            IsPlayed = false,
-                            RefereeName = "Arbitru 13",
-                            TicketsSold = 0
+                            HomeTeamScore = 3,
+                            IsPlayed = true,
+                            RefereeName = "Alexandru Vasilescu",
+                            TicketsSold = 9
                         },
                         new
                         {
                             Id = 74,
-                            AwayTeamScore = 0,
-                            GameDate = new DateTime(2025, 4, 29, 6, 0, 0, 0, DateTimeKind.Unspecified),
+                            AwayTeamScore = 2,
+                            GameDate = new DateTime(2025, 5, 29, 6, 0, 0, 0, DateTimeKind.Unspecified),
                             Game_AwayTeamId = 29,
-                            Game_CompetitionsId = 7,
+                            Game_CompetitionsId = 5,
                             Game_HomeTeamId = 26,
                             Game_StadiumsId = 26,
-                            HomeTeamScore = 0,
-                            IsPlayed = false,
-                            RefereeName = "Arbitru 14",
-                            TicketsSold = 0
+                            HomeTeamScore = 1,
+                            IsPlayed = true,
+                            RefereeName = "Daniel Petrescu",
+                            TicketsSold = 11
                         },
                         new
                         {
                             Id = 75,
-                            AwayTeamScore = 0,
-                            GameDate = new DateTime(2025, 4, 29, 8, 0, 0, 0, DateTimeKind.Unspecified),
+                            AwayTeamScore = 1,
+                            GameDate = new DateTime(2025, 5, 29, 8, 0, 0, 0, DateTimeKind.Unspecified),
                             Game_AwayTeamId = 28,
-                            Game_CompetitionsId = 7,
+                            Game_CompetitionsId = 5,
                             Game_HomeTeamId = 27,
                             Game_StadiumsId = 27,
-                            HomeTeamScore = 0,
-                            IsPlayed = false,
-                            RefereeName = "Arbitru 15",
-                            TicketsSold = 0
+                            HomeTeamScore = 2,
+                            IsPlayed = true,
+                            RefereeName = "Bogdan Neagu",
+                            TicketsSold = 8
                         },
                         new
                         {
                             Id = 76,
-                            AwayTeamScore = 0,
-                            GameDate = new DateTime(2025, 5, 6, 18, 0, 0, 0, DateTimeKind.Unspecified),
+                            AwayTeamScore = 1,
+                            GameDate = new DateTime(2025, 6, 6, 18, 0, 0, 0, DateTimeKind.Unspecified),
                             Game_AwayTeamId = 8,
                             Game_CompetitionsId = 1,
                             Game_HomeTeamId = 10,
                             Game_StadiumsId = 10,
-                            HomeTeamScore = 0,
-                            IsPlayed = false,
-                            RefereeName = "Arbitru 1",
-                            TicketsSold = 0
+                            HomeTeamScore = 2,
+                            IsPlayed = true,
+                            RefereeName = "Cristian Ene",
+                            TicketsSold = 17
                         },
                         new
                         {
                             Id = 77,
-                            AwayTeamScore = 0,
-                            GameDate = new DateTime(2025, 5, 6, 20, 0, 0, 0, DateTimeKind.Unspecified),
+                            AwayTeamScore = 3,
+                            GameDate = new DateTime(2025, 6, 6, 20, 0, 0, 0, DateTimeKind.Unspecified),
                             Game_AwayTeamId = 7,
                             Game_CompetitionsId = 1,
                             Game_HomeTeamId = 9,
                             Game_StadiumsId = 9,
                             HomeTeamScore = 0,
-                            IsPlayed = false,
-                            RefereeName = "Arbitru 2",
-                            TicketsSold = 0
+                            IsPlayed = true,
+                            RefereeName = "Mihai Rusu",
+                            TicketsSold = 19
                         },
                         new
                         {
                             Id = 78,
-                            AwayTeamScore = 0,
-                            GameDate = new DateTime(2025, 5, 6, 19, 0, 0, 0, DateTimeKind.Unspecified),
+                            AwayTeamScore = 1,
+                            GameDate = new DateTime(2025, 6, 6, 19, 0, 0, 0, DateTimeKind.Unspecified),
                             Game_AwayTeamId = 6,
                             Game_CompetitionsId = 1,
                             Game_HomeTeamId = 1,
                             Game_StadiumsId = 1,
-                            HomeTeamScore = 0,
-                            IsPlayed = false,
-                            RefereeName = "Arbitru 3",
-                            TicketsSold = 0
+                            HomeTeamScore = 1,
+                            IsPlayed = true,
+                            RefereeName = "George Ilie",
+                            TicketsSold = 8
                         },
                         new
                         {
                             Id = 79,
-                            AwayTeamScore = 0,
-                            GameDate = new DateTime(2025, 5, 6, 21, 0, 0, 0, DateTimeKind.Unspecified),
+                            AwayTeamScore = 2,
+                            GameDate = new DateTime(2025, 6, 6, 21, 0, 0, 0, DateTimeKind.Unspecified),
                             Game_AwayTeamId = 5,
                             Game_CompetitionsId = 1,
                             Game_HomeTeamId = 2,
                             Game_StadiumsId = 2,
                             HomeTeamScore = 0,
-                            IsPlayed = false,
-                            RefereeName = "Arbitru 4",
-                            TicketsSold = 0
+                            IsPlayed = true,
+                            RefereeName = "Florin Stan",
+                            TicketsSold = 6
                         },
                         new
                         {
                             Id = 80,
-                            AwayTeamScore = 0,
-                            GameDate = new DateTime(2025, 5, 6, 2, 0, 0, 0, DateTimeKind.Unspecified),
+                            AwayTeamScore = 2,
+                            GameDate = new DateTime(2025, 6, 6, 2, 0, 0, 0, DateTimeKind.Unspecified),
                             Game_AwayTeamId = 4,
                             Game_CompetitionsId = 1,
                             Game_HomeTeamId = 3,
                             Game_StadiumsId = 3,
-                            HomeTeamScore = 0,
-                            IsPlayed = false,
-                            RefereeName = "Arbitru 5",
-                            TicketsSold = 0
+                            HomeTeamScore = 2,
+                            IsPlayed = true,
+                            RefereeName = "Andrei Dumitrescu",
+                            TicketsSold = 11
                         },
                         new
                         {
                             Id = 81,
                             AwayTeamScore = 0,
-                            GameDate = new DateTime(2025, 5, 6, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            GameDate = new DateTime(2025, 6, 6, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Game_AwayTeamId = 18,
                             Game_CompetitionsId = 4,
                             Game_HomeTeamId = 20,
                             Game_StadiumsId = 20,
-                            HomeTeamScore = 0,
-                            IsPlayed = false,
-                            RefereeName = "Arbitru 6",
-                            TicketsSold = 0
+                            HomeTeamScore = 1,
+                            IsPlayed = true,
+                            RefereeName = "Radu Marin",
+                            TicketsSold = 21
                         },
                         new
                         {
                             Id = 82,
-                            AwayTeamScore = 0,
-                            GameDate = new DateTime(2025, 5, 6, 1, 0, 0, 0, DateTimeKind.Unspecified),
+                            AwayTeamScore = 1,
+                            GameDate = new DateTime(2025, 6, 6, 1, 0, 0, 0, DateTimeKind.Unspecified),
                             Game_AwayTeamId = 17,
                             Game_CompetitionsId = 4,
                             Game_HomeTeamId = 19,
                             Game_StadiumsId = 19,
-                            HomeTeamScore = 0,
-                            IsPlayed = false,
-                            RefereeName = "Arbitru 7",
-                            TicketsSold = 0
+                            HomeTeamScore = 2,
+                            IsPlayed = true,
+                            RefereeName = "Radu Marin",
+                            TicketsSold = 13
                         },
                         new
                         {
                             Id = 83,
-                            AwayTeamScore = 0,
-                            GameDate = new DateTime(2025, 5, 6, 18, 0, 0, 0, DateTimeKind.Unspecified),
+                            AwayTeamScore = 2,
+                            GameDate = new DateTime(2025, 6, 6, 18, 0, 0, 0, DateTimeKind.Unspecified),
                             Game_AwayTeamId = 16,
                             Game_CompetitionsId = 4,
                             Game_HomeTeamId = 11,
                             Game_StadiumsId = 11,
                             HomeTeamScore = 0,
-                            IsPlayed = false,
-                            RefereeName = "Arbitru 8",
-                            TicketsSold = 0
+                            IsPlayed = true,
+                            RefereeName = "Paul Voicu",
+                            TicketsSold = 8
                         },
                         new
                         {
                             Id = 84,
                             AwayTeamScore = 0,
-                            GameDate = new DateTime(2025, 5, 6, 6, 0, 0, 0, DateTimeKind.Unspecified),
+                            GameDate = new DateTime(2025, 6, 6, 6, 0, 0, 0, DateTimeKind.Unspecified),
                             Game_AwayTeamId = 15,
                             Game_CompetitionsId = 4,
                             Game_HomeTeamId = 12,
                             Game_StadiumsId = 12,
-                            HomeTeamScore = 0,
-                            IsPlayed = false,
-                            RefereeName = "Arbitru 9",
-                            TicketsSold = 0
+                            HomeTeamScore = 1,
+                            IsPlayed = true,
+                            RefereeName = "Florin Stan",
+                            TicketsSold = 10
                         },
                         new
                         {
                             Id = 85,
-                            AwayTeamScore = 0,
-                            GameDate = new DateTime(2025, 5, 6, 11, 0, 0, 0, DateTimeKind.Unspecified),
+                            AwayTeamScore = 1,
+                            GameDate = new DateTime(2025, 6, 6, 11, 0, 0, 0, DateTimeKind.Unspecified),
                             Game_AwayTeamId = 14,
                             Game_CompetitionsId = 4,
                             Game_HomeTeamId = 13,
                             Game_StadiumsId = 13,
-                            HomeTeamScore = 0,
-                            IsPlayed = false,
-                            RefereeName = "Arbitru 10",
-                            TicketsSold = 0
+                            HomeTeamScore = 2,
+                            IsPlayed = true,
+                            RefereeName = "Cosmin Ionescu",
+                            TicketsSold = 18
                         },
                         new
                         {
                             Id = 86,
-                            AwayTeamScore = 0,
-                            GameDate = new DateTime(2025, 5, 6, 3, 0, 0, 0, DateTimeKind.Unspecified),
+                            AwayTeamScore = 2,
+                            GameDate = new DateTime(2025, 6, 6, 3, 0, 0, 0, DateTimeKind.Unspecified),
                             Game_AwayTeamId = 28,
-                            Game_CompetitionsId = 7,
+                            Game_CompetitionsId = 5,
                             Game_HomeTeamId = 30,
                             Game_StadiumsId = 30,
-                            HomeTeamScore = 0,
-                            IsPlayed = false,
-                            RefereeName = "Arbitru 11",
-                            TicketsSold = 0
+                            HomeTeamScore = 3,
+                            IsPlayed = true,
+                            RefereeName = "Iulian Nistor",
+                            TicketsSold = 15
                         },
                         new
                         {
                             Id = 87,
-                            AwayTeamScore = 0,
-                            GameDate = new DateTime(2025, 5, 6, 20, 0, 0, 0, DateTimeKind.Unspecified),
+                            AwayTeamScore = 1,
+                            GameDate = new DateTime(2025, 6, 6, 20, 0, 0, 0, DateTimeKind.Unspecified),
                             Game_AwayTeamId = 27,
-                            Game_CompetitionsId = 7,
+                            Game_CompetitionsId = 5,
                             Game_HomeTeamId = 29,
                             Game_StadiumsId = 29,
-                            HomeTeamScore = 0,
-                            IsPlayed = false,
-                            RefereeName = "Arbitru 12",
-                            TicketsSold = 0
+                            HomeTeamScore = 1,
+                            IsPlayed = true,
+                            RefereeName = "George Ilie",
+                            TicketsSold = 13
                         },
                         new
                         {
                             Id = 88,
-                            AwayTeamScore = 0,
-                            GameDate = new DateTime(2025, 5, 6, 5, 0, 0, 0, DateTimeKind.Unspecified),
+                            AwayTeamScore = 1,
+                            GameDate = new DateTime(2025, 6, 6, 5, 0, 0, 0, DateTimeKind.Unspecified),
                             Game_AwayTeamId = 26,
-                            Game_CompetitionsId = 7,
+                            Game_CompetitionsId = 5,
                             Game_HomeTeamId = 21,
                             Game_StadiumsId = 21,
                             HomeTeamScore = 0,
-                            IsPlayed = false,
-                            RefereeName = "Arbitru 13",
-                            TicketsSold = 0
+                            IsPlayed = true,
+                            RefereeName = "Marius Popa",
+                            TicketsSold = 7
                         },
                         new
                         {
                             Id = 89,
-                            AwayTeamScore = 0,
-                            GameDate = new DateTime(2025, 5, 6, 6, 0, 0, 0, DateTimeKind.Unspecified),
+                            AwayTeamScore = 2,
+                            GameDate = new DateTime(2025, 6, 6, 6, 0, 0, 0, DateTimeKind.Unspecified),
                             Game_AwayTeamId = 25,
-                            Game_CompetitionsId = 7,
+                            Game_CompetitionsId = 5,
                             Game_HomeTeamId = 22,
                             Game_StadiumsId = 22,
-                            HomeTeamScore = 0,
-                            IsPlayed = false,
-                            RefereeName = "Arbitru 14",
-                            TicketsSold = 0
+                            HomeTeamScore = 2,
+                            IsPlayed = true,
+                            RefereeName = "Bogdan Neagu",
+                            TicketsSold = 11
                         },
                         new
                         {
                             Id = 90,
-                            AwayTeamScore = 0,
-                            GameDate = new DateTime(2025, 5, 6, 8, 0, 0, 0, DateTimeKind.Unspecified),
+                            AwayTeamScore = 1,
+                            GameDate = new DateTime(2025, 6, 6, 8, 0, 0, 0, DateTimeKind.Unspecified),
                             Game_AwayTeamId = 24,
-                            Game_CompetitionsId = 7,
+                            Game_CompetitionsId = 5,
                             Game_HomeTeamId = 23,
                             Game_StadiumsId = 23,
-                            HomeTeamScore = 0,
-                            IsPlayed = false,
-                            RefereeName = "Arbitru 15",
-                            TicketsSold = 0
+                            HomeTeamScore = 2,
+                            IsPlayed = true,
+                            RefereeName = "Silviu Barbu",
+                            TicketsSold = 7
                         },
                         new
                         {
                             Id = 91,
-                            AwayTeamScore = 0,
-                            GameDate = new DateTime(2025, 5, 13, 18, 0, 0, 0, DateTimeKind.Unspecified),
+                            AwayTeamScore = 1,
+                            GameDate = new DateTime(2025, 6, 13, 18, 0, 0, 0, DateTimeKind.Unspecified),
                             Game_AwayTeamId = 10,
                             Game_CompetitionsId = 1,
                             Game_HomeTeamId = 4,
                             Game_StadiumsId = 4,
-                            HomeTeamScore = 0,
-                            IsPlayed = false,
-                            RefereeName = "Arbitru 1",
-                            TicketsSold = 0
+                            HomeTeamScore = 1,
+                            IsPlayed = true,
+                            RefereeName = "Andrei Dumitrescu",
+                            TicketsSold = 5
                         },
                         new
                         {
                             Id = 92,
-                            AwayTeamScore = 0,
-                            GameDate = new DateTime(2025, 5, 13, 20, 0, 0, 0, DateTimeKind.Unspecified),
+                            AwayTeamScore = 2,
+                            GameDate = new DateTime(2025, 6, 13, 20, 0, 0, 0, DateTimeKind.Unspecified),
                             Game_AwayTeamId = 3,
                             Game_CompetitionsId = 1,
                             Game_HomeTeamId = 5,
                             Game_StadiumsId = 5,
                             HomeTeamScore = 0,
-                            IsPlayed = false,
-                            RefereeName = "Arbitru 2",
-                            TicketsSold = 0
+                            IsPlayed = true,
+                            RefereeName = "Daniel Petrescu",
+                            TicketsSold = 23
                         },
                         new
                         {
                             Id = 93,
-                            AwayTeamScore = 0,
-                            GameDate = new DateTime(2025, 5, 13, 19, 0, 0, 0, DateTimeKind.Unspecified),
+                            AwayTeamScore = 1,
+                            GameDate = new DateTime(2025, 6, 13, 19, 0, 0, 0, DateTimeKind.Unspecified),
                             Game_AwayTeamId = 2,
                             Game_CompetitionsId = 1,
                             Game_HomeTeamId = 6,
                             Game_StadiumsId = 6,
-                            HomeTeamScore = 0,
-                            IsPlayed = false,
-                            RefereeName = "Arbitru 3",
-                            TicketsSold = 0
+                            HomeTeamScore = 2,
+                            IsPlayed = true,
+                            RefereeName = "Cătălin Gheorghe",
+                            TicketsSold = 15
                         },
                         new
                         {
                             Id = 94,
                             AwayTeamScore = 0,
-                            GameDate = new DateTime(2025, 5, 13, 21, 0, 0, 0, DateTimeKind.Unspecified),
+                            GameDate = new DateTime(2025, 6, 13, 21, 0, 0, 0, DateTimeKind.Unspecified),
                             Game_AwayTeamId = 1,
                             Game_CompetitionsId = 1,
                             Game_HomeTeamId = 7,
                             Game_StadiumsId = 7,
-                            HomeTeamScore = 0,
-                            IsPlayed = false,
-                            RefereeName = "Arbitru 4",
-                            TicketsSold = 0
+                            HomeTeamScore = 3,
+                            IsPlayed = true,
+                            RefereeName = "Alexandru Vasilescu",
+                            TicketsSold = 12
                         },
                         new
                         {
                             Id = 95,
-                            AwayTeamScore = 0,
-                            GameDate = new DateTime(2025, 5, 13, 2, 0, 0, 0, DateTimeKind.Unspecified),
+                            AwayTeamScore = 2,
+                            GameDate = new DateTime(2025, 6, 13, 2, 0, 0, 0, DateTimeKind.Unspecified),
                             Game_AwayTeamId = 9,
                             Game_CompetitionsId = 1,
                             Game_HomeTeamId = 8,
                             Game_StadiumsId = 8,
-                            HomeTeamScore = 0,
-                            IsPlayed = false,
-                            RefereeName = "Arbitru 5",
-                            TicketsSold = 0
+                            HomeTeamScore = 2,
+                            IsPlayed = true,
+                            RefereeName = "Mihai Rusu",
+                            TicketsSold = 19
                         },
                         new
                         {
                             Id = 96,
-                            AwayTeamScore = 0,
-                            GameDate = new DateTime(2025, 5, 13, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            AwayTeamScore = 1,
+                            GameDate = new DateTime(2025, 6, 13, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Game_AwayTeamId = 20,
                             Game_CompetitionsId = 4,
                             Game_HomeTeamId = 14,
                             Game_StadiumsId = 14,
                             HomeTeamScore = 0,
-                            IsPlayed = false,
-                            RefereeName = "Arbitru 6",
-                            TicketsSold = 0
+                            IsPlayed = true,
+                            RefereeName = "Cristian Ene",
+                            TicketsSold = 25
                         },
                         new
                         {
                             Id = 97,
-                            AwayTeamScore = 0,
-                            GameDate = new DateTime(2025, 5, 13, 1, 0, 0, 0, DateTimeKind.Unspecified),
+                            AwayTeamScore = 2,
+                            GameDate = new DateTime(2025, 6, 13, 1, 0, 0, 0, DateTimeKind.Unspecified),
                             Game_AwayTeamId = 13,
                             Game_CompetitionsId = 4,
                             Game_HomeTeamId = 15,
                             Game_StadiumsId = 15,
-                            HomeTeamScore = 0,
-                            IsPlayed = false,
-                            RefereeName = "Arbitru 7",
-                            TicketsSold = 0
+                            HomeTeamScore = 1,
+                            IsPlayed = true,
+                            RefereeName = "Cristian Ene",
+                            TicketsSold = 19
                         },
                         new
                         {
                             Id = 98,
                             AwayTeamScore = 0,
-                            GameDate = new DateTime(2025, 5, 13, 18, 0, 0, 0, DateTimeKind.Unspecified),
+                            GameDate = new DateTime(2025, 6, 13, 18, 0, 0, 0, DateTimeKind.Unspecified),
                             Game_AwayTeamId = 12,
                             Game_CompetitionsId = 4,
                             Game_HomeTeamId = 16,
                             Game_StadiumsId = 16,
-                            HomeTeamScore = 0,
-                            IsPlayed = false,
-                            RefereeName = "Arbitru 8",
-                            TicketsSold = 0
+                            HomeTeamScore = 2,
+                            IsPlayed = true,
+                            RefereeName = "Paul Voicu",
+                            TicketsSold = 22
                         },
                         new
                         {
                             Id = 99,
-                            AwayTeamScore = 0,
-                            GameDate = new DateTime(2025, 5, 13, 6, 0, 0, 0, DateTimeKind.Unspecified),
+                            AwayTeamScore = 1,
+                            GameDate = new DateTime(2025, 6, 13, 6, 0, 0, 0, DateTimeKind.Unspecified),
                             Game_AwayTeamId = 11,
                             Game_CompetitionsId = 4,
                             Game_HomeTeamId = 17,
                             Game_StadiumsId = 17,
-                            HomeTeamScore = 0,
-                            IsPlayed = false,
-                            RefereeName = "Arbitru 9",
-                            TicketsSold = 0
+                            HomeTeamScore = 1,
+                            IsPlayed = true,
+                            RefereeName = "Daniel Petrescu",
+                            TicketsSold = 17
                         },
                         new
                         {
@@ -2205,2388 +4227,3438 @@ namespace FCUnirea.Persistance.Data.Migrations
                             Game_HomeTeamId = 18,
                             Game_StadiumsId = 18,
                             HomeTeamScore = 0,
-                            IsPlayed = false,
-                            RefereeName = "Arbitru 10",
-                            TicketsSold = 0
+                            IsPlayed = true,
+                            RefereeName = "Mihai Rusu",
+                            TicketsSold = 14
                         },
                         new
                         {
                             Id = 101,
-                            AwayTeamScore = 0,
-                            GameDate = new DateTime(2025, 5, 13, 3, 0, 0, 0, DateTimeKind.Unspecified),
+                            AwayTeamScore = 2,
+                            GameDate = new DateTime(2025, 6, 13, 3, 0, 0, 0, DateTimeKind.Unspecified),
                             Game_AwayTeamId = 30,
-                            Game_CompetitionsId = 7,
+                            Game_CompetitionsId = 5,
                             Game_HomeTeamId = 24,
                             Game_StadiumsId = 24,
-                            HomeTeamScore = 0,
-                            IsPlayed = false,
-                            RefereeName = "Arbitru 11",
-                            TicketsSold = 0
+                            HomeTeamScore = 2,
+                            IsPlayed = true,
+                            RefereeName = "Alexandru Vasilescu",
+                            TicketsSold = 19
                         },
                         new
                         {
                             Id = 102,
-                            AwayTeamScore = 0,
-                            GameDate = new DateTime(2025, 5, 13, 20, 0, 0, 0, DateTimeKind.Unspecified),
+                            AwayTeamScore = 1,
+                            GameDate = new DateTime(2025, 6, 13, 20, 0, 0, 0, DateTimeKind.Unspecified),
                             Game_AwayTeamId = 23,
-                            Game_CompetitionsId = 7,
+                            Game_CompetitionsId = 5,
                             Game_HomeTeamId = 25,
                             Game_StadiumsId = 25,
-                            HomeTeamScore = 0,
-                            IsPlayed = false,
-                            RefereeName = "Arbitru 12",
-                            TicketsSold = 0
+                            HomeTeamScore = 3,
+                            IsPlayed = true,
+                            RefereeName = "George Ilie",
+                            TicketsSold = 16
                         },
                         new
                         {
                             Id = 103,
                             AwayTeamScore = 0,
-                            GameDate = new DateTime(2025, 5, 13, 5, 0, 0, 0, DateTimeKind.Unspecified),
+                            GameDate = new DateTime(2025, 6, 13, 5, 0, 0, 0, DateTimeKind.Unspecified),
                             Game_AwayTeamId = 22,
-                            Game_CompetitionsId = 7,
+                            Game_CompetitionsId = 5,
                             Game_HomeTeamId = 26,
                             Game_StadiumsId = 26,
-                            HomeTeamScore = 0,
-                            IsPlayed = false,
-                            RefereeName = "Arbitru 13",
-                            TicketsSold = 0
+                            HomeTeamScore = 1,
+                            IsPlayed = true,
+                            RefereeName = "Bogdan Neagu",
+                            TicketsSold = 16
                         },
                         new
                         {
                             Id = 104,
-                            AwayTeamScore = 0,
-                            GameDate = new DateTime(2025, 5, 13, 6, 0, 0, 0, DateTimeKind.Unspecified),
+                            AwayTeamScore = 2,
+                            GameDate = new DateTime(2025, 6, 13, 6, 0, 0, 0, DateTimeKind.Unspecified),
                             Game_AwayTeamId = 21,
-                            Game_CompetitionsId = 7,
+                            Game_CompetitionsId = 5,
                             Game_HomeTeamId = 27,
                             Game_StadiumsId = 27,
-                            HomeTeamScore = 0,
-                            IsPlayed = false,
-                            RefereeName = "Arbitru 14",
-                            TicketsSold = 0
+                            HomeTeamScore = 2,
+                            IsPlayed = true,
+                            RefereeName = "Cristian Ene",
+                            TicketsSold = 17
                         },
                         new
                         {
                             Id = 105,
-                            AwayTeamScore = 0,
-                            GameDate = new DateTime(2025, 5, 13, 8, 0, 0, 0, DateTimeKind.Unspecified),
+                            AwayTeamScore = 2,
+                            GameDate = new DateTime(2025, 6, 13, 8, 0, 0, 0, DateTimeKind.Unspecified),
                             Game_AwayTeamId = 29,
-                            Game_CompetitionsId = 7,
+                            Game_CompetitionsId = 5,
                             Game_HomeTeamId = 28,
                             Game_StadiumsId = 28,
-                            HomeTeamScore = 0,
-                            IsPlayed = false,
-                            RefereeName = "Arbitru 15",
-                            TicketsSold = 0
+                            HomeTeamScore = 1,
+                            IsPlayed = true,
+                            RefereeName = "Iulian Nistor",
+                            TicketsSold = 19
                         },
                         new
                         {
                             Id = 106,
-                            AwayTeamScore = 0,
-                            GameDate = new DateTime(2025, 5, 20, 18, 0, 0, 0, DateTimeKind.Unspecified),
+                            AwayTeamScore = 3,
+                            GameDate = new DateTime(2025, 6, 20, 18, 0, 0, 0, DateTimeKind.Unspecified),
                             Game_AwayTeamId = 9,
                             Game_CompetitionsId = 1,
                             Game_HomeTeamId = 10,
                             Game_StadiumsId = 10,
-                            HomeTeamScore = 0,
-                            IsPlayed = false,
-                            RefereeName = "Arbitru 1",
-                            TicketsSold = 0
+                            HomeTeamScore = 1,
+                            IsPlayed = true,
+                            RefereeName = "Silviu Barbu",
+                            TicketsSold = 18
                         },
                         new
                         {
                             Id = 107,
                             AwayTeamScore = 0,
-                            GameDate = new DateTime(2025, 5, 20, 20, 0, 0, 0, DateTimeKind.Unspecified),
+                            GameDate = new DateTime(2025, 6, 20, 20, 0, 0, 0, DateTimeKind.Unspecified),
                             Game_AwayTeamId = 8,
                             Game_CompetitionsId = 1,
                             Game_HomeTeamId = 1,
                             Game_StadiumsId = 1,
                             HomeTeamScore = 0,
-                            IsPlayed = false,
-                            RefereeName = "Arbitru 2",
-                            TicketsSold = 0
+                            IsPlayed = true,
+                            RefereeName = "Cătălin Gheorghe",
+                            TicketsSold = 8
                         },
                         new
                         {
                             Id = 108,
-                            AwayTeamScore = 0,
-                            GameDate = new DateTime(2025, 5, 20, 19, 0, 0, 0, DateTimeKind.Unspecified),
+                            AwayTeamScore = 1,
+                            GameDate = new DateTime(2025, 6, 20, 19, 0, 0, 0, DateTimeKind.Unspecified),
                             Game_AwayTeamId = 7,
                             Game_CompetitionsId = 1,
                             Game_HomeTeamId = 2,
                             Game_StadiumsId = 2,
-                            HomeTeamScore = 0,
-                            IsPlayed = false,
-                            RefereeName = "Arbitru 3",
-                            TicketsSold = 0
+                            HomeTeamScore = 2,
+                            IsPlayed = true,
+                            RefereeName = "Cosmin Ionescu",
+                            TicketsSold = 13
                         },
                         new
                         {
                             Id = 109,
-                            AwayTeamScore = 0,
-                            GameDate = new DateTime(2025, 5, 20, 21, 0, 0, 0, DateTimeKind.Unspecified),
+                            AwayTeamScore = 2,
+                            GameDate = new DateTime(2025, 6, 20, 21, 0, 0, 0, DateTimeKind.Unspecified),
                             Game_AwayTeamId = 6,
                             Game_CompetitionsId = 1,
                             Game_HomeTeamId = 3,
                             Game_StadiumsId = 3,
                             HomeTeamScore = 0,
-                            IsPlayed = false,
-                            RefereeName = "Arbitru 4",
-                            TicketsSold = 0
+                            IsPlayed = true,
+                            RefereeName = "Marius Popa",
+                            TicketsSold = 12
                         },
                         new
                         {
                             Id = 110,
-                            AwayTeamScore = 0,
-                            GameDate = new DateTime(2025, 5, 20, 2, 0, 0, 0, DateTimeKind.Unspecified),
+                            AwayTeamScore = 1,
+                            GameDate = new DateTime(2025, 6, 20, 2, 0, 0, 0, DateTimeKind.Unspecified),
                             Game_AwayTeamId = 5,
                             Game_CompetitionsId = 1,
                             Game_HomeTeamId = 4,
                             Game_StadiumsId = 4,
-                            HomeTeamScore = 0,
-                            IsPlayed = false,
-                            RefereeName = "Arbitru 5",
-                            TicketsSold = 0
+                            HomeTeamScore = 1,
+                            IsPlayed = true,
+                            RefereeName = "Radu Marin",
+                            TicketsSold = 7
                         },
                         new
                         {
                             Id = 111,
-                            AwayTeamScore = 0,
-                            GameDate = new DateTime(2025, 5, 20, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            AwayTeamScore = 1,
+                            GameDate = new DateTime(2025, 6, 20, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Game_AwayTeamId = 19,
                             Game_CompetitionsId = 4,
                             Game_HomeTeamId = 20,
                             Game_StadiumsId = 20,
-                            HomeTeamScore = 0,
-                            IsPlayed = false,
-                            RefereeName = "Arbitru 6",
-                            TicketsSold = 0
+                            HomeTeamScore = 1,
+                            IsPlayed = true,
+                            RefereeName = "Andrei Dumitrescu",
+                            TicketsSold = 16
                         },
                         new
                         {
                             Id = 112,
                             AwayTeamScore = 0,
-                            GameDate = new DateTime(2025, 5, 20, 1, 0, 0, 0, DateTimeKind.Unspecified),
+                            GameDate = new DateTime(2025, 6, 20, 1, 0, 0, 0, DateTimeKind.Unspecified),
                             Game_AwayTeamId = 18,
                             Game_CompetitionsId = 4,
                             Game_HomeTeamId = 11,
                             Game_StadiumsId = 11,
-                            HomeTeamScore = 0,
-                            IsPlayed = false,
-                            RefereeName = "Arbitru 7",
-                            TicketsSold = 0
+                            HomeTeamScore = 3,
+                            IsPlayed = true,
+                            RefereeName = "Andrei Dumitrescu",
+                            TicketsSold = 9
                         },
                         new
                         {
                             Id = 113,
-                            AwayTeamScore = 0,
-                            GameDate = new DateTime(2025, 5, 20, 18, 0, 0, 0, DateTimeKind.Unspecified),
+                            AwayTeamScore = 3,
+                            GameDate = new DateTime(2025, 6, 20, 18, 0, 0, 0, DateTimeKind.Unspecified),
                             Game_AwayTeamId = 17,
                             Game_CompetitionsId = 4,
                             Game_HomeTeamId = 12,
                             Game_StadiumsId = 12,
-                            HomeTeamScore = 0,
-                            IsPlayed = false,
-                            RefereeName = "Arbitru 8",
-                            TicketsSold = 0
+                            HomeTeamScore = 2,
+                            IsPlayed = true,
+                            RefereeName = "Florin Stan",
+                            TicketsSold = 12
                         },
                         new
                         {
                             Id = 114,
                             AwayTeamScore = 0,
-                            GameDate = new DateTime(2025, 5, 20, 6, 0, 0, 0, DateTimeKind.Unspecified),
+                            GameDate = new DateTime(2025, 6, 20, 6, 0, 0, 0, DateTimeKind.Unspecified),
                             Game_AwayTeamId = 16,
                             Game_CompetitionsId = 4,
                             Game_HomeTeamId = 13,
                             Game_StadiumsId = 13,
-                            HomeTeamScore = 0,
-                            IsPlayed = false,
-                            RefereeName = "Arbitru 9",
-                            TicketsSold = 0
+                            HomeTeamScore = 1,
+                            IsPlayed = true,
+                            RefereeName = "Cristian Ene",
+                            TicketsSold = 12
                         },
                         new
                         {
                             Id = 115,
-                            AwayTeamScore = 0,
-                            GameDate = new DateTime(2025, 5, 20, 11, 0, 0, 0, DateTimeKind.Unspecified),
+                            AwayTeamScore = 2,
+                            GameDate = new DateTime(2025, 6, 20, 11, 0, 0, 0, DateTimeKind.Unspecified),
                             Game_AwayTeamId = 15,
                             Game_CompetitionsId = 4,
                             Game_HomeTeamId = 14,
                             Game_StadiumsId = 14,
                             HomeTeamScore = 0,
-                            IsPlayed = false,
-                            RefereeName = "Arbitru 10",
-                            TicketsSold = 0
+                            IsPlayed = true,
+                            RefereeName = "Marius Popa",
+                            TicketsSold = 14
                         },
                         new
                         {
                             Id = 116,
-                            AwayTeamScore = 0,
-                            GameDate = new DateTime(2025, 5, 20, 3, 0, 0, 0, DateTimeKind.Unspecified),
+                            AwayTeamScore = 2,
+                            GameDate = new DateTime(2025, 6, 20, 3, 0, 0, 0, DateTimeKind.Unspecified),
                             Game_AwayTeamId = 29,
-                            Game_CompetitionsId = 7,
+                            Game_CompetitionsId = 5,
                             Game_HomeTeamId = 30,
                             Game_StadiumsId = 30,
-                            HomeTeamScore = 0,
-                            IsPlayed = false,
-                            RefereeName = "Arbitru 11",
-                            TicketsSold = 0
+                            HomeTeamScore = 2,
+                            IsPlayed = true,
+                            RefereeName = "Daniel Petrescu",
+                            TicketsSold = 19
                         },
                         new
                         {
                             Id = 117,
-                            AwayTeamScore = 0,
-                            GameDate = new DateTime(2025, 5, 20, 20, 0, 0, 0, DateTimeKind.Unspecified),
+                            AwayTeamScore = 3,
+                            GameDate = new DateTime(2025, 6, 20, 20, 0, 0, 0, DateTimeKind.Unspecified),
                             Game_AwayTeamId = 28,
-                            Game_CompetitionsId = 7,
+                            Game_CompetitionsId = 5,
                             Game_HomeTeamId = 21,
                             Game_StadiumsId = 21,
-                            HomeTeamScore = 0,
-                            IsPlayed = false,
-                            RefereeName = "Arbitru 12",
-                            TicketsSold = 0
+                            HomeTeamScore = 1,
+                            IsPlayed = true,
+                            RefereeName = "Florin Stan",
+                            TicketsSold = 10
                         },
                         new
                         {
                             Id = 118,
-                            AwayTeamScore = 0,
-                            GameDate = new DateTime(2025, 5, 20, 5, 0, 0, 0, DateTimeKind.Unspecified),
+                            AwayTeamScore = 2,
+                            GameDate = new DateTime(2025, 6, 20, 5, 0, 0, 0, DateTimeKind.Unspecified),
                             Game_AwayTeamId = 27,
-                            Game_CompetitionsId = 7,
+                            Game_CompetitionsId = 5,
                             Game_HomeTeamId = 22,
                             Game_StadiumsId = 22,
                             HomeTeamScore = 0,
-                            IsPlayed = false,
-                            RefereeName = "Arbitru 13",
-                            TicketsSold = 0
+                            IsPlayed = true,
+                            RefereeName = "Cătălin Gheorghe",
+                            TicketsSold = 15
                         },
                         new
                         {
                             Id = 119,
-                            AwayTeamScore = 0,
-                            GameDate = new DateTime(2025, 5, 20, 6, 0, 0, 0, DateTimeKind.Unspecified),
+                            AwayTeamScore = 1,
+                            GameDate = new DateTime(2025, 6, 20, 6, 0, 0, 0, DateTimeKind.Unspecified),
                             Game_AwayTeamId = 26,
-                            Game_CompetitionsId = 7,
+                            Game_CompetitionsId = 5,
                             Game_HomeTeamId = 23,
                             Game_StadiumsId = 23,
-                            HomeTeamScore = 0,
-                            IsPlayed = false,
-                            RefereeName = "Arbitru 14",
-                            TicketsSold = 0
+                            HomeTeamScore = 2,
+                            IsPlayed = true,
+                            RefereeName = "Bogdan Neagu",
+                            TicketsSold = 17
                         },
                         new
                         {
                             Id = 120,
-                            AwayTeamScore = 0,
-                            GameDate = new DateTime(2025, 5, 20, 8, 0, 0, 0, DateTimeKind.Unspecified),
+                            AwayTeamScore = 1,
+                            GameDate = new DateTime(2025, 6, 20, 8, 0, 0, 0, DateTimeKind.Unspecified),
                             Game_AwayTeamId = 25,
-                            Game_CompetitionsId = 7,
+                            Game_CompetitionsId = 5,
                             Game_HomeTeamId = 24,
                             Game_StadiumsId = 24,
                             HomeTeamScore = 0,
-                            IsPlayed = false,
-                            RefereeName = "Arbitru 15",
-                            TicketsSold = 0
+                            IsPlayed = true,
+                            RefereeName = "Andrei Dumitrescu",
+                            TicketsSold = 18
                         },
                         new
                         {
                             Id = 121,
-                            AwayTeamScore = 0,
-                            GameDate = new DateTime(2025, 5, 27, 18, 0, 0, 0, DateTimeKind.Unspecified),
+                            AwayTeamScore = 1,
+                            GameDate = new DateTime(2025, 6, 27, 18, 0, 0, 0, DateTimeKind.Unspecified),
                             Game_AwayTeamId = 10,
                             Game_CompetitionsId = 1,
                             Game_HomeTeamId = 5,
                             Game_StadiumsId = 5,
-                            HomeTeamScore = 0,
-                            IsPlayed = false,
-                            RefereeName = "Arbitru 1",
-                            TicketsSold = 0
+                            HomeTeamScore = 2,
+                            IsPlayed = true,
+                            RefereeName = "George Ilie",
+                            TicketsSold = 13
                         },
                         new
                         {
                             Id = 122,
-                            AwayTeamScore = 0,
-                            GameDate = new DateTime(2025, 5, 27, 20, 0, 0, 0, DateTimeKind.Unspecified),
+                            AwayTeamScore = 2,
+                            GameDate = new DateTime(2025, 6, 27, 20, 0, 0, 0, DateTimeKind.Unspecified),
                             Game_AwayTeamId = 4,
                             Game_CompetitionsId = 1,
                             Game_HomeTeamId = 6,
                             Game_StadiumsId = 6,
                             HomeTeamScore = 0,
-                            IsPlayed = false,
-                            RefereeName = "Arbitru 2",
-                            TicketsSold = 0
+                            IsPlayed = true,
+                            RefereeName = "Alexandru Vasilescu",
+                            TicketsSold = 15
                         },
                         new
                         {
                             Id = 123,
                             AwayTeamScore = 0,
-                            GameDate = new DateTime(2025, 5, 27, 19, 0, 0, 0, DateTimeKind.Unspecified),
+                            GameDate = new DateTime(2025, 6, 27, 19, 0, 0, 0, DateTimeKind.Unspecified),
                             Game_AwayTeamId = 3,
                             Game_CompetitionsId = 1,
                             Game_HomeTeamId = 7,
                             Game_StadiumsId = 7,
-                            HomeTeamScore = 0,
-                            IsPlayed = false,
-                            RefereeName = "Arbitru 3",
-                            TicketsSold = 0
+                            HomeTeamScore = 3,
+                            IsPlayed = true,
+                            RefereeName = "Cosmin Ionescu",
+                            TicketsSold = 9
                         },
                         new
                         {
                             Id = 124,
-                            AwayTeamScore = 0,
-                            GameDate = new DateTime(2025, 5, 27, 21, 0, 0, 0, DateTimeKind.Unspecified),
+                            AwayTeamScore = 1,
+                            GameDate = new DateTime(2025, 6, 27, 21, 0, 0, 0, DateTimeKind.Unspecified),
                             Game_AwayTeamId = 2,
                             Game_CompetitionsId = 1,
                             Game_HomeTeamId = 8,
                             Game_StadiumsId = 8,
-                            HomeTeamScore = 0,
-                            IsPlayed = false,
-                            RefereeName = "Arbitru 4",
-                            TicketsSold = 0
+                            HomeTeamScore = 1,
+                            IsPlayed = true,
+                            RefereeName = "Radu Marin",
+                            TicketsSold = 17
                         },
                         new
                         {
                             Id = 125,
-                            AwayTeamScore = 0,
-                            GameDate = new DateTime(2025, 5, 27, 2, 0, 0, 0, DateTimeKind.Unspecified),
+                            AwayTeamScore = 2,
+                            GameDate = new DateTime(2025, 6, 27, 2, 0, 0, 0, DateTimeKind.Unspecified),
                             Game_AwayTeamId = 1,
                             Game_CompetitionsId = 1,
                             Game_HomeTeamId = 9,
                             Game_StadiumsId = 9,
-                            HomeTeamScore = 0,
-                            IsPlayed = false,
-                            RefereeName = "Arbitru 5",
-                            TicketsSold = 0
+                            HomeTeamScore = 1,
+                            IsPlayed = true,
+                            RefereeName = "Silviu Barbu",
+                            TicketsSold = 11
                         },
                         new
                         {
                             Id = 126,
                             AwayTeamScore = 0,
-                            GameDate = new DateTime(2025, 5, 27, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            GameDate = new DateTime(2025, 6, 27, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Game_AwayTeamId = 20,
                             Game_CompetitionsId = 4,
                             Game_HomeTeamId = 15,
                             Game_StadiumsId = 15,
                             HomeTeamScore = 0,
-                            IsPlayed = false,
-                            RefereeName = "Arbitru 6",
-                            TicketsSold = 0
+                            IsPlayed = true,
+                            RefereeName = "Iulian Nistor",
+                            TicketsSold = 8
                         },
                         new
                         {
                             Id = 127,
-                            AwayTeamScore = 0,
-                            GameDate = new DateTime(2025, 5, 27, 1, 0, 0, 0, DateTimeKind.Unspecified),
+                            AwayTeamScore = 1,
+                            GameDate = new DateTime(2025, 6, 27, 1, 0, 0, 0, DateTimeKind.Unspecified),
                             Game_AwayTeamId = 14,
                             Game_CompetitionsId = 4,
                             Game_HomeTeamId = 16,
                             Game_StadiumsId = 16,
-                            HomeTeamScore = 0,
-                            IsPlayed = false,
-                            RefereeName = "Arbitru 7",
-                            TicketsSold = 0
+                            HomeTeamScore = 2,
+                            IsPlayed = true,
+                            RefereeName = "Iulian Nistor",
+                            TicketsSold = 14
                         },
                         new
                         {
                             Id = 128,
-                            AwayTeamScore = 0,
-                            GameDate = new DateTime(2025, 5, 27, 18, 0, 0, 0, DateTimeKind.Unspecified),
+                            AwayTeamScore = 2,
+                            GameDate = new DateTime(2025, 6, 27, 18, 0, 0, 0, DateTimeKind.Unspecified),
                             Game_AwayTeamId = 13,
                             Game_CompetitionsId = 4,
                             Game_HomeTeamId = 17,
                             Game_StadiumsId = 17,
                             HomeTeamScore = 0,
-                            IsPlayed = false,
-                            RefereeName = "Arbitru 8",
-                            TicketsSold = 0
+                            IsPlayed = true,
+                            RefereeName = "Mihai Rusu",
+                            TicketsSold = 13
                         },
                         new
                         {
                             Id = 129,
                             AwayTeamScore = 0,
-                            GameDate = new DateTime(2025, 5, 27, 6, 0, 0, 0, DateTimeKind.Unspecified),
+                            GameDate = new DateTime(2025, 6, 27, 6, 0, 0, 0, DateTimeKind.Unspecified),
                             Game_AwayTeamId = 12,
                             Game_CompetitionsId = 4,
                             Game_HomeTeamId = 18,
                             Game_StadiumsId = 18,
-                            HomeTeamScore = 0,
-                            IsPlayed = false,
-                            RefereeName = "Arbitru 9",
-                            TicketsSold = 0
+                            HomeTeamScore = 1,
+                            IsPlayed = true,
+                            RefereeName = "Paul Voicu",
+                            TicketsSold = 7
                         },
                         new
                         {
                             Id = 130,
                             AwayTeamScore = 0,
-                            GameDate = new DateTime(2025, 5, 27, 11, 0, 0, 0, DateTimeKind.Unspecified),
+                            GameDate = new DateTime(2025, 6, 27, 11, 0, 0, 0, DateTimeKind.Unspecified),
                             Game_AwayTeamId = 11,
                             Game_CompetitionsId = 4,
                             Game_HomeTeamId = 19,
                             Game_StadiumsId = 19,
                             HomeTeamScore = 0,
-                            IsPlayed = false,
-                            RefereeName = "Arbitru 10",
-                            TicketsSold = 0
+                            IsPlayed = true,
+                            RefereeName = "Cătălin Gheorghe",
+                            TicketsSold = 9
                         },
                         new
                         {
                             Id = 131,
-                            AwayTeamScore = 0,
-                            GameDate = new DateTime(2025, 5, 27, 3, 0, 0, 0, DateTimeKind.Unspecified),
+                            AwayTeamScore = 3,
+                            GameDate = new DateTime(2025, 6, 27, 3, 0, 0, 0, DateTimeKind.Unspecified),
                             Game_AwayTeamId = 30,
-                            Game_CompetitionsId = 7,
+                            Game_CompetitionsId = 5,
                             Game_HomeTeamId = 25,
                             Game_StadiumsId = 25,
-                            HomeTeamScore = 0,
-                            IsPlayed = false,
-                            RefereeName = "Arbitru 11",
-                            TicketsSold = 0
+                            HomeTeamScore = 1,
+                            IsPlayed = true,
+                            RefereeName = "Florin Stan",
+                            TicketsSold = 16
                         },
                         new
                         {
                             Id = 132,
-                            AwayTeamScore = 0,
-                            GameDate = new DateTime(2025, 5, 27, 20, 0, 0, 0, DateTimeKind.Unspecified),
+                            AwayTeamScore = 2,
+                            GameDate = new DateTime(2025, 6, 27, 20, 0, 0, 0, DateTimeKind.Unspecified),
                             Game_AwayTeamId = 24,
-                            Game_CompetitionsId = 7,
+                            Game_CompetitionsId = 5,
                             Game_HomeTeamId = 26,
                             Game_StadiumsId = 26,
-                            HomeTeamScore = 0,
-                            IsPlayed = false,
-                            RefereeName = "Arbitru 12",
-                            TicketsSold = 0
+                            HomeTeamScore = 2,
+                            IsPlayed = true,
+                            RefereeName = "Iulian Nistor",
+                            TicketsSold = 18
                         },
                         new
                         {
                             Id = 133,
                             AwayTeamScore = 0,
-                            GameDate = new DateTime(2025, 5, 27, 5, 0, 0, 0, DateTimeKind.Unspecified),
+                            GameDate = new DateTime(2025, 6, 27, 5, 0, 0, 0, DateTimeKind.Unspecified),
                             Game_AwayTeamId = 23,
-                            Game_CompetitionsId = 7,
+                            Game_CompetitionsId = 5,
                             Game_HomeTeamId = 27,
                             Game_StadiumsId = 27,
                             HomeTeamScore = 0,
-                            IsPlayed = false,
-                            RefereeName = "Arbitru 13",
-                            TicketsSold = 0
+                            IsPlayed = true,
+                            RefereeName = "Mihai Rusu",
+                            TicketsSold = 10
                         },
                         new
                         {
                             Id = 134,
-                            AwayTeamScore = 0,
-                            GameDate = new DateTime(2025, 5, 27, 6, 0, 0, 0, DateTimeKind.Unspecified),
+                            AwayTeamScore = 1,
+                            GameDate = new DateTime(2025, 6, 27, 6, 0, 0, 0, DateTimeKind.Unspecified),
                             Game_AwayTeamId = 22,
-                            Game_CompetitionsId = 7,
+                            Game_CompetitionsId = 5,
                             Game_HomeTeamId = 28,
                             Game_StadiumsId = 28,
-                            HomeTeamScore = 0,
-                            IsPlayed = false,
-                            RefereeName = "Arbitru 14",
-                            TicketsSold = 0
+                            HomeTeamScore = 2,
+                            IsPlayed = true,
+                            RefereeName = "Bogdan Neagu",
+                            TicketsSold = 17
                         },
                         new
                         {
                             Id = 135,
-                            AwayTeamScore = 0,
-                            GameDate = new DateTime(2025, 5, 27, 8, 0, 0, 0, DateTimeKind.Unspecified),
+                            AwayTeamScore = 2,
+                            GameDate = new DateTime(2025, 6, 27, 8, 0, 0, 0, DateTimeKind.Unspecified),
                             Game_AwayTeamId = 21,
-                            Game_CompetitionsId = 7,
+                            Game_CompetitionsId = 5,
                             Game_HomeTeamId = 29,
                             Game_StadiumsId = 29,
                             HomeTeamScore = 0,
-                            IsPlayed = false,
-                            RefereeName = "Arbitru 15",
-                            TicketsSold = 0
+                            IsPlayed = true,
+                            RefereeName = "Cosmin Ionescu",
+                            TicketsSold = 12
                         },
                         new
                         {
                             Id = 136,
                             AwayTeamScore = 0,
-                            GameDate = new DateTime(2025, 6, 4, 18, 0, 0, 0, DateTimeKind.Unspecified),
+                            GameDate = new DateTime(2025, 7, 4, 18, 0, 0, 0, DateTimeKind.Unspecified),
                             Game_AwayTeamId = 1,
                             Game_CompetitionsId = 1,
                             Game_HomeTeamId = 10,
                             Game_StadiumsId = 10,
-                            HomeTeamScore = 0,
-                            IsPlayed = false,
-                            RefereeName = "Arbitru 1",
-                            TicketsSold = 0
+                            HomeTeamScore = 2,
+                            IsPlayed = true,
+                            RefereeName = "Cristian Ene",
+                            TicketsSold = 16
                         },
                         new
                         {
                             Id = 137,
-                            AwayTeamScore = 0,
-                            GameDate = new DateTime(2025, 6, 4, 20, 0, 0, 0, DateTimeKind.Unspecified),
+                            AwayTeamScore = 1,
+                            GameDate = new DateTime(2025, 7, 4, 20, 0, 0, 0, DateTimeKind.Unspecified),
                             Game_AwayTeamId = 2,
                             Game_CompetitionsId = 1,
                             Game_HomeTeamId = 9,
                             Game_StadiumsId = 9,
                             HomeTeamScore = 0,
-                            IsPlayed = false,
-                            RefereeName = "Arbitru 2",
-                            TicketsSold = 0
+                            IsPlayed = true,
+                            RefereeName = "Marius Popa",
+                            TicketsSold = 13
                         },
                         new
                         {
                             Id = 138,
-                            AwayTeamScore = 0,
-                            GameDate = new DateTime(2025, 6, 4, 19, 0, 0, 0, DateTimeKind.Unspecified),
+                            AwayTeamScore = 1,
+                            GameDate = new DateTime(2025, 7, 4, 19, 0, 0, 0, DateTimeKind.Unspecified),
                             Game_AwayTeamId = 3,
                             Game_CompetitionsId = 1,
                             Game_HomeTeamId = 8,
                             Game_StadiumsId = 8,
-                            HomeTeamScore = 0,
-                            IsPlayed = false,
-                            RefereeName = "Arbitru 3",
-                            TicketsSold = 0
+                            HomeTeamScore = 1,
+                            IsPlayed = true,
+                            RefereeName = "Radu Marin",
+                            TicketsSold = 11
                         },
                         new
                         {
                             Id = 139,
                             AwayTeamScore = 0,
-                            GameDate = new DateTime(2025, 6, 4, 21, 0, 0, 0, DateTimeKind.Unspecified),
+                            GameDate = new DateTime(2025, 7, 4, 21, 0, 0, 0, DateTimeKind.Unspecified),
                             Game_AwayTeamId = 4,
                             Game_CompetitionsId = 1,
                             Game_HomeTeamId = 7,
                             Game_StadiumsId = 7,
-                            HomeTeamScore = 0,
-                            IsPlayed = false,
-                            RefereeName = "Arbitru 4",
-                            TicketsSold = 0
+                            HomeTeamScore = 3,
+                            IsPlayed = true,
+                            RefereeName = "George Ilie",
+                            TicketsSold = 18
                         },
                         new
                         {
                             Id = 140,
-                            AwayTeamScore = 0,
-                            GameDate = new DateTime(2025, 6, 4, 2, 0, 0, 0, DateTimeKind.Unspecified),
+                            AwayTeamScore = 1,
+                            GameDate = new DateTime(2025, 7, 4, 2, 0, 0, 0, DateTimeKind.Unspecified),
                             Game_AwayTeamId = 5,
                             Game_CompetitionsId = 1,
                             Game_HomeTeamId = 6,
                             Game_StadiumsId = 6,
-                            HomeTeamScore = 0,
-                            IsPlayed = false,
-                            RefereeName = "Arbitru 5",
-                            TicketsSold = 0
+                            HomeTeamScore = 1,
+                            IsPlayed = true,
+                            RefereeName = "Silviu Barbu",
+                            TicketsSold = 14
                         },
                         new
                         {
                             Id = 141,
-                            AwayTeamScore = 0,
-                            GameDate = new DateTime(2025, 6, 4, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            AwayTeamScore = 2,
+                            GameDate = new DateTime(2025, 7, 4, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Game_AwayTeamId = 11,
                             Game_CompetitionsId = 4,
                             Game_HomeTeamId = 20,
                             Game_StadiumsId = 20,
                             HomeTeamScore = 0,
-                            IsPlayed = false,
-                            RefereeName = "Arbitru 6",
-                            TicketsSold = 0
+                            IsPlayed = true,
+                            RefereeName = "Paul Voicu",
+                            TicketsSold = 12
                         },
                         new
                         {
                             Id = 142,
                             AwayTeamScore = 0,
-                            GameDate = new DateTime(2025, 6, 4, 1, 0, 0, 0, DateTimeKind.Unspecified),
+                            GameDate = new DateTime(2025, 7, 4, 1, 0, 0, 0, DateTimeKind.Unspecified),
                             Game_AwayTeamId = 12,
                             Game_CompetitionsId = 4,
                             Game_HomeTeamId = 19,
                             Game_StadiumsId = 19,
-                            HomeTeamScore = 0,
-                            IsPlayed = false,
-                            RefereeName = "Arbitru 7",
-                            TicketsSold = 0
+                            HomeTeamScore = 1,
+                            IsPlayed = true,
+                            RefereeName = "Paul Voicu",
+                            TicketsSold = 9
                         },
                         new
                         {
                             Id = 143,
-                            AwayTeamScore = 0,
-                            GameDate = new DateTime(2025, 6, 4, 18, 0, 0, 0, DateTimeKind.Unspecified),
+                            AwayTeamScore = 2,
+                            GameDate = new DateTime(2025, 7, 4, 18, 0, 0, 0, DateTimeKind.Unspecified),
                             Game_AwayTeamId = 13,
                             Game_CompetitionsId = 4,
                             Game_HomeTeamId = 18,
                             Game_StadiumsId = 18,
-                            HomeTeamScore = 0,
-                            IsPlayed = false,
-                            RefereeName = "Arbitru 8",
-                            TicketsSold = 0
+                            HomeTeamScore = 2,
+                            IsPlayed = true,
+                            RefereeName = "Andrei Dumitrescu",
+                            TicketsSold = 13
                         },
                         new
                         {
                             Id = 144,
                             AwayTeamScore = 0,
-                            GameDate = new DateTime(2025, 6, 4, 6, 0, 0, 0, DateTimeKind.Unspecified),
+                            GameDate = new DateTime(2025, 7, 4, 6, 0, 0, 0, DateTimeKind.Unspecified),
                             Game_AwayTeamId = 14,
                             Game_CompetitionsId = 4,
                             Game_HomeTeamId = 17,
                             Game_StadiumsId = 17,
                             HomeTeamScore = 0,
-                            IsPlayed = false,
-                            RefereeName = "Arbitru 9",
-                            TicketsSold = 0
+                            IsPlayed = true,
+                            RefereeName = "Alexandru Vasilescu",
+                            TicketsSold = 7
                         },
                         new
                         {
                             Id = 145,
-                            AwayTeamScore = 0,
-                            GameDate = new DateTime(2025, 6, 4, 11, 0, 0, 0, DateTimeKind.Unspecified),
+                            AwayTeamScore = 3,
+                            GameDate = new DateTime(2025, 7, 4, 11, 0, 0, 0, DateTimeKind.Unspecified),
                             Game_AwayTeamId = 15,
                             Game_CompetitionsId = 4,
                             Game_HomeTeamId = 16,
                             Game_StadiumsId = 16,
-                            HomeTeamScore = 0,
-                            IsPlayed = false,
-                            RefereeName = "Arbitru 10",
-                            TicketsSold = 0
+                            HomeTeamScore = 1,
+                            IsPlayed = true,
+                            RefereeName = "Daniel Petrescu",
+                            TicketsSold = 17
                         },
                         new
                         {
                             Id = 146,
-                            AwayTeamScore = 0,
-                            GameDate = new DateTime(2025, 6, 4, 3, 0, 0, 0, DateTimeKind.Unspecified),
+                            AwayTeamScore = 1,
+                            GameDate = new DateTime(2025, 7, 4, 3, 0, 0, 0, DateTimeKind.Unspecified),
                             Game_AwayTeamId = 21,
-                            Game_CompetitionsId = 7,
+                            Game_CompetitionsId = 5,
                             Game_HomeTeamId = 30,
                             Game_StadiumsId = 30,
                             HomeTeamScore = 0,
-                            IsPlayed = false,
-                            RefereeName = "Arbitru 11",
-                            TicketsSold = 0
+                            IsPlayed = true,
+                            RefereeName = "Iulian Nistor",
+                            TicketsSold = 10
                         },
                         new
                         {
                             Id = 147,
                             AwayTeamScore = 0,
-                            GameDate = new DateTime(2025, 6, 4, 20, 0, 0, 0, DateTimeKind.Unspecified),
+                            GameDate = new DateTime(2025, 7, 4, 20, 0, 0, 0, DateTimeKind.Unspecified),
                             Game_AwayTeamId = 22,
-                            Game_CompetitionsId = 7,
+                            Game_CompetitionsId = 5,
                             Game_HomeTeamId = 29,
                             Game_StadiumsId = 29,
-                            HomeTeamScore = 0,
-                            IsPlayed = false,
-                            RefereeName = "Arbitru 12",
-                            TicketsSold = 0
+                            HomeTeamScore = 1,
+                            IsPlayed = true,
+                            RefereeName = "Marius Popa",
+                            TicketsSold = 12
                         },
                         new
                         {
                             Id = 148,
-                            AwayTeamScore = 0,
-                            GameDate = new DateTime(2025, 6, 4, 5, 0, 0, 0, DateTimeKind.Unspecified),
+                            AwayTeamScore = 2,
+                            GameDate = new DateTime(2025, 7, 4, 5, 0, 0, 0, DateTimeKind.Unspecified),
                             Game_AwayTeamId = 23,
-                            Game_CompetitionsId = 7,
+                            Game_CompetitionsId = 5,
                             Game_HomeTeamId = 28,
                             Game_StadiumsId = 28,
-                            HomeTeamScore = 0,
-                            IsPlayed = false,
-                            RefereeName = "Arbitru 13",
-                            TicketsSold = 0
+                            HomeTeamScore = 2,
+                            IsPlayed = true,
+                            RefereeName = "Daniel Petrescu",
+                            TicketsSold = 11
                         },
                         new
                         {
                             Id = 149,
-                            AwayTeamScore = 0,
-                            GameDate = new DateTime(2025, 6, 4, 6, 0, 0, 0, DateTimeKind.Unspecified),
+                            AwayTeamScore = 1,
+                            GameDate = new DateTime(2025, 7, 4, 6, 0, 0, 0, DateTimeKind.Unspecified),
                             Game_AwayTeamId = 24,
-                            Game_CompetitionsId = 7,
+                            Game_CompetitionsId = 5,
                             Game_HomeTeamId = 27,
                             Game_StadiumsId = 27,
-                            HomeTeamScore = 0,
-                            IsPlayed = false,
-                            RefereeName = "Arbitru 14",
-                            TicketsSold = 0
+                            HomeTeamScore = 3,
+                            IsPlayed = true,
+                            RefereeName = "Radu Marin",
+                            TicketsSold = 14
                         },
                         new
                         {
                             Id = 150,
-                            AwayTeamScore = 0,
-                            GameDate = new DateTime(2025, 6, 4, 8, 0, 0, 0, DateTimeKind.Unspecified),
+                            AwayTeamScore = 2,
+                            GameDate = new DateTime(2025, 7, 4, 8, 0, 0, 0, DateTimeKind.Unspecified),
                             Game_AwayTeamId = 25,
-                            Game_CompetitionsId = 7,
+                            Game_CompetitionsId = 5,
                             Game_HomeTeamId = 26,
                             Game_StadiumsId = 26,
-                            HomeTeamScore = 0,
-                            IsPlayed = false,
-                            RefereeName = "Arbitru 15",
-                            TicketsSold = 0
+                            HomeTeamScore = 1,
+                            IsPlayed = true,
+                            RefereeName = "Bogdan Neagu",
+                            TicketsSold = 8
                         },
                         new
                         {
                             Id = 151,
                             AwayTeamScore = 0,
-                            GameDate = new DateTime(2025, 6, 11, 18, 0, 0, 0, DateTimeKind.Unspecified),
+                            GameDate = new DateTime(2025, 7, 11, 18, 0, 0, 0, DateTimeKind.Unspecified),
                             Game_AwayTeamId = 10,
                             Game_CompetitionsId = 1,
                             Game_HomeTeamId = 6,
                             Game_StadiumsId = 6,
                             HomeTeamScore = 0,
                             IsPlayed = false,
-                            RefereeName = "Arbitru 1",
+                            RefereeName = "Paul Voicu",
                             TicketsSold = 0
                         },
                         new
                         {
                             Id = 152,
                             AwayTeamScore = 0,
-                            GameDate = new DateTime(2025, 6, 11, 20, 0, 0, 0, DateTimeKind.Unspecified),
+                            GameDate = new DateTime(2025, 7, 11, 20, 0, 0, 0, DateTimeKind.Unspecified),
                             Game_AwayTeamId = 7,
                             Game_CompetitionsId = 1,
                             Game_HomeTeamId = 5,
                             Game_StadiumsId = 5,
                             HomeTeamScore = 0,
                             IsPlayed = false,
-                            RefereeName = "Arbitru 2",
+                            RefereeName = "Silviu Barbu",
                             TicketsSold = 0
                         },
                         new
                         {
                             Id = 153,
                             AwayTeamScore = 0,
-                            GameDate = new DateTime(2025, 6, 11, 19, 0, 0, 0, DateTimeKind.Unspecified),
+                            GameDate = new DateTime(2025, 7, 11, 19, 0, 0, 0, DateTimeKind.Unspecified),
                             Game_AwayTeamId = 8,
                             Game_CompetitionsId = 1,
                             Game_HomeTeamId = 4,
                             Game_StadiumsId = 4,
                             HomeTeamScore = 0,
                             IsPlayed = false,
-                            RefereeName = "Arbitru 3",
+                            RefereeName = "Andrei Dumitrescu",
                             TicketsSold = 0
                         },
                         new
                         {
                             Id = 154,
                             AwayTeamScore = 0,
-                            GameDate = new DateTime(2025, 6, 11, 21, 0, 0, 0, DateTimeKind.Unspecified),
+                            GameDate = new DateTime(2025, 7, 11, 21, 0, 0, 0, DateTimeKind.Unspecified),
                             Game_AwayTeamId = 9,
                             Game_CompetitionsId = 1,
                             Game_HomeTeamId = 3,
                             Game_StadiumsId = 3,
                             HomeTeamScore = 0,
                             IsPlayed = false,
-                            RefereeName = "Arbitru 4",
+                            RefereeName = "Cosmin Ionescu",
                             TicketsSold = 0
                         },
                         new
                         {
                             Id = 155,
                             AwayTeamScore = 0,
-                            GameDate = new DateTime(2025, 6, 11, 2, 0, 0, 0, DateTimeKind.Unspecified),
+                            GameDate = new DateTime(2025, 7, 11, 2, 0, 0, 0, DateTimeKind.Unspecified),
                             Game_AwayTeamId = 1,
                             Game_CompetitionsId = 1,
                             Game_HomeTeamId = 2,
                             Game_StadiumsId = 2,
                             HomeTeamScore = 0,
                             IsPlayed = false,
-                            RefereeName = "Arbitru 5",
+                            RefereeName = "Mihai Rusu",
                             TicketsSold = 0
                         },
                         new
                         {
                             Id = 156,
                             AwayTeamScore = 0,
-                            GameDate = new DateTime(2025, 6, 11, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            GameDate = new DateTime(2025, 7, 11, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Game_AwayTeamId = 20,
                             Game_CompetitionsId = 4,
                             Game_HomeTeamId = 16,
                             Game_StadiumsId = 16,
                             HomeTeamScore = 0,
                             IsPlayed = false,
-                            RefereeName = "Arbitru 6",
+                            RefereeName = "Cristian Ene",
                             TicketsSold = 0
                         },
                         new
                         {
                             Id = 157,
                             AwayTeamScore = 0,
-                            GameDate = new DateTime(2025, 6, 11, 1, 0, 0, 0, DateTimeKind.Unspecified),
+                            GameDate = new DateTime(2025, 7, 11, 1, 0, 0, 0, DateTimeKind.Unspecified),
                             Game_AwayTeamId = 17,
                             Game_CompetitionsId = 4,
                             Game_HomeTeamId = 15,
                             Game_StadiumsId = 15,
                             HomeTeamScore = 0,
                             IsPlayed = false,
-                            RefereeName = "Arbitru 7",
+                            RefereeName = "Cristian Ene",
                             TicketsSold = 0
                         },
                         new
                         {
                             Id = 158,
                             AwayTeamScore = 0,
-                            GameDate = new DateTime(2025, 6, 11, 18, 0, 0, 0, DateTimeKind.Unspecified),
+                            GameDate = new DateTime(2025, 7, 11, 18, 0, 0, 0, DateTimeKind.Unspecified),
                             Game_AwayTeamId = 18,
                             Game_CompetitionsId = 4,
                             Game_HomeTeamId = 14,
                             Game_StadiumsId = 14,
                             HomeTeamScore = 0,
                             IsPlayed = false,
-                            RefereeName = "Arbitru 8",
+                            RefereeName = "Florin Stan",
                             TicketsSold = 0
                         },
                         new
                         {
                             Id = 159,
                             AwayTeamScore = 0,
-                            GameDate = new DateTime(2025, 6, 11, 6, 0, 0, 0, DateTimeKind.Unspecified),
+                            GameDate = new DateTime(2025, 7, 11, 6, 0, 0, 0, DateTimeKind.Unspecified),
                             Game_AwayTeamId = 19,
                             Game_CompetitionsId = 4,
                             Game_HomeTeamId = 13,
                             Game_StadiumsId = 13,
                             HomeTeamScore = 0,
                             IsPlayed = false,
-                            RefereeName = "Arbitru 9",
+                            RefereeName = "George Ilie",
                             TicketsSold = 0
                         },
                         new
                         {
                             Id = 160,
                             AwayTeamScore = 0,
-                            GameDate = new DateTime(2025, 6, 11, 11, 0, 0, 0, DateTimeKind.Unspecified),
+                            GameDate = new DateTime(2025, 7, 11, 11, 0, 0, 0, DateTimeKind.Unspecified),
                             Game_AwayTeamId = 11,
                             Game_CompetitionsId = 4,
                             Game_HomeTeamId = 12,
                             Game_StadiumsId = 12,
                             HomeTeamScore = 0,
                             IsPlayed = false,
-                            RefereeName = "Arbitru 10",
+                            RefereeName = "Cătălin Gheorghe",
                             TicketsSold = 0
                         },
                         new
                         {
                             Id = 161,
                             AwayTeamScore = 0,
-                            GameDate = new DateTime(2025, 6, 11, 3, 0, 0, 0, DateTimeKind.Unspecified),
+                            GameDate = new DateTime(2025, 7, 11, 3, 0, 0, 0, DateTimeKind.Unspecified),
                             Game_AwayTeamId = 30,
-                            Game_CompetitionsId = 7,
+                            Game_CompetitionsId = 5,
                             Game_HomeTeamId = 26,
                             Game_StadiumsId = 26,
                             HomeTeamScore = 0,
                             IsPlayed = false,
-                            RefereeName = "Arbitru 11",
+                            RefereeName = "Alexandru Vasilescu",
                             TicketsSold = 0
                         },
                         new
                         {
                             Id = 162,
                             AwayTeamScore = 0,
-                            GameDate = new DateTime(2025, 6, 11, 20, 0, 0, 0, DateTimeKind.Unspecified),
+                            GameDate = new DateTime(2025, 7, 11, 20, 0, 0, 0, DateTimeKind.Unspecified),
                             Game_AwayTeamId = 27,
-                            Game_CompetitionsId = 7,
+                            Game_CompetitionsId = 5,
                             Game_HomeTeamId = 25,
                             Game_StadiumsId = 25,
                             HomeTeamScore = 0,
                             IsPlayed = false,
-                            RefereeName = "Arbitru 12",
+                            RefereeName = "Daniel Petrescu",
                             TicketsSold = 0
                         },
                         new
                         {
                             Id = 163,
                             AwayTeamScore = 0,
-                            GameDate = new DateTime(2025, 6, 11, 5, 0, 0, 0, DateTimeKind.Unspecified),
+                            GameDate = new DateTime(2025, 7, 11, 5, 0, 0, 0, DateTimeKind.Unspecified),
                             Game_AwayTeamId = 28,
-                            Game_CompetitionsId = 7,
+                            Game_CompetitionsId = 5,
                             Game_HomeTeamId = 24,
                             Game_StadiumsId = 24,
                             HomeTeamScore = 0,
                             IsPlayed = false,
-                            RefereeName = "Arbitru 13",
+                            RefereeName = "Cosmin Ionescu",
                             TicketsSold = 0
                         },
                         new
                         {
                             Id = 164,
                             AwayTeamScore = 0,
-                            GameDate = new DateTime(2025, 6, 11, 6, 0, 0, 0, DateTimeKind.Unspecified),
+                            GameDate = new DateTime(2025, 7, 11, 6, 0, 0, 0, DateTimeKind.Unspecified),
                             Game_AwayTeamId = 29,
-                            Game_CompetitionsId = 7,
+                            Game_CompetitionsId = 5,
                             Game_HomeTeamId = 23,
                             Game_StadiumsId = 23,
                             HomeTeamScore = 0,
                             IsPlayed = false,
-                            RefereeName = "Arbitru 14",
+                            RefereeName = "George Ilie",
                             TicketsSold = 0
                         },
                         new
                         {
                             Id = 165,
                             AwayTeamScore = 0,
-                            GameDate = new DateTime(2025, 6, 11, 8, 0, 0, 0, DateTimeKind.Unspecified),
+                            GameDate = new DateTime(2025, 7, 11, 8, 0, 0, 0, DateTimeKind.Unspecified),
                             Game_AwayTeamId = 21,
-                            Game_CompetitionsId = 7,
+                            Game_CompetitionsId = 5,
                             Game_HomeTeamId = 22,
                             Game_StadiumsId = 22,
                             HomeTeamScore = 0,
                             IsPlayed = false,
-                            RefereeName = "Arbitru 15",
+                            RefereeName = "Mihai Rusu",
                             TicketsSold = 0
                         },
                         new
                         {
                             Id = 166,
                             AwayTeamScore = 0,
-                            GameDate = new DateTime(2025, 6, 18, 18, 0, 0, 0, DateTimeKind.Unspecified),
+                            GameDate = new DateTime(2025, 7, 18, 18, 0, 0, 0, DateTimeKind.Unspecified),
                             Game_AwayTeamId = 2,
                             Game_CompetitionsId = 1,
                             Game_HomeTeamId = 10,
                             Game_StadiumsId = 10,
                             HomeTeamScore = 0,
                             IsPlayed = false,
-                            RefereeName = "Arbitru 1",
+                            RefereeName = "Silviu Barbu",
                             TicketsSold = 0
                         },
                         new
                         {
                             Id = 167,
                             AwayTeamScore = 0,
-                            GameDate = new DateTime(2025, 6, 18, 20, 0, 0, 0, DateTimeKind.Unspecified),
+                            GameDate = new DateTime(2025, 7, 18, 20, 0, 0, 0, DateTimeKind.Unspecified),
                             Game_AwayTeamId = 3,
                             Game_CompetitionsId = 1,
                             Game_HomeTeamId = 1,
                             Game_StadiumsId = 1,
                             HomeTeamScore = 0,
                             IsPlayed = false,
-                            RefereeName = "Arbitru 2",
+                            RefereeName = "Andrei Dumitrescu",
                             TicketsSold = 0
                         },
                         new
                         {
                             Id = 168,
                             AwayTeamScore = 0,
-                            GameDate = new DateTime(2025, 6, 18, 19, 0, 0, 0, DateTimeKind.Unspecified),
+                            GameDate = new DateTime(2025, 7, 18, 19, 0, 0, 0, DateTimeKind.Unspecified),
                             Game_AwayTeamId = 4,
                             Game_CompetitionsId = 1,
                             Game_HomeTeamId = 9,
                             Game_StadiumsId = 9,
                             HomeTeamScore = 0,
                             IsPlayed = false,
-                            RefereeName = "Arbitru 3",
+                            RefereeName = "Cristian Ene",
                             TicketsSold = 0
                         },
                         new
                         {
                             Id = 169,
                             AwayTeamScore = 0,
-                            GameDate = new DateTime(2025, 6, 18, 21, 0, 0, 0, DateTimeKind.Unspecified),
+                            GameDate = new DateTime(2025, 7, 18, 21, 0, 0, 0, DateTimeKind.Unspecified),
                             Game_AwayTeamId = 5,
                             Game_CompetitionsId = 1,
                             Game_HomeTeamId = 8,
                             Game_StadiumsId = 8,
                             HomeTeamScore = 0,
                             IsPlayed = false,
-                            RefereeName = "Arbitru 4",
+                            RefereeName = "Alexandru Vasilescu",
                             TicketsSold = 0
                         },
                         new
                         {
                             Id = 170,
                             AwayTeamScore = 0,
-                            GameDate = new DateTime(2025, 6, 18, 2, 0, 0, 0, DateTimeKind.Unspecified),
+                            GameDate = new DateTime(2025, 7, 18, 2, 0, 0, 0, DateTimeKind.Unspecified),
                             Game_AwayTeamId = 6,
                             Game_CompetitionsId = 1,
                             Game_HomeTeamId = 7,
                             Game_StadiumsId = 7,
                             HomeTeamScore = 0,
                             IsPlayed = false,
-                            RefereeName = "Arbitru 5",
+                            RefereeName = "Cătălin Gheorghe",
                             TicketsSold = 0
                         },
                         new
                         {
                             Id = 171,
                             AwayTeamScore = 0,
-                            GameDate = new DateTime(2025, 6, 18, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            GameDate = new DateTime(2025, 7, 18, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Game_AwayTeamId = 12,
                             Game_CompetitionsId = 4,
                             Game_HomeTeamId = 20,
                             Game_StadiumsId = 20,
                             HomeTeamScore = 0,
                             IsPlayed = false,
-                            RefereeName = "Arbitru 6",
+                            RefereeName = "Paul Voicu",
                             TicketsSold = 0
                         },
                         new
                         {
                             Id = 172,
                             AwayTeamScore = 0,
-                            GameDate = new DateTime(2025, 6, 18, 1, 0, 0, 0, DateTimeKind.Unspecified),
+                            GameDate = new DateTime(2025, 7, 18, 1, 0, 0, 0, DateTimeKind.Unspecified),
                             Game_AwayTeamId = 13,
                             Game_CompetitionsId = 4,
                             Game_HomeTeamId = 11,
                             Game_StadiumsId = 11,
                             HomeTeamScore = 0,
                             IsPlayed = false,
-                            RefereeName = "Arbitru 7",
+                            RefereeName = "Paul Voicu",
                             TicketsSold = 0
                         },
                         new
                         {
                             Id = 173,
                             AwayTeamScore = 0,
-                            GameDate = new DateTime(2025, 6, 18, 18, 0, 0, 0, DateTimeKind.Unspecified),
+                            GameDate = new DateTime(2025, 7, 18, 18, 0, 0, 0, DateTimeKind.Unspecified),
                             Game_AwayTeamId = 14,
                             Game_CompetitionsId = 4,
                             Game_HomeTeamId = 19,
                             Game_StadiumsId = 19,
                             HomeTeamScore = 0,
                             IsPlayed = false,
-                            RefereeName = "Arbitru 8",
+                            RefereeName = "Bogdan Neagu",
                             TicketsSold = 0
                         },
                         new
                         {
                             Id = 174,
                             AwayTeamScore = 0,
-                            GameDate = new DateTime(2025, 6, 18, 6, 0, 0, 0, DateTimeKind.Unspecified),
+                            GameDate = new DateTime(2025, 7, 18, 6, 0, 0, 0, DateTimeKind.Unspecified),
                             Game_AwayTeamId = 15,
                             Game_CompetitionsId = 4,
                             Game_HomeTeamId = 18,
                             Game_StadiumsId = 18,
                             HomeTeamScore = 0,
                             IsPlayed = false,
-                            RefereeName = "Arbitru 9",
+                            RefereeName = "Iulian Nistor",
                             TicketsSold = 0
                         },
                         new
                         {
                             Id = 175,
                             AwayTeamScore = 0,
-                            GameDate = new DateTime(2025, 6, 18, 11, 0, 0, 0, DateTimeKind.Unspecified),
+                            GameDate = new DateTime(2025, 7, 18, 11, 0, 0, 0, DateTimeKind.Unspecified),
                             Game_AwayTeamId = 16,
                             Game_CompetitionsId = 4,
                             Game_HomeTeamId = 17,
                             Game_StadiumsId = 17,
                             HomeTeamScore = 0,
                             IsPlayed = false,
-                            RefereeName = "Arbitru 10",
+                            RefereeName = "Radu Marin",
                             TicketsSold = 0
                         },
                         new
                         {
                             Id = 176,
                             AwayTeamScore = 0,
-                            GameDate = new DateTime(2025, 6, 18, 3, 0, 0, 0, DateTimeKind.Unspecified),
+                            GameDate = new DateTime(2025, 7, 18, 3, 0, 0, 0, DateTimeKind.Unspecified),
                             Game_AwayTeamId = 22,
-                            Game_CompetitionsId = 7,
+                            Game_CompetitionsId = 5,
                             Game_HomeTeamId = 30,
                             Game_StadiumsId = 30,
                             HomeTeamScore = 0,
                             IsPlayed = false,
-                            RefereeName = "Arbitru 11",
+                            RefereeName = "Marius Popa",
                             TicketsSold = 0
                         },
                         new
                         {
                             Id = 177,
                             AwayTeamScore = 0,
-                            GameDate = new DateTime(2025, 6, 18, 20, 0, 0, 0, DateTimeKind.Unspecified),
+                            GameDate = new DateTime(2025, 7, 18, 20, 0, 0, 0, DateTimeKind.Unspecified),
                             Game_AwayTeamId = 23,
-                            Game_CompetitionsId = 7,
+                            Game_CompetitionsId = 5,
                             Game_HomeTeamId = 21,
                             Game_StadiumsId = 21,
                             HomeTeamScore = 0,
                             IsPlayed = false,
-                            RefereeName = "Arbitru 12",
+                            RefereeName = "Florin Stan",
                             TicketsSold = 0
                         },
                         new
                         {
                             Id = 178,
                             AwayTeamScore = 0,
-                            GameDate = new DateTime(2025, 6, 18, 5, 0, 0, 0, DateTimeKind.Unspecified),
+                            GameDate = new DateTime(2025, 7, 18, 5, 0, 0, 0, DateTimeKind.Unspecified),
                             Game_AwayTeamId = 24,
-                            Game_CompetitionsId = 7,
+                            Game_CompetitionsId = 5,
                             Game_HomeTeamId = 29,
                             Game_StadiumsId = 29,
                             HomeTeamScore = 0,
                             IsPlayed = false,
-                            RefereeName = "Arbitru 13",
+                            RefereeName = "Andrei Dumitrescu",
                             TicketsSold = 0
                         },
                         new
                         {
                             Id = 179,
                             AwayTeamScore = 0,
-                            GameDate = new DateTime(2025, 6, 18, 6, 0, 0, 0, DateTimeKind.Unspecified),
+                            GameDate = new DateTime(2025, 7, 18, 6, 0, 0, 0, DateTimeKind.Unspecified),
                             Game_AwayTeamId = 25,
-                            Game_CompetitionsId = 7,
+                            Game_CompetitionsId = 5,
                             Game_HomeTeamId = 28,
                             Game_StadiumsId = 28,
                             HomeTeamScore = 0,
                             IsPlayed = false,
-                            RefereeName = "Arbitru 14",
+                            RefereeName = "Cosmin Ionescu",
                             TicketsSold = 0
                         },
                         new
                         {
                             Id = 180,
                             AwayTeamScore = 0,
-                            GameDate = new DateTime(2025, 6, 18, 8, 0, 0, 0, DateTimeKind.Unspecified),
+                            GameDate = new DateTime(2025, 7, 18, 8, 0, 0, 0, DateTimeKind.Unspecified),
                             Game_AwayTeamId = 26,
-                            Game_CompetitionsId = 7,
+                            Game_CompetitionsId = 5,
                             Game_HomeTeamId = 27,
                             Game_StadiumsId = 27,
                             HomeTeamScore = 0,
                             IsPlayed = false,
-                            RefereeName = "Arbitru 15",
+                            RefereeName = "Cătălin Gheorghe",
                             TicketsSold = 0
                         },
                         new
                         {
                             Id = 181,
                             AwayTeamScore = 0,
-                            GameDate = new DateTime(2025, 6, 25, 18, 0, 0, 0, DateTimeKind.Unspecified),
+                            GameDate = new DateTime(2025, 7, 25, 18, 0, 0, 0, DateTimeKind.Unspecified),
                             Game_AwayTeamId = 10,
                             Game_CompetitionsId = 1,
                             Game_HomeTeamId = 7,
                             Game_StadiumsId = 7,
                             HomeTeamScore = 0,
                             IsPlayed = false,
-                            RefereeName = "Arbitru 1",
+                            RefereeName = "Radu Marin",
                             TicketsSold = 0
                         },
                         new
                         {
                             Id = 182,
                             AwayTeamScore = 0,
-                            GameDate = new DateTime(2025, 6, 25, 20, 0, 0, 0, DateTimeKind.Unspecified),
+                            GameDate = new DateTime(2025, 7, 25, 20, 0, 0, 0, DateTimeKind.Unspecified),
                             Game_AwayTeamId = 8,
                             Game_CompetitionsId = 1,
                             Game_HomeTeamId = 6,
                             Game_StadiumsId = 6,
                             HomeTeamScore = 0,
                             IsPlayed = false,
-                            RefereeName = "Arbitru 2",
+                            RefereeName = "Florin Stan",
                             TicketsSold = 0
                         },
                         new
                         {
                             Id = 183,
                             AwayTeamScore = 0,
-                            GameDate = new DateTime(2025, 6, 25, 19, 0, 0, 0, DateTimeKind.Unspecified),
+                            GameDate = new DateTime(2025, 7, 25, 19, 0, 0, 0, DateTimeKind.Unspecified),
                             Game_AwayTeamId = 9,
                             Game_CompetitionsId = 1,
                             Game_HomeTeamId = 5,
                             Game_StadiumsId = 5,
                             HomeTeamScore = 0,
                             IsPlayed = false,
-                            RefereeName = "Arbitru 3",
+                            RefereeName = "Iulian Nistor",
                             TicketsSold = 0
                         },
                         new
                         {
                             Id = 184,
                             AwayTeamScore = 0,
-                            GameDate = new DateTime(2025, 6, 25, 21, 0, 0, 0, DateTimeKind.Unspecified),
+                            GameDate = new DateTime(2025, 7, 25, 21, 0, 0, 0, DateTimeKind.Unspecified),
                             Game_AwayTeamId = 1,
                             Game_CompetitionsId = 1,
                             Game_HomeTeamId = 4,
                             Game_StadiumsId = 4,
                             HomeTeamScore = 0,
                             IsPlayed = false,
-                            RefereeName = "Arbitru 4",
+                            RefereeName = "Silviu Barbu",
                             TicketsSold = 0
                         },
                         new
                         {
                             Id = 185,
                             AwayTeamScore = 0,
-                            GameDate = new DateTime(2025, 6, 25, 2, 0, 0, 0, DateTimeKind.Unspecified),
+                            GameDate = new DateTime(2025, 7, 25, 2, 0, 0, 0, DateTimeKind.Unspecified),
                             Game_AwayTeamId = 2,
                             Game_CompetitionsId = 1,
                             Game_HomeTeamId = 3,
                             Game_StadiumsId = 3,
                             HomeTeamScore = 0,
                             IsPlayed = false,
-                            RefereeName = "Arbitru 5",
+                            RefereeName = "Cristian Ene",
                             TicketsSold = 0
                         },
                         new
                         {
                             Id = 186,
                             AwayTeamScore = 0,
-                            GameDate = new DateTime(2025, 6, 25, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            GameDate = new DateTime(2025, 7, 25, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Game_AwayTeamId = 20,
                             Game_CompetitionsId = 4,
                             Game_HomeTeamId = 17,
                             Game_StadiumsId = 17,
                             HomeTeamScore = 0,
                             IsPlayed = false,
-                            RefereeName = "Arbitru 6",
+                            RefereeName = "Marius Popa",
                             TicketsSold = 0
                         },
                         new
                         {
                             Id = 187,
                             AwayTeamScore = 0,
-                            GameDate = new DateTime(2025, 6, 25, 1, 0, 0, 0, DateTimeKind.Unspecified),
+                            GameDate = new DateTime(2025, 7, 25, 1, 0, 0, 0, DateTimeKind.Unspecified),
                             Game_AwayTeamId = 18,
                             Game_CompetitionsId = 4,
                             Game_HomeTeamId = 16,
                             Game_StadiumsId = 16,
                             HomeTeamScore = 0,
                             IsPlayed = false,
-                            RefereeName = "Arbitru 7",
+                            RefereeName = "Marius Popa",
                             TicketsSold = 0
                         },
                         new
                         {
                             Id = 188,
                             AwayTeamScore = 0,
-                            GameDate = new DateTime(2025, 6, 25, 18, 0, 0, 0, DateTimeKind.Unspecified),
+                            GameDate = new DateTime(2025, 7, 25, 18, 0, 0, 0, DateTimeKind.Unspecified),
                             Game_AwayTeamId = 19,
                             Game_CompetitionsId = 4,
                             Game_HomeTeamId = 15,
                             Game_StadiumsId = 15,
                             HomeTeamScore = 0,
                             IsPlayed = false,
-                            RefereeName = "Arbitru 8",
+                            RefereeName = "Mihai Rusu",
                             TicketsSold = 0
                         },
                         new
                         {
                             Id = 189,
                             AwayTeamScore = 0,
-                            GameDate = new DateTime(2025, 6, 25, 6, 0, 0, 0, DateTimeKind.Unspecified),
+                            GameDate = new DateTime(2025, 7, 25, 6, 0, 0, 0, DateTimeKind.Unspecified),
                             Game_AwayTeamId = 11,
                             Game_CompetitionsId = 4,
                             Game_HomeTeamId = 14,
                             Game_StadiumsId = 14,
                             HomeTeamScore = 0,
                             IsPlayed = false,
-                            RefereeName = "Arbitru 9",
+                            RefereeName = "Alexandru Vasilescu",
                             TicketsSold = 0
                         },
                         new
                         {
                             Id = 190,
                             AwayTeamScore = 0,
-                            GameDate = new DateTime(2025, 6, 25, 11, 0, 0, 0, DateTimeKind.Unspecified),
+                            GameDate = new DateTime(2025, 7, 25, 11, 0, 0, 0, DateTimeKind.Unspecified),
                             Game_AwayTeamId = 12,
                             Game_CompetitionsId = 4,
                             Game_HomeTeamId = 13,
                             Game_StadiumsId = 13,
                             HomeTeamScore = 0,
                             IsPlayed = false,
-                            RefereeName = "Arbitru 10",
+                            RefereeName = "Daniel Petrescu",
                             TicketsSold = 0
                         },
                         new
                         {
                             Id = 191,
                             AwayTeamScore = 0,
-                            GameDate = new DateTime(2025, 6, 25, 3, 0, 0, 0, DateTimeKind.Unspecified),
+                            GameDate = new DateTime(2025, 7, 25, 3, 0, 0, 0, DateTimeKind.Unspecified),
                             Game_AwayTeamId = 30,
-                            Game_CompetitionsId = 7,
+                            Game_CompetitionsId = 5,
                             Game_HomeTeamId = 27,
                             Game_StadiumsId = 27,
                             HomeTeamScore = 0,
                             IsPlayed = false,
-                            RefereeName = "Arbitru 11",
+                            RefereeName = "George Ilie",
                             TicketsSold = 0
                         },
                         new
                         {
                             Id = 192,
                             AwayTeamScore = 0,
-                            GameDate = new DateTime(2025, 6, 25, 20, 0, 0, 0, DateTimeKind.Unspecified),
+                            GameDate = new DateTime(2025, 7, 25, 20, 0, 0, 0, DateTimeKind.Unspecified),
                             Game_AwayTeamId = 28,
-                            Game_CompetitionsId = 7,
+                            Game_CompetitionsId = 5,
                             Game_HomeTeamId = 26,
                             Game_StadiumsId = 26,
                             HomeTeamScore = 0,
                             IsPlayed = false,
-                            RefereeName = "Arbitru 12",
+                            RefereeName = "Paul Voicu",
                             TicketsSold = 0
                         },
                         new
                         {
                             Id = 193,
                             AwayTeamScore = 0,
-                            GameDate = new DateTime(2025, 6, 25, 5, 0, 0, 0, DateTimeKind.Unspecified),
+                            GameDate = new DateTime(2025, 7, 25, 5, 0, 0, 0, DateTimeKind.Unspecified),
                             Game_AwayTeamId = 29,
-                            Game_CompetitionsId = 7,
+                            Game_CompetitionsId = 5,
                             Game_HomeTeamId = 25,
                             Game_StadiumsId = 25,
                             HomeTeamScore = 0,
                             IsPlayed = false,
-                            RefereeName = "Arbitru 13",
+                            RefereeName = "Bogdan Neagu",
                             TicketsSold = 0
                         },
                         new
                         {
                             Id = 194,
                             AwayTeamScore = 0,
-                            GameDate = new DateTime(2025, 6, 25, 6, 0, 0, 0, DateTimeKind.Unspecified),
+                            GameDate = new DateTime(2025, 7, 25, 6, 0, 0, 0, DateTimeKind.Unspecified),
                             Game_AwayTeamId = 21,
-                            Game_CompetitionsId = 7,
+                            Game_CompetitionsId = 5,
                             Game_HomeTeamId = 24,
                             Game_StadiumsId = 24,
                             HomeTeamScore = 0,
                             IsPlayed = false,
-                            RefereeName = "Arbitru 14",
+                            RefereeName = "Radu Marin",
                             TicketsSold = 0
                         },
                         new
                         {
                             Id = 195,
                             AwayTeamScore = 0,
-                            GameDate = new DateTime(2025, 6, 25, 8, 0, 0, 0, DateTimeKind.Unspecified),
+                            GameDate = new DateTime(2025, 7, 25, 8, 0, 0, 0, DateTimeKind.Unspecified),
                             Game_AwayTeamId = 22,
-                            Game_CompetitionsId = 7,
+                            Game_CompetitionsId = 5,
                             Game_HomeTeamId = 23,
                             Game_StadiumsId = 23,
                             HomeTeamScore = 0,
                             IsPlayed = false,
-                            RefereeName = "Arbitru 15",
+                            RefereeName = "Silviu Barbu",
                             TicketsSold = 0
                         },
                         new
                         {
                             Id = 196,
                             AwayTeamScore = 0,
-                            GameDate = new DateTime(2025, 7, 2, 18, 0, 0, 0, DateTimeKind.Unspecified),
+                            GameDate = new DateTime(2025, 8, 2, 18, 0, 0, 0, DateTimeKind.Unspecified),
                             Game_AwayTeamId = 3,
                             Game_CompetitionsId = 1,
                             Game_HomeTeamId = 10,
                             Game_StadiumsId = 10,
                             HomeTeamScore = 0,
                             IsPlayed = false,
-                            RefereeName = "Arbitru 1",
+                            RefereeName = "Iulian Nistor",
                             TicketsSold = 0
                         },
                         new
                         {
                             Id = 197,
                             AwayTeamScore = 0,
-                            GameDate = new DateTime(2025, 7, 2, 20, 0, 0, 0, DateTimeKind.Unspecified),
+                            GameDate = new DateTime(2025, 8, 2, 20, 0, 0, 0, DateTimeKind.Unspecified),
                             Game_AwayTeamId = 4,
                             Game_CompetitionsId = 1,
                             Game_HomeTeamId = 2,
                             Game_StadiumsId = 2,
                             HomeTeamScore = 0,
                             IsPlayed = false,
-                            RefereeName = "Arbitru 2",
+                            RefereeName = "Andrei Dumitrescu",
                             TicketsSold = 0
                         },
                         new
                         {
                             Id = 198,
                             AwayTeamScore = 0,
-                            GameDate = new DateTime(2025, 7, 2, 19, 0, 0, 0, DateTimeKind.Unspecified),
+                            GameDate = new DateTime(2025, 8, 2, 19, 0, 0, 0, DateTimeKind.Unspecified),
                             Game_AwayTeamId = 5,
                             Game_CompetitionsId = 1,
                             Game_HomeTeamId = 1,
                             Game_StadiumsId = 1,
                             HomeTeamScore = 0,
                             IsPlayed = false,
-                            RefereeName = "Arbitru 3",
+                            RefereeName = "Alexandru Vasilescu",
                             TicketsSold = 0
                         },
                         new
                         {
                             Id = 199,
                             AwayTeamScore = 0,
-                            GameDate = new DateTime(2025, 7, 2, 21, 0, 0, 0, DateTimeKind.Unspecified),
+                            GameDate = new DateTime(2025, 8, 2, 21, 0, 0, 0, DateTimeKind.Unspecified),
                             Game_AwayTeamId = 6,
                             Game_CompetitionsId = 1,
                             Game_HomeTeamId = 9,
                             Game_StadiumsId = 9,
                             HomeTeamScore = 0,
                             IsPlayed = false,
-                            RefereeName = "Arbitru 4",
+                            RefereeName = "Cătălin Gheorghe",
                             TicketsSold = 0
                         },
                         new
                         {
                             Id = 200,
                             AwayTeamScore = 0,
-                            GameDate = new DateTime(2025, 7, 2, 2, 0, 0, 0, DateTimeKind.Unspecified),
+                            GameDate = new DateTime(2025, 8, 2, 2, 0, 0, 0, DateTimeKind.Unspecified),
                             Game_AwayTeamId = 7,
                             Game_CompetitionsId = 1,
                             Game_HomeTeamId = 8,
                             Game_StadiumsId = 8,
                             HomeTeamScore = 0,
                             IsPlayed = false,
-                            RefereeName = "Arbitru 5",
+                            RefereeName = "Cosmin Ionescu",
                             TicketsSold = 0
                         },
                         new
                         {
                             Id = 201,
                             AwayTeamScore = 0,
-                            GameDate = new DateTime(2025, 7, 2, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            GameDate = new DateTime(2025, 8, 2, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Game_AwayTeamId = 13,
                             Game_CompetitionsId = 4,
                             Game_HomeTeamId = 20,
                             Game_StadiumsId = 20,
                             HomeTeamScore = 0,
                             IsPlayed = false,
-                            RefereeName = "Arbitru 6",
+                            RefereeName = "Paul Voicu",
                             TicketsSold = 0
                         },
                         new
                         {
                             Id = 202,
                             AwayTeamScore = 0,
-                            GameDate = new DateTime(2025, 7, 2, 1, 0, 0, 0, DateTimeKind.Unspecified),
+                            GameDate = new DateTime(2025, 8, 2, 1, 0, 0, 0, DateTimeKind.Unspecified),
                             Game_AwayTeamId = 14,
                             Game_CompetitionsId = 4,
                             Game_HomeTeamId = 12,
                             Game_StadiumsId = 12,
                             HomeTeamScore = 0,
                             IsPlayed = false,
-                            RefereeName = "Arbitru 7",
+                            RefereeName = "Paul Voicu",
                             TicketsSold = 0
                         },
                         new
                         {
                             Id = 203,
                             AwayTeamScore = 0,
-                            GameDate = new DateTime(2025, 7, 2, 18, 0, 0, 0, DateTimeKind.Unspecified),
+                            GameDate = new DateTime(2025, 8, 2, 18, 0, 0, 0, DateTimeKind.Unspecified),
                             Game_AwayTeamId = 15,
                             Game_CompetitionsId = 4,
                             Game_HomeTeamId = 11,
                             Game_StadiumsId = 11,
                             HomeTeamScore = 0,
                             IsPlayed = false,
-                            RefereeName = "Arbitru 8",
+                            RefereeName = "Daniel Petrescu",
                             TicketsSold = 0
                         },
                         new
                         {
                             Id = 204,
                             AwayTeamScore = 0,
-                            GameDate = new DateTime(2025, 7, 2, 6, 0, 0, 0, DateTimeKind.Unspecified),
+                            GameDate = new DateTime(2025, 8, 2, 6, 0, 0, 0, DateTimeKind.Unspecified),
                             Game_AwayTeamId = 16,
                             Game_CompetitionsId = 4,
                             Game_HomeTeamId = 19,
                             Game_StadiumsId = 19,
                             HomeTeamScore = 0,
                             IsPlayed = false,
-                            RefereeName = "Arbitru 9",
+                            RefereeName = "Florin Stan",
                             TicketsSold = 0
                         },
                         new
                         {
                             Id = 205,
                             AwayTeamScore = 0,
-                            GameDate = new DateTime(2025, 7, 2, 11, 0, 0, 0, DateTimeKind.Unspecified),
+                            GameDate = new DateTime(2025, 8, 2, 11, 0, 0, 0, DateTimeKind.Unspecified),
                             Game_AwayTeamId = 17,
                             Game_CompetitionsId = 4,
                             Game_HomeTeamId = 18,
                             Game_StadiumsId = 18,
                             HomeTeamScore = 0,
                             IsPlayed = false,
-                            RefereeName = "Arbitru 10",
+                            RefereeName = "Marius Popa",
                             TicketsSold = 0
                         },
                         new
                         {
                             Id = 206,
                             AwayTeamScore = 0,
-                            GameDate = new DateTime(2025, 7, 2, 3, 0, 0, 0, DateTimeKind.Unspecified),
+                            GameDate = new DateTime(2025, 8, 2, 3, 0, 0, 0, DateTimeKind.Unspecified),
                             Game_AwayTeamId = 23,
-                            Game_CompetitionsId = 7,
+                            Game_CompetitionsId = 5,
                             Game_HomeTeamId = 30,
                             Game_StadiumsId = 30,
                             HomeTeamScore = 0,
                             IsPlayed = false,
-                            RefereeName = "Arbitru 11",
+                            RefereeName = "Cristian Ene",
                             TicketsSold = 0
                         },
                         new
                         {
                             Id = 207,
                             AwayTeamScore = 0,
-                            GameDate = new DateTime(2025, 7, 2, 20, 0, 0, 0, DateTimeKind.Unspecified),
+                            GameDate = new DateTime(2025, 8, 2, 20, 0, 0, 0, DateTimeKind.Unspecified),
                             Game_AwayTeamId = 24,
-                            Game_CompetitionsId = 7,
+                            Game_CompetitionsId = 5,
                             Game_HomeTeamId = 22,
                             Game_StadiumsId = 22,
                             HomeTeamScore = 0,
                             IsPlayed = false,
-                            RefereeName = "Arbitru 12",
+                            RefereeName = "George Ilie",
                             TicketsSold = 0
                         },
                         new
                         {
                             Id = 208,
                             AwayTeamScore = 0,
-                            GameDate = new DateTime(2025, 7, 2, 5, 0, 0, 0, DateTimeKind.Unspecified),
+                            GameDate = new DateTime(2025, 8, 2, 5, 0, 0, 0, DateTimeKind.Unspecified),
                             Game_AwayTeamId = 25,
-                            Game_CompetitionsId = 7,
+                            Game_CompetitionsId = 5,
                             Game_HomeTeamId = 21,
                             Game_StadiumsId = 21,
                             HomeTeamScore = 0,
                             IsPlayed = false,
-                            RefereeName = "Arbitru 13",
+                            RefereeName = "Bogdan Neagu",
                             TicketsSold = 0
                         },
                         new
                         {
                             Id = 209,
                             AwayTeamScore = 0,
-                            GameDate = new DateTime(2025, 7, 2, 6, 0, 0, 0, DateTimeKind.Unspecified),
+                            GameDate = new DateTime(2025, 8, 2, 6, 0, 0, 0, DateTimeKind.Unspecified),
                             Game_AwayTeamId = 26,
-                            Game_CompetitionsId = 7,
+                            Game_CompetitionsId = 5,
                             Game_HomeTeamId = 29,
                             Game_StadiumsId = 29,
                             HomeTeamScore = 0,
                             IsPlayed = false,
-                            RefereeName = "Arbitru 14",
+                            RefereeName = "Mihai Rusu",
                             TicketsSold = 0
                         },
                         new
                         {
                             Id = 210,
                             AwayTeamScore = 0,
-                            GameDate = new DateTime(2025, 7, 2, 8, 0, 0, 0, DateTimeKind.Unspecified),
+                            GameDate = new DateTime(2025, 8, 2, 8, 0, 0, 0, DateTimeKind.Unspecified),
                             Game_AwayTeamId = 27,
-                            Game_CompetitionsId = 7,
+                            Game_CompetitionsId = 5,
                             Game_HomeTeamId = 28,
                             Game_StadiumsId = 28,
                             HomeTeamScore = 0,
                             IsPlayed = false,
-                            RefereeName = "Arbitru 15",
+                            RefereeName = "Paul Voicu",
                             TicketsSold = 0
                         },
                         new
                         {
                             Id = 211,
                             AwayTeamScore = 0,
-                            GameDate = new DateTime(2025, 7, 9, 18, 0, 0, 0, DateTimeKind.Unspecified),
+                            GameDate = new DateTime(2025, 8, 9, 18, 0, 0, 0, DateTimeKind.Unspecified),
                             Game_AwayTeamId = 10,
                             Game_CompetitionsId = 1,
                             Game_HomeTeamId = 8,
                             Game_StadiumsId = 8,
                             HomeTeamScore = 0,
                             IsPlayed = false,
-                            RefereeName = "Arbitru 1",
+                            RefereeName = "Bogdan Neagu",
                             TicketsSold = 0
                         },
                         new
                         {
                             Id = 212,
                             AwayTeamScore = 0,
-                            GameDate = new DateTime(2025, 7, 9, 20, 0, 0, 0, DateTimeKind.Unspecified),
+                            GameDate = new DateTime(2025, 8, 9, 20, 0, 0, 0, DateTimeKind.Unspecified),
                             Game_AwayTeamId = 9,
                             Game_CompetitionsId = 1,
                             Game_HomeTeamId = 7,
                             Game_StadiumsId = 7,
                             HomeTeamScore = 0,
                             IsPlayed = false,
-                            RefereeName = "Arbitru 2",
+                            RefereeName = "Marius Popa",
                             TicketsSold = 0
                         },
                         new
                         {
                             Id = 213,
                             AwayTeamScore = 0,
-                            GameDate = new DateTime(2025, 7, 9, 19, 0, 0, 0, DateTimeKind.Unspecified),
+                            GameDate = new DateTime(2025, 8, 9, 19, 0, 0, 0, DateTimeKind.Unspecified),
                             Game_AwayTeamId = 1,
                             Game_CompetitionsId = 1,
                             Game_HomeTeamId = 6,
                             Game_StadiumsId = 6,
                             HomeTeamScore = 0,
                             IsPlayed = false,
-                            RefereeName = "Arbitru 3",
+                            RefereeName = "Daniel Petrescu",
                             TicketsSold = 0
                         },
                         new
                         {
                             Id = 214,
                             AwayTeamScore = 0,
-                            GameDate = new DateTime(2025, 7, 9, 21, 0, 0, 0, DateTimeKind.Unspecified),
+                            GameDate = new DateTime(2025, 8, 9, 21, 0, 0, 0, DateTimeKind.Unspecified),
                             Game_AwayTeamId = 2,
                             Game_CompetitionsId = 1,
                             Game_HomeTeamId = 5,
                             Game_StadiumsId = 5,
                             HomeTeamScore = 0,
                             IsPlayed = false,
-                            RefereeName = "Arbitru 4",
+                            RefereeName = "Radu Marin",
                             TicketsSold = 0
                         },
                         new
                         {
                             Id = 215,
                             AwayTeamScore = 0,
-                            GameDate = new DateTime(2025, 7, 9, 2, 0, 0, 0, DateTimeKind.Unspecified),
+                            GameDate = new DateTime(2025, 8, 9, 2, 0, 0, 0, DateTimeKind.Unspecified),
                             Game_AwayTeamId = 3,
                             Game_CompetitionsId = 1,
                             Game_HomeTeamId = 4,
                             Game_StadiumsId = 4,
                             HomeTeamScore = 0,
                             IsPlayed = false,
-                            RefereeName = "Arbitru 5",
+                            RefereeName = "Cătălin Gheorghe",
                             TicketsSold = 0
                         },
                         new
                         {
                             Id = 216,
                             AwayTeamScore = 0,
-                            GameDate = new DateTime(2025, 7, 9, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            GameDate = new DateTime(2025, 8, 9, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Game_AwayTeamId = 20,
                             Game_CompetitionsId = 4,
                             Game_HomeTeamId = 18,
                             Game_StadiumsId = 18,
                             HomeTeamScore = 0,
                             IsPlayed = false,
-                            RefereeName = "Arbitru 6",
+                            RefereeName = "Silviu Barbu",
                             TicketsSold = 0
                         },
                         new
                         {
                             Id = 217,
                             AwayTeamScore = 0,
-                            GameDate = new DateTime(2025, 7, 9, 1, 0, 0, 0, DateTimeKind.Unspecified),
+                            GameDate = new DateTime(2025, 8, 9, 1, 0, 0, 0, DateTimeKind.Unspecified),
                             Game_AwayTeamId = 19,
                             Game_CompetitionsId = 4,
                             Game_HomeTeamId = 17,
                             Game_StadiumsId = 17,
                             HomeTeamScore = 0,
                             IsPlayed = false,
-                            RefereeName = "Arbitru 7",
+                            RefereeName = "Silviu Barbu",
                             TicketsSold = 0
                         },
                         new
                         {
                             Id = 218,
                             AwayTeamScore = 0,
-                            GameDate = new DateTime(2025, 7, 9, 18, 0, 0, 0, DateTimeKind.Unspecified),
+                            GameDate = new DateTime(2025, 8, 9, 18, 0, 0, 0, DateTimeKind.Unspecified),
                             Game_AwayTeamId = 11,
                             Game_CompetitionsId = 4,
                             Game_HomeTeamId = 16,
                             Game_StadiumsId = 16,
                             HomeTeamScore = 0,
                             IsPlayed = false,
-                            RefereeName = "Arbitru 8",
+                            RefereeName = "Alexandru Vasilescu",
                             TicketsSold = 0
                         },
                         new
                         {
                             Id = 219,
                             AwayTeamScore = 0,
-                            GameDate = new DateTime(2025, 7, 9, 6, 0, 0, 0, DateTimeKind.Unspecified),
+                            GameDate = new DateTime(2025, 8, 9, 6, 0, 0, 0, DateTimeKind.Unspecified),
                             Game_AwayTeamId = 12,
                             Game_CompetitionsId = 4,
                             Game_HomeTeamId = 15,
                             Game_StadiumsId = 15,
                             HomeTeamScore = 0,
                             IsPlayed = false,
-                            RefereeName = "Arbitru 9",
+                            RefereeName = "Iulian Nistor",
                             TicketsSold = 0
                         },
                         new
                         {
                             Id = 220,
                             AwayTeamScore = 0,
-                            GameDate = new DateTime(2025, 7, 9, 11, 0, 0, 0, DateTimeKind.Unspecified),
+                            GameDate = new DateTime(2025, 8, 9, 11, 0, 0, 0, DateTimeKind.Unspecified),
                             Game_AwayTeamId = 13,
                             Game_CompetitionsId = 4,
                             Game_HomeTeamId = 14,
                             Game_StadiumsId = 14,
                             HomeTeamScore = 0,
                             IsPlayed = false,
-                            RefereeName = "Arbitru 10",
+                            RefereeName = "Mihai Rusu",
                             TicketsSold = 0
                         },
                         new
                         {
                             Id = 221,
                             AwayTeamScore = 0,
-                            GameDate = new DateTime(2025, 7, 9, 3, 0, 0, 0, DateTimeKind.Unspecified),
+                            GameDate = new DateTime(2025, 8, 9, 3, 0, 0, 0, DateTimeKind.Unspecified),
                             Game_AwayTeamId = 30,
-                            Game_CompetitionsId = 7,
+                            Game_CompetitionsId = 5,
                             Game_HomeTeamId = 28,
                             Game_StadiumsId = 28,
                             HomeTeamScore = 0,
                             IsPlayed = false,
-                            RefereeName = "Arbitru 11",
+                            RefereeName = "Cosmin Ionescu",
                             TicketsSold = 0
                         },
                         new
                         {
                             Id = 222,
                             AwayTeamScore = 0,
-                            GameDate = new DateTime(2025, 7, 9, 20, 0, 0, 0, DateTimeKind.Unspecified),
+                            GameDate = new DateTime(2025, 8, 9, 20, 0, 0, 0, DateTimeKind.Unspecified),
                             Game_AwayTeamId = 29,
-                            Game_CompetitionsId = 7,
+                            Game_CompetitionsId = 5,
                             Game_HomeTeamId = 27,
                             Game_StadiumsId = 27,
                             HomeTeamScore = 0,
                             IsPlayed = false,
-                            RefereeName = "Arbitru 12",
+                            RefereeName = "George Ilie",
                             TicketsSold = 0
                         },
                         new
                         {
                             Id = 223,
                             AwayTeamScore = 0,
-                            GameDate = new DateTime(2025, 7, 9, 5, 0, 0, 0, DateTimeKind.Unspecified),
+                            GameDate = new DateTime(2025, 8, 9, 5, 0, 0, 0, DateTimeKind.Unspecified),
                             Game_AwayTeamId = 21,
-                            Game_CompetitionsId = 7,
+                            Game_CompetitionsId = 5,
                             Game_HomeTeamId = 26,
                             Game_StadiumsId = 26,
                             HomeTeamScore = 0,
                             IsPlayed = false,
-                            RefereeName = "Arbitru 13",
+                            RefereeName = "Andrei Dumitrescu",
                             TicketsSold = 0
                         },
                         new
                         {
                             Id = 224,
                             AwayTeamScore = 0,
-                            GameDate = new DateTime(2025, 7, 9, 6, 0, 0, 0, DateTimeKind.Unspecified),
+                            GameDate = new DateTime(2025, 8, 9, 6, 0, 0, 0, DateTimeKind.Unspecified),
                             Game_AwayTeamId = 22,
-                            Game_CompetitionsId = 7,
+                            Game_CompetitionsId = 5,
                             Game_HomeTeamId = 25,
                             Game_StadiumsId = 25,
                             HomeTeamScore = 0,
                             IsPlayed = false,
-                            RefereeName = "Arbitru 14",
+                            RefereeName = "Florin Stan",
                             TicketsSold = 0
                         },
                         new
                         {
                             Id = 225,
                             AwayTeamScore = 0,
-                            GameDate = new DateTime(2025, 7, 9, 8, 0, 0, 0, DateTimeKind.Unspecified),
+                            GameDate = new DateTime(2025, 8, 9, 8, 0, 0, 0, DateTimeKind.Unspecified),
                             Game_AwayTeamId = 23,
-                            Game_CompetitionsId = 7,
+                            Game_CompetitionsId = 5,
                             Game_HomeTeamId = 24,
                             Game_StadiumsId = 24,
                             HomeTeamScore = 0,
                             IsPlayed = false,
-                            RefereeName = "Arbitru 15",
+                            RefereeName = "Cristian Ene",
                             TicketsSold = 0
                         },
                         new
                         {
                             Id = 226,
                             AwayTeamScore = 0,
-                            GameDate = new DateTime(2025, 7, 16, 18, 0, 0, 0, DateTimeKind.Unspecified),
+                            GameDate = new DateTime(2025, 8, 16, 18, 0, 0, 0, DateTimeKind.Unspecified),
                             Game_AwayTeamId = 4,
                             Game_CompetitionsId = 1,
                             Game_HomeTeamId = 10,
                             Game_StadiumsId = 10,
                             HomeTeamScore = 0,
                             IsPlayed = false,
-                            RefereeName = "Arbitru 1",
+                            RefereeName = "George Ilie",
                             TicketsSold = 0
                         },
                         new
                         {
                             Id = 227,
                             AwayTeamScore = 0,
-                            GameDate = new DateTime(2025, 7, 16, 20, 0, 0, 0, DateTimeKind.Unspecified),
+                            GameDate = new DateTime(2025, 8, 16, 20, 0, 0, 0, DateTimeKind.Unspecified),
                             Game_AwayTeamId = 5,
                             Game_CompetitionsId = 1,
                             Game_HomeTeamId = 3,
                             Game_StadiumsId = 3,
                             HomeTeamScore = 0,
                             IsPlayed = false,
-                            RefereeName = "Arbitru 2",
+                            RefereeName = "Alexandru Vasilescu",
                             TicketsSold = 0
                         },
                         new
                         {
                             Id = 228,
                             AwayTeamScore = 0,
-                            GameDate = new DateTime(2025, 7, 16, 19, 0, 0, 0, DateTimeKind.Unspecified),
+                            GameDate = new DateTime(2025, 8, 16, 19, 0, 0, 0, DateTimeKind.Unspecified),
                             Game_AwayTeamId = 6,
                             Game_CompetitionsId = 1,
                             Game_HomeTeamId = 2,
                             Game_StadiumsId = 2,
                             HomeTeamScore = 0,
                             IsPlayed = false,
-                            RefereeName = "Arbitru 3",
+                            RefereeName = "Mihai Rusu",
                             TicketsSold = 0
                         },
                         new
                         {
                             Id = 229,
                             AwayTeamScore = 0,
-                            GameDate = new DateTime(2025, 7, 16, 21, 0, 0, 0, DateTimeKind.Unspecified),
+                            GameDate = new DateTime(2025, 8, 16, 21, 0, 0, 0, DateTimeKind.Unspecified),
                             Game_AwayTeamId = 7,
                             Game_CompetitionsId = 1,
                             Game_HomeTeamId = 1,
                             Game_StadiumsId = 1,
                             HomeTeamScore = 0,
                             IsPlayed = false,
-                            RefereeName = "Arbitru 4",
+                            RefereeName = "Florin Stan",
                             TicketsSold = 0
                         },
                         new
                         {
                             Id = 230,
                             AwayTeamScore = 0,
-                            GameDate = new DateTime(2025, 7, 16, 2, 0, 0, 0, DateTimeKind.Unspecified),
+                            GameDate = new DateTime(2025, 8, 16, 2, 0, 0, 0, DateTimeKind.Unspecified),
                             Game_AwayTeamId = 8,
                             Game_CompetitionsId = 1,
                             Game_HomeTeamId = 9,
                             Game_StadiumsId = 9,
                             HomeTeamScore = 0,
                             IsPlayed = false,
-                            RefereeName = "Arbitru 5",
+                            RefereeName = "Andrei Dumitrescu",
                             TicketsSold = 0
                         },
                         new
                         {
                             Id = 231,
                             AwayTeamScore = 0,
-                            GameDate = new DateTime(2025, 7, 16, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            GameDate = new DateTime(2025, 8, 16, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Game_AwayTeamId = 14,
                             Game_CompetitionsId = 4,
                             Game_HomeTeamId = 20,
                             Game_StadiumsId = 20,
                             HomeTeamScore = 0,
                             IsPlayed = false,
-                            RefereeName = "Arbitru 6",
+                            RefereeName = "Cristian Ene",
                             TicketsSold = 0
                         },
                         new
                         {
                             Id = 232,
                             AwayTeamScore = 0,
-                            GameDate = new DateTime(2025, 7, 16, 1, 0, 0, 0, DateTimeKind.Unspecified),
+                            GameDate = new DateTime(2025, 8, 16, 1, 0, 0, 0, DateTimeKind.Unspecified),
                             Game_AwayTeamId = 15,
                             Game_CompetitionsId = 4,
                             Game_HomeTeamId = 13,
                             Game_StadiumsId = 13,
                             HomeTeamScore = 0,
                             IsPlayed = false,
-                            RefereeName = "Arbitru 7",
+                            RefereeName = "Cristian Ene",
                             TicketsSold = 0
                         },
                         new
                         {
                             Id = 233,
                             AwayTeamScore = 0,
-                            GameDate = new DateTime(2025, 7, 16, 18, 0, 0, 0, DateTimeKind.Unspecified),
+                            GameDate = new DateTime(2025, 8, 16, 18, 0, 0, 0, DateTimeKind.Unspecified),
                             Game_AwayTeamId = 16,
                             Game_CompetitionsId = 4,
                             Game_HomeTeamId = 12,
                             Game_StadiumsId = 12,
                             HomeTeamScore = 0,
                             IsPlayed = false,
-                            RefereeName = "Arbitru 8",
+                            RefereeName = "Silviu Barbu",
                             TicketsSold = 0
                         },
                         new
                         {
                             Id = 234,
                             AwayTeamScore = 0,
-                            GameDate = new DateTime(2025, 7, 16, 6, 0, 0, 0, DateTimeKind.Unspecified),
+                            GameDate = new DateTime(2025, 8, 16, 6, 0, 0, 0, DateTimeKind.Unspecified),
                             Game_AwayTeamId = 17,
                             Game_CompetitionsId = 4,
                             Game_HomeTeamId = 11,
                             Game_StadiumsId = 11,
                             HomeTeamScore = 0,
                             IsPlayed = false,
-                            RefereeName = "Arbitru 9",
+                            RefereeName = "Iulian Nistor",
                             TicketsSold = 0
                         },
                         new
                         {
                             Id = 235,
                             AwayTeamScore = 0,
-                            GameDate = new DateTime(2025, 7, 16, 11, 0, 0, 0, DateTimeKind.Unspecified),
+                            GameDate = new DateTime(2025, 8, 16, 11, 0, 0, 0, DateTimeKind.Unspecified),
                             Game_AwayTeamId = 18,
                             Game_CompetitionsId = 4,
                             Game_HomeTeamId = 19,
                             Game_StadiumsId = 19,
                             HomeTeamScore = 0,
                             IsPlayed = false,
-                            RefereeName = "Arbitru 10",
+                            RefereeName = "Cosmin Ionescu",
                             TicketsSold = 0
                         },
                         new
                         {
                             Id = 236,
                             AwayTeamScore = 0,
-                            GameDate = new DateTime(2025, 7, 16, 3, 0, 0, 0, DateTimeKind.Unspecified),
+                            GameDate = new DateTime(2025, 8, 16, 3, 0, 0, 0, DateTimeKind.Unspecified),
                             Game_AwayTeamId = 24,
-                            Game_CompetitionsId = 7,
+                            Game_CompetitionsId = 5,
                             Game_HomeTeamId = 30,
                             Game_StadiumsId = 30,
                             HomeTeamScore = 0,
                             IsPlayed = false,
-                            RefereeName = "Arbitru 11",
+                            RefereeName = "Cătălin Gheorghe",
                             TicketsSold = 0
                         },
                         new
                         {
                             Id = 237,
                             AwayTeamScore = 0,
-                            GameDate = new DateTime(2025, 7, 16, 20, 0, 0, 0, DateTimeKind.Unspecified),
+                            GameDate = new DateTime(2025, 8, 16, 20, 0, 0, 0, DateTimeKind.Unspecified),
                             Game_AwayTeamId = 25,
-                            Game_CompetitionsId = 7,
+                            Game_CompetitionsId = 5,
                             Game_HomeTeamId = 23,
                             Game_StadiumsId = 23,
                             HomeTeamScore = 0,
                             IsPlayed = false,
-                            RefereeName = "Arbitru 12",
+                            RefereeName = "Daniel Petrescu",
                             TicketsSold = 0
                         },
                         new
                         {
                             Id = 238,
                             AwayTeamScore = 0,
-                            GameDate = new DateTime(2025, 7, 16, 5, 0, 0, 0, DateTimeKind.Unspecified),
+                            GameDate = new DateTime(2025, 8, 16, 5, 0, 0, 0, DateTimeKind.Unspecified),
                             Game_AwayTeamId = 26,
-                            Game_CompetitionsId = 7,
+                            Game_CompetitionsId = 5,
                             Game_HomeTeamId = 22,
                             Game_StadiumsId = 22,
                             HomeTeamScore = 0,
                             IsPlayed = false,
-                            RefereeName = "Arbitru 13",
+                            RefereeName = "Bogdan Neagu",
                             TicketsSold = 0
                         },
                         new
                         {
                             Id = 239,
                             AwayTeamScore = 0,
-                            GameDate = new DateTime(2025, 7, 16, 6, 0, 0, 0, DateTimeKind.Unspecified),
+                            GameDate = new DateTime(2025, 8, 16, 6, 0, 0, 0, DateTimeKind.Unspecified),
                             Game_AwayTeamId = 27,
-                            Game_CompetitionsId = 7,
+                            Game_CompetitionsId = 5,
                             Game_HomeTeamId = 21,
                             Game_StadiumsId = 21,
                             HomeTeamScore = 0,
                             IsPlayed = false,
-                            RefereeName = "Arbitru 14",
+                            RefereeName = "Marius Popa",
                             TicketsSold = 0
                         },
                         new
                         {
                             Id = 240,
                             AwayTeamScore = 0,
-                            GameDate = new DateTime(2025, 7, 16, 8, 0, 0, 0, DateTimeKind.Unspecified),
+                            GameDate = new DateTime(2025, 8, 16, 8, 0, 0, 0, DateTimeKind.Unspecified),
                             Game_AwayTeamId = 28,
-                            Game_CompetitionsId = 7,
+                            Game_CompetitionsId = 5,
                             Game_HomeTeamId = 29,
                             Game_StadiumsId = 29,
                             HomeTeamScore = 0,
                             IsPlayed = false,
-                            RefereeName = "Arbitru 15",
+                            RefereeName = "Paul Voicu",
                             TicketsSold = 0
                         },
                         new
                         {
                             Id = 241,
                             AwayTeamScore = 0,
-                            GameDate = new DateTime(2025, 7, 23, 18, 0, 0, 0, DateTimeKind.Unspecified),
+                            GameDate = new DateTime(2025, 8, 23, 18, 0, 0, 0, DateTimeKind.Unspecified),
                             Game_AwayTeamId = 10,
                             Game_CompetitionsId = 1,
                             Game_HomeTeamId = 9,
                             Game_StadiumsId = 9,
                             HomeTeamScore = 0,
                             IsPlayed = false,
-                            RefereeName = "Arbitru 1",
+                            RefereeName = "Radu Marin",
                             TicketsSold = 0
                         },
                         new
                         {
                             Id = 242,
                             AwayTeamScore = 0,
-                            GameDate = new DateTime(2025, 7, 23, 20, 0, 0, 0, DateTimeKind.Unspecified),
+                            GameDate = new DateTime(2025, 8, 23, 20, 0, 0, 0, DateTimeKind.Unspecified),
                             Game_AwayTeamId = 1,
                             Game_CompetitionsId = 1,
                             Game_HomeTeamId = 8,
                             Game_StadiumsId = 8,
                             HomeTeamScore = 0,
                             IsPlayed = false,
-                            RefereeName = "Arbitru 2",
+                            RefereeName = "Marius Popa",
                             TicketsSold = 0
                         },
                         new
                         {
                             Id = 243,
                             AwayTeamScore = 0,
-                            GameDate = new DateTime(2025, 7, 23, 19, 0, 0, 0, DateTimeKind.Unspecified),
+                            GameDate = new DateTime(2025, 8, 23, 19, 0, 0, 0, DateTimeKind.Unspecified),
                             Game_AwayTeamId = 2,
                             Game_CompetitionsId = 1,
                             Game_HomeTeamId = 7,
                             Game_StadiumsId = 7,
                             HomeTeamScore = 0,
                             IsPlayed = false,
-                            RefereeName = "Arbitru 3",
+                            RefereeName = "George Ilie",
                             TicketsSold = 0
                         },
                         new
                         {
                             Id = 244,
                             AwayTeamScore = 0,
-                            GameDate = new DateTime(2025, 7, 23, 21, 0, 0, 0, DateTimeKind.Unspecified),
+                            GameDate = new DateTime(2025, 8, 23, 21, 0, 0, 0, DateTimeKind.Unspecified),
                             Game_AwayTeamId = 3,
                             Game_CompetitionsId = 1,
                             Game_HomeTeamId = 6,
                             Game_StadiumsId = 6,
                             HomeTeamScore = 0,
                             IsPlayed = false,
-                            RefereeName = "Arbitru 4",
+                            RefereeName = "Florin Stan",
                             TicketsSold = 0
                         },
                         new
                         {
                             Id = 245,
                             AwayTeamScore = 0,
-                            GameDate = new DateTime(2025, 7, 23, 2, 0, 0, 0, DateTimeKind.Unspecified),
+                            GameDate = new DateTime(2025, 8, 23, 2, 0, 0, 0, DateTimeKind.Unspecified),
                             Game_AwayTeamId = 4,
                             Game_CompetitionsId = 1,
                             Game_HomeTeamId = 5,
                             Game_StadiumsId = 5,
                             HomeTeamScore = 0,
                             IsPlayed = false,
-                            RefereeName = "Arbitru 5",
+                            RefereeName = "Paul Voicu",
                             TicketsSold = 0
                         },
                         new
                         {
                             Id = 246,
                             AwayTeamScore = 0,
-                            GameDate = new DateTime(2025, 7, 23, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            GameDate = new DateTime(2025, 8, 23, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Game_AwayTeamId = 20,
                             Game_CompetitionsId = 4,
                             Game_HomeTeamId = 19,
                             Game_StadiumsId = 19,
                             HomeTeamScore = 0,
                             IsPlayed = false,
-                            RefereeName = "Arbitru 6",
+                            RefereeName = "Cristian Ene",
                             TicketsSold = 0
                         },
                         new
                         {
                             Id = 247,
                             AwayTeamScore = 0,
-                            GameDate = new DateTime(2025, 7, 23, 1, 0, 0, 0, DateTimeKind.Unspecified),
+                            GameDate = new DateTime(2025, 8, 23, 1, 0, 0, 0, DateTimeKind.Unspecified),
                             Game_AwayTeamId = 11,
                             Game_CompetitionsId = 4,
                             Game_HomeTeamId = 18,
                             Game_StadiumsId = 18,
                             HomeTeamScore = 0,
                             IsPlayed = false,
-                            RefereeName = "Arbitru 7",
+                            RefereeName = "Cristian Ene",
                             TicketsSold = 0
                         },
                         new
                         {
                             Id = 248,
                             AwayTeamScore = 0,
-                            GameDate = new DateTime(2025, 7, 23, 18, 0, 0, 0, DateTimeKind.Unspecified),
+                            GameDate = new DateTime(2025, 8, 23, 18, 0, 0, 0, DateTimeKind.Unspecified),
                             Game_AwayTeamId = 12,
                             Game_CompetitionsId = 4,
                             Game_HomeTeamId = 17,
                             Game_StadiumsId = 17,
                             HomeTeamScore = 0,
                             IsPlayed = false,
-                            RefereeName = "Arbitru 8",
+                            RefereeName = "Iulian Nistor",
                             TicketsSold = 0
                         },
                         new
                         {
                             Id = 249,
                             AwayTeamScore = 0,
-                            GameDate = new DateTime(2025, 7, 23, 6, 0, 0, 0, DateTimeKind.Unspecified),
+                            GameDate = new DateTime(2025, 8, 23, 6, 0, 0, 0, DateTimeKind.Unspecified),
                             Game_AwayTeamId = 13,
                             Game_CompetitionsId = 4,
                             Game_HomeTeamId = 16,
                             Game_StadiumsId = 16,
                             HomeTeamScore = 0,
                             IsPlayed = false,
-                            RefereeName = "Arbitru 9",
+                            RefereeName = "Cosmin Ionescu",
                             TicketsSold = 0
                         },
                         new
                         {
                             Id = 250,
                             AwayTeamScore = 0,
-                            GameDate = new DateTime(2025, 7, 23, 11, 0, 0, 0, DateTimeKind.Unspecified),
+                            GameDate = new DateTime(2025, 8, 23, 11, 0, 0, 0, DateTimeKind.Unspecified),
                             Game_AwayTeamId = 14,
                             Game_CompetitionsId = 4,
                             Game_HomeTeamId = 15,
                             Game_StadiumsId = 15,
                             HomeTeamScore = 0,
                             IsPlayed = false,
-                            RefereeName = "Arbitru 10",
+                            RefereeName = "Alexandru Vasilescu",
                             TicketsSold = 0
                         },
                         new
                         {
                             Id = 251,
                             AwayTeamScore = 0,
-                            GameDate = new DateTime(2025, 7, 23, 3, 0, 0, 0, DateTimeKind.Unspecified),
+                            GameDate = new DateTime(2025, 8, 23, 3, 0, 0, 0, DateTimeKind.Unspecified),
                             Game_AwayTeamId = 30,
-                            Game_CompetitionsId = 7,
+                            Game_CompetitionsId = 5,
                             Game_HomeTeamId = 29,
                             Game_StadiumsId = 29,
                             HomeTeamScore = 0,
                             IsPlayed = false,
-                            RefereeName = "Arbitru 11",
+                            RefereeName = "Silviu Barbu",
                             TicketsSold = 0
                         },
                         new
                         {
                             Id = 252,
                             AwayTeamScore = 0,
-                            GameDate = new DateTime(2025, 7, 23, 20, 0, 0, 0, DateTimeKind.Unspecified),
+                            GameDate = new DateTime(2025, 8, 23, 20, 0, 0, 0, DateTimeKind.Unspecified),
                             Game_AwayTeamId = 21,
-                            Game_CompetitionsId = 7,
+                            Game_CompetitionsId = 5,
                             Game_HomeTeamId = 28,
                             Game_StadiumsId = 28,
                             HomeTeamScore = 0,
                             IsPlayed = false,
-                            RefereeName = "Arbitru 12",
+                            RefereeName = "Cătălin Gheorghe",
                             TicketsSold = 0
                         },
                         new
                         {
                             Id = 253,
                             AwayTeamScore = 0,
-                            GameDate = new DateTime(2025, 7, 23, 5, 0, 0, 0, DateTimeKind.Unspecified),
+                            GameDate = new DateTime(2025, 8, 23, 5, 0, 0, 0, DateTimeKind.Unspecified),
                             Game_AwayTeamId = 22,
-                            Game_CompetitionsId = 7,
+                            Game_CompetitionsId = 5,
                             Game_HomeTeamId = 27,
                             Game_StadiumsId = 27,
                             HomeTeamScore = 0,
                             IsPlayed = false,
-                            RefereeName = "Arbitru 13",
+                            RefereeName = "Daniel Petrescu",
                             TicketsSold = 0
                         },
                         new
                         {
                             Id = 254,
                             AwayTeamScore = 0,
-                            GameDate = new DateTime(2025, 7, 23, 6, 0, 0, 0, DateTimeKind.Unspecified),
+                            GameDate = new DateTime(2025, 8, 23, 6, 0, 0, 0, DateTimeKind.Unspecified),
                             Game_AwayTeamId = 23,
-                            Game_CompetitionsId = 7,
+                            Game_CompetitionsId = 5,
                             Game_HomeTeamId = 26,
                             Game_StadiumsId = 26,
                             HomeTeamScore = 0,
                             IsPlayed = false,
-                            RefereeName = "Arbitru 14",
+                            RefereeName = "Andrei Dumitrescu",
                             TicketsSold = 0
                         },
                         new
                         {
                             Id = 255,
                             AwayTeamScore = 0,
-                            GameDate = new DateTime(2025, 7, 23, 8, 0, 0, 0, DateTimeKind.Unspecified),
+                            GameDate = new DateTime(2025, 8, 23, 8, 0, 0, 0, DateTimeKind.Unspecified),
                             Game_AwayTeamId = 24,
-                            Game_CompetitionsId = 7,
+                            Game_CompetitionsId = 5,
                             Game_HomeTeamId = 25,
                             Game_StadiumsId = 25,
                             HomeTeamScore = 0,
                             IsPlayed = false,
-                            RefereeName = "Arbitru 15",
+                            RefereeName = "Mihai Rusu",
                             TicketsSold = 0
                         },
                         new
                         {
                             Id = 256,
                             AwayTeamScore = 0,
-                            GameDate = new DateTime(2025, 7, 30, 18, 0, 0, 0, DateTimeKind.Unspecified),
+                            GameDate = new DateTime(2025, 8, 30, 18, 0, 0, 0, DateTimeKind.Unspecified),
                             Game_AwayTeamId = 5,
                             Game_CompetitionsId = 1,
                             Game_HomeTeamId = 10,
                             Game_StadiumsId = 10,
                             HomeTeamScore = 0,
                             IsPlayed = false,
-                            RefereeName = "Arbitru 1",
+                            RefereeName = "Bogdan Neagu",
                             TicketsSold = 0
                         },
                         new
                         {
                             Id = 257,
                             AwayTeamScore = 0,
-                            GameDate = new DateTime(2025, 7, 30, 20, 0, 0, 0, DateTimeKind.Unspecified),
+                            GameDate = new DateTime(2025, 8, 30, 20, 0, 0, 0, DateTimeKind.Unspecified),
                             Game_AwayTeamId = 6,
                             Game_CompetitionsId = 1,
                             Game_HomeTeamId = 4,
                             Game_StadiumsId = 4,
                             HomeTeamScore = 0,
                             IsPlayed = false,
-                            RefereeName = "Arbitru 2",
+                            RefereeName = "Radu Marin",
                             TicketsSold = 0
                         },
                         new
                         {
                             Id = 258,
                             AwayTeamScore = 0,
-                            GameDate = new DateTime(2025, 7, 30, 19, 0, 0, 0, DateTimeKind.Unspecified),
+                            GameDate = new DateTime(2025, 8, 30, 19, 0, 0, 0, DateTimeKind.Unspecified),
                             Game_AwayTeamId = 7,
                             Game_CompetitionsId = 1,
                             Game_HomeTeamId = 3,
                             Game_StadiumsId = 3,
                             HomeTeamScore = 0,
                             IsPlayed = false,
-                            RefereeName = "Arbitru 3",
+                            RefereeName = "Cătălin Gheorghe",
                             TicketsSold = 0
                         },
                         new
                         {
                             Id = 259,
                             AwayTeamScore = 0,
-                            GameDate = new DateTime(2025, 7, 30, 21, 0, 0, 0, DateTimeKind.Unspecified),
+                            GameDate = new DateTime(2025, 8, 30, 21, 0, 0, 0, DateTimeKind.Unspecified),
                             Game_AwayTeamId = 8,
                             Game_CompetitionsId = 1,
                             Game_HomeTeamId = 2,
                             Game_StadiumsId = 2,
                             HomeTeamScore = 0,
                             IsPlayed = false,
-                            RefereeName = "Arbitru 4",
+                            RefereeName = "Andrei Dumitrescu",
                             TicketsSold = 0
                         },
                         new
                         {
                             Id = 260,
                             AwayTeamScore = 0,
-                            GameDate = new DateTime(2025, 7, 30, 2, 0, 0, 0, DateTimeKind.Unspecified),
+                            GameDate = new DateTime(2025, 8, 30, 2, 0, 0, 0, DateTimeKind.Unspecified),
                             Game_AwayTeamId = 9,
                             Game_CompetitionsId = 1,
                             Game_HomeTeamId = 1,
                             Game_StadiumsId = 1,
                             HomeTeamScore = 0,
                             IsPlayed = false,
-                            RefereeName = "Arbitru 5",
+                            RefereeName = "Bogdan Neagu",
                             TicketsSold = 0
                         },
                         new
                         {
                             Id = 261,
                             AwayTeamScore = 0,
-                            GameDate = new DateTime(2025, 7, 30, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            GameDate = new DateTime(2025, 8, 30, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Game_AwayTeamId = 15,
                             Game_CompetitionsId = 4,
                             Game_HomeTeamId = 20,
                             Game_StadiumsId = 20,
                             HomeTeamScore = 0,
                             IsPlayed = false,
-                            RefereeName = "Arbitru 6",
+                            RefereeName = "Florin Stan",
                             TicketsSold = 0
                         },
                         new
                         {
                             Id = 262,
                             AwayTeamScore = 0,
-                            GameDate = new DateTime(2025, 7, 30, 1, 0, 0, 0, DateTimeKind.Unspecified),
+                            GameDate = new DateTime(2025, 8, 30, 1, 0, 0, 0, DateTimeKind.Unspecified),
                             Game_AwayTeamId = 16,
                             Game_CompetitionsId = 4,
                             Game_HomeTeamId = 14,
                             Game_StadiumsId = 14,
                             HomeTeamScore = 0,
                             IsPlayed = false,
-                            RefereeName = "Arbitru 7",
+                            RefereeName = "Florin Stan",
                             TicketsSold = 0
                         },
                         new
                         {
                             Id = 263,
                             AwayTeamScore = 0,
-                            GameDate = new DateTime(2025, 7, 30, 18, 0, 0, 0, DateTimeKind.Unspecified),
+                            GameDate = new DateTime(2025, 8, 30, 18, 0, 0, 0, DateTimeKind.Unspecified),
                             Game_AwayTeamId = 17,
                             Game_CompetitionsId = 4,
                             Game_HomeTeamId = 13,
                             Game_StadiumsId = 13,
                             HomeTeamScore = 0,
                             IsPlayed = false,
-                            RefereeName = "Arbitru 8",
+                            RefereeName = "Iulian Nistor",
                             TicketsSold = 0
                         },
                         new
                         {
                             Id = 264,
                             AwayTeamScore = 0,
-                            GameDate = new DateTime(2025, 7, 30, 6, 0, 0, 0, DateTimeKind.Unspecified),
+                            GameDate = new DateTime(2025, 8, 30, 6, 0, 0, 0, DateTimeKind.Unspecified),
                             Game_AwayTeamId = 18,
                             Game_CompetitionsId = 4,
                             Game_HomeTeamId = 12,
                             Game_StadiumsId = 12,
                             HomeTeamScore = 0,
                             IsPlayed = false,
-                            RefereeName = "Arbitru 9",
+                            RefereeName = "Radu Marin",
                             TicketsSold = 0
                         },
                         new
                         {
                             Id = 265,
                             AwayTeamScore = 0,
-                            GameDate = new DateTime(2025, 7, 30, 11, 0, 0, 0, DateTimeKind.Unspecified),
+                            GameDate = new DateTime(2025, 8, 30, 11, 0, 0, 0, DateTimeKind.Unspecified),
                             Game_AwayTeamId = 19,
                             Game_CompetitionsId = 4,
                             Game_HomeTeamId = 11,
                             Game_StadiumsId = 11,
                             HomeTeamScore = 0,
                             IsPlayed = false,
-                            RefereeName = "Arbitru 10",
+                            RefereeName = "Mihai Rusu",
                             TicketsSold = 0
                         },
                         new
                         {
                             Id = 266,
                             AwayTeamScore = 0,
-                            GameDate = new DateTime(2025, 7, 30, 3, 0, 0, 0, DateTimeKind.Unspecified),
+                            GameDate = new DateTime(2025, 8, 30, 3, 0, 0, 0, DateTimeKind.Unspecified),
                             Game_AwayTeamId = 25,
-                            Game_CompetitionsId = 7,
+                            Game_CompetitionsId = 5,
                             Game_HomeTeamId = 30,
                             Game_StadiumsId = 30,
                             HomeTeamScore = 0,
                             IsPlayed = false,
-                            RefereeName = "Arbitru 11",
+                            RefereeName = "Marius Popa",
                             TicketsSold = 0
                         },
                         new
                         {
                             Id = 267,
                             AwayTeamScore = 0,
-                            GameDate = new DateTime(2025, 7, 30, 20, 0, 0, 0, DateTimeKind.Unspecified),
+                            GameDate = new DateTime(2025, 8, 30, 20, 0, 0, 0, DateTimeKind.Unspecified),
                             Game_AwayTeamId = 26,
-                            Game_CompetitionsId = 7,
+                            Game_CompetitionsId = 5,
                             Game_HomeTeamId = 24,
                             Game_StadiumsId = 24,
                             HomeTeamScore = 0,
                             IsPlayed = false,
-                            RefereeName = "Arbitru 12",
+                            RefereeName = "Daniel Petrescu",
                             TicketsSold = 0
                         },
                         new
                         {
                             Id = 268,
                             AwayTeamScore = 0,
-                            GameDate = new DateTime(2025, 7, 30, 5, 0, 0, 0, DateTimeKind.Unspecified),
+                            GameDate = new DateTime(2025, 8, 30, 5, 0, 0, 0, DateTimeKind.Unspecified),
                             Game_AwayTeamId = 27,
-                            Game_CompetitionsId = 7,
+                            Game_CompetitionsId = 5,
                             Game_HomeTeamId = 23,
                             Game_StadiumsId = 23,
                             HomeTeamScore = 0,
                             IsPlayed = false,
-                            RefereeName = "Arbitru 13",
+                            RefereeName = "Alexandru Vasilescu",
                             TicketsSold = 0
                         },
                         new
                         {
                             Id = 269,
                             AwayTeamScore = 0,
-                            GameDate = new DateTime(2025, 7, 30, 6, 0, 0, 0, DateTimeKind.Unspecified),
+                            GameDate = new DateTime(2025, 8, 30, 6, 0, 0, 0, DateTimeKind.Unspecified),
                             Game_AwayTeamId = 28,
-                            Game_CompetitionsId = 7,
+                            Game_CompetitionsId = 5,
                             Game_HomeTeamId = 22,
                             Game_StadiumsId = 22,
                             HomeTeamScore = 0,
                             IsPlayed = false,
-                            RefereeName = "Arbitru 14",
+                            RefereeName = "Silviu Barbu",
                             TicketsSold = 0
                         },
                         new
                         {
                             Id = 270,
                             AwayTeamScore = 0,
-                            GameDate = new DateTime(2025, 7, 30, 8, 0, 0, 0, DateTimeKind.Unspecified),
+                            GameDate = new DateTime(2025, 8, 30, 8, 0, 0, 0, DateTimeKind.Unspecified),
                             Game_AwayTeamId = 29,
-                            Game_CompetitionsId = 7,
+                            Game_CompetitionsId = 5,
                             Game_HomeTeamId = 21,
                             Game_StadiumsId = 21,
                             HomeTeamScore = 0,
                             IsPlayed = false,
-                            RefereeName = "Arbitru 15",
+                            RefereeName = "Paul Voicu",
+                            TicketsSold = 0
+                        },
+                        new
+                        {
+                            Id = 271,
+                            AwayTeamScore = 0,
+                            GameDate = new DateTime(2025, 4, 30, 10, 0, 0, 0, DateTimeKind.Unspecified),
+                            Game_AwayTeamId = 10,
+                            Game_CompetitionsId = 2,
+                            Game_HomeTeamId = 1,
+                            Game_StadiumsId = 1,
+                            HomeTeamScore = 1,
+                            IsPlayed = true,
+                            RefereeName = "Radu Marin",
+                            TicketsSold = 10
+                        },
+                        new
+                        {
+                            Id = 272,
+                            AwayTeamScore = 2,
+                            GameDate = new DateTime(2025, 4, 30, 12, 0, 0, 0, DateTimeKind.Unspecified),
+                            Game_AwayTeamId = 9,
+                            Game_CompetitionsId = 2,
+                            Game_HomeTeamId = 2,
+                            Game_StadiumsId = 2,
+                            HomeTeamScore = 0,
+                            IsPlayed = true,
+                            RefereeName = "Marius Popa",
+                            TicketsSold = 10
+                        },
+                        new
+                        {
+                            Id = 273,
+                            AwayTeamScore = 0,
+                            GameDate = new DateTime(2025, 4, 30, 14, 0, 0, 0, DateTimeKind.Unspecified),
+                            Game_AwayTeamId = 31,
+                            Game_CompetitionsId = 2,
+                            Game_HomeTeamId = 3,
+                            Game_StadiumsId = 3,
+                            HomeTeamScore = 1,
+                            IsPlayed = true,
+                            RefereeName = "Florin Stan",
+                            TicketsSold = 10
+                        },
+                        new
+                        {
+                            Id = 274,
+                            AwayTeamScore = 1,
+                            GameDate = new DateTime(2025, 4, 30, 16, 0, 0, 0, DateTimeKind.Unspecified),
+                            Game_AwayTeamId = 32,
+                            Game_CompetitionsId = 2,
+                            Game_HomeTeamId = 4,
+                            Game_StadiumsId = 4,
+                            HomeTeamScore = 0,
+                            IsPlayed = true,
+                            RefereeName = "Andrei Dumitrescu",
+                            TicketsSold = 10
+                        },
+                        new
+                        {
+                            Id = 275,
+                            AwayTeamScore = 1,
+                            GameDate = new DateTime(2025, 4, 30, 18, 0, 0, 0, DateTimeKind.Unspecified),
+                            Game_AwayTeamId = 33,
+                            Game_CompetitionsId = 2,
+                            Game_HomeTeamId = 5,
+                            Game_StadiumsId = 5,
+                            HomeTeamScore = 2,
+                            IsPlayed = true,
+                            RefereeName = "Iulian Nistor",
+                            TicketsSold = 10
+                        },
+                        new
+                        {
+                            Id = 276,
+                            AwayTeamScore = 0,
+                            GameDate = new DateTime(2025, 4, 30, 20, 0, 0, 0, DateTimeKind.Unspecified),
+                            Game_AwayTeamId = 34,
+                            Game_CompetitionsId = 2,
+                            Game_HomeTeamId = 6,
+                            Game_StadiumsId = 6,
+                            HomeTeamScore = 0,
+                            IsPlayed = true,
+                            RefereeName = "Cosmin Ionescu",
+                            TicketsSold = 10
+                        },
+                        new
+                        {
+                            Id = 277,
+                            AwayTeamScore = 0,
+                            GameDate = new DateTime(2025, 4, 30, 22, 0, 0, 0, DateTimeKind.Unspecified),
+                            Game_AwayTeamId = 35,
+                            Game_CompetitionsId = 2,
+                            Game_HomeTeamId = 7,
+                            Game_StadiumsId = 7,
+                            HomeTeamScore = 0,
+                            IsPlayed = true,
+                            RefereeName = "Alexandru Vasilescu",
+                            TicketsSold = 10
+                        },
+                        new
+                        {
+                            Id = 278,
+                            AwayTeamScore = 0,
+                            GameDate = new DateTime(2025, 4, 30, 8, 0, 0, 0, DateTimeKind.Unspecified),
+                            Game_AwayTeamId = 36,
+                            Game_CompetitionsId = 2,
+                            Game_HomeTeamId = 8,
+                            Game_StadiumsId = 8,
+                            HomeTeamScore = 1,
+                            IsPlayed = true,
+                            RefereeName = "Silviu Barbu",
+                            TicketsSold = 10
+                        },
+                        new
+                        {
+                            Id = 279,
+                            AwayTeamScore = 2,
+                            GameDate = new DateTime(2025, 5, 7, 10, 0, 0, 0, DateTimeKind.Unspecified),
+                            Game_AwayTeamId = 1,
+                            Game_CompetitionsId = 2,
+                            Game_HomeTeamId = 10,
+                            Game_StadiumsId = 10,
+                            HomeTeamScore = 0,
+                            IsPlayed = true,
+                            RefereeName = "Radu Marin",
+                            TicketsSold = 10
+                        },
+                        new
+                        {
+                            Id = 280,
+                            AwayTeamScore = 3,
+                            GameDate = new DateTime(2025, 5, 7, 12, 0, 0, 0, DateTimeKind.Unspecified),
+                            Game_AwayTeamId = 2,
+                            Game_CompetitionsId = 2,
+                            Game_HomeTeamId = 9,
+                            Game_StadiumsId = 9,
+                            HomeTeamScore = 0,
+                            IsPlayed = true,
+                            RefereeName = "Marius Popa",
+                            TicketsSold = 10
+                        },
+                        new
+                        {
+                            Id = 281,
+                            AwayTeamScore = 1,
+                            GameDate = new DateTime(2025, 5, 7, 14, 0, 0, 0, DateTimeKind.Unspecified),
+                            Game_AwayTeamId = 3,
+                            Game_CompetitionsId = 2,
+                            Game_HomeTeamId = 31,
+                            Game_StadiumsId = 31,
+                            HomeTeamScore = 1,
+                            IsPlayed = true,
+                            RefereeName = "Florin Stan",
+                            TicketsSold = 10
+                        },
+                        new
+                        {
+                            Id = 282,
+                            AwayTeamScore = 0,
+                            GameDate = new DateTime(2025, 5, 7, 16, 0, 0, 0, DateTimeKind.Unspecified),
+                            Game_AwayTeamId = 4,
+                            Game_CompetitionsId = 2,
+                            Game_HomeTeamId = 32,
+                            Game_StadiumsId = 32,
+                            HomeTeamScore = 0,
+                            IsPlayed = true,
+                            RefereeName = "Andrei Dumitrescu",
+                            TicketsSold = 10
+                        },
+                        new
+                        {
+                            Id = 283,
+                            AwayTeamScore = 0,
+                            GameDate = new DateTime(2025, 5, 7, 18, 0, 0, 0, DateTimeKind.Unspecified),
+                            Game_AwayTeamId = 5,
+                            Game_CompetitionsId = 2,
+                            Game_HomeTeamId = 33,
+                            Game_StadiumsId = 33,
+                            HomeTeamScore = 2,
+                            IsPlayed = true,
+                            RefereeName = "Iulian Nistor",
+                            TicketsSold = 10
+                        },
+                        new
+                        {
+                            Id = 284,
+                            AwayTeamScore = 0,
+                            GameDate = new DateTime(2025, 5, 7, 20, 0, 0, 0, DateTimeKind.Unspecified),
+                            Game_AwayTeamId = 6,
+                            Game_CompetitionsId = 2,
+                            Game_HomeTeamId = 34,
+                            Game_StadiumsId = 34,
+                            HomeTeamScore = 1,
+                            IsPlayed = true,
+                            RefereeName = "Cosmin Ionescu",
+                            TicketsSold = 10
+                        },
+                        new
+                        {
+                            Id = 285,
+                            AwayTeamScore = 3,
+                            GameDate = new DateTime(2025, 5, 7, 22, 0, 0, 0, DateTimeKind.Unspecified),
+                            Game_AwayTeamId = 7,
+                            Game_CompetitionsId = 2,
+                            Game_HomeTeamId = 35,
+                            Game_StadiumsId = 35,
+                            HomeTeamScore = 0,
+                            IsPlayed = true,
+                            RefereeName = "Alexandru Vasilescu",
+                            TicketsSold = 10
+                        },
+                        new
+                        {
+                            Id = 286,
+                            AwayTeamScore = 1,
+                            GameDate = new DateTime(2025, 5, 7, 8, 0, 0, 0, DateTimeKind.Unspecified),
+                            Game_AwayTeamId = 8,
+                            Game_CompetitionsId = 2,
+                            Game_HomeTeamId = 36,
+                            Game_StadiumsId = 36,
+                            HomeTeamScore = 3,
+                            IsPlayed = true,
+                            RefereeName = "Silviu Barbu",
+                            TicketsSold = 10
+                        },
+                        new
+                        {
+                            Id = 287,
+                            AwayTeamScore = 0,
+                            GameDate = new DateTime(2025, 6, 1, 10, 0, 0, 0, DateTimeKind.Unspecified),
+                            Game_AwayTeamId = 2,
+                            Game_CompetitionsId = 2,
+                            Game_HomeTeamId = 1,
+                            Game_StadiumsId = 1,
+                            HomeTeamScore = 4,
+                            IsPlayed = true,
+                            RefereeName = "Radu Marin",
+                            TicketsSold = 10
+                        },
+                        new
+                        {
+                            Id = 288,
+                            AwayTeamScore = 0,
+                            GameDate = new DateTime(2025, 6, 1, 12, 0, 0, 0, DateTimeKind.Unspecified),
+                            Game_AwayTeamId = 32,
+                            Game_CompetitionsId = 2,
+                            Game_HomeTeamId = 3,
+                            Game_StadiumsId = 3,
+                            HomeTeamScore = 0,
+                            IsPlayed = true,
+                            RefereeName = "Marius Popa",
+                            TicketsSold = 10
+                        },
+                        new
+                        {
+                            Id = 289,
+                            AwayTeamScore = 0,
+                            GameDate = new DateTime(2025, 6, 1, 14, 0, 0, 0, DateTimeKind.Unspecified),
+                            Game_AwayTeamId = 33,
+                            Game_CompetitionsId = 2,
+                            Game_HomeTeamId = 34,
+                            Game_StadiumsId = 34,
+                            HomeTeamScore = 1,
+                            IsPlayed = true,
+                            RefereeName = "Florin Stan",
+                            TicketsSold = 10
+                        },
+                        new
+                        {
+                            Id = 290,
+                            AwayTeamScore = 3,
+                            GameDate = new DateTime(2025, 6, 1, 16, 0, 0, 0, DateTimeKind.Unspecified),
+                            Game_AwayTeamId = 36,
+                            Game_CompetitionsId = 2,
+                            Game_HomeTeamId = 7,
+                            Game_StadiumsId = 7,
+                            HomeTeamScore = 3,
+                            IsPlayed = true,
+                            RefereeName = "Andrei Dumitrescu",
+                            TicketsSold = 10
+                        },
+                        new
+                        {
+                            Id = 291,
+                            AwayTeamScore = 0,
+                            GameDate = new DateTime(2025, 6, 8, 10, 0, 0, 0, DateTimeKind.Unspecified),
+                            Game_AwayTeamId = 1,
+                            Game_CompetitionsId = 2,
+                            Game_HomeTeamId = 2,
+                            Game_StadiumsId = 2,
+                            HomeTeamScore = 0,
+                            IsPlayed = true,
+                            RefereeName = "Radu Marin",
+                            TicketsSold = 10
+                        },
+                        new
+                        {
+                            Id = 292,
+                            AwayTeamScore = 1,
+                            GameDate = new DateTime(2025, 6, 8, 12, 0, 0, 0, DateTimeKind.Unspecified),
+                            Game_AwayTeamId = 3,
+                            Game_CompetitionsId = 2,
+                            Game_HomeTeamId = 32,
+                            Game_StadiumsId = 32,
+                            HomeTeamScore = 0,
+                            IsPlayed = true,
+                            RefereeName = "Marius Popa",
+                            TicketsSold = 10
+                        },
+                        new
+                        {
+                            Id = 293,
+                            AwayTeamScore = 0,
+                            GameDate = new DateTime(2025, 6, 8, 14, 0, 0, 0, DateTimeKind.Unspecified),
+                            Game_AwayTeamId = 34,
+                            Game_CompetitionsId = 2,
+                            Game_HomeTeamId = 33,
+                            Game_StadiumsId = 33,
+                            HomeTeamScore = 2,
+                            IsPlayed = true,
+                            RefereeName = "Florin Stan",
+                            TicketsSold = 10
+                        },
+                        new
+                        {
+                            Id = 294,
+                            AwayTeamScore = 1,
+                            GameDate = new DateTime(2025, 6, 8, 16, 0, 0, 0, DateTimeKind.Unspecified),
+                            Game_AwayTeamId = 7,
+                            Game_CompetitionsId = 2,
+                            Game_HomeTeamId = 36,
+                            Game_StadiumsId = 36,
+                            HomeTeamScore = 0,
+                            IsPlayed = true,
+                            RefereeName = "Andrei Dumitrescu",
+                            TicketsSold = 10
+                        },
+                        new
+                        {
+                            Id = 295,
+                            AwayTeamScore = 0,
+                            GameDate = new DateTime(2025, 7, 1, 10, 0, 0, 0, DateTimeKind.Unspecified),
+                            Game_AwayTeamId = 3,
+                            Game_CompetitionsId = 2,
+                            Game_HomeTeamId = 1,
+                            Game_StadiumsId = 1,
+                            HomeTeamScore = 3,
+                            IsPlayed = true,
+                            RefereeName = "Radu Marin",
+                            TicketsSold = 10
+                        },
+                        new
+                        {
+                            Id = 296,
+                            AwayTeamScore = 0,
+                            GameDate = new DateTime(2025, 7, 1, 12, 0, 0, 0, DateTimeKind.Unspecified),
+                            Game_AwayTeamId = 33,
+                            Game_CompetitionsId = 2,
+                            Game_HomeTeamId = 7,
+                            Game_StadiumsId = 7,
+                            HomeTeamScore = 0,
+                            IsPlayed = true,
+                            RefereeName = "Marius Popa",
+                            TicketsSold = 10
+                        },
+                        new
+                        {
+                            Id = 297,
+                            AwayTeamScore = 3,
+                            GameDate = new DateTime(2025, 7, 7, 10, 0, 0, 0, DateTimeKind.Unspecified),
+                            Game_AwayTeamId = 1,
+                            Game_CompetitionsId = 2,
+                            Game_HomeTeamId = 3,
+                            Game_StadiumsId = 3,
+                            HomeTeamScore = 2,
+                            IsPlayed = true,
+                            RefereeName = "Andrei Dumitrescu",
+                            TicketsSold = 10
+                        },
+                        new
+                        {
+                            Id = 298,
+                            AwayTeamScore = 0,
+                            GameDate = new DateTime(2025, 7, 7, 12, 0, 0, 0, DateTimeKind.Unspecified),
+                            Game_AwayTeamId = 7,
+                            Game_CompetitionsId = 2,
+                            Game_HomeTeamId = 33,
+                            Game_StadiumsId = 33,
+                            HomeTeamScore = 1,
+                            IsPlayed = true,
+                            RefereeName = "Florin Stan",
+                            TicketsSold = 10
+                        },
+                        new
+                        {
+                            Id = 299,
+                            AwayTeamScore = 0,
+                            GameDate = new DateTime(2025, 7, 30, 10, 0, 0, 0, DateTimeKind.Unspecified),
+                            Game_AwayTeamId = 33,
+                            Game_CompetitionsId = 2,
+                            Game_HomeTeamId = 1,
+                            Game_StadiumsId = 1,
+                            HomeTeamScore = 0,
+                            IsPlayed = false,
+                            RefereeName = "Radu Marin",
+                            TicketsSold = 0
+                        },
+                        new
+                        {
+                            Id = 300,
+                            AwayTeamScore = 0,
+                            GameDate = new DateTime(2025, 8, 6, 10, 0, 0, 0, DateTimeKind.Unspecified),
+                            Game_AwayTeamId = 1,
+                            Game_CompetitionsId = 2,
+                            Game_HomeTeamId = 33,
+                            Game_StadiumsId = 33,
+                            HomeTeamScore = 0,
+                            IsPlayed = false,
+                            RefereeName = "Marius Popa",
+                            TicketsSold = 0
+                        },
+                        new
+                        {
+                            Id = 301,
+                            AwayTeamScore = 2,
+                            GameDate = new DateTime(2025, 5, 7, 10, 0, 0, 0, DateTimeKind.Unspecified),
+                            Game_AwayTeamId = 41,
+                            Game_CompetitionsId = 3,
+                            Game_HomeTeamId = 1,
+                            Game_StadiumsId = 1,
+                            HomeTeamScore = 2,
+                            IsPlayed = true,
+                            RefereeName = "Tomasz Nowak",
+                            TicketsSold = 6
+                        },
+                        new
+                        {
+                            Id = 302,
+                            AwayTeamScore = 0,
+                            GameDate = new DateTime(2025, 5, 7, 10, 0, 0, 0, DateTimeKind.Unspecified),
+                            Game_AwayTeamId = 49,
+                            Game_CompetitionsId = 3,
+                            Game_HomeTeamId = 42,
+                            Game_StadiumsId = 42,
+                            HomeTeamScore = 1,
+                            IsPlayed = true,
+                            RefereeName = "Marco Rossi",
+                            TicketsSold = 8
+                        },
+                        new
+                        {
+                            Id = 303,
+                            AwayTeamScore = 2,
+                            GameDate = new DateTime(2025, 5, 7, 10, 0, 0, 0, DateTimeKind.Unspecified),
+                            Game_AwayTeamId = 48,
+                            Game_CompetitionsId = 3,
+                            Game_HomeTeamId = 43,
+                            Game_StadiumsId = 43,
+                            HomeTeamScore = 3,
+                            IsPlayed = true,
+                            RefereeName = "Lars Andersen",
+                            TicketsSold = 5
+                        },
+                        new
+                        {
+                            Id = 304,
+                            AwayTeamScore = 2,
+                            GameDate = new DateTime(2025, 5, 7, 10, 0, 0, 0, DateTimeKind.Unspecified),
+                            Game_AwayTeamId = 47,
+                            Game_CompetitionsId = 3,
+                            Game_HomeTeamId = 44,
+                            Game_StadiumsId = 44,
+                            HomeTeamScore = 0,
+                            IsPlayed = true,
+                            RefereeName = "Francesco Bianchi",
+                            TicketsSold = 7
+                        },
+                        new
+                        {
+                            Id = 305,
+                            AwayTeamScore = 1,
+                            GameDate = new DateTime(2025, 5, 7, 10, 0, 0, 0, DateTimeKind.Unspecified),
+                            Game_AwayTeamId = 46,
+                            Game_CompetitionsId = 3,
+                            Game_HomeTeamId = 45,
+                            Game_StadiumsId = 45,
+                            HomeTeamScore = 1,
+                            IsPlayed = true,
+                            RefereeName = "Kevin O'Connor",
+                            TicketsSold = 9
+                        },
+                        new
+                        {
+                            Id = 306,
+                            AwayTeamScore = 0,
+                            GameDate = new DateTime(2025, 5, 21, 10, 0, 0, 0, DateTimeKind.Unspecified),
+                            Game_AwayTeamId = 1,
+                            Game_CompetitionsId = 3,
+                            Game_HomeTeamId = 49,
+                            Game_StadiumsId = 49,
+                            HomeTeamScore = 3,
+                            IsPlayed = true,
+                            RefereeName = "Nikos Dimitriou",
+                            TicketsSold = 7
+                        },
+                        new
+                        {
+                            Id = 307,
+                            AwayTeamScore = 1,
+                            GameDate = new DateTime(2025, 5, 21, 10, 0, 0, 0, DateTimeKind.Unspecified),
+                            Game_AwayTeamId = 42,
+                            Game_CompetitionsId = 3,
+                            Game_HomeTeamId = 41,
+                            Game_StadiumsId = 41,
+                            HomeTeamScore = 0,
+                            IsPlayed = true,
+                            RefereeName = "John Schmidt",
+                            TicketsSold = 6
+                        },
+                        new
+                        {
+                            Id = 308,
+                            AwayTeamScore = 3,
+                            GameDate = new DateTime(2025, 5, 21, 10, 0, 0, 0, DateTimeKind.Unspecified),
+                            Game_AwayTeamId = 44,
+                            Game_CompetitionsId = 3,
+                            Game_HomeTeamId = 46,
+                            Game_StadiumsId = 46,
+                            HomeTeamScore = 2,
+                            IsPlayed = true,
+                            RefereeName = "Carlos Pereira",
+                            TicketsSold = 8
+                        },
+                        new
+                        {
+                            Id = 309,
+                            AwayTeamScore = 1,
+                            GameDate = new DateTime(2025, 5, 21, 10, 0, 0, 0, DateTimeKind.Unspecified),
+                            Game_AwayTeamId = 43,
+                            Game_CompetitionsId = 3,
+                            Game_HomeTeamId = 47,
+                            Game_StadiumsId = 47,
+                            HomeTeamScore = 1,
+                            IsPlayed = true,
+                            RefereeName = "Diego Alvarez",
+                            TicketsSold = 6
+                        },
+                        new
+                        {
+                            Id = 310,
+                            AwayTeamScore = 0,
+                            GameDate = new DateTime(2025, 5, 21, 10, 0, 0, 0, DateTimeKind.Unspecified),
+                            Game_AwayTeamId = 45,
+                            Game_CompetitionsId = 3,
+                            Game_HomeTeamId = 48,
+                            Game_StadiumsId = 48,
+                            HomeTeamScore = 1,
+                            IsPlayed = true,
+                            RefereeName = "Omer Kaplan",
+                            TicketsSold = 6
+                        },
+                        new
+                        {
+                            Id = 311,
+                            AwayTeamScore = 1,
+                            GameDate = new DateTime(2025, 6, 4, 10, 0, 0, 0, DateTimeKind.Unspecified),
+                            Game_AwayTeamId = 42,
+                            Game_CompetitionsId = 3,
+                            Game_HomeTeamId = 1,
+                            Game_StadiumsId = 1,
+                            HomeTeamScore = 2,
+                            IsPlayed = true,
+                            RefereeName = "Tomasz Nowak",
+                            TicketsSold = 6
+                        },
+                        new
+                        {
+                            Id = 312,
+                            AwayTeamScore = 3,
+                            GameDate = new DateTime(2025, 6, 4, 10, 0, 0, 0, DateTimeKind.Unspecified),
+                            Game_AwayTeamId = 41,
+                            Game_CompetitionsId = 3,
+                            Game_HomeTeamId = 43,
+                            Game_StadiumsId = 43,
+                            HomeTeamScore = 1,
+                            IsPlayed = true,
+                            RefereeName = "Marco Rossi",
+                            TicketsSold = 5
+                        },
+                        new
+                        {
+                            Id = 313,
+                            AwayTeamScore = 0,
+                            GameDate = new DateTime(2025, 6, 4, 10, 0, 0, 0, DateTimeKind.Unspecified),
+                            Game_AwayTeamId = 49,
+                            Game_CompetitionsId = 3,
+                            Game_HomeTeamId = 44,
+                            Game_StadiumsId = 44,
+                            HomeTeamScore = 2,
+                            IsPlayed = true,
+                            RefereeName = "Lars Andersen",
+                            TicketsSold = 8
+                        },
+                        new
+                        {
+                            Id = 314,
+                            AwayTeamScore = 1,
+                            GameDate = new DateTime(2025, 6, 4, 10, 0, 0, 0, DateTimeKind.Unspecified),
+                            Game_AwayTeamId = 48,
+                            Game_CompetitionsId = 3,
+                            Game_HomeTeamId = 45,
+                            Game_StadiumsId = 45,
+                            HomeTeamScore = 0,
+                            IsPlayed = true,
+                            RefereeName = "Francesco Bianchi",
+                            TicketsSold = 6
+                        },
+                        new
+                        {
+                            Id = 315,
+                            AwayTeamScore = 1,
+                            GameDate = new DateTime(2025, 6, 4, 10, 0, 0, 0, DateTimeKind.Unspecified),
+                            Game_AwayTeamId = 47,
+                            Game_CompetitionsId = 3,
+                            Game_HomeTeamId = 46,
+                            Game_StadiumsId = 46,
+                            HomeTeamScore = 1,
+                            IsPlayed = true,
+                            RefereeName = "Kevin O'Connor",
+                            TicketsSold = 8
+                        },
+                        new
+                        {
+                            Id = 316,
+                            AwayTeamScore = 1,
+                            GameDate = new DateTime(2025, 6, 18, 10, 0, 0, 0, DateTimeKind.Unspecified),
+                            Game_AwayTeamId = 44,
+                            Game_CompetitionsId = 3,
+                            Game_HomeTeamId = 41,
+                            Game_StadiumsId = 41,
+                            HomeTeamScore = 3,
+                            IsPlayed = true,
+                            RefereeName = "Nikos Dimitriou",
+                            TicketsSold = 9
+                        },
+                        new
+                        {
+                            Id = 317,
+                            AwayTeamScore = 0,
+                            GameDate = new DateTime(2025, 6, 18, 10, 0, 0, 0, DateTimeKind.Unspecified),
+                            Game_AwayTeamId = 43,
+                            Game_CompetitionsId = 3,
+                            Game_HomeTeamId = 42,
+                            Game_StadiumsId = 42,
+                            HomeTeamScore = 2,
+                            IsPlayed = true,
+                            RefereeName = "John Schmidt",
+                            TicketsSold = 8
+                        },
+                        new
+                        {
+                            Id = 318,
+                            AwayTeamScore = 1,
+                            GameDate = new DateTime(2025, 6, 18, 10, 0, 0, 0, DateTimeKind.Unspecified),
+                            Game_AwayTeamId = 45,
+                            Game_CompetitionsId = 3,
+                            Game_HomeTeamId = 49,
+                            Game_StadiumsId = 49,
+                            HomeTeamScore = 1,
+                            IsPlayed = true,
+                            RefereeName = "Carlos Pereira",
+                            TicketsSold = 7
+                        },
+                        new
+                        {
+                            Id = 319,
+                            AwayTeamScore = 0,
+                            GameDate = new DateTime(2025, 6, 18, 10, 0, 0, 0, DateTimeKind.Unspecified),
+                            Game_AwayTeamId = 1,
+                            Game_CompetitionsId = 3,
+                            Game_HomeTeamId = 47,
+                            Game_StadiumsId = 47,
+                            HomeTeamScore = 2,
+                            IsPlayed = true,
+                            RefereeName = "Diego Alvarez",
+                            TicketsSold = 6
+                        },
+                        new
+                        {
+                            Id = 320,
+                            AwayTeamScore = 3,
+                            GameDate = new DateTime(2025, 6, 18, 10, 0, 0, 0, DateTimeKind.Unspecified),
+                            Game_AwayTeamId = 46,
+                            Game_CompetitionsId = 3,
+                            Game_HomeTeamId = 48,
+                            Game_StadiumsId = 48,
+                            HomeTeamScore = 0,
+                            IsPlayed = true,
+                            RefereeName = "Omer Kaplan",
+                            TicketsSold = 8
+                        },
+                        new
+                        {
+                            Id = 321,
+                            AwayTeamScore = 1,
+                            GameDate = new DateTime(2025, 7, 2, 10, 0, 0, 0, DateTimeKind.Unspecified),
+                            Game_AwayTeamId = 43,
+                            Game_CompetitionsId = 3,
+                            Game_HomeTeamId = 1,
+                            Game_StadiumsId = 1,
+                            HomeTeamScore = 1,
+                            IsPlayed = true,
+                            RefereeName = "Tomasz Nowak",
+                            TicketsSold = 7
+                        },
+                        new
+                        {
+                            Id = 322,
+                            AwayTeamScore = 2,
+                            GameDate = new DateTime(2025, 7, 2, 10, 0, 0, 0, DateTimeKind.Unspecified),
+                            Game_AwayTeamId = 42,
+                            Game_CompetitionsId = 3,
+                            Game_HomeTeamId = 44,
+                            Game_StadiumsId = 44,
+                            HomeTeamScore = 2,
+                            IsPlayed = true,
+                            RefereeName = "Marco Rossi",
+                            TicketsSold = 6
+                        },
+                        new
+                        {
+                            Id = 323,
+                            AwayTeamScore = 3,
+                            GameDate = new DateTime(2025, 7, 2, 10, 0, 0, 0, DateTimeKind.Unspecified),
+                            Game_AwayTeamId = 41,
+                            Game_CompetitionsId = 3,
+                            Game_HomeTeamId = 45,
+                            Game_StadiumsId = 45,
+                            HomeTeamScore = 0,
+                            IsPlayed = true,
+                            RefereeName = "Lars Andersen",
+                            TicketsSold = 5
+                        },
+                        new
+                        {
+                            Id = 324,
+                            AwayTeamScore = 0,
+                            GameDate = new DateTime(2025, 7, 2, 10, 0, 0, 0, DateTimeKind.Unspecified),
+                            Game_AwayTeamId = 49,
+                            Game_CompetitionsId = 3,
+                            Game_HomeTeamId = 46,
+                            Game_StadiumsId = 46,
+                            HomeTeamScore = 2,
+                            IsPlayed = true,
+                            RefereeName = "Francesco Bianchi",
+                            TicketsSold = 9
+                        },
+                        new
+                        {
+                            Id = 325,
+                            AwayTeamScore = 2,
+                            GameDate = new DateTime(2025, 7, 2, 10, 0, 0, 0, DateTimeKind.Unspecified),
+                            Game_AwayTeamId = 48,
+                            Game_CompetitionsId = 3,
+                            Game_HomeTeamId = 47,
+                            Game_StadiumsId = 47,
+                            HomeTeamScore = 2,
+                            IsPlayed = true,
+                            RefereeName = "Kevin O'Connor",
+                            TicketsSold = 8
+                        },
+                        new
+                        {
+                            Id = 326,
+                            AwayTeamScore = 0,
+                            GameDate = new DateTime(2025, 7, 16, 10, 0, 0, 0, DateTimeKind.Unspecified),
+                            Game_AwayTeamId = 45,
+                            Game_CompetitionsId = 3,
+                            Game_HomeTeamId = 42,
+                            Game_StadiumsId = 42,
+                            HomeTeamScore = 0,
+                            IsPlayed = false,
+                            RefereeName = "Nikos Dimitriou",
+                            TicketsSold = 0
+                        },
+                        new
+                        {
+                            Id = 327,
+                            AwayTeamScore = 0,
+                            GameDate = new DateTime(2025, 7, 16, 10, 0, 0, 0, DateTimeKind.Unspecified),
+                            Game_AwayTeamId = 44,
+                            Game_CompetitionsId = 3,
+                            Game_HomeTeamId = 43,
+                            Game_StadiumsId = 43,
+                            HomeTeamScore = 0,
+                            IsPlayed = false,
+                            RefereeName = "John Schmidt",
+                            TicketsSold = 0
+                        },
+                        new
+                        {
+                            Id = 328,
+                            AwayTeamScore = 0,
+                            GameDate = new DateTime(2025, 7, 16, 10, 0, 0, 0, DateTimeKind.Unspecified),
+                            Game_AwayTeamId = 47,
+                            Game_CompetitionsId = 3,
+                            Game_HomeTeamId = 49,
+                            Game_StadiumsId = 49,
+                            HomeTeamScore = 0,
+                            IsPlayed = false,
+                            RefereeName = "Carlos Pereira",
+                            TicketsSold = 0
+                        },
+                        new
+                        {
+                            Id = 329,
+                            AwayTeamScore = 0,
+                            GameDate = new DateTime(2025, 7, 16, 10, 0, 0, 0, DateTimeKind.Unspecified),
+                            Game_AwayTeamId = 46,
+                            Game_CompetitionsId = 3,
+                            Game_HomeTeamId = 41,
+                            Game_StadiumsId = 41,
+                            HomeTeamScore = 0,
+                            IsPlayed = false,
+                            RefereeName = "Diego Alvarez",
+                            TicketsSold = 0
+                        },
+                        new
+                        {
+                            Id = 330,
+                            AwayTeamScore = 0,
+                            GameDate = new DateTime(2025, 7, 16, 10, 0, 0, 0, DateTimeKind.Unspecified),
+                            Game_AwayTeamId = 1,
+                            Game_CompetitionsId = 3,
+                            Game_HomeTeamId = 48,
+                            Game_StadiumsId = 48,
+                            HomeTeamScore = 0,
+                            IsPlayed = false,
+                            RefereeName = "Omer Kaplan",
+                            TicketsSold = 0
+                        },
+                        new
+                        {
+                            Id = 331,
+                            AwayTeamScore = 0,
+                            GameDate = new DateTime(2025, 7, 30, 10, 0, 0, 0, DateTimeKind.Unspecified),
+                            Game_AwayTeamId = 44,
+                            Game_CompetitionsId = 3,
+                            Game_HomeTeamId = 1,
+                            Game_StadiumsId = 1,
+                            HomeTeamScore = 0,
+                            IsPlayed = false,
+                            RefereeName = "Tomasz Nowak",
+                            TicketsSold = 0
+                        },
+                        new
+                        {
+                            Id = 332,
+                            AwayTeamScore = 0,
+                            GameDate = new DateTime(2025, 7, 30, 10, 0, 0, 0, DateTimeKind.Unspecified),
+                            Game_AwayTeamId = 43,
+                            Game_CompetitionsId = 3,
+                            Game_HomeTeamId = 45,
+                            Game_StadiumsId = 45,
+                            HomeTeamScore = 0,
+                            IsPlayed = false,
+                            RefereeName = "Marco Rossi",
+                            TicketsSold = 0
+                        },
+                        new
+                        {
+                            Id = 333,
+                            AwayTeamScore = 0,
+                            GameDate = new DateTime(2025, 7, 30, 10, 0, 0, 0, DateTimeKind.Unspecified),
+                            Game_AwayTeamId = 42,
+                            Game_CompetitionsId = 3,
+                            Game_HomeTeamId = 46,
+                            Game_StadiumsId = 46,
+                            HomeTeamScore = 0,
+                            IsPlayed = false,
+                            RefereeName = "Lars Andersen",
+                            TicketsSold = 0
+                        },
+                        new
+                        {
+                            Id = 334,
+                            AwayTeamScore = 0,
+                            GameDate = new DateTime(2025, 7, 30, 10, 0, 0, 0, DateTimeKind.Unspecified),
+                            Game_AwayTeamId = 41,
+                            Game_CompetitionsId = 3,
+                            Game_HomeTeamId = 47,
+                            Game_StadiumsId = 47,
+                            HomeTeamScore = 0,
+                            IsPlayed = false,
+                            RefereeName = "Francesco Bianchi",
+                            TicketsSold = 0
+                        },
+                        new
+                        {
+                            Id = 335,
+                            AwayTeamScore = 0,
+                            GameDate = new DateTime(2025, 7, 30, 10, 0, 0, 0, DateTimeKind.Unspecified),
+                            Game_AwayTeamId = 48,
+                            Game_CompetitionsId = 3,
+                            Game_HomeTeamId = 49,
+                            Game_StadiumsId = 49,
+                            HomeTeamScore = 0,
+                            IsPlayed = false,
+                            RefereeName = "Kevin O'Connor",
+                            TicketsSold = 0
+                        },
+                        new
+                        {
+                            Id = 336,
+                            AwayTeamScore = 0,
+                            GameDate = new DateTime(2025, 8, 13, 10, 0, 0, 0, DateTimeKind.Unspecified),
+                            Game_AwayTeamId = 45,
+                            Game_CompetitionsId = 3,
+                            Game_HomeTeamId = 41,
+                            Game_StadiumsId = 41,
+                            HomeTeamScore = 0,
+                            IsPlayed = false,
+                            RefereeName = "Nikos Dimitriou",
+                            TicketsSold = 0
+                        },
+                        new
+                        {
+                            Id = 337,
+                            AwayTeamScore = 0,
+                            GameDate = new DateTime(2025, 8, 13, 10, 0, 0, 0, DateTimeKind.Unspecified),
+                            Game_AwayTeamId = 47,
+                            Game_CompetitionsId = 3,
+                            Game_HomeTeamId = 42,
+                            Game_StadiumsId = 42,
+                            HomeTeamScore = 0,
+                            IsPlayed = false,
+                            RefereeName = "John Schmidt",
+                            TicketsSold = 0
+                        },
+                        new
+                        {
+                            Id = 338,
+                            AwayTeamScore = 0,
+                            GameDate = new DateTime(2025, 8, 13, 10, 0, 0, 0, DateTimeKind.Unspecified),
+                            Game_AwayTeamId = 49,
+                            Game_CompetitionsId = 3,
+                            Game_HomeTeamId = 43,
+                            Game_StadiumsId = 43,
+                            HomeTeamScore = 0,
+                            IsPlayed = false,
+                            RefereeName = "Carlos Pereira",
+                            TicketsSold = 0
+                        },
+                        new
+                        {
+                            Id = 339,
+                            AwayTeamScore = 0,
+                            GameDate = new DateTime(2025, 8, 13, 10, 0, 0, 0, DateTimeKind.Unspecified),
+                            Game_AwayTeamId = 48,
+                            Game_CompetitionsId = 3,
+                            Game_HomeTeamId = 44,
+                            Game_StadiumsId = 44,
+                            HomeTeamScore = 0,
+                            IsPlayed = false,
+                            RefereeName = "Diego Alvarez",
+                            TicketsSold = 0
+                        },
+                        new
+                        {
+                            Id = 340,
+                            AwayTeamScore = 0,
+                            GameDate = new DateTime(2025, 8, 13, 10, 0, 0, 0, DateTimeKind.Unspecified),
+                            Game_AwayTeamId = 1,
+                            Game_CompetitionsId = 3,
+                            Game_HomeTeamId = 46,
+                            Game_StadiumsId = 46,
+                            HomeTeamScore = 0,
+                            IsPlayed = false,
+                            RefereeName = "Omer Kaplan",
+                            TicketsSold = 0
+                        },
+                        new
+                        {
+                            Id = 341,
+                            AwayTeamScore = 0,
+                            GameDate = new DateTime(2025, 8, 27, 10, 0, 0, 0, DateTimeKind.Unspecified),
+                            Game_AwayTeamId = 45,
+                            Game_CompetitionsId = 3,
+                            Game_HomeTeamId = 1,
+                            Game_StadiumsId = 1,
+                            HomeTeamScore = 0,
+                            IsPlayed = false,
+                            RefereeName = "Tomasz Nowak",
+                            TicketsSold = 0
+                        },
+                        new
+                        {
+                            Id = 342,
+                            AwayTeamScore = 0,
+                            GameDate = new DateTime(2025, 8, 27, 10, 0, 0, 0, DateTimeKind.Unspecified),
+                            Game_AwayTeamId = 46,
+                            Game_CompetitionsId = 3,
+                            Game_HomeTeamId = 47,
+                            Game_StadiumsId = 47,
+                            HomeTeamScore = 0,
+                            IsPlayed = false,
+                            RefereeName = "Marco Rossi",
+                            TicketsSold = 0
+                        },
+                        new
+                        {
+                            Id = 343,
+                            AwayTeamScore = 0,
+                            GameDate = new DateTime(2025, 8, 27, 10, 0, 0, 0, DateTimeKind.Unspecified),
+                            Game_AwayTeamId = 43,
+                            Game_CompetitionsId = 3,
+                            Game_HomeTeamId = 48,
+                            Game_StadiumsId = 48,
+                            HomeTeamScore = 0,
+                            IsPlayed = false,
+                            RefereeName = "Lars Andersen",
+                            TicketsSold = 0
+                        },
+                        new
+                        {
+                            Id = 344,
+                            AwayTeamScore = 0,
+                            GameDate = new DateTime(2025, 8, 27, 10, 0, 0, 0, DateTimeKind.Unspecified),
+                            Game_AwayTeamId = 44,
+                            Game_CompetitionsId = 3,
+                            Game_HomeTeamId = 49,
+                            Game_StadiumsId = 49,
+                            HomeTeamScore = 0,
+                            IsPlayed = false,
+                            RefereeName = "Francesco Bianchi",
+                            TicketsSold = 0
+                        },
+                        new
+                        {
+                            Id = 345,
+                            AwayTeamScore = 0,
+                            GameDate = new DateTime(2025, 8, 27, 10, 0, 0, 0, DateTimeKind.Unspecified),
+                            Game_AwayTeamId = 42,
+                            Game_CompetitionsId = 3,
+                            Game_HomeTeamId = 41,
+                            Game_StadiumsId = 41,
+                            HomeTeamScore = 0,
+                            IsPlayed = false,
+                            RefereeName = "Kevin O'Connor",
                             TicketsSold = 0
                         });
                 });
@@ -4611,7 +7683,7 @@ namespace FCUnirea.Persistance.Data.Migrations
 
                     b.Property<string>("Text")
                         .IsRequired()
-                        .HasColumnType("TEXT")
+                        .HasColumnType("NVARCHAR(MAX)")
                         .HasColumnName("Text");
 
                     b.Property<string>("Title")
@@ -4630,122 +7702,418 @@ namespace FCUnirea.Persistance.Data.Migrations
                         new
                         {
                             Id = 1,
-                            CreatedAt = new DateTime(2025, 5, 9, 9, 54, 42, 601, DateTimeKind.Utc).AddTicks(1161),
+                            CreatedAt = new DateTime(2025, 6, 1, 10, 0, 6, 817, DateTimeKind.Utc).AddTicks(3977),
                             News_UsersId = 1,
-                            Text = "Vezi cum a decurs meciul cu ID 1.",
-                            Title = "Rezultatul meciului #1"
+                            Text = "FC Unirea este încântată să anunțe participarea în trei competiții importante în sezonul acesta: Liga 1, Cupa României și Champions League.\n\nParticiparea în **Liga 1** aduce un nou prilej pentru echipa noastră de a lupta pentru titlul național, alături de cele mai bune echipe din țară.\n\nÎn **Cupa României**, obiectivul nostru este să mergem cât mai departe în competiție și să aducem suporterilor momente de neuitat.\n\nNu în ultimul rând, prezența în **Champions League** reprezintă un vis devenit realitate! Este o șansă uriașă pentru echipă de a se confrunta cu formații de top din Europa, de a acumula experiență și de a duce numele FC Unirea pe cele mai mari stadioane.\n\nVă invităm să fiți alături de noi în acest sezon de excepție! Hai, Unirea!",
+                            Title = "FC Unirea va participa în trei competiții sezonul acesta!"
                         },
                         new
                         {
                             Id = 2,
-                            CreatedAt = new DateTime(2025, 5, 9, 9, 54, 42, 601, DateTimeKind.Utc).AddTicks(1163),
+                            CreatedAt = new DateTime(2025, 6, 1, 10, 0, 6, 817, DateTimeKind.Utc).AddTicks(3981),
                             News_UsersId = 1,
-                            Text = "Vezi cum a decurs meciul cu ID 2.",
-                            Title = "Rezultatul meciului #2"
+                            Text = "Echipa FC Unirea U21 va concura exclusiv în Liga 1 U21 în acest sezon, o competiție dedicată tinerilor talentați care fac parte din generația viitorului.\n\nLiga 1 U21 reprezintă o oportunitate excelentă pentru jucătorii noștri să-și demonstreze abilitățile și să facă pasul spre echipa mare. Antrenorii și staff-ul tehnic sunt încrezători că tinerii vor aduce rezultate bune și vor evolua de la meci la meci.\n\nObiectivul principal este dezvoltarea jucătorilor, promovarea valorilor clubului și pregătirea lor pentru a face față provocărilor fotbalului de performanță.\n\nSusțineți FC Unirea U21 în această nouă aventură fotbalistică! Hai, Unirea!",
+                            Title = "FC Unirea U21 va participa doar în Liga 1 U21 sezonul acesta!"
                         },
                         new
                         {
                             Id = 3,
-                            CreatedAt = new DateTime(2025, 5, 9, 9, 54, 42, 601, DateTimeKind.Utc).AddTicks(1164),
+                            CreatedAt = new DateTime(2025, 6, 1, 10, 0, 6, 817, DateTimeKind.Utc).AddTicks(3982),
                             News_UsersId = 1,
-                            Text = "Vezi cum a decurs meciul cu ID 3.",
-                            Title = "Rezultatul meciului #3"
+                            Text = "Avem bucuria să anunțăm că echipa FC Unirea Youth va evolua în acest sezon în **Liga 1 de tineret**!\n\nAceastă competiție este dedicată tinerilor fotbaliști cu potențial, care se pregătesc pentru pasul următor în cariera lor sportivă. Obiectivul clubului este să descopere noi talente și să le ofere oportunitatea de a juca la nivel înalt încă de la o vârstă fragedă.\n\nPrin participarea în Liga 1 de tineret, FC Unirea Youth urmărește nu doar rezultate, ci și dezvoltarea continuă a jucătorilor, spiritul de echipă și promovarea fair-play-ului.\n\nLe dorim mult succes tinerilor noștri și suntem convinși că vor reprezenta cu mândrie culorile clubului! Susțineți FC Unirea Youth la fiecare meci!",
+                            Title = "FC Unirea Youth va participa în Liga 1 de tineret!"
                         },
                         new
                         {
                             Id = 4,
-                            CreatedAt = new DateTime(2025, 5, 9, 9, 54, 42, 601, DateTimeKind.Utc).AddTicks(1164),
+                            CreatedAt = new DateTime(2025, 6, 1, 10, 0, 6, 817, DateTimeKind.Utc).AddTicks(3983),
                             News_UsersId = 1,
-                            Text = "Vezi cum a decurs meciul cu ID 4.",
-                            Title = "Rezultatul meciului #4"
+                            Text = "FC Unirea a fost fondată în anul 2005, având ca scop promovarea valorilor sportive și dezvoltarea fotbalului la nivel local. De-a lungul anilor, clubul a reușit să atragă numeroși tineri talentați din regiune, devenind rapid un punct de referință pentru fotbalul comunitar.\n\nEchipa a debutat în ligile inferioare, dar datorită muncii susținute și implicării staff-ului, FC Unirea a obținut promovări succesive, ajungând să participe în competiții naționale și ulterior europene. Performanțele notabile includ câștigarea campionatului regional în 2012 și participarea constantă în primele eșaloane ale fotbalului românesc începând cu sezonul 2015-2016.\n\nÎn prezent, echipa este pregătită de antrenorul Petrica Florea, sub îndrumarea căruia FC Unirea continuă să-și consolideze poziția în fotbalul românesc și să inspire o nouă generație de sportivi. Hai, Unirea!",
+                            Title = "Despre FC Unirea – Istorie, valori și performanță"
                         },
                         new
                         {
                             Id = 5,
-                            CreatedAt = new DateTime(2025, 5, 9, 9, 54, 42, 601, DateTimeKind.Utc).AddTicks(1165),
+                            CreatedAt = new DateTime(2025, 6, 1, 10, 0, 6, 817, DateTimeKind.Utc).AddTicks(3984),
                             News_UsersId = 1,
-                            Text = "Vezi cum a decurs meciul cu ID 5.",
-                            Title = "Rezultatul meciului #5"
+                            Text = "FC Unirea U21 a fost înființată ca parte a strategiei de dezvoltare a clubului FC Unirea, având ca principal obiectiv creșterea și promovarea tinerilor jucători către echipa de seniori. Echipa a luat naștere în anul 2013, din dorința de a oferi o rampă de lansare pentru fotbaliștii talentați cu vârste sub 21 de ani.\n\nÎncă de la început, FC Unirea U21 a participat în competițiile naționale de juniori și tineret, obținând rezultate remarcabile și construind o reputație solidă pentru profesionalism și implicare. Mulți dintre jucătorii promovați din cadrul acestei echipe au ajuns ulterior să evolueze cu succes la nivel de seniori, contribuind la performanțele clubului-mamă.\n\nPrin accentul pus pe formare, disciplină și joc de echipă, FC Unirea U21 a devenit un pilon esențial în structura clubului, reprezentând legătura directă dintre academia de juniori și prima echipă. Clubul investește constant în infrastructură, staff și programe de pregătire pentru a asigura continuitatea valorilor și performanțelor fotbalistice.\n\nÎn prezent, echipa este pregătită de antrenorul Mihai Olaru, sub îndrumarea căruia tinerii își pot atinge potențialul și pot face pasul spre echipa de seniori. Hai, Unirea U21!",
+                            Title = "FC Unirea U21 – Rampă de lansare pentru tinerii fotbaliști"
                         },
                         new
                         {
                             Id = 6,
-                            CreatedAt = new DateTime(2025, 5, 9, 9, 54, 42, 601, DateTimeKind.Utc).AddTicks(1166),
+                            CreatedAt = new DateTime(2025, 6, 1, 10, 0, 6, 817, DateTimeKind.Utc).AddTicks(3986),
                             News_UsersId = 1,
-                            Text = "Vezi cum a decurs meciul cu ID 6.",
-                            Title = "Rezultatul meciului #6"
+                            Text = "FC Unirea Youth reprezintă segmentul de juniori al clubului FC Unirea, fiind dedicat dezvoltării copiilor și adolescenților pasionați de fotbal. Echipa a fost creată în anul 2010 ca răspuns la dorința clubului de a construi o academie puternică și de a forma jucători încă de la cele mai fragede vârste.\n\nScopul principal al FC Unirea Youth este identificarea și formarea tinerelor talente, oferindu-le acestora condiții moderne de pregătire, antrenori calificați și participarea la competiții locale și regionale. De-a lungul anilor, această structură a devenit un adevărat incubator de jucători pentru club, numeroși fotbaliști ajungând ulterior să evolueze pentru FC Unirea U21 sau chiar la nivel de seniori.\n\nPrin activitatea sa, FC Unirea Youth promovează nu doar performanța sportivă, ci și valorile educației, fair-play-ului și respectului față de adversar. Clubul continuă să investească în infrastructură și în programe de formare, consolidându-și statutul de centru de excelență pentru tinerii fotbaliști din regiune.\n\nÎn prezent, echipa este antrenată de Nica Cercel, un tehnician recunoscut pentru devotamentul său față de copii și pentru rezultatele obținute la nivel juvenil. Hai, Unirea Youth!",
+                            Title = "FC Unirea Youth – Academia care formează viitorul clubului"
                         },
                         new
                         {
                             Id = 7,
-                            CreatedAt = new DateTime(2025, 5, 9, 9, 54, 42, 601, DateTimeKind.Utc).AddTicks(1166),
+                            CreatedAt = new DateTime(2025, 6, 1, 10, 0, 6, 817, DateTimeKind.Utc).AddTicks(3987),
                             News_UsersId = 1,
-                            Text = "Vezi cum a decurs meciul cu ID 7.",
-                            Title = "Rezultatul meciului #7"
+                            Text = "Echipa FC Unirea pornește la drum în noul sezon cu un lot valoros, format din jucători experimentați și tineri de perspectivă. Iată componența lotului:\n\n**Portari:**  \n- Daniel Rădulescu (1992)  \n- Denis Chiriac (1997)  \n- Alin Neagu (2006)  \n- Ionuț Rădulescu (2004)  \n\n**Fundași:**  \n- Ștefan Popescu (1996)  \n- Radu Ilie (1999)  \n- Alex Lazăr (1995)  \n- Andrei Enache (1998)  \n- Andrei Neagu (2004)  \n- Robert Vasilescu (1996)  \n- Vlad Enache (1990)  \n\n**Mijlocași:**  \n- Mihai Toma (2000)  \n- Daniel Matei (1994)  \n- Sergiu Chiriac (1990)  \n- Denis Neagu (1999)  \n- George Ilie (2004)  \n- Gabriel Vasilescu (2005)  \n\n**Atacanți:**  \n- Daniel Stan (2003)  \n- Alex Vasilescu (1994)  \n- Denis Ilie (1991)  \n\nEchipa este pregătită să facă performanță și să aducă noi bucurii suporterilor!\n\nHai, Unirea!",
+                            Title = "Lotul echipei FC Unirea pentru sezonul actual"
                         },
                         new
                         {
                             Id = 8,
-                            CreatedAt = new DateTime(2025, 5, 9, 9, 54, 42, 601, DateTimeKind.Utc).AddTicks(1167),
+                            CreatedAt = new DateTime(2025, 6, 1, 10, 0, 6, 817, DateTimeKind.Utc).AddTicks(3988),
                             News_UsersId = 1,
-                            Text = "Vezi cum a decurs meciul cu ID 8.",
-                            Title = "Rezultatul meciului #8"
+                            Text = "FC Unirea U21 abordează noul sezon cu o echipă tânără, plină de entuziasm și determinare. Lotul reunește atât jucători cu experiență la nivel de juniori, cât și talente aflate la început de drum, dornice să confirme la cel mai înalt nivel al fotbalului de tineret. Iată componența lotului:\n\n**Portari:**  \n- Denis Lazar (2004)  \n- Eduard Georgescu (2006)  \n- Alin Dumitrescu (2008)  \n- Eduard Diaconu (2005)  \n- Robert Dumitrescu (2007)  \n\n**Fundași:**  \n- George Diaconu (2006)  \n- Adrian Toma (2007)  \n- Alin Diaconu (2004)  \n- Alin Voicu (2005)  \n- Sergiu Radulescu (2005)  \n\n**Mijlocași:**  \n- Daniel Ilie (2008)  \n- Alex Matei (2005)  \n- Robert Cojocaru (2008)  \n- Denis Cojocaru (2007)  \n\n**Atacanți:**  \n- Cristian Ilie (2005)  \n- Robert Ionescu (2004)  \n- Robert Radulescu (2007)  \n- Florin Matei (2005)  \n- Sergiu Neagu (2004)  \n- Eduard Popescu (2004)  \n\nPrin această selecție, FC Unirea U21 își propune să crească jucători valoroși, capabili să facă pasul spre fotbalul de seniori.\n\nMult succes în noul sezon, U21! Hai, Unirea!",
+                            Title = "Lotul echipei FC Unirea U21 pentru sezonul actual"
                         },
                         new
                         {
                             Id = 9,
-                            CreatedAt = new DateTime(2025, 5, 9, 9, 54, 42, 601, DateTimeKind.Utc).AddTicks(1168),
+                            CreatedAt = new DateTime(2025, 6, 1, 10, 0, 6, 817, DateTimeKind.Utc).AddTicks(3989),
                             News_UsersId = 1,
-                            Text = "Vezi cum a decurs meciul cu ID 9.",
-                            Title = "Rezultatul meciului #9"
+                            Text = "FC Unirea Youth aliniază în acest sezon un lot numeros, format din copii și adolescenți talentați, cu dorință de afirmare și mult entuziasm. Mulți dintre acești jucători reprezintă viitorul clubului și al fotbalului local. Iată componența lotului:\n\n**Portari:**  \n- Cristian Matei (2011)  \n- Vlad Ilie (2012)  \n- Ionuț Neagu (2009)  \n- Adrian Cojocaru (2012)  \n- Paul Vasilescu (2011)  \n- Alin Neagu (2010)  \n- Cristian Chiriac (2010)  \n\n**Fundași:**  \n- Gabriel Ionescu (2011)  \n\n**Mijlocași:**  \n- Alin Vasilescu (2012)  \n- Andrei Ionescu (2009)  \n- Vlad Ionescu (2011)  \n- Sergiu Enache (2011)  \n- Alex Vasilescu (2010)  \n- Adrian Toma (2009)  \n- Vlad Neagu (2011)  \n- Ionuț Ilie (2010)  \n\n**Atacanți:**  \n- Paul Rădulescu (2011)  \n- Alin Ionescu (2009)  \n- George Neagu (2010)  \n- Ionuț Diaconu (2009)  \n\nClubul investește permanent în dezvoltarea acestor copii, asigurându-le pregătire modernă și condiții optime pentru a-și atinge potențialul. Mult succes, Unirea Youth!\n\nHai, Unirea!",
+                            Title = "Lotul echipei FC Unirea Youth pentru sezonul actual"
                         },
                         new
                         {
                             Id = 10,
-                            CreatedAt = new DateTime(2025, 5, 9, 9, 54, 42, 601, DateTimeKind.Utc).AddTicks(1169),
+                            CreatedAt = new DateTime(2025, 6, 1, 10, 0, 6, 817, DateTimeKind.Utc).AddTicks(3990),
                             News_UsersId = 1,
-                            Text = "Vezi cum a decurs meciul cu ID 10.",
-                            Title = "Rezultatul meciului #10"
+                            Text = "FC Unirea Youth intră în noul sezon cu o echipă tânără și echilibrată, construită pe valori solide și pe dorința de afirmare a fiecărui copil. Jucătorii acestei generații sunt dovada investiției clubului în viitor, iar energia și ambiția lor se văd la fiecare antrenament și meci. Iată lotul complet:\n\n**Portari:**  \n- Adrian Cojocaru (2012)  \n- Alin Neagu (2010)  \n- Cristian Chiriac (2010)  \n\n**Fundași:**  \n- Cristian Matei (2011)  \n- Vlad Ilie (2012)  \n- Ionuț Neagu (2009)  \n- Gabriel Ionescu (2011)  \n- Paul Vasilescu (2011)  \n\n**Mijlocași:**  \n- Alin Vasilescu (2012)  \n- Andrei Ionescu (2009)  \n- Vlad Ionescu (2011)  \n- Sergiu Enache (2011)  \n- Alex Vasilescu (2010)  \n- Adrian Toma (2009)  \n- Vlad Neagu (2011)  \n- Ionuț Ilie (2010)  \n\n**Atacanți:**  \n- Paul Rădulescu (2011)  \n- Alin Ionescu (2009)  \n- George Neagu (2010)  \n- Ionuț Diaconu (2009)  \n\nLotul este rezultatul muncii academiei și reflectă preocuparea permanentă pentru dezvoltarea tinerelor talente.  \nSucces, Unirea Youth! Hai, copii!",
+                            Title = "Lotul echipei FC Unirea Youth pentru sezonul actual"
                         },
                         new
                         {
                             Id = 11,
-                            CreatedAt = new DateTime(2025, 5, 9, 9, 54, 42, 601, DateTimeKind.Utc).AddTicks(1169),
+                            CreatedAt = new DateTime(2025, 6, 1, 10, 0, 6, 817, DateTimeKind.Utc).AddTicks(3991),
                             News_UsersId = 1,
-                            Text = "Vezi cum a decurs meciul cu ID 11.",
-                            Title = "Rezultatul meciului #11"
+                            Text = "FC Unirea își dispută meciurile de acasă pe **Unirea Stadium**, situat în orașul Odobești.\n\nStadionul dispune de o capacitate de 10 locuri și este destinat exclusiv meciurilor echipelor clubului, oferind o atmosferă caldă și apropiată de comunitatea locală. De-a lungul timpului, Unirea Stadium a găzduit numeroase momente speciale pentru suporterii alb-albaștrilor, devenind un simbol al pasiunii pentru fotbal în zonă.\n\nFiecare partidă jucată pe Unirea Stadium înseamnă emoție, determinare și susținere necondiționată din partea fanilor. Clubul mulțumește tuturor celor care vin să susțină echipa și promite să facă din fiecare meci o adevărată sărbătoare a fotbalului.\n\nHai, Unirea!",
+                            Title = "Acasă pentru FC Unirea: Unirea Stadium din Odobești"
                         },
                         new
                         {
                             Id = 12,
-                            CreatedAt = new DateTime(2025, 5, 9, 9, 54, 42, 601, DateTimeKind.Utc).AddTicks(1170),
+                            CreatedAt = new DateTime(2025, 6, 1, 10, 0, 6, 817, DateTimeKind.Utc).AddTicks(3992),
                             News_UsersId = 1,
-                            Text = "Vezi cum a decurs meciul cu ID 12.",
-                            Title = "Rezultatul meciului #12"
+                            Text = "FC Unirea U21 joacă meciurile de acasă pe **Unirea U21 Stadium**, în orașul Odobești.\n\nStadionul oferă o capacitate de 10 locuri și a devenit un loc familiar pentru generațiile de tineri fotbaliști ai clubului. Fiecare partidă disputată aici este o oportunitate pentru juniorii noștri să impresioneze și să-și construiască drumul spre performanță.\n\nSuporterii care vin pe Unirea U21 Stadium creează o atmosferă caldă și încurajatoare, ajutând echipa să se simtă mereu susținută, indiferent de rezultat. Stadionul reprezintă un punct de pornire spre cariere de succes pentru mulți jucători crescuți la FC Unirea.\n\nMult succes în noul sezon, Unirea U21!\nHai, Unirea!",
+                            Title = "Unirea U21 Stadium – Casa tinerilor de la FC Unirea U21"
                         },
                         new
                         {
                             Id = 13,
-                            CreatedAt = new DateTime(2025, 5, 9, 9, 54, 42, 601, DateTimeKind.Utc).AddTicks(1170),
+                            CreatedAt = new DateTime(2025, 6, 1, 10, 0, 6, 817, DateTimeKind.Utc).AddTicks(3993),
                             News_UsersId = 1,
-                            Text = "Vezi cum a decurs meciul cu ID 13.",
-                            Title = "Rezultatul meciului #13"
+                            Text = "FC Unirea Youth își dispută meciurile de acasă pe **Unirea Youth Stadium**, situat în Odobești.\n\nAcest stadion, cu o capacitate de 10 locuri, este locul unde copiii și adolescenții clubului fac primii pași în fotbalul organizat. Pentru mulți dintre ei, Unirea Youth Stadium reprezintă locul unde pasiunea pentru fotbal se transformă în visuri, prietenii și primele reușite sportive.\n\nFiecare meci disputat aici este o oportunitate de a învăța, de a se bucura de fotbal și de a construi viitorul clubului. Atmosfera este mereu caldă, iar suporterii prezenți îi încurajează pe tinerii jucători la fiecare pas.\n\nHai, Unirea Youth!",
+                            Title = "Unirea Youth Stadium – Terenul de joacă al viitorilor campioni"
                         },
                         new
                         {
                             Id = 14,
-                            CreatedAt = new DateTime(2025, 5, 9, 9, 54, 42, 601, DateTimeKind.Utc).AddTicks(1171),
+                            CreatedAt = new DateTime(2025, 6, 1, 10, 0, 6, 817, DateTimeKind.Utc).AddTicks(3994),
                             News_UsersId = 1,
-                            Text = "Vezi cum a decurs meciul cu ID 14.",
-                            Title = "Rezultatul meciului #14"
+                            Text = "La fiecare meci disputat pe **Unirea Stadium** din Odobești, suporterii au la dispoziție o gamă variată de locuri, atât pentru cei care preferă confortul maxim, cât și pentru cei care vor să simtă pulsul tribunei alături de ceilalți fani.\n\n**Locuri disponibile:**  \n- VIP: A1, A2 (preț: 150 lei/bilet)  \n- Standard: B1, B2, C1, C2, D1, D2, E1, E2 (preț: 50 lei/bilet)  \n\nIndiferent de tipul biletului ales, fiecare suporter contribuie la atmosfera specială de pe stadion și la susținerea echipei. Vă așteptăm la fiecare meci să vă bucurați de fotbal și să susțineți FC Unirea din tribunele noastre!",
+                            Title = "Locurile disponibile la meciurile de acasă pe Unirea Stadium"
                         },
                         new
                         {
-                            Id = 15,
-                            CreatedAt = new DateTime(2025, 5, 9, 9, 54, 42, 601, DateTimeKind.Utc).AddTicks(1171),
+                            Id = 19,
+                            CreatedAt = new DateTime(2025, 6, 1, 10, 0, 6, 817, DateTimeKind.Utc).AddTicks(3995),
                             News_UsersId = 1,
-                            Text = "Vezi cum a decurs meciul cu ID 15.",
-                            Title = "Rezultatul meciului #15"
+                            Text = "Pe 8 mai 2025, FC Unirea Youth a terminat la egalitate, scor 2-2, cu Youth Galați, într-un meci palpitant din Liga 1 Tineret.\n\nPentru echipa noastră au marcat Paul Rădulescu și Alex Vasilescu, în timp ce pentru oaspeți au înscris Florin Neagu și Andrei Petrescu.\n\nA fost un meci plin de faze de poartă, determinare și spirit de luptă din partea ambelor formații. Bravo tinerilor pentru atitudine!\n\nHai, Unirea Youth!",
+                            Title = "Remiză spectaculoasă pentru FC Unirea Youth cu Youth Galați!"
+                        },
+                        new
+                        {
+                            Id = 20,
+                            CreatedAt = new DateTime(2025, 6, 1, 10, 0, 6, 817, DateTimeKind.Utc).AddTicks(3996),
+                            News_UsersId = 1,
+                            Text = "Pe 8 mai 2025, FC Unirea a obținut o victorie răsunătoare cu scorul de 4-1 împotriva echipei Steaua Sud, în Liga 1.\n\nGolurile echipei noastre au fost marcate de Daniel Stan, Denis Ilie, Denis Chiriac și George Ilie, în timp ce pentru oaspeți a înscris Vlad Chiriac.\n\nA fost o demonstrație de forță și eficiență din partea băieților noștri, cu un atac excelent și o defensivă solidă. Felicitări echipei pentru spectacol!\n\nHai, Unirea!",
+                            Title = "FC Unirea, victorie clară cu Steaua Sud în Liga 1!"
+                        },
+                        new
+                        {
+                            Id = 21,
+                            CreatedAt = new DateTime(2025, 6, 1, 10, 0, 6, 817, DateTimeKind.Utc).AddTicks(3997),
+                            News_UsersId = 1,
+                            Text = "Pe 7 mai 2025, FC Unirea a învins în deplasare, scor 2-0, pe CS Mioveni, într-un meci din Cupa României.\n\nIonuț Rădulescu a marcat unul dintre goluri, iar echipa a arătat o prestație solidă, calificându-se mai departe în competiție.\n\nFelicitări băieților pentru evoluția foarte bună și pentru parcursul în Cupă!\n\nHai, Unirea!",
+                            Title = "FC Unirea câștigă în Cupa României pe terenul CS Mioveni!"
+                        },
+                        new
+                        {
+                            Id = 22,
+                            CreatedAt = new DateTime(2025, 6, 1, 10, 0, 6, 817, DateTimeKind.Utc).AddTicks(3999),
+                            News_UsersId = 1,
+                            Text = "Pe 7 mai 2025, FC Unirea a terminat la egalitate, scor 2-2, cu Steaua Belgrad, într-un meci intens din Champions League.\n\nAlex Vasilescu și Denis Neagu au înscris pentru FC Unirea, iar pentru oaspeți au punctat Nikola Mitrovic și Aleksandar Radovanovic.\n\nUn duel spectaculos, cu multe faze de poartă și un public extraordinar. Felicitări jucătorilor pentru determinare și pentru punctul obținut în fața unei echipe de top!\n\nHai, Unirea!",
+                            Title = "Spectacol total: FC Unirea și Steaua Belgrad, remiză în Champions League!"
+                        },
+                        new
+                        {
+                            Id = 23,
+                            CreatedAt = new DateTime(2025, 6, 1, 10, 0, 6, 817, DateTimeKind.Utc).AddTicks(4000),
+                            News_UsersId = 1,
+                            Text = "Pe 1 mai 2025, FC Unirea s-a impus cu scorul de 2-1 în fața celor de la CS Mioveni, într-un meci disputat în Liga 1.\n\nPentru FC Unirea au marcat Denis Chiriac și Ștefan Popescu, iar pentru adversari a înscris Radu Ionescu.\n\nMeciul a fost dinamic și disputat, cu un final fericit pentru echipa noastră. Felicitări băieților pentru victorie!\n\nHai, Unirea!",
+                            Title = "FC Unirea începe luna mai cu victorie contra CS Mioveni!"
+                        },
+                        new
+                        {
+                            Id = 24,
+                            CreatedAt = new DateTime(2025, 6, 1, 10, 0, 6, 817, DateTimeKind.Utc).AddTicks(4001),
+                            News_UsersId = 1,
+                            Text = "Pe 21 mai 2025, FC Unirea a pierdut cu 3-0 în fața lui Juventus, într-un meci din grupele Champions League.\n\nPentru italieni au înscris Marco Rossi, Alessandro Esposito și Simone Marino.\n\nDeși scorul nu ne avantajează, echipa noastră va continua lupta pentru calificare!\n\nHai, Unirea!",
+                            Title = "Înfrângere pentru FC Unirea pe terenul lui Juventus, în Champions League"
+                        },
+                        new
+                        {
+                            Id = 25,
+                            CreatedAt = new DateTime(2025, 6, 1, 10, 0, 6, 817, DateTimeKind.Utc).AddTicks(4002),
+                            News_UsersId = 1,
+                            Text = "Pe 15 mai 2025, FC Unirea a câștigat cu 1-0 pe terenul celor de la Dinamo Est, într-un meci disputat în Liga 1.\n\nUnicul gol al partidei a fost marcat de Andrei Neagu, care a adus 3 puncte echipei noastre.\n\nFelicitări băieților pentru efort și dăruire!\n\nHai, Unirea!",
+                            Title = "Victorie la limită pentru FC Unirea contra Dinamo Est!"
+                        },
+                        new
+                        {
+                            Id = 26,
+                            CreatedAt = new DateTime(2025, 6, 1, 10, 0, 6, 817, DateTimeKind.Utc).AddTicks(4003),
+                            News_UsersId = 1,
+                            Text = "Pe 15 mai 2025, FC Unirea Youth a terminat la egalitate, scor 2-2, pe terenul celor de la Youth Hunedoara, într-un meci din Liga 1 Tineret.\n\nPentru gazde au marcat Cristian Neagu și Daniel Popescu, iar pentru echipa noastră au înscris Alin Ionescu și Ionuț Diaconu.\n\nA fost un meci cu multe faze de poartă și suspans până la final. Felicitări tinerilor pentru atitudine!\n\nHai, Unirea Youth!",
+                            Title = "Remiză spectaculoasă între Youth Hunedoara și FC Unirea Youth!"
+                        },
+                        new
+                        {
+                            Id = 27,
+                            CreatedAt = new DateTime(2025, 6, 1, 10, 0, 6, 817, DateTimeKind.Utc).AddTicks(4004),
+                            News_UsersId = 1,
+                            Text = "Pe 15 mai 2025, FC Unirea U21 a obținut o victorie cu 2-0 pe terenul celor de la U21 Farul, în Liga 1 U21.\n\nGolurile victoriei au fost marcate de Sergiu Neagu și Sergiu Rădulescu.\n\nBăieții continuă seria de meciuri bune și urcă în clasament!\n\nHai, Unirea U21!",
+                            Title = "FC Unirea U21 se impune în deplasare cu U21 Farul!"
+                        },
+                        new
+                        {
+                            Id = 28,
+                            CreatedAt = new DateTime(2025, 6, 1, 10, 0, 6, 817, DateTimeKind.Utc).AddTicks(4005),
+                            News_UsersId = 1,
+                            Text = "Pe 8 mai 2025, FC Unirea U21 a pierdut cu 2-0 în fața celor de la U21 Voluntari, într-un meci din Liga 1 U21.\n\nPentru oaspeți au înscris Paul Neagu și Daniel Popescu.\n\nBăieții au luptat până la final, dar norocul nu a fost de partea noastră de această dată.\n\nHai, Unirea U21!",
+                            Title = "Eșec pe teren propriu pentru FC Unirea U21 cu U21 Voluntari"
+                        },
+                        new
+                        {
+                            Id = 29,
+                            CreatedAt = new DateTime(2025, 6, 1, 10, 0, 6, 817, DateTimeKind.Utc).AddTicks(4006),
+                            News_UsersId = 1,
+                            Text = "Pe 29 mai 2025, FC Unirea U21 a pierdut cu 2-1 în fața echipei U21 Poli Iași, într-un meci din Liga 1 U21.\n\nPentru gazde a marcat Ștefan Diaconu, iar pentru FC Unirea U21 a punctat Eduard Diaconu.\n\nUn meci disputat, cu ocazii de ambele părți. Băieții noștri au luptat până la final!\n\nHai, Unirea U21!",
+                            Title = "Înfrângere la limită pentru FC Unirea U21 în deplasare la U21 Poli Iași"
+                        },
+                        new
+                        {
+                            Id = 30,
+                            CreatedAt = new DateTime(2025, 6, 1, 10, 0, 6, 817, DateTimeKind.Utc).AddTicks(4054),
+                            News_UsersId = 1,
+                            Text = "Pe 29 mai 2025, FC Unirea Youth a pierdut cu scorul de 3-1 pe terenul celor de la Youth Vaslui, într-un meci din Liga 1 Tineret.\n\nPentru echipa noastră a marcat Ionuț Neagu, iar pentru gazde a înscris George Voicu.\n\nTinerii noștri au avut momente bune, dar gazdele s-au impus până la final. Capul sus, băieți!\n\nHai, Unirea Youth!",
+                            Title = "FC Unirea Youth învinsă de Youth Vaslui în Liga 1 Tineret"
+                        },
+                        new
+                        {
+                            Id = 31,
+                            CreatedAt = new DateTime(2025, 6, 1, 10, 0, 6, 817, DateTimeKind.Utc).AddTicks(4057),
+                            News_UsersId = 1,
+                            Text = "Pe 22 mai 2025, FC Unirea a pierdut cu scorul de 2-1 pe teren propriu în fața Rapid Nord, într-un meci disputat în Liga 1.\n\nAlex Lazăr a marcat pentru FC Unirea, iar pentru oaspeți a înscris Cristian Enache.\n\nUn meci cu multe ocazii, în care am avut ghinion. Hai, Unirea, nu renunțăm!\n\nHai, Unirea!",
+                            Title = "FC Unirea pierde acasă cu Rapid Nord, după un meci strâns"
+                        },
+                        new
+                        {
+                            Id = 32,
+                            CreatedAt = new DateTime(2025, 6, 1, 10, 0, 6, 817, DateTimeKind.Utc).AddTicks(4058),
+                            News_UsersId = 1,
+                            Text = "Pe 22 mai 2025, FC Unirea U21 a remizat 0-0 cu U21 Sepsi, într-un meci echilibrat din Liga 1 U21.\n\nDeși nu s-au marcat goluri, meciul a fost disputat și cu multe ocazii la ambele porți.\n\nFelicitări băieților pentru efort!\n\nHai, Unirea U21!",
+                            Title = "Remiză albă între FC Unirea U21 și U21 Sepsi în Liga 1 U21"
+                        },
+                        new
+                        {
+                            Id = 33,
+                            CreatedAt = new DateTime(2025, 6, 1, 10, 0, 6, 817, DateTimeKind.Utc).AddTicks(4059),
+                            News_UsersId = 1,
+                            Text = "Pe 22 mai 2025, FC Unirea Youth a fost învinsă cu 1-0 de Youth Târgoviște, într-un meci din Liga 1 Tineret.\n\nA fost un meci echilibrat, dar adversarii au reușit să înscrie unicul gol al partidei.\n\nTinerii noștri au dat totul pe teren și merită felicitări pentru efort!\n\nHai, Unirea Youth!",
+                            Title = "FC Unirea Youth pierde la limită cu Youth Târgoviște"
+                        },
+                        new
+                        {
+                            Id = 34,
+                            CreatedAt = new DateTime(2025, 6, 1, 10, 0, 6, 817, DateTimeKind.Utc).AddTicks(4060),
+                            News_UsersId = 1,
+                            Text = "Pe 4 iunie 2025, FC Unirea a învins cu scorul de 2-1 pe Dinamo Zagreb, într-un meci disputat în Champions League.\n\nGolurile victoriei au fost marcate de Andrei Neagu și Daniel Rădulescu pentru FC Unirea, în timp ce pentru oaspeți a înscris Ivan Kovacic.\n\nEchipa a avut o evoluție excelentă și adaugă încă 3 puncte în grupa europeană!\n\nHai, Unirea!",
+                            Title = "FC Unirea obține o victorie importantă cu Dinamo Zagreb în Champions League!"
+                        },
+                        new
+                        {
+                            Id = 35,
+                            CreatedAt = new DateTime(2025, 6, 1, 10, 0, 6, 817, DateTimeKind.Utc).AddTicks(4061),
+                            News_UsersId = 1,
+                            Text = "Pe 1 iunie 2025, FC Unirea s-a impus cu 4-0 în fața echipei Steaua Sud, într-un meci din Cupa României.\n\nPentru echipa noastră au marcat Alex Lazăr, Alin Neagu, Robert Vasilescu și George Ilie.\n\nA fost un meci dominat de la un capăt la altul, cu o defensivă solidă și un atac de neoprit. Felicitări echipei pentru calificare!\n\nHai, Unirea!",
+                            Title = "Calificare categorică: FC Unirea câștigă cu Steaua Sud în Cupa României!"
+                        },
+                        new
+                        {
+                            Id = 36,
+                            CreatedAt = new DateTime(2025, 6, 1, 10, 0, 6, 817, DateTimeKind.Utc).AddTicks(4061),
+                            News_UsersId = 1,
+                            Text = "Pe 29 mai 2025, FC Unirea a terminat la egalitate, scor 1-1, pe terenul Petrolul Vest, într-un meci din Liga 1.\n\nPentru gazde a marcat Vlad Voicu, iar pentru FC Unirea a înscris Denis Chiriac.\n\nA fost un meci echilibrat, cu ocazii de ambele părți. Continuăm lupta pentru locurile fruntașe!\n\nHai, Unirea!",
+                            Title = "Remiză între FC Unirea și Petrolul Vest în Liga 1"
+                        },
+                        new
+                        {
+                            Id = 37,
+                            CreatedAt = new DateTime(2025, 6, 1, 10, 0, 6, 817, DateTimeKind.Utc).AddTicks(4062),
+                            News_UsersId = 1,
+                            Text = "Pe 13 iunie 2025, FC Unirea a pierdut cu scorul de 3-0 pe terenul celor de la CSM Cluj, într-un meci din Liga 1.\n\nPentru gazde au marcat Mihai Ionescu, Denis Voicu și Gabriel Rădulescu.\n\nEchipa noastră va încerca să revină cu un rezultat pozitiv în următoarea etapă.\n\nHai, Unirea!",
+                            Title = "Înfrângere pentru FC Unirea la CSM Cluj în Liga 1"
+                        },
+                        new
+                        {
+                            Id = 38,
+                            CreatedAt = new DateTime(2025, 6, 1, 10, 0, 6, 817, DateTimeKind.Utc).AddTicks(4064),
+                            News_UsersId = 1,
+                            Text = "Pe 13 iunie 2025, FC Unirea U21 a remizat 1-1 în deplasare cu U21 Argeș, într-un meci din Liga 1 U21.\n\nPentru gazde a marcat George Popescu, iar pentru FC Unirea U21 a punctat Denis Cojocaru.\n\nA fost un meci echilibrat, cu șanse de ambele părți.\n\nHai, Unirea U21!",
+                            Title = "Remiză între U21 Argeș și FC Unirea U21 în Liga 1 U21"
+                        },
+                        new
+                        {
+                            Id = 39,
+                            CreatedAt = new DateTime(2025, 6, 1, 10, 0, 6, 817, DateTimeKind.Utc).AddTicks(4065),
+                            News_UsersId = 1,
+                            Text = "Pe 13 iunie 2025, FC Unirea Youth a terminat la egalitate, scor 2-2, în deplasare la Youth Craiova, într-un meci din Liga 1 Tineret.\n\nPentru echipa noastră a marcat Ionuț Diaconu, iar pentru adversari a înscris Andrei Enache.\n\nUn rezultat bun, cu evoluții solide de ambele părți.\n\nHai, Unirea Youth!",
+                            Title = "FC Unirea Youth scoate un egal la Youth Craiova în Liga 1 Tineret"
+                        },
+                        new
+                        {
+                            Id = 40,
+                            CreatedAt = new DateTime(2025, 6, 1, 10, 0, 6, 817, DateTimeKind.Utc).AddTicks(4066),
+                            News_UsersId = 1,
+                            Text = "Pe 8 iunie 2025, FC Unirea a remizat 0-0 în deplasare la Steaua Sud, într-un meci fără goluri în Cupa României.\n\nMeci echilibrat, cu ocazii de ambele părți, dar fără reușite pe tabelă.\n\nHai, Unirea!",
+                            Title = "Remiză albă între Steaua Sud și FC Unirea în Cupa României"
+                        },
+                        new
+                        {
+                            Id = 41,
+                            CreatedAt = new DateTime(2025, 6, 1, 10, 0, 6, 817, DateTimeKind.Utc).AddTicks(4067),
+                            News_UsersId = 1,
+                            Text = "Pe 6 iunie 2025, FC Unirea a remizat 1-1 cu Universitatea Brașov, într-un meci disputat în Liga 1.\n\nPentru gazde a marcat Alex Vasilescu, iar pentru oaspeți a înscris Alin Ionescu.\n\nMeci echilibrat, ambele echipe au arătat fotbal de calitate.\n\nHai, Unirea!",
+                            Title = "FC Unirea și Universitatea Brașov termină la egalitate în Liga 1"
+                        },
+                        new
+                        {
+                            Id = 42,
+                            CreatedAt = new DateTime(2025, 6, 1, 10, 0, 6, 817, DateTimeKind.Utc).AddTicks(4068),
+                            News_UsersId = 1,
+                            Text = "Pe 6 iunie 2025, FC Unirea U21 a pierdut cu 2-0 pe teren propriu cu U21 UTA, într-un meci din Liga 1 U21.\n\nPentru oaspeți au înscris Vlad Stan și Alin Enache.\n\nBăieții noștri au luptat, dar nu au reușit să marcheze de această dată.\n\nHai, Unirea U21!",
+                            Title = "Înfrângere pe teren propriu pentru FC Unirea U21 cu U21 UTA"
+                        },
+                        new
+                        {
+                            Id = 43,
+                            CreatedAt = new DateTime(2025, 6, 1, 10, 0, 6, 817, DateTimeKind.Utc).AddTicks(4069),
+                            News_UsersId = 1,
+                            Text = "Pe 6 iunie 2025, FC Unirea Youth a pierdut cu 1-0 în fața echipei Youth Baia Mare, într-un meci din Liga 1 Tineret.\n\nUnicul gol al partidei a fost marcat de Vlad Ionescu.\n\nTinerii noștri au dat totul pe teren, dar norocul nu a fost de partea noastră.\n\nHai, Unirea Youth!",
+                            Title = "FC Unirea Youth, învinsă la limită de Youth Baia Mare"
+                        },
+                        new
+                        {
+                            Id = 44,
+                            CreatedAt = new DateTime(2025, 6, 1, 10, 0, 6, 817, DateTimeKind.Utc).AddTicks(4070),
+                            News_UsersId = 1,
+                            Text = "Pe 27 iunie 2025, FC Unirea U21 a terminat la egalitate, scor 0-0, cu U21 Botoșani, într-un meci din Liga 1 U21.\n\nA fost un meci echilibrat, fără goluri, dar cu multe faze de poartă de ambele părți.\n\nHai, Unirea U21!",
+                            Title = "Remiză albă pentru FC Unirea U21 la U21 Botoșani"
+                        },
+                        new
+                        {
+                            Id = 45,
+                            CreatedAt = new DateTime(2025, 6, 1, 10, 0, 6, 817, DateTimeKind.Utc).AddTicks(4071),
+                            News_UsersId = 1,
+                            Text = "Pe 27 iunie 2025, FC Unirea Youth a obținut o victorie cu 2-0 pe terenul celor de la Youth Oradea, într-un meci din Liga 1 Tineret.\n\nVlad Ionescu a marcat pentru echipa noastră, aducând trei puncte importante.\n\nFelicitări tinerilor pentru efort și atitudine!\n\nHai, Unirea Youth!",
+                            Title = "FC Unirea Youth câștigă la Oradea în Liga 1 Tineret!"
+                        },
+                        new
+                        {
+                            Id = 46,
+                            CreatedAt = new DateTime(2025, 6, 1, 10, 0, 6, 817, DateTimeKind.Utc).AddTicks(4072),
+                            News_UsersId = 1,
+                            Text = "Pe 27 iunie 2025, FC Unirea a câștigat cu 2-1 pe terenul Viitorul Constanța, într-un meci disputat în Liga 1.\n\nPentru gazde a marcat Gabriel Vasilescu, iar pentru FC Unirea au înscris Denis Chiriac și Alex Vasilescu.\n\nUn meci spectaculos, cu răsturnări de scor și un final fericit pentru echipa noastră.\n\nHai, Unirea!",
+                            Title = "FC Unirea se impune în deplasare la Viitorul Constanța!"
+                        },
+                        new
+                        {
+                            Id = 47,
+                            CreatedAt = new DateTime(2025, 6, 1, 10, 0, 6, 817, DateTimeKind.Utc).AddTicks(4073),
+                            News_UsersId = 1,
+                            Text = "Pe 20 iunie 2025, FC Unirea a remizat 0-0 cu Gloria Buzău, într-un meci echilibrat din Liga 1.\n\nDeși nu s-au marcat goluri, meciul a fost disputat și cu ocazii de ambele părți.\n\nHai, Unirea!",
+                            Title = "Remiză fără goluri între FC Unirea și Gloria Buzău în Liga 1"
+                        },
+                        new
+                        {
+                            Id = 48,
+                            CreatedAt = new DateTime(2025, 6, 1, 10, 0, 6, 817, DateTimeKind.Utc).AddTicks(4074),
+                            News_UsersId = 1,
+                            Text = "Pe 20 iunie 2025, FC Unirea Youth a pierdut cu scorul de 3-1 pe teren propriu cu Youth Ploiești, într-un meci din Liga 1 Tineret.\n\nSingurul gol al echipei noastre a fost marcat de Andrei Ionescu.\n\nBăieții au dat totul pe teren și merită încurajări pentru efort!\n\nHai, Unirea Youth!",
+                            Title = "Înfrângere pentru FC Unirea Youth cu Youth Ploiești"
+                        },
+                        new
+                        {
+                            Id = 49,
+                            CreatedAt = new DateTime(2025, 6, 1, 10, 0, 6, 817, DateTimeKind.Utc).AddTicks(4075),
+                            News_UsersId = 1,
+                            Text = "Pe 20 iunie 2025, FC Unirea U21 a câștigat cu scorul de 3-0 împotriva celor de la U21 Hermannstadt, într-un meci disputat în Liga 1 U21.\n\nPentru echipa noastră au marcat Alin Voicu și Sergiu Neagu.\n\nO victorie clară, cu un joc solid pe toate compartimentele.\n\nHai, Unirea U21!",
+                            Title = "FC Unirea U21 învinge clar pe U21 Hermannstadt în Liga 1 U21!"
+                        },
+                        new
+                        {
+                            Id = 50,
+                            CreatedAt = new DateTime(2025, 6, 1, 10, 0, 6, 817, DateTimeKind.Utc).AddTicks(4076),
+                            News_UsersId = 1,
+                            Text = "Pe 18 iunie 2025, FC Unirea a fost învinsă cu scorul de 2-0 pe terenul celor de la Paris Saint-Germain, într-un meci disputat în Champions League.\n\nPentru gazde a marcat Laurent Moreau, iar pentru FC Unirea a punctat Alin Neagu.\n\nEchipa noastră merge mai departe cu capul sus și speră la o revanșă acasă!\n\nHai, Unirea!",
+                            Title = "FC Unirea cedează la Paris cu PSG în Champions League"
+                        },
+                        new
+                        {
+                            Id = 51,
+                            CreatedAt = new DateTime(2025, 6, 1, 10, 0, 6, 817, DateTimeKind.Utc).AddTicks(4077),
+                            News_UsersId = 1,
+                            Text = "Pe 7 iulie 2025, FC Unirea s-a impus cu scorul de 3-2 pe terenul celor de la Dinamo Est, într-un meci dramatic din Cupa României.\n\nGolurile echipei noastre au fost marcate de Andrei Neagu, Alex Vasilescu și Daniel Stan.\n\nBravo băieților pentru calificare și determinare!\n\nHai, Unirea!",
+                            Title = "FC Unirea trece de Dinamo Est în Cupa României, la capătul unui meci spectaculos!"
+                        },
+                        new
+                        {
+                            Id = 52,
+                            CreatedAt = new DateTime(2025, 6, 1, 10, 0, 6, 817, DateTimeKind.Utc).AddTicks(4078),
+                            News_UsersId = 1,
+                            Text = "Pe 4 iulie 2025, FC Unirea a pierdut cu scorul de 2-0 pe terenul celor de la CS Mioveni, într-un meci din Liga 1.\n\nPentru gazde au marcat Daniel Ilie și Gabriel Chiriac.\n\nEchipa noastră va căuta revanșa în etapele următoare.\n\nHai, Unirea!",
+                            Title = "FC Unirea, înfrântă la CS Mioveni în Liga 1"
+                        },
+                        new
+                        {
+                            Id = 53,
+                            CreatedAt = new DateTime(2025, 6, 1, 10, 0, 6, 817, DateTimeKind.Utc).AddTicks(4079),
+                            News_UsersId = 1,
+                            Text = "Pe 4 iulie 2025, FC Unirea Youth a câștigat cu scorul de 1-0 pe terenul celor de la Youth Arad, într-un meci din Liga 1 Tineret.\n\nTinerii noștri au obținut o victorie muncită, demonstrând caracter și ambiție.\n\nFelicitări tuturor jucătorilor!\n\nHai, Unirea Youth!",
+                            Title = "Victorie pentru FC Unirea Youth la Arad!"
+                        },
+                        new
+                        {
+                            Id = 54,
+                            CreatedAt = new DateTime(2025, 6, 1, 10, 0, 6, 817, DateTimeKind.Utc).AddTicks(4080),
+                            News_UsersId = 1,
+                            Text = "Pe 4 iulie 2025, FC Unirea U21 a câștigat cu scorul de 2-0 în deplasare la U21 Slatina, într-un meci disputat în Liga 1 U21.\n\nEchipa noastră a dominat jocul și a obținut trei puncte importante.\n\nHai, Unirea U21!",
+                            Title = "FC Unirea U21 câștigă la U21 Slatina în Liga 1 U21!"
+                        },
+                        new
+                        {
+                            Id = 55,
+                            CreatedAt = new DateTime(2025, 6, 1, 10, 0, 6, 817, DateTimeKind.Utc).AddTicks(4081),
+                            News_UsersId = 1,
+                            Text = "Pe 2 iulie 2025, FC Unirea a remizat 1-1 cu Olympiakos, într-un meci disputat în grupele Champions League.\n\nPentru FC Unirea a înscris Sergiu Chiriac, iar pentru greci a marcat Marios Retsos.\n\nUn punct important în economia grupei. Felicitări băieților pentru efort!\n\nHai, Unirea!",
+                            Title = "FC Unirea și Olympiakos, remiză în Champions League!"
+                        },
+                        new
+                        {
+                            Id = 56,
+                            CreatedAt = new DateTime(2025, 6, 1, 10, 0, 6, 817, DateTimeKind.Utc).AddTicks(4082),
+                            News_UsersId = 1,
+                            Text = "Pe 1 iulie 2025, FC Unirea a învins cu 3-0 pe Dinamo Est, într-un meci din Cupa României.\n\nGolurile echipei noastre au fost marcate de Denis Ilie, Gabriel Vasilescu și Radu Ilie.\n\nEchipa merge mai departe cu un moral excelent!\n\nHai, Unirea!",
+                            Title = "FC Unirea câștigă clar cu Dinamo Est în Cupa României!"
                         });
                 });
 
@@ -7998,7 +11366,7 @@ namespace FCUnirea.Persistance.Data.Migrations
                             BirthDate = new DateTime(2011, 3, 15, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             PlayerName = "Cristian Matei",
                             Player_TeamsId = 21,
-                            Position = 3
+                            Position = 2
                         },
                         new
                         {
@@ -8006,7 +11374,7 @@ namespace FCUnirea.Persistance.Data.Migrations
                             BirthDate = new DateTime(2012, 12, 27, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             PlayerName = "Vlad Ilie",
                             Player_TeamsId = 21,
-                            Position = 3
+                            Position = 2
                         },
                         new
                         {
@@ -8030,7 +11398,7 @@ namespace FCUnirea.Persistance.Data.Migrations
                             BirthDate = new DateTime(2009, 8, 2, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             PlayerName = "Ionut Neagu",
                             Player_TeamsId = 21,
-                            Position = 3
+                            Position = 2
                         },
                         new
                         {
@@ -8070,7 +11438,7 @@ namespace FCUnirea.Persistance.Data.Migrations
                             BirthDate = new DateTime(2011, 10, 6, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             PlayerName = "Paul Vasilescu",
                             Player_TeamsId = 21,
-                            Position = 3
+                            Position = 2
                         },
                         new
                         {
@@ -9583,6 +12951,2406 @@ namespace FCUnirea.Persistance.Data.Migrations
                             PlayerName = "Mihai Neagu",
                             Player_TeamsId = 30,
                             Position = 0
+                        },
+                        new
+                        {
+                            Id = 601,
+                            BirthDate = new DateTime(1998, 2, 26, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            PlayerName = "Cosmin Ionescu",
+                            Player_TeamsId = 31,
+                            Position = 2
+                        },
+                        new
+                        {
+                            Id = 602,
+                            BirthDate = new DateTime(1992, 4, 19, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            PlayerName = "Ionut Ionescu",
+                            Player_TeamsId = 31,
+                            Position = 1
+                        },
+                        new
+                        {
+                            Id = 603,
+                            BirthDate = new DateTime(2004, 9, 17, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            PlayerName = "Vlad Voicu",
+                            Player_TeamsId = 31,
+                            Position = 3
+                        },
+                        new
+                        {
+                            Id = 604,
+                            BirthDate = new DateTime(2003, 9, 6, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            PlayerName = "Sorin Voicu",
+                            Player_TeamsId = 31,
+                            Position = 0
+                        },
+                        new
+                        {
+                            Id = 605,
+                            BirthDate = new DateTime(2003, 8, 13, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            PlayerName = "Gabriel Zamfir",
+                            Player_TeamsId = 31,
+                            Position = 2
+                        },
+                        new
+                        {
+                            Id = 606,
+                            BirthDate = new DateTime(1988, 10, 18, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            PlayerName = "Stefan Nistor",
+                            Player_TeamsId = 31,
+                            Position = 1
+                        },
+                        new
+                        {
+                            Id = 607,
+                            BirthDate = new DateTime(2004, 10, 5, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            PlayerName = "Mihai Petrescu",
+                            Player_TeamsId = 31,
+                            Position = 3
+                        },
+                        new
+                        {
+                            Id = 608,
+                            BirthDate = new DateTime(1986, 12, 22, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            PlayerName = "Florin Cojocaru",
+                            Player_TeamsId = 31,
+                            Position = 0
+                        },
+                        new
+                        {
+                            Id = 609,
+                            BirthDate = new DateTime(2002, 6, 25, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            PlayerName = "Sorin Popa",
+                            Player_TeamsId = 31,
+                            Position = 2
+                        },
+                        new
+                        {
+                            Id = 610,
+                            BirthDate = new DateTime(2000, 3, 16, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            PlayerName = "Valentin Ionescu",
+                            Player_TeamsId = 31,
+                            Position = 1
+                        },
+                        new
+                        {
+                            Id = 611,
+                            BirthDate = new DateTime(2004, 5, 12, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            PlayerName = "Cristian Voicu",
+                            Player_TeamsId = 31,
+                            Position = 3
+                        },
+                        new
+                        {
+                            Id = 612,
+                            BirthDate = new DateTime(1998, 4, 5, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            PlayerName = "Gabriel Popa",
+                            Player_TeamsId = 31,
+                            Position = 0
+                        },
+                        new
+                        {
+                            Id = 613,
+                            BirthDate = new DateTime(1989, 11, 9, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            PlayerName = "Stefan Georgescu",
+                            Player_TeamsId = 31,
+                            Position = 2
+                        },
+                        new
+                        {
+                            Id = 614,
+                            BirthDate = new DateTime(2007, 10, 14, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            PlayerName = "Gabriel Cojoc",
+                            Player_TeamsId = 31,
+                            Position = 1
+                        },
+                        new
+                        {
+                            Id = 615,
+                            BirthDate = new DateTime(1989, 10, 25, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            PlayerName = "Mihai Cristea",
+                            Player_TeamsId = 31,
+                            Position = 3
+                        },
+                        new
+                        {
+                            Id = 616,
+                            BirthDate = new DateTime(1999, 3, 21, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            PlayerName = "Alexandru Tudor",
+                            Player_TeamsId = 31,
+                            Position = 0
+                        },
+                        new
+                        {
+                            Id = 617,
+                            BirthDate = new DateTime(1990, 2, 21, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            PlayerName = "Alexandru Neagu",
+                            Player_TeamsId = 31,
+                            Position = 2
+                        },
+                        new
+                        {
+                            Id = 618,
+                            BirthDate = new DateTime(1997, 10, 24, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            PlayerName = "Radu Cojoc",
+                            Player_TeamsId = 31,
+                            Position = 1
+                        },
+                        new
+                        {
+                            Id = 619,
+                            BirthDate = new DateTime(2005, 11, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            PlayerName = "Alexandru Ionescu",
+                            Player_TeamsId = 31,
+                            Position = 3
+                        },
+                        new
+                        {
+                            Id = 620,
+                            BirthDate = new DateTime(1986, 10, 27, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            PlayerName = "Denis Vasilescu",
+                            Player_TeamsId = 31,
+                            Position = 0
+                        },
+                        new
+                        {
+                            Id = 621,
+                            BirthDate = new DateTime(2005, 1, 8, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            PlayerName = "Vlad Cojoc",
+                            Player_TeamsId = 32,
+                            Position = 2
+                        },
+                        new
+                        {
+                            Id = 622,
+                            BirthDate = new DateTime(1986, 8, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            PlayerName = "Vlad Dumitrescu",
+                            Player_TeamsId = 32,
+                            Position = 1
+                        },
+                        new
+                        {
+                            Id = 623,
+                            BirthDate = new DateTime(1986, 7, 16, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            PlayerName = "Florin Tudor",
+                            Player_TeamsId = 32,
+                            Position = 3
+                        },
+                        new
+                        {
+                            Id = 624,
+                            BirthDate = new DateTime(1992, 7, 7, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            PlayerName = "Alexandru Tudor",
+                            Player_TeamsId = 32,
+                            Position = 0
+                        },
+                        new
+                        {
+                            Id = 625,
+                            BirthDate = new DateTime(2007, 12, 4, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            PlayerName = "Mihai Zamfir",
+                            Player_TeamsId = 32,
+                            Position = 2
+                        },
+                        new
+                        {
+                            Id = 626,
+                            BirthDate = new DateTime(1985, 7, 20, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            PlayerName = "Gabriel Nistor",
+                            Player_TeamsId = 32,
+                            Position = 1
+                        },
+                        new
+                        {
+                            Id = 627,
+                            BirthDate = new DateTime(1990, 4, 25, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            PlayerName = "Cristian Cojocaru",
+                            Player_TeamsId = 32,
+                            Position = 3
+                        },
+                        new
+                        {
+                            Id = 628,
+                            BirthDate = new DateTime(2000, 4, 18, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            PlayerName = "Emil Georgescu",
+                            Player_TeamsId = 32,
+                            Position = 0
+                        },
+                        new
+                        {
+                            Id = 629,
+                            BirthDate = new DateTime(1985, 10, 15, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            PlayerName = "Ionut Enache",
+                            Player_TeamsId = 32,
+                            Position = 2
+                        },
+                        new
+                        {
+                            Id = 630,
+                            BirthDate = new DateTime(1994, 9, 19, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            PlayerName = "Denis Zamfir",
+                            Player_TeamsId = 32,
+                            Position = 1
+                        },
+                        new
+                        {
+                            Id = 631,
+                            BirthDate = new DateTime(1985, 2, 4, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            PlayerName = "Radu Enache",
+                            Player_TeamsId = 32,
+                            Position = 3
+                        },
+                        new
+                        {
+                            Id = 632,
+                            BirthDate = new DateTime(1990, 12, 7, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            PlayerName = "George Petrescu",
+                            Player_TeamsId = 32,
+                            Position = 0
+                        },
+                        new
+                        {
+                            Id = 633,
+                            BirthDate = new DateTime(1987, 11, 12, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            PlayerName = "Victor Popescu",
+                            Player_TeamsId = 32,
+                            Position = 2
+                        },
+                        new
+                        {
+                            Id = 634,
+                            BirthDate = new DateTime(2003, 1, 18, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            PlayerName = "Mihai Stan",
+                            Player_TeamsId = 32,
+                            Position = 1
+                        },
+                        new
+                        {
+                            Id = 635,
+                            BirthDate = new DateTime(2003, 4, 22, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            PlayerName = "Mihai Stan",
+                            Player_TeamsId = 32,
+                            Position = 3
+                        },
+                        new
+                        {
+                            Id = 636,
+                            BirthDate = new DateTime(2000, 2, 28, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            PlayerName = "Radu Georgescu",
+                            Player_TeamsId = 32,
+                            Position = 0
+                        },
+                        new
+                        {
+                            Id = 637,
+                            BirthDate = new DateTime(1987, 8, 10, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            PlayerName = "Bogdan Voicu",
+                            Player_TeamsId = 32,
+                            Position = 2
+                        },
+                        new
+                        {
+                            Id = 638,
+                            BirthDate = new DateTime(2004, 3, 25, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            PlayerName = "Florin Petrescu",
+                            Player_TeamsId = 32,
+                            Position = 1
+                        },
+                        new
+                        {
+                            Id = 639,
+                            BirthDate = new DateTime(2006, 9, 5, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            PlayerName = "Emil Voicu",
+                            Player_TeamsId = 32,
+                            Position = 3
+                        },
+                        new
+                        {
+                            Id = 640,
+                            BirthDate = new DateTime(2000, 2, 9, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            PlayerName = "Mihai Popescu",
+                            Player_TeamsId = 32,
+                            Position = 0
+                        },
+                        new
+                        {
+                            Id = 641,
+                            BirthDate = new DateTime(1985, 6, 8, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            PlayerName = "Cosmin Dumitrescu",
+                            Player_TeamsId = 33,
+                            Position = 2
+                        },
+                        new
+                        {
+                            Id = 642,
+                            BirthDate = new DateTime(1989, 2, 3, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            PlayerName = "Andrei Albu",
+                            Player_TeamsId = 33,
+                            Position = 1
+                        },
+                        new
+                        {
+                            Id = 643,
+                            BirthDate = new DateTime(1991, 12, 23, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            PlayerName = "Victor Enache",
+                            Player_TeamsId = 33,
+                            Position = 3
+                        },
+                        new
+                        {
+                            Id = 644,
+                            BirthDate = new DateTime(1997, 8, 10, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            PlayerName = "George Popescu",
+                            Player_TeamsId = 33,
+                            Position = 0
+                        },
+                        new
+                        {
+                            Id = 645,
+                            BirthDate = new DateTime(1996, 2, 3, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            PlayerName = "Radu Ionescu",
+                            Player_TeamsId = 33,
+                            Position = 2
+                        },
+                        new
+                        {
+                            Id = 646,
+                            BirthDate = new DateTime(1987, 3, 19, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            PlayerName = "Sorin Cojocaru",
+                            Player_TeamsId = 33,
+                            Position = 1
+                        },
+                        new
+                        {
+                            Id = 647,
+                            BirthDate = new DateTime(2001, 4, 13, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            PlayerName = "Denis Cristea",
+                            Player_TeamsId = 33,
+                            Position = 3
+                        },
+                        new
+                        {
+                            Id = 648,
+                            BirthDate = new DateTime(1992, 6, 24, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            PlayerName = "Bogdan Neagu",
+                            Player_TeamsId = 33,
+                            Position = 0
+                        },
+                        new
+                        {
+                            Id = 649,
+                            BirthDate = new DateTime(1986, 10, 11, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            PlayerName = "Florin Neagu",
+                            Player_TeamsId = 33,
+                            Position = 2
+                        },
+                        new
+                        {
+                            Id = 650,
+                            BirthDate = new DateTime(1988, 7, 16, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            PlayerName = "Victor Enache",
+                            Player_TeamsId = 33,
+                            Position = 1
+                        },
+                        new
+                        {
+                            Id = 651,
+                            BirthDate = new DateTime(2006, 8, 13, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            PlayerName = "Sorin Zamfir",
+                            Player_TeamsId = 33,
+                            Position = 3
+                        },
+                        new
+                        {
+                            Id = 652,
+                            BirthDate = new DateTime(1987, 2, 6, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            PlayerName = "Vlad Popescu",
+                            Player_TeamsId = 33,
+                            Position = 0
+                        },
+                        new
+                        {
+                            Id = 653,
+                            BirthDate = new DateTime(1995, 9, 12, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            PlayerName = "Sorin Avram",
+                            Player_TeamsId = 33,
+                            Position = 2
+                        },
+                        new
+                        {
+                            Id = 654,
+                            BirthDate = new DateTime(1994, 10, 25, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            PlayerName = "Florin Petrescu",
+                            Player_TeamsId = 33,
+                            Position = 1
+                        },
+                        new
+                        {
+                            Id = 655,
+                            BirthDate = new DateTime(1985, 9, 15, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            PlayerName = "Emil Ionescu",
+                            Player_TeamsId = 33,
+                            Position = 3
+                        },
+                        new
+                        {
+                            Id = 656,
+                            BirthDate = new DateTime(2007, 4, 25, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            PlayerName = "Bogdan Dinu",
+                            Player_TeamsId = 33,
+                            Position = 0
+                        },
+                        new
+                        {
+                            Id = 657,
+                            BirthDate = new DateTime(1995, 7, 16, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            PlayerName = "Andrei Avram",
+                            Player_TeamsId = 33,
+                            Position = 2
+                        },
+                        new
+                        {
+                            Id = 658,
+                            BirthDate = new DateTime(1998, 12, 4, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            PlayerName = "Valentin Cojoc",
+                            Player_TeamsId = 33,
+                            Position = 1
+                        },
+                        new
+                        {
+                            Id = 659,
+                            BirthDate = new DateTime(1997, 10, 20, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            PlayerName = "Emil Popescu",
+                            Player_TeamsId = 33,
+                            Position = 3
+                        },
+                        new
+                        {
+                            Id = 660,
+                            BirthDate = new DateTime(2003, 10, 24, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            PlayerName = "Denis Dinu",
+                            Player_TeamsId = 33,
+                            Position = 0
+                        },
+                        new
+                        {
+                            Id = 661,
+                            BirthDate = new DateTime(1988, 7, 19, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            PlayerName = "Ionut Neagu",
+                            Player_TeamsId = 34,
+                            Position = 2
+                        },
+                        new
+                        {
+                            Id = 662,
+                            BirthDate = new DateTime(2002, 7, 6, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            PlayerName = "Vlad Dumitrescu",
+                            Player_TeamsId = 34,
+                            Position = 1
+                        },
+                        new
+                        {
+                            Id = 663,
+                            BirthDate = new DateTime(1988, 5, 26, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            PlayerName = "Andrei Enache",
+                            Player_TeamsId = 34,
+                            Position = 3
+                        },
+                        new
+                        {
+                            Id = 664,
+                            BirthDate = new DateTime(1985, 2, 10, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            PlayerName = "Gabriel Ionescu",
+                            Player_TeamsId = 34,
+                            Position = 0
+                        },
+                        new
+                        {
+                            Id = 665,
+                            BirthDate = new DateTime(1988, 12, 16, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            PlayerName = "Stefan Tudor",
+                            Player_TeamsId = 34,
+                            Position = 2
+                        },
+                        new
+                        {
+                            Id = 666,
+                            BirthDate = new DateTime(1985, 8, 25, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            PlayerName = "Gabriel Cojoc",
+                            Player_TeamsId = 34,
+                            Position = 1
+                        },
+                        new
+                        {
+                            Id = 667,
+                            BirthDate = new DateTime(2001, 3, 14, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            PlayerName = "Andrei Avram",
+                            Player_TeamsId = 34,
+                            Position = 3
+                        },
+                        new
+                        {
+                            Id = 668,
+                            BirthDate = new DateTime(1996, 1, 11, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            PlayerName = "Adrian Albu",
+                            Player_TeamsId = 34,
+                            Position = 0
+                        },
+                        new
+                        {
+                            Id = 669,
+                            BirthDate = new DateTime(1998, 1, 11, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            PlayerName = "Alexandru Dumitrescu",
+                            Player_TeamsId = 34,
+                            Position = 2
+                        },
+                        new
+                        {
+                            Id = 670,
+                            BirthDate = new DateTime(1987, 1, 14, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            PlayerName = "Radu Nistor",
+                            Player_TeamsId = 34,
+                            Position = 1
+                        },
+                        new
+                        {
+                            Id = 671,
+                            BirthDate = new DateTime(2006, 4, 25, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            PlayerName = "Radu Tudor",
+                            Player_TeamsId = 34,
+                            Position = 3
+                        },
+                        new
+                        {
+                            Id = 672,
+                            BirthDate = new DateTime(2007, 9, 5, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            PlayerName = "Emil Ionescu",
+                            Player_TeamsId = 34,
+                            Position = 0
+                        },
+                        new
+                        {
+                            Id = 673,
+                            BirthDate = new DateTime(2001, 3, 27, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            PlayerName = "Gabriel Petrescu",
+                            Player_TeamsId = 34,
+                            Position = 2
+                        },
+                        new
+                        {
+                            Id = 674,
+                            BirthDate = new DateTime(1996, 10, 28, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            PlayerName = "Cosmin Popa",
+                            Player_TeamsId = 34,
+                            Position = 1
+                        },
+                        new
+                        {
+                            Id = 675,
+                            BirthDate = new DateTime(2005, 10, 27, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            PlayerName = "Gabriel Vasilescu",
+                            Player_TeamsId = 34,
+                            Position = 3
+                        },
+                        new
+                        {
+                            Id = 676,
+                            BirthDate = new DateTime(1986, 8, 18, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            PlayerName = "Denis Tudor",
+                            Player_TeamsId = 34,
+                            Position = 0
+                        },
+                        new
+                        {
+                            Id = 677,
+                            BirthDate = new DateTime(1988, 9, 6, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            PlayerName = "Stefan Nistor",
+                            Player_TeamsId = 34,
+                            Position = 2
+                        },
+                        new
+                        {
+                            Id = 678,
+                            BirthDate = new DateTime(1987, 10, 14, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            PlayerName = "Cristian Popa",
+                            Player_TeamsId = 34,
+                            Position = 1
+                        },
+                        new
+                        {
+                            Id = 679,
+                            BirthDate = new DateTime(1997, 2, 19, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            PlayerName = "Valentin Petrescu",
+                            Player_TeamsId = 34,
+                            Position = 3
+                        },
+                        new
+                        {
+                            Id = 680,
+                            BirthDate = new DateTime(1990, 6, 18, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            PlayerName = "Cosmin Petrescu",
+                            Player_TeamsId = 34,
+                            Position = 0
+                        },
+                        new
+                        {
+                            Id = 681,
+                            BirthDate = new DateTime(1985, 6, 11, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            PlayerName = "Victor Georgescu",
+                            Player_TeamsId = 35,
+                            Position = 2
+                        },
+                        new
+                        {
+                            Id = 682,
+                            BirthDate = new DateTime(1994, 7, 5, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            PlayerName = "Radu Cojoc",
+                            Player_TeamsId = 35,
+                            Position = 1
+                        },
+                        new
+                        {
+                            Id = 683,
+                            BirthDate = new DateTime(2005, 10, 25, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            PlayerName = "Andrei Ionescu",
+                            Player_TeamsId = 35,
+                            Position = 3
+                        },
+                        new
+                        {
+                            Id = 684,
+                            BirthDate = new DateTime(2004, 9, 24, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            PlayerName = "Denis Cristea",
+                            Player_TeamsId = 35,
+                            Position = 0
+                        },
+                        new
+                        {
+                            Id = 685,
+                            BirthDate = new DateTime(1986, 6, 23, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            PlayerName = "Valentin Avram",
+                            Player_TeamsId = 35,
+                            Position = 2
+                        },
+                        new
+                        {
+                            Id = 686,
+                            BirthDate = new DateTime(1989, 7, 18, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            PlayerName = "Alexandru Popa",
+                            Player_TeamsId = 35,
+                            Position = 1
+                        },
+                        new
+                        {
+                            Id = 687,
+                            BirthDate = new DateTime(1989, 5, 11, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            PlayerName = "Valentin Enache",
+                            Player_TeamsId = 35,
+                            Position = 3
+                        },
+                        new
+                        {
+                            Id = 688,
+                            BirthDate = new DateTime(1991, 8, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            PlayerName = "Mihai Petrescu",
+                            Player_TeamsId = 35,
+                            Position = 0
+                        },
+                        new
+                        {
+                            Id = 689,
+                            BirthDate = new DateTime(1997, 11, 16, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            PlayerName = "Valentin Petrescu",
+                            Player_TeamsId = 35,
+                            Position = 2
+                        },
+                        new
+                        {
+                            Id = 690,
+                            BirthDate = new DateTime(1994, 8, 2, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            PlayerName = "Sorin Vasilescu",
+                            Player_TeamsId = 35,
+                            Position = 1
+                        },
+                        new
+                        {
+                            Id = 691,
+                            BirthDate = new DateTime(2001, 4, 4, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            PlayerName = "Denis Tudor",
+                            Player_TeamsId = 35,
+                            Position = 3
+                        },
+                        new
+                        {
+                            Id = 692,
+                            BirthDate = new DateTime(1991, 7, 7, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            PlayerName = "Paul Popa",
+                            Player_TeamsId = 35,
+                            Position = 0
+                        },
+                        new
+                        {
+                            Id = 693,
+                            BirthDate = new DateTime(1990, 3, 12, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            PlayerName = "Radu Vasilescu",
+                            Player_TeamsId = 35,
+                            Position = 2
+                        },
+                        new
+                        {
+                            Id = 694,
+                            BirthDate = new DateTime(1999, 2, 3, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            PlayerName = "Radu Enache",
+                            Player_TeamsId = 35,
+                            Position = 1
+                        },
+                        new
+                        {
+                            Id = 695,
+                            BirthDate = new DateTime(2001, 11, 10, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            PlayerName = "Valentin Popa",
+                            Player_TeamsId = 35,
+                            Position = 3
+                        },
+                        new
+                        {
+                            Id = 696,
+                            BirthDate = new DateTime(1993, 5, 28, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            PlayerName = "Vlad Stan",
+                            Player_TeamsId = 35,
+                            Position = 0
+                        },
+                        new
+                        {
+                            Id = 697,
+                            BirthDate = new DateTime(1987, 4, 5, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            PlayerName = "Mihai Neagu",
+                            Player_TeamsId = 35,
+                            Position = 2
+                        },
+                        new
+                        {
+                            Id = 698,
+                            BirthDate = new DateTime(1985, 12, 8, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            PlayerName = "Bogdan Enache",
+                            Player_TeamsId = 35,
+                            Position = 1
+                        },
+                        new
+                        {
+                            Id = 699,
+                            BirthDate = new DateTime(1989, 11, 5, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            PlayerName = "Cosmin Neagu",
+                            Player_TeamsId = 35,
+                            Position = 3
+                        },
+                        new
+                        {
+                            Id = 700,
+                            BirthDate = new DateTime(1990, 5, 15, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            PlayerName = "Sorin Dumitrescu",
+                            Player_TeamsId = 35,
+                            Position = 0
+                        },
+                        new
+                        {
+                            Id = 701,
+                            BirthDate = new DateTime(2006, 5, 21, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            PlayerName = "Bogdan Popa",
+                            Player_TeamsId = 36,
+                            Position = 2
+                        },
+                        new
+                        {
+                            Id = 702,
+                            BirthDate = new DateTime(2007, 11, 25, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            PlayerName = "Alexandru Neagu",
+                            Player_TeamsId = 36,
+                            Position = 1
+                        },
+                        new
+                        {
+                            Id = 703,
+                            BirthDate = new DateTime(2002, 3, 19, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            PlayerName = "Vlad Stan",
+                            Player_TeamsId = 36,
+                            Position = 3
+                        },
+                        new
+                        {
+                            Id = 704,
+                            BirthDate = new DateTime(2005, 3, 21, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            PlayerName = "Florin Neagu",
+                            Player_TeamsId = 36,
+                            Position = 0
+                        },
+                        new
+                        {
+                            Id = 705,
+                            BirthDate = new DateTime(1987, 10, 27, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            PlayerName = "Bogdan Vasilescu",
+                            Player_TeamsId = 36,
+                            Position = 2
+                        },
+                        new
+                        {
+                            Id = 706,
+                            BirthDate = new DateTime(1994, 6, 9, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            PlayerName = "Emil Petrescu",
+                            Player_TeamsId = 36,
+                            Position = 1
+                        },
+                        new
+                        {
+                            Id = 707,
+                            BirthDate = new DateTime(2000, 11, 15, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            PlayerName = "Bogdan Zamfir",
+                            Player_TeamsId = 36,
+                            Position = 3
+                        },
+                        new
+                        {
+                            Id = 708,
+                            BirthDate = new DateTime(1993, 4, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            PlayerName = "Valentin Dinu",
+                            Player_TeamsId = 36,
+                            Position = 0
+                        },
+                        new
+                        {
+                            Id = 709,
+                            BirthDate = new DateTime(1998, 12, 7, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            PlayerName = "Adrian Petrescu",
+                            Player_TeamsId = 36,
+                            Position = 2
+                        },
+                        new
+                        {
+                            Id = 710,
+                            BirthDate = new DateTime(1991, 9, 28, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            PlayerName = "Cosmin Nistor",
+                            Player_TeamsId = 36,
+                            Position = 1
+                        },
+                        new
+                        {
+                            Id = 711,
+                            BirthDate = new DateTime(1989, 4, 24, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            PlayerName = "Gabriel Cojoc",
+                            Player_TeamsId = 36,
+                            Position = 3
+                        },
+                        new
+                        {
+                            Id = 712,
+                            BirthDate = new DateTime(2006, 11, 17, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            PlayerName = "Adrian Voicu",
+                            Player_TeamsId = 36,
+                            Position = 0
+                        },
+                        new
+                        {
+                            Id = 713,
+                            BirthDate = new DateTime(1996, 1, 24, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            PlayerName = "Victor Ionescu",
+                            Player_TeamsId = 36,
+                            Position = 2
+                        },
+                        new
+                        {
+                            Id = 714,
+                            BirthDate = new DateTime(1986, 11, 25, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            PlayerName = "Florin Zamfir",
+                            Player_TeamsId = 36,
+                            Position = 1
+                        },
+                        new
+                        {
+                            Id = 715,
+                            BirthDate = new DateTime(1993, 6, 22, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            PlayerName = "Valentin Voicu",
+                            Player_TeamsId = 36,
+                            Position = 3
+                        },
+                        new
+                        {
+                            Id = 716,
+                            BirthDate = new DateTime(1996, 5, 13, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            PlayerName = "George Popescu",
+                            Player_TeamsId = 36,
+                            Position = 0
+                        },
+                        new
+                        {
+                            Id = 717,
+                            BirthDate = new DateTime(2005, 11, 7, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            PlayerName = "Adrian Cojocaru",
+                            Player_TeamsId = 36,
+                            Position = 2
+                        },
+                        new
+                        {
+                            Id = 718,
+                            BirthDate = new DateTime(1986, 12, 22, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            PlayerName = "Adrian Nistor",
+                            Player_TeamsId = 36,
+                            Position = 1
+                        },
+                        new
+                        {
+                            Id = 719,
+                            BirthDate = new DateTime(2001, 5, 21, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            PlayerName = "Victor Voicu",
+                            Player_TeamsId = 36,
+                            Position = 3
+                        },
+                        new
+                        {
+                            Id = 720,
+                            BirthDate = new DateTime(2006, 12, 14, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            PlayerName = "Cosmin Voicu",
+                            Player_TeamsId = 36,
+                            Position = 0
+                        },
+                        new
+                        {
+                            Id = 801,
+                            BirthDate = new DateTime(1997, 6, 22, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            PlayerName = "Nikola Mitrovic",
+                            Player_TeamsId = 41,
+                            Position = 2
+                        },
+                        new
+                        {
+                            Id = 802,
+                            BirthDate = new DateTime(1996, 8, 5, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            PlayerName = "Milos Jovic",
+                            Player_TeamsId = 41,
+                            Position = 1
+                        },
+                        new
+                        {
+                            Id = 803,
+                            BirthDate = new DateTime(2007, 3, 14, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            PlayerName = "Marko Stojkovic",
+                            Player_TeamsId = 41,
+                            Position = 3
+                        },
+                        new
+                        {
+                            Id = 804,
+                            BirthDate = new DateTime(1988, 8, 26, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            PlayerName = "Stefan Vesic",
+                            Player_TeamsId = 41,
+                            Position = 0
+                        },
+                        new
+                        {
+                            Id = 805,
+                            BirthDate = new DateTime(1988, 11, 19, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            PlayerName = "Dusan Petrovic",
+                            Player_TeamsId = 41,
+                            Position = 2
+                        },
+                        new
+                        {
+                            Id = 806,
+                            BirthDate = new DateTime(1988, 11, 28, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            PlayerName = "Vladimir Savic",
+                            Player_TeamsId = 41,
+                            Position = 1
+                        },
+                        new
+                        {
+                            Id = 807,
+                            BirthDate = new DateTime(1995, 1, 17, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            PlayerName = "Aleksandar Radovanovic",
+                            Player_TeamsId = 41,
+                            Position = 3
+                        },
+                        new
+                        {
+                            Id = 808,
+                            BirthDate = new DateTime(2003, 6, 23, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            PlayerName = "Nemanja Zivkovic",
+                            Player_TeamsId = 41,
+                            Position = 0
+                        },
+                        new
+                        {
+                            Id = 809,
+                            BirthDate = new DateTime(2000, 3, 27, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            PlayerName = "Luka Tadic",
+                            Player_TeamsId = 41,
+                            Position = 2
+                        },
+                        new
+                        {
+                            Id = 810,
+                            BirthDate = new DateTime(1986, 6, 23, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            PlayerName = "Jovan Popovic",
+                            Player_TeamsId = 41,
+                            Position = 1
+                        },
+                        new
+                        {
+                            Id = 811,
+                            BirthDate = new DateTime(2004, 6, 23, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            PlayerName = "Petar Milinkovic",
+                            Player_TeamsId = 41,
+                            Position = 3
+                        },
+                        new
+                        {
+                            Id = 812,
+                            BirthDate = new DateTime(2005, 10, 7, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            PlayerName = "Uros Milenkovic",
+                            Player_TeamsId = 41,
+                            Position = 0
+                        },
+                        new
+                        {
+                            Id = 813,
+                            BirthDate = new DateTime(1994, 6, 17, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            PlayerName = "Branislav Pavlovic",
+                            Player_TeamsId = 41,
+                            Position = 2
+                        },
+                        new
+                        {
+                            Id = 814,
+                            BirthDate = new DateTime(2006, 6, 3, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            PlayerName = "Ivan Simic",
+                            Player_TeamsId = 41,
+                            Position = 1
+                        },
+                        new
+                        {
+                            Id = 815,
+                            BirthDate = new DateTime(1990, 9, 9, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            PlayerName = "Goran Kostic",
+                            Player_TeamsId = 41,
+                            Position = 3
+                        },
+                        new
+                        {
+                            Id = 816,
+                            BirthDate = new DateTime(1988, 11, 7, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            PlayerName = "Dragan Matic",
+                            Player_TeamsId = 41,
+                            Position = 0
+                        },
+                        new
+                        {
+                            Id = 817,
+                            BirthDate = new DateTime(1994, 4, 11, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            PlayerName = "Slobodan Ristic",
+                            Player_TeamsId = 41,
+                            Position = 2
+                        },
+                        new
+                        {
+                            Id = 818,
+                            BirthDate = new DateTime(1988, 10, 25, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            PlayerName = "Zoran Gajic",
+                            Player_TeamsId = 41,
+                            Position = 1
+                        },
+                        new
+                        {
+                            Id = 819,
+                            BirthDate = new DateTime(1992, 5, 13, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            PlayerName = "Milan Nikolic",
+                            Player_TeamsId = 41,
+                            Position = 3
+                        },
+                        new
+                        {
+                            Id = 820,
+                            BirthDate = new DateTime(2001, 10, 12, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            PlayerName = "Bogdan Lazic",
+                            Player_TeamsId = 41,
+                            Position = 0
+                        },
+                        new
+                        {
+                            Id = 821,
+                            BirthDate = new DateTime(2002, 12, 10, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            PlayerName = "Ivan Kovacic",
+                            Player_TeamsId = 42,
+                            Position = 2
+                        },
+                        new
+                        {
+                            Id = 822,
+                            BirthDate = new DateTime(1993, 11, 12, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            PlayerName = "Luka Perisic",
+                            Player_TeamsId = 42,
+                            Position = 1
+                        },
+                        new
+                        {
+                            Id = 823,
+                            BirthDate = new DateTime(2004, 3, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            PlayerName = "Marko Brekalo",
+                            Player_TeamsId = 42,
+                            Position = 3
+                        },
+                        new
+                        {
+                            Id = 824,
+                            BirthDate = new DateTime(2005, 6, 13, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            PlayerName = "Josip Livakovic",
+                            Player_TeamsId = 42,
+                            Position = 0
+                        },
+                        new
+                        {
+                            Id = 825,
+                            BirthDate = new DateTime(1995, 10, 8, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            PlayerName = "Ante Gvardiol",
+                            Player_TeamsId = 42,
+                            Position = 2
+                        },
+                        new
+                        {
+                            Id = 826,
+                            BirthDate = new DateTime(1986, 11, 8, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            PlayerName = "Karlo Orsic",
+                            Player_TeamsId = 42,
+                            Position = 1
+                        },
+                        new
+                        {
+                            Id = 827,
+                            BirthDate = new DateTime(2002, 11, 12, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            PlayerName = "Dario Melnjak",
+                            Player_TeamsId = 42,
+                            Position = 3
+                        },
+                        new
+                        {
+                            Id = 828,
+                            BirthDate = new DateTime(2005, 12, 26, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            PlayerName = "Tomislav Majer",
+                            Player_TeamsId = 42,
+                            Position = 0
+                        },
+                        new
+                        {
+                            Id = 829,
+                            BirthDate = new DateTime(2004, 3, 24, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            PlayerName = "Stipe Juranovic",
+                            Player_TeamsId = 42,
+                            Position = 2
+                        },
+                        new
+                        {
+                            Id = 830,
+                            BirthDate = new DateTime(1985, 11, 25, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            PlayerName = "Fran Barisic",
+                            Player_TeamsId = 42,
+                            Position = 1
+                        },
+                        new
+                        {
+                            Id = 831,
+                            BirthDate = new DateTime(2003, 11, 5, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            PlayerName = "Domagoj Brozovic",
+                            Player_TeamsId = 42,
+                            Position = 3
+                        },
+                        new
+                        {
+                            Id = 832,
+                            BirthDate = new DateTime(1986, 10, 12, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            PlayerName = "Mario Budimir",
+                            Player_TeamsId = 42,
+                            Position = 0
+                        },
+                        new
+                        {
+                            Id = 833,
+                            BirthDate = new DateTime(1987, 11, 5, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            PlayerName = "Filip Vrsaljko",
+                            Player_TeamsId = 42,
+                            Position = 2
+                        },
+                        new
+                        {
+                            Id = 834,
+                            BirthDate = new DateTime(1998, 5, 20, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            PlayerName = "Krunoslav Musa",
+                            Player_TeamsId = 42,
+                            Position = 1
+                        },
+                        new
+                        {
+                            Id = 835,
+                            BirthDate = new DateTime(1989, 2, 17, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            PlayerName = "Lovro Colak",
+                            Player_TeamsId = 42,
+                            Position = 3
+                        },
+                        new
+                        {
+                            Id = 836,
+                            BirthDate = new DateTime(2000, 9, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            PlayerName = "Matija Skoric",
+                            Player_TeamsId = 42,
+                            Position = 0
+                        },
+                        new
+                        {
+                            Id = 837,
+                            BirthDate = new DateTime(1989, 9, 8, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            PlayerName = "Nikola Palaversa",
+                            Player_TeamsId = 42,
+                            Position = 2
+                        },
+                        new
+                        {
+                            Id = 838,
+                            BirthDate = new DateTime(2006, 8, 10, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            PlayerName = "Petar Bradaric",
+                            Player_TeamsId = 42,
+                            Position = 1
+                        },
+                        new
+                        {
+                            Id = 839,
+                            BirthDate = new DateTime(1994, 11, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            PlayerName = "Sime Tudor",
+                            Player_TeamsId = 42,
+                            Position = 3
+                        },
+                        new
+                        {
+                            Id = 840,
+                            BirthDate = new DateTime(1997, 3, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            PlayerName = "Zvonimir Caleta-Car",
+                            Player_TeamsId = 42,
+                            Position = 0
+                        },
+                        new
+                        {
+                            Id = 841,
+                            BirthDate = new DateTime(2007, 6, 27, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            PlayerName = "Giorgos Papadopoulos",
+                            Player_TeamsId = 43,
+                            Position = 2
+                        },
+                        new
+                        {
+                            Id = 842,
+                            BirthDate = new DateTime(1985, 12, 28, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            PlayerName = "Dimitris Stamatopoulos",
+                            Player_TeamsId = 43,
+                            Position = 1
+                        },
+                        new
+                        {
+                            Id = 843,
+                            BirthDate = new DateTime(1997, 7, 11, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            PlayerName = "Vasilis Karagounis",
+                            Player_TeamsId = 43,
+                            Position = 3
+                        },
+                        new
+                        {
+                            Id = 844,
+                            BirthDate = new DateTime(1986, 7, 25, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            PlayerName = "Kostas Ninis",
+                            Player_TeamsId = 43,
+                            Position = 0
+                        },
+                        new
+                        {
+                            Id = 845,
+                            BirthDate = new DateTime(1986, 3, 26, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            PlayerName = "Nikolaos Mitroglou",
+                            Player_TeamsId = 43,
+                            Position = 2
+                        },
+                        new
+                        {
+                            Id = 846,
+                            BirthDate = new DateTime(2002, 2, 22, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            PlayerName = "Giannis Tzavellas",
+                            Player_TeamsId = 43,
+                            Position = 1
+                        },
+                        new
+                        {
+                            Id = 847,
+                            BirthDate = new DateTime(1987, 2, 8, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            PlayerName = "Anastasios Manolas",
+                            Player_TeamsId = 43,
+                            Position = 3
+                        },
+                        new
+                        {
+                            Id = 848,
+                            BirthDate = new DateTime(2006, 6, 7, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            PlayerName = "Panagiotis Samaris",
+                            Player_TeamsId = 43,
+                            Position = 0
+                        },
+                        new
+                        {
+                            Id = 849,
+                            BirthDate = new DateTime(2007, 7, 16, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            PlayerName = "Christos Siovas",
+                            Player_TeamsId = 43,
+                            Position = 2
+                        },
+                        new
+                        {
+                            Id = 850,
+                            BirthDate = new DateTime(2007, 10, 9, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            PlayerName = "Andreas Bouchalakis",
+                            Player_TeamsId = 43,
+                            Position = 1
+                        },
+                        new
+                        {
+                            Id = 851,
+                            BirthDate = new DateTime(1989, 12, 3, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            PlayerName = "Spyros Kourbelis",
+                            Player_TeamsId = 43,
+                            Position = 3
+                        },
+                        new
+                        {
+                            Id = 852,
+                            BirthDate = new DateTime(1994, 9, 19, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            PlayerName = "Lefteris Zeca",
+                            Player_TeamsId = 43,
+                            Position = 0
+                        },
+                        new
+                        {
+                            Id = 853,
+                            BirthDate = new DateTime(1986, 2, 13, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            PlayerName = "Stavros Giakoumakis",
+                            Player_TeamsId = 43,
+                            Position = 2
+                        },
+                        new
+                        {
+                            Id = 854,
+                            BirthDate = new DateTime(2007, 10, 4, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            PlayerName = "Apostolos Tsimikas",
+                            Player_TeamsId = 43,
+                            Position = 1
+                        },
+                        new
+                        {
+                            Id = 855,
+                            BirthDate = new DateTime(1999, 10, 22, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            PlayerName = "Antonis Koulouris",
+                            Player_TeamsId = 43,
+                            Position = 3
+                        },
+                        new
+                        {
+                            Id = 856,
+                            BirthDate = new DateTime(1990, 2, 5, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            PlayerName = "Marios Retsos",
+                            Player_TeamsId = 43,
+                            Position = 0
+                        },
+                        new
+                        {
+                            Id = 857,
+                            BirthDate = new DateTime(2004, 5, 22, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            PlayerName = "Manolis Bakakis",
+                            Player_TeamsId = 43,
+                            Position = 2
+                        },
+                        new
+                        {
+                            Id = 858,
+                            BirthDate = new DateTime(2000, 6, 11, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            PlayerName = "Sotiris Masouras",
+                            Player_TeamsId = 43,
+                            Position = 1
+                        },
+                        new
+                        {
+                            Id = 859,
+                            BirthDate = new DateTime(2004, 4, 28, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            PlayerName = "Petros Lampropoulos",
+                            Player_TeamsId = 43,
+                            Position = 3
+                        },
+                        new
+                        {
+                            Id = 860,
+                            BirthDate = new DateTime(2007, 6, 26, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            PlayerName = "Thanasis Pelkas",
+                            Player_TeamsId = 43,
+                            Position = 0
+                        },
+                        new
+                        {
+                            Id = 861,
+                            BirthDate = new DateTime(2002, 5, 21, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            PlayerName = "Emre Yilmaz",
+                            Player_TeamsId = 44,
+                            Position = 2
+                        },
+                        new
+                        {
+                            Id = 862,
+                            BirthDate = new DateTime(2004, 6, 19, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            PlayerName = "Mehmet Demir",
+                            Player_TeamsId = 44,
+                            Position = 1
+                        },
+                        new
+                        {
+                            Id = 863,
+                            BirthDate = new DateTime(2007, 2, 27, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            PlayerName = "Ahmet Kilic",
+                            Player_TeamsId = 44,
+                            Position = 3
+                        },
+                        new
+                        {
+                            Id = 864,
+                            BirthDate = new DateTime(1997, 12, 17, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            PlayerName = "Mustafa Ozturk",
+                            Player_TeamsId = 44,
+                            Position = 0
+                        },
+                        new
+                        {
+                            Id = 865,
+                            BirthDate = new DateTime(1997, 5, 14, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            PlayerName = "Hakan Kaya",
+                            Player_TeamsId = 44,
+                            Position = 2
+                        },
+                        new
+                        {
+                            Id = 866,
+                            BirthDate = new DateTime(2001, 12, 24, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            PlayerName = "Murat Aydin",
+                            Player_TeamsId = 44,
+                            Position = 1
+                        },
+                        new
+                        {
+                            Id = 867,
+                            BirthDate = new DateTime(2007, 11, 19, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            PlayerName = "Ali Korkmaz",
+                            Player_TeamsId = 44,
+                            Position = 3
+                        },
+                        new
+                        {
+                            Id = 868,
+                            BirthDate = new DateTime(1996, 12, 5, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            PlayerName = "Serkan Gunes",
+                            Player_TeamsId = 44,
+                            Position = 0
+                        },
+                        new
+                        {
+                            Id = 869,
+                            BirthDate = new DateTime(1997, 7, 13, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            PlayerName = "Burak Cetin",
+                            Player_TeamsId = 44,
+                            Position = 2
+                        },
+                        new
+                        {
+                            Id = 870,
+                            BirthDate = new DateTime(2002, 9, 26, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            PlayerName = "Cem Yildirim",
+                            Player_TeamsId = 44,
+                            Position = 1
+                        },
+                        new
+                        {
+                            Id = 871,
+                            BirthDate = new DateTime(1993, 3, 14, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            PlayerName = "Baris Sahin",
+                            Player_TeamsId = 44,
+                            Position = 3
+                        },
+                        new
+                        {
+                            Id = 872,
+                            BirthDate = new DateTime(1993, 8, 12, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            PlayerName = "Eren Erdogan",
+                            Player_TeamsId = 44,
+                            Position = 0
+                        },
+                        new
+                        {
+                            Id = 873,
+                            BirthDate = new DateTime(2002, 8, 23, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            PlayerName = "Can Polat",
+                            Player_TeamsId = 44,
+                            Position = 2
+                        },
+                        new
+                        {
+                            Id = 874,
+                            BirthDate = new DateTime(1995, 12, 14, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            PlayerName = "Okan Turan",
+                            Player_TeamsId = 44,
+                            Position = 1
+                        },
+                        new
+                        {
+                            Id = 875,
+                            BirthDate = new DateTime(2003, 4, 5, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            PlayerName = "Sefa Acar",
+                            Player_TeamsId = 44,
+                            Position = 3
+                        },
+                        new
+                        {
+                            Id = 876,
+                            BirthDate = new DateTime(2006, 5, 4, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            PlayerName = "Gokhan Kara",
+                            Player_TeamsId = 44,
+                            Position = 0
+                        },
+                        new
+                        {
+                            Id = 877,
+                            BirthDate = new DateTime(1986, 9, 2, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            PlayerName = "Yusuf Durmaz",
+                            Player_TeamsId = 44,
+                            Position = 2
+                        },
+                        new
+                        {
+                            Id = 878,
+                            BirthDate = new DateTime(1990, 5, 19, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            PlayerName = "Umut Aslan",
+                            Player_TeamsId = 44,
+                            Position = 1
+                        },
+                        new
+                        {
+                            Id = 879,
+                            BirthDate = new DateTime(1991, 4, 15, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            PlayerName = "Halil Dogan",
+                            Player_TeamsId = 44,
+                            Position = 3
+                        },
+                        new
+                        {
+                            Id = 880,
+                            BirthDate = new DateTime(1995, 8, 21, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            PlayerName = "Fatih Guler",
+                            Player_TeamsId = 44,
+                            Position = 0
+                        },
+                        new
+                        {
+                            Id = 881,
+                            BirthDate = new DateTime(2001, 8, 9, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            PlayerName = "Jordi Garcia",
+                            Player_TeamsId = 45,
+                            Position = 2
+                        },
+                        new
+                        {
+                            Id = 882,
+                            BirthDate = new DateTime(1997, 10, 18, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            PlayerName = "Sergio Martinez",
+                            Player_TeamsId = 45,
+                            Position = 1
+                        },
+                        new
+                        {
+                            Id = 883,
+                            BirthDate = new DateTime(1985, 4, 13, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            PlayerName = "Andres Lopez",
+                            Player_TeamsId = 45,
+                            Position = 3
+                        },
+                        new
+                        {
+                            Id = 884,
+                            BirthDate = new DateTime(1997, 9, 4, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            PlayerName = "Pedro Hernandez",
+                            Player_TeamsId = 45,
+                            Position = 0
+                        },
+                        new
+                        {
+                            Id = 885,
+                            BirthDate = new DateTime(1999, 10, 17, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            PlayerName = "Alejandro Gonzalez",
+                            Player_TeamsId = 45,
+                            Position = 2
+                        },
+                        new
+                        {
+                            Id = 886,
+                            BirthDate = new DateTime(1989, 1, 10, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            PlayerName = "Carlos Perez",
+                            Player_TeamsId = 45,
+                            Position = 1
+                        },
+                        new
+                        {
+                            Id = 887,
+                            BirthDate = new DateTime(1988, 9, 18, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            PlayerName = "Juan Sanchez",
+                            Player_TeamsId = 45,
+                            Position = 3
+                        },
+                        new
+                        {
+                            Id = 888,
+                            BirthDate = new DateTime(1985, 7, 15, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            PlayerName = "David Ramirez",
+                            Player_TeamsId = 45,
+                            Position = 0
+                        },
+                        new
+                        {
+                            Id = 889,
+                            BirthDate = new DateTime(1987, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            PlayerName = "Manuel Torres",
+                            Player_TeamsId = 45,
+                            Position = 2
+                        },
+                        new
+                        {
+                            Id = 890,
+                            BirthDate = new DateTime(2002, 4, 15, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            PlayerName = "Francisco Flores",
+                            Player_TeamsId = 45,
+                            Position = 1
+                        },
+                        new
+                        {
+                            Id = 891,
+                            BirthDate = new DateTime(2007, 6, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            PlayerName = "Ruben Ruiz",
+                            Player_TeamsId = 45,
+                            Position = 3
+                        },
+                        new
+                        {
+                            Id = 892,
+                            BirthDate = new DateTime(1994, 6, 11, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            PlayerName = "Antonio Alonso",
+                            Player_TeamsId = 45,
+                            Position = 0
+                        },
+                        new
+                        {
+                            Id = 893,
+                            BirthDate = new DateTime(1989, 2, 14, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            PlayerName = "Miguel Moreno",
+                            Player_TeamsId = 45,
+                            Position = 2
+                        },
+                        new
+                        {
+                            Id = 894,
+                            BirthDate = new DateTime(1995, 3, 9, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            PlayerName = "Rafael Navarro",
+                            Player_TeamsId = 45,
+                            Position = 1
+                        },
+                        new
+                        {
+                            Id = 895,
+                            BirthDate = new DateTime(2000, 3, 21, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            PlayerName = "Jesus Serrano",
+                            Player_TeamsId = 45,
+                            Position = 3
+                        },
+                        new
+                        {
+                            Id = 896,
+                            BirthDate = new DateTime(1991, 2, 18, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            PlayerName = "Alvaro Jimenez",
+                            Player_TeamsId = 45,
+                            Position = 0
+                        },
+                        new
+                        {
+                            Id = 897,
+                            BirthDate = new DateTime(1998, 11, 5, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            PlayerName = "Jose Molina",
+                            Player_TeamsId = 45,
+                            Position = 2
+                        },
+                        new
+                        {
+                            Id = 898,
+                            BirthDate = new DateTime(2003, 9, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            PlayerName = "Victor Castro",
+                            Player_TeamsId = 45,
+                            Position = 1
+                        },
+                        new
+                        {
+                            Id = 899,
+                            BirthDate = new DateTime(2006, 6, 7, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            PlayerName = "Pablo Ortega",
+                            Player_TeamsId = 45,
+                            Position = 3
+                        },
+                        new
+                        {
+                            Id = 900,
+                            BirthDate = new DateTime(1986, 12, 21, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            PlayerName = "Lucas Delgado",
+                            Player_TeamsId = 45,
+                            Position = 0
+                        },
+                        new
+                        {
+                            Id = 901,
+                            BirthDate = new DateTime(1997, 1, 18, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            PlayerName = "Lukas Müller",
+                            Player_TeamsId = 46,
+                            Position = 2
+                        },
+                        new
+                        {
+                            Id = 902,
+                            BirthDate = new DateTime(1994, 12, 4, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            PlayerName = "Maximilian Schmidt",
+                            Player_TeamsId = 46,
+                            Position = 1
+                        },
+                        new
+                        {
+                            Id = 903,
+                            BirthDate = new DateTime(1998, 12, 28, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            PlayerName = "Felix Schneider",
+                            Player_TeamsId = 46,
+                            Position = 3
+                        },
+                        new
+                        {
+                            Id = 904,
+                            BirthDate = new DateTime(1997, 12, 6, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            PlayerName = "Leon Fischer",
+                            Player_TeamsId = 46,
+                            Position = 0
+                        },
+                        new
+                        {
+                            Id = 905,
+                            BirthDate = new DateTime(2006, 2, 27, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            PlayerName = "Julian Weber",
+                            Player_TeamsId = 46,
+                            Position = 2
+                        },
+                        new
+                        {
+                            Id = 906,
+                            BirthDate = new DateTime(1986, 1, 5, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            PlayerName = "Moritz Meyer",
+                            Player_TeamsId = 46,
+                            Position = 1
+                        },
+                        new
+                        {
+                            Id = 907,
+                            BirthDate = new DateTime(1988, 4, 24, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            PlayerName = "Florian Wagner",
+                            Player_TeamsId = 46,
+                            Position = 3
+                        },
+                        new
+                        {
+                            Id = 908,
+                            BirthDate = new DateTime(1996, 7, 7, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            PlayerName = "Tobias Becker",
+                            Player_TeamsId = 46,
+                            Position = 0
+                        },
+                        new
+                        {
+                            Id = 909,
+                            BirthDate = new DateTime(2003, 11, 14, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            PlayerName = "Simon Hoffmann",
+                            Player_TeamsId = 46,
+                            Position = 2
+                        },
+                        new
+                        {
+                            Id = 910,
+                            BirthDate = new DateTime(1998, 2, 12, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            PlayerName = "Paul Schäfer",
+                            Player_TeamsId = 46,
+                            Position = 1
+                        },
+                        new
+                        {
+                            Id = 911,
+                            BirthDate = new DateTime(1999, 1, 22, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            PlayerName = "Nico Koch",
+                            Player_TeamsId = 46,
+                            Position = 3
+                        },
+                        new
+                        {
+                            Id = 912,
+                            BirthDate = new DateTime(1988, 6, 5, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            PlayerName = "Dominik Richter",
+                            Player_TeamsId = 46,
+                            Position = 0
+                        },
+                        new
+                        {
+                            Id = 913,
+                            BirthDate = new DateTime(1995, 11, 9, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            PlayerName = "Marcel Klein",
+                            Player_TeamsId = 46,
+                            Position = 2
+                        },
+                        new
+                        {
+                            Id = 914,
+                            BirthDate = new DateTime(1998, 11, 23, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            PlayerName = "Fabian Wolf",
+                            Player_TeamsId = 46,
+                            Position = 1
+                        },
+                        new
+                        {
+                            Id = 915,
+                            BirthDate = new DateTime(2005, 1, 23, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            PlayerName = "Benedikt Neumann",
+                            Player_TeamsId = 46,
+                            Position = 3
+                        },
+                        new
+                        {
+                            Id = 916,
+                            BirthDate = new DateTime(1990, 8, 21, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            PlayerName = "Sebastian Schwarz",
+                            Player_TeamsId = 46,
+                            Position = 0
+                        },
+                        new
+                        {
+                            Id = 917,
+                            BirthDate = new DateTime(2003, 7, 22, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            PlayerName = "Philipp Zimmermann",
+                            Player_TeamsId = 46,
+                            Position = 2
+                        },
+                        new
+                        {
+                            Id = 918,
+                            BirthDate = new DateTime(1998, 7, 7, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            PlayerName = "Johannes Braun",
+                            Player_TeamsId = 46,
+                            Position = 1
+                        },
+                        new
+                        {
+                            Id = 919,
+                            BirthDate = new DateTime(1996, 2, 13, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            PlayerName = "Patrick Krüger",
+                            Player_TeamsId = 46,
+                            Position = 3
+                        },
+                        new
+                        {
+                            Id = 920,
+                            BirthDate = new DateTime(1987, 5, 28, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            PlayerName = "Matthias Hofmann",
+                            Player_TeamsId = 46,
+                            Position = 0
+                        },
+                        new
+                        {
+                            Id = 921,
+                            BirthDate = new DateTime(1987, 10, 22, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            PlayerName = "Pierre Dupont",
+                            Player_TeamsId = 47,
+                            Position = 2
+                        },
+                        new
+                        {
+                            Id = 922,
+                            BirthDate = new DateTime(1995, 7, 26, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            PlayerName = "Jean Durand",
+                            Player_TeamsId = 47,
+                            Position = 1
+                        },
+                        new
+                        {
+                            Id = 923,
+                            BirthDate = new DateTime(1992, 3, 28, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            PlayerName = "Michel Lefevre",
+                            Player_TeamsId = 47,
+                            Position = 3
+                        },
+                        new
+                        {
+                            Id = 924,
+                            BirthDate = new DateTime(1988, 2, 26, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            PlayerName = "Claude Martin",
+                            Player_TeamsId = 47,
+                            Position = 0
+                        },
+                        new
+                        {
+                            Id = 925,
+                            BirthDate = new DateTime(1996, 11, 13, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            PlayerName = "Philippe Bernard",
+                            Player_TeamsId = 47,
+                            Position = 2
+                        },
+                        new
+                        {
+                            Id = 926,
+                            BirthDate = new DateTime(2007, 7, 28, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            PlayerName = "Alain Petit",
+                            Player_TeamsId = 47,
+                            Position = 1
+                        },
+                        new
+                        {
+                            Id = 927,
+                            BirthDate = new DateTime(1988, 11, 18, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            PlayerName = "Jacques Robert",
+                            Player_TeamsId = 47,
+                            Position = 3
+                        },
+                        new
+                        {
+                            Id = 928,
+                            BirthDate = new DateTime(1991, 4, 27, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            PlayerName = "Luc Richard",
+                            Player_TeamsId = 47,
+                            Position = 0
+                        },
+                        new
+                        {
+                            Id = 929,
+                            BirthDate = new DateTime(2002, 7, 11, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            PlayerName = "Eric Simon",
+                            Player_TeamsId = 47,
+                            Position = 2
+                        },
+                        new
+                        {
+                            Id = 930,
+                            BirthDate = new DateTime(2001, 1, 28, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            PlayerName = "Nicolas Laurent",
+                            Player_TeamsId = 47,
+                            Position = 1
+                        },
+                        new
+                        {
+                            Id = 931,
+                            BirthDate = new DateTime(1987, 9, 9, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            PlayerName = "Bernard Michel",
+                            Player_TeamsId = 47,
+                            Position = 3
+                        },
+                        new
+                        {
+                            Id = 932,
+                            BirthDate = new DateTime(1993, 7, 4, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            PlayerName = "Olivier Garcia",
+                            Player_TeamsId = 47,
+                            Position = 0
+                        },
+                        new
+                        {
+                            Id = 933,
+                            BirthDate = new DateTime(1998, 9, 21, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            PlayerName = "Laurent Moreau",
+                            Player_TeamsId = 47,
+                            Position = 2
+                        },
+                        new
+                        {
+                            Id = 934,
+                            BirthDate = new DateTime(1997, 2, 18, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            PlayerName = "Didier Fournier",
+                            Player_TeamsId = 47,
+                            Position = 1
+                        },
+                        new
+                        {
+                            Id = 935,
+                            BirthDate = new DateTime(2000, 5, 12, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            PlayerName = "Patrick Girard",
+                            Player_TeamsId = 47,
+                            Position = 3
+                        },
+                        new
+                        {
+                            Id = 936,
+                            BirthDate = new DateTime(1992, 7, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            PlayerName = "Sebastien Andre",
+                            Player_TeamsId = 47,
+                            Position = 0
+                        },
+                        new
+                        {
+                            Id = 937,
+                            BirthDate = new DateTime(1991, 12, 7, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            PlayerName = "Vincent Guerin",
+                            Player_TeamsId = 47,
+                            Position = 2
+                        },
+                        new
+                        {
+                            Id = 938,
+                            BirthDate = new DateTime(1989, 3, 18, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            PlayerName = "Antoine Boyer",
+                            Player_TeamsId = 47,
+                            Position = 1
+                        },
+                        new
+                        {
+                            Id = 939,
+                            BirthDate = new DateTime(2000, 9, 9, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            PlayerName = "Guillaume Garnier",
+                            Player_TeamsId = 47,
+                            Position = 3
+                        },
+                        new
+                        {
+                            Id = 940,
+                            BirthDate = new DateTime(1990, 5, 14, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            PlayerName = "Thierry Chevalier",
+                            Player_TeamsId = 47,
+                            Position = 0
+                        },
+                        new
+                        {
+                            Id = 941,
+                            BirthDate = new DateTime(1991, 2, 12, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            PlayerName = "John Smith",
+                            Player_TeamsId = 48,
+                            Position = 2
+                        },
+                        new
+                        {
+                            Id = 942,
+                            BirthDate = new DateTime(1985, 2, 14, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            PlayerName = "James Jones",
+                            Player_TeamsId = 48,
+                            Position = 1
+                        },
+                        new
+                        {
+                            Id = 943,
+                            BirthDate = new DateTime(1988, 6, 27, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            PlayerName = "Robert Taylor",
+                            Player_TeamsId = 48,
+                            Position = 3
+                        },
+                        new
+                        {
+                            Id = 944,
+                            BirthDate = new DateTime(1998, 4, 16, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            PlayerName = "Michael Williams",
+                            Player_TeamsId = 48,
+                            Position = 0
+                        },
+                        new
+                        {
+                            Id = 945,
+                            BirthDate = new DateTime(2000, 7, 15, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            PlayerName = "William Brown",
+                            Player_TeamsId = 48,
+                            Position = 2
+                        },
+                        new
+                        {
+                            Id = 946,
+                            BirthDate = new DateTime(1998, 11, 17, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            PlayerName = "David Davies",
+                            Player_TeamsId = 48,
+                            Position = 1
+                        },
+                        new
+                        {
+                            Id = 947,
+                            BirthDate = new DateTime(1998, 12, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            PlayerName = "Richard Evans",
+                            Player_TeamsId = 48,
+                            Position = 3
+                        },
+                        new
+                        {
+                            Id = 948,
+                            BirthDate = new DateTime(1999, 3, 10, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            PlayerName = "Charles Thomas",
+                            Player_TeamsId = 48,
+                            Position = 0
+                        },
+                        new
+                        {
+                            Id = 949,
+                            BirthDate = new DateTime(1989, 5, 24, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            PlayerName = "Joseph Roberts",
+                            Player_TeamsId = 48,
+                            Position = 2
+                        },
+                        new
+                        {
+                            Id = 950,
+                            BirthDate = new DateTime(1999, 9, 17, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            PlayerName = "Thomas Johnson",
+                            Player_TeamsId = 48,
+                            Position = 1
+                        },
+                        new
+                        {
+                            Id = 951,
+                            BirthDate = new DateTime(1986, 12, 19, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            PlayerName = "George Walker",
+                            Player_TeamsId = 48,
+                            Position = 3
+                        },
+                        new
+                        {
+                            Id = 952,
+                            BirthDate = new DateTime(1994, 12, 18, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            PlayerName = "Daniel Wright",
+                            Player_TeamsId = 48,
+                            Position = 0
+                        },
+                        new
+                        {
+                            Id = 953,
+                            BirthDate = new DateTime(1988, 10, 27, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            PlayerName = "Paul Thompson",
+                            Player_TeamsId = 48,
+                            Position = 2
+                        },
+                        new
+                        {
+                            Id = 954,
+                            BirthDate = new DateTime(1986, 4, 5, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            PlayerName = "Mark White",
+                            Player_TeamsId = 48,
+                            Position = 1
+                        },
+                        new
+                        {
+                            Id = 955,
+                            BirthDate = new DateTime(2005, 3, 6, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            PlayerName = "Donald Edwards",
+                            Player_TeamsId = 48,
+                            Position = 3
+                        },
+                        new
+                        {
+                            Id = 956,
+                            BirthDate = new DateTime(1999, 7, 5, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            PlayerName = "Steven Green",
+                            Player_TeamsId = 48,
+                            Position = 0
+                        },
+                        new
+                        {
+                            Id = 957,
+                            BirthDate = new DateTime(2007, 10, 11, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            PlayerName = "Edward Harris",
+                            Player_TeamsId = 48,
+                            Position = 2
+                        },
+                        new
+                        {
+                            Id = 958,
+                            BirthDate = new DateTime(2006, 3, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            PlayerName = "Brian Lewis",
+                            Player_TeamsId = 48,
+                            Position = 1
+                        },
+                        new
+                        {
+                            Id = 959,
+                            BirthDate = new DateTime(1997, 3, 7, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            PlayerName = "Ronald Clarke",
+                            Player_TeamsId = 48,
+                            Position = 3
+                        },
+                        new
+                        {
+                            Id = 960,
+                            BirthDate = new DateTime(1998, 8, 26, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            PlayerName = "Anthony Hall",
+                            Player_TeamsId = 48,
+                            Position = 0
+                        },
+                        new
+                        {
+                            Id = 961,
+                            BirthDate = new DateTime(1993, 5, 8, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            PlayerName = "Marco Rossi",
+                            Player_TeamsId = 49,
+                            Position = 2
+                        },
+                        new
+                        {
+                            Id = 962,
+                            BirthDate = new DateTime(1986, 3, 14, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            PlayerName = "Luca Russo",
+                            Player_TeamsId = 49,
+                            Position = 1
+                        },
+                        new
+                        {
+                            Id = 963,
+                            BirthDate = new DateTime(2003, 10, 7, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            PlayerName = "Matteo Ferrari",
+                            Player_TeamsId = 49,
+                            Position = 3
+                        },
+                        new
+                        {
+                            Id = 964,
+                            BirthDate = new DateTime(1996, 9, 12, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            PlayerName = "Alessandro Esposito",
+                            Player_TeamsId = 49,
+                            Position = 0
+                        },
+                        new
+                        {
+                            Id = 965,
+                            BirthDate = new DateTime(1996, 4, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            PlayerName = "Giovanni Bianchi",
+                            Player_TeamsId = 49,
+                            Position = 2
+                        },
+                        new
+                        {
+                            Id = 966,
+                            BirthDate = new DateTime(1990, 3, 16, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            PlayerName = "Andrea Romano",
+                            Player_TeamsId = 49,
+                            Position = 1
+                        },
+                        new
+                        {
+                            Id = 967,
+                            BirthDate = new DateTime(1987, 6, 26, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            PlayerName = "Davide Colombo",
+                            Player_TeamsId = 49,
+                            Position = 3
+                        },
+                        new
+                        {
+                            Id = 968,
+                            BirthDate = new DateTime(1991, 7, 2, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            PlayerName = "Francesco Ricci",
+                            Player_TeamsId = 49,
+                            Position = 0
+                        },
+                        new
+                        {
+                            Id = 969,
+                            BirthDate = new DateTime(2005, 6, 2, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            PlayerName = "Simone Marino",
+                            Player_TeamsId = 49,
+                            Position = 2
+                        },
+                        new
+                        {
+                            Id = 970,
+                            BirthDate = new DateTime(1994, 8, 10, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            PlayerName = "Gabriele Greco",
+                            Player_TeamsId = 49,
+                            Position = 1
+                        },
+                        new
+                        {
+                            Id = 971,
+                            BirthDate = new DateTime(1993, 4, 13, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            PlayerName = "Federico Bruno",
+                            Player_TeamsId = 49,
+                            Position = 3
+                        },
+                        new
+                        {
+                            Id = 972,
+                            BirthDate = new DateTime(2001, 2, 23, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            PlayerName = "Stefano Gallo",
+                            Player_TeamsId = 49,
+                            Position = 0
+                        },
+                        new
+                        {
+                            Id = 973,
+                            BirthDate = new DateTime(1996, 10, 24, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            PlayerName = "Roberto Costa",
+                            Player_TeamsId = 49,
+                            Position = 2
+                        },
+                        new
+                        {
+                            Id = 974,
+                            BirthDate = new DateTime(1988, 9, 26, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            PlayerName = "Antonio DeLuca",
+                            Player_TeamsId = 49,
+                            Position = 1
+                        },
+                        new
+                        {
+                            Id = 975,
+                            BirthDate = new DateTime(1989, 4, 15, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            PlayerName = "Paolo Mancini",
+                            Player_TeamsId = 49,
+                            Position = 3
+                        },
+                        new
+                        {
+                            Id = 976,
+                            BirthDate = new DateTime(1998, 12, 14, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            PlayerName = "Riccardo Lombardi",
+                            Player_TeamsId = 49,
+                            Position = 0
+                        },
+                        new
+                        {
+                            Id = 977,
+                            BirthDate = new DateTime(2001, 10, 4, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            PlayerName = "Giuseppe Moretti",
+                            Player_TeamsId = 49,
+                            Position = 2
+                        },
+                        new
+                        {
+                            Id = 978,
+                            BirthDate = new DateTime(2005, 9, 28, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            PlayerName = "Nicola Barbieri",
+                            Player_TeamsId = 49,
+                            Position = 1
+                        },
+                        new
+                        {
+                            Id = 979,
+                            BirthDate = new DateTime(2003, 8, 17, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            PlayerName = "Fabio Fontana",
+                            Player_TeamsId = 49,
+                            Position = 3
+                        },
+                        new
+                        {
+                            Id = 980,
+                            BirthDate = new DateTime(2000, 9, 24, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            PlayerName = "Salvatore Santoro",
+                            Player_TeamsId = 49,
+                            Position = 0
                         });
                 });
 
@@ -9615,7 +15383,7 @@ namespace FCUnirea.Persistance.Data.Migrations
 
                     b.HasIndex("PlayerStatisticsPerCompetition_PlayersId");
 
-                    b.ToTable("PlayerStatisticsPerCompetiton");
+                    b.ToTable("PlayerStatisticsPerCompetition");
                 });
 
             modelBuilder.Entity("FCUnirea.Domain.Entities.PlayerStatisticsPerGame", b =>
@@ -9950,6 +15718,2442 @@ namespace FCUnirea.Persistance.Data.Migrations
                             Goals = 1,
                             PlayerStatisticsPerGame_GamesId = 15,
                             PlayerStatisticsPerGame_PlayersId = 581
+                        },
+                        new
+                        {
+                            Id = 44,
+                            Goals = 1,
+                            PlayerStatisticsPerGame_GamesId = 16,
+                            PlayerStatisticsPerGame_PlayersId = 185
+                        },
+                        new
+                        {
+                            Id = 45,
+                            Goals = 1,
+                            PlayerStatisticsPerGame_GamesId = 16,
+                            PlayerStatisticsPerGame_PlayersId = 192
+                        },
+                        new
+                        {
+                            Id = 46,
+                            Goals = 1,
+                            PlayerStatisticsPerGame_GamesId = 16,
+                            PlayerStatisticsPerGame_PlayersId = 110
+                        },
+                        new
+                        {
+                            Id = 47,
+                            Goals = 1,
+                            PlayerStatisticsPerGame_GamesId = 17,
+                            PlayerStatisticsPerGame_PlayersId = 121
+                        },
+                        new
+                        {
+                            Id = 48,
+                            Goals = 1,
+                            PlayerStatisticsPerGame_GamesId = 17,
+                            PlayerStatisticsPerGame_PlayersId = 125
+                        },
+                        new
+                        {
+                            Id = 49,
+                            Goals = 1,
+                            PlayerStatisticsPerGame_GamesId = 17,
+                            PlayerStatisticsPerGame_PlayersId = 135
+                        },
+                        new
+                        {
+                            Id = 50,
+                            Goals = 1,
+                            PlayerStatisticsPerGame_GamesId = 17,
+                            PlayerStatisticsPerGame_PlayersId = 100
+                        },
+                        new
+                        {
+                            Id = 51,
+                            Goals = 1,
+                            PlayerStatisticsPerGame_GamesId = 18,
+                            PlayerStatisticsPerGame_PlayersId = 151
+                        },
+                        new
+                        {
+                            Id = 52,
+                            Goals = 1,
+                            PlayerStatisticsPerGame_GamesId = 18,
+                            PlayerStatisticsPerGame_PlayersId = 156
+                        },
+                        new
+                        {
+                            Id = 53,
+                            Goals = 1,
+                            PlayerStatisticsPerGame_GamesId = 18,
+                            PlayerStatisticsPerGame_PlayersId = 61
+                        },
+                        new
+                        {
+                            Id = 54,
+                            Goals = 1,
+                            PlayerStatisticsPerGame_GamesId = 18,
+                            PlayerStatisticsPerGame_PlayersId = 65
+                        },
+                        new
+                        {
+                            Id = 55,
+                            Goals = 1,
+                            PlayerStatisticsPerGame_GamesId = 19,
+                            PlayerStatisticsPerGame_PlayersId = 41
+                        },
+                        new
+                        {
+                            Id = 56,
+                            Goals = 1,
+                            PlayerStatisticsPerGame_GamesId = 20,
+                            PlayerStatisticsPerGame_PlayersId = 2
+                        },
+                        new
+                        {
+                            Id = 57,
+                            Goals = 1,
+                            PlayerStatisticsPerGame_GamesId = 20,
+                            PlayerStatisticsPerGame_PlayersId = 14
+                        },
+                        new
+                        {
+                            Id = 58,
+                            Goals = 1,
+                            PlayerStatisticsPerGame_GamesId = 20,
+                            PlayerStatisticsPerGame_PlayersId = 11
+                        },
+                        new
+                        {
+                            Id = 59,
+                            Goals = 1,
+                            PlayerStatisticsPerGame_GamesId = 20,
+                            PlayerStatisticsPerGame_PlayersId = 15
+                        },
+                        new
+                        {
+                            Id = 60,
+                            Goals = 1,
+                            PlayerStatisticsPerGame_GamesId = 20,
+                            PlayerStatisticsPerGame_PlayersId = 25
+                        },
+                        new
+                        {
+                            Id = 61,
+                            Goals = 1,
+                            PlayerStatisticsPerGame_GamesId = 21,
+                            PlayerStatisticsPerGame_PlayersId = 381
+                        },
+                        new
+                        {
+                            Id = 62,
+                            Goals = 1,
+                            PlayerStatisticsPerGame_GamesId = 21,
+                            PlayerStatisticsPerGame_PlayersId = 384
+                        },
+                        new
+                        {
+                            Id = 63,
+                            Goals = 1,
+                            PlayerStatisticsPerGame_GamesId = 22,
+                            PlayerStatisticsPerGame_PlayersId = 321
+                        },
+                        new
+                        {
+                            Id = 64,
+                            Goals = 1,
+                            PlayerStatisticsPerGame_GamesId = 22,
+                            PlayerStatisticsPerGame_PlayersId = 338
+                        },
+                        new
+                        {
+                            Id = 65,
+                            Goals = 1,
+                            PlayerStatisticsPerGame_GamesId = 22,
+                            PlayerStatisticsPerGame_PlayersId = 281
+                        },
+                        new
+                        {
+                            Id = 66,
+                            Goals = 1,
+                            PlayerStatisticsPerGame_GamesId = 22,
+                            PlayerStatisticsPerGame_PlayersId = 294
+                        },
+                        new
+                        {
+                            Id = 67,
+                            Goals = 1,
+                            PlayerStatisticsPerGame_GamesId = 23,
+                            PlayerStatisticsPerGame_PlayersId = 261
+                        },
+                        new
+                        {
+                            Id = 68,
+                            Goals = 1,
+                            PlayerStatisticsPerGame_GamesId = 23,
+                            PlayerStatisticsPerGame_PlayersId = 274
+                        },
+                        new
+                        {
+                            Id = 69,
+                            Goals = 1,
+                            PlayerStatisticsPerGame_GamesId = 23,
+                            PlayerStatisticsPerGame_PlayersId = 276
+                        },
+                        new
+                        {
+                            Id = 70,
+                            Goals = 1,
+                            PlayerStatisticsPerGame_GamesId = 24,
+                            PlayerStatisticsPerGame_PlayersId = 361
+                        },
+                        new
+                        {
+                            Id = 71,
+                            Goals = 1,
+                            PlayerStatisticsPerGame_GamesId = 24,
+                            PlayerStatisticsPerGame_PlayersId = 241
+                        },
+                        new
+                        {
+                            Id = 72,
+                            Goals = 1,
+                            PlayerStatisticsPerGame_GamesId = 25,
+                            PlayerStatisticsPerGame_PlayersId = 222
+                        },
+                        new
+                        {
+                            Id = 73,
+                            Goals = 1,
+                            PlayerStatisticsPerGame_GamesId = 25,
+                            PlayerStatisticsPerGame_PlayersId = 235
+                        },
+                        new
+                        {
+                            Id = 74,
+                            Goals = 1,
+                            PlayerStatisticsPerGame_GamesId = 26,
+                            PlayerStatisticsPerGame_PlayersId = 581
+                        },
+                        new
+                        {
+                            Id = 75,
+                            Goals = 1,
+                            PlayerStatisticsPerGame_GamesId = 26,
+                            PlayerStatisticsPerGame_PlayersId = 593
+                        },
+                        new
+                        {
+                            Id = 76,
+                            Goals = 1,
+                            PlayerStatisticsPerGame_GamesId = 26,
+                            PlayerStatisticsPerGame_PlayersId = 595
+                        },
+                        new
+                        {
+                            Id = 77,
+                            Goals = 1,
+                            PlayerStatisticsPerGame_GamesId = 27,
+                            PlayerStatisticsPerGame_PlayersId = 539
+                        },
+                        new
+                        {
+                            Id = 78,
+                            Goals = 1,
+                            PlayerStatisticsPerGame_GamesId = 27,
+                            PlayerStatisticsPerGame_PlayersId = 521
+                        },
+                        new
+                        {
+                            Id = 79,
+                            Goals = 1,
+                            PlayerStatisticsPerGame_GamesId = 27,
+                            PlayerStatisticsPerGame_PlayersId = 481
+                        },
+                        new
+                        {
+                            Id = 80,
+                            Goals = 1,
+                            PlayerStatisticsPerGame_GamesId = 28,
+                            PlayerStatisticsPerGame_PlayersId = 462
+                        },
+                        new
+                        {
+                            Id = 81,
+                            Goals = 1,
+                            PlayerStatisticsPerGame_GamesId = 28,
+                            PlayerStatisticsPerGame_PlayersId = 479
+                        },
+                        new
+                        {
+                            Id = 82,
+                            Goals = 1,
+                            PlayerStatisticsPerGame_GamesId = 29,
+                            PlayerStatisticsPerGame_PlayersId = 561
+                        },
+                        new
+                        {
+                            Id = 83,
+                            Goals = 1,
+                            PlayerStatisticsPerGame_GamesId = 29,
+                            PlayerStatisticsPerGame_PlayersId = 445
+                        },
+                        new
+                        {
+                            Id = 84,
+                            Goals = 1,
+                            PlayerStatisticsPerGame_GamesId = 29,
+                            PlayerStatisticsPerGame_PlayersId = 441
+                        },
+                        new
+                        {
+                            Id = 85,
+                            Goals = 1,
+                            PlayerStatisticsPerGame_GamesId = 29,
+                            PlayerStatisticsPerGame_PlayersId = 459
+                        },
+                        new
+                        {
+                            Id = 86,
+                            Goals = 1,
+                            PlayerStatisticsPerGame_GamesId = 30,
+                            PlayerStatisticsPerGame_PlayersId = 401
+                        },
+                        new
+                        {
+                            Id = 87,
+                            Goals = 1,
+                            PlayerStatisticsPerGame_GamesId = 30,
+                            PlayerStatisticsPerGame_PlayersId = 412
+                        },
+                        new
+                        {
+                            Id = 88,
+                            Goals = 1,
+                            PlayerStatisticsPerGame_GamesId = 30,
+                            PlayerStatisticsPerGame_PlayersId = 427
+                        },
+                        new
+                        {
+                            Id = 89,
+                            Goals = 1,
+                            PlayerStatisticsPerGame_GamesId = 30,
+                            PlayerStatisticsPerGame_PlayersId = 440
+                        },
+                        new
+                        {
+                            Id = 90,
+                            Goals = 1,
+                            PlayerStatisticsPerGame_GamesId = 31,
+                            PlayerStatisticsPerGame_PlayersId = 32
+                        },
+                        new
+                        {
+                            Id = 91,
+                            Goals = 1,
+                            PlayerStatisticsPerGame_GamesId = 31,
+                            PlayerStatisticsPerGame_PlayersId = 198
+                        },
+                        new
+                        {
+                            Id = 92,
+                            Goals = 1,
+                            PlayerStatisticsPerGame_GamesId = 31,
+                            PlayerStatisticsPerGame_PlayersId = 189
+                        },
+                        new
+                        {
+                            Id = 93,
+                            Goals = 1,
+                            PlayerStatisticsPerGame_GamesId = 32,
+                            PlayerStatisticsPerGame_PlayersId = 17
+                        },
+                        new
+                        {
+                            Id = 94,
+                            Goals = 1,
+                            PlayerStatisticsPerGame_GamesId = 33,
+                            PlayerStatisticsPerGame_PlayersId = 66
+                        },
+                        new
+                        {
+                            Id = 95,
+                            Goals = 1,
+                            PlayerStatisticsPerGame_GamesId = 33,
+                            PlayerStatisticsPerGame_PlayersId = 77
+                        },
+                        new
+                        {
+                            Id = 96,
+                            Goals = 1,
+                            PlayerStatisticsPerGame_GamesId = 33,
+                            PlayerStatisticsPerGame_PlayersId = 168
+                        },
+                        new
+                        {
+                            Id = 97,
+                            Goals = 1,
+                            PlayerStatisticsPerGame_GamesId = 33,
+                            PlayerStatisticsPerGame_PlayersId = 177
+                        },
+                        new
+                        {
+                            Id = 98,
+                            Goals = 1,
+                            PlayerStatisticsPerGame_GamesId = 34,
+                            PlayerStatisticsPerGame_PlayersId = 82
+                        },
+                        new
+                        {
+                            Id = 99,
+                            Goals = 1,
+                            PlayerStatisticsPerGame_GamesId = 34,
+                            PlayerStatisticsPerGame_PlayersId = 84
+                        },
+                        new
+                        {
+                            Id = 100,
+                            Goals = 1,
+                            PlayerStatisticsPerGame_GamesId = 34,
+                            PlayerStatisticsPerGame_PlayersId = 89
+                        },
+                        new
+                        {
+                            Id = 101,
+                            Goals = 1,
+                            PlayerStatisticsPerGame_GamesId = 35,
+                            PlayerStatisticsPerGame_PlayersId = 113
+                        },
+                        new
+                        {
+                            Id = 102,
+                            Goals = 1,
+                            PlayerStatisticsPerGame_GamesId = 35,
+                            PlayerStatisticsPerGame_PlayersId = 131
+                        },
+                        new
+                        {
+                            Id = 103,
+                            Goals = 1,
+                            PlayerStatisticsPerGame_GamesId = 36,
+                            PlayerStatisticsPerGame_PlayersId = 233
+                        },
+                        new
+                        {
+                            Id = 104,
+                            Goals = 1,
+                            PlayerStatisticsPerGame_GamesId = 36,
+                            PlayerStatisticsPerGame_PlayersId = 399
+                        },
+                        new
+                        {
+                            Id = 105,
+                            Goals = 1,
+                            PlayerStatisticsPerGame_GamesId = 37,
+                            PlayerStatisticsPerGame_PlayersId = 217
+                        },
+                        new
+                        {
+                            Id = 106,
+                            Goals = 1,
+                            PlayerStatisticsPerGame_GamesId = 37,
+                            PlayerStatisticsPerGame_PlayersId = 215
+                        },
+                        new
+                        {
+                            Id = 107,
+                            Goals = 1,
+                            PlayerStatisticsPerGame_GamesId = 38,
+                            PlayerStatisticsPerGame_PlayersId = 280
+                        },
+                        new
+                        {
+                            Id = 108,
+                            Goals = 1,
+                            PlayerStatisticsPerGame_GamesId = 38,
+                            PlayerStatisticsPerGame_PlayersId = 274
+                        },
+                        new
+                        {
+                            Id = 109,
+                            Goals = 1,
+                            PlayerStatisticsPerGame_GamesId = 38,
+                            PlayerStatisticsPerGame_PlayersId = 273
+                        },
+                        new
+                        {
+                            Id = 110,
+                            Goals = 1,
+                            PlayerStatisticsPerGame_GamesId = 38,
+                            PlayerStatisticsPerGame_PlayersId = 371
+                        },
+                        new
+                        {
+                            Id = 111,
+                            Goals = 1,
+                            PlayerStatisticsPerGame_GamesId = 38,
+                            PlayerStatisticsPerGame_PlayersId = 376
+                        },
+                        new
+                        {
+                            Id = 112,
+                            Goals = 1,
+                            PlayerStatisticsPerGame_GamesId = 38,
+                            PlayerStatisticsPerGame_PlayersId = 362
+                        },
+                        new
+                        {
+                            Id = 113,
+                            Goals = 1,
+                            PlayerStatisticsPerGame_GamesId = 38,
+                            PlayerStatisticsPerGame_PlayersId = 378
+                        },
+                        new
+                        {
+                            Id = 114,
+                            Goals = 1,
+                            PlayerStatisticsPerGame_GamesId = 39,
+                            PlayerStatisticsPerGame_PlayersId = 300
+                        },
+                        new
+                        {
+                            Id = 115,
+                            Goals = 1,
+                            PlayerStatisticsPerGame_GamesId = 39,
+                            PlayerStatisticsPerGame_PlayersId = 293
+                        },
+                        new
+                        {
+                            Id = 116,
+                            Goals = 1,
+                            PlayerStatisticsPerGame_GamesId = 40,
+                            PlayerStatisticsPerGame_PlayersId = 315
+                        },
+                        new
+                        {
+                            Id = 117,
+                            Goals = 1,
+                            PlayerStatisticsPerGame_GamesId = 40,
+                            PlayerStatisticsPerGame_PlayersId = 336
+                        },
+                        new
+                        {
+                            Id = 118,
+                            Goals = 1,
+                            PlayerStatisticsPerGame_GamesId = 40,
+                            PlayerStatisticsPerGame_PlayersId = 334
+                        },
+                        new
+                        {
+                            Id = 119,
+                            Goals = 1,
+                            PlayerStatisticsPerGame_GamesId = 41,
+                            PlayerStatisticsPerGame_PlayersId = 600
+                        },
+                        new
+                        {
+                            Id = 120,
+                            Goals = 1,
+                            PlayerStatisticsPerGame_GamesId = 41,
+                            PlayerStatisticsPerGame_PlayersId = 599
+                        },
+                        new
+                        {
+                            Id = 121,
+                            Goals = 1,
+                            PlayerStatisticsPerGame_GamesId = 41,
+                            PlayerStatisticsPerGame_PlayersId = 589
+                        },
+                        new
+                        {
+                            Id = 122,
+                            Goals = 1,
+                            PlayerStatisticsPerGame_GamesId = 42,
+                            PlayerStatisticsPerGame_PlayersId = 441
+                        },
+                        new
+                        {
+                            Id = 123,
+                            Goals = 1,
+                            PlayerStatisticsPerGame_GamesId = 42,
+                            PlayerStatisticsPerGame_PlayersId = 453
+                        },
+                        new
+                        {
+                            Id = 124,
+                            Goals = 1,
+                            PlayerStatisticsPerGame_GamesId = 42,
+                            PlayerStatisticsPerGame_PlayersId = 413
+                        },
+                        new
+                        {
+                            Id = 125,
+                            Goals = 1,
+                            PlayerStatisticsPerGame_GamesId = 42,
+                            PlayerStatisticsPerGame_PlayersId = 420
+                        },
+                        new
+                        {
+                            Id = 126,
+                            Goals = 1,
+                            PlayerStatisticsPerGame_GamesId = 43,
+                            PlayerStatisticsPerGame_PlayersId = 569
+                        },
+                        new
+                        {
+                            Id = 127,
+                            Goals = 1,
+                            PlayerStatisticsPerGame_GamesId = 44,
+                            PlayerStatisticsPerGame_PlayersId = 485
+                        },
+                        new
+                        {
+                            Id = 128,
+                            Goals = 1,
+                            PlayerStatisticsPerGame_GamesId = 45,
+                            PlayerStatisticsPerGame_PlayersId = 521
+                        },
+                        new
+                        {
+                            Id = 129,
+                            Goals = 1,
+                            PlayerStatisticsPerGame_GamesId = 45,
+                            PlayerStatisticsPerGame_PlayersId = 523
+                        },
+                        new
+                        {
+                            Id = 133,
+                            Goals = 1,
+                            PlayerStatisticsPerGame_GamesId = 46,
+                            PlayerStatisticsPerGame_PlayersId = 191
+                        },
+                        new
+                        {
+                            Id = 134,
+                            Goals = 1,
+                            PlayerStatisticsPerGame_GamesId = 46,
+                            PlayerStatisticsPerGame_PlayersId = 198
+                        },
+                        new
+                        {
+                            Id = 135,
+                            Goals = 1,
+                            PlayerStatisticsPerGame_GamesId = 46,
+                            PlayerStatisticsPerGame_PlayersId = 127
+                        },
+                        new
+                        {
+                            Id = 136,
+                            Goals = 1,
+                            PlayerStatisticsPerGame_GamesId = 47,
+                            PlayerStatisticsPerGame_PlayersId = 160
+                        },
+                        new
+                        {
+                            Id = 143,
+                            Goals = 1,
+                            PlayerStatisticsPerGame_GamesId = 49,
+                            PlayerStatisticsPerGame_PlayersId = 8
+                        },
+                        new
+                        {
+                            Id = 144,
+                            Goals = 1,
+                            PlayerStatisticsPerGame_GamesId = 49,
+                            PlayerStatisticsPerGame_PlayersId = 77
+                        },
+                        new
+                        {
+                            Id = 146,
+                            Goals = 1,
+                            PlayerStatisticsPerGame_GamesId = 50,
+                            PlayerStatisticsPerGame_PlayersId = 36
+                        },
+                        new
+                        {
+                            Id = 147,
+                            Goals = 1,
+                            PlayerStatisticsPerGame_GamesId = 50,
+                            PlayerStatisticsPerGame_PlayersId = 53
+                        },
+                        new
+                        {
+                            Id = 148,
+                            Goals = 1,
+                            PlayerStatisticsPerGame_GamesId = 51,
+                            PlayerStatisticsPerGame_PlayersId = 387
+                        },
+                        new
+                        {
+                            Id = 149,
+                            Goals = 1,
+                            PlayerStatisticsPerGame_GamesId = 51,
+                            PlayerStatisticsPerGame_PlayersId = 398
+                        },
+                        new
+                        {
+                            Id = 150,
+                            Goals = 1,
+                            PlayerStatisticsPerGame_GamesId = 51,
+                            PlayerStatisticsPerGame_PlayersId = 336
+                        },
+                        new
+                        {
+                            Id = 151,
+                            Goals = 1,
+                            PlayerStatisticsPerGame_GamesId = 52,
+                            PlayerStatisticsPerGame_PlayersId = 314
+                        },
+                        new
+                        {
+                            Id = 152,
+                            Goals = 1,
+                            PlayerStatisticsPerGame_GamesId = 53,
+                            PlayerStatisticsPerGame_PlayersId = 372
+                        },
+                        new
+                        {
+                            Id = 153,
+                            Goals = 1,
+                            PlayerStatisticsPerGame_GamesId = 53,
+                            PlayerStatisticsPerGame_PlayersId = 291
+                        },
+                        new
+                        {
+                            Id = 154,
+                            Goals = 1,
+                            PlayerStatisticsPerGame_GamesId = 53,
+                            PlayerStatisticsPerGame_PlayersId = 295
+                        },
+                        new
+                        {
+                            Id = 155,
+                            Goals = 1,
+                            PlayerStatisticsPerGame_GamesId = 55,
+                            PlayerStatisticsPerGame_PlayersId = 237
+                        },
+                        new
+                        {
+                            Id = 156,
+                            Goals = 1,
+                            PlayerStatisticsPerGame_GamesId = 55,
+                            PlayerStatisticsPerGame_PlayersId = 241
+                        },
+                        new
+                        {
+                            Id = 157,
+                            Goals = 1,
+                            PlayerStatisticsPerGame_GamesId = 56,
+                            PlayerStatisticsPerGame_PlayersId = 581
+                        },
+                        new
+                        {
+                            Id = 161,
+                            Goals = 1,
+                            PlayerStatisticsPerGame_GamesId = 58,
+                            PlayerStatisticsPerGame_PlayersId = 569
+                        },
+                        new
+                        {
+                            Id = 162,
+                            Goals = 1,
+                            PlayerStatisticsPerGame_GamesId = 58,
+                            PlayerStatisticsPerGame_PlayersId = 486
+                        },
+                        new
+                        {
+                            Id = 164,
+                            Goals = 1,
+                            PlayerStatisticsPerGame_GamesId = 60,
+                            PlayerStatisticsPerGame_PlayersId = 425
+                        },
+                        new
+                        {
+                            Id = 165,
+                            Goals = 1,
+                            PlayerStatisticsPerGame_GamesId = 60,
+                            PlayerStatisticsPerGame_PlayersId = 431
+                        },
+                        new
+                        {
+                            Id = 166,
+                            Goals = 1,
+                            PlayerStatisticsPerGame_GamesId = 60,
+                            PlayerStatisticsPerGame_PlayersId = 441
+                        },
+                        new
+                        {
+                            Id = 167,
+                            Goals = 1,
+                            PlayerStatisticsPerGame_GamesId = 60,
+                            PlayerStatisticsPerGame_PlayersId = 445
+                        },
+                        new
+                        {
+                            Id = 168,
+                            Goals = 1,
+                            PlayerStatisticsPerGame_GamesId = 61,
+                            PlayerStatisticsPerGame_PlayersId = 42
+                        },
+                        new
+                        {
+                            Id = 169,
+                            Goals = 1,
+                            PlayerStatisticsPerGame_GamesId = 61,
+                            PlayerStatisticsPerGame_PlayersId = 46
+                        },
+                        new
+                        {
+                            Id = 170,
+                            Goals = 1,
+                            PlayerStatisticsPerGame_GamesId = 62,
+                            PlayerStatisticsPerGame_PlayersId = 65
+                        },
+                        new
+                        {
+                            Id = 171,
+                            Goals = 1,
+                            PlayerStatisticsPerGame_GamesId = 62,
+                            PlayerStatisticsPerGame_PlayersId = 32
+                        },
+                        new
+                        {
+                            Id = 172,
+                            Goals = 1,
+                            PlayerStatisticsPerGame_GamesId = 62,
+                            PlayerStatisticsPerGame_PlayersId = 38
+                        },
+                        new
+                        {
+                            Id = 173,
+                            Goals = 1,
+                            PlayerStatisticsPerGame_GamesId = 62,
+                            PlayerStatisticsPerGame_PlayersId = 27
+                        },
+                        new
+                        {
+                            Id = 174,
+                            Goals = 1,
+                            PlayerStatisticsPerGame_GamesId = 63,
+                            PlayerStatisticsPerGame_PlayersId = 91
+                        },
+                        new
+                        {
+                            Id = 175,
+                            Goals = 1,
+                            PlayerStatisticsPerGame_GamesId = 63,
+                            PlayerStatisticsPerGame_PlayersId = 11
+                        },
+                        new
+                        {
+                            Id = 176,
+                            Goals = 1,
+                            PlayerStatisticsPerGame_GamesId = 64,
+                            PlayerStatisticsPerGame_PlayersId = 175
+                        },
+                        new
+                        {
+                            Id = 177,
+                            Goals = 1,
+                            PlayerStatisticsPerGame_GamesId = 65,
+                            PlayerStatisticsPerGame_PlayersId = 137
+                        },
+                        new
+                        {
+                            Id = 178,
+                            Goals = 1,
+                            PlayerStatisticsPerGame_GamesId = 65,
+                            PlayerStatisticsPerGame_PlayersId = 149
+                        },
+                        new
+                        {
+                            Id = 179,
+                            Goals = 1,
+                            PlayerStatisticsPerGame_GamesId = 65,
+                            PlayerStatisticsPerGame_PlayersId = 158
+                        },
+                        new
+                        {
+                            Id = 180,
+                            Goals = 1,
+                            PlayerStatisticsPerGame_GamesId = 65,
+                            PlayerStatisticsPerGame_PlayersId = 154
+                        },
+                        new
+                        {
+                            Id = 181,
+                            Goals = 1,
+                            PlayerStatisticsPerGame_GamesId = 66,
+                            PlayerStatisticsPerGame_PlayersId = 259
+                        },
+                        new
+                        {
+                            Id = 182,
+                            Goals = 1,
+                            PlayerStatisticsPerGame_GamesId = 68,
+                            PlayerStatisticsPerGame_PlayersId = 295
+                        },
+                        new
+                        {
+                            Id = 184,
+                            Goals = 1,
+                            PlayerStatisticsPerGame_GamesId = 68,
+                            PlayerStatisticsPerGame_PlayersId = 211
+                        },
+                        new
+                        {
+                            Id = 185,
+                            Goals = 1,
+                            PlayerStatisticsPerGame_GamesId = 69,
+                            PlayerStatisticsPerGame_PlayersId = 370
+                        },
+                        new
+                        {
+                            Id = 186,
+                            Goals = 1,
+                            PlayerStatisticsPerGame_GamesId = 69,
+                            PlayerStatisticsPerGame_PlayersId = 374
+                        },
+                        new
+                        {
+                            Id = 187,
+                            Goals = 1,
+                            PlayerStatisticsPerGame_GamesId = 69,
+                            PlayerStatisticsPerGame_PlayersId = 380
+                        },
+                        new
+                        {
+                            Id = 188,
+                            Goals = 1,
+                            PlayerStatisticsPerGame_GamesId = 70,
+                            PlayerStatisticsPerGame_PlayersId = 335
+                        },
+                        new
+                        {
+                            Id = 189,
+                            Goals = 1,
+                            PlayerStatisticsPerGame_GamesId = 70,
+                            PlayerStatisticsPerGame_PlayersId = 347
+                        },
+                        new
+                        {
+                            Id = 193,
+                            Goals = 1,
+                            PlayerStatisticsPerGame_GamesId = 72,
+                            PlayerStatisticsPerGame_PlayersId = 424
+                        },
+                        new
+                        {
+                            Id = 194,
+                            Goals = 1,
+                            PlayerStatisticsPerGame_GamesId = 72,
+                            PlayerStatisticsPerGame_PlayersId = 432
+                        },
+                        new
+                        {
+                            Id = 195,
+                            Goals = 1,
+                            PlayerStatisticsPerGame_GamesId = 72,
+                            PlayerStatisticsPerGame_PlayersId = 422
+                        },
+                        new
+                        {
+                            Id = 196,
+                            Goals = 1,
+                            PlayerStatisticsPerGame_GamesId = 73,
+                            PlayerStatisticsPerGame_PlayersId = 500
+                        },
+                        new
+                        {
+                            Id = 199,
+                            Goals = 1,
+                            PlayerStatisticsPerGame_GamesId = 73,
+                            PlayerStatisticsPerGame_PlayersId = 406
+                        },
+                        new
+                        {
+                            Id = 200,
+                            Goals = 1,
+                            PlayerStatisticsPerGame_GamesId = 74,
+                            PlayerStatisticsPerGame_PlayersId = 563
+                        },
+                        new
+                        {
+                            Id = 201,
+                            Goals = 1,
+                            PlayerStatisticsPerGame_GamesId = 74,
+                            PlayerStatisticsPerGame_PlayersId = 573
+                        },
+                        new
+                        {
+                            Id = 203,
+                            Goals = 1,
+                            PlayerStatisticsPerGame_GamesId = 75,
+                            PlayerStatisticsPerGame_PlayersId = 541
+                        },
+                        new
+                        {
+                            Id = 204,
+                            Goals = 1,
+                            PlayerStatisticsPerGame_GamesId = 75,
+                            PlayerStatisticsPerGame_PlayersId = 547
+                        },
+                        new
+                        {
+                            Id = 206,
+                            Goals = 1,
+                            PlayerStatisticsPerGame_GamesId = 76,
+                            PlayerStatisticsPerGame_PlayersId = 181
+                        },
+                        new
+                        {
+                            Id = 207,
+                            Goals = 1,
+                            PlayerStatisticsPerGame_GamesId = 76,
+                            PlayerStatisticsPerGame_PlayersId = 187
+                        },
+                        new
+                        {
+                            Id = 208,
+                            Goals = 1,
+                            PlayerStatisticsPerGame_GamesId = 76,
+                            PlayerStatisticsPerGame_PlayersId = 156
+                        },
+                        new
+                        {
+                            Id = 209,
+                            Goals = 1,
+                            PlayerStatisticsPerGame_GamesId = 77,
+                            PlayerStatisticsPerGame_PlayersId = 132
+                        },
+                        new
+                        {
+                            Id = 211,
+                            Goals = 1,
+                            PlayerStatisticsPerGame_GamesId = 77,
+                            PlayerStatisticsPerGame_PlayersId = 128
+                        },
+                        new
+                        {
+                            Id = 212,
+                            Goals = 1,
+                            PlayerStatisticsPerGame_GamesId = 78,
+                            PlayerStatisticsPerGame_PlayersId = 6
+                        },
+                        new
+                        {
+                            Id = 213,
+                            Goals = 1,
+                            PlayerStatisticsPerGame_GamesId = 78,
+                            PlayerStatisticsPerGame_PlayersId = 113
+                        },
+                        new
+                        {
+                            Id = 215,
+                            Goals = 1,
+                            PlayerStatisticsPerGame_GamesId = 79,
+                            PlayerStatisticsPerGame_PlayersId = 96
+                        },
+                        new
+                        {
+                            Id = 216,
+                            Goals = 1,
+                            PlayerStatisticsPerGame_GamesId = 80,
+                            PlayerStatisticsPerGame_PlayersId = 54
+                        },
+                        new
+                        {
+                            Id = 217,
+                            Goals = 1,
+                            PlayerStatisticsPerGame_GamesId = 80,
+                            PlayerStatisticsPerGame_PlayersId = 61
+                        },
+                        new
+                        {
+                            Id = 218,
+                            Goals = 1,
+                            PlayerStatisticsPerGame_GamesId = 80,
+                            PlayerStatisticsPerGame_PlayersId = 74
+                        },
+                        new
+                        {
+                            Id = 219,
+                            Goals = 1,
+                            PlayerStatisticsPerGame_GamesId = 80,
+                            PlayerStatisticsPerGame_PlayersId = 75
+                        },
+                        new
+                        {
+                            Id = 220,
+                            Goals = 1,
+                            PlayerStatisticsPerGame_GamesId = 81,
+                            PlayerStatisticsPerGame_PlayersId = 391
+                        },
+                        new
+                        {
+                            Id = 221,
+                            Goals = 1,
+                            PlayerStatisticsPerGame_GamesId = 82,
+                            PlayerStatisticsPerGame_PlayersId = 377
+                        },
+                        new
+                        {
+                            Id = 223,
+                            Goals = 1,
+                            PlayerStatisticsPerGame_GamesId = 82,
+                            PlayerStatisticsPerGame_PlayersId = 340
+                        },
+                        new
+                        {
+                            Id = 224,
+                            Goals = 1,
+                            PlayerStatisticsPerGame_GamesId = 83,
+                            PlayerStatisticsPerGame_PlayersId = 319
+                        },
+                        new
+                        {
+                            Id = 225,
+                            Goals = 1,
+                            PlayerStatisticsPerGame_GamesId = 83,
+                            PlayerStatisticsPerGame_PlayersId = 320
+                        },
+                        new
+                        {
+                            Id = 226,
+                            Goals = 1,
+                            PlayerStatisticsPerGame_GamesId = 84,
+                            PlayerStatisticsPerGame_PlayersId = 234
+                        },
+                        new
+                        {
+                            Id = 227,
+                            Goals = 1,
+                            PlayerStatisticsPerGame_GamesId = 85,
+                            PlayerStatisticsPerGame_PlayersId = 251
+                        },
+                        new
+                        {
+                            Id = 228,
+                            Goals = 1,
+                            PlayerStatisticsPerGame_GamesId = 85,
+                            PlayerStatisticsPerGame_PlayersId = 265
+                        },
+                        new
+                        {
+                            Id = 229,
+                            Goals = 1,
+                            PlayerStatisticsPerGame_GamesId = 85,
+                            PlayerStatisticsPerGame_PlayersId = 277
+                        },
+                        new
+                        {
+                            Id = 232,
+                            Goals = 1,
+                            PlayerStatisticsPerGame_GamesId = 86,
+                            PlayerStatisticsPerGame_PlayersId = 581
+                        },
+                        new
+                        {
+                            Id = 233,
+                            Goals = 1,
+                            PlayerStatisticsPerGame_GamesId = 86,
+                            PlayerStatisticsPerGame_PlayersId = 595
+                        },
+                        new
+                        {
+                            Id = 234,
+                            Goals = 1,
+                            PlayerStatisticsPerGame_GamesId = 86,
+                            PlayerStatisticsPerGame_PlayersId = 583
+                        },
+                        new
+                        {
+                            Id = 236,
+                            Goals = 1,
+                            PlayerStatisticsPerGame_GamesId = 87,
+                            PlayerStatisticsPerGame_PlayersId = 566
+                        },
+                        new
+                        {
+                            Id = 237,
+                            Goals = 1,
+                            PlayerStatisticsPerGame_GamesId = 88,
+                            PlayerStatisticsPerGame_PlayersId = 407
+                        },
+                        new
+                        {
+                            Id = 238,
+                            Goals = 1,
+                            PlayerStatisticsPerGame_GamesId = 89,
+                            PlayerStatisticsPerGame_PlayersId = 425
+                        },
+                        new
+                        {
+                            Id = 242,
+                            Goals = 1,
+                            PlayerStatisticsPerGame_GamesId = 90,
+                            PlayerStatisticsPerGame_PlayersId = 461
+                        },
+                        new
+                        {
+                            Id = 243,
+                            Goals = 1,
+                            PlayerStatisticsPerGame_GamesId = 90,
+                            PlayerStatisticsPerGame_PlayersId = 471
+                        },
+                        new
+                        {
+                            Id = 244,
+                            Goals = 1,
+                            PlayerStatisticsPerGame_GamesId = 90,
+                            PlayerStatisticsPerGame_PlayersId = 472
+                        },
+                        new
+                        {
+                            Id = 245,
+                            Goals = 1,
+                            PlayerStatisticsPerGame_GamesId = 91,
+                            PlayerStatisticsPerGame_PlayersId = 61
+                        },
+                        new
+                        {
+                            Id = 246,
+                            Goals = 1,
+                            PlayerStatisticsPerGame_GamesId = 91,
+                            PlayerStatisticsPerGame_PlayersId = 193
+                        },
+                        new
+                        {
+                            Id = 248,
+                            Goals = 1,
+                            PlayerStatisticsPerGame_GamesId = 92,
+                            PlayerStatisticsPerGame_PlayersId = 54
+                        },
+                        new
+                        {
+                            Id = 249,
+                            Goals = 1,
+                            PlayerStatisticsPerGame_GamesId = 93,
+                            PlayerStatisticsPerGame_PlayersId = 101
+                        },
+                        new
+                        {
+                            Id = 250,
+                            Goals = 1,
+                            PlayerStatisticsPerGame_GamesId = 93,
+                            PlayerStatisticsPerGame_PlayersId = 120
+                        },
+                        new
+                        {
+                            Id = 251,
+                            Goals = 1,
+                            PlayerStatisticsPerGame_GamesId = 93,
+                            PlayerStatisticsPerGame_PlayersId = 37
+                        },
+                        new
+                        {
+                            Id = 252,
+                            Goals = 1,
+                            PlayerStatisticsPerGame_GamesId = 94,
+                            PlayerStatisticsPerGame_PlayersId = 122
+                        },
+                        new
+                        {
+                            Id = 253,
+                            Goals = 1,
+                            PlayerStatisticsPerGame_GamesId = 94,
+                            PlayerStatisticsPerGame_PlayersId = 129
+                        },
+                        new
+                        {
+                            Id = 254,
+                            Goals = 1,
+                            PlayerStatisticsPerGame_GamesId = 94,
+                            PlayerStatisticsPerGame_PlayersId = 134
+                        },
+                        new
+                        {
+                            Id = 255,
+                            Goals = 1,
+                            PlayerStatisticsPerGame_GamesId = 95,
+                            PlayerStatisticsPerGame_PlayersId = 141
+                        },
+                        new
+                        {
+                            Id = 256,
+                            Goals = 1,
+                            PlayerStatisticsPerGame_GamesId = 95,
+                            PlayerStatisticsPerGame_PlayersId = 152
+                        },
+                        new
+                        {
+                            Id = 257,
+                            Goals = 1,
+                            PlayerStatisticsPerGame_GamesId = 95,
+                            PlayerStatisticsPerGame_PlayersId = 171
+                        },
+                        new
+                        {
+                            Id = 259,
+                            Goals = 1,
+                            PlayerStatisticsPerGame_GamesId = 96,
+                            PlayerStatisticsPerGame_PlayersId = 393
+                        },
+                        new
+                        {
+                            Id = 260,
+                            Goals = 1,
+                            PlayerStatisticsPerGame_GamesId = 97,
+                            PlayerStatisticsPerGame_PlayersId = 291
+                        },
+                        new
+                        {
+                            Id = 262,
+                            Goals = 1,
+                            PlayerStatisticsPerGame_GamesId = 97,
+                            PlayerStatisticsPerGame_PlayersId = 252
+                        },
+                        new
+                        {
+                            Id = 263,
+                            Goals = 1,
+                            PlayerStatisticsPerGame_GamesId = 98,
+                            PlayerStatisticsPerGame_PlayersId = 316
+                        },
+                        new
+                        {
+                            Id = 265,
+                            Goals = 1,
+                            PlayerStatisticsPerGame_GamesId = 99,
+                            PlayerStatisticsPerGame_PlayersId = 332
+                        },
+                        new
+                        {
+                            Id = 266,
+                            Goals = 1,
+                            PlayerStatisticsPerGame_GamesId = 99,
+                            PlayerStatisticsPerGame_PlayersId = 219
+                        },
+                        new
+                        {
+                            Id = 267,
+                            Goals = 1,
+                            PlayerStatisticsPerGame_GamesId = 101,
+                            PlayerStatisticsPerGame_PlayersId = 471
+                        },
+                        new
+                        {
+                            Id = 269,
+                            Goals = 1,
+                            PlayerStatisticsPerGame_GamesId = 101,
+                            PlayerStatisticsPerGame_PlayersId = 600
+                        },
+                        new
+                        {
+                            Id = 274,
+                            Goals = 1,
+                            PlayerStatisticsPerGame_GamesId = 102,
+                            PlayerStatisticsPerGame_PlayersId = 445
+                        },
+                        new
+                        {
+                            Id = 277,
+                            Goals = 1,
+                            PlayerStatisticsPerGame_GamesId = 104,
+                            PlayerStatisticsPerGame_PlayersId = 420
+                        },
+                        new
+                        {
+                            Id = 278,
+                            Goals = 1,
+                            PlayerStatisticsPerGame_GamesId = 104,
+                            PlayerStatisticsPerGame_PlayersId = 539
+                        },
+                        new
+                        {
+                            Id = 280,
+                            Goals = 1,
+                            PlayerStatisticsPerGame_GamesId = 105,
+                            PlayerStatisticsPerGame_PlayersId = 561
+                        },
+                        new
+                        {
+                            Id = 281,
+                            Goals = 1,
+                            PlayerStatisticsPerGame_GamesId = 105,
+                            PlayerStatisticsPerGame_PlayersId = 570
+                        },
+                        new
+                        {
+                            Id = 282,
+                            Goals = 1,
+                            PlayerStatisticsPerGame_GamesId = 105,
+                            PlayerStatisticsPerGame_PlayersId = 573
+                        },
+                        new
+                        {
+                            Id = 283,
+                            Goals = 1,
+                            PlayerStatisticsPerGame_GamesId = 106,
+                            PlayerStatisticsPerGame_PlayersId = 191
+                        },
+                        new
+                        {
+                            Id = 284,
+                            Goals = 1,
+                            PlayerStatisticsPerGame_GamesId = 106,
+                            PlayerStatisticsPerGame_PlayersId = 181
+                        },
+                        new
+                        {
+                            Id = 285,
+                            Goals = 1,
+                            PlayerStatisticsPerGame_GamesId = 106,
+                            PlayerStatisticsPerGame_PlayersId = 177
+                        },
+                        new
+                        {
+                            Id = 287,
+                            Goals = 1,
+                            PlayerStatisticsPerGame_GamesId = 108,
+                            PlayerStatisticsPerGame_PlayersId = 22
+                        },
+                        new
+                        {
+                            Id = 288,
+                            Goals = 1,
+                            PlayerStatisticsPerGame_GamesId = 108,
+                            PlayerStatisticsPerGame_PlayersId = 39
+                        },
+                        new
+                        {
+                            Id = 289,
+                            Goals = 1,
+                            PlayerStatisticsPerGame_GamesId = 108,
+                            PlayerStatisticsPerGame_PlayersId = 125
+                        },
+                        new
+                        {
+                            Id = 290,
+                            Goals = 1,
+                            PlayerStatisticsPerGame_GamesId = 109,
+                            PlayerStatisticsPerGame_PlayersId = 112
+                        },
+                        new
+                        {
+                            Id = 291,
+                            Goals = 1,
+                            PlayerStatisticsPerGame_GamesId = 109,
+                            PlayerStatisticsPerGame_PlayersId = 59
+                        },
+                        new
+                        {
+                            Id = 292,
+                            Goals = 1,
+                            PlayerStatisticsPerGame_GamesId = 110,
+                            PlayerStatisticsPerGame_PlayersId = 77
+                        },
+                        new
+                        {
+                            Id = 293,
+                            Goals = 1,
+                            PlayerStatisticsPerGame_GamesId = 110,
+                            PlayerStatisticsPerGame_PlayersId = 87
+                        },
+                        new
+                        {
+                            Id = 294,
+                            Goals = 1,
+                            PlayerStatisticsPerGame_GamesId = 111,
+                            PlayerStatisticsPerGame_PlayersId = 399
+                        },
+                        new
+                        {
+                            Id = 295,
+                            Goals = 1,
+                            PlayerStatisticsPerGame_GamesId = 111,
+                            PlayerStatisticsPerGame_PlayersId = 381
+                        },
+                        new
+                        {
+                            Id = 296,
+                            Goals = 1,
+                            PlayerStatisticsPerGame_GamesId = 112,
+                            PlayerStatisticsPerGame_PlayersId = 212
+                        },
+                        new
+                        {
+                            Id = 297,
+                            Goals = 1,
+                            PlayerStatisticsPerGame_GamesId = 112,
+                            PlayerStatisticsPerGame_PlayersId = 217
+                        },
+                        new
+                        {
+                            Id = 299,
+                            Goals = 1,
+                            PlayerStatisticsPerGame_GamesId = 113,
+                            PlayerStatisticsPerGame_PlayersId = 237
+                        },
+                        new
+                        {
+                            Id = 301,
+                            Goals = 1,
+                            PlayerStatisticsPerGame_GamesId = 113,
+                            PlayerStatisticsPerGame_PlayersId = 332
+                        },
+                        new
+                        {
+                            Id = 302,
+                            Goals = 1,
+                            PlayerStatisticsPerGame_GamesId = 113,
+                            PlayerStatisticsPerGame_PlayersId = 333
+                        },
+                        new
+                        {
+                            Id = 304,
+                            Goals = 1,
+                            PlayerStatisticsPerGame_GamesId = 114,
+                            PlayerStatisticsPerGame_PlayersId = 253
+                        },
+                        new
+                        {
+                            Id = 305,
+                            Goals = 1,
+                            PlayerStatisticsPerGame_GamesId = 115,
+                            PlayerStatisticsPerGame_PlayersId = 289
+                        },
+                        new
+                        {
+                            Id = 306,
+                            Goals = 1,
+                            PlayerStatisticsPerGame_GamesId = 115,
+                            PlayerStatisticsPerGame_PlayersId = 298
+                        },
+                        new
+                        {
+                            Id = 307,
+                            Goals = 1,
+                            PlayerStatisticsPerGame_GamesId = 116,
+                            PlayerStatisticsPerGame_PlayersId = 593
+                        },
+                        new
+                        {
+                            Id = 308,
+                            Goals = 1,
+                            PlayerStatisticsPerGame_GamesId = 116,
+                            PlayerStatisticsPerGame_PlayersId = 594
+                        },
+                        new
+                        {
+                            Id = 309,
+                            Goals = 1,
+                            PlayerStatisticsPerGame_GamesId = 116,
+                            PlayerStatisticsPerGame_PlayersId = 581
+                        },
+                        new
+                        {
+                            Id = 310,
+                            Goals = 1,
+                            PlayerStatisticsPerGame_GamesId = 116,
+                            PlayerStatisticsPerGame_PlayersId = 577
+                        },
+                        new
+                        {
+                            Id = 311,
+                            Goals = 1,
+                            PlayerStatisticsPerGame_GamesId = 117,
+                            PlayerStatisticsPerGame_PlayersId = 405
+                        },
+                        new
+                        {
+                            Id = 319,
+                            Goals = 1,
+                            PlayerStatisticsPerGame_GamesId = 119,
+                            PlayerStatisticsPerGame_PlayersId = 514
+                        },
+                        new
+                        {
+                            Id = 320,
+                            Goals = 1,
+                            PlayerStatisticsPerGame_GamesId = 120,
+                            PlayerStatisticsPerGame_PlayersId = 488
+                        },
+                        new
+                        {
+                            Id = 321,
+                            Goals = 1,
+                            PlayerStatisticsPerGame_GamesId = 121,
+                            PlayerStatisticsPerGame_PlayersId = 81
+                        },
+                        new
+                        {
+                            Id = 322,
+                            Goals = 1,
+                            PlayerStatisticsPerGame_GamesId = 121,
+                            PlayerStatisticsPerGame_PlayersId = 86
+                        },
+                        new
+                        {
+                            Id = 331,
+                            Goals = 1,
+                            PlayerStatisticsPerGame_GamesId = 125,
+                            PlayerStatisticsPerGame_PlayersId = 178
+                        },
+                        new
+                        {
+                            Id = 332,
+                            Goals = 1,
+                            PlayerStatisticsPerGame_GamesId = 125,
+                            PlayerStatisticsPerGame_PlayersId = 11
+                        },
+                        new
+                        {
+                            Id = 333,
+                            Goals = 1,
+                            PlayerStatisticsPerGame_GamesId = 125,
+                            PlayerStatisticsPerGame_PlayersId = 6
+                        },
+                        new
+                        {
+                            Id = 335,
+                            Goals = 1,
+                            PlayerStatisticsPerGame_GamesId = 127,
+                            PlayerStatisticsPerGame_PlayersId = 313
+                        },
+                        new
+                        {
+                            Id = 342,
+                            Goals = 1,
+                            PlayerStatisticsPerGame_GamesId = 131,
+                            PlayerStatisticsPerGame_PlayersId = 593
+                        },
+                        new
+                        {
+                            Id = 344,
+                            Goals = 1,
+                            PlayerStatisticsPerGame_GamesId = 132,
+                            PlayerStatisticsPerGame_PlayersId = 515
+                        },
+                        new
+                        {
+                            Id = 352,
+                            Goals = 1,
+                            PlayerStatisticsPerGame_GamesId = 135,
+                            PlayerStatisticsPerGame_PlayersId = 407
+                        },
+                        new
+                        {
+                            Id = 353,
+                            Goals = 1,
+                            PlayerStatisticsPerGame_GamesId = 136,
+                            PlayerStatisticsPerGame_PlayersId = 185
+                        },
+                        new
+                        {
+                            Id = 354,
+                            Goals = 1,
+                            PlayerStatisticsPerGame_GamesId = 136,
+                            PlayerStatisticsPerGame_PlayersId = 191
+                        },
+                        new
+                        {
+                            Id = 356,
+                            Goals = 1,
+                            PlayerStatisticsPerGame_GamesId = 138,
+                            PlayerStatisticsPerGame_PlayersId = 153
+                        },
+                        new
+                        {
+                            Id = 360,
+                            Goals = 1,
+                            PlayerStatisticsPerGame_GamesId = 139,
+                            PlayerStatisticsPerGame_PlayersId = 123
+                        },
+                        new
+                        {
+                            Id = 368,
+                            Goals = 1,
+                            PlayerStatisticsPerGame_GamesId = 143,
+                            PlayerStatisticsPerGame_PlayersId = 250
+                        },
+                        new
+                        {
+                            Id = 372,
+                            Goals = 1,
+                            PlayerStatisticsPerGame_GamesId = 145,
+                            PlayerStatisticsPerGame_PlayersId = 315
+                        },
+                        new
+                        {
+                            Id = 373,
+                            Goals = 1,
+                            PlayerStatisticsPerGame_GamesId = 145,
+                            PlayerStatisticsPerGame_PlayersId = 311
+                        },
+                        new
+                        {
+                            Id = 382,
+                            Goals = 1,
+                            PlayerStatisticsPerGame_GamesId = 149,
+                            PlayerStatisticsPerGame_PlayersId = 480
+                        },
+                        new
+                        {
+                            Id = 383,
+                            Goals = 1,
+                            PlayerStatisticsPerGame_GamesId = 149,
+                            PlayerStatisticsPerGame_PlayersId = 471
+                        },
+                        new
+                        {
+                            Id = 384,
+                            Goals = 1,
+                            PlayerStatisticsPerGame_GamesId = 150,
+                            PlayerStatisticsPerGame_PlayersId = 504
+                        },
+                        new
+                        {
+                            Id = 385,
+                            Goals = 1,
+                            PlayerStatisticsPerGame_GamesId = 150,
+                            PlayerStatisticsPerGame_PlayersId = 502
+                        },
+                        new
+                        {
+                            Id = 386,
+                            Goals = 1,
+                            PlayerStatisticsPerGame_GamesId = 150,
+                            PlayerStatisticsPerGame_PlayersId = 496
+                        },
+                        new
+                        {
+                            Id = 387,
+                            Goals = 1,
+                            PlayerStatisticsPerGame_GamesId = 271,
+                            PlayerStatisticsPerGame_PlayersId = 12
+                        },
+                        new
+                        {
+                            Id = 388,
+                            Goals = 1,
+                            PlayerStatisticsPerGame_GamesId = 272,
+                            PlayerStatisticsPerGame_PlayersId = 167
+                        },
+                        new
+                        {
+                            Id = 391,
+                            Goals = 1,
+                            PlayerStatisticsPerGame_GamesId = 274,
+                            PlayerStatisticsPerGame_PlayersId = 632
+                        },
+                        new
+                        {
+                            Id = 392,
+                            Goals = 1,
+                            PlayerStatisticsPerGame_GamesId = 275,
+                            PlayerStatisticsPerGame_PlayersId = 88
+                        },
+                        new
+                        {
+                            Id = 393,
+                            Goals = 1,
+                            PlayerStatisticsPerGame_GamesId = 275,
+                            PlayerStatisticsPerGame_PlayersId = 91
+                        },
+                        new
+                        {
+                            Id = 394,
+                            Goals = 1,
+                            PlayerStatisticsPerGame_GamesId = 275,
+                            PlayerStatisticsPerGame_PlayersId = 653
+                        },
+                        new
+                        {
+                            Id = 395,
+                            Goals = 1,
+                            PlayerStatisticsPerGame_GamesId = 278,
+                            PlayerStatisticsPerGame_PlayersId = 157
+                        },
+                        new
+                        {
+                            Id = 397,
+                            Goals = 1,
+                            PlayerStatisticsPerGame_GamesId = 279,
+                            PlayerStatisticsPerGame_PlayersId = 18
+                        },
+                        new
+                        {
+                            Id = 398,
+                            Goals = 1,
+                            PlayerStatisticsPerGame_GamesId = 280,
+                            PlayerStatisticsPerGame_PlayersId = 22
+                        },
+                        new
+                        {
+                            Id = 399,
+                            Goals = 1,
+                            PlayerStatisticsPerGame_GamesId = 280,
+                            PlayerStatisticsPerGame_PlayersId = 25
+                        },
+                        new
+                        {
+                            Id = 400,
+                            Goals = 1,
+                            PlayerStatisticsPerGame_GamesId = 280,
+                            PlayerStatisticsPerGame_PlayersId = 33
+                        },
+                        new
+                        {
+                            Id = 401,
+                            Goals = 1,
+                            PlayerStatisticsPerGame_GamesId = 281,
+                            PlayerStatisticsPerGame_PlayersId = 611
+                        },
+                        new
+                        {
+                            Id = 402,
+                            Goals = 1,
+                            PlayerStatisticsPerGame_GamesId = 281,
+                            PlayerStatisticsPerGame_PlayersId = 49
+                        },
+                        new
+                        {
+                            Id = 403,
+                            Goals = 1,
+                            PlayerStatisticsPerGame_GamesId = 283,
+                            PlayerStatisticsPerGame_PlayersId = 653
+                        },
+                        new
+                        {
+                            Id = 405,
+                            Goals = 1,
+                            PlayerStatisticsPerGame_GamesId = 284,
+                            PlayerStatisticsPerGame_PlayersId = 661
+                        },
+                        new
+                        {
+                            Id = 409,
+                            Goals = 1,
+                            PlayerStatisticsPerGame_GamesId = 286,
+                            PlayerStatisticsPerGame_PlayersId = 712
+                        },
+                        new
+                        {
+                            Id = 410,
+                            Goals = 1,
+                            PlayerStatisticsPerGame_GamesId = 286,
+                            PlayerStatisticsPerGame_PlayersId = 719
+                        },
+                        new
+                        {
+                            Id = 411,
+                            Goals = 1,
+                            PlayerStatisticsPerGame_GamesId = 286,
+                            PlayerStatisticsPerGame_PlayersId = 708
+                        },
+                        new
+                        {
+                            Id = 413,
+                            Goals = 1,
+                            PlayerStatisticsPerGame_GamesId = 287,
+                            PlayerStatisticsPerGame_PlayersId = 8
+                        },
+                        new
+                        {
+                            Id = 414,
+                            Goals = 1,
+                            PlayerStatisticsPerGame_GamesId = 287,
+                            PlayerStatisticsPerGame_PlayersId = 13
+                        },
+                        new
+                        {
+                            Id = 415,
+                            Goals = 1,
+                            PlayerStatisticsPerGame_GamesId = 287,
+                            PlayerStatisticsPerGame_PlayersId = 19
+                        },
+                        new
+                        {
+                            Id = 416,
+                            Goals = 1,
+                            PlayerStatisticsPerGame_GamesId = 287,
+                            PlayerStatisticsPerGame_PlayersId = 15
+                        },
+                        new
+                        {
+                            Id = 417,
+                            Goals = 1,
+                            PlayerStatisticsPerGame_GamesId = 289,
+                            PlayerStatisticsPerGame_PlayersId = 661
+                        },
+                        new
+                        {
+                            Id = 418,
+                            Goals = 1,
+                            PlayerStatisticsPerGame_GamesId = 290,
+                            PlayerStatisticsPerGame_PlayersId = 137
+                        },
+                        new
+                        {
+                            Id = 419,
+                            Goals = 1,
+                            PlayerStatisticsPerGame_GamesId = 290,
+                            PlayerStatisticsPerGame_PlayersId = 140
+                        },
+                        new
+                        {
+                            Id = 421,
+                            Goals = 1,
+                            PlayerStatisticsPerGame_GamesId = 290,
+                            PlayerStatisticsPerGame_PlayersId = 717
+                        },
+                        new
+                        {
+                            Id = 422,
+                            Goals = 1,
+                            PlayerStatisticsPerGame_GamesId = 290,
+                            PlayerStatisticsPerGame_PlayersId = 713
+                        },
+                        new
+                        {
+                            Id = 423,
+                            Goals = 1,
+                            PlayerStatisticsPerGame_GamesId = 290,
+                            PlayerStatisticsPerGame_PlayersId = 706
+                        },
+                        new
+                        {
+                            Id = 425,
+                            Goals = 1,
+                            PlayerStatisticsPerGame_GamesId = 293,
+                            PlayerStatisticsPerGame_PlayersId = 653
+                        },
+                        new
+                        {
+                            Id = 426,
+                            Goals = 1,
+                            PlayerStatisticsPerGame_GamesId = 293,
+                            PlayerStatisticsPerGame_PlayersId = 661
+                        },
+                        new
+                        {
+                            Id = 427,
+                            Goals = 1,
+                            PlayerStatisticsPerGame_GamesId = 294,
+                            PlayerStatisticsPerGame_PlayersId = 137
+                        },
+                        new
+                        {
+                            Id = 428,
+                            Goals = 1,
+                            PlayerStatisticsPerGame_GamesId = 295,
+                            PlayerStatisticsPerGame_PlayersId = 14
+                        },
+                        new
+                        {
+                            Id = 429,
+                            Goals = 1,
+                            PlayerStatisticsPerGame_GamesId = 295,
+                            PlayerStatisticsPerGame_PlayersId = 16
+                        },
+                        new
+                        {
+                            Id = 430,
+                            Goals = 1,
+                            PlayerStatisticsPerGame_GamesId = 295,
+                            PlayerStatisticsPerGame_PlayersId = 4
+                        },
+                        new
+                        {
+                            Id = 433,
+                            Goals = 1,
+                            PlayerStatisticsPerGame_GamesId = 297,
+                            PlayerStatisticsPerGame_PlayersId = 17
+                        },
+                        new
+                        {
+                            Id = 434,
+                            Goals = 1,
+                            PlayerStatisticsPerGame_GamesId = 297,
+                            PlayerStatisticsPerGame_PlayersId = 6
+                        },
+                        new
+                        {
+                            Id = 435,
+                            Goals = 1,
+                            PlayerStatisticsPerGame_GamesId = 297,
+                            PlayerStatisticsPerGame_PlayersId = 2
+                        },
+                        new
+                        {
+                            Id = 436,
+                            Goals = 1,
+                            PlayerStatisticsPerGame_GamesId = 298,
+                            PlayerStatisticsPerGame_PlayersId = 651
+                        },
+                        new
+                        {
+                            Id = 437,
+                            Goals = 1,
+                            PlayerStatisticsPerGame_GamesId = 301,
+                            PlayerStatisticsPerGame_PlayersId = 6
+                        },
+                        new
+                        {
+                            Id = 438,
+                            Goals = 1,
+                            PlayerStatisticsPerGame_GamesId = 301,
+                            PlayerStatisticsPerGame_PlayersId = 12
+                        },
+                        new
+                        {
+                            Id = 439,
+                            Goals = 1,
+                            PlayerStatisticsPerGame_GamesId = 301,
+                            PlayerStatisticsPerGame_PlayersId = 801
+                        },
+                        new
+                        {
+                            Id = 440,
+                            Goals = 1,
+                            PlayerStatisticsPerGame_GamesId = 301,
+                            PlayerStatisticsPerGame_PlayersId = 807
+                        },
+                        new
+                        {
+                            Id = 441,
+                            Goals = 1,
+                            PlayerStatisticsPerGame_GamesId = 302,
+                            PlayerStatisticsPerGame_PlayersId = 821
+                        },
+                        new
+                        {
+                            Id = 442,
+                            Goals = 1,
+                            PlayerStatisticsPerGame_GamesId = 303,
+                            PlayerStatisticsPerGame_PlayersId = 851
+                        },
+                        new
+                        {
+                            Id = 443,
+                            Goals = 1,
+                            PlayerStatisticsPerGame_GamesId = 303,
+                            PlayerStatisticsPerGame_PlayersId = 857
+                        },
+                        new
+                        {
+                            Id = 444,
+                            Goals = 1,
+                            PlayerStatisticsPerGame_GamesId = 303,
+                            PlayerStatisticsPerGame_PlayersId = 852
+                        },
+                        new
+                        {
+                            Id = 445,
+                            Goals = 1,
+                            PlayerStatisticsPerGame_GamesId = 303,
+                            PlayerStatisticsPerGame_PlayersId = 954
+                        },
+                        new
+                        {
+                            Id = 446,
+                            Goals = 1,
+                            PlayerStatisticsPerGame_GamesId = 303,
+                            PlayerStatisticsPerGame_PlayersId = 945
+                        },
+                        new
+                        {
+                            Id = 447,
+                            Goals = 1,
+                            PlayerStatisticsPerGame_GamesId = 304,
+                            PlayerStatisticsPerGame_PlayersId = 938
+                        },
+                        new
+                        {
+                            Id = 448,
+                            Goals = 1,
+                            PlayerStatisticsPerGame_GamesId = 304,
+                            PlayerStatisticsPerGame_PlayersId = 937
+                        },
+                        new
+                        {
+                            Id = 449,
+                            Goals = 1,
+                            PlayerStatisticsPerGame_GamesId = 305,
+                            PlayerStatisticsPerGame_PlayersId = 899
+                        },
+                        new
+                        {
+                            Id = 450,
+                            Goals = 1,
+                            PlayerStatisticsPerGame_GamesId = 305,
+                            PlayerStatisticsPerGame_PlayersId = 902
+                        },
+                        new
+                        {
+                            Id = 451,
+                            Goals = 1,
+                            PlayerStatisticsPerGame_GamesId = 306,
+                            PlayerStatisticsPerGame_PlayersId = 961
+                        },
+                        new
+                        {
+                            Id = 452,
+                            Goals = 1,
+                            PlayerStatisticsPerGame_GamesId = 306,
+                            PlayerStatisticsPerGame_PlayersId = 964
+                        },
+                        new
+                        {
+                            Id = 453,
+                            Goals = 1,
+                            PlayerStatisticsPerGame_GamesId = 306,
+                            PlayerStatisticsPerGame_PlayersId = 969
+                        },
+                        new
+                        {
+                            Id = 454,
+                            Goals = 1,
+                            PlayerStatisticsPerGame_GamesId = 307,
+                            PlayerStatisticsPerGame_PlayersId = 831
+                        },
+                        new
+                        {
+                            Id = 455,
+                            Goals = 1,
+                            PlayerStatisticsPerGame_GamesId = 308,
+                            PlayerStatisticsPerGame_PlayersId = 901
+                        },
+                        new
+                        {
+                            Id = 456,
+                            Goals = 1,
+                            PlayerStatisticsPerGame_GamesId = 308,
+                            PlayerStatisticsPerGame_PlayersId = 911
+                        },
+                        new
+                        {
+                            Id = 457,
+                            Goals = 1,
+                            PlayerStatisticsPerGame_GamesId = 308,
+                            PlayerStatisticsPerGame_PlayersId = 868
+                        },
+                        new
+                        {
+                            Id = 458,
+                            Goals = 1,
+                            PlayerStatisticsPerGame_GamesId = 308,
+                            PlayerStatisticsPerGame_PlayersId = 869
+                        },
+                        new
+                        {
+                            Id = 459,
+                            Goals = 1,
+                            PlayerStatisticsPerGame_GamesId = 308,
+                            PlayerStatisticsPerGame_PlayersId = 865
+                        },
+                        new
+                        {
+                            Id = 460,
+                            Goals = 1,
+                            PlayerStatisticsPerGame_GamesId = 309,
+                            PlayerStatisticsPerGame_PlayersId = 934
+                        },
+                        new
+                        {
+                            Id = 461,
+                            Goals = 1,
+                            PlayerStatisticsPerGame_GamesId = 309,
+                            PlayerStatisticsPerGame_PlayersId = 854
+                        },
+                        new
+                        {
+                            Id = 462,
+                            Goals = 1,
+                            PlayerStatisticsPerGame_GamesId = 310,
+                            PlayerStatisticsPerGame_PlayersId = 958
+                        },
+                        new
+                        {
+                            Id = 463,
+                            Goals = 1,
+                            PlayerStatisticsPerGame_GamesId = 311,
+                            PlayerStatisticsPerGame_PlayersId = 17
+                        },
+                        new
+                        {
+                            Id = 464,
+                            Goals = 1,
+                            PlayerStatisticsPerGame_GamesId = 311,
+                            PlayerStatisticsPerGame_PlayersId = 7
+                        },
+                        new
+                        {
+                            Id = 465,
+                            Goals = 1,
+                            PlayerStatisticsPerGame_GamesId = 311,
+                            PlayerStatisticsPerGame_PlayersId = 821
+                        },
+                        new
+                        {
+                            Id = 466,
+                            Goals = 1,
+                            PlayerStatisticsPerGame_GamesId = 312,
+                            PlayerStatisticsPerGame_PlayersId = 851
+                        },
+                        new
+                        {
+                            Id = 467,
+                            Goals = 1,
+                            PlayerStatisticsPerGame_GamesId = 312,
+                            PlayerStatisticsPerGame_PlayersId = 813
+                        },
+                        new
+                        {
+                            Id = 468,
+                            Goals = 1,
+                            PlayerStatisticsPerGame_GamesId = 312,
+                            PlayerStatisticsPerGame_PlayersId = 801
+                        },
+                        new
+                        {
+                            Id = 469,
+                            Goals = 1,
+                            PlayerStatisticsPerGame_GamesId = 312,
+                            PlayerStatisticsPerGame_PlayersId = 802
+                        },
+                        new
+                        {
+                            Id = 470,
+                            Goals = 1,
+                            PlayerStatisticsPerGame_GamesId = 313,
+                            PlayerStatisticsPerGame_PlayersId = 871
+                        },
+                        new
+                        {
+                            Id = 471,
+                            Goals = 1,
+                            PlayerStatisticsPerGame_GamesId = 313,
+                            PlayerStatisticsPerGame_PlayersId = 873
+                        },
+                        new
+                        {
+                            Id = 472,
+                            Goals = 1,
+                            PlayerStatisticsPerGame_GamesId = 314,
+                            PlayerStatisticsPerGame_PlayersId = 958
+                        },
+                        new
+                        {
+                            Id = 473,
+                            Goals = 1,
+                            PlayerStatisticsPerGame_GamesId = 315,
+                            PlayerStatisticsPerGame_PlayersId = 919
+                        },
+                        new
+                        {
+                            Id = 474,
+                            Goals = 1,
+                            PlayerStatisticsPerGame_GamesId = 315,
+                            PlayerStatisticsPerGame_PlayersId = 939
+                        },
+                        new
+                        {
+                            Id = 475,
+                            Goals = 1,
+                            PlayerStatisticsPerGame_GamesId = 316,
+                            PlayerStatisticsPerGame_PlayersId = 813
+                        },
+                        new
+                        {
+                            Id = 476,
+                            Goals = 1,
+                            PlayerStatisticsPerGame_GamesId = 316,
+                            PlayerStatisticsPerGame_PlayersId = 816
+                        },
+                        new
+                        {
+                            Id = 477,
+                            Goals = 1,
+                            PlayerStatisticsPerGame_GamesId = 316,
+                            PlayerStatisticsPerGame_PlayersId = 819
+                        },
+                        new
+                        {
+                            Id = 478,
+                            Goals = 1,
+                            PlayerStatisticsPerGame_GamesId = 316,
+                            PlayerStatisticsPerGame_PlayersId = 868
+                        },
+                        new
+                        {
+                            Id = 479,
+                            Goals = 1,
+                            PlayerStatisticsPerGame_GamesId = 317,
+                            PlayerStatisticsPerGame_PlayersId = 831
+                        },
+                        new
+                        {
+                            Id = 480,
+                            Goals = 1,
+                            PlayerStatisticsPerGame_GamesId = 317,
+                            PlayerStatisticsPerGame_PlayersId = 833
+                        },
+                        new
+                        {
+                            Id = 481,
+                            Goals = 1,
+                            PlayerStatisticsPerGame_GamesId = 318,
+                            PlayerStatisticsPerGame_PlayersId = 964
+                        },
+                        new
+                        {
+                            Id = 482,
+                            Goals = 1,
+                            PlayerStatisticsPerGame_GamesId = 318,
+                            PlayerStatisticsPerGame_PlayersId = 899
+                        },
+                        new
+                        {
+                            Id = 483,
+                            Goals = 1,
+                            PlayerStatisticsPerGame_GamesId = 319,
+                            PlayerStatisticsPerGame_PlayersId = 933
+                        },
+                        new
+                        {
+                            Id = 484,
+                            Goals = 1,
+                            PlayerStatisticsPerGame_GamesId = 319,
+                            PlayerStatisticsPerGame_PlayersId = 13
+                        },
+                        new
+                        {
+                            Id = 485,
+                            Goals = 1,
+                            PlayerStatisticsPerGame_GamesId = 320,
+                            PlayerStatisticsPerGame_PlayersId = 951
+                        },
+                        new
+                        {
+                            Id = 486,
+                            Goals = 1,
+                            PlayerStatisticsPerGame_GamesId = 320,
+                            PlayerStatisticsPerGame_PlayersId = 948
+                        },
+                        new
+                        {
+                            Id = 487,
+                            Goals = 1,
+                            PlayerStatisticsPerGame_GamesId = 320,
+                            PlayerStatisticsPerGame_PlayersId = 949
+                        },
+                        new
+                        {
+                            Id = 488,
+                            Goals = 1,
+                            PlayerStatisticsPerGame_GamesId = 321,
+                            PlayerStatisticsPerGame_PlayersId = 9
+                        },
+                        new
+                        {
+                            Id = 489,
+                            Goals = 1,
+                            PlayerStatisticsPerGame_GamesId = 321,
+                            PlayerStatisticsPerGame_PlayersId = 856
+                        },
+                        new
+                        {
+                            Id = 490,
+                            Goals = 1,
+                            PlayerStatisticsPerGame_GamesId = 322,
+                            PlayerStatisticsPerGame_PlayersId = 871
+                        },
+                        new
+                        {
+                            Id = 491,
+                            Goals = 1,
+                            PlayerStatisticsPerGame_GamesId = 322,
+                            PlayerStatisticsPerGame_PlayersId = 869
+                        },
+                        new
+                        {
+                            Id = 492,
+                            Goals = 1,
+                            PlayerStatisticsPerGame_GamesId = 322,
+                            PlayerStatisticsPerGame_PlayersId = 823
+                        },
+                        new
+                        {
+                            Id = 493,
+                            Goals = 1,
+                            PlayerStatisticsPerGame_GamesId = 322,
+                            PlayerStatisticsPerGame_PlayersId = 824
+                        },
+                        new
+                        {
+                            Id = 494,
+                            Goals = 1,
+                            PlayerStatisticsPerGame_GamesId = 323,
+                            PlayerStatisticsPerGame_PlayersId = 804
+                        },
+                        new
+                        {
+                            Id = 495,
+                            Goals = 1,
+                            PlayerStatisticsPerGame_GamesId = 323,
+                            PlayerStatisticsPerGame_PlayersId = 813
+                        },
+                        new
+                        {
+                            Id = 496,
+                            Goals = 1,
+                            PlayerStatisticsPerGame_GamesId = 323,
+                            PlayerStatisticsPerGame_PlayersId = 816
+                        },
+                        new
+                        {
+                            Id = 497,
+                            Goals = 1,
+                            PlayerStatisticsPerGame_GamesId = 324,
+                            PlayerStatisticsPerGame_PlayersId = 912
+                        },
+                        new
+                        {
+                            Id = 498,
+                            Goals = 1,
+                            PlayerStatisticsPerGame_GamesId = 324,
+                            PlayerStatisticsPerGame_PlayersId = 908
+                        },
+                        new
+                        {
+                            Id = 499,
+                            Goals = 1,
+                            PlayerStatisticsPerGame_GamesId = 325,
+                            PlayerStatisticsPerGame_PlayersId = 951
+                        },
+                        new
+                        {
+                            Id = 500,
+                            Goals = 1,
+                            PlayerStatisticsPerGame_GamesId = 325,
+                            PlayerStatisticsPerGame_PlayersId = 942
+                        },
+                        new
+                        {
+                            Id = 501,
+                            Goals = 1,
+                            PlayerStatisticsPerGame_GamesId = 325,
+                            PlayerStatisticsPerGame_PlayersId = 931
+                        },
+                        new
+                        {
+                            Id = 502,
+                            Goals = 1,
+                            PlayerStatisticsPerGame_GamesId = 325,
+                            PlayerStatisticsPerGame_PlayersId = 921
                         });
                 });
 
@@ -10503,6 +18707,126 @@ namespace FCUnirea.Persistance.Data.Migrations
                             IsInternal = false,
                             StadiumLocation = "Brașov",
                             StadiumName = "Stadionul Brașov"
+                        },
+                        new
+                        {
+                            Id = 31,
+                            Capacity = 22,
+                            IsInternal = false,
+                            StadiumLocation = "Galati",
+                            StadiumName = "Stadionul Galati"
+                        },
+                        new
+                        {
+                            Id = 32,
+                            Capacity = 15,
+                            IsInternal = false,
+                            StadiumLocation = "Braila",
+                            StadiumName = "Stadionul Braila"
+                        },
+                        new
+                        {
+                            Id = 33,
+                            Capacity = 17,
+                            IsInternal = false,
+                            StadiumLocation = "Giugiu",
+                            StadiumName = "Stadionul Giugiu"
+                        },
+                        new
+                        {
+                            Id = 34,
+                            Capacity = 16,
+                            IsInternal = false,
+                            StadiumLocation = "Ploieti",
+                            StadiumName = "Stadionul Ploieti"
+                        },
+                        new
+                        {
+                            Id = 35,
+                            Capacity = 14,
+                            IsInternal = false,
+                            StadiumLocation = "Focsani",
+                            StadiumName = "Stadionul Focsani"
+                        },
+                        new
+                        {
+                            Id = 36,
+                            Capacity = 19,
+                            IsInternal = false,
+                            StadiumLocation = "Cluj",
+                            StadiumName = "Stadionul Cluj"
+                        },
+                        new
+                        {
+                            Id = 41,
+                            Capacity = 20,
+                            IsInternal = false,
+                            StadiumLocation = "Belgrad",
+                            StadiumName = "Stadionul Belgrad"
+                        },
+                        new
+                        {
+                            Id = 42,
+                            Capacity = 12,
+                            IsInternal = false,
+                            StadiumLocation = "Zagreb",
+                            StadiumName = "Stadionul Zagreb"
+                        },
+                        new
+                        {
+                            Id = 43,
+                            Capacity = 16,
+                            IsInternal = false,
+                            StadiumLocation = "Pireu",
+                            StadiumName = "Stadionul Pireu"
+                        },
+                        new
+                        {
+                            Id = 44,
+                            Capacity = 11,
+                            IsInternal = false,
+                            StadiumLocation = "Istanbul",
+                            StadiumName = "Stadionul Istanbul"
+                        },
+                        new
+                        {
+                            Id = 45,
+                            Capacity = 20,
+                            IsInternal = false,
+                            StadiumLocation = "Barcelona",
+                            StadiumName = "Stadionul Barcelona"
+                        },
+                        new
+                        {
+                            Id = 46,
+                            Capacity = 20,
+                            IsInternal = false,
+                            StadiumLocation = "Munchen",
+                            StadiumName = "Stadionul Munchen"
+                        },
+                        new
+                        {
+                            Id = 47,
+                            Capacity = 19,
+                            IsInternal = false,
+                            StadiumLocation = "Paris",
+                            StadiumName = "Stadionul Paris"
+                        },
+                        new
+                        {
+                            Id = 48,
+                            Capacity = 18,
+                            IsInternal = false,
+                            StadiumLocation = "Manchester",
+                            StadiumName = "Stadionul Manchester"
+                        },
+                        new
+                        {
+                            Id = 49,
+                            Capacity = 18,
+                            IsInternal = false,
+                            StadiumLocation = "Torino",
+                            StadiumName = "Stadionul Torino"
                         });
                 });
 
@@ -10522,7 +18846,7 @@ namespace FCUnirea.Persistance.Data.Migrations
 
                     b.Property<string>("Description")
                         .IsRequired()
-                        .HasColumnType("TEXT")
+                        .HasColumnType("NVARCHAR(MAX)")
                         .HasColumnName("Description");
 
                     b.Property<bool>("IsInternal")
@@ -10548,7 +18872,7 @@ namespace FCUnirea.Persistance.Data.Migrations
                         {
                             Id = 1,
                             CoachName = "Petrica Florea",
-                            Description = " ",
+                            Description = "FC Unirea a fost fondată în anul 1923, având ca scop promovarea valorilor sportive și dezvoltarea fotbalului la nivel local. De-a lungul anilor, clubul a reușit să atragă numeroși tineri talentați din regiune, devenind rapid un punct de referință pentru fotbalul comunitar.\n\nEchipa a debutat în ligile inferioare, dar datorită muncii susținute și implicării staff-ului, FC Unirea a obținut promovări succesive, ajungând să participe în competiții naționale și ulterior europene. Performanțele notabile includ câștigarea campionatului regional în 2012 și participarea constantă în primele eșaloane ale fotbalului românesc începând cu sezonul 2015-2016. ",
                             IsInternal = true,
                             TeamName = "FC Unirea",
                             TeamType = 0
@@ -10557,7 +18881,7 @@ namespace FCUnirea.Persistance.Data.Migrations
                         {
                             Id = 11,
                             CoachName = "Mihai Olaru",
-                            Description = " ",
+                            Description = "FC Unirea U21 a fost înființată ca parte a strategiei de dezvoltare a clubului FC Unirea, având ca principal obiectiv creșterea și promovarea tinerilor jucători către echipa de seniori. Echipa a luat naștere în anul 1993, din dorința de a oferi o rampă de lansare pentru fotbaliștii talentați cu vârste sub 21 de ani.\n\nÎncă de la început, FC Unirea U21 a participat în competițiile naționale de juniori și tineret, obținând rezultate remarcabile și construind o reputație solidă pentru profesionalism și implicare. Mulți dintre jucătorii promovați din cadrul acestei echipe au ajuns ulterior să evolueze cu succes la nivel de seniori, contribuind la performanțele clubului-mamă.\n\nPrin accentul pus pe formare, disciplină și joc de echipă, FC Unirea U21 a devenit un pilon esențial în structura clubului, reprezentând legătura directă dintre academia de juniori și prima echipă. Clubul investește constant în infrastructură, staff și programe de pregătire pentru a asigura continuitatea valorilor și performanțelor fotbalistice. ",
                             IsInternal = true,
                             TeamName = "FC Unirea U21",
                             TeamType = 1
@@ -10566,7 +18890,7 @@ namespace FCUnirea.Persistance.Data.Migrations
                         {
                             Id = 21,
                             CoachName = "Nica Cercel",
-                            Description = " ",
+                            Description = "FC Unirea Youth reprezintă segmentul de juniori al clubului FC Unirea, fiind dedicat dezvoltării copiilor și adolescenților pasionați de fotbal. Echipa a fost creată în anul 1990 ca răspuns la dorința clubului de a construi o academie puternică și de a forma jucători încă de la cele mai fragede vârste.\n\nScopul principal al FC Unirea Youth este identificarea și formarea tinerelor talente, oferindu-le acestora condiții moderne de pregătire, antrenori calificați și participarea la competiții locale și regionale. De-a lungul anilor, această structură a devenit un adevărat incubator de jucători pentru club, numeroși fotbaliști ajungând ulterior să evolueze pentru FC Unirea U21 sau chiar la nivel de seniori.\n\nPrin activitatea sa, FC Unirea Youth promovează nu doar performanța sportivă, ci și valorile educației, fair-play-ului și respectului față de adversar. Clubul continuă să investească în infrastructură și în programe de formare, consolidându-și statutul de centru de excelență pentru tinerii fotbaliști din regiune. ",
                             IsInternal = true,
                             TeamName = "FC Unirea Youth",
                             TeamType = 2
@@ -10584,7 +18908,7 @@ namespace FCUnirea.Persistance.Data.Migrations
                         {
                             Id = 3,
                             CoachName = "Adrian Luca",
-                            Description = "Club extern din liga a II-a",
+                            Description = "Club extern din Est",
                             IsInternal = false,
                             TeamName = "Dinamo Est",
                             TeamType = 0
@@ -10813,6 +19137,177 @@ namespace FCUnirea.Persistance.Data.Migrations
                             IsInternal = false,
                             TeamName = "Youth Arad",
                             TeamType = 2
+                        },
+                        new
+                        {
+                            Id = 31,
+                            CoachName = "Radu Cârciumaru",
+                            Description = "Club extern din liga a III-a",
+                            IsInternal = false,
+                            TeamName = "Steaua Galati",
+                            TeamType = 0
+                        },
+                        new
+                        {
+                            Id = 32,
+                            CoachName = "Radu Tănase",
+                            Description = "Club extern din liga a II-a",
+                            IsInternal = false,
+                            TeamName = "Steaua Braila",
+                            TeamType = 0
+                        },
+                        new
+                        {
+                            Id = 33,
+                            CoachName = "Adrian Cioran",
+                            Description = "Club extern din liga a III-a",
+                            IsInternal = false,
+                            TeamName = "Dinamo Giugiu",
+                            TeamType = 0
+                        },
+                        new
+                        {
+                            Id = 34,
+                            CoachName = "Cezar Năstase",
+                            Description = "Club extern din liga a II-a",
+                            IsInternal = false,
+                            TeamName = "Rapid Ploieti",
+                            TeamType = 0
+                        },
+                        new
+                        {
+                            Id = 35,
+                            CoachName = "Istrate Costache",
+                            Description = "Club extern din liga a III-a",
+                            IsInternal = false,
+                            TeamName = "Petrolul Focsani",
+                            TeamType = 0
+                        },
+                        new
+                        {
+                            Id = 36,
+                            CoachName = "Paul Dobre",
+                            Description = "Club extern din liga a II-a",
+                            IsInternal = false,
+                            TeamName = "Universitatea Cluj",
+                            TeamType = 0
+                        },
+                        new
+                        {
+                            Id = 37,
+                            CoachName = "Ovidiu Istrate",
+                            Description = "Club extern din liga a III-a",
+                            IsInternal = false,
+                            TeamName = "CSM Arad",
+                            TeamType = 0
+                        },
+                        new
+                        {
+                            Id = 38,
+                            CoachName = "Florin Marinescu",
+                            Description = "Club extern din liga a II-a",
+                            IsInternal = false,
+                            TeamName = "Gloria Bistrita",
+                            TeamType = 0
+                        },
+                        new
+                        {
+                            Id = 39,
+                            CoachName = "Cristian Filip",
+                            Description = "Club extern din liga a III-a",
+                            IsInternal = false,
+                            TeamName = "Viitorul Olt",
+                            TeamType = 0
+                        },
+                        new
+                        {
+                            Id = 40,
+                            CoachName = "Ilie Florin",
+                            Description = "Club extern din liga a II-a",
+                            IsInternal = false,
+                            TeamName = "CS Otila",
+                            TeamType = 0
+                        },
+                        new
+                        {
+                            Id = 41,
+                            CoachName = "Radu Gok",
+                            Description = "Club Sarb",
+                            IsInternal = false,
+                            TeamName = "Steaua Belgrad",
+                            TeamType = 0
+                        },
+                        new
+                        {
+                            Id = 42,
+                            CoachName = "Adrian Petrovic",
+                            Description = "Club Croat",
+                            IsInternal = false,
+                            TeamName = "Dinamo Zagreb",
+                            TeamType = 0
+                        },
+                        new
+                        {
+                            Id = 43,
+                            CoachName = "Cezar Papadopoulos",
+                            Description = "Club Grec",
+                            IsInternal = false,
+                            TeamName = "Olympiakos",
+                            TeamType = 0
+                        },
+                        new
+                        {
+                            Id = 44,
+                            CoachName = "Marius Yilmaz",
+                            Description = "Club Turc",
+                            IsInternal = false,
+                            TeamName = "Fenerbahce",
+                            TeamType = 0
+                        },
+                        new
+                        {
+                            Id = 45,
+                            CoachName = "Pablo Garcia",
+                            Description = "Club Spaniol",
+                            IsInternal = false,
+                            TeamName = "Barcelona",
+                            TeamType = 0
+                        },
+                        new
+                        {
+                            Id = 46,
+                            CoachName = "Hans Müller",
+                            Description = "Club German",
+                            IsInternal = false,
+                            TeamName = "Bayern Munchen",
+                            TeamType = 0
+                        },
+                        new
+                        {
+                            Id = 47,
+                            CoachName = "Jean Dupont",
+                            Description = "Club Francez",
+                            IsInternal = false,
+                            TeamName = "Paris Saint-Germain",
+                            TeamType = 0
+                        },
+                        new
+                        {
+                            Id = 48,
+                            CoachName = "John Smith",
+                            Description = "Club Englez",
+                            IsInternal = false,
+                            TeamName = "Manchester City",
+                            TeamType = 0
+                        },
+                        new
+                        {
+                            Id = 49,
+                            CoachName = "Marco Rossi",
+                            Description = "Club Italian",
+                            IsInternal = false,
+                            TeamName = "Juventus",
+                            TeamType = 0
                         });
                 });
 
@@ -10870,398 +19365,6 @@ namespace FCUnirea.Persistance.Data.Migrations
                     b.HasIndex("TeamsStatistics_TeamsId");
 
                     b.ToTable("TeamStatistics");
-
-                    b.HasData(
-                        new
-                        {
-                            Id = 1,
-                            GamesPlayed = 1,
-                            GoalsConceded = 1,
-                            GoalsScored = 2,
-                            TeamStatistics_CompetitionsId = 1,
-                            TeamsStatistics_TeamsId = 1,
-                            TotalDraws = 0,
-                            TotalLosses = 0,
-                            TotalPoints = 3,
-                            TotalWins = 1
-                        },
-                        new
-                        {
-                            Id = 2,
-                            GamesPlayed = 1,
-                            GoalsConceded = 2,
-                            GoalsScored = 1,
-                            TeamStatistics_CompetitionsId = 1,
-                            TeamsStatistics_TeamsId = 6,
-                            TotalDraws = 0,
-                            TotalLosses = 1,
-                            TotalPoints = 0,
-                            TotalWins = 0
-                        },
-                        new
-                        {
-                            Id = 3,
-                            GamesPlayed = 1,
-                            GoalsConceded = 0,
-                            GoalsScored = 0,
-                            TeamStatistics_CompetitionsId = 1,
-                            TeamsStatistics_TeamsId = 2,
-                            TotalDraws = 1,
-                            TotalLosses = 0,
-                            TotalPoints = 1,
-                            TotalWins = 0
-                        },
-                        new
-                        {
-                            Id = 4,
-                            GamesPlayed = 1,
-                            GoalsConceded = 0,
-                            GoalsScored = 0,
-                            TeamStatistics_CompetitionsId = 1,
-                            TeamsStatistics_TeamsId = 7,
-                            TotalDraws = 1,
-                            TotalLosses = 0,
-                            TotalPoints = 1,
-                            TotalWins = 0
-                        },
-                        new
-                        {
-                            Id = 5,
-                            GamesPlayed = 1,
-                            GoalsConceded = 1,
-                            GoalsScored = 2,
-                            TeamStatistics_CompetitionsId = 1,
-                            TeamsStatistics_TeamsId = 3,
-                            TotalDraws = 0,
-                            TotalLosses = 0,
-                            TotalPoints = 3,
-                            TotalWins = 1
-                        },
-                        new
-                        {
-                            Id = 6,
-                            GamesPlayed = 1,
-                            GoalsConceded = 2,
-                            GoalsScored = 1,
-                            TeamStatistics_CompetitionsId = 1,
-                            TeamsStatistics_TeamsId = 8,
-                            TotalDraws = 0,
-                            TotalLosses = 1,
-                            TotalPoints = 0,
-                            TotalWins = 0
-                        },
-                        new
-                        {
-                            Id = 7,
-                            GamesPlayed = 1,
-                            GoalsConceded = 1,
-                            GoalsScored = 0,
-                            TeamStatistics_CompetitionsId = 1,
-                            TeamsStatistics_TeamsId = 4,
-                            TotalDraws = 0,
-                            TotalLosses = 1,
-                            TotalPoints = 0,
-                            TotalWins = 0
-                        },
-                        new
-                        {
-                            Id = 8,
-                            GamesPlayed = 1,
-                            GoalsConceded = 0,
-                            GoalsScored = 1,
-                            TeamStatistics_CompetitionsId = 1,
-                            TeamsStatistics_TeamsId = 9,
-                            TotalDraws = 0,
-                            TotalLosses = 0,
-                            TotalPoints = 3,
-                            TotalWins = 1
-                        },
-                        new
-                        {
-                            Id = 9,
-                            GamesPlayed = 1,
-                            GoalsConceded = 2,
-                            GoalsScored = 1,
-                            TeamStatistics_CompetitionsId = 1,
-                            TeamsStatistics_TeamsId = 5,
-                            TotalDraws = 0,
-                            TotalLosses = 1,
-                            TotalPoints = 0,
-                            TotalWins = 0
-                        },
-                        new
-                        {
-                            Id = 10,
-                            GamesPlayed = 1,
-                            GoalsConceded = 1,
-                            GoalsScored = 2,
-                            TeamStatistics_CompetitionsId = 1,
-                            TeamsStatistics_TeamsId = 10,
-                            TotalDraws = 0,
-                            TotalLosses = 0,
-                            TotalPoints = 3,
-                            TotalWins = 1
-                        },
-                        new
-                        {
-                            Id = 11,
-                            GamesPlayed = 1,
-                            GoalsConceded = 0,
-                            GoalsScored = 0,
-                            TeamStatistics_CompetitionsId = 4,
-                            TeamsStatistics_TeamsId = 11,
-                            TotalDraws = 1,
-                            TotalLosses = 0,
-                            TotalPoints = 1,
-                            TotalWins = 0
-                        },
-                        new
-                        {
-                            Id = 12,
-                            GamesPlayed = 1,
-                            GoalsConceded = 0,
-                            GoalsScored = 0,
-                            TeamStatistics_CompetitionsId = 4,
-                            TeamsStatistics_TeamsId = 16,
-                            TotalDraws = 1,
-                            TotalLosses = 0,
-                            TotalPoints = 1,
-                            TotalWins = 0
-                        },
-                        new
-                        {
-                            Id = 13,
-                            GamesPlayed = 1,
-                            GoalsConceded = 3,
-                            GoalsScored = 2,
-                            TeamStatistics_CompetitionsId = 4,
-                            TeamsStatistics_TeamsId = 12,
-                            TotalDraws = 0,
-                            TotalLosses = 1,
-                            TotalPoints = 0,
-                            TotalWins = 0
-                        },
-                        new
-                        {
-                            Id = 14,
-                            GamesPlayed = 1,
-                            GoalsConceded = 2,
-                            GoalsScored = 3,
-                            TeamStatistics_CompetitionsId = 4,
-                            TeamsStatistics_TeamsId = 17,
-                            TotalDraws = 0,
-                            TotalLosses = 0,
-                            TotalPoints = 3,
-                            TotalWins = 1
-                        },
-                        new
-                        {
-                            Id = 15,
-                            GamesPlayed = 1,
-                            GoalsConceded = 3,
-                            GoalsScored = 3,
-                            TeamStatistics_CompetitionsId = 4,
-                            TeamsStatistics_TeamsId = 13,
-                            TotalDraws = 1,
-                            TotalLosses = 0,
-                            TotalPoints = 1,
-                            TotalWins = 0
-                        },
-                        new
-                        {
-                            Id = 16,
-                            GamesPlayed = 1,
-                            GoalsConceded = 3,
-                            GoalsScored = 3,
-                            TeamStatistics_CompetitionsId = 4,
-                            TeamsStatistics_TeamsId = 18,
-                            TotalDraws = 1,
-                            TotalLosses = 0,
-                            TotalPoints = 1,
-                            TotalWins = 0
-                        },
-                        new
-                        {
-                            Id = 17,
-                            GamesPlayed = 1,
-                            GoalsConceded = 1,
-                            GoalsScored = 2,
-                            TeamStatistics_CompetitionsId = 4,
-                            TeamsStatistics_TeamsId = 14,
-                            TotalDraws = 0,
-                            TotalLosses = 0,
-                            TotalPoints = 3,
-                            TotalWins = 1
-                        },
-                        new
-                        {
-                            Id = 18,
-                            GamesPlayed = 1,
-                            GoalsConceded = 2,
-                            GoalsScored = 1,
-                            TeamStatistics_CompetitionsId = 4,
-                            TeamsStatistics_TeamsId = 19,
-                            TotalDraws = 0,
-                            TotalLosses = 1,
-                            TotalPoints = 0,
-                            TotalWins = 0
-                        },
-                        new
-                        {
-                            Id = 19,
-                            GamesPlayed = 1,
-                            GoalsConceded = 3,
-                            GoalsScored = 2,
-                            TeamStatistics_CompetitionsId = 4,
-                            TeamsStatistics_TeamsId = 15,
-                            TotalDraws = 0,
-                            TotalLosses = 1,
-                            TotalPoints = 0,
-                            TotalWins = 0
-                        },
-                        new
-                        {
-                            Id = 20,
-                            GamesPlayed = 1,
-                            GoalsConceded = 2,
-                            GoalsScored = 3,
-                            TeamStatistics_CompetitionsId = 4,
-                            TeamsStatistics_TeamsId = 20,
-                            TotalDraws = 0,
-                            TotalLosses = 0,
-                            TotalPoints = 3,
-                            TotalWins = 1
-                        },
-                        new
-                        {
-                            Id = 21,
-                            GamesPlayed = 1,
-                            GoalsConceded = 1,
-                            GoalsScored = 2,
-                            TeamStatistics_CompetitionsId = 7,
-                            TeamsStatistics_TeamsId = 21,
-                            TotalDraws = 0,
-                            TotalLosses = 0,
-                            TotalPoints = 3,
-                            TotalWins = 1
-                        },
-                        new
-                        {
-                            Id = 22,
-                            GamesPlayed = 1,
-                            GoalsConceded = 2,
-                            GoalsScored = 1,
-                            TeamStatistics_CompetitionsId = 7,
-                            TeamsStatistics_TeamsId = 26,
-                            TotalDraws = 0,
-                            TotalLosses = 1,
-                            TotalPoints = 0,
-                            TotalWins = 0
-                        },
-                        new
-                        {
-                            Id = 23,
-                            GamesPlayed = 1,
-                            GoalsConceded = 1,
-                            GoalsScored = 2,
-                            TeamStatistics_CompetitionsId = 7,
-                            TeamsStatistics_TeamsId = 22,
-                            TotalDraws = 0,
-                            TotalLosses = 0,
-                            TotalPoints = 3,
-                            TotalWins = 1
-                        },
-                        new
-                        {
-                            Id = 24,
-                            GamesPlayed = 1,
-                            GoalsConceded = 2,
-                            GoalsScored = 1,
-                            TeamStatistics_CompetitionsId = 7,
-                            TeamsStatistics_TeamsId = 27,
-                            TotalDraws = 0,
-                            TotalLosses = 1,
-                            TotalPoints = 0,
-                            TotalWins = 0
-                        },
-                        new
-                        {
-                            Id = 25,
-                            GamesPlayed = 1,
-                            GoalsConceded = 0,
-                            GoalsScored = 2,
-                            TeamStatistics_CompetitionsId = 7,
-                            TeamsStatistics_TeamsId = 23,
-                            TotalDraws = 0,
-                            TotalLosses = 0,
-                            TotalPoints = 3,
-                            TotalWins = 1
-                        },
-                        new
-                        {
-                            Id = 26,
-                            GamesPlayed = 1,
-                            GoalsConceded = 2,
-                            GoalsScored = 0,
-                            TeamStatistics_CompetitionsId = 7,
-                            TeamsStatistics_TeamsId = 28,
-                            TotalDraws = 0,
-                            TotalLosses = 1,
-                            TotalPoints = 0,
-                            TotalWins = 0
-                        },
-                        new
-                        {
-                            Id = 27,
-                            GamesPlayed = 1,
-                            GoalsConceded = 1,
-                            GoalsScored = 2,
-                            TeamStatistics_CompetitionsId = 7,
-                            TeamsStatistics_TeamsId = 24,
-                            TotalDraws = 0,
-                            TotalLosses = 0,
-                            TotalPoints = 3,
-                            TotalWins = 1
-                        },
-                        new
-                        {
-                            Id = 28,
-                            GamesPlayed = 1,
-                            GoalsConceded = 2,
-                            GoalsScored = 1,
-                            TeamStatistics_CompetitionsId = 7,
-                            TeamsStatistics_TeamsId = 29,
-                            TotalDraws = 0,
-                            TotalLosses = 1,
-                            TotalPoints = 0,
-                            TotalWins = 0
-                        },
-                        new
-                        {
-                            Id = 29,
-                            GamesPlayed = 1,
-                            GoalsConceded = 2,
-                            GoalsScored = 1,
-                            TeamStatistics_CompetitionsId = 7,
-                            TeamsStatistics_TeamsId = 25,
-                            TotalDraws = 0,
-                            TotalLosses = 1,
-                            TotalPoints = 0,
-                            TotalWins = 0
-                        },
-                        new
-                        {
-                            Id = 30,
-                            GamesPlayed = 1,
-                            GoalsConceded = 1,
-                            GoalsScored = 2,
-                            TeamStatistics_CompetitionsId = 7,
-                            TeamsStatistics_TeamsId = 30,
-                            TotalDraws = 0,
-                            TotalLosses = 0,
-                            TotalPoints = 3,
-                            TotalWins = 1
-                        });
                 });
 
             modelBuilder.Entity("FCUnirea.Domain.Entities.Tickets", b =>
@@ -11306,7 +19409,7 @@ namespace FCUnirea.Persistance.Data.Migrations
                         new
                         {
                             Id = 1,
-                            DateReservation = new DateTime(2025, 5, 9, 9, 54, 42, 601, DateTimeKind.Utc).AddTicks(1025),
+                            DateReservation = new DateTime(2025, 6, 1, 10, 0, 6, 817, DateTimeKind.Utc).AddTicks(2974),
                             Ticket_GamesId = 1,
                             Ticket_SeatsId = 1,
                             Ticket_UsersId = 1
@@ -11314,7 +19417,7 @@ namespace FCUnirea.Persistance.Data.Migrations
                         new
                         {
                             Id = 2,
-                            DateReservation = new DateTime(2025, 5, 9, 9, 54, 42, 601, DateTimeKind.Utc).AddTicks(1028),
+                            DateReservation = new DateTime(2025, 6, 1, 10, 0, 6, 817, DateTimeKind.Utc).AddTicks(2978),
                             Ticket_GamesId = 1,
                             Ticket_SeatsId = 2,
                             Ticket_UsersId = 2
@@ -11322,7 +19425,7 @@ namespace FCUnirea.Persistance.Data.Migrations
                         new
                         {
                             Id = 3,
-                            DateReservation = new DateTime(2025, 5, 9, 9, 54, 42, 601, DateTimeKind.Utc).AddTicks(1029),
+                            DateReservation = new DateTime(2025, 6, 1, 10, 0, 6, 817, DateTimeKind.Utc).AddTicks(2979),
                             Ticket_GamesId = 1,
                             Ticket_SeatsId = 3,
                             Ticket_UsersId = 3
@@ -11330,7 +19433,7 @@ namespace FCUnirea.Persistance.Data.Migrations
                         new
                         {
                             Id = 4,
-                            DateReservation = new DateTime(2025, 5, 9, 9, 54, 42, 601, DateTimeKind.Utc).AddTicks(1029),
+                            DateReservation = new DateTime(2025, 6, 1, 10, 0, 6, 817, DateTimeKind.Utc).AddTicks(2980),
                             Ticket_GamesId = 1,
                             Ticket_SeatsId = 4,
                             Ticket_UsersId = 4
@@ -11338,7 +19441,7 @@ namespace FCUnirea.Persistance.Data.Migrations
                         new
                         {
                             Id = 5,
-                            DateReservation = new DateTime(2025, 5, 9, 9, 54, 42, 601, DateTimeKind.Utc).AddTicks(1030),
+                            DateReservation = new DateTime(2025, 6, 1, 10, 0, 6, 817, DateTimeKind.Utc).AddTicks(2981),
                             Ticket_GamesId = 1,
                             Ticket_SeatsId = 5,
                             Ticket_UsersId = 5
@@ -11346,7 +19449,7 @@ namespace FCUnirea.Persistance.Data.Migrations
                         new
                         {
                             Id = 6,
-                            DateReservation = new DateTime(2025, 5, 9, 9, 54, 42, 601, DateTimeKind.Utc).AddTicks(1049),
+                            DateReservation = new DateTime(2025, 6, 1, 10, 0, 6, 817, DateTimeKind.Utc).AddTicks(2983),
                             Ticket_GamesId = 6,
                             Ticket_SeatsId = 11,
                             Ticket_UsersId = 6
@@ -11354,7 +19457,7 @@ namespace FCUnirea.Persistance.Data.Migrations
                         new
                         {
                             Id = 7,
-                            DateReservation = new DateTime(2025, 5, 9, 9, 54, 42, 601, DateTimeKind.Utc).AddTicks(1052),
+                            DateReservation = new DateTime(2025, 6, 1, 10, 0, 6, 817, DateTimeKind.Utc).AddTicks(2984),
                             Ticket_GamesId = 6,
                             Ticket_SeatsId = 12,
                             Ticket_UsersId = 7
@@ -11362,7 +19465,7 @@ namespace FCUnirea.Persistance.Data.Migrations
                         new
                         {
                             Id = 8,
-                            DateReservation = new DateTime(2025, 5, 9, 9, 54, 42, 601, DateTimeKind.Utc).AddTicks(1053),
+                            DateReservation = new DateTime(2025, 6, 1, 10, 0, 6, 817, DateTimeKind.Utc).AddTicks(2985),
                             Ticket_GamesId = 6,
                             Ticket_SeatsId = 13,
                             Ticket_UsersId = 8
@@ -11370,7 +19473,7 @@ namespace FCUnirea.Persistance.Data.Migrations
                         new
                         {
                             Id = 9,
-                            DateReservation = new DateTime(2025, 5, 9, 9, 54, 42, 601, DateTimeKind.Utc).AddTicks(1054),
+                            DateReservation = new DateTime(2025, 6, 1, 10, 0, 6, 817, DateTimeKind.Utc).AddTicks(2986),
                             Ticket_GamesId = 6,
                             Ticket_SeatsId = 14,
                             Ticket_UsersId = 9
@@ -11378,7 +19481,7 @@ namespace FCUnirea.Persistance.Data.Migrations
                         new
                         {
                             Id = 10,
-                            DateReservation = new DateTime(2025, 5, 9, 9, 54, 42, 601, DateTimeKind.Utc).AddTicks(1055),
+                            DateReservation = new DateTime(2025, 6, 1, 10, 0, 6, 817, DateTimeKind.Utc).AddTicks(2988),
                             Ticket_GamesId = 6,
                             Ticket_SeatsId = 15,
                             Ticket_UsersId = 10
@@ -11386,42 +19489,1154 @@ namespace FCUnirea.Persistance.Data.Migrations
                         new
                         {
                             Id = 11,
-                            DateReservation = new DateTime(2025, 5, 9, 9, 54, 42, 601, DateTimeKind.Utc).AddTicks(1055),
+                            DateReservation = new DateTime(2025, 6, 1, 10, 0, 6, 817, DateTimeKind.Utc).AddTicks(2989),
                             Ticket_GamesId = 11,
                             Ticket_SeatsId = 21,
-                            Ticket_UsersId = 1
+                            Ticket_UsersId = 11
                         },
                         new
                         {
                             Id = 12,
-                            DateReservation = new DateTime(2025, 5, 9, 9, 54, 42, 601, DateTimeKind.Utc).AddTicks(1056),
+                            DateReservation = new DateTime(2025, 6, 1, 10, 0, 6, 817, DateTimeKind.Utc).AddTicks(2990),
                             Ticket_GamesId = 11,
                             Ticket_SeatsId = 22,
-                            Ticket_UsersId = 2
+                            Ticket_UsersId = 22
                         },
                         new
                         {
                             Id = 13,
-                            DateReservation = new DateTime(2025, 5, 9, 9, 54, 42, 601, DateTimeKind.Utc).AddTicks(1057),
+                            DateReservation = new DateTime(2025, 6, 1, 10, 0, 6, 817, DateTimeKind.Utc).AddTicks(2991),
                             Ticket_GamesId = 11,
                             Ticket_SeatsId = 23,
-                            Ticket_UsersId = 3
+                            Ticket_UsersId = 23
                         },
                         new
                         {
                             Id = 14,
-                            DateReservation = new DateTime(2025, 5, 9, 9, 54, 42, 601, DateTimeKind.Utc).AddTicks(1057),
+                            DateReservation = new DateTime(2025, 6, 1, 10, 0, 6, 817, DateTimeKind.Utc).AddTicks(2992),
                             Ticket_GamesId = 11,
                             Ticket_SeatsId = 24,
-                            Ticket_UsersId = 4
+                            Ticket_UsersId = 24
                         },
                         new
                         {
                             Id = 15,
-                            DateReservation = new DateTime(2025, 5, 9, 9, 54, 42, 601, DateTimeKind.Utc).AddTicks(1058),
+                            DateReservation = new DateTime(2025, 6, 1, 10, 0, 6, 817, DateTimeKind.Utc).AddTicks(2993),
                             Ticket_GamesId = 11,
                             Ticket_SeatsId = 25,
+                            Ticket_UsersId = 25
+                        },
+                        new
+                        {
+                            Id = 16,
+                            DateReservation = new DateTime(2025, 6, 1, 10, 0, 6, 817, DateTimeKind.Utc).AddTicks(2994),
+                            Ticket_GamesId = 20,
+                            Ticket_SeatsId = 1,
+                            Ticket_UsersId = 6
+                        },
+                        new
+                        {
+                            Id = 17,
+                            DateReservation = new DateTime(2025, 6, 1, 10, 0, 6, 817, DateTimeKind.Utc).AddTicks(2995),
+                            Ticket_GamesId = 20,
+                            Ticket_SeatsId = 2,
+                            Ticket_UsersId = 7
+                        },
+                        new
+                        {
+                            Id = 18,
+                            DateReservation = new DateTime(2025, 6, 1, 10, 0, 6, 817, DateTimeKind.Utc).AddTicks(2997),
+                            Ticket_GamesId = 20,
+                            Ticket_SeatsId = 3,
+                            Ticket_UsersId = 8
+                        },
+                        new
+                        {
+                            Id = 19,
+                            DateReservation = new DateTime(2025, 6, 1, 10, 0, 6, 817, DateTimeKind.Utc).AddTicks(2998),
+                            Ticket_GamesId = 20,
+                            Ticket_SeatsId = 4,
+                            Ticket_UsersId = 9
+                        },
+                        new
+                        {
+                            Id = 20,
+                            DateReservation = new DateTime(2025, 6, 1, 10, 0, 6, 817, DateTimeKind.Utc).AddTicks(2999),
+                            Ticket_GamesId = 20,
+                            Ticket_SeatsId = 5,
+                            Ticket_UsersId = 10
+                        },
+                        new
+                        {
+                            Id = 21,
+                            DateReservation = new DateTime(2025, 6, 1, 10, 0, 6, 817, DateTimeKind.Utc).AddTicks(3000),
+                            Ticket_GamesId = 20,
+                            Ticket_SeatsId = 6,
+                            Ticket_UsersId = 11
+                        },
+                        new
+                        {
+                            Id = 22,
+                            DateReservation = new DateTime(2025, 6, 1, 10, 0, 6, 817, DateTimeKind.Utc).AddTicks(3002),
+                            Ticket_GamesId = 20,
+                            Ticket_SeatsId = 7,
+                            Ticket_UsersId = 12
+                        },
+                        new
+                        {
+                            Id = 23,
+                            DateReservation = new DateTime(2025, 6, 1, 10, 0, 6, 817, DateTimeKind.Utc).AddTicks(3003),
+                            Ticket_GamesId = 20,
+                            Ticket_SeatsId = 8,
+                            Ticket_UsersId = 13
+                        },
+                        new
+                        {
+                            Id = 24,
+                            DateReservation = new DateTime(2025, 6, 1, 10, 0, 6, 817, DateTimeKind.Utc).AddTicks(3004),
+                            Ticket_GamesId = 25,
+                            Ticket_SeatsId = 11,
+                            Ticket_UsersId = 14
+                        },
+                        new
+                        {
+                            Id = 25,
+                            DateReservation = new DateTime(2025, 6, 1, 10, 0, 6, 817, DateTimeKind.Utc).AddTicks(3005),
+                            Ticket_GamesId = 25,
+                            Ticket_SeatsId = 12,
+                            Ticket_UsersId = 15
+                        },
+                        new
+                        {
+                            Id = 26,
+                            DateReservation = new DateTime(2025, 6, 1, 10, 0, 6, 817, DateTimeKind.Utc).AddTicks(3006),
+                            Ticket_GamesId = 25,
+                            Ticket_SeatsId = 13,
+                            Ticket_UsersId = 16
+                        },
+                        new
+                        {
+                            Id = 27,
+                            DateReservation = new DateTime(2025, 6, 1, 10, 0, 6, 817, DateTimeKind.Utc).AddTicks(3007),
+                            Ticket_GamesId = 25,
+                            Ticket_SeatsId = 14,
+                            Ticket_UsersId = 17
+                        },
+                        new
+                        {
+                            Id = 28,
+                            DateReservation = new DateTime(2025, 6, 1, 10, 0, 6, 817, DateTimeKind.Utc).AddTicks(3008),
+                            Ticket_GamesId = 25,
+                            Ticket_SeatsId = 15,
+                            Ticket_UsersId = 18
+                        },
+                        new
+                        {
+                            Id = 29,
+                            DateReservation = new DateTime(2025, 6, 1, 10, 0, 6, 817, DateTimeKind.Utc).AddTicks(3009),
+                            Ticket_GamesId = 30,
+                            Ticket_SeatsId = 21,
+                            Ticket_UsersId = 19
+                        },
+                        new
+                        {
+                            Id = 30,
+                            DateReservation = new DateTime(2025, 6, 1, 10, 0, 6, 817, DateTimeKind.Utc).AddTicks(3010),
+                            Ticket_GamesId = 30,
+                            Ticket_SeatsId = 22,
+                            Ticket_UsersId = 20
+                        },
+                        new
+                        {
+                            Id = 31,
+                            DateReservation = new DateTime(2025, 6, 1, 10, 0, 6, 817, DateTimeKind.Utc).AddTicks(3011),
+                            Ticket_GamesId = 30,
+                            Ticket_SeatsId = 23,
+                            Ticket_UsersId = 21
+                        },
+                        new
+                        {
+                            Id = 32,
+                            DateReservation = new DateTime(2025, 6, 1, 10, 0, 6, 817, DateTimeKind.Utc).AddTicks(3012),
+                            Ticket_GamesId = 30,
+                            Ticket_SeatsId = 24,
+                            Ticket_UsersId = 22
+                        },
+                        new
+                        {
+                            Id = 33,
+                            DateReservation = new DateTime(2025, 6, 1, 10, 0, 6, 817, DateTimeKind.Utc).AddTicks(3013),
+                            Ticket_GamesId = 30,
+                            Ticket_SeatsId = 25,
+                            Ticket_UsersId = 23
+                        },
+                        new
+                        {
+                            Id = 34,
+                            DateReservation = new DateTime(2025, 6, 1, 10, 0, 6, 817, DateTimeKind.Utc).AddTicks(3015),
+                            Ticket_GamesId = 30,
+                            Ticket_SeatsId = 26,
+                            Ticket_UsersId = 24
+                        },
+                        new
+                        {
+                            Id = 35,
+                            DateReservation = new DateTime(2025, 6, 1, 10, 0, 6, 817, DateTimeKind.Utc).AddTicks(3017),
+                            Ticket_GamesId = 30,
+                            Ticket_SeatsId = 27,
+                            Ticket_UsersId = 25
+                        },
+                        new
+                        {
+                            Id = 36,
+                            DateReservation = new DateTime(2025, 6, 1, 10, 0, 6, 817, DateTimeKind.Utc).AddTicks(3018),
+                            Ticket_GamesId = 30,
+                            Ticket_SeatsId = 28,
+                            Ticket_UsersId = 26
+                        },
+                        new
+                        {
+                            Id = 37,
+                            DateReservation = new DateTime(2025, 6, 1, 10, 0, 6, 817, DateTimeKind.Utc).AddTicks(3019),
+                            Ticket_GamesId = 30,
+                            Ticket_SeatsId = 29,
+                            Ticket_UsersId = 27
+                        },
+                        new
+                        {
+                            Id = 38,
+                            DateReservation = new DateTime(2025, 6, 1, 10, 0, 6, 817, DateTimeKind.Utc).AddTicks(3020),
+                            Ticket_GamesId = 49,
+                            Ticket_SeatsId = 1,
+                            Ticket_UsersId = 28
+                        },
+                        new
+                        {
+                            Id = 39,
+                            DateReservation = new DateTime(2025, 6, 1, 10, 0, 6, 817, DateTimeKind.Utc).AddTicks(3021),
+                            Ticket_GamesId = 49,
+                            Ticket_SeatsId = 2,
+                            Ticket_UsersId = 29
+                        },
+                        new
+                        {
+                            Id = 40,
+                            DateReservation = new DateTime(2025, 6, 1, 10, 0, 6, 817, DateTimeKind.Utc).AddTicks(3022),
+                            Ticket_GamesId = 49,
+                            Ticket_SeatsId = 3,
+                            Ticket_UsersId = 30
+                        },
+                        new
+                        {
+                            Id = 41,
+                            DateReservation = new DateTime(2025, 6, 1, 10, 0, 6, 817, DateTimeKind.Utc).AddTicks(3023),
+                            Ticket_GamesId = 49,
+                            Ticket_SeatsId = 4,
+                            Ticket_UsersId = 31
+                        },
+                        new
+                        {
+                            Id = 42,
+                            DateReservation = new DateTime(2025, 6, 1, 10, 0, 6, 817, DateTimeKind.Utc).AddTicks(3024),
+                            Ticket_GamesId = 49,
+                            Ticket_SeatsId = 5,
+                            Ticket_UsersId = 1
+                        },
+                        new
+                        {
+                            Id = 43,
+                            DateReservation = new DateTime(2025, 6, 1, 10, 0, 6, 817, DateTimeKind.Utc).AddTicks(3025),
+                            Ticket_GamesId = 49,
+                            Ticket_SeatsId = 6,
+                            Ticket_UsersId = 2
+                        },
+                        new
+                        {
+                            Id = 44,
+                            DateReservation = new DateTime(2025, 6, 1, 10, 0, 6, 817, DateTimeKind.Utc).AddTicks(3026),
+                            Ticket_GamesId = 49,
+                            Ticket_SeatsId = 7,
+                            Ticket_UsersId = 3
+                        },
+                        new
+                        {
+                            Id = 45,
+                            DateReservation = new DateTime(2025, 6, 1, 10, 0, 6, 817, DateTimeKind.Utc).AddTicks(3027),
+                            Ticket_GamesId = 54,
+                            Ticket_SeatsId = 11,
+                            Ticket_UsersId = 4
+                        },
+                        new
+                        {
+                            Id = 46,
+                            DateReservation = new DateTime(2025, 6, 1, 10, 0, 6, 817, DateTimeKind.Utc).AddTicks(3028),
+                            Ticket_GamesId = 54,
+                            Ticket_SeatsId = 12,
                             Ticket_UsersId = 5
+                        },
+                        new
+                        {
+                            Id = 47,
+                            DateReservation = new DateTime(2025, 6, 1, 10, 0, 6, 817, DateTimeKind.Utc).AddTicks(3029),
+                            Ticket_GamesId = 54,
+                            Ticket_SeatsId = 13,
+                            Ticket_UsersId = 6
+                        },
+                        new
+                        {
+                            Id = 48,
+                            DateReservation = new DateTime(2025, 6, 1, 10, 0, 6, 817, DateTimeKind.Utc).AddTicks(3030),
+                            Ticket_GamesId = 54,
+                            Ticket_SeatsId = 14,
+                            Ticket_UsersId = 7
+                        },
+                        new
+                        {
+                            Id = 49,
+                            DateReservation = new DateTime(2025, 6, 1, 10, 0, 6, 817, DateTimeKind.Utc).AddTicks(3031),
+                            Ticket_GamesId = 59,
+                            Ticket_SeatsId = 21,
+                            Ticket_UsersId = 8
+                        },
+                        new
+                        {
+                            Id = 50,
+                            DateReservation = new DateTime(2025, 6, 1, 10, 0, 6, 817, DateTimeKind.Utc).AddTicks(3033),
+                            Ticket_GamesId = 59,
+                            Ticket_SeatsId = 22,
+                            Ticket_UsersId = 9
+                        },
+                        new
+                        {
+                            Id = 51,
+                            DateReservation = new DateTime(2025, 6, 1, 10, 0, 6, 817, DateTimeKind.Utc).AddTicks(3070),
+                            Ticket_GamesId = 59,
+                            Ticket_SeatsId = 23,
+                            Ticket_UsersId = 10
+                        },
+                        new
+                        {
+                            Id = 52,
+                            DateReservation = new DateTime(2025, 6, 1, 10, 0, 6, 817, DateTimeKind.Utc).AddTicks(3073),
+                            Ticket_GamesId = 59,
+                            Ticket_SeatsId = 24,
+                            Ticket_UsersId = 11
+                        },
+                        new
+                        {
+                            Id = 53,
+                            DateReservation = new DateTime(2025, 6, 1, 10, 0, 6, 817, DateTimeKind.Utc).AddTicks(3074),
+                            Ticket_GamesId = 59,
+                            Ticket_SeatsId = 25,
+                            Ticket_UsersId = 12
+                        },
+                        new
+                        {
+                            Id = 54,
+                            DateReservation = new DateTime(2025, 6, 1, 10, 0, 6, 817, DateTimeKind.Utc).AddTicks(3075),
+                            Ticket_GamesId = 59,
+                            Ticket_SeatsId = 26,
+                            Ticket_UsersId = 13
+                        },
+                        new
+                        {
+                            Id = 55,
+                            DateReservation = new DateTime(2025, 6, 1, 10, 0, 6, 817, DateTimeKind.Utc).AddTicks(3076),
+                            Ticket_GamesId = 59,
+                            Ticket_SeatsId = 27,
+                            Ticket_UsersId = 14
+                        },
+                        new
+                        {
+                            Id = 56,
+                            DateReservation = new DateTime(2025, 6, 1, 10, 0, 6, 817, DateTimeKind.Utc).AddTicks(3077),
+                            Ticket_GamesId = 78,
+                            Ticket_SeatsId = 1,
+                            Ticket_UsersId = 15
+                        },
+                        new
+                        {
+                            Id = 57,
+                            DateReservation = new DateTime(2025, 6, 1, 10, 0, 6, 817, DateTimeKind.Utc).AddTicks(3078),
+                            Ticket_GamesId = 78,
+                            Ticket_SeatsId = 2,
+                            Ticket_UsersId = 16
+                        },
+                        new
+                        {
+                            Id = 58,
+                            DateReservation = new DateTime(2025, 6, 1, 10, 0, 6, 817, DateTimeKind.Utc).AddTicks(3079),
+                            Ticket_GamesId = 78,
+                            Ticket_SeatsId = 3,
+                            Ticket_UsersId = 17
+                        },
+                        new
+                        {
+                            Id = 59,
+                            DateReservation = new DateTime(2025, 6, 1, 10, 0, 6, 817, DateTimeKind.Utc).AddTicks(3081),
+                            Ticket_GamesId = 78,
+                            Ticket_SeatsId = 4,
+                            Ticket_UsersId = 18
+                        },
+                        new
+                        {
+                            Id = 60,
+                            DateReservation = new DateTime(2025, 6, 1, 10, 0, 6, 817, DateTimeKind.Utc).AddTicks(3082),
+                            Ticket_GamesId = 78,
+                            Ticket_SeatsId = 5,
+                            Ticket_UsersId = 19
+                        },
+                        new
+                        {
+                            Id = 61,
+                            DateReservation = new DateTime(2025, 6, 1, 10, 0, 6, 817, DateTimeKind.Utc).AddTicks(3083),
+                            Ticket_GamesId = 78,
+                            Ticket_SeatsId = 6,
+                            Ticket_UsersId = 20
+                        },
+                        new
+                        {
+                            Id = 62,
+                            DateReservation = new DateTime(2025, 6, 1, 10, 0, 6, 817, DateTimeKind.Utc).AddTicks(3084),
+                            Ticket_GamesId = 78,
+                            Ticket_SeatsId = 7,
+                            Ticket_UsersId = 21
+                        },
+                        new
+                        {
+                            Id = 63,
+                            DateReservation = new DateTime(2025, 6, 1, 10, 0, 6, 817, DateTimeKind.Utc).AddTicks(3085),
+                            Ticket_GamesId = 78,
+                            Ticket_SeatsId = 8,
+                            Ticket_UsersId = 22
+                        },
+                        new
+                        {
+                            Id = 64,
+                            DateReservation = new DateTime(2025, 6, 1, 10, 0, 6, 817, DateTimeKind.Utc).AddTicks(3086),
+                            Ticket_GamesId = 83,
+                            Ticket_SeatsId = 11,
+                            Ticket_UsersId = 23
+                        },
+                        new
+                        {
+                            Id = 65,
+                            DateReservation = new DateTime(2025, 6, 1, 10, 0, 6, 817, DateTimeKind.Utc).AddTicks(3087),
+                            Ticket_GamesId = 83,
+                            Ticket_SeatsId = 12,
+                            Ticket_UsersId = 24
+                        },
+                        new
+                        {
+                            Id = 66,
+                            DateReservation = new DateTime(2025, 6, 1, 10, 0, 6, 817, DateTimeKind.Utc).AddTicks(3089),
+                            Ticket_GamesId = 83,
+                            Ticket_SeatsId = 13,
+                            Ticket_UsersId = 25
+                        },
+                        new
+                        {
+                            Id = 67,
+                            DateReservation = new DateTime(2025, 6, 1, 10, 0, 6, 817, DateTimeKind.Utc).AddTicks(3090),
+                            Ticket_GamesId = 83,
+                            Ticket_SeatsId = 14,
+                            Ticket_UsersId = 26
+                        },
+                        new
+                        {
+                            Id = 68,
+                            DateReservation = new DateTime(2025, 6, 1, 10, 0, 6, 817, DateTimeKind.Utc).AddTicks(3091),
+                            Ticket_GamesId = 83,
+                            Ticket_SeatsId = 15,
+                            Ticket_UsersId = 27
+                        },
+                        new
+                        {
+                            Id = 69,
+                            DateReservation = new DateTime(2025, 6, 1, 10, 0, 6, 817, DateTimeKind.Utc).AddTicks(3093),
+                            Ticket_GamesId = 83,
+                            Ticket_SeatsId = 16,
+                            Ticket_UsersId = 28
+                        },
+                        new
+                        {
+                            Id = 70,
+                            DateReservation = new DateTime(2025, 6, 1, 10, 0, 6, 817, DateTimeKind.Utc).AddTicks(3094),
+                            Ticket_GamesId = 83,
+                            Ticket_SeatsId = 17,
+                            Ticket_UsersId = 29
+                        },
+                        new
+                        {
+                            Id = 71,
+                            DateReservation = new DateTime(2025, 6, 1, 10, 0, 6, 817, DateTimeKind.Utc).AddTicks(3095),
+                            Ticket_GamesId = 83,
+                            Ticket_SeatsId = 18,
+                            Ticket_UsersId = 30
+                        },
+                        new
+                        {
+                            Id = 72,
+                            DateReservation = new DateTime(2025, 6, 1, 10, 0, 6, 817, DateTimeKind.Utc).AddTicks(3096),
+                            Ticket_GamesId = 88,
+                            Ticket_SeatsId = 21,
+                            Ticket_UsersId = 31
+                        },
+                        new
+                        {
+                            Id = 73,
+                            DateReservation = new DateTime(2025, 6, 1, 10, 0, 6, 817, DateTimeKind.Utc).AddTicks(3097),
+                            Ticket_GamesId = 88,
+                            Ticket_SeatsId = 22,
+                            Ticket_UsersId = 1
+                        },
+                        new
+                        {
+                            Id = 74,
+                            DateReservation = new DateTime(2025, 6, 1, 10, 0, 6, 817, DateTimeKind.Utc).AddTicks(3098),
+                            Ticket_GamesId = 88,
+                            Ticket_SeatsId = 23,
+                            Ticket_UsersId = 2
+                        },
+                        new
+                        {
+                            Id = 75,
+                            DateReservation = new DateTime(2025, 6, 1, 10, 0, 6, 817, DateTimeKind.Utc).AddTicks(3099),
+                            Ticket_GamesId = 88,
+                            Ticket_SeatsId = 24,
+                            Ticket_UsersId = 3
+                        },
+                        new
+                        {
+                            Id = 76,
+                            DateReservation = new DateTime(2025, 6, 1, 10, 0, 6, 817, DateTimeKind.Utc).AddTicks(3100),
+                            Ticket_GamesId = 88,
+                            Ticket_SeatsId = 25,
+                            Ticket_UsersId = 4
+                        },
+                        new
+                        {
+                            Id = 77,
+                            DateReservation = new DateTime(2025, 6, 1, 10, 0, 6, 817, DateTimeKind.Utc).AddTicks(3101),
+                            Ticket_GamesId = 88,
+                            Ticket_SeatsId = 26,
+                            Ticket_UsersId = 5
+                        },
+                        new
+                        {
+                            Id = 78,
+                            DateReservation = new DateTime(2025, 6, 1, 10, 0, 6, 817, DateTimeKind.Utc).AddTicks(3102),
+                            Ticket_GamesId = 88,
+                            Ticket_SeatsId = 27,
+                            Ticket_UsersId = 6
+                        },
+                        new
+                        {
+                            Id = 79,
+                            DateReservation = new DateTime(2025, 6, 1, 10, 0, 6, 817, DateTimeKind.Utc).AddTicks(3103),
+                            Ticket_GamesId = 107,
+                            Ticket_SeatsId = 1,
+                            Ticket_UsersId = 7
+                        },
+                        new
+                        {
+                            Id = 80,
+                            DateReservation = new DateTime(2025, 6, 1, 10, 0, 6, 817, DateTimeKind.Utc).AddTicks(3104),
+                            Ticket_GamesId = 107,
+                            Ticket_SeatsId = 2,
+                            Ticket_UsersId = 8
+                        },
+                        new
+                        {
+                            Id = 81,
+                            DateReservation = new DateTime(2025, 6, 1, 10, 0, 6, 817, DateTimeKind.Utc).AddTicks(3106),
+                            Ticket_GamesId = 107,
+                            Ticket_SeatsId = 3,
+                            Ticket_UsersId = 9
+                        },
+                        new
+                        {
+                            Id = 82,
+                            DateReservation = new DateTime(2025, 6, 1, 10, 0, 6, 817, DateTimeKind.Utc).AddTicks(3107),
+                            Ticket_GamesId = 107,
+                            Ticket_SeatsId = 4,
+                            Ticket_UsersId = 10
+                        },
+                        new
+                        {
+                            Id = 83,
+                            DateReservation = new DateTime(2025, 6, 1, 10, 0, 6, 817, DateTimeKind.Utc).AddTicks(3108),
+                            Ticket_GamesId = 107,
+                            Ticket_SeatsId = 5,
+                            Ticket_UsersId = 11
+                        },
+                        new
+                        {
+                            Id = 84,
+                            DateReservation = new DateTime(2025, 6, 1, 10, 0, 6, 817, DateTimeKind.Utc).AddTicks(3109),
+                            Ticket_GamesId = 107,
+                            Ticket_SeatsId = 6,
+                            Ticket_UsersId = 12
+                        },
+                        new
+                        {
+                            Id = 85,
+                            DateReservation = new DateTime(2025, 6, 1, 10, 0, 6, 817, DateTimeKind.Utc).AddTicks(3110),
+                            Ticket_GamesId = 107,
+                            Ticket_SeatsId = 7,
+                            Ticket_UsersId = 13
+                        },
+                        new
+                        {
+                            Id = 86,
+                            DateReservation = new DateTime(2025, 6, 1, 10, 0, 6, 817, DateTimeKind.Utc).AddTicks(3111),
+                            Ticket_GamesId = 107,
+                            Ticket_SeatsId = 8,
+                            Ticket_UsersId = 14
+                        },
+                        new
+                        {
+                            Id = 87,
+                            DateReservation = new DateTime(2025, 6, 1, 10, 0, 6, 817, DateTimeKind.Utc).AddTicks(3112),
+                            Ticket_GamesId = 112,
+                            Ticket_SeatsId = 11,
+                            Ticket_UsersId = 15
+                        },
+                        new
+                        {
+                            Id = 88,
+                            DateReservation = new DateTime(2025, 6, 1, 10, 0, 6, 817, DateTimeKind.Utc).AddTicks(3113),
+                            Ticket_GamesId = 112,
+                            Ticket_SeatsId = 12,
+                            Ticket_UsersId = 16
+                        },
+                        new
+                        {
+                            Id = 89,
+                            DateReservation = new DateTime(2025, 6, 1, 10, 0, 6, 817, DateTimeKind.Utc).AddTicks(3114),
+                            Ticket_GamesId = 112,
+                            Ticket_SeatsId = 13,
+                            Ticket_UsersId = 17
+                        },
+                        new
+                        {
+                            Id = 90,
+                            DateReservation = new DateTime(2025, 6, 1, 10, 0, 6, 817, DateTimeKind.Utc).AddTicks(3115),
+                            Ticket_GamesId = 112,
+                            Ticket_SeatsId = 14,
+                            Ticket_UsersId = 18
+                        },
+                        new
+                        {
+                            Id = 91,
+                            DateReservation = new DateTime(2025, 6, 1, 10, 0, 6, 817, DateTimeKind.Utc).AddTicks(3116),
+                            Ticket_GamesId = 112,
+                            Ticket_SeatsId = 15,
+                            Ticket_UsersId = 19
+                        },
+                        new
+                        {
+                            Id = 92,
+                            DateReservation = new DateTime(2025, 6, 1, 10, 0, 6, 817, DateTimeKind.Utc).AddTicks(3117),
+                            Ticket_GamesId = 112,
+                            Ticket_SeatsId = 16,
+                            Ticket_UsersId = 20
+                        },
+                        new
+                        {
+                            Id = 93,
+                            DateReservation = new DateTime(2025, 6, 1, 10, 0, 6, 817, DateTimeKind.Utc).AddTicks(3118),
+                            Ticket_GamesId = 112,
+                            Ticket_SeatsId = 17,
+                            Ticket_UsersId = 21
+                        },
+                        new
+                        {
+                            Id = 94,
+                            DateReservation = new DateTime(2025, 6, 1, 10, 0, 6, 817, DateTimeKind.Utc).AddTicks(3119),
+                            Ticket_GamesId = 112,
+                            Ticket_SeatsId = 18,
+                            Ticket_UsersId = 22
+                        },
+                        new
+                        {
+                            Id = 95,
+                            DateReservation = new DateTime(2025, 6, 1, 10, 0, 6, 817, DateTimeKind.Utc).AddTicks(3120),
+                            Ticket_GamesId = 112,
+                            Ticket_SeatsId = 19,
+                            Ticket_UsersId = 23
+                        },
+                        new
+                        {
+                            Id = 96,
+                            DateReservation = new DateTime(2025, 6, 1, 10, 0, 6, 817, DateTimeKind.Utc).AddTicks(3121),
+                            Ticket_GamesId = 117,
+                            Ticket_SeatsId = 21,
+                            Ticket_UsersId = 24
+                        },
+                        new
+                        {
+                            Id = 97,
+                            DateReservation = new DateTime(2025, 6, 1, 10, 0, 6, 817, DateTimeKind.Utc).AddTicks(3123),
+                            Ticket_GamesId = 117,
+                            Ticket_SeatsId = 22,
+                            Ticket_UsersId = 25
+                        },
+                        new
+                        {
+                            Id = 98,
+                            DateReservation = new DateTime(2025, 6, 1, 10, 0, 6, 817, DateTimeKind.Utc).AddTicks(3124),
+                            Ticket_GamesId = 117,
+                            Ticket_SeatsId = 23,
+                            Ticket_UsersId = 26
+                        },
+                        new
+                        {
+                            Id = 99,
+                            DateReservation = new DateTime(2025, 6, 1, 10, 0, 6, 817, DateTimeKind.Utc).AddTicks(3125),
+                            Ticket_GamesId = 117,
+                            Ticket_SeatsId = 24,
+                            Ticket_UsersId = 27
+                        },
+                        new
+                        {
+                            Id = 100,
+                            DateReservation = new DateTime(2025, 6, 1, 10, 0, 6, 817, DateTimeKind.Utc).AddTicks(3126),
+                            Ticket_GamesId = 117,
+                            Ticket_SeatsId = 25,
+                            Ticket_UsersId = 28
+                        },
+                        new
+                        {
+                            Id = 101,
+                            DateReservation = new DateTime(2025, 6, 1, 10, 0, 6, 817, DateTimeKind.Utc).AddTicks(3127),
+                            Ticket_GamesId = 117,
+                            Ticket_SeatsId = 26,
+                            Ticket_UsersId = 29
+                        },
+                        new
+                        {
+                            Id = 102,
+                            DateReservation = new DateTime(2025, 6, 1, 10, 0, 6, 817, DateTimeKind.Utc).AddTicks(3128),
+                            Ticket_GamesId = 117,
+                            Ticket_SeatsId = 27,
+                            Ticket_UsersId = 30
+                        },
+                        new
+                        {
+                            Id = 103,
+                            DateReservation = new DateTime(2025, 6, 1, 10, 0, 6, 817, DateTimeKind.Utc).AddTicks(3129),
+                            Ticket_GamesId = 117,
+                            Ticket_SeatsId = 28,
+                            Ticket_UsersId = 31
+                        },
+                        new
+                        {
+                            Id = 104,
+                            DateReservation = new DateTime(2025, 6, 1, 10, 0, 6, 817, DateTimeKind.Utc).AddTicks(3130),
+                            Ticket_GamesId = 117,
+                            Ticket_SeatsId = 29,
+                            Ticket_UsersId = 1
+                        },
+                        new
+                        {
+                            Id = 105,
+                            DateReservation = new DateTime(2025, 6, 1, 10, 0, 6, 817, DateTimeKind.Utc).AddTicks(3131),
+                            Ticket_GamesId = 117,
+                            Ticket_SeatsId = 30,
+                            Ticket_UsersId = 2
+                        },
+                        new
+                        {
+                            Id = 106,
+                            DateReservation = new DateTime(2025, 6, 1, 10, 0, 6, 817, DateTimeKind.Utc).AddTicks(3132),
+                            Ticket_GamesId = 271,
+                            Ticket_SeatsId = 1,
+                            Ticket_UsersId = 3
+                        },
+                        new
+                        {
+                            Id = 107,
+                            DateReservation = new DateTime(2025, 6, 1, 10, 0, 6, 817, DateTimeKind.Utc).AddTicks(3133),
+                            Ticket_GamesId = 271,
+                            Ticket_SeatsId = 2,
+                            Ticket_UsersId = 4
+                        },
+                        new
+                        {
+                            Id = 108,
+                            DateReservation = new DateTime(2025, 6, 1, 10, 0, 6, 817, DateTimeKind.Utc).AddTicks(3134),
+                            Ticket_GamesId = 271,
+                            Ticket_SeatsId = 3,
+                            Ticket_UsersId = 5
+                        },
+                        new
+                        {
+                            Id = 109,
+                            DateReservation = new DateTime(2025, 6, 1, 10, 0, 6, 817, DateTimeKind.Utc).AddTicks(3135),
+                            Ticket_GamesId = 271,
+                            Ticket_SeatsId = 4,
+                            Ticket_UsersId = 6
+                        },
+                        new
+                        {
+                            Id = 110,
+                            DateReservation = new DateTime(2025, 6, 1, 10, 0, 6, 817, DateTimeKind.Utc).AddTicks(3136),
+                            Ticket_GamesId = 271,
+                            Ticket_SeatsId = 5,
+                            Ticket_UsersId = 7
+                        },
+                        new
+                        {
+                            Id = 111,
+                            DateReservation = new DateTime(2025, 6, 1, 10, 0, 6, 817, DateTimeKind.Utc).AddTicks(3138),
+                            Ticket_GamesId = 271,
+                            Ticket_SeatsId = 6,
+                            Ticket_UsersId = 8
+                        },
+                        new
+                        {
+                            Id = 112,
+                            DateReservation = new DateTime(2025, 6, 1, 10, 0, 6, 817, DateTimeKind.Utc).AddTicks(3139),
+                            Ticket_GamesId = 271,
+                            Ticket_SeatsId = 7,
+                            Ticket_UsersId = 9
+                        },
+                        new
+                        {
+                            Id = 113,
+                            DateReservation = new DateTime(2025, 6, 1, 10, 0, 6, 817, DateTimeKind.Utc).AddTicks(3140),
+                            Ticket_GamesId = 271,
+                            Ticket_SeatsId = 8,
+                            Ticket_UsersId = 10
+                        },
+                        new
+                        {
+                            Id = 114,
+                            DateReservation = new DateTime(2025, 6, 1, 10, 0, 6, 817, DateTimeKind.Utc).AddTicks(3141),
+                            Ticket_GamesId = 271,
+                            Ticket_SeatsId = 9,
+                            Ticket_UsersId = 11
+                        },
+                        new
+                        {
+                            Id = 115,
+                            DateReservation = new DateTime(2025, 6, 1, 10, 0, 6, 817, DateTimeKind.Utc).AddTicks(3142),
+                            Ticket_GamesId = 271,
+                            Ticket_SeatsId = 10,
+                            Ticket_UsersId = 12
+                        },
+                        new
+                        {
+                            Id = 116,
+                            DateReservation = new DateTime(2025, 6, 1, 10, 0, 6, 817, DateTimeKind.Utc).AddTicks(3143),
+                            Ticket_GamesId = 287,
+                            Ticket_SeatsId = 1,
+                            Ticket_UsersId = 13
+                        },
+                        new
+                        {
+                            Id = 117,
+                            DateReservation = new DateTime(2025, 6, 1, 10, 0, 6, 817, DateTimeKind.Utc).AddTicks(3144),
+                            Ticket_GamesId = 287,
+                            Ticket_SeatsId = 2,
+                            Ticket_UsersId = 14
+                        },
+                        new
+                        {
+                            Id = 118,
+                            DateReservation = new DateTime(2025, 6, 1, 10, 0, 6, 817, DateTimeKind.Utc).AddTicks(3145),
+                            Ticket_GamesId = 287,
+                            Ticket_SeatsId = 3,
+                            Ticket_UsersId = 15
+                        },
+                        new
+                        {
+                            Id = 119,
+                            DateReservation = new DateTime(2025, 6, 1, 10, 0, 6, 817, DateTimeKind.Utc).AddTicks(3146),
+                            Ticket_GamesId = 287,
+                            Ticket_SeatsId = 4,
+                            Ticket_UsersId = 16
+                        },
+                        new
+                        {
+                            Id = 120,
+                            DateReservation = new DateTime(2025, 6, 1, 10, 0, 6, 817, DateTimeKind.Utc).AddTicks(3147),
+                            Ticket_GamesId = 287,
+                            Ticket_SeatsId = 5,
+                            Ticket_UsersId = 17
+                        },
+                        new
+                        {
+                            Id = 121,
+                            DateReservation = new DateTime(2025, 6, 1, 10, 0, 6, 817, DateTimeKind.Utc).AddTicks(3148),
+                            Ticket_GamesId = 287,
+                            Ticket_SeatsId = 6,
+                            Ticket_UsersId = 18
+                        },
+                        new
+                        {
+                            Id = 122,
+                            DateReservation = new DateTime(2025, 6, 1, 10, 0, 6, 817, DateTimeKind.Utc).AddTicks(3149),
+                            Ticket_GamesId = 287,
+                            Ticket_SeatsId = 7,
+                            Ticket_UsersId = 19
+                        },
+                        new
+                        {
+                            Id = 123,
+                            DateReservation = new DateTime(2025, 6, 1, 10, 0, 6, 817, DateTimeKind.Utc).AddTicks(3151),
+                            Ticket_GamesId = 287,
+                            Ticket_SeatsId = 8,
+                            Ticket_UsersId = 20
+                        },
+                        new
+                        {
+                            Id = 124,
+                            DateReservation = new DateTime(2025, 6, 1, 10, 0, 6, 817, DateTimeKind.Utc).AddTicks(3152),
+                            Ticket_GamesId = 287,
+                            Ticket_SeatsId = 9,
+                            Ticket_UsersId = 21
+                        },
+                        new
+                        {
+                            Id = 125,
+                            DateReservation = new DateTime(2025, 6, 1, 10, 0, 6, 817, DateTimeKind.Utc).AddTicks(3153),
+                            Ticket_GamesId = 287,
+                            Ticket_SeatsId = 10,
+                            Ticket_UsersId = 22
+                        },
+                        new
+                        {
+                            Id = 126,
+                            DateReservation = new DateTime(2025, 6, 1, 10, 0, 6, 817, DateTimeKind.Utc).AddTicks(3154),
+                            Ticket_GamesId = 295,
+                            Ticket_SeatsId = 1,
+                            Ticket_UsersId = 23
+                        },
+                        new
+                        {
+                            Id = 127,
+                            DateReservation = new DateTime(2025, 6, 1, 10, 0, 6, 817, DateTimeKind.Utc).AddTicks(3155),
+                            Ticket_GamesId = 295,
+                            Ticket_SeatsId = 2,
+                            Ticket_UsersId = 24
+                        },
+                        new
+                        {
+                            Id = 128,
+                            DateReservation = new DateTime(2025, 6, 1, 10, 0, 6, 817, DateTimeKind.Utc).AddTicks(3156),
+                            Ticket_GamesId = 295,
+                            Ticket_SeatsId = 3,
+                            Ticket_UsersId = 25
+                        },
+                        new
+                        {
+                            Id = 129,
+                            DateReservation = new DateTime(2025, 6, 1, 10, 0, 6, 817, DateTimeKind.Utc).AddTicks(3157),
+                            Ticket_GamesId = 295,
+                            Ticket_SeatsId = 4,
+                            Ticket_UsersId = 26
+                        },
+                        new
+                        {
+                            Id = 130,
+                            DateReservation = new DateTime(2025, 6, 1, 10, 0, 6, 817, DateTimeKind.Utc).AddTicks(3197),
+                            Ticket_GamesId = 295,
+                            Ticket_SeatsId = 5,
+                            Ticket_UsersId = 27
+                        },
+                        new
+                        {
+                            Id = 131,
+                            DateReservation = new DateTime(2025, 6, 1, 10, 0, 6, 817, DateTimeKind.Utc).AddTicks(3198),
+                            Ticket_GamesId = 295,
+                            Ticket_SeatsId = 6,
+                            Ticket_UsersId = 28
+                        },
+                        new
+                        {
+                            Id = 132,
+                            DateReservation = new DateTime(2025, 6, 1, 10, 0, 6, 817, DateTimeKind.Utc).AddTicks(3199),
+                            Ticket_GamesId = 295,
+                            Ticket_SeatsId = 7,
+                            Ticket_UsersId = 29
+                        },
+                        new
+                        {
+                            Id = 133,
+                            DateReservation = new DateTime(2025, 6, 1, 10, 0, 6, 817, DateTimeKind.Utc).AddTicks(3200),
+                            Ticket_GamesId = 295,
+                            Ticket_SeatsId = 8,
+                            Ticket_UsersId = 30
+                        },
+                        new
+                        {
+                            Id = 134,
+                            DateReservation = new DateTime(2025, 6, 1, 10, 0, 6, 817, DateTimeKind.Utc).AddTicks(3202),
+                            Ticket_GamesId = 295,
+                            Ticket_SeatsId = 9,
+                            Ticket_UsersId = 31
+                        },
+                        new
+                        {
+                            Id = 135,
+                            DateReservation = new DateTime(2025, 6, 1, 10, 0, 6, 817, DateTimeKind.Utc).AddTicks(3203),
+                            Ticket_GamesId = 295,
+                            Ticket_SeatsId = 10,
+                            Ticket_UsersId = 1
+                        },
+                        new
+                        {
+                            Id = 136,
+                            DateReservation = new DateTime(2025, 6, 1, 10, 0, 6, 817, DateTimeKind.Utc).AddTicks(3204),
+                            Ticket_GamesId = 301,
+                            Ticket_SeatsId = 1,
+                            Ticket_UsersId = 2
+                        },
+                        new
+                        {
+                            Id = 137,
+                            DateReservation = new DateTime(2025, 6, 1, 10, 0, 6, 817, DateTimeKind.Utc).AddTicks(3205),
+                            Ticket_GamesId = 301,
+                            Ticket_SeatsId = 2,
+                            Ticket_UsersId = 3
+                        },
+                        new
+                        {
+                            Id = 138,
+                            DateReservation = new DateTime(2025, 6, 1, 10, 0, 6, 817, DateTimeKind.Utc).AddTicks(3206),
+                            Ticket_GamesId = 301,
+                            Ticket_SeatsId = 3,
+                            Ticket_UsersId = 4
+                        },
+                        new
+                        {
+                            Id = 139,
+                            DateReservation = new DateTime(2025, 6, 1, 10, 0, 6, 817, DateTimeKind.Utc).AddTicks(3207),
+                            Ticket_GamesId = 301,
+                            Ticket_SeatsId = 4,
+                            Ticket_UsersId = 5
+                        },
+                        new
+                        {
+                            Id = 140,
+                            DateReservation = new DateTime(2025, 6, 1, 10, 0, 6, 817, DateTimeKind.Utc).AddTicks(3208),
+                            Ticket_GamesId = 301,
+                            Ticket_SeatsId = 5,
+                            Ticket_UsersId = 6
+                        },
+                        new
+                        {
+                            Id = 141,
+                            DateReservation = new DateTime(2025, 6, 1, 10, 0, 6, 817, DateTimeKind.Utc).AddTicks(3209),
+                            Ticket_GamesId = 301,
+                            Ticket_SeatsId = 6,
+                            Ticket_UsersId = 7
+                        },
+                        new
+                        {
+                            Id = 142,
+                            DateReservation = new DateTime(2025, 6, 1, 10, 0, 6, 817, DateTimeKind.Utc).AddTicks(3211),
+                            Ticket_GamesId = 311,
+                            Ticket_SeatsId = 1,
+                            Ticket_UsersId = 8
+                        },
+                        new
+                        {
+                            Id = 143,
+                            DateReservation = new DateTime(2025, 6, 1, 10, 0, 6, 817, DateTimeKind.Utc).AddTicks(3212),
+                            Ticket_GamesId = 311,
+                            Ticket_SeatsId = 2,
+                            Ticket_UsersId = 9
+                        },
+                        new
+                        {
+                            Id = 144,
+                            DateReservation = new DateTime(2025, 6, 1, 10, 0, 6, 817, DateTimeKind.Utc).AddTicks(3213),
+                            Ticket_GamesId = 311,
+                            Ticket_SeatsId = 3,
+                            Ticket_UsersId = 10
+                        },
+                        new
+                        {
+                            Id = 145,
+                            DateReservation = new DateTime(2025, 6, 1, 10, 0, 6, 817, DateTimeKind.Utc).AddTicks(3214),
+                            Ticket_GamesId = 311,
+                            Ticket_SeatsId = 4,
+                            Ticket_UsersId = 11
+                        },
+                        new
+                        {
+                            Id = 146,
+                            DateReservation = new DateTime(2025, 6, 1, 10, 0, 6, 817, DateTimeKind.Utc).AddTicks(3216),
+                            Ticket_GamesId = 311,
+                            Ticket_SeatsId = 5,
+                            Ticket_UsersId = 12
+                        },
+                        new
+                        {
+                            Id = 147,
+                            DateReservation = new DateTime(2025, 6, 1, 10, 0, 6, 817, DateTimeKind.Utc).AddTicks(3217),
+                            Ticket_GamesId = 311,
+                            Ticket_SeatsId = 6,
+                            Ticket_UsersId = 13
+                        },
+                        new
+                        {
+                            Id = 148,
+                            DateReservation = new DateTime(2025, 6, 1, 10, 0, 6, 817, DateTimeKind.Utc).AddTicks(3218),
+                            Ticket_GamesId = 321,
+                            Ticket_SeatsId = 1,
+                            Ticket_UsersId = 14
+                        },
+                        new
+                        {
+                            Id = 149,
+                            DateReservation = new DateTime(2025, 6, 1, 10, 0, 6, 817, DateTimeKind.Utc).AddTicks(3219),
+                            Ticket_GamesId = 321,
+                            Ticket_SeatsId = 2,
+                            Ticket_UsersId = 15
+                        },
+                        new
+                        {
+                            Id = 150,
+                            DateReservation = new DateTime(2025, 6, 1, 10, 0, 6, 817, DateTimeKind.Utc).AddTicks(3220),
+                            Ticket_GamesId = 321,
+                            Ticket_SeatsId = 3,
+                            Ticket_UsersId = 16
+                        },
+                        new
+                        {
+                            Id = 151,
+                            DateReservation = new DateTime(2025, 6, 1, 10, 0, 6, 817, DateTimeKind.Utc).AddTicks(3221),
+                            Ticket_GamesId = 321,
+                            Ticket_SeatsId = 4,
+                            Ticket_UsersId = 17
+                        },
+                        new
+                        {
+                            Id = 152,
+                            DateReservation = new DateTime(2025, 6, 1, 10, 0, 6, 817, DateTimeKind.Utc).AddTicks(3222),
+                            Ticket_GamesId = 321,
+                            Ticket_SeatsId = 5,
+                            Ticket_UsersId = 18
+                        },
+                        new
+                        {
+                            Id = 153,
+                            DateReservation = new DateTime(2025, 6, 1, 10, 0, 6, 817, DateTimeKind.Utc).AddTicks(3223),
+                            Ticket_GamesId = 321,
+                            Ticket_SeatsId = 6,
+                            Ticket_UsersId = 19
+                        },
+                        new
+                        {
+                            Id = 154,
+                            DateReservation = new DateTime(2025, 6, 1, 10, 0, 6, 817, DateTimeKind.Utc).AddTicks(3224),
+                            Ticket_GamesId = 321,
+                            Ticket_SeatsId = 7,
+                            Ticket_UsersId = 20
                         });
                 });
 
@@ -11507,121 +20722,361 @@ namespace FCUnirea.Persistance.Data.Migrations
                         {
                             Id = 2,
                             CreatedAt = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            Email = "user1@fcunirea.ro",
+                            Email = "ion.popescu@fcunirea.ro",
                             FirstName = "Ion",
                             LastName = "Popescu",
                             Password = "WTM/73BdHfimme4uRkFNWA==:70kq150aS87havltE4F8HHTApxiz1TcfnQV2kHNvVxI=",
                             PhoneNumber = "0700000001",
                             Role = 1,
-                            Username = "user1"
+                            Username = "ion.popescu"
                         },
                         new
                         {
                             Id = 3,
                             CreatedAt = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            Email = "user2@fcunirea.ro",
+                            Email = "ana.ionescu@fcunirea.ro",
                             FirstName = "Ana",
                             LastName = "Ionescu",
                             Password = "WTM/73BdHfimme4uRkFNWA==:70kq150aS87havltE4F8HHTApxiz1TcfnQV2kHNvVxI=",
                             PhoneNumber = "0700000002",
                             Role = 1,
-                            Username = "user2"
+                            Username = "ana.ionescu"
                         },
                         new
                         {
                             Id = 4,
                             CreatedAt = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            Email = "user3@fcunirea.ro",
+                            Email = "george.marin@fcunirea.ro",
                             FirstName = "George",
                             LastName = "Marin",
                             Password = "WTM/73BdHfimme4uRkFNWA==:70kq150aS87havltE4F8HHTApxiz1TcfnQV2kHNvVxI=",
                             PhoneNumber = "0700000003",
                             Role = 1,
-                            Username = "user3"
+                            Username = "george.marin"
                         },
                         new
                         {
                             Id = 5,
                             CreatedAt = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            Email = "user4@fcunirea.ro",
+                            Email = "elena.dumitru@fcunirea.ro",
                             FirstName = "Elena",
                             LastName = "Dumitru",
                             Password = "WTM/73BdHfimme4uRkFNWA==:70kq150aS87havltE4F8HHTApxiz1TcfnQV2kHNvVxI=",
                             PhoneNumber = "0700000004",
                             Role = 1,
-                            Username = "user4"
+                            Username = "elena.dumitru"
                         },
                         new
                         {
                             Id = 6,
                             CreatedAt = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            Email = "user5@fcunirea.ro",
+                            Email = "mihai.stan@fcunirea.ro",
                             FirstName = "Mihai",
                             LastName = "Stan",
                             Password = "WTM/73BdHfimme4uRkFNWA==:70kq150aS87havltE4F8HHTApxiz1TcfnQV2kHNvVxI=",
                             PhoneNumber = "0700000005",
                             Role = 1,
-                            Username = "user5"
+                            Username = "mihai.stan"
                         },
                         new
                         {
                             Id = 7,
                             CreatedAt = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            Email = "user6@fcunirea.ro",
+                            Email = "bianca.toma@fcunirea.ro",
                             FirstName = "Bianca",
                             LastName = "Toma",
                             Password = "WTM/73BdHfimme4uRkFNWA==:70kq150aS87havltE4F8HHTApxiz1TcfnQV2kHNvVxI=",
                             PhoneNumber = "0700000006",
                             Role = 1,
-                            Username = "user6"
+                            Username = "bianca.toma"
                         },
                         new
                         {
                             Id = 8,
                             CreatedAt = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            Email = "user7@fcunirea.ro",
+                            Email = "alex.vasilescu@fcunirea.ro",
                             FirstName = "Alex",
                             LastName = "Vasilescu",
                             Password = "WTM/73BdHfimme4uRkFNWA==:70kq150aS87havltE4F8HHTApxiz1TcfnQV2kHNvVxI=",
                             PhoneNumber = "0700000007",
                             Role = 1,
-                            Username = "user7"
+                            Username = "alex.vasilescu"
                         },
                         new
                         {
                             Id = 9,
                             CreatedAt = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            Email = "user8@fcunirea.ro",
+                            Email = "diana.radu@fcunirea.ro",
                             FirstName = "Diana",
                             LastName = "Radu",
                             Password = "WTM/73BdHfimme4uRkFNWA==:70kq150aS87havltE4F8HHTApxiz1TcfnQV2kHNvVxI=",
                             PhoneNumber = "0700000008",
                             Role = 1,
-                            Username = "user8"
+                            Username = "diana.radu"
                         },
                         new
                         {
                             Id = 10,
                             CreatedAt = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            Email = "user9@fcunirea.ro",
+                            Email = "tudor.matei@fcunirea.ro",
                             FirstName = "Tudor",
                             LastName = "Matei",
                             Password = "WTM/73BdHfimme4uRkFNWA==:70kq150aS87havltE4F8HHTApxiz1TcfnQV2kHNvVxI=",
                             PhoneNumber = "0700000009",
                             Role = 1,
-                            Username = "user9"
+                            Username = "tudor.matei"
                         },
                         new
                         {
                             Id = 11,
                             CreatedAt = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            Email = "user10@fcunirea.ro",
+                            Email = "andreea.ilie@fcunirea.ro",
                             FirstName = "Andreea",
                             LastName = "Ilie",
                             Password = "WTM/73BdHfimme4uRkFNWA==:70kq150aS87havltE4F8HHTApxiz1TcfnQV2kHNvVxI=",
                             PhoneNumber = "0700000010",
                             Role = 1,
-                            Username = "user10"
+                            Username = "andreea.ilie"
+                        },
+                        new
+                        {
+                            Id = 12,
+                            CreatedAt = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            Email = "claudiu.dobre@fcunirea.ro",
+                            FirstName = "Claudiu",
+                            LastName = "Dobre",
+                            Password = "WTM/73BdHfimme4uRkFNWA==:70kq150aS87havltE4F8HHTApxiz1TcfnQV2kHNvVxI=",
+                            PhoneNumber = "0700000011",
+                            Role = 1,
+                            Username = "claudiu.dobre"
+                        },
+                        new
+                        {
+                            Id = 13,
+                            CreatedAt = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            Email = "raluca.georgescu@fcunirea.ro",
+                            FirstName = "Raluca",
+                            LastName = "Georgescu",
+                            Password = "WTM/73BdHfimme4uRkFNWA==:70kq150aS87havltE4F8HHTApxiz1TcfnQV2kHNvVxI=",
+                            PhoneNumber = "0700000012",
+                            Role = 1,
+                            Username = "raluca.georgescu"
+                        },
+                        new
+                        {
+                            Id = 14,
+                            CreatedAt = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            Email = "ionut.moldovan@fcunirea.ro",
+                            FirstName = "Ionut",
+                            LastName = "Moldovan",
+                            Password = "WTM/73BdHfimme4uRkFNWA==:70kq150aS87havltE4F8HHTApxiz1TcfnQV2kHNvVxI=",
+                            PhoneNumber = "0700000013",
+                            Role = 1,
+                            Username = "ionut.moldovan"
+                        },
+                        new
+                        {
+                            Id = 15,
+                            CreatedAt = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            Email = "carmen.pop@fcunirea.ro",
+                            FirstName = "Carmen",
+                            LastName = "Pop",
+                            Password = "WTM/73BdHfimme4uRkFNWA==:70kq150aS87havltE4F8HHTApxiz1TcfnQV2kHNvVxI=",
+                            PhoneNumber = "0700000014",
+                            Role = 1,
+                            Username = "carmen.pop"
+                        },
+                        new
+                        {
+                            Id = 16,
+                            CreatedAt = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            Email = "vlad.enache@fcunirea.ro",
+                            FirstName = "Vlad",
+                            LastName = "Enache",
+                            Password = "WTM/73BdHfimme4uRkFNWA==:70kq150aS87havltE4F8HHTApxiz1TcfnQV2kHNvVxI=",
+                            PhoneNumber = "0700000015",
+                            Role = 1,
+                            Username = "vlad.enache"
+                        },
+                        new
+                        {
+                            Id = 17,
+                            CreatedAt = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            Email = "irina.voicu@fcunirea.ro",
+                            FirstName = "Irina",
+                            LastName = "Voicu",
+                            Password = "WTM/73BdHfimme4uRkFNWA==:70kq150aS87havltE4F8HHTApxiz1TcfnQV2kHNvVxI=",
+                            PhoneNumber = "0700000016",
+                            Role = 1,
+                            Username = "irina.voicu"
+                        },
+                        new
+                        {
+                            Id = 18,
+                            CreatedAt = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            Email = "sebastian.cristea@fcunirea.ro",
+                            FirstName = "Sebastian",
+                            LastName = "Cristea",
+                            Password = "WTM/73BdHfimme4uRkFNWA==:70kq150aS87havltE4F8HHTApxiz1TcfnQV2kHNvVxI=",
+                            PhoneNumber = "0700000017",
+                            Role = 1,
+                            Username = "sebastian.cristea"
+                        },
+                        new
+                        {
+                            Id = 19,
+                            CreatedAt = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            Email = "simona.marinescu@fcunirea.ro",
+                            FirstName = "Simona",
+                            LastName = "Marinescu",
+                            Password = "WTM/73BdHfimme4uRkFNWA==:70kq150aS87havltE4F8HHTApxiz1TcfnQV2kHNvVxI=",
+                            PhoneNumber = "0700000018",
+                            Role = 1,
+                            Username = "simona.marinescu"
+                        },
+                        new
+                        {
+                            Id = 20,
+                            CreatedAt = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            Email = "rares.sava@fcunirea.ro",
+                            FirstName = "Rares",
+                            LastName = "Sava",
+                            Password = "WTM/73BdHfimme4uRkFNWA==:70kq150aS87havltE4F8HHTApxiz1TcfnQV2kHNvVxI=",
+                            PhoneNumber = "0700000019",
+                            Role = 1,
+                            Username = "rares.sava"
+                        },
+                        new
+                        {
+                            Id = 21,
+                            CreatedAt = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            Email = "paula.mateescu@fcunirea.ro",
+                            FirstName = "Paula",
+                            LastName = "Mateescu",
+                            Password = "WTM/73BdHfimme4uRkFNWA==:70kq150aS87havltE4F8HHTApxiz1TcfnQV2kHNvVxI=",
+                            PhoneNumber = "0700000020",
+                            Role = 1,
+                            Username = "paula.mateescu"
+                        },
+                        new
+                        {
+                            Id = 22,
+                            CreatedAt = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            Email = "alin.badea@fcunirea.ro",
+                            FirstName = "Alin",
+                            LastName = "Badea",
+                            Password = "WTM/73BdHfimme4uRkFNWA==:70kq150aS87havltE4F8HHTApxiz1TcfnQV2kHNvVxI=",
+                            PhoneNumber = "0700000021",
+                            Role = 1,
+                            Username = "alin.badea"
+                        },
+                        new
+                        {
+                            Id = 23,
+                            CreatedAt = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            Email = "adelina.dragan@fcunirea.ro",
+                            FirstName = "Adelina",
+                            LastName = "Dragan",
+                            Password = "WTM/73BdHfimme4uRkFNWA==:70kq150aS87havltE4F8HHTApxiz1TcfnQV2kHNvVxI=",
+                            PhoneNumber = "0700000022",
+                            Role = 1,
+                            Username = "adelina.dragan"
+                        },
+                        new
+                        {
+                            Id = 24,
+                            CreatedAt = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            Email = "lucian.simeon@fcunirea.ro",
+                            FirstName = "Lucian",
+                            LastName = "Simeon",
+                            Password = "WTM/73BdHfimme4uRkFNWA==:70kq150aS87havltE4F8HHTApxiz1TcfnQV2kHNvVxI=",
+                            PhoneNumber = "0700000023",
+                            Role = 1,
+                            Username = "lucian.simeon"
+                        },
+                        new
+                        {
+                            Id = 25,
+                            CreatedAt = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            Email = "gabriela.radulescu@fcunirea.ro",
+                            FirstName = "Gabriela",
+                            LastName = "Radulescu",
+                            Password = "WTM/73BdHfimme4uRkFNWA==:70kq150aS87havltE4F8HHTApxiz1TcfnQV2kHNvVxI=",
+                            PhoneNumber = "0700000024",
+                            Role = 1,
+                            Username = "gabriela.radulescu"
+                        },
+                        new
+                        {
+                            Id = 26,
+                            CreatedAt = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            Email = "vasile.ciobanu@fcunirea.ro",
+                            FirstName = "Vasile",
+                            LastName = "Ciobanu",
+                            Password = "WTM/73BdHfimme4uRkFNWA==:70kq150aS87havltE4F8HHTApxiz1TcfnQV2kHNvVxI=",
+                            PhoneNumber = "0700000025",
+                            Role = 1,
+                            Username = "vasile.ciobanu"
+                        },
+                        new
+                        {
+                            Id = 27,
+                            CreatedAt = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            Email = "oana.manole@fcunirea.ro",
+                            FirstName = "Oana",
+                            LastName = "Manole",
+                            Password = "WTM/73BdHfimme4uRkFNWA==:70kq150aS87havltE4F8HHTApxiz1TcfnQV2kHNvVxI=",
+                            PhoneNumber = "0700000026",
+                            Role = 1,
+                            Username = "oana.manole"
+                        },
+                        new
+                        {
+                            Id = 28,
+                            CreatedAt = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            Email = "cornel.ardelean@fcunirea.ro",
+                            FirstName = "Cornel",
+                            LastName = "Ardelean",
+                            Password = "WTM/73BdHfimme4uRkFNWA==:70kq150aS87havltE4F8HHTApxiz1TcfnQV2kHNvVxI=",
+                            PhoneNumber = "0700000027",
+                            Role = 1,
+                            Username = "cornel.ardelean"
+                        },
+                        new
+                        {
+                            Id = 29,
+                            CreatedAt = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            Email = "camelia.pavel@fcunirea.ro",
+                            FirstName = "Camelia",
+                            LastName = "Pavel",
+                            Password = "WTM/73BdHfimme4uRkFNWA==:70kq150aS87havltE4F8HHTApxiz1TcfnQV2kHNvVxI=",
+                            PhoneNumber = "0700000028",
+                            Role = 1,
+                            Username = "camelia.pavel"
+                        },
+                        new
+                        {
+                            Id = 30,
+                            CreatedAt = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            Email = "grigore.nastase@fcunirea.ro",
+                            FirstName = "Grigore",
+                            LastName = "Nastase",
+                            Password = "WTM/73BdHfimme4uRkFNWA==:70kq150aS87havltE4F8HHTApxiz1TcfnQV2kHNvVxI=",
+                            PhoneNumber = "0700000029",
+                            Role = 1,
+                            Username = "grigore.nastase"
+                        },
+                        new
+                        {
+                            Id = 31,
+                            CreatedAt = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            Email = "veronica.filip@fcunirea.ro",
+                            FirstName = "Veronica",
+                            LastName = "Filip",
+                            Password = "WTM/73BdHfimme4uRkFNWA==:70kq150aS87havltE4F8HHTApxiz1TcfnQV2kHNvVxI=",
+                            PhoneNumber = "0700000030",
+                            Role = 1,
+                            Username = "veronica.filip"
                         });
                 });
 
@@ -11704,13 +21159,13 @@ namespace FCUnirea.Persistance.Data.Migrations
             modelBuilder.Entity("FCUnirea.Domain.Entities.PlayerStatisticsPerCompetition", b =>
                 {
                     b.HasOne("FCUnirea.Domain.Entities.Competitions", "PlayerStatisticsPerCompetition_Competitions")
-                        .WithMany("Competitions_PlayerStatisticsPerCompetiton")
+                        .WithMany("Competitions_PlayerStatisticsPerCompetition")
                         .HasForeignKey("PlayerStatisticsPerCompetition_CompetitionsId")
                         .OnDelete(DeleteBehavior.Restrict)
                         .IsRequired();
 
                     b.HasOne("FCUnirea.Domain.Entities.Players", "PlayerStatisticsPerCompetition_Players")
-                        .WithMany("Players_PlayerStatisticsPerCompetitons")
+                        .WithMany("Players_PlayerStatisticsPerCompetitions")
                         .HasForeignKey("PlayerStatisticsPerCompetition_PlayersId")
                         .OnDelete(DeleteBehavior.Restrict)
                         .IsRequired();
@@ -11800,7 +21255,7 @@ namespace FCUnirea.Persistance.Data.Migrations
                 {
                     b.Navigation("Competitions_Games");
 
-                    b.Navigation("Competitions_PlayerStatisticsPerCompetiton");
+                    b.Navigation("Competitions_PlayerStatisticsPerCompetition");
 
                     b.Navigation("Competitions_TeamStatistics");
                 });
@@ -11819,7 +21274,7 @@ namespace FCUnirea.Persistance.Data.Migrations
 
             modelBuilder.Entity("FCUnirea.Domain.Entities.Players", b =>
                 {
-                    b.Navigation("Players_PlayerStatisticsPerCompetitons");
+                    b.Navigation("Players_PlayerStatisticsPerCompetitions");
 
                     b.Navigation("Players_PlayerStatisticsPerGame");
                 });

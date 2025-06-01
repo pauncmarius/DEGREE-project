@@ -35,7 +35,7 @@ namespace FCUnirea.Persistance.Data.Mappings
                 .IsRequired();
 
             modelBuilder.Entity<Players>()
-                .HasMany(n => n.Players_PlayerStatisticsPerCompetitons)
+                .HasMany(n => n.Players_PlayerStatisticsPerCompetitions)
                 .WithOne(c => c.PlayerStatisticsPerCompetition_Players)
                 .HasForeignKey(c => c.PlayerStatisticsPerCompetition_PlayersId)
                 .OnDelete(DeleteBehavior.Restrict);

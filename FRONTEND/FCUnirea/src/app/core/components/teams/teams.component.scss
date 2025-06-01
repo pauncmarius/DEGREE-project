@@ -59,14 +59,7 @@
   margin-right: auto;
 }
 
-@media (max-width: 600px) {
-  .section-title {
-    font-size: 1.3rem;
-    padding-left: 8px;
-    margin: 20px 0 14px 0;
-  }
-  .team-card {
-    padding: 0.9rem 0.7rem;
-    border-radius: 9px;
-  }
+.preserve-lines {
+  white-space: pre-line;
 }
+

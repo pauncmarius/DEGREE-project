@@ -84,15 +84,19 @@
     text-align: center;
     font-size: 1.06rem;
     font-weight: 500;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 8px;
 
     .login-lock {
-      font-size: 1.25em;
-      margin-right: 5px;
+    font-size: 1.25em;
+    margin-right: 5px;
+    vertical-align: middle;
+
     }
+    .login-link{
+      cursor: pointer;
+      color: #012e58;
+      text-decoration: underline;
+    }
+    
   }
 }
 

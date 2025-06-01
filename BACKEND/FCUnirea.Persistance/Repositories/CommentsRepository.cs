@@ -17,7 +17,7 @@ namespace FCUnirea.Persistance.Repositories
             // selecteaza comentariile care au id-ul stirei egal cu newsId
             return _dbContext.Comments
                 .Where(c => c.Comment_NewsId == newsId)
-                // incarca si informatiile despre utilizatorul care a scris comentariul (Include = eager loading)
+                // incarca si informatiile despre utilizatorul care a scris comentariul
                 .Include(c => c.Comment_User)
                 // sorteaza comentariile descrescator dupa data crearii
                 .OrderByDescending(c => c.CreatedAt)

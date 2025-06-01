@@ -6,7 +6,7 @@
     <div class="team-card" *ngFor="let team of internalTeams" (click)="goToTeam(team.id)">
       <h3>{{ team.teamName }}</h3>
       <p>Antrenor: {{ team.coachName }}</p>
-      <p>{{ team.description || 'Fără descriere.' }}</p>
+        <p class="preserve-lines">{{ team.description || 'Fără descriere.' }}</p>
     </div>
   </div>
   

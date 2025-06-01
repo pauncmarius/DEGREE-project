@@ -25,13 +25,20 @@ namespace FCUnirea.Business.Services
 
         public IEnumerable<Comments> GetComments() => _commentsRepository.ListAll();
         public Comments GetComment(int id) => _commentsRepository.GetById(id);
-        public void UpdateComment(Comments comment) => _commentsRepository.Update(comment);
+        public void UpdateComment(Comments comment)
+        {
+            _commentsRepository.Update(comment);
+        }
+
         public void DeleteComment(int id)
         {
             var comment = _commentsRepository.GetById(id);
-            if (comment != null) 
+            if (comment != null)
+            {
                 _commentsRepository.Delete(comment);
+            }
         }
+
         public int? AddCommentWithUser(CommentsModel model, string username)
         {
             var user = _usersRepository.GetByUsername(username);

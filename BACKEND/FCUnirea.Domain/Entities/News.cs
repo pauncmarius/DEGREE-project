@@ -8,7 +8,7 @@ namespace FCUnirea.Domain.Entities
     public class News : BaseEntity
     {
         public string Title { get; set; }
-        [Column(TypeName = "TEXT")]
+        [Column(TypeName = "NVARCHAR(MAX)")]
         public string Text { get; set; }
         public DateTime CreatedAt { get; set; }
 
