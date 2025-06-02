@@ -1,128 +1,226 @@
 <div class="team-details-container" *ngIf="team">
   <h1>{{ team.teamName }}</h1>
   <p><strong>Antrenor:</strong> {{ team.coachName }}</p>
-  <p><strong>Descriere:</strong> {{ team.description || 'Fără descriere.' }}</p>
-</div><br>
+  <p class="preserve-lines"><strong>Descriere:</strong> {{ team.description || 'Fără descriere.' }}</p>
+</div>
 
-<div *ngIf="players.length > 0" class="players-section">
-  <h2>Lotul echipei</h2>
-  <ul>
-    <li *ngFor="let player of players">
-      <strong>{{ player.playerName }}</strong> -
-      {{ player.position }}, {{ calculateAge(player.birthDate) }} ani
-    </li>
-  </ul>
-</div><br>
+<!-- Taburi principale -->
+<div class="main-tabs">
+  <button 
+    [class.active]="activeMainTab === 'lot'"
+    (click)="activeMainTab = 'lot'">
+    Lotul
+  </button>
+  <button 
+    [class.active]="activeMainTab === 'program'"
+    (click)="activeMainTab = 'program'">
+    Program
+  </button>
+  <button 
+    [class.active]="activeMainTab === 'clasament'"
+    (click)="activeMainTab = 'clasament'">
+    Clasament
+  </button>
+</div>
 
-<div *ngIf="players.length === 0">
-  <p>Nu există jucători înregistrați pentru această echipă.</p>
-</div><br>
-
-<h2> Program</h2>
-<!-- Meciuri + Marcatori -->
-<div class="game-cards">
-  <div class="game-card"
-  *ngFor="let game of games"
-  [ngClass]="getMatchResultClass(game)"
-  (click)="toggleScorers(game.id)">
-
-    <div class="game-header">
-      <span>{{ game.gameDate | date: 'shortDate' }}</span>
-      <strong>{{ game.homeTeamName }} {{ game.homeTeamScore }} - {{ game.awayTeamScore }} {{ game.awayTeamName }}</strong>
-      <em>{{ game.competitionName }}</em>
-    </div>
-
-    <div class="scorers" *ngIf="selectedGameId === game.id">
-      <h4>Marcatori</h4>
-      <ul *ngIf="(scorersPerGame?.[game.id] ?? []).length > 0; else noGoals">
-        <li *ngFor="let scorer of scorersPerGame[game.id]">
-          ⚽ {{ scorer.playerName }} ({{ scorer.teamName }}) - {{ scorer.goals }} goluri
+<!-- LOTUL -->
+<div *ngIf="activeMainTab === 'lot'">
+  <button 
+    *ngIf="isAdmin" 
+    class="edit-squad-btn"
+    (click)="editSquad()">
+    ✏️ Editează lotul
+  </button>
+  <div *ngIf="players.length > 0" class="players-section">
+    <ng-container *ngFor="let pos of objectKeys(groupedPlayers)">
+      <h3 class="player-position">{{ pos }}</h3>
+      <ul>
+        <li *ngFor="let player of groupedPlayers[pos]">
+          <strong>{{ player.playerName }}</strong> - {{ calculateAge(player.birthDate) }} ani
         </li>
-      </ul>
-      <ng-template #noGoals>
-        <p>Nu există marcatori înregistrați pentru acest meci.</p>
-      </ng-template>
-    </div>
+      </ul><br>
+    </ng-container>
+  </div>
+  <div *ngIf="players.length === 0">
+    <p>Nu există jucători înregistrați pentru această echipă.</p>
   </div>
 </div>
 
+<!-- PROGRAM -->
+<div *ngIf="activeMainTab === 'program'">
+  <!-- Search bar centrat -->
+  <div class="match-search-bar-centered">
+    <input
+      type="text"
+      [(ngModel)]="searchMatchTerm"
+      placeholder="Caută după adversar sau competiție..."
+      class="match-search-input"
+    />
+  </div>
 
+  <div class="game-cards">
+    <div class="game-card"
+      *ngFor="let game of filteredGames"
+      [ngClass]="getMatchResultClass(game)"
+      (click)="toggleScorers(game.id)">
+      <div class="game-header-centered">
+        <span class="game-date">{{ game.gameDate | date: 'shortDate' }}</span>
+        <strong class="game-score">
+          {{ game.homeTeamName }} 
+          {{ displayScore(game, 'home') }} - {{ displayScore(game, 'away') }} 
+          {{ game.awayTeamName }}
+        </strong>
 
-<div class="no-games" *ngIf="games.length === 0">
-  <p>Nu sunt meciuri disponibile pentru această echipă.</p>
-</div><br>
-
-<!-- Clasamente + Marcatori competiție -->
-<div *ngFor="let compId of standingsCompetitionIds">
-  <div class="standings">
-    <h3>Competiție: {{ competitionNames[compId] || 'Fără nume' }}</h3>
-
-    <div class="tabs">
-      <button (click)="activeTabMap[compId] = 'standings'"
-              [class.active]="activeTabMap[compId] === 'standings'">Per total</button>
-      <button (click)="activeTabMap[compId] = 'scorers'"
-              [class.active]="activeTabMap[compId] === 'scorers'">Marcatori</button>
+        <em class="game-competition">{{ game.competitionName }}</em>
+      </div>
+      <div class="scorers" *ngIf="selectedGameId === game.id">
+        <h4>Marcatori</h4>
+        <div *ngIf="(scorersPerGame?.[game.id] ?? []).length > 0; else noGoals">
+          <div *ngFor="let scorer of scorersPerGame[game.id]" class="scorer-row">
+            <span class="scorer-icon">⚽</span>
+            <span class="scorer-name">{{ scorer.playerName }}</span>
+            <span class="scorer-team">({{ scorer.teamName }})</span>
+            <span class="scorer-goals">{{ scorer.goals }} goluri</span>
+          </div>
+        </div>
+        <ng-template #noGoals>
+          <p>Nu există marcatori înregistrați pentru acest meci.</p>
+        </ng-template>
+      </div>
     </div>
-
-    <!-- Clasament -->
-    <div *ngIf="activeTabMap[compId] === 'standings'">
-      <table>
-        <thead>
-          <tr>
-            <th>Loc</th>
-            <th>Echipă</th>
-            <th>M</th>
-            <th>V</th>
-            <th>E</th>
-            <th>Î</th>
-            <th>GM</th>
-            <th>GP</th>
-            <th>DG</th>
-            <th>Pts</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr *ngFor="let stat of standingsMap[compId]; let i = index"
-              [ngClass]="{ 'highlight': stat.id === teamId }">
-            <td>{{ i + 1 }}</td>
-            <td>{{ stat.teamName }}</td>
-            <td>{{ stat.gamesPlayed }}</td>
-            <td>{{ stat.totalWins }}</td>
-            <td>{{ stat.totalDraws }}</td>
-            <td>{{ stat.totalLosses }}</td>
-            <td>{{ stat.goalsScored }}</td>
-            <td>{{ stat.goalsConceded }}</td>
-            <td>{{ stat.goalsScored - stat.goalsConceded }}</td>
-            <td>{{ stat.totalPoints }}</td>
-          </tr>
-        </tbody>
-      </table>
-    </div>
-
-    <!-- Marcatori competitie -->
-    <div *ngIf="activeTabMap[compId] === 'scorers'">
-      <table>
-        <thead>
-          <tr>
-            <th>Loc</th>
-            <th>Jucător</th>
-            <th>Echipă</th>
-            <th>Goluri</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr *ngFor="let scorer of scorersMap[compId]; let i = index">
-            <td>{{ i + 1 }}</td>
-            <td>{{ scorer.playerName }}</td>
-            <td>{{ scorer.teamName }}</td>
-            <td>{{ scorer.goals }}</td>
-          </tr>
-        </tbody>
-      </table>
+    <div class="game-card" *ngIf="filteredGames.length === 0">
+    <span>Nu există meciuri care să corespundă filtrului.</span>
     </div>
   </div>
+
 </div>
 
-<div *ngIf="standingsCompetitionIds.length === 0" class="no-standings">
-  <p>Nu există clasamente disponibile pentru această echipă.</p>
+
+<!-- CLASAMENT -->
+<div *ngIf="activeMainTab === 'clasament'">
+  <div *ngFor="let compId of standingsCompetitionIds">
+    <div class="standings">
+      <h3>Competiție: {{ competitionNames[compId] || 'Fără nume' }}</h3>
+
+      <div class="tabs">
+        <!-- Arată doar marcatori și, opțional, brackets dacă e cupă -->
+        <ng-container *ngIf="isCup(competitionNames[compId]); else normalTabs">
+          <button (click)="activeTabMap[compId] = 'brackets'"
+                  [class.active]="activeTabMap[compId] === 'brackets'">
+            Brackets
+          </button>
+          <button (click)="activeTabMap[compId] = 'scorers'"
+                  [class.active]="activeTabMap[compId] === 'scorers'">
+            Marcatori
+          </button>
+        </ng-container>
+        <ng-template #normalTabs>
+          <button (click)="activeTabMap[compId] = 'standings'"
+                  [class.active]="activeTabMap[compId] === 'standings'">
+            Per total
+          </button>
+          <button (click)="activeTabMap[compId] = 'scorers'"
+                  [class.active]="activeTabMap[compId] === 'scorers'">
+            Marcatori
+          </button>
+        </ng-template>
+      </div>
+
+      <!-- Clasament -->
+      <div *ngIf="!isCup(competitionNames[compId]) && activeTabMap[compId] === 'standings'">
+        <table>
+          <thead>
+            <tr>
+              <th>Loc</th>
+              <th>Echipă</th>
+              <th>M</th>
+              <th>V</th>
+              <th>E</th>
+              <th>Î</th>
+              <th>GM</th>
+              <th>GP</th>
+              <th>DG</th>
+              <th>Pts</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor="let stat of standingsMap[compId]; let i = index"
+                [ngClass]="{ 'highlight': stat.id === teamId }">
+              <td>{{ i + 1 }}</td>
+              <td>{{ stat.teamName }}</td>
+              <td>{{ stat.gamesPlayed }}</td>
+              <td>{{ stat.totalWins }}</td>
+              <td>{{ stat.totalDraws }}</td>
+              <td>{{ stat.totalLosses }}</td>
+              <td>{{ stat.goalsScored }}</td>
+              <td>{{ stat.goalsConceded }}</td>
+              <td>{{ stat.goalsScored - stat.goalsConceded }}</td>
+              <td>{{ stat.totalPoints }}</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <!-- Brackets – doar la cupă -->
+      <div *ngIf="isCup(competitionNames[compId]) && activeTabMap[compId] === 'brackets'">
+        <div class="brackets-tree-container" *ngIf="getCupBrackets(compId).length > 0; else noBrackets">
+          <div class="bracket-round-col" *ngFor="let round of getCupBrackets(compId)">
+            <h4>{{ round.name }}</h4>
+            <div *ngFor="let match of round.matches" class="bracket-match">
+              <div>
+                <strong>{{ match.homeTeam }}</strong> vs <strong>{{ match.awayTeam }}</strong>
+              </div>
+              <div>
+                <small>
+                  Tur: {{ match.firstLeg?.gameDate | date:'shortDate' }}
+                  <span *ngIf="match.firstLeg?.isPlayed">({{ match.firstLeg?.homeTeamScore }}-{{ match.firstLeg?.awayTeamScore }})</span>
+                  <br>
+                  Retur: {{ match.secondLeg?.gameDate | date:'shortDate' }}
+                  <span *ngIf="match.secondLeg?.isPlayed">({{ match.secondLeg?.homeTeamScore }}-{{ match.secondLeg?.awayTeamScore }})</span>
+                </small>
+              </div>
+              <div *ngIf="match.aggregateScore">
+                <span>Scor total: <b>{{ match.aggregateScore }}</b></span>
+              </div>
+              <div *ngIf="match.winner">
+                <span style="color:#009e53">Câștigă: <b>{{ match.winner }}</b></span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <ng-template #noBrackets>
+          <p>Nu există brackets disponibile pentru această competiție.</p>
+        </ng-template>
+
+      </div>
+
+
+      <!-- Marcatori competitie -->
+      <div *ngIf="activeTabMap[compId] === 'scorers'">
+        <table>
+          <thead>
+            <tr>
+              <th>Loc</th>
+              <th>Jucător</th>
+              <th>Echipă</th>
+              <th>Goluri</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor="let scorer of scorersMap[compId]; let i = index">
+              <td>{{ i + 1 }}</td>
+              <td>{{ scorer.playerName }}</td>
+              <td>{{ scorer.teamName }}</td>
+              <td>{{ scorer.goals }}</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+  
+  <div *ngIf="standingsCompetitionIds.length === 0" class="no-standings">
+    <p>Nu există clasamente disponibile pentru această echipă.</p>
+  </div>
 </div>

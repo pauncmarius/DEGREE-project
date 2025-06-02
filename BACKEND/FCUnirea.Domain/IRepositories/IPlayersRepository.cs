@@ -7,6 +7,6 @@ namespace FCUnirea.Domain.IRepositories
     public interface IPlayersRepository : IBaseRepository<Players>
     {
         IEnumerable<Players> GetPlayersByTeam(int teamId);
-
+        IEnumerable<Players> ListAllWithTeams();
     }
 }

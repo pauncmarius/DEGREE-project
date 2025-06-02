@@ -13,7 +13,8 @@
         </div>
       </div>
 
-      <div *ngIf="editingTeam && editingTeam.id === team.id" class="edit-form-inline">
+      <!-- AICI adaugă #editForm -->
+      <div *ngIf="editingTeam && editingTeam.id === team.id" class="edit-form-inline" #editForm>
         <h4>Editează echipa</h4>
         <input type="text" [(ngModel)]="editingTeam.teamName" placeholder="Nume echipă" />
         <input type="text" [(ngModel)]="editingTeam.coachName" placeholder="Antrenor" />
@@ -29,4 +30,5 @@
       </div>
     </li>
   </ul>
+
 </div>

@@ -22,6 +22,34 @@
   }
 }
 
+/* TABURI PRINCIPALE */
+.main-tabs {
+  display: flex;
+  gap: 12px;
+  margin: 0 0 28px 0;
+  justify-content: center;
+
+  button {
+    padding: 9px 32px;
+    border: none;
+    border-radius: 12px 12px 0 0;
+    background: #eaf3ff;
+    color: #1677ff;
+    font-weight: 600;
+    font-size: 1.07rem;
+    cursor: pointer;
+    transition: background 0.16s, color 0.12s;
+
+    &.active {
+      background: #1677ff;
+      color: #fff;
+      font-weight: 700;
+      box-shadow: 0 -2px 8px 0 rgba(22,119,255,0.11);
+    }
+  }
+}
+
+/* LOTUL */
 .players-section {
   margin-top: 30px;
   background: #f6f9ff;
@@ -36,6 +64,14 @@
     font-weight: 700;
     letter-spacing: 0.5px;
     font-size: 1.3rem;
+  }
+
+  .player-position {
+    color: #1677ff;
+    margin-top: 20px;
+    font-size: 1.15rem;
+    font-weight: bold;
+    letter-spacing: 0.5px;
   }
 
   ul {
@@ -55,6 +91,7 @@
   }
 }
 
+/* MESAJ FARA MECI/CLASAMENT */
 .no-games,
 .no-standings {
   color: #b52d3a;
@@ -66,12 +103,39 @@
   text-align: center;
 }
 
+/* SEARCH BAR CENTRAT */
+.match-search-bar-centered {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 18px;
+  width: 100%;
+}
+.match-search-bar-centered input {
+  width: 100%;
+  max-width: 950px;
+  padding: 9px 15px;
+  border-radius: 8px;
+  border: 1px solid #b6cdfc;
+  background: #f6f9ff;
+  color: #1677ff;
+  font-size: 1.06rem;
+  box-sizing: border-box;
+}
+
+/* LISTA CARDURI MECIURI */
 .game-cards {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
   margin-top: 34px;
   margin-bottom: 28px;
 }
 
+/* CARD MECI CENTRAT + COLOANE */
 .game-card {
+  width: 98%;
+  max-width: 1000px;
   border: 1.5px solid #b6cdfc;
   background: #f6f9ff;
   box-shadow: 0 2px 12px 0 rgba(22,119,255,0.07);
@@ -80,6 +144,10 @@
   margin-bottom: 1.3rem;
   cursor: pointer;
   transition: box-shadow 0.21s, background 0.18s, border 0.16s;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
 
   &:hover {
     background: #eaf3ff;
@@ -103,31 +171,88 @@
     background: #f5f5f5;
     border-left: 7px solid #bdbdbd;
   }
-
-  .game-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    font-weight: bold;
-  }
-
-  .scorers {
-    margin-top: 14px;
-    background-color: #fff;
-    padding: 12px;
-    border-radius: 9px;
-    box-shadow: 0 2px 7px 0 rgba(22,119,255,0.05);
-    border: 1px solid #e0e4ef;
-
-    h4 {
-      margin-bottom: 7px;
-      color: #1677ff;
-      font-size: 1.09rem;
-      font-weight: 700;
-    }
-  }
 }
 
+/* HEADER MECI CENTRAT PE VERTICALA */
+.game-header-centered {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 3px;
+  width: 100%;
+  text-align: center;
+}
+.game-date {
+  font-size: 1.07rem;
+  margin-bottom: 2px;
+}
+.game-score {
+  font-size: 1.23rem;
+  font-weight: 700;
+  color: #173c8c;
+  letter-spacing: 0.2px;
+  margin-bottom: 2px;
+}
+.game-competition {
+  font-size: 1.09rem;
+  font-style: italic;
+  color: #183db6;
+  font-weight: 500;
+  margin-bottom: 0;
+}
+
+/* MARCATORI - FARA BULLETS, CU MINGE */
+.scorers {
+  margin-top: 14px;
+  background-color: #fff;
+  padding: 12px;
+  border-radius: 9px;
+  box-shadow: 0 2px 7px 0 rgba(22,119,255,0.05);
+  border: 1px solid #e0e4ef;
+
+  h4 {
+    margin-bottom: 7px;
+    color: #1677ff;
+    font-size: 1.09rem;
+    font-weight: 700;
+  }
+}
+.scorer-row {
+  display: flex;
+  align-items: center;
+  gap: 11px;
+  padding: 5px 0;
+  font-size: 1.04rem;
+  border-bottom: 1px solid #e0e4ef;
+}
+.scorer-row:last-child { border-bottom: none; }
+.scorer-icon {
+  font-size: 1.14em;
+  margin-right: 6px;
+}
+.scorer-name {
+  font-weight: 600;
+  color: #1677ff;
+}
+.scorer-team {
+  color: #3c4661;
+  font-size: 0.98em;
+}
+.scorer-goals {
+  margin-left: auto;
+  color: #009e53;
+  font-weight: 600;
+  font-size: 1.01em;
+}
+
+/* Elimină orice bullet la listă (dacă se mai folosește ul/li) */
+.scorers ul, .scorers li {
+  list-style: none;
+  padding-left: 0;
+  margin-left: 0;
+}
+
+/* CLASAMENT */
 .standings {
   margin-top: 34px;
   margin-bottom: 32px;
@@ -195,5 +320,84 @@
         font-weight: 700;
       }
     }
+  }
+}
+
+.preserve-lines {
+  white-space: pre-line;
+}
+
+.brackets-container {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  margin: 14px 0 8px 0;
+}
+.bracket-round {
+  background: #f6f9ff;
+  border-radius: 9px;
+  padding: 15px 12px;
+  box-shadow: 0 2px 12px 0 rgba(22,119,255,0.07);
+}
+.bracket-round h4 {
+  color: #1677ff;
+  margin-bottom: 7px;
+}
+.bracket-match {
+  margin-bottom: 7px;
+  border-bottom: 1px solid #e0e4ef;
+  padding-bottom: 8px;
+}
+.bracket-match:last-child {
+  border-bottom: none;
+}
+
+.brackets-tree-container {
+  display: flex;
+  gap: 30px;
+  margin: 24px 0 8px 0;
+  justify-content: flex-start;
+  align-items: flex-start;
+  overflow-x: auto;
+}
+
+.bracket-round-col {
+  background: #f6f9ff;
+  border-radius: 9px;
+  min-width: 290px;
+  box-shadow: 0 2px 12px 0 rgba(22,119,255,0.07);
+  padding: 14px 13px 10px 13px;
+}
+
+.bracket-round-col h4 {
+  color: #1677ff;
+  margin-bottom: 12px;
+  text-align: center;
+}
+
+.bracket-match {
+  margin-bottom: 13px;
+  border-bottom: 1px solid #e0e4ef;
+  padding-bottom: 10px;
+}
+.bracket-match:last-child {
+  border-bottom: none;
+}
+
+.edit-squad-btn {
+  margin-top: 15px;
+  background: #1677ff;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  padding: 10px 26px;
+  font-size: 1rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: background 0.18s;
+  box-shadow: 0 2px 8px rgba(22,119,255,0.10);
+
+  &:hover {
+    background: #0e53a7;
   }
 }

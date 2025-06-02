@@ -26,6 +26,9 @@ export class TicketingComponent implements OnInit {
   userId!: number;
   gameId!: number;
   selectedStadiumName: string = '';
+  searchTerm: string = '';
+  searchDate: string = '';
+
 
   constructor(
     private ticketService: TicketingService,
@@ -75,6 +78,21 @@ export class TicketingComponent implements OnInit {
       return;
     }
 
+    // Pas suplimentar: confirmare
+    const selectedGame = this.games.find(g => g.id === this.selectedGameId);
+    const selectedSeat = this.seats.find(s => s.id === this.selectedSeatId);
+
+    const msg = `Ești sigur că vrei să rezervi următorul bilet?\n\n` +
+      `Meci: ${selectedGame?.homeTeamName} vs ${selectedGame?.awayTeamName}\n` +
+      `Data: ${selectedGame?.gameDate ? new Date(selectedGame.gameDate).toLocaleString('ro-RO') : '-'}\n` +
+      `Loc: ${selectedSeat?.seatName || '-'} (${selectedSeat?.seatType || '-'})\n` +
+      `Preț: ${selectedSeat?.seatPrice || '-'} RON`;
+
+    if (!window.confirm(msg)) {
+      return; // Utilizatorul a anulat
+    }
+
+    // Dacă a confirmat, trimite rezervarea
     this.ticketService.reserveTicket({
       ticket_UsersId: this.userId,
       ticket_GamesId: this.selectedGameId,
@@ -88,4 +106,23 @@ export class TicketingComponent implements OnInit {
   onSelectSeat(seatId: number) {
     this.selectedSeatId = seatId;
   }
+
+  get filteredGames(): GameForTicket[] {
+  return this.games.filter(g => {
+    // Filtru pe nume (meci)
+    const searchText = this.searchTerm.trim().toLowerCase();
+    const nameMatch =
+      !searchText ||
+      g.homeTeamName.toLowerCase().includes(searchText) ||
+      g.awayTeamName.toLowerCase().includes(searchText);
+
+    // Filtru pe dată (YYYY-MM-DD din input type="date")
+    const dateMatch =
+      !this.searchDate ||
+      (g.gameDate && new Date(g.gameDate).toISOString().slice(0, 10) === this.searchDate);
+
+    return nameMatch && dateMatch;
+  });
+}
+
 }

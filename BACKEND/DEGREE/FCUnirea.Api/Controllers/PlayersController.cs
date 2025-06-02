@@ -23,8 +23,9 @@ namespace FCUnirea.Api.Controllers
         [HttpGet]
         public IActionResult GetAll()
         {
-            return Ok(_playerService.GetPlayers());
+            return Ok(_playerService.GetPlayersWithTeamName());
         }
+
 
         [Authorize(Roles = "Admin")]
         [HttpGet("{id}")]

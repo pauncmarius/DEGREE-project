@@ -4,24 +4,32 @@
   <!--Filtrare -->
   <div class="filters">
     <input type="text" [(ngModel)]="nameFilter" (input)="applyFilters()" placeholder="Caută după nume..." />
-    <input type="number" [(ngModel)]="teamIdFilter" (input)="applyFilters()" placeholder="Filtru după ID echipă" />
+    <input type="text" [(ngModel)]="teamNameFilter" (input)="applyFilters()" placeholder="Caută după echipă..." />
   </div><br>
 
   <!--Formular -->
-  <form (ngSubmit)="submitPlayer()" #playerForm="ngForm" class="edit-form-inline">
+  <form #editForm (ngSubmit)="submitPlayer()" #playerForm="ngForm" class="edit-form-inline">
     <h4>{{ editingPlayer.id ? 'Editează jucătorul' : 'Adaugă jucător nou' }}</h4>
 
     <input type="text" [(ngModel)]="editingPlayer.playerName" name="playerName" placeholder="Nume jucător" required />
 
-    <select [(ngModel)]="editingPlayer.position" name="position" required>
-      <option [ngValue]="'Atacker'">Atacant</option>
-      <option [ngValue]="'Midfielder'">Mijlocaș</option>
-      <option [ngValue]="'Defender'">Fundaș</option>
-      <option [ngValue]="'Goalkeeper'">Portar</option>
-    </select>
+<!-- Pozitia jucătorului -->
+<select [(ngModel)]="editingPlayer.position" name="position" required>
+  <option [ngValue]="'Atacker'">Atacant</option>
+  <option [ngValue]="'Midfielder'">Mijlocaș</option>
+  <option [ngValue]="'Defender'">Fundaș</option>
+  <option [ngValue]="'Goalkeeper'">Portar</option>
+</select>
 
-    <input type="date" [(ngModel)]="editingPlayer.birthDate" name="birthDate" required />
-    <input type="number" [(ngModel)]="editingPlayer.player_TeamsId" name="player_TeamsId" placeholder="ID echipă" required />
+<!-- Data nașterii -->
+<input type="date" [(ngModel)]="editingPlayer.birthDate" name="birthDate" required />
+
+<!-- Echipa jucătorului -->
+<select [(ngModel)]="editingPlayer.player_TeamsId" name="player_TeamsId" required>
+  <option *ngFor="let team of teams" [value]="team.id">{{ team.teamName }}</option>
+</select>
+
+
 
     <div class="btn-row">
       <button type="submit">{{ editingPlayer.id ? 'Salvează' : 'Adaugă' }}</button>
@@ -33,7 +41,11 @@
   <ul class="entity-list">
     <li *ngFor="let player of filteredPlayers">
       <div class="team-row">
-        <span>{{ player.playerName }} | {{ player.position }} | {{ player.birthDate | date }} | Echipă ID: {{ player.player_TeamsId }}</span>
+        <span>
+          {{ player.playerName }} | {{ player.position }} | {{ player.birthDate | date }}
+          | Echipă: {{ player.teamName || 'Necunoscut' }}
+        </span>
+
         <div class="action-buttons">
           <button class="btn-edit" (click)="editPlayer(player)">Edit</button>
           <button class="btn-delete" (click)="deletePlayer(player.id)">Șterge</button>
@@ -41,4 +53,9 @@
       </div>
     </li>
   </ul>
+  <div *ngIf="filteredPlayers.length === 0" class="no-players-found">
+    <div class="edit-form-inline" style="text-align: center; font-size: 1.15rem; color: #1677ff;">
+      <b>Nu există niciun jucător care să corespundă filtrului.</b>
+    </div>
+  </div>
 </div>

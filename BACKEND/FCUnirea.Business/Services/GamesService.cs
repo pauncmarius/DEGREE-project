@@ -106,6 +106,25 @@ namespace FCUnirea.Business.Services
             });
         }
 
+        public IEnumerable<GameWithTeamNamesModel> GetGamesWithTeamNamesByCompetition(int competitionId)
+        {
+            var games = _gamesRepository.GetGamesByCompetition(competitionId);
+            return games.Select(g => new GameWithTeamNamesModel
+            {
+                Id = g.Id,
+                GameDate = g.GameDate,
+                HomeTeamScore = g.HomeTeamScore,
+                AwayTeamScore = g.AwayTeamScore,
+                IsPlayed = g.IsPlayed,
+                HomeTeamName = g.Game_HomeTeam?.TeamName ?? "N/A",
+                AwayTeamName = g.Game_AwayTeam?.TeamName ?? "N/A",
+                CompetitionName = g.Game_Competitions?.CompetitionName ?? "Necunoscut",
+                Game_CompetitionsId = g.Game_CompetitionsId ?? 0,
+                Game_HomeTeamId = g.Game_HomeTeamId ?? 0,
+                Game_AwayTeamId = g.Game_AwayTeamId ?? 0
+            });
+        }
+
 
     }
 }

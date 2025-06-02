@@ -67,5 +67,20 @@ export class UserService {
 
   deleteUser(id: number): Observable<any> {
     return this.http.delete(`${this.apiUrl}/${id}`);
-  } 
+  }
+  
+  getRoleFromToken(): string | null {
+    const token = localStorage.getItem('token');
+    if (!token) return null;
+    try {
+      const payload = JSON.parse(atob(token.split('.')[1]));
+      return payload["http://schemas.microsoft.com/ws/2008/06/identity/claims/role"] || null;
+    } catch (e) {
+      return null;
+    }
+  }
+
+  isAdmin(): boolean {
+    return this.getRoleFromToken() === 'Admin';
+  }
 }

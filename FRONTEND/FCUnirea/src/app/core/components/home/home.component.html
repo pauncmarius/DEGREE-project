@@ -1,5 +1,17 @@
 <h1 class="section-title">Știri recente</h1><br>
 
+<br>
+
+<!-- Search bar -->
+<input
+  type="text"
+  class="news-search"
+  [(ngModel)]="searchTerm"
+  placeholder="Caută după titlu..."
+  (input)="filterNews()"
+/>
+<br>
+
 <div *ngIf="isAdmin" class="admin-news-form">
   <h3>{{ editingNews?.id ? 'Editează știrea' : 'Adaugă știre' }}</h3>
 
@@ -13,7 +25,11 @@
   <button *ngIf="editingNews.id" (click)="cancelEdit()">Renunță</button>
 </div>
 
-<div *ngFor="let news of newsList" class="news-title-wrapper">
+<div *ngIf="filteredNews.length === 0" class="no-news">
+  Nu s-au găsit știri.
+</div>
+
+<div *ngFor="let news of filteredNews" class="news-title-wrapper">
   <div (click)="selectNews(news)" class="news-title">
     <h4>{{ news.title }}</h4>
   </div>

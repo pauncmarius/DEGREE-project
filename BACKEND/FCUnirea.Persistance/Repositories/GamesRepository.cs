@@ -70,6 +70,17 @@ namespace FCUnirea.Persistance.Repositories
                 .ToList();
         }
 
+        public IEnumerable<Games> GetGamesByCompetition(int competitionId)
+        {
+            return _dbContext.Games
+                .Include(g => g.Game_HomeTeam)
+                .Include(g => g.Game_AwayTeam)
+                .Include(g => g.Game_Competitions)
+                .Where(g => g.Game_CompetitionsId == competitionId)
+                .OrderBy(g => g.GameDate)
+                .ToList();
+        }
+
 
     }
 }

@@ -1,8 +1,23 @@
 <div class="section-title-wrapper">
   <h1 class="section-title">Selectează meciul:</h1>
 </div>
+<!-- Search bar -->
+<div class="games-search-bar" style="display:flex;gap:10px;max-width:600px;margin:0 auto 20px auto;align-items:center;">
+  <input
+    type="text"
+    [(ngModel)]="searchTerm"
+    placeholder="Caută meci după nume echipă..."
+    style="flex:2;padding:0.6em 1em;border-radius:8px;border:1px solid #b6cdfc;font-size:1.08rem;"
+  >
+  <input
+    type="date"
+    [(ngModel)]="searchDate"
+    style="flex:1;padding:0.6em 1em;border-radius:8px;border:1px solid #b6cdfc;font-size:1.08rem;"
+  >
+</div>
+
 <ul class="games-list">
-  <li *ngFor="let game of games"
+  <li *ngFor="let game of filteredGames"
       [class.selected]="game.id === selectedGameId"
       (click)="onSelectGame(game.id)">
     {{ game.gameDate | date:'dd/MM/yyyy, HH:mm' }}
@@ -10,6 +25,14 @@
     ({{ game.competitionName }})
   </li>
 </ul>
+
+<!-- NO GAMES MESSAGE -->
+<div *ngIf="filteredGames.length === 0" class="no-games">
+  <div class="section-title-wrapper">
+    <h2 class="section-title" style="font-size:1.4rem;">Nu există meciuri disponibile pentru criteriile selectate.</h2>
+  </div>
+</div>
+
 
 <!-- afiseaza numele stadionului arcuit deasupra daca exista un stadion selectat -->
 <div *ngIf="selectedStadiumName" class="curved-text-wrapper">

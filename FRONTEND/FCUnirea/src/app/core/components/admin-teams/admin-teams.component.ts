@@ -1,8 +1,9 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChildren, QueryList, ElementRef } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { TeamService } from '../../services/teams.service';
 import { Team } from '../../models/teams-model';
+import { ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-admin-teams',
@@ -17,7 +18,9 @@ export class AdminTeamsComponent implements OnInit {
   searchTerm = '';
   editingTeam: Team | null = null;
 
-  constructor(private teamService: TeamService) {}
+  @ViewChildren('editForm') editForms!: QueryList<ElementRef>;
+
+  constructor(private teamService: TeamService, private route: ActivatedRoute) {}
 
   ngOnInit(): void {
     this.loadTeams();
@@ -27,6 +30,22 @@ export class AdminTeamsComponent implements OnInit {
     this.teamService.getTeams().subscribe(data => {
       this.teams = data;
       this.applyFilter();
+
+      // Reia din query param dacă există
+      const editId = +this.route.snapshot.queryParamMap.get('editId')!;
+      if (editId) {
+        const t = this.teams.find(team => team.id === editId);
+        if (t) {
+          this.editingTeam = { ...t };
+          // Scroll după ce formularul apare (next tick!)
+          setTimeout(() => {
+            const el = this.editForms.find(ref => !!ref.nativeElement.offsetParent);
+            if (el) {
+              el.nativeElement.scrollIntoView({ behavior: 'smooth', block: 'center' });
+            }
+          }, 70);
+        }
+      }
     });
   }
 
@@ -39,6 +58,12 @@ export class AdminTeamsComponent implements OnInit {
 
   editTeam(team: Team): void {
     this.editingTeam = { ...team };
+    setTimeout(() => {
+      const el = this.editForms.find(ref => !!ref.nativeElement.offsetParent);
+      if (el) {
+        el.nativeElement.scrollIntoView({ behavior: 'smooth', block: 'center' });
+      }
+    }, 60);
   }
 
   cancelEdit(): void {
@@ -47,7 +72,6 @@ export class AdminTeamsComponent implements OnInit {
 
   updateTeam(): void {
     if (!this.editingTeam) return;
-
     this.teamService.updateTeam(this.editingTeam).subscribe(() => {
       this.loadTeams();
       this.cancelEdit();
@@ -55,10 +79,13 @@ export class AdminTeamsComponent implements OnInit {
   }
 
   deleteTeam(id: number): void {
-    if (confirm('Sigur vrei să ștergi această echipă?')) {
+    const team = this.teams.find(t => t.id === id);
+    const teamName = team ? team.teamName : '';
+    if (confirm(`Ești sigur că vrei să ștergi echipa "${teamName}"?\nAcțiunea este ireversibilă!`)) {
       this.teamService.deleteTeam(id).subscribe(() => {
         this.loadTeams();
       });
     }
   }
+
 }

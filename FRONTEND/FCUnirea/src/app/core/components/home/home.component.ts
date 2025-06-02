@@ -25,6 +25,8 @@ export class HomeComponent {
   successMessage = '';
   errorMessage = '';
 
+  searchTerm: string = '';
+  filteredNews: NewsModel[] = [];
   constructor() {
     this.loadNewsList();
   }
@@ -54,6 +56,7 @@ export class HomeComponent {
   loadNewsList(): void {
     this.newsService.getAllNews().subscribe(data => {
       this.newsList = data;
+      this.filterNews();
     });
   }
 
@@ -134,6 +137,17 @@ export class HomeComponent {
   let html = text.replace(/\*\*(.+?)\*\*/g, '<strong>$1</strong>');
   // Poți adăuga și alte conversii dacă vrei (italic etc)
   return html;
-}
+  }
+
+  filterNews(): void {
+    const term = this.searchTerm.trim().toLowerCase();
+    if (!term) {
+      this.filteredNews = this.newsList;
+      return;
+    }
+    this.filteredNews = this.newsList.filter(news =>
+      news.title.toLowerCase().includes(term)
+    );
+  }
 
 }

@@ -15,5 +15,7 @@ namespace FCUnirea.Business.Services.IServices
         public IEnumerable<GameWithTeamNamesModel> GetGamesWithTeamNamesByTeam(int teamId);
         public IEnumerable<GameForTicketModel> GetHomeUpcomingGames();
         public IEnumerable<GameWithTeamNamesModel> GetAllGamesWithNames();
+        IEnumerable<GameWithTeamNamesModel> GetGamesWithTeamNamesByCompetition(int competitionId);
+
     }
 }
