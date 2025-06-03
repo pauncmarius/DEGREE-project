@@ -27,6 +27,18 @@ namespace FCUnirea.Persistance.Repositories
                 .Where(t => t.Ticket_UsersId == userId)
                 .ToListAsync();
         }
+        public async Task<IEnumerable<Tickets>> GetTicketsByGameIdAsync(int gameId)
+        {
+            return await _dbContext.Tickets
+                .Include(t => t.Ticket_Games).ThenInclude(g => g.Game_HomeTeam)
+                .Include(t => t.Ticket_Games).ThenInclude(g => g.Game_AwayTeam)
+                .Include(t => t.Ticket_Games).ThenInclude(g => g.Game_Competitions)
+                .Include(t => t.Ticket_Games).ThenInclude(g => g.Game_Stadiums)
+                .Include(t => t.Ticket_Seats).ThenInclude(s => s.Seat_Stadiums)
+                .Where(t => t.Ticket_GamesId == gameId)
+                .ToListAsync();
+        }
+
 
     }
 }

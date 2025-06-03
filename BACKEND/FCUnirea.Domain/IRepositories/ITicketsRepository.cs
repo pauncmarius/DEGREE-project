@@ -8,6 +8,7 @@ namespace FCUnirea.Domain.IRepositories
     public interface ITicketsRepository : IBaseRepository<Tickets>
     {
         Task<IEnumerable<Tickets>> GetTicketsByUserIdAsync(int userId);
+        Task<IEnumerable<Tickets>> GetTicketsByGameIdAsync(int gameId);
 
     }
 }

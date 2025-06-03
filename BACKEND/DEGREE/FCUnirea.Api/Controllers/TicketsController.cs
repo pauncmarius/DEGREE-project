@@ -99,6 +99,14 @@ namespace FCUnirea.Api.Controllers
             return Ok(tickets);
         }
 
+        [Authorize]
+        [HttpGet("game/{gameId}")]
+        public async Task<IActionResult> GetTicketsByGame(int gameId)
+        {
+            var tickets = await _ticketService.GetTicketsByGameIdAsync(gameId);
+            return Ok(tickets);
+        }
+
 
     }
 }

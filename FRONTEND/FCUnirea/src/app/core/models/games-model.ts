@@ -12,5 +12,6 @@ export interface Game {
     awayTeamName: string;
     competitionName: string;
     refereeName: string;
+    ticketsSold: number;
   }
   

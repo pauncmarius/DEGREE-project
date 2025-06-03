@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { CommonModule } from '@angular/common';
 import { TeamService } from '../../services/teams.service';
@@ -9,7 +9,6 @@ import { Player } from '../../models/players-model';
 import { PlayersService } from '../../services/players.service';
 import { TeamStatistic } from '../../models/team-stats-model';
 import { TeamStatisticsService } from '../../services/team-statistics.service';
-
 import { Scorer } from '../../models/scorers-model';
 import { GameScorer } from '../../models/game-scorer-model';
 import { PlayerStatisticsPerGameService } from '../../services/player-statistics-per-game.service';
@@ -18,6 +17,22 @@ import { FormsModule } from '@angular/forms';
 import { BracketMatch, CupRound } from '../../models/cup-model';
 import { Router } from '@angular/router';
 import { UserService } from '../../services/users.service';
+import { TicketInfo } from '../../models/tickets-model';
+import { TicketsService } from '../../services/tickets.service';
+
+import {
+  Chart,
+  CategoryScale,
+  LinearScale,
+  BarController,   // ← import nou
+  BarElement,
+  Tooltip,
+  Legend,
+} from 'chart.js';
+
+// Înregistrați toate părțile necesare pentru bar chart
+Chart.register(CategoryScale, LinearScale, BarController, BarElement, Tooltip, Legend);
+
 
 @Component({
   selector: 'app-team-details',
@@ -34,24 +49,25 @@ export class TeamDetailsComponent implements OnInit {
   teamId!: number;
   games: Game[] = [];
   players: Player[] = [];
-  isAdmin = false;
 
+  isAdmin = false;
   standingsMap: { [competitionId: number]: TeamStatistic[] } = {};
   competitionNames: { [competitionId: number]: string } = {};
-
   scorersMap: { [competitionId: number]: Scorer[] } = {};
   activeMainTab: 'lot' | 'program' | 'clasament' = 'lot';
   activeTabMap: { [compId: number]: 'standings' | 'scorers' | 'brackets' } = {};
-
   selectedGameId: number | null = null;
   scorersPerGame: { [gameId: number]: GameScorer[] } = {};
-
   groupedPlayers: { [position: string]: Player[] } = {};
-
   searchMatchTerm = '';
-
   cupBrackets: { [competitionId: number]: CupRound[] } = {};
 
+  /** 𝗡𝗼𝗶 𝗽𝗿𝗼𝗽𝗲𝗿𝘁𝗮̆ţ𝗶 𝗽𝗲𝗻𝘁𝗿𝘂 𝘁𝗶𝗰𝗸𝗲𝘁𝘀 */
+  ticketsPerGame: { [gameId: number]: TicketInfo[] } = {};
+  ticketCountPerGame: { [gameId: number]: number } = {};
+  ticketTotalPricePerGame: { [gameId: number]: number } = {};
+  // păstrăm un map în care reținem instanța Chart pentru fiecare gameId
+  ticketChartInstances: { [gameId: number]: Chart } = {};
   constructor(
     private route: ActivatedRoute,
     private teamService: TeamService,
@@ -61,6 +77,7 @@ export class TeamDetailsComponent implements OnInit {
     private scorersService: PlayerStatisticsPerCompetitionService,
     private playerStatsService: PlayerStatisticsPerGameService,
     private router: Router,
+    private ticketsService: TicketsService, 
     private userService: UserService 
   ) {}
 
@@ -68,8 +85,7 @@ export class TeamDetailsComponent implements OnInit {
     this.teamId = Number(this.route.snapshot.paramMap.get('id'));
     this.isAdmin = this.userService.isAdmin();
     this.teamService.getTeamById(this.teamId).subscribe(team => {
-      this.team = team;
-    });
+      this.team = team;});
 
     // Ia meciurile pentru tab Program și identifică toate competițiile la care participă
     this.gamesService.getGamesByTeam(this.teamId).subscribe(games => {
@@ -127,14 +143,100 @@ export class TeamDetailsComponent implements OnInit {
   }
   
   toggleScorers(gameId: number): void {
+    // 1) Toggle la secțiunea de detalii
     this.selectedGameId = this.selectedGameId === gameId ? null : gameId;
+
+    // 2) Cer marcatorii o singură dată
     if (!this.scorersPerGame[gameId]) {
-      this.playerStatsService.getScorersByGame(gameId).subscribe((data) => {
-        console.log("Date brute scorers pentru gameId=" + gameId, data);
+      this.playerStatsService.getScorersByGame(gameId).subscribe(data => {
         this.scorersPerGame[gameId] = data;
       });
     }
+
+    // Găsim obiectul Game aferent gameId-ului
+    const game = this.games.find(g => g.id === gameId)!;
+
+    // 3) Dacă meciul e DE ACASĂ, atunci încărcăm biletele din API și construim graficul
+    if (this.isHomeGame(game)) {
+      // Dacă nu am cerut încă lista de bilete pentru acest gameId:
+      if (!this.ticketsPerGame[gameId]) {
+        this.ticketsService.getTicketsByGame(gameId).subscribe(tickets => {
+          this.ticketsPerGame[gameId] = tickets;
+          this.ticketCountPerGame[gameId] = tickets.length;
+
+          // Calculăm totalul încasărilor doar pentru meciuri de acasă
+          this.ticketTotalPricePerGame[gameId] = tickets
+            .map(t => t.seatPrice)
+            .reduce((sum, price) => sum + price, 0);
+
+          // După ce biletele au fost populate, forțăm un ciclu de render și apoi 
+          // construim bar-chart-ul corespunzător
+          this.scheduleChartBuild(gameId, tickets);
+        });
+      } else {
+        // Dacă biletele au fost deja încărcate, iar utilizatorul tocmai a „deschis” (toggle on)
+        // secțiunea, refacem graficul
+        if (this.selectedGameId === gameId) {
+          this.scheduleChartBuild(gameId, this.ticketsPerGame[gameId]);
+        }
+      }
+
+    } else {
+      // 4) Dacă meciul e DE DEPLASARE, NU mai apelăm niciun API de bilete,
+      //    ci vom afișa doar numărul de bilete (ticketsSold) în template.
+      //    Prin urmare, nicio acțiune suplimentară aici.
+    }
   }
+
+  private scheduleChartBuild(gameId: number, tickets: TicketInfo[]) {
+    setTimeout(() => {
+      const canvasEl = document.getElementById(`ticketCanvas-${gameId}`) as HTMLCanvasElement;
+      if (!canvasEl) {
+        console.warn(`Canvas-ul pentru gameId=${gameId} lipsește în DOM.`);
+        return;
+      }
+
+      if (this.ticketChartInstances[gameId]) {
+        this.ticketChartInstances[gameId].destroy();
+      }
+
+      const grouping = tickets.reduce((acc: Record<string, number>, t: TicketInfo) => {
+        const key = t.seatType || 'Necunoscut';
+        acc[key] = (acc[key] || 0) + 1;
+        return acc;
+      }, {});
+      const labels = Object.keys(grouping);
+      const data = labels.map(label => grouping[label]);
+
+      const ctx = canvasEl.getContext('2d');
+      if (!ctx) {
+        console.warn(`Nu s-a putut obține context pentru canvas gameId=${gameId}.`);
+        return;
+      }
+
+      this.ticketChartInstances[gameId] = new Chart(ctx, {
+        type: 'bar',
+        data: {
+          labels,
+          datasets: [{ label: 'Număr bilete', data }]
+        },
+        options: {
+          responsive: true,
+          plugins: {
+            legend: { display: false },
+            tooltip: { enabled: true }
+          },
+          scales: {
+            x: { title: { display: true, text: 'Tip bilet' } },
+            y: { title: { display: true, text: 'Număr bilete' }, beginAtZero: true }
+          }
+        }
+      });
+    }, 0);
+  }
+
+
+
 
   getMatchResultClass(game: Game): string {
     if (!game.isPlayed) return 'not-played';
@@ -223,8 +325,6 @@ export class TeamDetailsComponent implements OnInit {
     return rounds;
   }
 
-
-
   getCupBrackets(compId: number): CupRound[] {
     return this.cupBrackets[compId] || [];
   }
@@ -237,14 +337,18 @@ export class TeamDetailsComponent implements OnInit {
   editSquad() {
     // Navighează cu query param pentru filtru după echipa curentă
     this.router.navigate(['/admin/players'], {
-      queryParams: { teamName: this.team.teamName }
-  });
+      queryParams: { teamName: this.team.teamName }});
   }
+
   editGame(gameId: number, event: MouseEvent) {
     event.stopPropagation(); // să nu se închidă marcatorii la click!
     this.router.navigate(['/admin/games'], {
       queryParams: { editGameId: gameId }
     });
+  }
+
+  isHomeGame(game: Game): boolean {
+    return game.game_HomeTeamId === this.teamId;
   }
 
 }

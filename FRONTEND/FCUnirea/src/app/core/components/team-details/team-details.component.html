@@ -60,23 +60,24 @@
 
   <div class="game-cards">
     <div class="game-card"
-      *ngFor="let game of filteredGames"
-      [ngClass]="getMatchResultClass(game)"
-      (click)="toggleScorers(game.id)">
+         *ngFor="let game of filteredGames"
+         [ngClass]="getMatchResultClass(game)"
+         (click)="toggleScorers(game.id)">
       <div class="game-header-centered">
         <span class="game-date">{{ game.gameDate | date: 'shortDate' }}</span>
         <strong class="game-score">
-          {{ game.homeTeamName }} 
-          {{ displayScore(game, 'home') }} - {{ displayScore(game, 'away') }} 
+          {{ game.homeTeamName }}
+          {{ displayScore(game, 'home') }} - {{ displayScore(game, 'away') }}
           {{ game.awayTeamName }}
         </strong>
-
         <em class="game-competition">{{ game.competitionName }}</em>
       </div>
+
+      <!-- Detaliile extinse -->
       <div class="scorers" *ngIf="selectedGameId === game.id">
-          <div class="referee-row">
-            <strong>Arbitru:</strong> {{ game.refereeName || 'Nespecificat' }}
-          </div>
+        <div class="referee-row">
+          <strong>Arbitru:</strong> {{ game.refereeName || 'Nespecificat' }}
+        </div>
         <h4>Marcatori</h4>
         <div *ngIf="(scorersPerGame?.[game.id] ?? []).length > 0; else noGoals">
           <div *ngFor="let scorer of scorersPerGame[game.id]" class="scorer-row">
@@ -90,20 +91,35 @@
           <p>Nu există marcatori înregistrați pentru acest meci.</p>
         </ng-template>
 
-          <button 
-            *ngIf="isAdmin" 
-            class="edit-squad-btn"
-            (click)="editGame(game.id, $event)">
-            ✏️ Editează meciul
-          </button>
+        <!-- 𝗦𝗘𝗖Ţ𝗜𝗨𝗡𝗘 𝗡𝗢𝗨𝗔: Bilete și grafic -->
+        <div *ngIf="ticketsPerGame[game.id]">
+          <h4>Bilete vândute: {{ ticketCountPerGame[game.id] }}</h4>
+
+          <div style="max-width: 600px; margin-bottom: 1rem;">
+            <canvas [id]="'ticketCanvas-' + game.id"></canvas>
+          </div>
+
+          <div *ngIf="isHomeGame(game)">
+            <strong>Total încasări (lei):</strong>
+            {{ ticketTotalPricePerGame[game.id] | number:'1.0-2' }}
+          </div>
+        </div>
+
+        <button
+          *ngIf="isAdmin"
+          class="edit-squad-btn"
+          (click)="editGame(game.id, $event)">
+          ✏️ Editează meciul
+        </button>
       </div>
     </div>
+
     <div class="game-card" *ngIf="filteredGames.length === 0">
-    <span>Nu există meciuri care să corespundă filtrului.</span>
+      <span>Nu există meciuri care să corespundă filtrului.</span>
     </div>
   </div>
-
 </div>
+
 
 
 <!-- CLASAMENT -->

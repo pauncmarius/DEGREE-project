@@ -6,4 +6,5 @@ export interface GameForTicket {
     stadiumName: string;
     stadiumLocation: string;
     competitionName: string;
+    ticketsSold: number;
   }

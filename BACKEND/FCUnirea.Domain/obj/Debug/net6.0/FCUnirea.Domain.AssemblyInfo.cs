@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("FCUnirea.Domain")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+0eee69cd58cd61ed8c69b7e992dd26aea9890d5e")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+dc3a914b6524b5fb0c25dcbc9ea480bbf779f0c6")]
 [assembly: System.Reflection.AssemblyProductAttribute("FCUnirea.Domain")]
 [assembly: System.Reflection.AssemblyTitleAttribute("FCUnirea.Domain")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

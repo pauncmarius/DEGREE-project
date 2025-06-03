@@ -267,16 +267,10 @@
   }
 }
 
-// Nume de admin la comentarii (întotdeauna negru, bold)
 .admin-comment-username {
   color: #212121 !important; // un negru plăcut
   font-weight: bold;
 }
-
-// Pentru toți, ca default, strong-ul de la comentariu rămâne moștenit
-// Dacă vrei să fie albastru pentru non-admini, folosește .comment strong { color: #1677ff; } (dacă nu ai deja).
-
-// Când un admin e logat, la hover pe orice username (admin sau nu):
 .hover-pointer:hover {
   text-decoration: underline;
   cursor: pointer;

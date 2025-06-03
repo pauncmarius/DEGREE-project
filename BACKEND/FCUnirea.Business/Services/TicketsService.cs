@@ -121,6 +121,24 @@ namespace FCUnirea.Business.Services
                 CompetitionName = t.Ticket_Games?.Game_Competitions?.CompetitionName ?? ""
             });
         }
+        public async Task<IEnumerable<TicketWithDetailsModel>> GetTicketsByGameIdAsync(int gameId)
+        {
+            var tickets = await _repository.GetTicketsByGameIdAsync(gameId);
+
+            return tickets.Select(t => new TicketWithDetailsModel
+            {
+                Id = t.Id,
+                GameDate = t.Ticket_Games?.GameDate ?? DateTime.MinValue,
+                HomeTeamName = t.Ticket_Games?.Game_HomeTeam?.TeamName ?? "",
+                AwayTeamName = t.Ticket_Games?.Game_AwayTeam?.TeamName ?? "",
+                SeatName = t.Ticket_Seats?.SeatName ?? "",
+                SeatType = t.Ticket_Seats?.SeatType.ToString() ?? "",
+                SeatPrice = t.Ticket_Seats?.SeatPrice ?? 0,
+                StadiumName = t.Ticket_Seats?.Seat_Stadiums?.StadiumName ?? "",
+                CompetitionName = t.Ticket_Games?.Game_Competitions?.CompetitionName ?? "",
+                IsPlayed = t.Ticket_Games?.IsPlayed ?? false
+            });
+        }
 
 
     }

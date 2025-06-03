@@ -66,7 +66,9 @@ namespace FCUnirea.Business.Services
 
                 Game_HomeTeamId = g.Game_HomeTeamId ?? 0,
                 Game_AwayTeamId = g.Game_AwayTeamId ?? 0,
-                RefereeName = g.RefereeName ?? ""
+                RefereeName = g.RefereeName ?? "",
+                TicketsSold = g.TicketsSold
+
 
             });
         }
