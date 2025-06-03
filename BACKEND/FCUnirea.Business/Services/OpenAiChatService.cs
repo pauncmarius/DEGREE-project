@@ -67,7 +67,7 @@ public class OpenAiChatService
 
     private string BuildPrompt(string message, Users user)
     {
-        string msg = message.ToLower();
+        string msg = message?.Trim().ToLowerInvariant() ?? "";
 
         // cuvinte cheie pentru fiecare statistica:
         var statsKeywords = new Dictionary<string, Func<TeamStatisticsModel, string>>
@@ -93,15 +93,17 @@ public class OpenAiChatService
         if (user != null)
         {
             //UsersTable
-            if (msg.Contains("email"))
+            if (msg.Contains("email") || msg.Contains("mail") || msg.Contains("adresă") || msg.Contains("contact") || msg.Contains("contacteaza") || msg.Contains("contactează"))
                 return $"Utilizatorul a întrebat: '{message}'. Adresa de email a utilizatorului este: {user.Email}.";
-            if (msg.Contains("username"))
+            if (msg.Contains("username") || msg.Contains("user") || msg.Contains("utilizator") || msg.Contains("cont") || msg.Contains("contul meu") || msg.Contains("contul meu este"))
                 return $"Utilizatorul a întrebat: '{message}'. Username-ul este: {user.Username}.";
-            if (msg.Contains("nume"))
+            if (msg.Contains("nume") || msg.Contains("numele") || msg.Contains("first name") || msg.Contains("last name") || msg.Contains("prenume") || msg.Contains("surname"))
                 return $"Utilizatorul a întrebat: '{message}'. Numele tau este: {user.FirstName} {user.LastName}.";
+            if (msg.Contains("telefon") || msg.Contains("tel") || msg.Contains("phone"))
+                return $"Utilizatorul a întrebat: '{message}'. Numărul de telefon nu poate fi aratat spune-i pe scurt sa verifice pagina de profil!";
 
             //NewsTable
-            if (msg.Contains("stiri")|| msg.Contains("news") || msg.Contains("ultimele") || msg.Contains("recente"))
+            if (msg.Contains("stiri") || msg.Contains("știri") || msg.Contains("news") || msg.Contains("noutati") || msg.Contains("noutăți") || msg.Contains("noutăți fc unirea"))
             {
                 var newsList = _newsService.GetNews().Take(3).ToList(); // ultimele 3 stiri
                 if (newsList.Any())
@@ -195,7 +197,6 @@ public class OpenAiChatService
             {
                 string instructiune = "(Te rog să afișezi această listă exact, fără reformulare.)";
 
-
                 if (msg.Contains("cf youth") || msg.Contains("youth"))
                 {
                     var players = _playersService.GetPlayersByTeam(21);
@@ -288,44 +289,90 @@ public class OpenAiChatService
                     return $"Echipa FC Unirea joacă pe stadionul {stadium.StadiumName}.";
                 }
             }
-
-            //TicketsTable
-            if ((msg.Contains("bilete") || msg.Contains("bilet") || msg.Contains("rezervari") || msg.Contains("rezervări")) &&
-                (msg.Contains("mele") || msg.Contains("am") || msg.Contains("ale mele") || msg.Contains("rezervat")))
+            //ticketsTable
+            if ((msg.Contains("bilete") || msg.Contains("bilet") || msg.Contains("rezervari") || msg.Contains("rezervări")))
             {
-                if (user == null)
-                    return "Trebuie să fii autentificat pentru a-ți vedea biletele rezervate!";
-
                 var tickets = _ticketsService.GetTicketsByUserIdAsync(user.Id).Result.ToList();
-
                 var played = tickets.Where(t => t.IsPlayed).ToList();
                 var upcoming = tickets.Where(t => !t.IsPlayed).ToList();
 
                 string result = "";
+                string deleteInstruction = "";
 
                 if (upcoming.Any())
                 {
                     var ticketSummaries = upcoming.Select(t =>
-                        $"- [VIITOR] {t.HomeTeamName} vs {t.AwayTeamName} ({t.CompetitionName}) la {t.StadiumName}, {t.GameDate:dd MMM yyyy, HH:mm} | Loc: {t.SeatName} {t.SeatType} ({t.SeatPrice} RON)"
+                        $"- [VIITOR] ID bilet: {t.Id} | {t.HomeTeamName} vs {t.AwayTeamName} ({t.CompetitionName}) la {t.StadiumName}, " +
+                        $"{t.GameDate:dd MMM yyyy, HH:mm} | Loc: {t.SeatName} {t.SeatType} ({t.SeatPrice} RON)"
                     );
-                    result += "Biletele tale pentru meciuri care URMEAZĂ:\n" + string.Join("\n", ticketSummaries) + "\n";
+                    result += string.Join("\n", ticketSummaries) + "\n";
+                    deleteInstruction = "Dacă vrei să ștergi un bilet viitor, scrie „șterge bilet {ID}”.";
                 }
+
                 if (played.Any())
                 {
                     var ticketSummaries = played.Select(t =>
-                        $"- [JUCAT] {t.HomeTeamName} vs {t.AwayTeamName} ({t.CompetitionName}) la {t.StadiumName}, {t.GameDate:dd MMM yyyy, HH:mm} | Loc: {t.SeatName} {t.SeatType} ({t.SeatPrice} RON)"
+                        $"- [JUCAT] ID bilet: {t.Id} | {t.HomeTeamName} vs {t.AwayTeamName} ({t.CompetitionName}) la {t.StadiumName}, " +
+                        $"{t.GameDate:dd MMM yyyy, HH:mm} | Loc: {t.SeatName} {t.SeatType} ({t.SeatPrice} RON)"
                     );
-                    result += "Biletele tale pentru meciuri DEJA JUCATE:\n" + string.Join("\n", ticketSummaries);
+                    result += string.Join("\n", ticketSummaries) + "\n";
                 }
 
-                if (string.IsNullOrWhiteSpace(result))
+                if (!upcoming.Any() && !played.Any())
+                {
                     result = "Momentan nu ai bilete rezervate.";
+                }
 
-                return result;
+                // AICI: prompt clar pentru GPT!
+                return $"Afișează această listă de bilete EXACT, fără să reformulezi. Dacă există bilete pentru meciuri viitoare, adaugă la final instrucțiunea: '{deleteInstruction}'\n\nLISTĂ BILETE:\n{result}";
+            }
+
+
+            // --- Ștergere bilet viitor (doar dacă tot mesajul este "șterge bilet {ID}") ---
+            var deleteExactPattern = new System.Text.RegularExpressions.Regex(
+                @"^\s*(șterge|sterge)\s+bilet\s+(\d+)\s*$",
+                System.Text.RegularExpressions.RegexOptions.IgnoreCase);
+
+            var deleteMatch = deleteExactPattern.Match(msg);
+            if (deleteMatch.Success)
+            {
+                // Am detectat exact comanda "șterge bilet 123" (fără alte cuvinte înainte/sau după)
+                int ticketId = int.Parse(deleteMatch.Groups[2].Value);
+
+                var upcomingTickets = _ticketsService
+                    .GetTicketsByUserIdAsync(user.Id)
+                    .Result
+                    .Where(t => !t.IsPlayed)
+                    .ToList();
+
+                var ticketToDelete = upcomingTickets.FirstOrDefault(t => t.Id == ticketId);
+                if (ticketToDelete != null)
+                {
+                    _ticketsService.DeleteTicket(ticketId);
+                    if (_ticketsService.GetTicket(ticketId) == null)
+                    {
+                        return $"Am șters cu succes biletul viitor cu ID {ticketId}.";
+                    }
+                    else
+                    {
+                        return $"S-a produs o eroare la ștergerea biletului cu ID {ticketId}.";
+                    }
+                }
+                else
+                {
+                    return $"Nu am găsit niciun bilet viitor cu ID {ticketId}. Verifică, te rog, dacă ai introdus corect numărul.";
+                }
+            }
+
+
+            //mesaj de intampinare
+            if (message.StartsWith("Generare mesaj de întâmpinare"))
+            {
+                return "Generare mesaj de întâmpinare pentru un chat FC Unirea: salută utilizatorul și explică cum îl poți ajuta pe scurt: Informații despre profil:Știri, Statistici echipa, Competiții, Echipe interne, Jucători, Ultimul meci, Stadion, Bilete.";
             }
         }
         // fallback generic
-        return $"Ești asistentul virtual FC Unirea. Răspunde la întrebarea: \"{message}\" despre bilete, meciuri, profil, etc.";
+        return $"Ești asistentul virtual FC Unirea. Răspunde la întrebare specificand ca nu ai inteles exact ce userul doreste si daca poate reformula pe scurt!";
     }
 
     public async Task<string> GetChatGptReplyAsync(string prompt)

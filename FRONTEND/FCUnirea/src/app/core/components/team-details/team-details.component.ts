@@ -1,4 +1,4 @@
-import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { CommonModule } from '@angular/common';
 import { TeamService } from '../../services/teams.service';
@@ -19,19 +19,34 @@ import { Router } from '@angular/router';
 import { UserService } from '../../services/users.service';
 import { TicketInfo } from '../../models/tickets-model';
 import { TicketsService } from '../../services/tickets.service';
+import { forkJoin, of, throwError } from 'rxjs';
+import { catchError } from 'rxjs/operators';
 
 import {
   Chart,
   CategoryScale,
   LinearScale,
-  BarController,   // ← import nou
+  BarController,
   BarElement,
   Tooltip,
   Legend,
+  ArcElement,
+  PieController,
+  Title
 } from 'chart.js';
 
-// Înregistrați toate părțile necesare pentru bar chart
-Chart.register(CategoryScale, LinearScale, BarController, BarElement, Tooltip, Legend);
+Chart.register(
+  CategoryScale,
+  LinearScale,
+  BarController,
+  BarElement,
+  Tooltip,
+  Legend,
+  ArcElement,
+  PieController,
+  Title
+);
+
 
 
 @Component({
@@ -66,8 +81,14 @@ export class TeamDetailsComponent implements OnInit {
   ticketsPerGame: { [gameId: number]: TicketInfo[] } = {};
   ticketCountPerGame: { [gameId: number]: number } = {};
   ticketTotalPricePerGame: { [gameId: number]: number } = {};
-  // păstrăm un map în care reținem instanța Chart pentru fiecare gameId
   ticketChartInstances: { [gameId: number]: Chart } = {};
+
+    /** Pentru pie chart */
+  goalsPerPlayer: { [playerName: string]: number } = {};
+  totalTeamGoals: number = 0;
+  numMatchesPlayed: number = 0;
+  goalsPieChartInstance?: Chart;
+  
   constructor(
     private route: ActivatedRoute,
     private teamService: TeamService,
@@ -90,7 +111,10 @@ export class TeamDetailsComponent implements OnInit {
     // Ia meciurile pentru tab Program și identifică toate competițiile la care participă
     this.gamesService.getGamesByTeam(this.teamId).subscribe(games => {
       this.games = games;
+      // 1) Calculează de câte meciuri jucate e echipa și construiește pie chart-ul
+      this.buildGoalsDistribution();
 
+      // 2) Rămăsese restul codului (populare competiții, clasamente, bracket-uri etc.)
       const uniqueCompetitions = [...new Set(games.map(g => g.game_CompetitionsId))];
 
       // Populezi numele pentru taburi
@@ -350,5 +374,133 @@ export class TeamDetailsComponent implements OnInit {
   isHomeGame(game: Game): boolean {
     return game.game_HomeTeamId === this.teamId;
   }
+
+  private buildGoalsDistribution(): void {
+    // 1) Filtrează doar meciurile jucate
+    const playedGames = this.games.filter(g => g.isPlayed);
+    this.numMatchesPlayed = playedGames.length;
+
+    // 2) Resetează map-ul și totalul golurilor
+    this.goalsPerPlayer = {};
+    this.totalTeamGoals = 0;
+
+    if (playedGames.length === 0) {
+      // Nu avem meciuri jucate → nu construim chart
+      return;
+    }
+
+    // 3) Pentru fiecare meci jucat, creează un Observable care preia scoreri
+    const scorersObservables = playedGames.map(game =>
+      this.playerStatsService.getScorersByGame(game.id).pipe(
+        // Dacă serverul răspunde 404 (niciun marcator), transformă în array gol
+        catchError(err => {
+          if (err.status === 404) {
+            return of([] as GameScorer[]);
+          }
+          // Pentru orice altă eroare, propagăm mai departe
+          return throwError(err);
+        })
+      )
+    );
+
+    // 4) Așteaptă să vină TOATE răspunsurile (chiar și cele cu array gol)
+    forkJoin(scorersObservables).subscribe({
+      next: (allScorersPerGame: GameScorer[][]) => {
+        // allScorersPerGame este un array de array-uri: fiecare element corespunde
+        // unui joc din playedGames, în aceeași ordine.
+        allScorersPerGame.forEach(scorers => {
+          scorers.forEach(scorer => {
+            // Adunăm golurile doar pentru jucătorii echipei curente
+            if (scorer.teamName === this.team.teamName) {
+              if (!this.goalsPerPlayer[scorer.playerName]) {
+                this.goalsPerPlayer[scorer.playerName] = scorer.goals;
+              } else {
+                this.goalsPerPlayer[scorer.playerName] += scorer.goals;
+              }
+              this.totalTeamGoals += scorer.goals;
+            }
+          });
+        });
+        // După ce am agregat totul, construim chart-ul
+        this.renderGoalsPieChart();
+      },
+      error: err => {
+        console.error('Eroare la încărcarea marcatorilor (forkJoin):', err);
+      }
+    });
+  }
+
+
+private renderGoalsPieChart(): void {
+  const labels = Object.keys(this.goalsPerPlayer);
+  const dataValues = labels.map(name => this.goalsPerPlayer[name]);
+
+  // Generăm un array de culori HSL, câte unul pentru fiecare label
+  const backgroundColors = labels.map((_, idx) => {
+    const hue = Math.round((idx * 360) / labels.length);
+    return `hsl(${hue}, 70%, 60%)`;
+  });
+
+  const canvasEl = document.getElementById('goalsPieChart') as HTMLCanvasElement;
+  if (!canvasEl) return;
+  const ctx = canvasEl.getContext('2d');
+  if (!ctx) return;
+
+  if (this.goalsPieChartInstance) {
+    this.goalsPieChartInstance.destroy();
+  }
+
+  this.goalsPieChartInstance = new Chart(ctx, {
+    type: 'pie',
+    data: {
+      labels,
+      datasets: [
+        {
+          data: dataValues,
+          backgroundColor: backgroundColors,
+          borderColor: '#ffffff',
+          borderWidth: 2
+        }
+      ]
+    },
+    options: {
+      responsive: true,
+      plugins: {
+        title: {
+          display: true,
+          // Afișăm atât numărul de meciuri, cât și totalul de goluri
+          text: `Număr meciuri: ${this.numMatchesPlayed}   •   Total goluri: ${this.totalTeamGoals}`
+        },
+        legend: {
+          position: 'right'
+        },
+        tooltip: {
+          callbacks: {
+            label: ctx => {
+              const player = ctx.label || '';
+              const goals = ctx.parsed as number;
+              const percent = this.totalTeamGoals > 0
+                ? ((goals / this.totalTeamGoals) * 100).toFixed(1) + '%'
+                : '';
+              return `${player}: ${goals} goluri (${percent})`;
+            }
+          }
+        }
+      }
+    }
+  });
+}
+
+  selectTab(tabName: 'lot' | 'program' | 'clasament'): void {
+    this.activeMainTab = tabName;
+
+    // Dacă tocmai am comutat pe “lot”, reconstrui pie-chart-ul după ce DOM-ul s-a updatat
+    if (tabName === 'lot') {
+      setTimeout(() => {
+        this.renderGoalsPieChart();
+      }, 0);
+    }
+  }
+
 
 }

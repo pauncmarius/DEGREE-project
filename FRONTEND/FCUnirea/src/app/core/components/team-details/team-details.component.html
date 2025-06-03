@@ -4,34 +4,34 @@
   <p class="preserve-lines"><strong>Descriere:</strong> {{ team.description || 'Fără descriere.' }}</p>
 </div>
 
-<!-- Taburi principale -->
 <div class="main-tabs">
   <button 
     [class.active]="activeMainTab === 'lot'"
-    (click)="activeMainTab = 'lot'">
+    (click)="selectTab('lot')">
     Lotul
   </button>
   <button 
     [class.active]="activeMainTab === 'program'"
-    (click)="activeMainTab = 'program'">
+    (click)="selectTab('program')">
     Program
   </button>
   <button 
     [class.active]="activeMainTab === 'clasament'"
-    (click)="activeMainTab = 'clasament'">
+    (click)="selectTab('clasament')">
     Clasament
   </button>
 </div>
 
+
 <!-- LOTUL -->
+<!-- ... conținutul inițial al tab-ului Lot ... -->
 <div *ngIf="activeMainTab === 'lot'">
-  <button 
-    *ngIf="isAdmin" 
-    class="edit-squad-btn"
-    (click)="editSquad()">
+  <!-- butonul de edit și lista de jucători -->
+  <button *ngIf="isAdmin" class="edit-squad-btn" (click)="editSquad()">
     ✏️ Editează lotul
   </button>
   <div *ngIf="players.length > 0" class="players-section">
+    <!-- gruparea și afișarea jucătorilor -->
     <ng-container *ngFor="let pos of objectKeys(groupedPlayers)">
       <h3 class="player-position">{{ pos }}</h3>
       <ul>
@@ -44,7 +44,15 @@
   <div *ngIf="players.length === 0">
     <p>Nu există jucători înregistrați pentru această echipă.</p>
   </div>
+
+  <!-- 𝗡𝗢𝗨𝗟 𝗖𝗛𝗔𝗥𝗧 𝗥𝗢𝗧𝗨𝗡𝗗 (Pie Chart) ȘI TOTAL GOLURI -->
+  <div class="chart-section">
+
+    <!-- 2) Canvas-ul pie chart -->
+    <canvas id="goalsPieChart"></canvas>
+  </div>
 </div>
+
 
 <!-- PROGRAM -->
 <div *ngIf="activeMainTab === 'program'">

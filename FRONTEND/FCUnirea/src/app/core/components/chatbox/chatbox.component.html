@@ -8,7 +8,8 @@
       <div [ngClass]="{'user-message': msg.sender === 'user', 'ai-message': msg.sender === 'ai'}">
         <b *ngIf="msg.sender === 'ai'">Asistent:</b>
         <b *ngIf="msg.sender === 'user'">Tu:</b>
-        <span>{{ msg.text }}</span>
+        <span>{{ msg.text }}</span><br><br>
+        <small>Trimis la {{ msg.timestamp | date: 'HH:mm' }}</small>
       </div>
     </div>
   </div>

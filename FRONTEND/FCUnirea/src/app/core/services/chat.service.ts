@@ -4,10 +4,14 @@ import { Observable } from 'rxjs';
 
 export interface ChatRequest {
   message: string;
+  timestamp: Date;
+
 }
 
 export interface ChatResponse {
   reply: string;
+  timestamp: Date;
+
 }
 
 @Injectable({

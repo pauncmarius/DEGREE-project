@@ -401,3 +401,26 @@
     background: #0e53a7;
   }
 }
+
+.chart-section {
+  margin-top: 30px;                                   /* la fel ca .players-section */
+  background: #f6f9ff;                                /* același fundal */
+  border-radius: 13px;                                /* colțuri la fel de rotunjite */
+  box-shadow: 0 4px 32px 4px rgba(25, 64, 241, 0.18),  /* aceeași umbră “puternică” */
+              0 2px 8px 0 rgba(40, 72, 255, 0.09);
+  padding: 24px;                                      /* spațiu interior egal */
+
+  /* Textul cu totalul golurilor – îl menținem centrat și cu culoarea primară */
+  .total-goals {
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: #1677ff;
+    margin-bottom: 12px;   /* puțin spațiu între text și chart */
+  }
+
+  /* Ajustăm canvas-ul să ocupe tot spațiul disponibil */
+  canvas {
+    width: 50% !important;
+    height: auto !important;
+  }
+}
