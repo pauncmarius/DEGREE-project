@@ -18,7 +18,19 @@ export class GamesService {
   }
 
   getGamesByCompetition(competitionId: number) {
-  return this.http.get<Game[]>(`${this.apiUrl}/byCompetition/${competitionId}`);
-}
+    return this.http.get<Game[]>(`${this.apiUrl}/byCompetition/${competitionId}`);
+  }
+
+  addGame(game: any): Observable<any> {
+    return this.http.post(this.apiUrl, game);
+  }
+
+  updateGame(game: any): Observable<any> {
+    return this.http.put(this.apiUrl, game);
+  }
+
+  deleteGame(gameId: number): Observable<any> {
+    return this.http.delete(`${this.apiUrl}/${gameId}`);
+  }
 
 }

@@ -57,23 +57,18 @@ namespace FCUnirea.Business.Services
                 if (statistic == null) return false;
 
                 var game = await _gameRepository.GetByIdAsync(statistic.PlayerStatisticsPerGame_GamesId ?? 0);
-                var player = await _playerRepository.GetByIdAsync(statistic.PlayerStatisticsPerGame_PlayersId ?? 0);
+                // Stergi marcatorul
+                await _repository.DeleteAsync(statistic);
+                await _repository.SaveChangesAsync();
 
-                if (game != null && player != null && player.Player_TeamsId.HasValue)
+                if (game != null)
                 {
-                    if (game.Game_HomeTeamId == player.Player_TeamsId)
-                        game.HomeTeamScore -= statistic.Goals;
-                    else if (game.Game_AwayTeamId == player.Player_TeamsId)
-                        game.AwayTeamScore -= statistic.Goals;
-
+                    await RecalculateGameScoreAsync(game);
                     await _gameRepository.UpdateAsync(game);
                     await _gameRepository.SaveChangesAsync();
                 }
 
-                await _repository.DeleteAsync(statistic);
-                await _repository.SaveChangesAsync();
-
-                await _compstatsService.UpdateStatisticsFromGamesAsync(); 
+                await _compstatsService.UpdateStatisticsFromGamesAsync();
 
                 await _repository.CommitTransactionAsync();
                 return true;
@@ -84,6 +79,7 @@ namespace FCUnirea.Business.Services
                 throw;
             }
         }
+
         public async Task<int> AddAndUpdateGameScoreAsync(PlayerStatisticsPerGameModel model)
         {
             await _repository.BeginTransactionAsync();
@@ -91,28 +87,21 @@ namespace FCUnirea.Business.Services
             {
                 var entity = _mapper.Map<PlayerStatisticsPerGame>(model);
                 await _repository.AddAsync(entity);
+                await _repository.SaveChangesAsync(); // <<== ADĂUGĂ asta aici!
 
                 var game = await _gameRepository.GetByIdAsync(model.PlayerStatisticsPerGame_GamesId.Value);
-                var player = await _playerRepository.GetByIdAsync(model.PlayerStatisticsPerGame_PlayersId.Value);
 
-                if (game == null || player == null || !player.Player_TeamsId.HasValue)
-                    throw new Exception("Game or Player not found");
+                if (game == null)
+                    throw new Exception("Game not found");
 
-                bool wasNotPlayed = !game.IsPlayed;
                 game.IsPlayed = true;
 
-                if (game.Game_HomeTeamId == player.Player_TeamsId)
-                    game.HomeTeamScore += model.Goals;
-                else if (game.Game_AwayTeamId == player.Player_TeamsId)
-                    game.AwayTeamScore += model.Goals;
-
+                // Recalculezi scorul pe baza tuturor marcatorilor
+                await RecalculateGameScoreAsync(game);
                 await _gameRepository.UpdateAsync(game);
 
-                await _repository.SaveChangesAsync();
                 await _gameRepository.SaveChangesAsync();
-
                 await _teamStatisticsService.UpdateAllTeamStatisticsFromGamesAsync();
-
                 await _compstatsService.UpdateStatisticsFromGamesAsync();
 
                 await _repository.CommitTransactionAsync();
@@ -125,6 +114,8 @@ namespace FCUnirea.Business.Services
             }
         }
 
+
+
         public async Task<IEnumerable<GameScorerModel>> GetScorersForGameAsync(int gameId)
         {
             var scorers = await _repository.GetScorersByGameAsync(gameId);
@@ -136,6 +127,23 @@ namespace FCUnirea.Business.Services
                 Goals = p.Goals
             });
         }
+
+        private async Task RecalculateGameScoreAsync(Games game)
+        {
+            var allScorers = await _repository.GetScorersByGameAsync(game.Id); // iei toți marcatorii
+            int homeGoals = 0, awayGoals = 0;
+            foreach (var scorer in allScorers)
+            {
+                var player = scorer.PlayerStatisticsPerGame_Players;
+                if (player.Player_TeamsId == game.Game_HomeTeamId)
+                    homeGoals += scorer.Goals;
+                else if (player.Player_TeamsId == game.Game_AwayTeamId)
+                    awayGoals += scorer.Goals;
+            }
+            game.HomeTeamScore = homeGoals;
+            game.AwayTeamScore = awayGoals;
+        }
+
 
 
     }

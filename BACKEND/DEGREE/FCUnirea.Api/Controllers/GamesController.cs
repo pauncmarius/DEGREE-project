@@ -109,7 +109,7 @@ namespace FCUnirea.Api.Controllers
         [HttpGet("byCompetition/{competitionId}")]
         public IActionResult GetGamesByCompetition(int competitionId)
         {
-            // Adaptează IGamesRepository dacă nu există deja funcția!
+
             var games = _gameService.GetGamesWithTeamNamesByCompetition(competitionId);
             if (games == null || !games.Any())
             {

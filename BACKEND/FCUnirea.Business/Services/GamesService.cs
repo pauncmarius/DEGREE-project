@@ -65,7 +65,8 @@ namespace FCUnirea.Business.Services
                 Game_CompetitionsId = g.Game_CompetitionsId ?? 0,
 
                 Game_HomeTeamId = g.Game_HomeTeamId ?? 0,
-                Game_AwayTeamId = g.Game_AwayTeamId ?? 0
+                Game_AwayTeamId = g.Game_AwayTeamId ?? 0,
+                RefereeName = g.RefereeName ?? ""
 
             });
         }
@@ -102,7 +103,8 @@ namespace FCUnirea.Business.Services
                 CompetitionName = g.Game_Competitions?.CompetitionName ?? "",
                 Game_HomeTeamId = g.Game_HomeTeamId ?? 0,
                 Game_AwayTeamId = g.Game_AwayTeamId ?? 0,
-                Game_CompetitionsId = g.Game_CompetitionsId ?? 0
+                Game_CompetitionsId = g.Game_CompetitionsId ?? 0,
+                RefereeName = g.RefereeName ?? ""
             });
         }
 

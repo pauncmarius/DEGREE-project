@@ -130,6 +130,7 @@ export class TeamDetailsComponent implements OnInit {
     this.selectedGameId = this.selectedGameId === gameId ? null : gameId;
     if (!this.scorersPerGame[gameId]) {
       this.playerStatsService.getScorersByGame(gameId).subscribe((data) => {
+        console.log("Date brute scorers pentru gameId=" + gameId, data);
         this.scorersPerGame[gameId] = data;
       });
     }
@@ -238,5 +239,12 @@ export class TeamDetailsComponent implements OnInit {
     this.router.navigate(['/admin/players'], {
       queryParams: { teamName: this.team.teamName }
   });
+  }
+  editGame(gameId: number, event: MouseEvent) {
+    event.stopPropagation(); // să nu se închidă marcatorii la click!
+    this.router.navigate(['/admin/games'], {
+      queryParams: { editGameId: gameId }
+    });
+  }
 
-}}
+}

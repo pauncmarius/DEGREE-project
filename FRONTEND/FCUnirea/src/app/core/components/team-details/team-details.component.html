@@ -74,18 +74,28 @@
         <em class="game-competition">{{ game.competitionName }}</em>
       </div>
       <div class="scorers" *ngIf="selectedGameId === game.id">
+          <div class="referee-row">
+            <strong>Arbitru:</strong> {{ game.refereeName || 'Nespecificat' }}
+          </div>
         <h4>Marcatori</h4>
         <div *ngIf="(scorersPerGame?.[game.id] ?? []).length > 0; else noGoals">
           <div *ngFor="let scorer of scorersPerGame[game.id]" class="scorer-row">
             <span class="scorer-icon">⚽</span>
             <span class="scorer-name">{{ scorer.playerName }}</span>
             <span class="scorer-team">({{ scorer.teamName }})</span>
-            <span class="scorer-goals">{{ scorer.goals }} goluri</span>
+            <span class="scorer-goals">{{ scorer.goals }} goluri!</span>
           </div>
         </div>
         <ng-template #noGoals>
           <p>Nu există marcatori înregistrați pentru acest meci.</p>
         </ng-template>
+
+          <button 
+            *ngIf="isAdmin" 
+            class="edit-squad-btn"
+            (click)="editGame(game.id, $event)">
+            ✏️ Editează meciul
+          </button>
       </div>
     </div>
     <div class="game-card" *ngIf="filteredGames.length === 0">

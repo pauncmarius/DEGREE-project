@@ -50,12 +50,23 @@
 
       <div *ngIf="selectedNews?.comments?.length ?? 0 > 0; else noComments">
         <div *ngFor="let c of selectedNews?.comments" class="comment">
-          <strong>{{ c.username }}:</strong>
+          <!-- Când e admin logat, username e clickabil/underline/albastru -->
+
+          <strong
+            [ngClass]="{
+              'admin-comment-username': c.role === 'Admin',
+              'hover-pointer': isAdmin
+            }"
+            (click)="isAdmin ? goToAdminUser(c.userId) : null"
+          >
+            {{ c.username }}:
+          </strong>
+
           <p>{{ c.text }}</p>
           <small>{{ c.createdAt | date: 'short' }}</small>
-
           <button *ngIf="isAdmin" class="delete-comment" (click)="deleteComment(c.id)">Șterge</button>
         </div>
+
       </div>
       <ng-template #noComments>
         <p>Nu există comentarii încă.</p>

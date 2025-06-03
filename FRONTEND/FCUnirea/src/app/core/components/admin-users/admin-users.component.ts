@@ -5,6 +5,7 @@ import { UserService } from '../../services/users.service';
 import { TicketInfo } from '../../models/tickets-model';
 import { TicketingService } from '../../services/ticketing.service';
 import { TicketsService } from '../../services/tickets.service';
+import { ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-admin-users',
@@ -26,11 +27,20 @@ export class AdminUsersComponent implements OnInit {
   constructor(
     private userService: UserService,
     private ticketingService: TicketingService,
-    private ticketsService: TicketsService
+    private ticketsService: TicketsService,
+    private route: ActivatedRoute 
   ) {}
 
   ngOnInit(): void {
     this.loadUsers();
+
+    this.route.queryParams.subscribe(params => {
+    const id = Number(params['editUserId']);
+    if (id) {
+      // așteaptă încărcarea userilor (users se încarcă asincron)
+      setTimeout(() => this.trySelectUserById(id), 500);
+    }
+  });
   }
 
   loadUsers(): void {
@@ -67,10 +77,13 @@ export class AdminUsersComponent implements OnInit {
   }
 
   get filteredUsers(): any[] {
+    const term = this.searchTerm.trim().toLowerCase();
     return this.users.filter(u =>
-      u.username.toLowerCase().includes(this.searchTerm.toLowerCase())
+      u.username.toLowerCase().includes(term) ||
+      u.email.toLowerCase().includes(term)   // <-- Adăugat
     );
   }
+
 
   loadTickets(userId: number): void {
     this.ticketsService.getTicketsByUser(userId).subscribe({
@@ -86,4 +99,17 @@ export class AdminUsersComponent implements OnInit {
       });
     }
   }
+
+  trySelectUserById(userId: number) {
+  const user = this.users.find(u => u.id === userId);
+  if (user) {
+    this.selectUser(user);
+    setTimeout(() => {
+      // scroll la zona de edit (poți ajusta selectorul după structură)
+      const el = document.querySelector('.edit-form-inline');
+      if (el) el.scrollIntoView({ behavior: 'smooth', block: 'center' });
+    }, 100);
+  }
+}
+
 }

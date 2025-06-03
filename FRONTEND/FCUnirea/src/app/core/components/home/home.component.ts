@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { NewsService } from '../../services/news.service';
 import { NewsModel } from '../../models/news-model';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-home',
@@ -27,9 +28,9 @@ export class HomeComponent {
 
   searchTerm: string = '';
   filteredNews: NewsModel[] = [];
-  constructor() {
-    this.loadNewsList();
-  }
+
+  constructor(private router: Router) {
+    this.loadNewsList();}
 
   getUserIdFromToken(): number | null {
     const token = localStorage.getItem('token');
@@ -150,4 +151,7 @@ export class HomeComponent {
     );
   }
 
+  goToAdminUser(userId: number): void {
+    this.router.navigate(['/admin/users'], { queryParams: { editUserId: userId } });
+  }
 }

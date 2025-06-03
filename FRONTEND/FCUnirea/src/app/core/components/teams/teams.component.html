@@ -3,17 +3,17 @@
 <div class="teams-container">
     <h1 class="section-title">Echipele noastre:</h1><br>
   
-<div class="team-card" *ngFor="let team of internalTeams" (click)="goToTeam(team.id)">
-  <h3>{{ team.teamName }}</h3>
-  <p>Antrenor: {{ team.coachName }}</p>
-  <p class="preserve-lines">{{ team.description || 'Fără descriere.' }}</p>
-  <button 
-    *ngIf="isAdmin" 
-    class="edit-btn"
-    (click)="editTeamAdmin($event, team.id)">
-    Edit
-  </button>
-</div>
+  <div class="team-card" *ngFor="let team of internalTeams" (click)="goToTeam(team.id)">
+    <h3>{{ team.teamName }}</h3>
+    <p>Antrenor: {{ team.coachName }}</p>
+    <p class="preserve-lines">{{ team.description || 'Fără descriere.' }}</p>
+    <button 
+      *ngIf="isAdmin" 
+      class="edit-btn"
+      (click)="editTeamAdmin($event, team.id)">
+      Edit
+    </button>
+  </div>
 
 
   

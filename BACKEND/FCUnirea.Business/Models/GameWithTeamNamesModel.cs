@@ -19,5 +19,6 @@ namespace FCUnirea.Business.Models
         public int Game_HomeTeamId { get; set; }
         public int Game_AwayTeamId { get; set; }
 
+        public string RefereeName { get; set; }
     }
 }

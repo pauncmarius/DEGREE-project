@@ -267,22 +267,19 @@
   }
 }
 
-.edit-btn {
-  background: #1677ff;
-  color: #fff;
-  border: none;
-  border-radius: 8px;
-  font-size: 1.04rem;
-  font-weight: 600;
-  padding: 8px 22px;
-  margin-left: 18px;
-  cursor: pointer;
-  box-shadow: 0 2px 7px rgba(22,119,255,0.10);
-  transition: background 0.17s, box-shadow 0.15s, color 0.14s;
-
-  &:hover {
-    background: #0e53a7;
-    color: #fff;
-    box-shadow: 0 4px 16px rgba(22,119,255,0.16);
-  }
+// Nume de admin la comentarii (întotdeauna negru, bold)
+.admin-comment-username {
+  color: #212121 !important; // un negru plăcut
+  font-weight: bold;
 }
+
+// Pentru toți, ca default, strong-ul de la comentariu rămâne moștenit
+// Dacă vrei să fie albastru pentru non-admini, folosește .comment strong { color: #1677ff; } (dacă nu ai deja).
+
+// Când un admin e logat, la hover pe orice username (admin sau nu):
+.hover-pointer:hover {
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+

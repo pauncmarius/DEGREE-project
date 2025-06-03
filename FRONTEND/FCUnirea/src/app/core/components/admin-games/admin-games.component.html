@@ -1,13 +1,18 @@
 <div class="admin-section">
   <h1>Administrează Marcatorii</h1>
-
+  <button class="btn-add-new" (click)="startCreatingGame()" *ngIf="!isCreatingNewGame && !selectedGame">
+    + Creează meci nou
+  </button>
   <input class="search-input" [(ngModel)]="searchTerm" (input)="filterGames()" placeholder="Caută echipă..." />
 
   <ul class="entity-list">
     <li *ngFor="let game of filteredGames" (click)="selectGame(game)">
       <div class="team-row">
         <span>
-          <strong>{{ game.homeTeamName }} {{ game.homeTeamScore }} - {{ game.awayTeamScore }} {{ game.awayTeamName }}</strong>
+          <strong>{{ game.homeTeamName }} 
+              {{ game.homeTeamScore }} - {{ game.awayTeamScore }}
+            {{ game.awayTeamName }}
+          </strong>
           <br />
           <small class="competition">{{ game.competitionName }} | {{ game.gameDate | date:'shortDate' }}</small>
         </span>
@@ -15,25 +20,77 @@
     </li>
   </ul>
 
+  <div class="edit-game-form" *ngIf="isCreatingNewGame || editingGame?.id">
+    <h4>{{ isCreatingNewGame ? 'Creează meci nou' : 'Editează meci' }}</h4>
+    <form (ngSubmit)="submitGame()" #gameForm="ngForm" class="form-inline">
+      <input 
+        type="date" 
+        [(ngModel)]="editingGame.gameDate" 
+        name="gameDate" 
+        required 
+        [ngClass]="{'has-value': !!editingGame.gameDate}"
+      />
+      <select 
+        [(ngModel)]="editingGame.game_HomeTeamId" 
+        name="homeTeamId" 
+        required>
+        <option [ngValue]="null" disabled>-- Selectează gazda --</option>
+        <option *ngFor="let t of allTeams" [ngValue]="t.id">{{ t.teamName }}</option>
+      </select>
+      <select 
+        [(ngModel)]="editingGame.game_AwayTeamId" 
+        name="awayTeamId" 
+        required>
+        <option [ngValue]="null" disabled>-- Selectează oaspeții --</option>
+        <option *ngFor="let t of allTeams" [ngValue]="t.id">{{ t.teamName }}</option>
+      </select>
+      <select 
+        [(ngModel)]="editingGame.game_CompetitionsId" 
+        name="competitionId" 
+        required>
+        <option [ngValue]="null" disabled>-- Selectează competiția --</option>
+        <option *ngFor="let c of competitions" [ngValue]="c.id">{{ c.competitionName }}</option>
+      </select>
+
+      <input
+        type="text"
+        [(ngModel)]="editingGame.refereeName"
+        name="refereeName"
+        placeholder="Nume arbitru"/>
+
+      <div class="checkbox-wrap">
+        <label>
+          <input 
+            type="checkbox" 
+            [(ngModel)]="editingGame.isPlayed" 
+            name="isPlayed"
+          >
+          Jucat
+        </label>
+      </div>
+      <div class="btn-row">
+        <button type="submit" class="btn-add">{{ isCreatingNewGame ? 'Creează' : 'Salvează' }}</button>
+        <button type="button" (click)="cancelGameEdit()" class="btn-cancel">Anulează</button>
+        <button *ngIf="editingGame?.id" type="button" class="btn-delete" (click)="deleteGame()">Șterge meci</button>
+      </div>
+    </form>
+  </div>
+
   <div *ngIf="selectedGame" class="edit-form-inline">
     <h4>Marcatori pentru: {{ selectedGame.homeTeamName }} vs {{ selectedGame.awayTeamName }}</h4>
-
     <ul class="scorer-list">
       <li *ngFor="let scorer of scorers">
         ⚽ <strong>{{ scorer.playerName }}</strong> ({{ scorer.teamName }}) - {{ scorer.goals }} goluri
         <button class="btn-delete" (click)="deleteScorer(scorer)">STERGE</button>
       </li>
     </ul>
-
     <h4>➕ Adaugă marcator</h4>
     <div class="form-inline">
       <select [(ngModel)]="newScorer.playerId">
         <option [ngValue]="null" disabled>-- Selectează jucător --</option>
         <option *ngFor="let p of players" [ngValue]="p.id">{{ p.playerName }} ({{ p.position }})</option>
       </select>
-
       <input type="number" [(ngModel)]="newScorer.goals" min="1" placeholder="Goluri" />
-
       <button class="btn-add" (click)="addScorer()">Adaugă</button>
     </div>
   </div>

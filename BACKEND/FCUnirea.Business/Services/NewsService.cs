@@ -76,7 +76,9 @@ namespace FCUnirea.Business.Services
                     Id = c.Id,
                     Text = c.Text,
                     CreatedAt = c.CreatedAt,
-                    Username = c.Comment_User?.Username
+                    Username = c.Comment_User?.Username,
+                    UserId = c.Comment_User.Id,
+                    Role = c.Comment_User.Role.ToString()
                 }).ToList()
             };
         }
