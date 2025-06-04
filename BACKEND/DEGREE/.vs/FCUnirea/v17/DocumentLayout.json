@@ -189,8 +189,7 @@
               "RelativeToolTip": "..\\FCUnirea.Business\\Services\\StadiumsService.cs",
               "ViewState": "AgIAABgAAAAAAAAAAAA7wAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-04T18:32:55.048Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-06-04T18:32:55.048Z"
             },
             {
               "$type": "Document",
@@ -202,8 +201,7 @@
               "RelativeToolTip": "..\\FCUnirea.Business\\Services\\TeamsService.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-04T18:32:56.924Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-06-04T18:32:56.924Z"
             },
             {
               "$type": "Document",
@@ -215,8 +213,7 @@
               "RelativeToolTip": "..\\FCUnirea.Business\\Services\\TeamStatisticsService.cs",
               "ViewState": "AgIAAE8AAAAAAAAAAAAwwAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-04T18:33:00.57Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-06-04T18:33:00.57Z"
             },
             {
               "$type": "Document",
@@ -228,8 +225,7 @@
               "RelativeToolTip": "..\\FCUnirea.Business\\Services\\TicketsService.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-04T18:33:10.841Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-06-04T18:33:10.841Z"
             },
             {
               "$type": "Document",
@@ -241,8 +237,7 @@
               "RelativeToolTip": "..\\FCUnirea.Business\\Services\\UsersService.cs",
               "ViewState": "AgIAAJIAAAAAAAAAAAAiwAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-04T18:33:15.173Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-06-04T18:33:15.173Z"
             },
             {
               "$type": "Document",
@@ -254,8 +249,7 @@
               "RelativeToolTip": "..\\FCUnirea.Domain\\Email\\EmailSettings.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-04T18:33:32.512Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-06-04T18:33:32.512Z"
             },
             {
               "$type": "Document",
@@ -265,7 +259,7 @@
               "RelativeDocumentMoniker": "..\\FCUnirea.Business\\Services\\OpenAiChatService.cs",
               "ToolTip": "C:\\Users\\paunm\\Documents\\GITHUB\\DEGREE-project\\BACKEND\\FCUnirea.Business\\Services\\OpenAiChatService.cs",
               "RelativeToolTip": "..\\FCUnirea.Business\\Services\\OpenAiChatService.cs",
-              "ViewState": "AgIAAIoBAAAAAAAAAAAkwGMBAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAE8BAAAAAAAAAAAgwGMBAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-06-04T18:33:39.921Z",
               "EditorCaption": ""
@@ -280,8 +274,7 @@
               "RelativeToolTip": "..\\FCUnirea.Business\\Services\\SeatsService.cs",
               "ViewState": "AgIAAAMAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-04T18:32:47.257Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-06-04T18:32:47.257Z"
             },
             {
               "$type": "Document",
@@ -293,8 +286,7 @@
               "RelativeToolTip": "..\\FCUnirea.Business\\Services\\PlayerStatisticsPerGameService.cs",
               "ViewState": "AgIAABIAAAAAAAAAAAAnwIQAAABOAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-04T18:32:21.044Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-06-04T18:32:21.044Z"
             },
             {
               "$type": "Document",
@@ -306,8 +298,7 @@
               "RelativeToolTip": "..\\FCUnirea.Business\\Services\\PlayerStatisticsPerCompetitionService.cs",
               "ViewState": "AgIAABwAAAAAAAAAAAAkwAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-04T18:31:56.175Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-06-04T18:31:56.175Z"
             },
             {
               "$type": "Document",
@@ -319,8 +310,7 @@
               "RelativeToolTip": "..\\FCUnirea.Business\\Services\\PlayersService.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAACAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-04T18:24:31.748Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-06-04T18:24:31.748Z"
             },
             {
               "$type": "Document",
@@ -332,8 +322,7 @@
               "RelativeToolTip": "..\\FCUnirea.Business\\Services\\NewsService.cs",
               "ViewState": "AgIAAEMAAAAAAAAAAAAwwAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-04T19:29:47.286Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-06-04T19:29:47.286Z"
             },
             {
               "$type": "Document",
@@ -345,8 +334,7 @@
               "RelativeToolTip": "..\\FCUnirea.Business\\Services\\GamesService.cs",
               "ViewState": "AgIAAHAAAAAAAAAAAADwvzIAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-04T19:29:32.947Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-06-04T19:29:32.947Z"
             },
             {
               "$type": "Document",
@@ -358,8 +346,7 @@
               "RelativeToolTip": "..\\FCUnirea.Business\\Services\\EmailService.cs",
               "ViewState": "AgIAAAsAAAAAAAAAAAAAwAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-04T19:29:29.834Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-06-04T19:29:29.834Z"
             },
             {
               "$type": "Document",
@@ -371,8 +358,7 @@
               "RelativeToolTip": "..\\FCUnirea.Business\\Services\\CommentsService.cs",
               "ViewState": "AgIAACcAAAAAAAAAAAAowAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-04T19:29:24.903Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-06-04T19:29:24.903Z"
             },
             {
               "$type": "Document",
@@ -384,8 +370,7 @@
               "RelativeToolTip": "..\\FCUnirea.Business\\Profiles\\MappingProfile.cs",
               "ViewState": "AgIAABkAAAAAAAAAAAAQwAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-04T19:28:29.367Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-06-04T19:28:29.367Z"
             },
             {
               "$type": "Document",
@@ -397,8 +382,7 @@
               "RelativeToolTip": "..\\FCUnirea.Business\\Models\\ChangePasswordModel.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-04T19:28:07.965Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-06-04T19:28:07.965Z"
             },
             {
               "$type": "Document",
@@ -410,8 +394,7 @@
               "RelativeToolTip": "..\\FCUnirea.Persistance\\PersistanceServiceRegistration.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-04T19:28:01.452Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-06-04T19:28:01.452Z"
             },
             {
               "$type": "Document",
@@ -423,8 +406,7 @@
               "RelativeToolTip": "..\\FCUnirea.Persistance\\Repositories\\UsersRepository.cs",
               "ViewState": "AgIAACIAAAAAAAAAAAAkwAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-04T19:27:56.641Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-06-04T19:27:56.641Z"
             },
             {
               "$type": "Document",
@@ -436,8 +418,7 @@
               "RelativeToolTip": "..\\FCUnirea.Persistance\\Repositories\\TicketsRepository.cs",
               "ViewState": "AgIAACYAAAAAAAAAAAAgwAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-04T19:27:54.127Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-06-04T19:27:54.127Z"
             },
             {
               "$type": "Document",
@@ -449,8 +430,7 @@
               "RelativeToolTip": "..\\FCUnirea.Persistance\\Repositories\\TeamStatisticsRepository.cs",
               "ViewState": "AgIAABoAAAAAAAAAAAA3wAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-04T19:27:52.157Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-06-04T19:27:52.157Z"
             },
             {
               "$type": "Document",
@@ -462,8 +442,7 @@
               "RelativeToolTip": "..\\FCUnirea.Persistance\\Repositories\\TeamsRepository.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-04T19:27:50.557Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-06-04T19:27:50.557Z"
             },
             {
               "$type": "Document",
@@ -475,8 +454,7 @@
               "RelativeToolTip": "..\\FCUnirea.Persistance\\Repositories\\SeatsRepository.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-04T19:27:49.557Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-06-04T19:27:49.557Z"
             },
             {
               "$type": "Document",
@@ -488,8 +466,7 @@
               "RelativeToolTip": "..\\FCUnirea.Persistance\\Repositories\\StadiumsRepository.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-04T19:27:48.78Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-06-04T19:27:48.78Z"
             },
             {
               "$type": "Document",
@@ -501,8 +478,7 @@
               "RelativeToolTip": "..\\FCUnirea.Persistance\\Repositories\\PlayerStatisticsPerGameRepository.cs",
               "ViewState": "AgIAAAwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-04T19:27:35.865Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-06-04T19:27:35.865Z"
             },
             {
               "$type": "Document",
@@ -514,8 +490,7 @@
               "RelativeToolTip": "..\\FCUnirea.Persistance\\Repositories\\PlayerStatisticsPerCompetitionRepository.cs",
               "ViewState": "AgIAAAoAAAAAAAAAAAAqwAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-04T19:27:27.1Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-06-04T19:27:27.1Z"
             },
             {
               "$type": "Document",
@@ -527,8 +502,7 @@
               "RelativeToolTip": "..\\FCUnirea.Persistance\\Repositories\\PlayersRepository.cs",
               "ViewState": "AgIAABAAAAAAAAAAAAAQwAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-04T19:27:25.529Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-06-04T19:27:25.529Z"
             },
             {
               "$type": "Document",
@@ -540,8 +514,7 @@
               "RelativeToolTip": "..\\FCUnirea.Persistance\\Repositories\\NewsRepository.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-04T19:27:24.167Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-06-04T19:27:24.167Z"
             },
             {
               "$type": "Document",
@@ -553,8 +526,7 @@
               "RelativeToolTip": "..\\FCUnirea.Persistance\\Repositories\\GamesRepository.cs",
               "ViewState": "AgIAAAYAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-04T19:27:20.741Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-06-04T19:27:20.741Z"
             },
             {
               "$type": "Document",
@@ -566,8 +538,7 @@
               "RelativeToolTip": "..\\FCUnirea.Persistance\\Repositories\\CompetitionsRepository.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-04T19:27:19.779Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-06-04T19:27:19.779Z"
             },
             {
               "$type": "Document",
@@ -579,8 +550,7 @@
               "RelativeToolTip": "..\\FCUnirea.Persistance\\Repositories\\CommentsRepository.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-04T19:27:18.064Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-06-04T19:27:18.064Z"
             },
             {
               "$type": "Document",
@@ -592,8 +562,7 @@
               "RelativeToolTip": "FCUnirea.Api\\Startup.cs",
               "ViewState": "AgIAAI4AAAAAAAAAAAAkwAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-04T19:27:05.036Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-06-04T19:27:05.036Z"
             },
             {
               "$type": "Document",
@@ -605,8 +574,7 @@
               "RelativeToolTip": "FCUnirea.Api\\Program.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-04T19:27:03.143Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-06-04T19:27:03.143Z"
             },
             {
               "$type": "Document",
@@ -618,8 +586,7 @@
               "RelativeToolTip": "FCUnirea.Api\\Controllers\\UsersController.cs",
               "ViewState": "AgIAANIAAAAAAAAAAAAuwAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-04T19:26:54.365Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-06-04T19:26:54.365Z"
             },
             {
               "$type": "Document",
@@ -631,8 +598,7 @@
               "RelativeToolTip": "FCUnirea.Api\\Controllers\\TicketsController.cs",
               "ViewState": "AgIAAGcAAAAAAAAAAADwvwAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-04T19:26:51.045Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-06-04T19:26:51.045Z"
             },
             {
               "$type": "Document",
@@ -644,8 +610,7 @@
               "RelativeToolTip": "FCUnirea.Api\\Controllers\\TeamStatisticsController.cs",
               "ViewState": "AgIAAD8AAAAAAAAAAAAowAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-04T19:26:48.367Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-06-04T19:26:48.367Z"
             },
             {
               "$type": "Document",
@@ -657,8 +622,7 @@
               "RelativeToolTip": "FCUnirea.Api\\Controllers\\TeamsController.cs",
               "ViewState": "AgIAAEUAAAAAAAAAAAA7wAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-04T19:26:45.407Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-06-04T19:26:45.407Z"
             },
             {
               "$type": "Document",
@@ -670,8 +634,7 @@
               "RelativeToolTip": "FCUnirea.Api\\Controllers\\StadiumsController.cs",
               "ViewState": "AgIAAC8AAAAAAAAAAAAgwAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-04T19:26:43.247Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-06-04T19:26:43.247Z"
             },
             {
               "$type": "Document",
@@ -683,8 +646,7 @@
               "RelativeToolTip": "FCUnirea.Api\\Controllers\\SeatsController.cs",
               "ViewState": "AgIAAEMAAAAAAAAAAAAkwAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-04T19:26:40.312Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-06-04T19:26:40.312Z"
             },
             {
               "$type": "Document",
@@ -696,8 +658,7 @@
               "RelativeToolTip": "FCUnirea.Api\\Controllers\\PlayerStatisticsPerGameController.cs",
               "ViewState": "AgIAAEgAAAAAAAAAAAAowAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-04T19:26:37.435Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-06-04T19:26:37.435Z"
             },
             {
               "$type": "Document",
@@ -709,8 +670,7 @@
               "RelativeToolTip": "FCUnirea.Api\\Controllers\\PlayerStatisticsPerCompetitionController.cs",
               "ViewState": "AgIAAEUAAAAAAAAAAAAowAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-04T19:26:34.502Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-06-04T19:26:34.502Z"
             },
             {
               "$type": "Document",
@@ -722,8 +682,7 @@
               "RelativeToolTip": "FCUnirea.Api\\Controllers\\NewsController.cs",
               "ViewState": "AgIAAEUAAAAAAAAAAAAowAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-04T19:26:28.247Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-06-04T19:26:28.247Z"
             },
             {
               "$type": "Document",
@@ -735,8 +694,7 @@
               "RelativeToolTip": "FCUnirea.Api\\Controllers\\GamesController.cs",
               "ViewState": "AgIAAGkAAAAAAAAAAAAIwAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-04T19:26:24.478Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-06-04T19:26:24.478Z"
             },
             {
               "$type": "Document",
@@ -748,8 +706,7 @@
               "RelativeToolTip": "FCUnirea.Api\\Controllers\\CompetitionsController.cs",
               "ViewState": "AgIAACYAAAAAAAAAAAAgwAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-04T19:26:21.78Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-06-04T19:26:21.78Z"
             },
             {
               "$type": "Document",
@@ -761,8 +718,7 @@
               "RelativeToolTip": "FCUnirea.Api\\Controllers\\CommentsController.cs",
               "ViewState": "AgIAADEAAAAAAAAAAAAkwAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-04T19:26:18.862Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-06-04T19:26:18.862Z"
             },
             {
               "$type": "Document",
@@ -774,8 +730,7 @@
               "RelativeToolTip": "FCUnirea.Api\\Controllers\\ChatController.cs",
               "ViewState": "AgIAAAsAAAAAAAAAAAAAwAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-04T19:26:08.072Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-06-04T19:26:08.072Z"
             },
             {
               "$type": "Document",
@@ -787,8 +742,7 @@
               "RelativeToolTip": "FCUnirea.Api\\Controllers\\PlayersController.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-04T18:27:06.569Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-06-04T18:27:06.569Z"
             },
             {
               "$type": "Document",
@@ -800,8 +754,7 @@
               "RelativeToolTip": "..\\FCUnirea.Business\\BussinessServiceRegistration.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-04T18:33:22.363Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-06-04T18:33:22.363Z"
             },
             {
               "$type": "Document",
@@ -813,8 +766,7 @@
               "RelativeToolTip": "..\\FCUnirea.Business\\Services\\IServices\\IPlayersService.cs",
               "ViewState": "AgIAAAEAAAAAAAAAAAASwBEAAAAzAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-04T18:24:32.676Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-06-04T18:24:32.676Z"
             }
           ]
         }

@@ -13,7 +13,6 @@
         </div>
       </div>
 
-      <!-- AICI adaugă #editForm -->
       <div *ngIf="editingTeam && editingTeam.id === team.id" class="edit-form-inline" #editForm>
         <h4>Editează echipa</h4>
         <input type="text" [(ngModel)]="editingTeam.teamName" placeholder="Nume echipă" />

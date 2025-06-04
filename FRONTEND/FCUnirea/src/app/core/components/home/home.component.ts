@@ -134,9 +134,8 @@ export class HomeComponent {
 
   parseNewsText(text: string): string {
   if (!text) return '';
-  // Transformă boldul
+  // transformă boldul
   let html = text.replace(/\*\*(.+?)\*\*/g, '<strong>$1</strong>');
-  // Poți adăuga și alte conversii dacă vrei (italic etc)
   return html;
   }
 

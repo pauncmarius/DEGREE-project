@@ -24,7 +24,6 @@
 
 
 <!-- LOTUL -->
-<!-- ... conținutul inițial al tab-ului Lot ... -->
 <div *ngIf="activeMainTab === 'lot'">
   <!-- butonul de edit și lista de jucători -->
   <button *ngIf="isAdmin" class="edit-squad-btn" (click)="editSquad()">
@@ -45,10 +44,8 @@
     <p>Nu există jucători înregistrați pentru această echipă.</p>
   </div>
 
-  <!-- 𝗡𝗢𝗨𝗟 𝗖𝗛𝗔𝗥𝗧 𝗥𝗢𝗧𝗨𝗡𝗗 (Pie Chart) ȘI TOTAL GOLURI -->
+  <!-- TOTAL GOLURI -->
   <div class="chart-section">
-
-    <!-- 2) Canvas-ul pie chart -->
     <canvas id="goalsPieChart"></canvas>
   </div>
 </div>
@@ -56,7 +53,7 @@
 
 <!-- PROGRAM -->
 <div *ngIf="activeMainTab === 'program'">
-  <!-- Search bar centrat -->
+  <!-- search bar centrat -->
   <div class="match-search-bar-centered">
     <input
       type="text"
@@ -81,7 +78,7 @@
         <em class="game-competition">{{ game.competitionName }}</em>
       </div>
 
-      <!-- Detaliile extinse -->
+      <!-- detaliile extinse -->
       <div class="scorers" *ngIf="selectedGameId === game.id">
         <div class="referee-row">
           <strong>Arbitru:</strong> {{ game.refereeName || 'Nespecificat' }}
@@ -99,7 +96,6 @@
           <p>Nu există marcatori înregistrați pentru acest meci.</p>
         </ng-template>
 
-        <!-- 𝗦𝗘𝗖Ţ𝗜𝗨𝗡𝗘 𝗡𝗢𝗨𝗔: Bilete și grafic -->
         <div *ngIf="ticketsPerGame[game.id]">
           <h4>Bilete vândute: {{ ticketCountPerGame[game.id] }}</h4>
 
@@ -137,7 +133,7 @@
       <h3>Competiție: {{ competitionNames[compId] || 'Fără nume' }}</h3>
 
       <div class="tabs">
-        <!-- Arată doar marcatori și, opțional, brackets dacă e cupă -->
+        <!-- arată doar marcatori și, opțional, brackets dacă e cupă -->
         <ng-container *ngIf="isCup(competitionNames[compId]); else normalTabs">
           <button (click)="activeTabMap[compId] = 'brackets'"
                   [class.active]="activeTabMap[compId] === 'brackets'">

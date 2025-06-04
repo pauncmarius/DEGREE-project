@@ -21,7 +21,6 @@ export class AdminPlayersComponent implements OnInit {
   editingPlayer: Partial<Player> = {};
   teams: Team[] = [];
   
-  teamIdFilter: string = '';
   nameFilter: string = '';
   teamNameFilter: string = '';
   @ViewChild('editForm') editFormRef!: ElementRef;
@@ -60,7 +59,6 @@ export class AdminPlayersComponent implements OnInit {
 
 
   submitPlayer(): void {
-    // Dacă editezi un jucător existent
     if (this.editingPlayer.id) {
       if (!confirm('Sigur vrei să salvezi modificările pentru acest jucător?')) return;
       this.playersService.updatePlayer(this.editingPlayer as Player).subscribe(() => {
@@ -69,7 +67,6 @@ export class AdminPlayersComponent implements OnInit {
         this.cancelEditPlayer();
       });
     } else {
-      // La adăugare poți pune confirmare, sau direct succes
       this.playersService.addPlayer(this.editingPlayer as Player).subscribe(() => {
         alert('Jucător adăugat cu succes!');
         this.loadPlayers();

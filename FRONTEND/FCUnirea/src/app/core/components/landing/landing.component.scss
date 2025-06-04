@@ -56,23 +56,7 @@
       flex-direction: column;
       align-items: start;
     }
-  }
-
-  .cta-btn {
-    margin-top: 15px;
-    padding: 12px 32px;
-    background: #1677ff;
-    color: #fff;
-    border: none;
-    border-radius: 8px;
-    font-weight: bold;
-    font-size: 1.1rem;
-    cursor: pointer;
-    transition: background 0.2s;
-
-    &:hover {
-      background: #0053a2;
-    }
+  
   }
 
   .login-note {

@@ -31,13 +31,13 @@ export class AdminTeamsComponent implements OnInit {
       this.teams = data;
       this.applyFilter();
 
-      // Reia din query param dacă există
+      // reia din query param dacă există
       const editId = +this.route.snapshot.queryParamMap.get('editId')!;
       if (editId) {
         const t = this.teams.find(team => team.id === editId);
         if (t) {
           this.editingTeam = { ...t };
-          // Scroll după ce formularul apare (next tick!)
+          // scroll după ce formularul apare (next tick!)
           setTimeout(() => {
             const el = this.editForms.find(ref => !!ref.nativeElement.offsetParent);
             if (el) {

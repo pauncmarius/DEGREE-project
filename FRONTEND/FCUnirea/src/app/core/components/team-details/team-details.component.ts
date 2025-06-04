@@ -77,13 +77,11 @@ export class TeamDetailsComponent implements OnInit {
   searchMatchTerm = '';
   cupBrackets: { [competitionId: number]: CupRound[] } = {};
 
-  /** 𝗡𝗼𝗶 𝗽𝗿𝗼𝗽𝗲𝗿𝘁𝗮̆ţ𝗶 𝗽𝗲𝗻𝘁𝗿𝘂 𝘁𝗶𝗰𝗸𝗲𝘁𝘀 */
   ticketsPerGame: { [gameId: number]: TicketInfo[] } = {};
   ticketCountPerGame: { [gameId: number]: number } = {};
   ticketTotalPricePerGame: { [gameId: number]: number } = {};
   ticketChartInstances: { [gameId: number]: Chart } = {};
 
-    /** Pentru pie chart */
   goalsPerPlayer: { [playerName: string]: number } = {};
   totalTeamGoals: number = 0;
   numMatchesPlayed: number = 0;
@@ -108,16 +106,12 @@ export class TeamDetailsComponent implements OnInit {
     this.teamService.getTeamById(this.teamId).subscribe(team => {
       this.team = team;});
 
-    // Ia meciurile pentru tab Program și identifică toate competițiile la care participă
     this.gamesService.getGamesByTeam(this.teamId).subscribe(games => {
       this.games = games;
-      // 1) Calculează de câte meciuri jucate e echipa și construiește pie chart-ul
       this.buildGoalsDistribution();
 
-      // 2) Rămăsese restul codului (populare competiții, clasamente, bracket-uri etc.)
       const uniqueCompetitions = [...new Set(games.map(g => g.game_CompetitionsId))];
 
-      // Populezi numele pentru taburi
       for (const competitionId of uniqueCompetitions) {
         const compGames = games.find(g => g.game_CompetitionsId === competitionId);
         if (compGames) {
@@ -129,14 +123,12 @@ export class TeamDetailsComponent implements OnInit {
         const compName = this.competitionNames[competitionId];
         this.activeTabMap[competitionId] = this.isCup(compName) ? 'brackets' : 'standings';
 
-        // Brackets - toate meciurile din cupă
         if (this.isCup(compName)) {
           this.gamesService.getGamesByCompetition(competitionId).subscribe(allCupGames => {
             this.cupBrackets[competitionId] = this.generateBracketsByIndex(allCupGames);
           });
         }
 
-        // Standings și marcatori
         this.statsService.getStandingsByCompetition(competitionId).subscribe(standings => {
           this.standingsMap[competitionId] = standings;
           this.scorersService.getTopScorersByCompetition(competitionId).subscribe(scorers => {
@@ -167,48 +159,37 @@ export class TeamDetailsComponent implements OnInit {
   }
   
   toggleScorers(gameId: number): void {
-    // 1) Toggle la secțiunea de detalii
     this.selectedGameId = this.selectedGameId === gameId ? null : gameId;
 
-    // 2) Cer marcatorii o singură dată
     if (!this.scorersPerGame[gameId]) {
       this.playerStatsService.getScorersByGame(gameId).subscribe(data => {
         this.scorersPerGame[gameId] = data;
       });
     }
 
-    // Găsim obiectul Game aferent gameId-ului
     const game = this.games.find(g => g.id === gameId)!;
 
-    // 3) Dacă meciul e DE ACASĂ, atunci încărcăm biletele din API și construim graficul
     if (this.isHomeGame(game)) {
-      // Dacă nu am cerut încă lista de bilete pentru acest gameId:
       if (!this.ticketsPerGame[gameId]) {
         this.ticketsService.getTicketsByGame(gameId).subscribe(tickets => {
           this.ticketsPerGame[gameId] = tickets;
           this.ticketCountPerGame[gameId] = tickets.length;
 
-          // Calculăm totalul încasărilor doar pentru meciuri de acasă
           this.ticketTotalPricePerGame[gameId] = tickets
             .map(t => t.seatPrice)
             .reduce((sum, price) => sum + price, 0);
 
-          // După ce biletele au fost populate, forțăm un ciclu de render și apoi 
-          // construim bar-chart-ul corespunzător
           this.scheduleChartBuild(gameId, tickets);
         });
       } else {
-        // Dacă biletele au fost deja încărcate, iar utilizatorul tocmai a „deschis” (toggle on)
-        // secțiunea, refacem graficul
+
         if (this.selectedGameId === gameId) {
           this.scheduleChartBuild(gameId, this.ticketsPerGame[gameId]);
         }
       }
 
     } else {
-      // 4) Dacă meciul e DE DEPLASARE, NU mai apelăm niciun API de bilete,
-      //    ci vom afișa doar numărul de bilete (ticketsSold) în template.
-      //    Prin urmare, nicio acțiune suplimentară aici.
+
     }
   }
 
@@ -258,9 +239,6 @@ export class TeamDetailsComponent implements OnInit {
       });
     }, 0);
   }
-
-
-
 
   getMatchResultClass(game: Game): string {
     if (!game.isPlayed) return 'not-played';

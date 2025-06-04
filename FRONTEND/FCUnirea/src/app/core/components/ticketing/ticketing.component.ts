@@ -58,7 +58,7 @@ export class TicketingComponent implements OnInit {
     this.selectedGameId = gameId;
     this.loadSeats(gameId);
     setTimeout(() => {
-      // Dă scroll smooth la stadion
+      // auto scroll la zona stadionului
       this.stadiumZone?.nativeElement.scrollIntoView({ behavior: 'smooth', block: 'start' });
     }, 50);
   }
@@ -78,7 +78,7 @@ export class TicketingComponent implements OnInit {
       return;
     }
 
-    // Pas suplimentar: confirmare
+    // verifică dacă utilizatorul a selectat un loc
     const selectedGame = this.games.find(g => g.id === this.selectedGameId);
     const selectedSeat = this.seats.find(s => s.id === this.selectedSeatId);
 
@@ -89,10 +89,10 @@ export class TicketingComponent implements OnInit {
       `Preț: ${selectedSeat?.seatPrice || '-'} RON`;
 
     if (!window.confirm(msg)) {
-      return; // Utilizatorul a anulat
+      return; // usorul a anulat rezervarea
     }
 
-    // Dacă a confirmat, trimite rezervarea
+    // dacă utilizatorul a confirmat rezervarea, trimite cererea
     this.ticketService.reserveTicket({
       ticket_UsersId: this.userId,
       ticket_GamesId: this.selectedGameId,
@@ -108,21 +108,21 @@ export class TicketingComponent implements OnInit {
   }
 
   get filteredGames(): GameForTicket[] {
-  return this.games.filter(g => {
-    // Filtru pe nume (meci)
-    const searchText = this.searchTerm.trim().toLowerCase();
-    const nameMatch =
-      !searchText ||
-      g.homeTeamName.toLowerCase().includes(searchText) ||
-      g.awayTeamName.toLowerCase().includes(searchText);
+    return this.games.filter(g => {
+      // filtru pe nume (meci)
+      const searchText = this.searchTerm.trim().toLowerCase();
+      const nameMatch =
+        !searchText ||
+        g.homeTeamName.toLowerCase().includes(searchText) ||
+        g.awayTeamName.toLowerCase().includes(searchText);
 
-    // Filtru pe dată (YYYY-MM-DD din input type="date")
-    const dateMatch =
-      !this.searchDate ||
-      (g.gameDate && new Date(g.gameDate).toISOString().slice(0, 10) === this.searchDate);
+      // filtru pe dată (YYYY-MM-DD din input type="date")
+      const dateMatch =
+        !this.searchDate ||
+        (g.gameDate && new Date(g.gameDate).toISOString().slice(0, 10) === this.searchDate);
 
-    return nameMatch && dateMatch;
-  });
+      return nameMatch && dateMatch;
+    });
 }
 
 }

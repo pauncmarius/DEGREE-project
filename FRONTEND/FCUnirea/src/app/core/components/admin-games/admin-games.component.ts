@@ -68,7 +68,7 @@ export class AdminGamesComponent implements OnInit {
         this.filteredGames = this.games;
         return;
       }
-      // Ignoră "vs" dacă apare în căutare
+      // ignoră "vs" dacă apare în căutare
       const keywords = term.replace(/vs/g, '').split(/\s+/).filter(Boolean);
 
       this.filteredGames = this.games.filter(game => {
@@ -140,7 +140,7 @@ export class AdminGamesComponent implements OnInit {
   }
   
   submitGame(): void {
-    // Elimină scorurile din obiect dacă vrei explicit:
+    // elimină scorurile din obiect dacă vrei explicit:
     delete this.editingGame.homeTeamScore;
     delete this.editingGame.awayTeamScore;
     this.editingGame.game_StadiumsId = this.editingGame.game_HomeTeamId;

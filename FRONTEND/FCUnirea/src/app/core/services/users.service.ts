@@ -65,10 +65,12 @@ export class UserService {
     return this.http.put(`${this.apiUrl}`, user);
   }
 
+  //sterge un user
   deleteUser(id: number): Observable<any> {
     return this.http.delete(`${this.apiUrl}/${id}`);
   }
   
+  //ia rolul din token
   getRoleFromToken(): string | null {
     const token = localStorage.getItem('token');
     if (!token) return null;
@@ -79,7 +81,7 @@ export class UserService {
       return null;
     }
   }
-
+  // verifica daca userul este admin
   isAdmin(): boolean {
     return this.getRoleFromToken() === 'Admin';
   }

@@ -6,7 +6,7 @@ import { ChatboxComponent } from "../chatbox/chatbox.component";
 @Component({
   selector: 'app-menu',
   standalone: true,
-  imports: [CommonModule, RouterModule, ChatboxComponent, ChatboxComponent],
+  imports: [CommonModule, RouterModule, ChatboxComponent],
   templateUrl: './menu.component.html',
   styleUrl: './menu.component.scss'
 })
