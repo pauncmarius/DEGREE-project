@@ -50,7 +50,7 @@ namespace FCUnirea.Persistance.Repositories
                 .Include(g => g.Game_HomeTeam)
                 .Include(g => g.Game_AwayTeam)
                 .Include(g => g.Game_Stadiums)
-                // cauta primul meci care are id-ul dorit (g.Id == id)
+                // returnează primul meci cu id-ul dorit sau null dacă nu există
                 .FirstOrDefaultAsync(g => g.Id == id);
         }
 

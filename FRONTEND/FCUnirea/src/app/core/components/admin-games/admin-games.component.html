@@ -88,7 +88,7 @@
     <div class="form-inline">
       <select [(ngModel)]="newScorer.playerId">
         <option [ngValue]="null" disabled>-- Selectează jucător --</option>
-        <option *ngFor="let p of players" [ngValue]="p.id">{{ p.playerName }} ({{ p.position }})</option>
+        <option *ngFor="let p of players" [ngValue]="p.id">{{ p.playerName }} ({{ p.position }}-{{p.teamName}})</option>
       </select>
       <input type="number" [(ngModel)]="newScorer.goals" min="1" placeholder="Goluri" />
       <button class="btn-add" (click)="addScorer()">Adaugă</button>

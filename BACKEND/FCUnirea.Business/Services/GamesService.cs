@@ -110,6 +110,7 @@ namespace FCUnirea.Business.Services
             });
         }
 
+        //pentru cupa!!
         public IEnumerable<GameWithTeamNamesModel> GetGamesWithTeamNamesByCompetition(int competitionId)
         {
             var games = _gamesRepository.GetGamesByCompetition(competitionId);

@@ -15,7 +15,6 @@ namespace FCUnirea.Api.Controllers
     public class TeamsController : Controller
     {
         private readonly ITeamsService _teamService;
-
         public TeamsController(ITeamsService teamService)
         {
             _teamService = teamService;

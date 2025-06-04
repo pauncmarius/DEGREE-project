@@ -14,8 +14,8 @@ namespace FCUnirea.Business.Services.IServices
         public void UpdatePlayer(Players player);
         public void DeletePlayer(int id);
 
-        IEnumerable<Players> GetPlayersByTeam(int teamId); // 👈 nou
-        public IEnumerable<object> GetPlayersWithTeamName();
+        IEnumerable<PlayersWithTeamNameModel> GetPlayersByTeam(int teamId); 
+        public IEnumerable<PlayersWithTeamNameModel> GetPlayersWithTeamName();
 
     }
 }

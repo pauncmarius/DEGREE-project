@@ -57,7 +57,7 @@ namespace FCUnirea.Business.Services
                 if (statistic == null) return false;
 
                 var game = await _gameRepository.GetByIdAsync(statistic.PlayerStatisticsPerGame_GamesId ?? 0);
-                // Stergi marcatorul
+                // sterge mrcatorul din tabela playerstatisticspergame
                 await _repository.DeleteAsync(statistic);
                 await _repository.SaveChangesAsync();
 
@@ -87,7 +87,7 @@ namespace FCUnirea.Business.Services
             {
                 var entity = _mapper.Map<PlayerStatisticsPerGame>(model);
                 await _repository.AddAsync(entity);
-                await _repository.SaveChangesAsync(); // <<== ADĂUGĂ asta aici!
+                await _repository.SaveChangesAsync();
 
                 var game = await _gameRepository.GetByIdAsync(model.PlayerStatisticsPerGame_GamesId.Value);
 
@@ -96,7 +96,7 @@ namespace FCUnirea.Business.Services
 
                 game.IsPlayed = true;
 
-                // Recalculezi scorul pe baza tuturor marcatorilor
+                // Recalculam scorul meciului
                 await RecalculateGameScoreAsync(game);
                 await _gameRepository.UpdateAsync(game);
 
@@ -130,7 +130,7 @@ namespace FCUnirea.Business.Services
 
         private async Task RecalculateGameScoreAsync(Games game)
         {
-            var allScorers = await _repository.GetScorersByGameAsync(game.Id); // iei toți marcatorii
+            var allScorers = await _repository.GetScorersByGameAsync(game.Id);
             int homeGoals = 0, awayGoals = 0;
             foreach (var scorer in allScorers)
             {

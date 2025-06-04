@@ -71,7 +71,7 @@ namespace FCUnirea.Api.Controllers
 
         [Authorize]
         [HttpGet("byTeam/{teamId}")]
-        public IActionResult GetGamesByTeam(int teamId)//
+        public IActionResult GetGamesByTeam(int teamId)
         {
             var games = _gameService.GetGamesWithTeamNamesByTeam(teamId);
             if (games == null || !games.Any())

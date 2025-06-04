@@ -16,7 +16,6 @@ namespace FCUnirea.Api.Controllers
         private readonly IUsersService _userService;
         private readonly IMapper _mapper;
 
-
         public UsersController(IUsersService userService, IMapper mapper)
         {
             _userService = userService;
@@ -83,7 +82,7 @@ namespace FCUnirea.Api.Controllers
                 {
                     success = false,
                     message = "Datele introduse nu sunt valide.",
-                    errors // aici e Dictionary-ul complet
+                    errors
                 });
             }
 

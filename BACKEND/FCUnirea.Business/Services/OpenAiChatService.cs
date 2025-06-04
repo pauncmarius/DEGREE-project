@@ -289,7 +289,38 @@ public class OpenAiChatService
                     return $"Echipa FC Unirea joacă pe stadionul {stadium.StadiumName}.";
                 }
             }
-            //ticketsTable
+            // stergere bilet notPlayed games
+            if (msg.StartsWith("șterge bilet") || msg.StartsWith("sterge bilet") ||
+                msg.Contains("șterge bilet ") || msg.Contains("sterge bilet "))
+            {
+                // simplu și robust cu Regex (accepta si spatii multiple)
+                var match = System.Text.RegularExpressions.Regex.Match(msg, @"^(șterge|sterge)\s+bilet\s+(\d+)$", System.Text.RegularExpressions.RegexOptions.IgnoreCase);
+                if (match.Success)
+                {
+                    int ticketId = int.Parse(match.Groups[2].Value);
+                    var upcomingTickets = _ticketsService
+                        .GetTicketsByUserIdAsync(user.Id)
+                        .Result
+                        .Where(t => !t.IsPlayed)
+                        .ToList();
+                    var ticketToDelete = upcomingTickets.FirstOrDefault(t => t.Id == ticketId);
+                    if (ticketToDelete != null)
+                    {
+                        _ticketsService.DeleteTicket(ticketId);
+
+                        if (_ticketsService.GetTicket(ticketId) == null)
+                            return $"Am șters cu succes biletul viitor cu ID {ticketId}.";
+                        else
+                            return $"S-a produs o eroare la ștergerea biletului cu ID {ticketId}.";
+                    }
+                    else
+                    {
+                        return $"Nu am găsit niciun bilet viitor cu ID {ticketId}. Verifică, te rog, dacă ai introdus corect numărul.";
+                    }
+                }
+            }
+
+            // -- LISTARE BILETE --
             if ((msg.Contains("bilete") || msg.Contains("bilet") || msg.Contains("rezervari") || msg.Contains("rezervări")))
             {
                 var tickets = _ticketsService.GetTicketsByUserIdAsync(user.Id).Result.ToList();
@@ -323,46 +354,9 @@ public class OpenAiChatService
                     result = "Momentan nu ai bilete rezervate.";
                 }
 
-                // AICI: prompt clar pentru GPT!
                 return $"Afișează această listă de bilete EXACT, fără să reformulezi. Dacă există bilete pentru meciuri viitoare, adaugă la final instrucțiunea: '{deleteInstruction}'\n\nLISTĂ BILETE:\n{result}";
             }
 
-
-            // --- Ștergere bilet viitor (doar dacă tot mesajul este "șterge bilet {ID}") ---
-            var deleteExactPattern = new System.Text.RegularExpressions.Regex(
-                @"^\s*(șterge|sterge)\s+bilet\s+(\d+)\s*$",
-                System.Text.RegularExpressions.RegexOptions.IgnoreCase);
-
-            var deleteMatch = deleteExactPattern.Match(msg);
-            if (deleteMatch.Success)
-            {
-                // Am detectat exact comanda "șterge bilet 123" (fără alte cuvinte înainte/sau după)
-                int ticketId = int.Parse(deleteMatch.Groups[2].Value);
-
-                var upcomingTickets = _ticketsService
-                    .GetTicketsByUserIdAsync(user.Id)
-                    .Result
-                    .Where(t => !t.IsPlayed)
-                    .ToList();
-
-                var ticketToDelete = upcomingTickets.FirstOrDefault(t => t.Id == ticketId);
-                if (ticketToDelete != null)
-                {
-                    _ticketsService.DeleteTicket(ticketId);
-                    if (_ticketsService.GetTicket(ticketId) == null)
-                    {
-                        return $"Am șters cu succes biletul viitor cu ID {ticketId}.";
-                    }
-                    else
-                    {
-                        return $"S-a produs o eroare la ștergerea biletului cu ID {ticketId}.";
-                    }
-                }
-                else
-                {
-                    return $"Nu am găsit niciun bilet viitor cu ID {ticketId}. Verifică, te rog, dacă ai introdus corect numărul.";
-                }
-            }
 
 
             //mesaj de intampinare

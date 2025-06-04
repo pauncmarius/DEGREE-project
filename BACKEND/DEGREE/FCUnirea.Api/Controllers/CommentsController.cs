@@ -41,7 +41,6 @@ namespace FCUnirea.Api.Controllers
             if (!ModelState.IsValid)
                 return BadRequest(ModelState);
 
-            // preia username-ul utilizatorului autentificat din token
             var username = User.Identity?.Name;
             if (string.IsNullOrEmpty(username))
                 return BadRequest(new { message = "Utilizatorul nu este autentificat." });

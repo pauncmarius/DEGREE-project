@@ -14,7 +14,6 @@ namespace FCUnirea.Api.Controllers
     public class SeatsController : Controller
     {
         private readonly ISeatsService _seatService;
-
         public SeatsController(ISeatsService seatService)
         {
             _seatService = seatService;

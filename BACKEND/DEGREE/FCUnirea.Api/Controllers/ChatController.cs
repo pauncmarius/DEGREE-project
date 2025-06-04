@@ -24,6 +24,7 @@ public class ChatController : ControllerBase
         if (!ModelState.IsValid)
             return BadRequest(new ChatResponse { Reply = "Mesajul nu poate fi gol." });
 
+        // preia username-ul utilizatorului autentificat din token
         var username = User.Identity?.Name;
         if (string.IsNullOrEmpty(username))
             return Unauthorized(new ChatResponse { Reply = "Utilizatorul nu este autentificat." });
@@ -34,6 +35,5 @@ public class ChatController : ControllerBase
 
         return Ok(new ChatResponse { Reply = reply });
     }
-
 }
 

@@ -12,7 +12,6 @@ namespace FCUnirea.Api.Controllers
     public class StadiumsController : Controller
     {
         private readonly IStadiumsService _stadiumService;
-
         public StadiumsController(IStadiumsService stadiumService)
         {
             _stadiumService = stadiumService;

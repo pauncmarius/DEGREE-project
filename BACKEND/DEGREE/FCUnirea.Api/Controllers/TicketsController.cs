@@ -16,7 +16,6 @@ namespace FCUnirea.Api.Controllers
     public class TicketsController : Controller
     {
         private readonly ITicketsService _ticketService;
-
         public TicketsController(ITicketsService ticketService)
         {
             _ticketService = ticketService;

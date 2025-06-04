@@ -5,7 +5,6 @@ using Microsoft.Extensions.Options;
 using System.Net;
 using System.Net.Mail;
 using System.Threading.Tasks;
-// de schimbat
 public class EmailService : IEmailService
 {
     private readonly EmailSettings _settings;

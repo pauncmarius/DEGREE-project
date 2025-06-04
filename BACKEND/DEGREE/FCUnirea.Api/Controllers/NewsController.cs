@@ -14,7 +14,6 @@ namespace FCUnirea.Api.Controllers
         private readonly INewsService _newsService;
         private readonly IUsersService _usersService;
 
-
         public NewsController(INewsService newsService, IUsersService usersService)
         {
             _newsService = newsService;
@@ -40,8 +39,6 @@ namespace FCUnirea.Api.Controllers
             return Ok(result);
 
         }
-
-
 
         [Authorize(Roles = "Admin")]
         [HttpPost]
@@ -77,8 +74,6 @@ namespace FCUnirea.Api.Controllers
             return NoContent();
         }
 
-
-
         [Authorize(Roles = "Admin")]
         [HttpDelete("{id}")]
         public IActionResult Delete(int id)
@@ -86,7 +81,5 @@ namespace FCUnirea.Api.Controllers
             _newsService.DeleteNews(id);
             return NoContent();
         }
-
-
     }
 }
