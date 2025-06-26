@@ -10,10 +10,7 @@ namespace FCUnirea.Persistance.Repositories
 {
     public class PlayersRepository : BaseRepository<Players>, IPlayersRepository
     {
-        public PlayersRepository(FCUnireaDbContext fcUnireaDbContext) : base(fcUnireaDbContext)
-        {
-
-        }
+        public PlayersRepository(FCUnireaDbContext fcUnireaDbContext) : base(fcUnireaDbContext){}
         public IEnumerable<Players> GetPlayersByTeam(int teamId)
         {
             return _dbContext.Players

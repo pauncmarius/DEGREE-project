@@ -11,9 +11,7 @@ namespace FCUnirea.Persistance.Repositories
 {
     public class TeamsRepository : BaseRepository<Teams>, ITeamsRepository
     {
-        public TeamsRepository(FCUnireaDbContext fcUnireaDbContext) : base(fcUnireaDbContext)
-        {
-        }
+        public TeamsRepository(FCUnireaDbContext fcUnireaDbContext) : base(fcUnireaDbContext){}
         public async Task<IEnumerable<Teams>> GetInternalTeamsAsync()
         {
             return await _dbContext.Teams

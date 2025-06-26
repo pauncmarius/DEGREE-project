@@ -1,6 +1,9 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { AdminGamesComponent } from './admin-games.component';
+import { HttpClientTestingModule } from '@angular/common/http/testing';
+import { ActivatedRoute } from '@angular/router';
+import { of } from 'rxjs';
 
 describe('AdminGamesComponent', () => {
   let component: AdminGamesComponent;
@@ -8,7 +11,17 @@ describe('AdminGamesComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [AdminGamesComponent]
+      imports: [AdminGamesComponent, HttpClientTestingModule],
+          providers: [
+      {
+        provide: ActivatedRoute,
+        useValue: {
+          snapshot: { params: {}, data: {} },   // minimul necesar, adaptează după caz
+          paramMap: of({ get: () => null }),
+          // orice proprietăți ai nevoie în testul tău
+        }
+      }
+    ]
     })
     .compileComponents();
     

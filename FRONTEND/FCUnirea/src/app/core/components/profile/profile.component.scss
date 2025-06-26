@@ -183,15 +183,3 @@
     }
   }
 }
-
-@media (max-width: 650px) {
-  :host {
-    padding: 7vw 2vw 9vw 2vw;
-    max-width: 99vw;
-    min-width: 0;
-  }
-  .field-wrapper {
-    padding: 9px 5px;
-    min-height: 40px;
-  }
-}

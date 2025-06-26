@@ -11,10 +11,7 @@ namespace FCUnirea.Persistance.Repositories
 {
     public class TicketsRepository : BaseRepository<Tickets>, ITicketsRepository
     {
-        public TicketsRepository(FCUnireaDbContext fcUnireaDbContext) : base(fcUnireaDbContext)
-        {
-
-        }
+        public TicketsRepository(FCUnireaDbContext fcUnireaDbContext) : base(fcUnireaDbContext){}
 
         public async Task<IEnumerable<Tickets>> GetTicketsByUserIdAsync(int userId)
         {

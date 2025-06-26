@@ -98,15 +98,8 @@ namespace FCUnirea.Persistance.Data
                 new Users { Id = 31, Username = "veronica.filip", Email = "veronica.filip@fcunirea.ro", FirstName = "Veronica", LastName = "Filip", PhoneNumber = "0700000030", Password = "WTM/73BdHfimme4uRkFNWA==:70kq150aS87havltE4F8HHTApxiz1TcfnQV2kHNvVxI=", Role = UserRole.Customer }
             });
 
-            modelBuilder.Entity<Competitions>().HasData(new List<Competitions>()
-            {
-                new Competitions() { Id = 1, CompetitionName = "Liga 1", CompetitionType = CompetitionType.NationalLeague },
-                new Competitions() { Id = 2, CompetitionName = "Cupa Romaniei", CompetitionType = CompetitionType.NationalCup },
-                new Competitions() { Id = 3, CompetitionName = "Champions League", CompetitionType = CompetitionType.ChampionsLeague },
-                new Competitions() { Id = 4, CompetitionName = "Liga 1 U21", CompetitionType = CompetitionType.NationalLeague },
-                new Competitions() { Id = 5, CompetitionName = "Liga 1 Tineret", CompetitionType = CompetitionType.NationalLeague },
-                new Competitions() { Id = 6, CompetitionName = "Champions League Knockout stage", CompetitionType = CompetitionType.ChampionsLeague }
-            });
+           
+
 
             modelBuilder.Entity<Teams>().HasData(new List<Teams>
             {

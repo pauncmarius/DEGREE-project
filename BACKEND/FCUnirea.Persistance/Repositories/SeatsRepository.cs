@@ -13,10 +13,7 @@ namespace FCUnirea.Persistance.Repositories
 {
     public class SeatsRepository : BaseRepository<Seats>, ISeatsRepository
     {
-        public SeatsRepository(FCUnireaDbContext fcUnireaDbContext) : base(fcUnireaDbContext)
-        {
-
-        }
+        public SeatsRepository(FCUnireaDbContext fcUnireaDbContext) : base(fcUnireaDbContext){}
 
         public async Task<IEnumerable<Seats>> ListAsync(Expression<Func<Seats, bool>> predicate)
         {

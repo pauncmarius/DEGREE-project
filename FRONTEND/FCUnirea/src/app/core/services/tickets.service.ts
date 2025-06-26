@@ -12,7 +12,6 @@ export class TicketsService {
   getTicketsByUser(userId: number): Observable<TicketInfo[]> {
     return this.http.get<TicketInfo[]>(`${this.apiUrl}/byUser/${userId}`);
   }
-
   getTicketsByGame(gameId: number): Observable<TicketInfo[]> {
     return this.http.get<TicketInfo[]>(`${this.apiUrl}/game/${gameId}`);
   }

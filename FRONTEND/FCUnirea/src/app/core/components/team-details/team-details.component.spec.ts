@@ -1,6 +1,8 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { TeamDetailsComponent } from './team-details.component';
+import { HttpClientTestingModule } from '@angular/common/http/testing';
+import { ActivatedRoute } from '@angular/router';
 
 describe('TeamDetailsComponent', () => {
   let component: TeamDetailsComponent;
@@ -8,7 +10,25 @@ describe('TeamDetailsComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [TeamDetailsComponent]
+      imports: [TeamDetailsComponent, HttpClientTestingModule],
+          providers: [
+{
+  provide: ActivatedRoute,
+  useValue: {
+    snapshot: {
+      paramMap: {
+        get: (key: string) => {
+          if (key === 'id') return '1'; // sau ce id vrei pentru test
+          return null;
+        }
+      },
+      params: {},
+      data: {}
+    }
+  }
+}
+
+    ]
     })
     .compileComponents();
     

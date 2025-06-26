@@ -31,7 +31,7 @@ export class ChatboxComponent {
 
   
   ngOnInit() {
-    // La încărcarea componentei, trimitem un prompt special către AI ca să ne întoarcă automat un mesaj de întâmpinare.
+    // la încărcarea componentei, trimitem un prompt special către AI ca să ne întoarcă automat un mesaj de întâmpinare.
     this.loading = true;
     const greetingPrompt = 'Generare mesaj de întâmpinare';
     this.chatService.ask(greetingPrompt).subscribe({

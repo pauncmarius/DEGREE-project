@@ -27,7 +27,7 @@ export class AdminCompetitionsComponent implements OnInit {
   }
 
   startEdit(c: CompetitionsModel): void {
-    //copiază toate proprietățile din c într-un nou obiect
+    //copiaza toate proprietățile din c într-un nou obiect
     this.editingCompetition = { ...c };
     this.isEditing = true;
   }

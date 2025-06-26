@@ -9,10 +9,7 @@ namespace FCUnirea.Persistance.Repositories
 {
     public class NewsRepository : BaseRepository<News>, INewsRepository
     {
-        public NewsRepository(FCUnireaDbContext fcUnireaDbContext) : base(fcUnireaDbContext)
-        {
-
-        }
+        public NewsRepository(FCUnireaDbContext fcUnireaDbContext) : base(fcUnireaDbContext){}
 
         public News GetByIdWithAuthor(int id)
         {

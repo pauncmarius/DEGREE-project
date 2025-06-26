@@ -354,34 +354,34 @@ export class TeamDetailsComponent implements OnInit {
   }
 
   private buildGoalsDistribution(): void {
-    // 1) Filtrează doar meciurile jucate
+    // filtrează doar meciurile jucate
     const playedGames = this.games.filter(g => g.isPlayed);
     this.numMatchesPlayed = playedGames.length;
 
-    // 2) Resetează map-ul și totalul golurilor
+    // resetează map-ul și totalul golurilor
     this.goalsPerPlayer = {};
     this.totalTeamGoals = 0;
 
     if (playedGames.length === 0) {
-      // Nu avem meciuri jucate → nu construim chart
+      // nu avem meciuri jucate → nu construim chart
       return;
     }
 
-    // 3) Pentru fiecare meci jucat, creează un Observable care preia scoreri
+    // pentru fiecare meci jucat, creează un Observable care preia scoreri
     const scorersObservables = playedGames.map(game =>
       this.playerStatsService.getScorersByGame(game.id).pipe(
-        // Dacă serverul răspunde 404 (niciun marcator), transformă în array gol
+        // dacă serverul răspunde 404 (niciun marcator), transformă în array gol
         catchError(err => {
           if (err.status === 404) {
             return of([] as GameScorer[]);
           }
-          // Pentru orice altă eroare, propagăm mai departe
+          // pentru orice altă eroare, propagăm mai departe
           return throwError(err);
         })
       )
     );
 
-    // 4) Așteaptă să vină TOATE răspunsurile (chiar și cele cu array gol)
+    // așteaptă să vină TOATE răspunsurile (chiar și cele cu array gol)
     forkJoin(scorersObservables).subscribe({
       next: (allScorersPerGame: GameScorer[][]) => {
         // allScorersPerGame este un array de array-uri: fiecare element corespunde
@@ -399,7 +399,7 @@ export class TeamDetailsComponent implements OnInit {
             }
           });
         });
-        // După ce am agregat totul, construim chart-ul
+        // după ce am agregat totul, construim chart-ul
         this.renderGoalsPieChart();
       },
       error: err => {
@@ -413,7 +413,7 @@ private renderGoalsPieChart(): void {
   const labels = Object.keys(this.goalsPerPlayer);
   const dataValues = labels.map(name => this.goalsPerPlayer[name]);
 
-  // Generăm un array de culori HSL, câte unul pentru fiecare label
+  // generăm un array de culori HSL, câte unul pentru fiecare label
   const backgroundColors = labels.map((_, idx) => {
     const hue = Math.round((idx * 360) / labels.length);
     return `hsl(${hue}, 70%, 60%)`;
@@ -446,7 +446,7 @@ private renderGoalsPieChart(): void {
       plugins: {
         title: {
           display: true,
-          // Afișăm atât numărul de meciuri, cât și totalul de goluri
+          // afișăm atât numărul de meciuri, cât și totalul de goluri
           text: `Număr meciuri: ${this.numMatchesPlayed}   •   Total goluri: ${this.totalTeamGoals}`
         },
         legend: {
@@ -472,13 +472,11 @@ private renderGoalsPieChart(): void {
   selectTab(tabName: 'lot' | 'program' | 'clasament'): void {
     this.activeMainTab = tabName;
 
-    // Dacă tocmai am comutat pe “lot”, reconstrui pie-chart-ul după ce DOM-ul s-a updatat
+    // dacă tocmai am comutat pe “lot”, reconstrui pie-chart-ul după ce DOM-ul s-a updatat
     if (tabName === 'lot') {
       setTimeout(() => {
         this.renderGoalsPieChart();
       }, 0);
     }
   }
-
-
 }

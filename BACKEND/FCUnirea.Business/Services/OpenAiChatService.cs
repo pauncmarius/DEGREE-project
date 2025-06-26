@@ -293,7 +293,7 @@ public class OpenAiChatService
             if (msg.StartsWith("șterge bilet") || msg.StartsWith("sterge bilet") ||
                 msg.Contains("șterge bilet ") || msg.Contains("sterge bilet "))
             {
-                // simplu și robust cu Regex (accepta si spatii multiple)
+                // simplu si robust cu Regex (accepta si spatii multiple)
                 var match = System.Text.RegularExpressions.Regex.Match(msg, @"^(șterge|sterge)\s+bilet\s+(\d+)$", System.Text.RegularExpressions.RegexOptions.IgnoreCase);
                 if (match.Success)
                 {
@@ -320,7 +320,7 @@ public class OpenAiChatService
                 }
             }
 
-            // -- LISTARE BILETE --
+            // listare bilite
             if ((msg.Contains("bilete") || msg.Contains("bilet") || msg.Contains("rezervari") || msg.Contains("rezervări")))
             {
                 var tickets = _ticketsService.GetTicketsByUserIdAsync(user.Id).Result.ToList();
